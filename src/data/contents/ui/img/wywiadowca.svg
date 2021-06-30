@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="104.9864mm"
+   height="80mm"
+   viewBox="0 0 104.9864 80.000001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2-dev (fd8ac3146e, 2021-05-04, custom)"
+   sodipodi:docname="wywiadowca.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.4159932"
+     inkscape:cx="161.21734"
+     inkscape:cy="161.8382"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="57.036285,20.004384"
+       orientation="0,-1"
+       id="guide973" />
+    <sodipodi:guide
+       position="-2.6991106,59.948266"
+       orientation="0,-1"
+       id="guide874" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-55.376537,-27.555788)">
+    <rect
+       style="fill:#fafcf5;stroke-width:0.217454;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.93921"
+       id="rect846"
+       width="15.352526"
+       height="104.9864"
+       x="-47.607521"
+       y="55.376537"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:#fafcf5;stroke-width:0.217454;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.93921"
+       id="rect846-3"
+       width="15.352526"
+       height="104.9864"
+       x="-102.90393"
+       y="55.379425"
+       transform="rotate(-90)" />
+  </g>
+</svg>

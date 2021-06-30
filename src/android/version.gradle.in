@@ -1,0 +1,6 @@
+// SPDX-FileCopyrightText: 2021 HPS <aplikacjahps@gmail.com>
+// SPDX-License-Identifier: GPL-2.0-only
+
+ext {
+    projectVersionFull = "@PROJECT_VERSION@"
+}

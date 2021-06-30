@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="104.9864mm"
+   height="90mm"
+   viewBox="0 0 104.9864 90.000001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2-dev (2933c477aa, 2021-06-11, custom)"
+   sodipodi:docname="mlodzik_oh.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.2079966"
+     inkscape:cx="-52.152465"
+     inkscape:cy="154.80176"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="110.18906,45.00471"
+       orientation="0,-1"
+       id="guide973" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-55.376537,-27.555788)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Warstwa 2">
+    <path
+       style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:0.518813px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 42.747679,64.480061 55.806469,56.921413 69.514211,64.798997 65.210534,51.139156 77.642392,40.166492 61.976679,39.633058 55.035112,24.674491 50.322264,39.869224 34.317538,40.000407 46.276982,47.646491 Z"
+       id="path870-7" />
+  </g>
+</svg>

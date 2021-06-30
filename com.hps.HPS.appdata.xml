@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>com.hps.HPS</id>
+  <name>Niezbednik Harcerski</name>
+  <summary>Aplikacja grupy HPS</summary>
+  <description>
+    <p>
+	Aplikacja stworzona przez grupe Harcerze - Poznajemy Sie!
+      </p>
+  </description>
+  <project_license>GPL-2.0</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_group>HPS</project_group>
+  <provides>
+    <binary>HPS</binary>
+  </provides>
+  <releases>
+    <release version="5.47.0" date="2021-05-13"/>
+    <release version="5.47.0" date="2021-04-22"/>
+    <release version="5.47.0" date="2021-03-04"/>
+    <release version="5.47.0" date="2021-02-04"/>
+  </releases>
+</component>

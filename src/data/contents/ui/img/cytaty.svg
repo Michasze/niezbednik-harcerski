@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="212.022mm"
+   height="212.022mm"
+   viewBox="0 0 212.022 212.022"
+   version="1.1"
+   id="svg2813"
+   inkscape:version="1.1-dev (2afca83fab, 2021-01-02, custom)"
+   sodipodi:docname="cytaty.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2809">
+    <rect
+       x="17.186474"
+       y="18.180046"
+       width="262.91394"
+       height="166.45616"
+       id="rect5105" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="326.42857"
+     inkscape:cy="425.71429"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1044"
+     inkscape:window-x="0"
+     inkscape:window-y="36"
+     inkscape:window-maximized="1"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pagecheckerboard="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Warstwa 2"
+     transform="translate(0.23734246,0.87909919)" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.23734246,0.87909919)">
+    <g
+       aria-label="„   “"
+       transform="matrix(0.83305244,0,0,0.83305244,0.06774877,23.795054)"
+       id="text5103"
+       style="font-size:141.111px;line-height:1.25;font-family:'Noto Sans Kannada UI';-inkscape-font-specification:'Noto Sans Kannada UI';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5105);fill:none;stroke:#000000;stroke-opacity:1;stroke-width:1.96026075;stroke-miterlimit:4;stroke-dasharray:none">
+      <path
+         d="m 22.688876,169.15084 h 9.736658 c 5.926662,-11.85333 9.87777,-27.37554 9.87777,-38.80553 H 30.308869 c 0,11.99444 -3.104442,27.51665 -7.619993,38.80553 z m 26.105533,0 h 9.736659 c 5.926661,-11.85333 9.877769,-27.37554 9.877769,-38.80553 H 56.414403 c 0,11.99444 -3.104442,27.51665 -7.619994,38.80553 z"
+         id="path5560"
+         style="fill:none;stroke:#000000;stroke-opacity:1;stroke-width:1.96026075;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         d="m 205.56825,55.97982 -1.12889,-1.55222 q 1.97555,-7.337772 5.36222,-16.368876 3.52777,-9.031103 7.05555,-16.509986 h 9.17221 q -1.27,5.362218 -2.68111,11.571102 -1.41111,6.067772 -2.53999,11.994434 -1.12889,5.926662 -1.97556,10.865546 z m -25.96442,0 -0.84667,-1.55222 q 1.83444,-7.337772 5.22111,-16.368876 3.38666,-9.031103 6.91443,-16.509986 h 9.03111 q -1.27,5.362218 -2.68111,11.571102 -1.41111,6.067772 -2.54,11.994434 -1.12889,5.926662 -1.97555,10.865546 z"
+         id="path5562"
+         style="fill:none;stroke:#000000;stroke-opacity:1;stroke-width:1.96026075;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+  </g>
+</svg>

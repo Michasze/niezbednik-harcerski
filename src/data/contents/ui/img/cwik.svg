@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="104.9864mm"
+   height="90mm"
+   viewBox="0 0 104.9864 90.000001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2-dev (fd8ac3146e, 2021-05-04, custom)"
+   sodipodi:docname="cwik.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.2079966"
+     inkscape:cx="65.811443"
+     inkscape:cy="137.41761"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="116.18513,40.030493"
+       orientation="0,-1"
+       id="guide973" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-55.376537,-27.555788)">
+    <rect
+       style="fill:#fafcf5;stroke-width:0.153309;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.93921"
+       id="rect846"
+       width="10.823847"
+       height="74.01757"
+       x="-6.8173199"
+       y="85.535675"
+       transform="rotate(-45)" />
+    <rect
+       style="fill:#fafcf5;stroke-width:0.153309;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.93921"
+       id="rect846-3"
+       width="10.823847"
+       height="74.01757"
+       x="148.7294"
+       y="-6.8173199"
+       transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,0,0)" />
+    <rect
+       style="fill:#fafcf5;stroke-width:0.153309;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.93921"
+       id="rect846-36"
+       width="10.823847"
+       height="74.01757"
+       x="14.179282"
+       y="64.049004"
+       transform="rotate(-45)" />
+    <rect
+       style="fill:#fafcf5;stroke-width:0.153309;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.93921"
+       id="rect846-3-7"
+       width="10.823847"
+       height="74.01757"
+       x="127.24274"
+       y="14.179282"
+       transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,0,0)" />
+  </g>
+</svg>
