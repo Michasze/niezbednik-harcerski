@@ -9,6 +9,7 @@ You will also need the following KDE Framework: **Kirigami** and **KItemModels**
 Before configuration step set the following variables:
 
 export ANDROID_SDK_ROOT=/path/to/android-sdk
+
 export ANDROID_NDK=/path/to/android-ndk
 
 On Linux run:
