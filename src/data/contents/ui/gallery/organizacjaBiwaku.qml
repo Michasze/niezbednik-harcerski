@@ -27,7 +27,7 @@ HPSPage {
     Layout.fillWidth: true
     //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
-    title: "Wybór noża"
+    title: "Organizacja biwaku"
 
     actions {
         main: Action {

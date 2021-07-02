@@ -24,7 +24,7 @@ import org.kde.kirigami 2.4 as Kirigami
 HPSPage
 
 {
-    title: "Prawie wszystko o sprawnościach"
+    title: "O sprawnościach"
         actions.main: Kirigami.Action {
         iconName: "qrc:/contents/ui/img/go-previous.svg"
         text: qsTr("Powrót do listy")
