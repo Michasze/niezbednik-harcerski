@@ -614,6 +614,7 @@ QString Cipher::bacon()
   bacontable[QChar('o')] = "abbab";
   bacontable[QChar(243)] = "abbab"; // ó
   bacontable[QChar('p')] = "abbba";
+  bacontable[QChar('q')] = "abbbb";
   bacontable[QChar('r')] = "baaaa";
   bacontable[QChar('s')] = "baaab";
   bacontable[QChar(347)] = "baaab";
