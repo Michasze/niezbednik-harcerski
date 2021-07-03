@@ -84,29 +84,9 @@ HPSPage {
 }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
-            Controls.RadioButton {
-                id: control
+            HPSRadioButton {
                 text: qsTr("Bez polskich znaków")
                 checked: true
-        indicator: Rectangle {
-        implicitWidth: 26
-        implicitHeight: 26
-        x: control.leftPadding
-        y: parent.height / 2 - height / 2
-        radius: 13
-        color: "black"
-        border.color: control.down ? "white" : "brown"
-
-        Rectangle {
-            width: 14
-            height: 14
-            x: 6
-            y: 6
-            radius: 7
-            color: control.down ? "#17a81a" : "brown"
-            visible: control.checked
-        }
-    }
                 onClicked:
                 {
                     cipher.wariant = 0
@@ -114,29 +94,9 @@ HPSPage {
                     zaszyfrowane.header = cipher.morse
                 }
             }
-            Controls.RadioButton {
-                id: control2
+            HPSRadioButton {
                 text: qsTr("Z polskimi znakami")
                 checked: false
-        indicator: Rectangle {
-        implicitWidth: 26
-        implicitHeight: 26
-        x: control2.leftPadding
-        y: parent.height / 2 - height / 2
-        radius: 13
-        color: "black"
-        border.color: control2.down ? "white" : "brown"
-
-        Rectangle {
-            width: 14
-            height: 14
-            x: 6
-            y: 6
-            radius: 7
-            color: control2.down ? "#17a81a" : "brown"
-            visible: control2.checked
-        }
-    }
                 onClicked:
                 {
                     cipher.wariant = 1
