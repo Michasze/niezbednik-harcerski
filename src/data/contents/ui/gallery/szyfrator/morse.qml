@@ -86,6 +86,7 @@ HPSPage {
             Layout.alignment: Qt.AlignHCenter
             HPSRadioButton {
                 text: qsTr("Bez polskich znaków")
+                rozmiar: 8
                 checked: true
                 onClicked:
                 {
@@ -96,6 +97,7 @@ HPSPage {
             }
             HPSRadioButton {
                 text: qsTr("Z polskimi znakami")
+                rozmiar: 8
                 checked: false
                 onClicked:
                 {
