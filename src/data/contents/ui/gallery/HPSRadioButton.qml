@@ -22,6 +22,7 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
          Controls.RadioButton {
+             property int rozmiar: invisibleSlider.value - 5
                 id: control2
                 text: qsTr("Kaczor Y")
                 checked: false
@@ -44,4 +45,11 @@ import QtQuick.Layouts 1.2
             visible: control2.checked
         }
     }
+             contentItem: Controls.Label
+             {
+                 text: control2.text
+                 leftPadding: control2.indicator.width + 5
+                 verticalAlignment: Text.AlignVCenter
+                 font.pointSize: control2.rozmiar
+             }
             }
