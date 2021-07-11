@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.kitemmodels 1.0
 import Data 1.0
+import Filter 1.0
 
 Kirigami.ScrollablePage {
     id: pageRoot
@@ -193,7 +194,7 @@ background: Rectangle {
             }
         }
     }
-    KSortFilterProxyModel {
+    HPSFilter {
         id: filteredModel
         sourceModel: galleryModel
         filterRole: "title"

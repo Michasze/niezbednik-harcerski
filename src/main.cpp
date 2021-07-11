@@ -27,6 +27,7 @@
 #include "InfoData.h"
 #include "HPSSettings.h"
 #include "Spiewnik.h"
+#include "HPSFilter.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -69,7 +70,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<InfoData>("Data", 1, 0, "InfoData");
     qmlRegisterType<HPSSettings>("Data", 1, 0, "HPSSettings");
     qmlRegisterType<Spiewnik>("Data", 1, 0, "Spiewnik");
-
+    qmlRegisterType<HPSFilter>("Filter", 1, 0, "HPSFilter");
     //we want different main files on desktop or mobile
     //very small difference as they as they are subclasses of the same thing
     if (qEnvironmentVariableIsSet("QT_QUICK_CONTROLS_MOBILE") &&

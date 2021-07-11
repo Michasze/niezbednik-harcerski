@@ -11,6 +11,7 @@ set(HPS_SRCS
     InfoData.cpp
     HPSSettings.cpp
     Spiewnik.cpp
+    HPSFilter.cpp
     )
 
 qt5_add_resources(RESOURCES resources.qrc)
