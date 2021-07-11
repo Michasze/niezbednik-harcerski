@@ -4,7 +4,7 @@ Application made by Polish scouts Facebook group "Harcerze - Poznajemy Się" con
 ## Build on Android:
 Make sure to install **android-sdk**, **android-ndk** and **Qt5** for your android device architecture.
 
-You will also need the following KDE Framework: **Kirigami** and **KItemModels**.
+You will also need KDE **Kirigami** Framework.
 
 Before configuration step set the following variables:
 

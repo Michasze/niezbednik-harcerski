@@ -21,7 +21,6 @@ import QtQuick 2.3
 import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.11 as Kirigami
-import org.kde.kitemmodels 1.0
 import Data 1.0
 import Filter 1.0
 
