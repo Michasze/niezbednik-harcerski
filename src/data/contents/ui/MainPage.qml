@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.11 as Kirigami
 import Data 1.0
 import Filter 1.0
+import "gallery"
 
 Kirigami.ScrollablePage {
     id: pageRoot
@@ -45,6 +46,29 @@ background: Rectangle {
    
     Kirigami.PagePool {
         id: mainPagePool
+    }
+    ListModel {
+        id: searchModel
+        ListElement {
+            title: "Harcerstwo Związku Narodowego Polskiego"
+            tags: "HZNP, historyczne, organizacje, ciekawostki"
+            targetPage: "gallery/HZNP.qml"
+        }
+        ListElement {
+            title: "Zbiórki w terenie"
+            tags: "artykuły, terenie, zbiórki"
+            targetPage: "gallery/zbiorkiWTerenie.qml"
+        }
+        ListElement {
+            title: "Księga szyfrów - szyfr Bacona"
+            tags: "szyfry, księga, bacon"
+            targetPage: "gallery/malaKsiega/bacon.qml"
+        }
+        ListElement {
+            title: "Szyfrator - szyfr Bacona"
+            tags: "szyfry, szyfrator, bacon"
+            targetPage: "gallery/szyfrator/bacon.qml"
+        }
     }
     ListModel {
         id: galleryModel
@@ -195,8 +219,8 @@ background: Rectangle {
     }
     HPSFilter {
         id: filteredModel
-        sourceModel: galleryModel
-        filterRole: "title"
+        sourceModel: searchModel
+        filterRole: "tags"
         filterRegularExpression: {
             if (searchField.text === "") return new RegExp()
             return new RegExp("%1".arg(searchField.text), "i")
@@ -206,14 +230,14 @@ background: Rectangle {
         spacing: 0
         Repeater {
             focus: true
-            model: root.pageStack.wideMode ? filteredModel : 0
-            delegate: Kirigami.BasicListItem {
-                label: title
-                action: Kirigami.PagePoolAction {
-                    id: action
-                    pagePool: mainPagePool
-                    basePage: pageRoot
-                    page: targetPage
+            visible: searchField.text === "" ? false : true
+                model: searchField.text === "" ? 0 : filteredModel
+            delegate: ElementListyNoImage {
+                header: title
+                textSize: invisibleSlider.value + 2
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl(targetPage))
                 }
             }
         }
@@ -226,7 +250,7 @@ background: Rectangle {
             Layout.rightMargin: Kirigami.Units.gridUnit
             Repeater {
                 focus: true
-                model: filteredModel
+                model: searchField.text === "" ? galleryModel : 0
                 delegate: KartaMain {
                     id: listItem
                     header: title
@@ -240,6 +264,7 @@ background: Rectangle {
                         page: targetPage
                     }
                 }
+
             }
         }
     }
