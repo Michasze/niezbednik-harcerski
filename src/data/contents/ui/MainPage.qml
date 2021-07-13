@@ -69,6 +69,61 @@ background: Rectangle {
             tags: "szyfry, szyfrator, bacon"
             targetPage: "gallery/szyfrator/bacon.qml"
         }
+         ListElement {
+            title: "Harcerz - skąd pochodzi ten wyraz?"
+            tags: "harcerz, historyczne, ciekawostki, wyraz"
+            targetPage: "gallery/harcerz.qml"
+        }
+         ListElement {
+            title: "Zlot ZHP w Spale"
+            tags: "Spała, ZHP, ciekawostki, zlot"
+            targetPage: "gallery/spala.qml"
+        }
+         ListElement {
+            title: "Kamień pamiątkowy ku czci poległych harcerzy"
+            tags: "kamień, pamiątkowy, ciekawostki, czci, poległych, Wrocław"
+            targetPage: "gallery/kamien.qml"
+        }
+         ListElement {
+            title: "Wyjątkowe krzyże harcerskie"
+            tags: "wyjątkowe, krzyże, harcerskie, historyczne, ciekawostki"
+            targetPage: "gallery/wyjatkowe.qml"
+        }
+         ListElement {
+            title: "Dzień Myśli braterskiej"
+            tags: "DMB, święto, dzień, myśli, braterskiej, historyczne, ciekawostki"
+            targetPage: "gallery/DMB.qml"
+        }
+         ListElement {
+            title: "Najważniejsze daty w historii harcerstwa"
+            tags: "daty, najważniejsze, Brownsea, 1907, historyczne, ciekawostki"
+            targetPage: "gallery/daty.qml"
+        }
+         ListElement {
+            title: "Dawne roty przyrzeczenia"
+            tags: "dawne, przyrzeczenie, roty, historyczne, ciekawostki"
+            targetPage: "gallery/histPrzyrzeczenia.qml"
+        }
+         ListElement {
+            title: "Historyczne prawa harcerskie"
+            tags: "dawne, prawo, harcerskie, historyczne, ciekawostki"
+            targetPage: "gallery/histPrawa.qml"
+        }
+         ListElement {
+            title: "Lista znanych osób, które były w harcerstwie"
+            tags: "lista, znani, ludzie, historyczne, ciekawostki"
+            targetPage: "gallery/histPrawa.qml"
+        }
+         ListElement {
+            title: "Zbiórka fotograficzna"
+            tags: "zbiórka, pomysły, fotograf, zdjęcia"
+            targetPage: "gallery/fotograficzna.qml"
+        }
+         ListElement {
+            title: "Ekosystem w słoiku"
+            tags: "słoik, ekosystem, rośliny, zbiórka, pomysł"
+            targetPage: "gallery/ekosystem.qml"
+        }
     }
     ListModel {
         id: galleryModel
