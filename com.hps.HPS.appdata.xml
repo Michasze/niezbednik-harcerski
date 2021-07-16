@@ -15,9 +15,6 @@
     <binary>HPS</binary>
   </provides>
   <releases>
-    <release version="5.47.0" date="2021-05-13"/>
-    <release version="5.47.0" date="2021-04-22"/>
-    <release version="5.47.0" date="2021-03-04"/>
-    <release version="5.47.0" date="2021-02-04"/>
+    <release version="1.0.2" date="2021-07-16"/>
   </releases>
 </component>
