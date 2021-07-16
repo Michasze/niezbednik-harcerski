@@ -38,11 +38,13 @@ HPSPage {
             
 KartaStronaNoImage { 
         header: "Mała księga szyfrów"
+        kolor: "Brown"
         opis: "Opracował: Piotr Parkita HO"
         adres: "malaKsiega.qml"
     }
 KartaStronaNoImage { 
         header: "Program szyfrujący"
+        kolor: "Brown"
         opis: "Autor: Osiołek"
         adres: "szyfrator.qml"
     }

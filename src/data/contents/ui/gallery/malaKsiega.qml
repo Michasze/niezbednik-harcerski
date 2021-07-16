@@ -38,6 +38,7 @@ HPSPage
 
         ElementListyNoImage {
     header: "Przedmowa"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/przedmowa.qml"))
@@ -45,6 +46,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Czekoladka"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/czeko.qml"))
@@ -52,6 +54,7 @@ HPSPage
         }
                 ElementListyNoImage {
     header: "GA-DE-RY-PO-LU-KI"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/gade.qml"))
@@ -59,6 +62,7 @@ HPSPage
         }
             ElementListyNoImage {
     header: "Kaczor"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/kaczor.qml"))
@@ -66,6 +70,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Ułamkowy"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/ulamkowy.qml"))
@@ -73,6 +78,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Liczbowy | Matematyczny"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/liczbowy.qml"))
@@ -80,6 +86,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Cezar"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/cezar.qml"))
@@ -87,6 +94,7 @@ HPSPage
         }
     ElementListyNoImage {
     header: "Alfabetyczno-Liczbowy"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/alfa-liczbowy.qml"))
@@ -94,6 +102,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Grupowy"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/grupowy.qml"))
@@ -101,6 +110,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Mafeking"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/mafeking.qml"))
@@ -108,6 +118,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Szyfr Bacona"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/bacon.qml"))
@@ -115,6 +126,7 @@ HPSPage
         }
         ElementListyNoImage {
     header: "Szyfr Ottendorfa | książkowy"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/ksiazkowy.qml"))
@@ -122,6 +134,7 @@ HPSPage
     }
         ElementListyNoImage {
     header: "Wsteczny"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/wsteczny.qml"))
@@ -129,6 +142,7 @@ HPSPage
         }
      ElementListyNoImage {
     header: "Rozbieżny"
+    kolor: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/rozbiezny.qml"))

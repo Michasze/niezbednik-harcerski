@@ -32,12 +32,13 @@ import org.kde.kirigami 2.4 as Kirigami
                 property int textSize: invisibleSlider.value
                 property int format: Text.RichText
                 property int wysokosc: naglowek.contentHeight + 30
+                property string kolor: "#303030"
     id: cardRectangle
     Layout.fillWidth: true
     Layout.leftMargin: 10
     Layout.topMargin: 10
     radius: 10
-    color: "#303030"
+    color: kolor
     Layout.minimumHeight: wysokosc
 //     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"

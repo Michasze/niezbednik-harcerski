@@ -44,6 +44,7 @@ HPSPage
      id: mainList
                 ElementListyNoImage {
     header: "Kod Morse'a"
+    color: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/morse.qml"))
@@ -51,6 +52,7 @@ HPSPage
         }
                 ElementListyNoImage {
     header: "Cezar"
+    color: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/cezar.qml"))
@@ -58,6 +60,7 @@ HPSPage
         }
                 ElementListyNoImage {
     header: "GA-DE-RY-PO-LU-KI"
+    color: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/gade.qml"))
@@ -65,6 +68,7 @@ HPSPage
         }
                 ElementListyNoImage {
     header: "Kaczor"
+    color: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/kaczor.qml"))
@@ -72,6 +76,7 @@ HPSPage
                 }
                 ElementListyNoImage {
     header: "Mafeking"
+    color: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/mafeking.qml"))
@@ -79,6 +84,7 @@ HPSPage
                 }
                 ElementListyNoImage {
     header: "Szyfr Bacona"
+    color: "Brown"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/bacon.qml"))
