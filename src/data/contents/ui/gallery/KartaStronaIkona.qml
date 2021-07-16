@@ -29,13 +29,15 @@ import QtGraphicalEffects 1.12
              property string opis: "Brak opisu"
              property url ikona: "qrc:/contents/ui/img/harcerz.svg"
              property url adres: "harcerz.qml"
+             property string kolor: "#303030"
+
     id: hznpRectangle
     Layout.fillWidth: true
     Layout.leftMargin: 10
     Layout.topMargin: 10
     Layout.bottomMargin: 10
     radius: 10
-    color: "#303030"
+    color: kolor
     Layout.minimumHeight : 120
 //     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"
