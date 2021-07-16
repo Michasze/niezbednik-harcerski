@@ -76,7 +76,7 @@ KartaStronaIkona {
     }
     KartaStrona { 
         header: "Kamień pamiątkowy"
-        opis: "ku czci harcerzy poległych w walce o polskość Wrocławia"
+        opis: "Ku czci harcerzy poległych w walce o polskość Wrocławia"
         ikona: "qrc:/contents/ui/img/kamien.jpg"
         adres: "kamien.qml"
     }
