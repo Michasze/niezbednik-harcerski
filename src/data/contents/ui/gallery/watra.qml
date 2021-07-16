@@ -54,11 +54,12 @@ HPSPage {
         }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/watra_duch.svg"
+             ikona: "qrc:/contents/ui/img/watra_cialo.svg"
             color: "steelblue"
             symbolika: true
+            wysokosc: 90
             mask: false
-            header: "Siła ducha"
+            header: "Siła ciała"
                          }
                          ElementListy
                          {
@@ -71,12 +72,11 @@ HPSPage {
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/watra_cialo.svg"
+             ikona: "qrc:/contents/ui/img/watra_duch.svg"
             color: "steelblue"
             symbolika: true
-            wysokosc: 90
             mask: false
-            header: "Siła ciała"
+            header: "Siła ducha"
                          }
                          ElementListy
                          {
