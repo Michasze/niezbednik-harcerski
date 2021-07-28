@@ -33,7 +33,6 @@ import QtGraphicalEffects 1.12
 
     id: hznpRectangle
     Layout.fillWidth: true
-    Layout.leftMargin: 10
     Layout.topMargin: 10
     Layout.bottomMargin: 10
     radius: 10

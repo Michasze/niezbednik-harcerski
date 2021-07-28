@@ -32,7 +32,6 @@ import org.kde.kirigami 2.4 as Kirigami
 
     id: hznpRectangle
     Layout.fillWidth: true
-    Layout.leftMargin: 10
     Layout.topMargin: 10
     Layout.bottomMargin: 10
     radius: 10

@@ -363,6 +363,7 @@ może ulec zmianie."
 topContent: [ColumnLayout {
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
   Layout.rightMargin: 10
+  Layout.leftMargin: 10
 ElementListyNoImage {
     header: "O aplikacji"
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
