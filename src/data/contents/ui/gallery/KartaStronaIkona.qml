@@ -30,6 +30,7 @@ import QtGraphicalEffects 1.12
              property url ikona: "qrc:/contents/ui/img/harcerz.svg"
              property url adres: "harcerz.qml"
              property string kolor: "#303030"
+             property bool mask: false
 
     id: hznpRectangle
     Layout.fillWidth: true
@@ -61,6 +62,7 @@ import QtGraphicalEffects 1.12
                         smooth: true
                         Layout.leftMargin: 10
                         Layout.topMargin: 10
+                        isMask: mask
                         color: "white"
                         Layout.bottomMargin: 10
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
