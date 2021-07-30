@@ -38,6 +38,7 @@ HPSPage {
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/noz.svg"
         header: "Poradnik wyboru noża"
+        mask: true
         opis: ""
         adres: "noz.qml"
     }
