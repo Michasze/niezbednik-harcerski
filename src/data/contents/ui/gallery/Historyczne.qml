@@ -37,6 +37,7 @@ HPSPage
 
         ElementListyNoImage {
     header: "Postacie"
+    wysokosc: 120
     textSize: invisibleSlider.value + 2
         MouseArea {
     anchors.fill: parent
