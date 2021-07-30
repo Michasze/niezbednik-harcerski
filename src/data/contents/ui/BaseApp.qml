@@ -273,7 +273,7 @@ może ulec zmianie."
             Layout.rightMargin: 40
 	    horizontalAlignment: Text.AlignHCenter
 	    // Pokazuje tytul właśnie otwartej strony
-             text: pageStack.currentItem.title
+                text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
 // text: page ? page.title : ""
              level: 2
             }
