@@ -41,11 +41,15 @@ HPSPage {
 
 ColumnLayout
 {
+    Controls.Label
+    {
+        text: "Pokazuj:"
+    }
     HPSCheckBox
     {
         id: box1
         checked: !hpsSettings.neverShowIsToggled ? true : false
-        tresc: "Pokazuj wiadomość powitalną"
+        tresc: "Wiadomość powitalną"
         onToggled:
         {
             if(box1.checked == true)
@@ -63,7 +67,7 @@ ColumnLayout
     {
         id: box2
         checked: !hpsSettings.neverShow2IsToggled ? true : false
-        tresc: "Pokazuj powiadomienie o gestach"
+        tresc: "Powiadomienie o gestach"
         onToggled:
         {
             if(box2.checked == true)
@@ -81,7 +85,7 @@ ColumnLayout
     {
         id: box3
         checked: !hpsSettings.neverShow3IsToggled ? true : false
-        tresc: "Pokazuj powiadomienie o kopiowaniu cytatów"
+        tresc: "Powiadomienie o kopiowaniu cytatów"
         onToggled:
         {
             if(box3.checked == true)
@@ -99,7 +103,7 @@ ColumnLayout
     {
         id: box4
         checked: !hpsSettings.neverShow4IsToggled ? true : false
-        tresc: "Pokazuj powiadomienie o kopiowaniu szyfrów"
+        tresc: "Powiadomienie o kopiowaniu szyfrów"
         onToggled:
         {
             if(box4.checked == true)
