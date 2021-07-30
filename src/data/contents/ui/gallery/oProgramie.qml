@@ -17,7 +17,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQml 2.1
 import org.kde.kirigami 2.6 as Kirigami
 
 OProgramieSzablon
