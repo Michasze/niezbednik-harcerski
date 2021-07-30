@@ -36,7 +36,6 @@ import org.kde.kirigami 2.4 as Kirigami
 //              property url adres: "harcerz.qml"
     id: cardRectangle
     Layout.fillWidth: true
-    Layout.leftMargin: 10
     Layout.topMargin: 10
     radius: 10
     color: "#303030"
