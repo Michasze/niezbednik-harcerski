@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="false"
      showgrid="false"
      inkscape:zoom="0.56315579"
-     inkscape:cx="73.691865"
-     inkscape:cy="378.22572"
+     inkscape:cx="-556.68432"
+     inkscape:cy="378.22571"
      inkscape:window-width="1920"
-     inkscape:window-height="1042"
+     inkscape:window-height="1080"
      inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer7"
      fit-margin-top="0"
@@ -255,15 +255,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Warstwa 4"
-     transform="translate(-46.523884,-70.80587)">
-    <rect
-       style="fill:#47483c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.44545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect161878"
-       width="120.50653"
-       height="133.00552"
-       x="46.523884"
-       y="70.80587" />
-  </g>
+     transform="translate(-46.523884,-70.80587)" />
   <g
      inkscape:groupmode="layer"
      id="layer5"
