@@ -36,29 +36,37 @@ HPSPage
     ColumnLayout {
      id: mainList
 
-        ElementListyNoImage {
+        ElementListy {
     header: "Krzyż harcerski"
+    ikona: "qrc:/contents/ui/img/krzyz.svg"
+    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaKrzyz.qml"))
     }
         }
-        ElementListyNoImage {
+        ElementListy {
     header: "WOSM"
+    ikona: "qrc:/contents/ui/img/wosm.svg"
+    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWosm.qml"))
     }
         }
-        ElementListyNoImage {
+        ElementListy {
     header: "WAGGGS"
+    ikona: "qrc:/contents/ui/img/wagggs.svg"
+    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWagggs.qml"))
     }
         }
-        ElementListyNoImage {
+        ElementListy {
     header: "Watra wędrownicza"
+    ikona: "qrc:/contents/ui/img/watra.svg"
+    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("watra.qml"))
