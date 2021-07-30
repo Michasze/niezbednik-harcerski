@@ -26,7 +26,7 @@ import ".."
 HPSPage {
     id: page
         Layout.fillHeight: true
-        title: qsTr("Jak tworzyć punkty na grze terenowej:")
+        title: qsTr("Jak tworzyć punkty:")
      actions {
         main: Action {
            iconName: "qrc:/contents/ui/img/go-previous.svg"
