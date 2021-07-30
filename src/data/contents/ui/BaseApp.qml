@@ -255,9 +255,9 @@ może ulec zmianie."
               anchors.fill: parent
               color: "Black"
 
-            radius: (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 10 : 0
+            radius: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 10 : 0
               border.color: "Grey"
-            border.width: (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0
+            border.width: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0
     }
         RowLayout {
             anchors.fill: parent
