@@ -56,7 +56,7 @@ endif()
                 
 install(TARGETS HPS ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES data/metadata.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} RENAME com.hps.HPS.desktop)
-install(FILES data/com.hps.HPS.svg DESTINATION ${ICON_INSTALL_DIR})
+install(FILES data/com.hps.HPS.svg DESTINATION ${ICON_INSTALL_DIR}/hicolor/scalable/apps)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Android")
     find_package(KF5Kirigami2 REQUIRED)
