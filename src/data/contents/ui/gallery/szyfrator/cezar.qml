@@ -79,8 +79,11 @@ HPSPage {
                 }
         onTextChanged:
     {
+        if (activeFocus)
+        {
        cipher.caesar = niezaszyfrowane.text
-       zaszyfrowane.header = cipher.caesar
+            zaszyfrowane.text = cipher.caesar
+        }
     }
 }
 Controls.TextField {
@@ -117,29 +120,45 @@ Controls.TextField {
                            cipher.shift = "0"
                         }
                           cipher.caesar = niezaszyfrowane.text
-                          zaszyfrowane.header = cipher.caesar
+                          zaszyfrowane.text = cipher.caesar
                       }
 }
-         ElementListyNoImage
+         Controls.TextArea
     {
        id: zaszyfrowane
-       color: "black"
-       align: Text.AlignTop
-        alignH: Text.AlignLeft
-        lAlign: Qt.AlignTop
-        textSize: 13
-        border.color: "grey"
-        border.width: 1
-        Layout.preferredHeight: (page.height / 2) - 90
-       MouseArea {
-      anchors.fill: parent
-      hoverEnabled: true
+       verticalAlignment: Text.AlignTop
+       horizontalAlignment: Text.AlignLeft
+       Layout.alignment: Qt.AlignTop
+       Layout.fillWidth: true
+       font.pointSize: 13
+       color: "white"
+       wrapMode: TextEdit.WrapAnywhere
+       placeholderTextColor: "White"
+       inputMethodHints: Qt.ImhNoPredictiveText
+       Layout.preferredHeight: (page.height / 2) - 90
+       placeholderText: qsTr("Zaszyfrowany tekst...")
+       background: Rectangle {
+                    radius: 5
+                    color: "#1d1d1d"
+                    implicitWidth: 100
+                    implicitHeight: 24
+                    border.color: "#333"
+                    border.width: 1
+                }
       onPressAndHold:
       {
-       clipboard.paste = zaszyfrowane.header
+       clipboard.paste = zaszyfrowane.text
        showPassiveNotification("Cytat skopiowany do schowka", 2000)
       }
-       }
+        onTextChanged:
+    {
+        if (activeFocus)
+        {
+            cipher.caesarDec = zaszyfrowane.text
+            niezaszyfrowane.text = cipher.caesarDec
+        }
+    }
+
         }
     }
 }

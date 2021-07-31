@@ -59,6 +59,31 @@ QString Cipher::caesar()
     }
     return m_cipher;
 }
+void Cipher::setCaesarDec(const QString &a)
+{
+     if (a != m_cipherDec)
+     {
+       m_cipherDec = a;
+       caesarDecChanged();
+     }
+}
+QString Cipher::caesarDec()
+{
+
+    for(int i = 0; i < m_cipherDec.length(); i++) {
+        int sym = 0;
+        if(m_cipherDec[i].toLatin1() > 64 && m_cipherDec[i].toLatin1() < 91 && (sym = m_cipherDec[i].toLatin1() - m_shift) < 65)
+            m_cipherDec[i] = QChar(sym + 90 - 64);
+        else if(m_cipherDec[i].toLatin1() > 96 && m_cipherDec[i].toLatin1() < 123 && (sym = m_cipherDec[i].toLatin1() - m_shift) < 97)
+            m_cipherDec[i] = QChar(sym + 122 - 96);
+        else if(m_cipherDec[i].toLatin1() < 65 || m_cipherDec[i].toLatin1() > (122 + 38))
+            m_cipherDec[i] = m_cipherDec[i];
+
+        else m_cipherDec[i] = QChar(m_cipherDec[i].toLatin1() - m_shift);
+    }
+    return m_cipherDec;
+}
+
 void Cipher::setMorse(const QString &i)
   {
     if(i != m_morse)
