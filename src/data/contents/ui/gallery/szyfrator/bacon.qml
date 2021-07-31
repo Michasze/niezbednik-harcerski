@@ -65,7 +65,6 @@ HPSPage {
     color: "white"
     wrapMode: TextEdit.WrapAnywhere
     placeholderTextColor: "White"
-    Layout.leftMargin: 10
 //    inputMask: "abc"
     placeholderText: qsTr("Tekst do zaszyfrowania...")
     background: Rectangle {

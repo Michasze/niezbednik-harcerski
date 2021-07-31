@@ -65,7 +65,6 @@ HPSPage {
     color: "white"
     wrapMode: TextEdit.WrapAnywhere
     placeholderTextColor: "White"
-    Layout.leftMargin: 10
     Layout.topMargin: 10
 //    inputMask: "abc"
     placeholderText: qsTr("Tekst do zaszyfrowania...")
@@ -91,7 +90,6 @@ Controls.TextField {
     Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
     width: 100
     leftPadding: 5
-    Layout.leftMargin: 10
     Layout.topMargin: 10
     horizontalAlignment: TextInput.AlignHCenter
     placeholderTextColor: "White"
