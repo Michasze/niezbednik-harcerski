@@ -148,7 +148,7 @@ Controls.TextField {
       onPressAndHold:
       {
        clipboard.paste = zaszyfrowane.text
-       showPassiveNotification("Cytat skopiowany do schowka", 2000)
+       showPassiveNotification("Tekst skopiowany do schowka", 2000)
       }
         onTextChanged:
     {

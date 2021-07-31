@@ -123,7 +123,7 @@ HPSPage {
       onPressAndHold:
       {
        clipboard.paste = zaszyfrowane.header
-       showPassiveNotification("Cytat skopiowany do schowka", 2000)
+       showPassiveNotification("Tekst skopiowany do schowka", 2000)
       }
        }
         }
