@@ -39,6 +39,7 @@ HPSPage
         ElementListy {
     header: "Krzyż harcerski"
     ikona: "qrc:/contents/ui/img/krzyz.svg"
+    mask: true
     wysokosc: 115
         MouseArea {
     anchors.fill: parent
