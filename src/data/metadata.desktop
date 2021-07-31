@@ -4,17 +4,7 @@ Name[pl]=Niezbędnik HPS
 Comment=Aplikacja grupy "Harcerze - Poznajemy Się!"
 Comment[pl]=Aplikacja grupy "Harcerze - Poznajemy Się!"
 
-
 Type=Application
 Exec=HPS
 Icon=com.hps.HPS
-Categories=Qt;KDE;Development;
-X-KDE-ParentApp=
-X-KDE-PluginInfo-Author=Osiołek
-X-KDE-PluginInfo-Email=aplikacjahps@gmail.com
-X-KDE-PluginInfo-Name=com.hps.HPS
-X-KDE-PluginInfo-Version=1.0
-X-KDE-PluginInfo-Category=Graphics
-X-KDE-PluginInfo-License=GPL
-X-KDE-PluginInfo-EnabledByDefault=true
-X-Plasma-MainScript=ui/ExampleApp.qml
+Categories=Qt;KDE;
