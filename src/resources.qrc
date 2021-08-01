@@ -270,6 +270,7 @@
         <file alias="contents/ui/img/dmb.svg">./data/contents/ui/img/dmb.svg</file>
         <file alias="contents/ui/img/1907.svg">./data/contents/ui/img/1907.svg</file>
         <file alias="contents/ui/img/wosm.svg">./data/contents/ui/img/wosm.svg</file>
+        <file alias="contents/ui/img/wosm_tlo.svg">./data/contents/ui/img/wosm_tlo.svg</file>
         <file alias="contents/ui/img/wosm_lina.svg">./data/contents/ui/img/wosm_lina.svg</file>
         <file alias="contents/ui/img/wosm_kolor.svg">./data/contents/ui/img/wosm_kolor.svg</file>
         <file alias="contents/ui/img/wosm_gwiazdki.svg">./data/contents/ui/img/wosm_gwiazdki.svg</file>

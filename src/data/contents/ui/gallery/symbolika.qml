@@ -48,7 +48,7 @@ HPSPage
         }
         ElementListy {
     header: "WOSM"
-    ikona: "qrc:/contents/ui/img/wosm.svg"
+    ikona: "qrc:/contents/ui/img/wosm_tlo.svg"
     wysokosc: 115
         MouseArea {
     anchors.fill: parent
