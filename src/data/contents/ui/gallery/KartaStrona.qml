@@ -58,7 +58,10 @@ import QtGraphicalEffects 1.12
                     Image {
                         id:autor
                         visible: false
+                        asynchronous: true
                         smooth: true
+                        sourceSize.width: 200
+                        sourceSize.height: 200
                         Layout.leftMargin: 10
                         Layout.topMargin: 10
                         Layout.bottomMargin: 10
