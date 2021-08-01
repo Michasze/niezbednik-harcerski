@@ -40,7 +40,7 @@ HPSPage
     Layout.fillWidth: true
     wrapMode: Text.WordWrap
     Layout.rightMargin: 10
-    textFormat: Text.RichText
+    textFormat: Text.StyledText
     text: "<b>Zbiórek nowszych piosenek.
 
 Warszawa 1924

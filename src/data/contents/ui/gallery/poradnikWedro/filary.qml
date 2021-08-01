@@ -132,7 +132,7 @@ HPSPage {
             id: opis
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
-            textFormat: Text.RichText
+            textFormat: Text.StyledText
             text: "<a href=\"https://www.natropie zhp.pl/index.php/dewiza-droga-nie-cel\">link</a>"
             onLinkActivated: Qt.openUrlExternally(link)
         }

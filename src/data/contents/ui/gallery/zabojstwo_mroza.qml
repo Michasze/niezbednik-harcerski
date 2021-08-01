@@ -111,7 +111,7 @@ header: Controls.TabBar {
                 Layout.fillWidth: true
                 width: parent.width
                 wrapMode: Controls.Label.Wrap
-                textFormat: Text.RichText
+                textFormat: Text.StyledText
                 rightPadding: 10
                 leftPadding: 20
                 font.pixelSize: 10
@@ -137,7 +137,7 @@ header: Controls.TabBar {
                 Layout.fillWidth: true
                 width: parent.width
                 wrapMode: Controls.Label.Wrap
-                textFormat: Text.RichText
+                textFormat: Text.StyledText
                 rightPadding: 10
                 leftPadding: 20
                 font.pixelSize: 10
@@ -159,7 +159,7 @@ header: Controls.TabBar {
                 Layout.fillWidth: true
                 width: parent.width
                 wrapMode: Controls.Label.Wrap
-                textFormat: Text.RichText
+                textFormat: Text.StyledText
                 rightPadding: 10
                 leftPadding: 20
                 font.pixelSize: 10
@@ -187,7 +187,7 @@ header: Controls.TabBar {
                 Layout.fillWidth: true
                 width: parent.width
                 wrapMode: Controls.Label.Wrap
-                textFormat: Text.RichText
+                textFormat: Text.StyledText
                 rightPadding: 10
                 leftPadding: 20
                 font.pixelSize: 10

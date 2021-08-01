@@ -30,7 +30,7 @@ import org.kde.kirigami 2.4 as Kirigami
                 property int alignH: Text.AlignHCenter
                 property int lAlign: Qt.AlignVCenter | Qt.AlignLeft
                 property int textSize: invisibleSlider.value
-                property int format: Text.RichText
+                property int format: Text.StyledText
                 property int wysokosc: naglowek.contentHeight + 30
                 property string kolor: "#303030"
     id: cardRectangle

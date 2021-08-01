@@ -52,7 +52,7 @@ HPSPage {
             id: opis
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
-            textFormat: Text.RichText
+            textFormat: Text.StyledText
             font.pointSize: invisibleSlider.value
             horizontalAlignment: Text.AlignJustify
             text: "O tym, że DMB obchodzimy 22 lutego przypominać nie trzeba, ale skąd wzięła się ta tradycja?
