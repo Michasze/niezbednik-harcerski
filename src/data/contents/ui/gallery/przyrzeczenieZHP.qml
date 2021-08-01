@@ -27,7 +27,7 @@ HPSPage {
     Layout.fillWidth: true
     //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
-    title: "Przyrzeczenie ZHP"
+    title: "Przyrzeczenie ZHP/ZHR"
 
     actions {
         main: Action {

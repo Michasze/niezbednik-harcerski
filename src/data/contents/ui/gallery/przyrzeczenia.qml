@@ -46,10 +46,19 @@ KartaStrona {
     {
         Layout.fillWidth: true
     }
-
 KartaStrona {
         ikona: "qrc:/contents/ui/img/zhp.svg"
         header: "Związek Harcerstwa Polskiego"
+        opis: ""
+        adres: "przyrzeczenieZHP.qml"
+    }
+ HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
+KartaStrona {
+        ikona: "qrc:/contents/ui/img/zhr.svg"
+        header: "Związek Harcerstwa Rzeczypospolitej"
         opis: ""
         adres: "przyrzeczenieZHP.qml"
     }
