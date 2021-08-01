@@ -77,7 +77,7 @@ private:
      int d;
      int e;
      int f;
-    int m_shift;
+    int m_shift = 0;
     QMap<QChar, QString> bacontable;
     QMap<QChar, QString> morsetable;
     QVector<QString> enctable;
