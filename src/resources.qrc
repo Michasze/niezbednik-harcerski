@@ -3,8 +3,6 @@
         <file alias="contents/ui/MainPage.qml">./data/contents/ui/MainPage.qml</file>
         <file alias="contents/ui/KartaMain.qml">./data/contents/ui/KartaMain.qml</file>
         <file alias="contents/ui/gallery/Karta.qml">./data/contents/ui/gallery/Karta.qml</file>
-        <file alias="contents/ui/gallery/KartaIkona.qml">./data/contents/ui/gallery/KartaIkona.qml</file>
-        <file alias="contents/ui/gallery/KartaNoImage.qml">./data/contents/ui/gallery/KartaNoImage.qml</file>
         <file alias="contents/ui/gallery/KartaStrona.qml">./data/contents/ui/gallery/KartaStrona.qml</file>
         <file alias="contents/ui/gallery/KartaStronaNoImage.qml">./data/contents/ui/gallery/KartaStronaNoImage.qml</file>
         <file alias="contents/ui/gallery/KartaStronaIkona.qml">./data/contents/ui/gallery/KartaStronaIkona.qml</file>
@@ -13,11 +11,9 @@
         <file alias="contents/ui/gallery/HPSRadioButton.qml">./data/contents/ui/gallery/HPSRadioButton.qml</file>
         <file alias="contents/ui/gallery/HPSPage.qml">./data/contents/ui/gallery/HPSPage.qml</file>
         <file alias="contents/ui/gallery/HPSPopup.qml">./data/contents/ui/gallery/HPSPopup.qml</file>
-        <file alias="contents/ui/gallery/ArticleLabel.qml">./data/contents/ui/gallery/ArticleLabel.qml</file>
         <file alias="contents/ui/gallery/Lista.qml">./data/contents/ui/gallery/Lista.qml</file>
         <file alias="contents/ui/gallery/HPSLista.qml">./data/contents/ui/gallery/HPSLista.qml</file>
         <file alias="contents/ui/gallery/DefaultListItemBackground.qml">./data/contents/ui/gallery/DefaultListItemBackground.qml</file>
-        <file alias="contents/ui/gallery/HPSCard.qml">./data/contents/ui/gallery/HPSCard.qml</file>
         <file alias="contents/ui/gallery/HPSSeparator.qml">./data/contents/ui/gallery/HPSSeparator.qml</file>
         <file alias="contents/ui/gallery/HPSCheckable.qml">./data/contents/ui/gallery/HPSCheckable.qml</file>
         <file alias="contents/ui/gallery/HPSCheckBox.qml">./data/contents/ui/gallery/HPSCheckBox.qml</file>
