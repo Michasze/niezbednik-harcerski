@@ -52,7 +52,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Czuwaj! Chciałbym przedstawić wam bardzo ciekawą postać z mojego miasta. Jego życie z pewnością nadawałoby się na film akcji
  

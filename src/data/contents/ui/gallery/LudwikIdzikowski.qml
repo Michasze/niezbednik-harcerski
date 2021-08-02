@@ -49,7 +49,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Ludwik Idzikowski - major Wojska Polskiego, pilot w czasie okresu międzywojennego. Urodził się w Warszawie w 1891 roku.
 

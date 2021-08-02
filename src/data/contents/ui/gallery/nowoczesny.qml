@@ -47,7 +47,7 @@ HPSPage
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Kirigami.Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Nowoczesne technologie rozwijają sprzęt turystyczny cały czas. Na rynku pojawia się wiele ciekawych rozwiązań, które mają ułatwiać życie turystom. I wydaje się, że często instruktorzy powinni się w miarę orientować w harcerskim sprzęcie, żeby móc dzięki temu doradzić swoim harcerzom, a jednocześnie nauczyć ich tego jak odpowiedni sprzęt wybierać.
 

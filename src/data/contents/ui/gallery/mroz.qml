@@ -50,7 +50,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Władysław Mróz
 Urodzony w 1897 roku.

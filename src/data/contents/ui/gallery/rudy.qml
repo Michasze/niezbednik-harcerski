@@ -49,7 +49,7 @@ HPSPage {
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Pseudonim “Rudy” nie był jedynym, którego używał. Były też “Czarny”,”Krokodyl” czy “Janek”.
 
@@ -67,7 +67,7 @@ Do konspiracji wstąpił jeszcze w 1939 roku. Najpierw do Polskiej Ludowej Akcji
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "W 1942 roku objął dowództwo nad grupą Sad, należącą do Grup Szturmowych. Brał udział między innymi w akcji mającej na celu wysadzenie torów kolejowych pod Kraśnikiem. Brał też udział w likwidacji niemieckiego urzędnika podczas akcji rozbrojeniowej ul. Emilii Plater.
 

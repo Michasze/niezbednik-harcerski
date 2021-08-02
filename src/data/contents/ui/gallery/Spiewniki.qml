@@ -154,7 +154,7 @@ HPSPage
                     textSize: slider.value
                     header: karta.tekst
                     alignH: Text.AlignLeft
-                    format: Text.AutoText
+                    format: Text.PlainText
                     color: "Black"
                  MouseArea {
     anchors.fill: parent

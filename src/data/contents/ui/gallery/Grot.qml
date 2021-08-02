@@ -49,7 +49,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Stefan Rowecki pseudonim “Grot” urodzony w 1895 roku w Piotrkowie Trybunalskim, generał dywizji Wojska Polskiego, Dowódca Armii Krajowej, Komendant Związku Walki Zbrojnej.
 

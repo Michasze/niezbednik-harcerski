@@ -49,7 +49,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Ukończył Szkołę Podchorążych Lotnictwa w Dęblinie. Podczas wojny obronnej Polski w 1939 roku służył w 142 Eskadrze Myśliwskiej. Następnie przedostał się do Anglii gdzie służył w dywizjonach 306 i 316,317. Brał udział w bitwie o Anglię, gdzie latał myśliwcem Hawker Hurricane. Udało mu się strącić kilka samolotów przeciwnika. Podczas jednej z misji w bitwie o Anglię został zestrzelony. Udało mu się wyskoczyć z płonącej kabiny samolotu i otworzyć spadochron. Odniósł obrażenia w wyniku których nie mógł przez pewien czas brać udziału w walkach.
 

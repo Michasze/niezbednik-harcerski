@@ -49,7 +49,7 @@ HPSPage {
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                format: Text.AutoText
+                format: Text.PlainText
                 textSize: invisibleSlider.value
                 color: "Black"
             header: "August Emil Fieldorf pseudonim \"Nil\" urodzony 20 marca 1895 roku w Krakowie. Dowódca Kedywu, zastępca Komendanta Głównego Armii Krajowej, dowódca organizacji  \"NIE\".

@@ -46,7 +46,7 @@ HPSPage
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Kirigami.Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Tak to już jest w naszym świecie, że wiele z pozoru prostych tematów dla starszych harcerzy wydaje się nie oczywiste dla tych młodszych. I tak jest też z namiotami kadry na obozach czy innymi \"przywilejami\". I oczywiście-nie można obrosnąć w wygodnictwo i pozwalać sobie czy innej kadrze na bycie pączkiem w biwakowym maśle. We wszystkim należy zachowywać umiar i zdrowy rozsądek.
 

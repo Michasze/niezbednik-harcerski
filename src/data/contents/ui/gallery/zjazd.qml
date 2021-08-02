@@ -29,7 +29,7 @@ HPSPage
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Kirigami.Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "  Dokładnie 30 lat temu, 6 grudnia 1990 roku, w Bydgoszczy rozpoczął obrady XXVII Zjazd ZHP. Uważany za przełomowy, chociaż półtora roku wcześniej odbył się Zjazd ZHP, który podjął szereg bardzo ważnych decyzji dla naszego stowarzyszenia, rozpoczynając zasadnicze zmiany. Ale dzisiaj krótko, w możliwej tutaj formule, o „legendzie zjazdu bydgoskiego”.
             

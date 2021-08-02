@@ -41,7 +41,7 @@ HPSPage
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Kirigami.Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Czuwaj! Mam właśnie egzaminy z pedagogiki i psychologii, przerabiając materiał wpadłem na ciekawy schemat odnoszący się do pracy nauczyciela. Są to tak uniwersalne zasady pracy z jakąś grupą młodszych osób, że są użyteczne również w pracy drużynowych czy zastępowych.
 

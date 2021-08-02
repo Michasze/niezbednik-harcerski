@@ -49,7 +49,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Olga Drahonowska urodziła się w Krzeszowicach 1 września 1888 roku. Ojciec jej był pochodzenia ormiańskiego, a matka czeskiego.
 
@@ -73,7 +73,7 @@ W latach 1948-1960 prowadziła sierociniec dla polskich dzieci w Wielkiej Brytan
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Juliusz Idzikowski"
         }

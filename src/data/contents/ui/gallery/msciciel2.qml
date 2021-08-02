@@ -50,7 +50,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Marian Pluciński pseudonim \"Mściciel\" urodzony w 1912 roku w Żarnowcu, zmarł w 1946 roku w Białymstoku.
 

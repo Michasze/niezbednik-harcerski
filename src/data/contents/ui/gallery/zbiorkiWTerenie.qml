@@ -42,7 +42,7 @@ HPSPage
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Kirigami.Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Przemyślenia te rozpocząłem już kilka lat temu, patrząc na wyniki ankiet na grupie Harcerze- Poznajemy Się. Ankiety dotyczyły miejsca odbywania się zbiórek: \"W terenie czy pomieszczeniu?\". Wyniki były różne, ale zawsze na korzyść zbiórek w pomieszczeniu. Pięć zbiórek w harcówce do jednej na dworze taki jest wynik najnowszej ankiety. Wydaje się, że to nie jest to najlepsza droga, którą może iść harcerstwo. Odchodzimy od naszych puszczańskich korzeni.
 

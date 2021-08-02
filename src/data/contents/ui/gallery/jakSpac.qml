@@ -45,7 +45,7 @@ HPSPage {
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                format: Text.AutoText
+                format: Text.PlainText
                 textSize: invisibleSlider.value
                 color: "Black"
             header: "Pytanie to potrafi spędzać nam sen z powiek… i to dosłownie. Sytuacja robi się szczególnie trudna, jeśli nie mamy jeszcze doświadczenia, a dodatkowo jedziemy na dłuższy okres, przez co nie do końca możemy być pewni, co nas czeka.

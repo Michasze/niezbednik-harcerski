@@ -49,7 +49,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Andrzej Juliusz Małkowski urodził się 31 października 1888 roku w Trębkach, zmarł 16 stycznia 1919 roku w Zatoce Mesyńskiej.
 
@@ -70,7 +70,7 @@ W 1911 roku przeprowadził pierwszy kurs skautowy we Lwowie. Rozpoczął też wy
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "W 1913 roku wziął ślub z Olgą Drahonowską w Zakopanem, ślubu udzielił im ksiądz Kazimierz Lutosławski. Tam razem tworzyli niezależny ośrodek skautowy.
 

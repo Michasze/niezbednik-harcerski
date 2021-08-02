@@ -49,7 +49,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Robert Stephenson Smyth Baden Powell - urodził się 22 lutego 1857 roku w Londynie. Jego ojciec był duchownym anglikańskim oraz profesorem geometrii na uniwersytecie w Oksfordzie. Jego matka była wnuczką admirała Williama Smytha. Robert jako dziecko nauczył się grać na pianinie i skrzypcach.
 
@@ -68,7 +68,7 @@ Brał udział w działaniach armii na terenie Afryki i Indii, w tym w Wojnach Bu
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Podczas II Wojny Burskiej dowodził Obroną Mafekingu. Jako zwiadowców i łączników wykorzystywał wtedy chłopców podzielonych na małe grupy. Napisał książkę “Wskazówki dla zwiadowców”, która była wykorzystywana jako podręcznik dla żołnierzy, ale też wykorzystywały ją organizacje młodzieżowe. W 1907 roku zorganizował eksperymentalny obóz na wyspie Brownsea. Testował tam między innymi system małych grup, czyli system zastępów. Na podstawie swoich doświadczeń wydał w 1908 roku książkę Scouting for boys. Chciał on zapewnić młodzieży z wielkich miast lepszy kontakt z naturą.
 

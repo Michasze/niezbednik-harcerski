@@ -51,7 +51,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Janusz Brochwicz-Lewiński pseudonim \"Gryf\" urodzony 17 września 1920 roku, żołnierz batalionu AK \"Parasol\".
 

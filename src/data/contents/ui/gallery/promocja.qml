@@ -48,7 +48,7 @@ HPSPage
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Kirigami.Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
                 header: "Promocja harcerstwa jest w dzisiejszych czasach bardzo ważna. Jesteśmy ze wszystkich stron bombardowani różnymi propozycjami spędzania wolnego czasu. Istnienie harcerstwa nie jest wcale tak oczywiste dla wszystkich. Dlatego często słyszy się stwierdzenia: \"To wy jeszcze istniejecie?\", \"Harcerstwo? Sprzedajecie ciastka?\". Jest to szczególnie widoczne u młodzieży, która kojarzy nas i nasze działania jedynie przez pryzmat zachodnich filmów w których pojawiają się skauci, których obraz zostaje bardzo “wypłaszczony i w pewien sposób przekłamany. Rodzice, mieszkańcy naszego miasta, środowisko rówieśników harcerzy z naszej drużyny jest naszym docelowym gronem odbiorców. Dlatego trzeba to wykorzystać!
             

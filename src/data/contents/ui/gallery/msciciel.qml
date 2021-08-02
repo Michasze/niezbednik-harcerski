@@ -43,7 +43,7 @@ HPSPage {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 textSize: !Settings.isMobile ? 12 : 14
-                format: Text.AutoText
+                format: Text.PlainText
                 color: "Black"
             header: "Jan Borysewicz pseudonim \"Krysia\", \"Mściciel\". Urodzony 12 września 1913 roku
 w Dworczanach.
