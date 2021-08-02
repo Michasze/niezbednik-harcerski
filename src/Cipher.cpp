@@ -672,3 +672,75 @@ QString Cipher::bacon()
    enctable.clear();
    return m_baconEncryptedWhole;
 }
+void Cipher::setBaconDec(const QString &c)
+{
+     if (&c != m_baconDec)
+     {
+       m_baconDec = c;
+       baconDecChanged();
+     }
+}
+QString Cipher::baconDec()
+{
+  // Tabela z wartościami szyfru dla każdej litery
+  bacondectable["aaaaa"] = QChar('a');
+/*  bacondectable[QChar(261)] = "aaaaa"; // ą
+  bacondectable[QChar('b')] = "aaaab";
+  bacondectable[QChar('c')] = "aaaba";
+  bacondectable[QChar(263)] = "aaaba"; // ć
+  bacondectable[QChar('d')] = "aaabb";
+  bacondectable[QChar('e')] = "aabaa";
+  bacondectable[QChar(281)] = "aabaa"; // ę
+  bacondectable[QChar('f')] = "aabab";
+  bacondectable[QChar('g')] = "aabba";
+  bacondectable[QChar('h')] = "aabbb";
+  bacondectable[QChar('i')] = "abaaa";
+  bacondectable[QChar('j')] = "abaaa";
+  bacondectable[QChar('k')] = "abaab";
+  bacondectable[QChar('l')] = "ababa";
+  bacondectable[QChar(322)] = "ababa"; // ł
+  bacondectable[QChar('m')] = "ababb";
+  bacondectable[QChar('n')] = "abbaa";
+  bacondectable[QChar(324)] = "abbaa";
+  bacondectable[QChar('o')] = "abbab";
+  bacondectable[QChar(243)] = "abbab"; // ó
+  bacondectable[QChar('p')] = "abbba";
+  bacondectable[QChar('q')] = "abbbb";
+  bacondectable[QChar('r')] = "baaaa";
+  bacondectable[QChar('s')] = "baaab";
+  bacondectable[QChar(347)] = "baaab";
+  bacondectable[QChar('t')] = "baaba";
+  bacondectable[QChar('u')] = "baabb";
+  bacondectable[QChar('v')] = "baabb";
+  bacondectable[QChar('w')] = "babaa";
+  bacondectable[QChar('x')] = "babab";
+  bacondectable[QChar('y')] = "babba";
+  bacondectable[QChar('z')] = "babbb";
+  bacondectable[QChar(380)] = "babbb"; // ż
+  bacondectable[QChar(378)] = "babbb"; // ź */
+  m_baconDecryptedWhole = "";
+   for(int i = 0; i < ((m_baconDec.length() / 5)); i++)
+   {
+     m_baconDec = m_baconDec.toLower();
+     for (int i = 0; i < (m_baconDec.length() / 5); i++)
+      {
+      int counter = i + 5;
+      qInfo() << counter;
+      baconDecList.append(m_baconDec.left(counter));
+      qInfo() << "baconDecList:" << baconDecList;
+      }
+     // Pobierz wartość szyfru z tabeli dla danej litery
+     if (bacondectable.contains(m_baconDec))
+     {
+     dectable.append(bacondectable.value(m_baconDec));
+     }
+     else
+     {
+         dectable.append(m_baconDec);
+     }
+         m_baconDecryptedWhole.append(dectable.value(i));
+   }
+   bacondectable.clear();
+   dectable.clear();
+   return m_baconDecryptedWhole;
+}
