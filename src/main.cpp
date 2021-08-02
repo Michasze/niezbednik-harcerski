@@ -89,13 +89,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #ifdef Q_OS_ANDROID
     QtAndroid::runOnAndroidThread([=]() {
         QAndroidJniObject window = QtAndroid::androidActivity().callObjectMethod("getWindow", "()Landroid/view/Window;");
-        QAndroidJniObject decorView = window.callObjectMethod("getDecorView", "()Landroid/view/View;");
-//        int flags = 0x00000002 | 0x00000400 | 0x00000100 | 0x00000200 | 0x00000004 | 0x00001000;
         window.callMethod<void>("addFlags", "(I)V", FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.callMethod<void>("clearFlags", "(I)V", FLAG_TRANSLUCENT_STATUS);
         window.callMethod<void>("setStatusBarColor", "(I)V", QColor("Black").rgba());
         window.callMethod<void>("setNavigationBarColor", "(I)V", QColor("Black").rgba());
-//        decorView.callMethod<void>("setSystemUiVisibility", "(I)V", flags);
     });
 #endif
 
