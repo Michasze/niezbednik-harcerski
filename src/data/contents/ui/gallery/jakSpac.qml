@@ -48,9 +48,7 @@ HPSPage {
                 format: Text.AutoText
                 textSize: invisibleSlider.value
                 color: "Black"
-            header: "Pytanie to potrafi spędzać nam sen
-
-z powiek… i to dosłownie. Sytuacja robi się szczególnie trudna, jeśli nie mamy jeszcze doświadczenia, a dodatkowo jedziemy na dłuższy okres, przez co nie do końca możemy być pewni, co nas czeka.
+            header: "Pytanie to potrafi spędzać nam sen z powiek… i to dosłownie. Sytuacja robi się szczególnie trudna, jeśli nie mamy jeszcze doświadczenia, a dodatkowo jedziemy na dłuższy okres, przez co nie do końca możemy być pewni, co nas czeka.
 
 Najważniejszy w ciepłym spaniu jest śpiwór, oczywiście są też harcerze, którzy śpią np. pod wełnianym kocem, ale to temat rzeka i omawianie go wydaje się być trochę zbyt szalonym pomysłem. Dobranie śpiwora do odpowiednich warunków temperatury omawiałem już w poradniku wyboru śpiwora, dlatego odsyłam was do niego.
 
