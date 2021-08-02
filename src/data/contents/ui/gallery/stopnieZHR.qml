@@ -36,6 +36,60 @@ HPSPage {
         onTriggered: pageStack.pop(-1);
         }
     }
+header: Controls.TabBar {
+        id: tabBar
+        currentIndex: swipeView.currentIndex
+
+        Controls.TabButton {
+            text: "Zuchy"
+        }
+        Controls.TabButton {
+            text: "Harcerze"
+        }
+    }
+                  Controls.SwipeView {
+        id: swipeView
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        currentIndex: tabBar.currentIndex
+        clip: true
+
+                     ColumnLayout {
+        Layout.fillHeight: true
+                         ElementListy
+                         {
+             ikona: "qrc:/contents/ui/img/ho.svg"
+            color: "steelblue"
+            header: "Zuch pierwszej gwiazdki/Zuch wtajemniczony"
+                         }
+                         ElementListy
+                         {
+             ikona: "qrc:/contents/ui/img/hr.svg"
+            color: "steelblue"
+            header: "Zuch drugiej gwiazdki/Zuch zaradny"
+                         }
+                         ElementListy
+                         {
+             ikona: "qrc:/contents/ui/img/zuchG.svg"
+            color: "steelblue"
+            header: "Zuch trzeciej gwiazdki/Zuch opiekuńczy"
+                         }
+        //HACK: ukryte prostokąty sprawiają że obydwie strony są takiej samej wysokości
+        // przez co layout nie rozjeżdża się przy przesuwaniu
+                         Repeater
+                         {
+                             model: 2
+                             Rectangle
+                             {
+                                 Layout.leftMargin: 10
+                                 Layout.topMargin: 10
+                                 Layout.fillWidth: true
+                                 color: "Transparent"
+                                 height: 120
+                                 radius: 10
+                             }
+                         }
+                     }
     ColumnLayout {
         width: page.width
         spacing: Units.smallSpacing
@@ -71,5 +125,5 @@ HPSPage {
         }
 
                  }
-
+                  }
 }
