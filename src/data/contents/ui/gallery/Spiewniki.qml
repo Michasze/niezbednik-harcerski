@@ -161,7 +161,7 @@ HPSPage
       onPressAndHold:
       {
       clipboard.paste = tresc.header
-      showPassiveNotification("Cytat skopiowany do schowka", 2000)
+      showPassiveNotification("Tekst piosenki skopiowany do schowka", 2000)
       }
 
                  }
