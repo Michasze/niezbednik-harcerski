@@ -180,7 +180,6 @@ HPSPage
                             } */
                         }
                     }
-                }
                 Controls.Popup
                 {
                     id: tweaks
@@ -265,6 +264,8 @@ HPSPage
         }
     }
                         }
+                }
+
                     }
                 }
             }
