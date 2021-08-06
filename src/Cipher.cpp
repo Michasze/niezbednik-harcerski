@@ -672,3 +672,74 @@ QString Cipher::bacon()
    enctable.clear();
    return m_baconEncryptedWhole;
 }
+void Cipher::setBaconDec(const QString &c)
+{
+     if (&c != m_baconDec)
+     {
+       m_baconDec = c;
+       baconDecChanged();
+     }
+}
+QString Cipher::baconDec()
+{
+  // Tabela z wartościami szyfru dla każdej litery
+  bacondectable["aaaaa"] = QChar('a');
+  bacondectable["aaaab"] = QChar('b');
+  bacondectable["aaaba"] = QChar('c');
+  bacondectable["aaabb"] = QChar('d');
+  bacondectable["aabaa"] = QChar('e');
+  bacondectable["aabab"] = QChar('f');
+  bacondectable["aabba"] = QChar('g');
+  bacondectable["aabbb"] = QChar('h');
+  bacondectable["abaaa"] = QChar('i');
+  bacondectable["abaaa"] = QChar('j');
+  bacondectable["abaab"] = QChar('k');
+  bacondectable["ababa"] = QChar('l');
+  bacondectable["ababb"] = QChar('m');
+  bacondectable["abbaa"] = QChar('n');
+  bacondectable["abbab"] = QChar('o');
+  bacondectable["abbba"] = QChar('p');
+  bacondectable["abbbb"] = QChar('q');
+  bacondectable["baaaa"] = QChar('r');
+  bacondectable["baaab"] = QChar('s');
+  bacondectable["baaba"] = QChar('t');
+  bacondectable["baabb"] = QChar('u');
+  bacondectable["baabb"] = QChar('v');
+  bacondectable["babaa"] = QChar('w');
+  bacondectable["babab"] = QChar('x');
+  bacondectable["babba"] = QChar('y');
+  bacondectable["babbb"] = QChar('z');
+  m_baconDecryptedWhole = "";
+   for(int i = 0; i < ((m_baconDec.length() / 5)); i++)
+   {
+     baconDecList.clear();
+     m_baconDec = m_baconDec.toLower();
+      int count = m_baconDec.length();
+     for (int i = 0; i < (count / 5); i++)
+      {
+        if(count%5==0)
+          {
+     baconDecList.append(m_baconDec.left(5));
+     m_baconDec.remove(0,5);
+      qInfo() << "baconDecList:" << baconDecList;
+      }
+      }
+     // Pobierz wartość szyfru z tabeli dla danej litery
+     for (int i = 0; i < baconDecList.size(); i++)
+       {
+      if (bacondectable.contains(baconDecList.at(i)))
+     {
+     dectable.append(bacondectable.value(baconDecList.at(i)));
+     }
+     else
+     {
+         dectable.append(baconDecList.at(i));
+     }
+         m_baconDecryptedWhole.append(dectable.value(i));
+
+       }
+   }
+   bacondectable.clear();
+   dectable.clear();
+   return m_baconDecryptedWhole;
+}

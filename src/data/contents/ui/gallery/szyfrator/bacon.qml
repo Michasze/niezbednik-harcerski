@@ -54,55 +54,36 @@ HPSPage {
             color: "brown"
             header: "Szyfr Bacona"
         }
-        Controls.TextArea {
-//    width: 500
-    id: niezaszyfrowane
-    Layout.fillWidth: true
-    Layout.preferredHeight: (page.height / 2) - 50
-    Layout.fillHeight: true
-    inputMethodHints: Qt.ImhNoPredictiveText
-    leftPadding: 10
-    color: "white"
-    wrapMode: TextEdit.WrapAnywhere
-    placeholderTextColor: "White"
-//    inputMask: "abc"
-    placeholderText: qsTr("Tekst do zaszyfrowania...")
-    background: Rectangle {
-                    radius: 5
-                    color: "#1d1d1d"
-                    implicitWidth: 100
-                    implicitHeight: 24
-                    border.color: "#333"
-                    border.width: 1
-                }
-        onTextChanged:
+        HPSText
+        {
+       id: pole
+       onTextChanged:
     {
-       cipher.bacon = niezaszyfrowane.text
-       zaszyfrowane.header = cipher.bacon
+        if (activeFocus)
+        {
+       cipher.bacon = pole.text
+       pole2.text = cipher.bacon
+        }
     }
 }
 
-
-         ElementListyNoImage
-    {
-       id: zaszyfrowane
-       color: "black"
-       align: Text.AlignTop
-        alignH: Text.AlignLeft
-        lAlign: Qt.AlignTop
-        textSize: 13
-        border.color: "grey"
-        border.width: 1
-        Layout.preferredHeight: (page.height / 2) - 50
-       MouseArea {
-      anchors.fill: parent
-      hoverEnabled: true
-      onPressAndHold:
+        HPSText
+        {
+       id: pole2
+       deszyfrowanie: true
+     onPressAndHold:
       {
-       clipboard.paste = zaszyfrowane.header
+       clipboard.paste = pole2.text
        showPassiveNotification("Tekst skopiowany do schowka", 2000)
       }
-       }
+        onTextChanged:
+    {
+        if (activeFocus)
+        {
+            cipher.baconDec = pole2.text
+            pole.text = cipher.baconDec
+        }
+    }
         }
     }
 }
