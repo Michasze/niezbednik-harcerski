@@ -722,12 +722,16 @@ QString Cipher::baconDec()
    for(int i = 0; i < ((m_baconDec.length() / 5)); i++)
    {
      m_baconDec = m_baconDec.toLower();
+     baconDecList.clear();
+      int count = m_baconDec.length();
      for (int i = 0; i < (m_baconDec.length() / 5); i++)
       {
-      int counter = i + 5;
-      qInfo() << counter;
-      baconDecList.append(m_baconDec.left(counter));
+        if(count%5==0)
+          {
+            int przedzial = i * 5;
+     baconDecList.append(m_baconDec.mid(przedzial , przedzial + 5));
       qInfo() << "baconDecList:" << baconDecList;
+      }
       }
      // Pobierz wartość szyfru z tabeli dla danej litery
      if (bacondectable.contains(m_baconDec))

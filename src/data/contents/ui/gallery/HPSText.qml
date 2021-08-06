@@ -24,11 +24,7 @@ import ".."
 
 
         Controls.TextArea {
-            enum CipherDirection {
-                Szyfrowanie,
-                Deszyfrowanie
-            }
-    property int cipherDirection
+   property bool deszyfrowanie: false
     id: pole
     Layout.fillWidth: true
     Layout.preferredHeight: (page.height / 2) - 50
@@ -38,7 +34,7 @@ import ".."
     color: "white"
     wrapMode: TextEdit.WrapAnywhere
     placeholderTextColor: "White"
-            placeholderText: cipherDirection ? qsTr("Zaszyfrowany tekst...") :  qsTr("Tekst do zaszyfrowania...")
+            placeholderText: deszyfrowanie ? qsTr("Zaszyfrowany tekst...") :  qsTr("Tekst do zaszyfrowania...")
     background: Rectangle {
                     radius: 5
                     color: "#1d1d1d"

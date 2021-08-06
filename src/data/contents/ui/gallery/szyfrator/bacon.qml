@@ -57,7 +57,6 @@ HPSPage {
         HPSText
         {
        id: pole
-       cipherDirection: szyfrowanie
        onTextChanged:
     {
         if (activeFocus)
@@ -71,7 +70,7 @@ HPSPage {
         HPSText
         {
        id: pole2
-       cipherDirection: deszyfrowanie
+       deszyfrowanie: true
      onPressAndHold:
       {
        clipboard.paste = pole2.text
