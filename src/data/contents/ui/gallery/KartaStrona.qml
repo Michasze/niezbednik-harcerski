@@ -58,7 +58,7 @@ import QtGraphicalEffects 1.12
                     Image {
                         id:autor
                         visible: false
-                        asynchronous: true
+//                        asynchronous: true
                         smooth: true
                         sourceSize.width: 200
                         sourceSize.height: 200
