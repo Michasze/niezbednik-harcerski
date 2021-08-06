@@ -684,65 +684,60 @@ QString Cipher::baconDec()
 {
   // Tabela z wartościami szyfru dla każdej litery
   bacondectable["aaaaa"] = QChar('a');
-/*  bacondectable[QChar(261)] = "aaaaa"; // ą
-  bacondectable[QChar('b')] = "aaaab";
-  bacondectable[QChar('c')] = "aaaba";
-  bacondectable[QChar(263)] = "aaaba"; // ć
-  bacondectable[QChar('d')] = "aaabb";
-  bacondectable[QChar('e')] = "aabaa";
-  bacondectable[QChar(281)] = "aabaa"; // ę
-  bacondectable[QChar('f')] = "aabab";
-  bacondectable[QChar('g')] = "aabba";
-  bacondectable[QChar('h')] = "aabbb";
-  bacondectable[QChar('i')] = "abaaa";
-  bacondectable[QChar('j')] = "abaaa";
-  bacondectable[QChar('k')] = "abaab";
-  bacondectable[QChar('l')] = "ababa";
-  bacondectable[QChar(322)] = "ababa"; // ł
-  bacondectable[QChar('m')] = "ababb";
-  bacondectable[QChar('n')] = "abbaa";
-  bacondectable[QChar(324)] = "abbaa";
-  bacondectable[QChar('o')] = "abbab";
-  bacondectable[QChar(243)] = "abbab"; // ó
-  bacondectable[QChar('p')] = "abbba";
-  bacondectable[QChar('q')] = "abbbb";
-  bacondectable[QChar('r')] = "baaaa";
-  bacondectable[QChar('s')] = "baaab";
-  bacondectable[QChar(347)] = "baaab";
-  bacondectable[QChar('t')] = "baaba";
-  bacondectable[QChar('u')] = "baabb";
-  bacondectable[QChar('v')] = "baabb";
-  bacondectable[QChar('w')] = "babaa";
-  bacondectable[QChar('x')] = "babab";
-  bacondectable[QChar('y')] = "babba";
-  bacondectable[QChar('z')] = "babbb";
-  bacondectable[QChar(380)] = "babbb"; // ż
-  bacondectable[QChar(378)] = "babbb"; // ź */
+  bacondectable["aaaab"] = QChar('b');
+  bacondectable["aaaba"] = QChar('c');
+  bacondectable["aaabb"] = QChar('d');
+  bacondectable["aabaa"] = QChar('e');
+  bacondectable["aabab"] = QChar('f');
+  bacondectable["aabba"] = QChar('g');
+  bacondectable["aabbb"] = QChar('h');
+  bacondectable["abaaa"] = QChar('i');
+  bacondectable["abaaa"] = QChar('j');
+  bacondectable["abaab"] = QChar('k');
+  bacondectable["ababa"] = QChar('l');
+  bacondectable["ababb"] = QChar('m');
+  bacondectable["abbaa"] = QChar('n');
+  bacondectable["abbab"] = QChar('o');
+  bacondectable["abbba"] = QChar('p');
+  bacondectable["abbbb"] = QChar('q');
+  bacondectable["baaaa"] = QChar('r');
+  bacondectable["baaab"] = QChar('s');
+  bacondectable["baaba"] = QChar('t');
+  bacondectable["baabb"] = QChar('u');
+  bacondectable["baabb"] = QChar('v');
+  bacondectable["babaa"] = QChar('w');
+  bacondectable["babab"] = QChar('x');
+  bacondectable["babba"] = QChar('y');
+  bacondectable["babbb"] = QChar('z');
   m_baconDecryptedWhole = "";
    for(int i = 0; i < ((m_baconDec.length() / 5)); i++)
    {
-     m_baconDec = m_baconDec.toLower();
      baconDecList.clear();
+     m_baconDec = m_baconDec.toLower();
       int count = m_baconDec.length();
-     for (int i = 0; i < (m_baconDec.length() / 5); i++)
+     for (int i = 0; i < (count / 5); i++)
       {
         if(count%5==0)
           {
-            int przedzial = i * 5;
-     baconDecList.append(m_baconDec.mid(przedzial , przedzial + 5));
+     baconDecList.append(m_baconDec.left(5));
+     m_baconDec.remove(0,5);
       qInfo() << "baconDecList:" << baconDecList;
       }
       }
      // Pobierz wartość szyfru z tabeli dla danej litery
-     if (bacondectable.contains(m_baconDec))
+     for (int i = 0; i < baconDecList.size(); i++)
+       {
+      if (bacondectable.contains(baconDecList.at(i)))
      {
-     dectable.append(bacondectable.value(m_baconDec));
+     dectable.append(bacondectable.value(baconDecList.at(i)));
      }
      else
      {
-         dectable.append(m_baconDec);
+         dectable.append(baconDecList.at(i));
      }
          m_baconDecryptedWhole.append(dectable.value(i));
+
+       }
    }
    bacondectable.clear();
    dectable.clear();
