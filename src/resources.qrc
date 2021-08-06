@@ -305,7 +305,6 @@
         <file alias="contents/ui/img/szyfry.svg">./data/contents/ui/img/szyfry.svg</file>
         <file alias="contents/ui/img/harcerz.svg">./data/contents/ui/img/harcerz.svg</file>
         <file alias="contents/ui/img/spala.svg">./data/contents/ui/img/spala.svg</file>
-        <file alias="contents/ui/img/spala.png">./data/contents/ui/img/spala.png</file>
         <file alias="contents/ui/img/zhp.svg">./data/contents/ui/img/zhp.svg</file>
         <file alias="contents/ui/img/tur.svg">./data/contents/ui/img/tur.svg</file>
         <file alias="contents/ui/img/rodlo.svg">./data/contents/ui/img/rodlo.svg</file>

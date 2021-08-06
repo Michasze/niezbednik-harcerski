@@ -68,7 +68,7 @@ KartaStronaIkona {
     KartaStrona { 
         header: "Zlot ZHP w Spale"
         opis: "Jubileuszowy Zlot w Spale"
-        ikona: "qrc:/contents/ui/img/spala.png"
+        ikona: "qrc:/contents/ui/img/spala.svg"
         adres: "spala.qml"
     }
         HPSSeparator
