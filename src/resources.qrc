@@ -249,6 +249,7 @@
         <file alias="contents/ui/img/Artykuly.svg">./data/contents/ui/img/Artykuly.svg</file>
         <file alias="contents/ui/img/sznur.svg">./data/contents/ui/img/sznur.svg</file>
         <file alias="contents/ui/img/sprzet.svg">./data/contents/ui/img/sprzet.svg</file>
+        <file alias="contents/ui/img/karimata.svg">./data/contents/ui/img/karimata.svg</file>
         <file alias="contents/ui/img/noz.svg">./data/contents/ui/img/noz.svg</file>
         <file alias="contents/ui/img/szlify.svg">./data/contents/ui/img/szlify.svg</file>
         <file alias="contents/ui/img/plecak.svg">./data/contents/ui/img/plecak.svg</file>

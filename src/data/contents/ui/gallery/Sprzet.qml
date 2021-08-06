@@ -57,7 +57,8 @@ KartaStronaNoImage {
         Layout.fillWidth: true
     }
 
-KartaStronaNoImage { 
+KartaStronaIkona {
+        ikona: "qrc:/contents/ui/img/karimata.svg"
         header: "Wybór karimaty, maty lub materaca"
         opis: ""
         adres: "maty.qml"
