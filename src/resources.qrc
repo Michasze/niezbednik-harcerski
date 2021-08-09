@@ -188,6 +188,7 @@
         <file alias="contents/ui/gallery/malaKsiega/grupowy.qml">./data/contents/ui/gallery/malaKsiega/grupowy.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/mafeking.qml">./data/contents/ui/gallery/malaKsiega/mafeking.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/bacon.qml">./data/contents/ui/gallery/malaKsiega/bacon.qml</file>
+        <file alias="contents/ui/gallery/malaKsiega/morse.qml">./data/contents/ui/gallery/malaKsiega/morse.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/ksiazkowy.qml">./data/contents/ui/gallery/malaKsiega/ksiazkowy.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/wsteczny.qml">./data/contents/ui/gallery/malaKsiega/wsteczny.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/rozbiezny.qml">./data/contents/ui/gallery/malaKsiega/rozbiezny.qml</file>
@@ -362,6 +363,7 @@
         <file alias="contents/ui/img/szyfry/grupowy2.svg">./data/contents/ui/img/szyfry/grupowy2.svg</file>
         <file alias="contents/ui/img/szyfry/mafeking.svg">./data/contents/ui/img/szyfry/mafeking.svg</file>
         <file alias="contents/ui/img/szyfry/bacon.svg">./data/contents/ui/img/szyfry/bacon.svg</file>
+        <file alias="contents/ui/img/szyfry/morse.svg">./data/contents/ui/img/szyfry/morse.svg</file>
         <file alias="contents/ui/media/gesty1.mkv">./data/contents/ui/media/gesty1.mkv</file>
         <file alias="contents/ui/media/gesty2.mkv">./data/contents/ui/media/gesty2.mkv</file>
         <file alias="contents/ui/media/gesty3.mkv">./data/contents/ui/media/gesty3.mkv</file>
