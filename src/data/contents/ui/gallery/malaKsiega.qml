@@ -117,6 +117,14 @@ HPSPage
     }
         }
         ElementListyNoImage {
+    header: "Alfabet Morse’a"
+    kolor: "Brown"
+        MouseArea {
+    anchors.fill: parent
+    onClicked: pageStack.push(Qt.resolvedUrl("malaKsiega/morse.qml"))
+    }
+        }
+        ElementListyNoImage {
     header: "Szyfr Bacona"
     kolor: "Brown"
         MouseArea {
