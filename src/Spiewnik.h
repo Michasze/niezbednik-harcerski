@@ -16,6 +16,7 @@ class Spiewnik : public QObject
   Q_PROPERTY(QStringList nazwaPiosenki READ nazwaPiosenki NOTIFY piosenkaChanged)
   Q_PROPERTY(QStringList tekstPiosenki READ tekstPiosenki NOTIFY tekstChanged)
   Q_PROPERTY(QStringList autorPiosenki READ autorPiosenki NOTIFY autorChanged)
+  Q_PROPERTY(QStringList ikonaPiosenki READ ikonaPiosenki NOTIFY ikonaChanged)
   Q_PROPERTY(int spiewnikIndex READ spiewnikIndex WRITE setIndex NOTIFY indexChanged)
 
 public:
@@ -26,6 +27,7 @@ public:
   QStringList nazwaPiosenki();
   QStringList tekstPiosenki();
   QStringList autorPiosenki();
+  QStringList ikonaPiosenki();
   void setIndex(const int &a);
 
 signals:
@@ -34,12 +36,14 @@ signals:
   void piosenkaChanged();
   void tekstChanged();
   void autorChanged();
+  void ikonaChanged();
 
 private:
   QStringList m_nazwaSpiewnika;
   QStringList m_nazwaPiosenki;
   QStringList m_tekstPiosenki;
   QStringList m_autorPiosenki;
+  QStringList m_ikonaPiosenki;
   int m_spiewnikIndex;
   QJsonParseError jsonError;
   QJsonObject jsonObject;
@@ -49,5 +53,6 @@ private:
   QJsonArray songArray;
   QJsonArray textArray;
   QJsonArray autorArray;
+  QJsonArray iconArray;
   };
 #endif // __SPIEWNIK_H_

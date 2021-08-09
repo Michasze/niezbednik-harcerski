@@ -54,16 +54,25 @@ if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
       m_nazwaPiosenki.clear();
       m_tekstPiosenki.clear();
       m_autorPiosenki.clear();
+      m_ikonaPiosenki.clear();
       songArray = array.at(m_spiewnikIndex).toObject().value("piosenka").toArray();
       autorArray = array.at(m_spiewnikIndex).toObject().value("autor").toArray();
       textArray = array.at(m_spiewnikIndex).toObject().value("tresc").toArray();
+      iconArray = array.at(m_spiewnikIndex).toObject().value("ikona").toArray();
       for (int i = 0; i < songArray.size(); i++)
         {
           m_nazwaPiosenki.append(songArray.at(i).toString());
           m_autorPiosenki.append(autorArray.at(i).toString());
           m_tekstPiosenki.append(textArray.at(i).toString());
+          if (iconArray.at(i).toString() == "")
+            {
+          m_ikonaPiosenki.append("nuta");
+            }
+          else {
+          m_ikonaPiosenki.append(iconArray.at(i).toString());
+          }
         }
-      qInfo() << autorArray;
+      qInfo() << m_ikonaPiosenki;
       piosenkaChanged();
       return m_nazwaPiosenki;
     }
@@ -74,4 +83,8 @@ if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
   QStringList Spiewnik::autorPiosenki()
     {
       return m_autorPiosenki;
+    }
+  QStringList Spiewnik::ikonaPiosenki()
+    {
+      return m_ikonaPiosenki;
     }

@@ -118,9 +118,10 @@ HPSPage
      }
         Repeater {
         model: spiewnik.nazwaPiosenki
-            delegate: KartaStronaNoImage {
+            delegate: KartaStronaIkona {
     header: modelData
     opis: spiewnik.autorPiosenki[index]
+    ikona: "qrc:/contents/ui/img/" + spiewnik.ikonaPiosenki[index]
     MouseArea {
     anchors.fill: parent
         onClicked:

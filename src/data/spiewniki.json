@@ -525,7 +525,8 @@ Przez krew do wskrzeszonej Ojczyzny jest szlak
 Więc oto giniemy dziś dla Niej
 Krwi krople zakrzepły na polu jak mak
 Ułani Beliny, ułani."
-                  ]
+                  ],
+            "ikona": [""]
     },
     {
         "tytuł":"Harcerska twórczość własna",
@@ -773,7 +774,8 @@ Ref: Bo czas mija …
 
 Krąg Instruktorski \"Fen\"
 "
-                  ]
+                 ],
+        "ikona": [""]
     },
     {
          "tytuł":"Hymny",
@@ -811,7 +813,9 @@ najpierw zmieni trzeba siebie, później świat.
 Przyszłe dni rzeźbi czas, gdy wybrałeś nie patrz wstecz.
 Co przyszedłeś trwa aż po życia kres.
 Jasnym wzrokiem w przyszłość patrz, wielkie smutki odrzuć precz,
-by móc innym miłość i nadzieję nieść. "]
+by móc innym miłość i nadzieję nieść. "],
+        "ikona": ["zhp_zhr",
+                 "fse"]
                  }
 
 
