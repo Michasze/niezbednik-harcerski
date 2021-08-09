@@ -126,9 +126,17 @@ HPSPage
             header: Heading {
                 id: heading
             }
+            background: Rectangle {
+              anchors.fill: parent
+              color: invisibleCheckbox.checked ? "Black" : "grey"
+    }
+
 
             contentItem: QQC2.Label {
                 id: bodyLabel
+                wrapMode: Text.WordWrap
+                rightPadding: 10
+                leftPadding: 10
                 text: licenseSheet.text
             }
         }
