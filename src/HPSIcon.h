@@ -4,8 +4,9 @@
 #include <QObject>
 #include <QImage>
 #include <QDebug>
-#include <QVariant>
 #include <QPainter>
+#include <QColor>
+#include <QStringList>
 #include <QSvgRenderer>
 #include <QQuickImageProvider>
 
@@ -20,11 +21,36 @@ public:
     }
  QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize) override
 {
-  QImage image;
-  QSvgRenderer render(QString("://contents/ui/img/szyfry/morse.svg"));
+  QStringList list = id.split(QLatin1Char(','), Qt::SkipEmptyParts);
+  QColor color;
+  QString adres;
+  if(list.size() == 2)
+    {
+      adres = list[0];
+         color = list.at(1);
+    }
+  else
+    {
+      adres = id;
+    }
+  int width = 400;
+  QSvgRenderer render(QString("://contents/ui/img/" + adres));
+  render.setAspectRatioMode(Qt::KeepAspectRatio);
+  QSize imgSize = render.defaultSize();
+  float ratio = (float) imgSize.width() / (float) imgSize.height();
+  qInfo() << "ratio: " << ratio;
+  int fixedHeight = (float) requestedSize.width() / ratio;
+  qInfo() << "color: " << color;
+  QImage image(requestedSize.width() > 0 ? requestedSize.width() : width, fixedHeight > 0 ? fixedHeight : 400, QImage::Format_ARGB32);
+  image.fill(Qt::transparent);
   QPainter painter(&image);
   render.render(&painter);
-  qInfo() << render.isValid();
+  if(list.size() == 2)
+    {
+  painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
+  painter.fillRect(image.rect(), color);
+  painter.end();
+  }
   return image;
 }
 };
