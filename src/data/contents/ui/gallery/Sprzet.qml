@@ -47,8 +47,10 @@ KartaStronaIkona {
         Layout.fillWidth: true
     }
 
-KartaStronaNoImage { 
+KartaStronaIkona {
         header: "Jak wybrać odpowiedni śpiwór?"
+        ikona: "qrc:/contents/ui/img/spiwor.svg"
+        mask: true
         opis: ""
         adres: "Spiwor.qml"
     }
@@ -60,6 +62,7 @@ KartaStronaNoImage {
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/karimata.svg"
         header: "Wybór karimaty, maty lub materaca"
+        mask: true
         opis: ""
         adres: "maty.qml"
     }
