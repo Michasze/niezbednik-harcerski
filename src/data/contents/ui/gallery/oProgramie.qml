@@ -35,7 +35,7 @@ actions.main: Kirigami.Action {
  "homepage" : "",
  "programLogo" : "qrc:/contents/ui/img/logo.svg",
  "bugAddress" : "aplikacjahps@gmail.com",
- "version" : "1.0.2",
+ "version" : "1.0.3",
  "otherText" : "",
  "authors" : [
      {
