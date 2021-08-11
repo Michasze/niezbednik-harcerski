@@ -29,6 +29,7 @@
 #include "Spiewnik.h"
 #include "HPSFilter.h"
 #include "HPSIcon.h"
+#include "HPSImage.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -74,6 +75,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 //    qmlRegisterType<HPSIcon>("Icon", 1, 0, "HPSIcon");
     qmlRegisterType<HPSFilter>("Filter", 1, 0, "HPSFilter");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
+    engine.addImageProvider(QLatin1String("images"), new HPSImage);
     //we want different main files on desktop or mobile
     //very small difference as they as they are subclasses of the same thing
     if (qEnvironmentVariableIsSet("QT_QUICK_CONTROLS_MOBILE") &&
