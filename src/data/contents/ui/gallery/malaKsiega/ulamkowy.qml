@@ -41,16 +41,7 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
-                              ElementListyNoImage
+                       ElementListyNoImage
         {
             color: "brown"
             header: "Trudność: *"
@@ -60,14 +51,9 @@ HPSPage {
             color: "brown"
             header: "Szyfr składa się z 24 liter podzielonych na 8 grup po trzy sztuki każda. Cały szyfr opiera się na ułamkach – licznik obrazuje numer litery, a mianownik grupę, w której należy jej szukać."
         }
-    Kirigami.Icon
+    HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 300
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/ulamkowy.svg"
+     source: "image://icons/szyfry/ulamkowy.svg,white"
  }
     }
 }

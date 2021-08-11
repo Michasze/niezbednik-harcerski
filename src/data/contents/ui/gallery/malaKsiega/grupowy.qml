@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Grupowy"
 
@@ -41,15 +40,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
                               ElementListyNoImage
         {
             color: "brown"
@@ -67,14 +57,9 @@ HPSPage {
 6. WXYZ<br>
 Litery umieszczamy w „X” zaczynając od góry, a później zgodnie z ruchem wskazówek zegara."
         }
-    Kirigami.Icon
+    HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 200
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/grupowy.svg"
+     source: "image://icons/szyfry/grupowy.svg,white"
  }
                        ElementListyNoImage
         {
@@ -83,14 +68,9 @@ Litery umieszczamy w „X” zaczynając od góry, a później zgodnie z ruchem 
 I tak hasło „Piesek” zakodujemy jako:
 "
         }
-            Kirigami.Icon
+            HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 200
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/grupowy2.svg"
+     source: "image://icons/szyfry/grupowy2.svg,white"
  }
     }
 }

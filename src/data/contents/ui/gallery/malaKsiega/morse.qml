@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
-Kirigami.ScrollablePage {
+HPSPage {
     id: page
     Layout.fillWidth: true
     //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
@@ -41,16 +41,7 @@ Kirigami.ScrollablePage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
-                              ElementListyNoImage
+                             ElementListyNoImage
         {
             color: "brown"
             header: "Trudność: ****"
@@ -60,16 +51,9 @@ Kirigami.ScrollablePage {
             color: "brown"
             header: "Powstał w 1838 roku. Jest to sposób prezentacji m.in. liter alfabetu za pomocą dźwięków, błysków światła lub też znaków popularnie zwanych „kropką i kreską” w przypadku przekazywania wiadomości inaczej niżeli pismem „kropka” oznacza sygnał krótki, a „kreska” długi, przyjęło się, że „kreska” trwa co najmniej tyle czasu ile trzy „kropki” Odstęp pomiędzy literami w danym słowie ok. 3 „kropki” Odstęp między słowami ok. 7 „kropek” "
         }
-            Image
+            HPSIcon
  {
-     Layout.fillWidth: true
-//     isMask: true
-     width: page.width
-     Layout.maximumHeight: 500
-     Layout.preferredWidth: page.width
-     Layout.alignment: Qt.AlignHCenter
-//     color: "white"
-     source: "image://icons"
+     source: "image://icons/szyfry/morse.svg,white"
  }
    }
 }

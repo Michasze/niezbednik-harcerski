@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Czekoladka"
 
@@ -41,15 +40,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
                               ElementListyNoImage
         {
             color: "brown"
@@ -60,14 +50,9 @@ HPSPage {
             color: "brown"
             header: "Jeden z najpopularniejszych szyfrów, który ze względu na swoją pozorną trudność jest uwielbiany przez wielu – osoba nieznająca go bowiem może być przerażona widząc wypisane na kartce „dziwne znaczki”, jednakże poznając klucz rozwiąże go w kilka sekund. „Czekoladka” spokojnie możemy zaliczyć do grona podstawowych szyfrów harcerskich."
         }
-    Kirigami.Icon
+    HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 200
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/czeko.svg"
+     source: "image://icons/szyfry/czeko.svg,white"
  }
                        ElementListyNoImage
         {

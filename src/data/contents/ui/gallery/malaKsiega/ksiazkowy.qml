@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Szyfr Ottendorfa | szyfr ksiązkowy"
 
@@ -41,15 +40,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
                               ElementListyNoImage
         {
             color: "brown"

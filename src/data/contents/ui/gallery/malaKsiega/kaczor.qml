@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Kaczor"
 
@@ -41,16 +40,7 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
-                              ElementListyNoImage
+                        ElementListyNoImage
         {
             color: "brown"
             header: "Trudność: **"
@@ -62,23 +52,13 @@ HPSPage {
 
 "
         }
-            Kirigami.Icon
+            HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 300
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/kaczor.svg"
+     source: "image://icons/szyfry/kaczor.svg,white"
  }
-             Kirigami.Icon
+             HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 300
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/kaczor2.svg"
+     source: "image://icons/szyfry/kaczor2.svg,white"
  }
                        ElementListyNoImage
         {

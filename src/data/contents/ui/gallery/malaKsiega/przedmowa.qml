@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Przedmowa"
 
@@ -41,15 +40,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
                        ElementListyNoImage
         {
             color: "brown"
@@ -84,14 +74,9 @@ Hufiec Kielce-Powiat
 "
         }
     
-    Kirigami.Icon
+    HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 200
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/czeko.svg"
+     source: "image://icons/szyfry/czeko.svg,white"
  }
     }
 }

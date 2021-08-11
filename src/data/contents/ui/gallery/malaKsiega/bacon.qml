@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Szyfr Bacona"
 
@@ -41,16 +40,7 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
-                              ElementListyNoImage
+                      ElementListyNoImage
         {
             color: "brown"
             header: "Trudność: ***"
@@ -64,14 +54,9 @@ ciąg piecioznakowego „słowa” złożonego z literek
 „a” i „b”.
 "
         }
-            Kirigami.Icon
+            HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 500
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/bacon.svg"
+     source: "image://icons/szyfry/bacon.svg,white"
  }
 
                        ElementListyNoImage

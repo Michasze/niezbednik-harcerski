@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Liczbowy | Matematyczny"
 
@@ -41,15 +40,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
                               ElementListyNoImage
         {
             color: "brown"
@@ -60,35 +50,22 @@ HPSPage {
             color: "brown"
             header: "Jeden z najciekawszych szyfrów. Jego zdecydowanym atutem jest pełna dowolność w konstrukcji klucza, wadą natomiast – chaotyczność zapisu. Szyfr opiera się na tabelce na podstawie której konstruujemy interesującą nas wiadomość. Dodatkowo nie oddzielamy niczym słów, co powoduje iż powstaje nam równanie matematyczne, kryjące w sobie wiadomość. Elementami stałymi są liczby 1,2,3,4,5,6, a zamiennymi 7,8,9 oraz znaki +,x,-"
         }
-    Kirigami.Icon
+    HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 200
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/liczbowy.svg"
+     source: "image://icons/szyfry/liczbowy.svg,white"
  }
                        ElementListyNoImage
         {
             color: "brown"
             header: "Każdą literę (oprócz A-B-C-D-E-F) możemy zapisać na dwa sposoby: przykładowo „H” jako „27”, ale także jako „2+”. Literę „A” w szyfrze oznaczamy jako „1”, „B” jako „2”, „C” jako „3”, „D” jako „4”, „E” jako „5”, a „F” jako „6”."
         }
-            Kirigami.Icon
+            HPSIcon
  {
-     Layout.fillWidth: true
-     width: page.width
-     selected: true
-     Layout.minimumHeight: 200
-     source: "qrc:/contents/ui/img/szyfry/liczbowy2.svg"
+     source: "image://icons/szyfry/liczbowy2.svg"
  }
-             Kirigami.Icon
+             HPSIcon
  {
-     Layout.fillWidth: true
-     width: page.width
-     selected: true
-     Layout.minimumHeight: 200
-     source: "qrc:/contents/ui/img/szyfry/liczbowy3.svg"
+     source: "image://icons/szyfry/liczbowy3.svg"
  }
                         ElementListyNoImage
         {

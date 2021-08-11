@@ -26,7 +26,6 @@ import ".."
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Mafeking"
 
@@ -41,15 +40,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
                               ElementListyNoImage
         {
             color: "brown"
@@ -60,14 +50,9 @@ HPSPage {
             color: "brown"
             header: "Zasada działania podobna do Kaczora czy Liczbowego – po prostu lokalizujemy daną literkę w tabeli."
         }
-            Kirigami.Icon
+            HPSIcon
  {
-     Layout.fillWidth: true
-     isMask: true
-     width: page.width
-     Layout.minimumHeight: 300
-     color: "white"
-     source: "qrc:/contents/ui/img/szyfry/mafeking.svg"
+     source: "image://icons/szyfry/mafeking.svg,white"
  }
 
                        ElementListyNoImage
