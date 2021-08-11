@@ -18,6 +18,7 @@
         <file alias="contents/ui/gallery/HPSSeparator.qml">./data/contents/ui/gallery/HPSSeparator.qml</file>
         <file alias="contents/ui/gallery/HPSCheckable.qml">./data/contents/ui/gallery/HPSCheckable.qml</file>
         <file alias="contents/ui/gallery/HPSCheckBox.qml">./data/contents/ui/gallery/HPSCheckBox.qml</file>
+        <file alias="contents/ui/gallery/HPSIcon.qml">./data/contents/ui/gallery/HPSIcon.qml</file>
         <file alias="contents/ui/gallery/CytatAutor.qml">./data/contents/ui/gallery/CytatAutor.qml</file>
         <file alias="contents/ui/gallery/Cytat.qml">./data/contents/ui/gallery/Cytat.qml</file>
         <file alias="contents/ui/img/skaut.jpg">./data/contents/ui/img/skaut.jpg</file>
