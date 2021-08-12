@@ -35,10 +35,38 @@ HPSPage
     ColumnLayout {
      id: mainList
 
-        ElementListyNoImage {
-    header: "Postacie"
-    wysokosc: 120
-    textSize: invisibleSlider.value + 2
+        ElementListy {
+            id: postacie
+            height: 150
+             RowLayout {
+                 anchors.fill: parent
+                 id: row
+                    HPSImage {
+                        id: ikona
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+                        Layout.leftMargin: 10
+                        Layout.fillWidth: false
+                        sourceSize.width: postacie.height - 20
+                        fillMode: Image.PreserveAspectFit
+                        source: "image://images/Baden-Powell.jpg,20"
+                    }
+                    // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
+
+                        Controls.Label {
+//                            Layout.alignment: Qt.AlignLeft
+                            horizontalAlignment: Text.AlignHCenter
+                            id: naglowek
+                            wrapMode: Text.Wrap
+                            font.pointSize: invisibleSlider.value
+//                            Layout.rightMargin: 100
+                            Layout.fillWidth: true
+//                            leftPadding: cardRectangle.symbolika ? ikona.width + 10 : 0
+//                            rightPadding: cardRectangle.symbolika ? ikona.width + 10 : 0
+                            Layout.rightMargin: 10
+ //                           anchors.centerIn: parent
+                             text: "Postacie"
+                    }
+                }
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("postacie.qml"))
