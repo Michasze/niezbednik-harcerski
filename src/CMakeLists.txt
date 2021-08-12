@@ -18,9 +18,7 @@ qt5_add_resources(RESOURCES resources.qrc)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Android")
     find_package(KF5Kirigami2 ${KF5_DEP_VERSION})
-    set(HPS_EXTRA_LIBS Qt5::AndroidExtras
-    #FIXME: we shouldn't have to link to it but otherwise the lib won't be packaged on Android
-    Qt5::QuickControls2 KF5::Kirigami2 -ljnigraphics -landroid -lEGL)
+    set(HPS_EXTRA_LIBS Qt5::AndroidExtras KF5::Kirigami2)
 endif()
 
 find_program(kpackagetool_cmd kpackagetool5)

@@ -86,10 +86,18 @@ android {
         exclude 'lib/*/*_imageformats_qicns_*'
         exclude 'lib/*/*_imageformats_qtga_*'
         exclude 'lib/*/*_imageformats_qtiff_*'
+        exclude 'lib/*/*_imageformats_qwebp_*'
+        exclude 'lib/*/*_imageformats_qwbmp_*'
+        exclude 'lib/*/*_imageformats_qgif_*'
         exclude 'lib/*/*_qmltooling_*'
         exclude 'lib/*/*_qtgeoservices_esri_*'
         exclude 'lib/*/*_qtgeoservices_mapbox_*'
         exclude 'lib/*/*_qtgeoservices_nokia_*'
+        exclude 'lib/*/*_Qt_labs_*'
+        exclude 'lib/*/*_QtTest_*'
+        exclude 'lib/*/*_bearer_*'
+        exclude 'lib/*/libQt5QuickTest_*'
+        exclude 'lib/*/libQt5Test_*'
     }
 
     aaptOptions {
