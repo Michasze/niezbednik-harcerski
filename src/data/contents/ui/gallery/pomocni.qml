@@ -25,7 +25,6 @@ import org.kde.kirigami 2.4
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Pomocne dłonie"
 
@@ -37,26 +36,6 @@ HPSPage {
         onTriggered: pageStack.layers.pop(-1);
         shortcut: "Alt+B"
     }
-       /* left: Action {
-            iconName: "qrc:/contents/ui/img/go-previous.svg"
-            text: "Left Action Text"
-            onTriggered: {
-                showPassiveNotification("Left action triggered")
-            }
-        } 
-        contextualActions: [
-            Action {
-                text:"Action 1"
-                iconName: "go-next"
-                onTriggered: showPassiveNotification("Action 1 clicked")
-            },
-            Action {
-                text:"Action 2"
-                iconName: "folder"
-                enabled: false
-                onTriggered: showPassiveNotification("Action 2 clicked")
-            }
-        ] */
     }
 ColumnLayout
 {
@@ -75,21 +54,11 @@ ColumnLayout
     ikona: "qrc:/contents/ui/img/user.svg"
     header: "Piotr Parkita HO"
     }
-}
-/*        Controls.Button {
-            text: "Push A New Layer"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: pageStack.layers.push(Qt.resolvedUrl("LayersGallery.qml"));
-        }
-        Controls.Button {
-            text: "Pop A Layer"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: pageStack.layers.pop();
-        }
-        Controls.Button {
-            text: "Toggle header"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: page.globalToolBarStyle = ApplicationHeaderStyle.None
-        } */
+    ElementListy
+    {
+    ikona: "qrc:/contents/ui/img/user.svg"
+    header: "Antoni Łasica"
     }
 
+}
+    }
