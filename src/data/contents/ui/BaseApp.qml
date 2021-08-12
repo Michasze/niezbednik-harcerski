@@ -157,6 +157,7 @@ może ulec zmianie."
                         Layout.bottomMargin: 30
                         onClicked:
                         {
+                            mediaPlayer.stop()
                             aboutDialog2.close()
 //                          
                         }
@@ -199,6 +200,7 @@ może ulec zmianie."
                         onClicked:
                         {
                 hpsSettings.neverShow3IsToggled = true
+                            mediaPlayer2.stop()
                             aboutDialog3.close()
 //
                         }
@@ -241,6 +243,7 @@ może ulec zmianie."
                         onClicked:
                         {
                 hpsSettings.neverShow4IsToggled = true
+                            mediaPlayer3.stop()
                             aboutDialog4.close()
 //
                         }
