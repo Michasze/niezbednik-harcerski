@@ -25,7 +25,7 @@ import org.kde.kirigami 2.4 as Kirigami
 
          Rectangle {
              // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
-             property string header: "Brak tekstu"
+             property string header: ""
 //              property string opis: "Brak opisu"
              property url ikona: "qrc:/contents/ui/img/blank.svg"
              property url odnosnik: ""
