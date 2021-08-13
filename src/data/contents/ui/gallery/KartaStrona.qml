@@ -20,25 +20,24 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
-import QtGraphicalEffects 1.12
 
 
          Rectangle {
              property string header: "Brak tekstu"
              property string opis: "Brak opisu"
-             property url ikona: "qrc:/contents/ui/img/harcerz.svg"
+             property url ikona: ""
              property url adres: "harcerz.qml"
              property string kolor: "#303030"
+             property int imageRadius: 20
+             property bool isVector: false
 
-    id: hznpRectangle
+    id: kartaRectangle
     Layout.fillWidth: true
     Layout.topMargin: 10
     Layout.bottomMargin: 10
     radius: 10
     color: kolor
     Layout.minimumHeight : 120
-//     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"
     MouseArea {
     anchors.fill: parent
@@ -52,48 +51,24 @@ import QtGraphicalEffects 1.12
                         right: parent.right
                         //IMPORTANT: never put the bottom margin
                     }
-                    rowSpacing: Kirigami.Units.largeSpacing
-                    columnSpacing: Kirigami.Units.largeSpacing
-                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
                     Image {
                         id:autor
-                        visible: false
-//                        asynchronous: true
-                        smooth: true
-                        sourceSize.width: 200
-                        sourceSize.height: 200
+                        asynchronous: true
+                        sourceSize.width: kartaRectangle.height - 20
                         Layout.leftMargin: 10
                         Layout.topMargin: 10
                         Layout.bottomMargin: 10
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        source: hznpRectangle.ikona
-                        Layout.fillHeight: true
-//                         Layout.fillWidth: true
-                         Layout.minimumHeight: 100
-//                         Layout.maximumHeight: 80
-               //         Layout.maximumHeight: hznpRectangle.implicitHeight
-                        Layout.preferredWidth: height
+                        source: isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius
+                        Layout.fillWidth: false
                     }
-                   
-                    OpacityMask {
-                      //Layout.fillWidth: true
-                      width: 100
-                      Layout.leftMargin: 10
-                      Layout.topMargin: 10
-                      Layout.bottomMargin: 10
-                      height: 100
-                      Layout.fillHeight: true
-                      source: autor
-                      maskSource: mask
-    }
-                    // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
                     ColumnLayout {
                         Controls.Label {
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
                             Layout.fillWidth: true
-                             text: hznpRectangle.header
+                             text: kartaRectangle.header
                         }
                         HPSSeparator {
                             Layout.fillWidth: true
@@ -103,27 +78,8 @@ import QtGraphicalEffects 1.12
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value - 2
                             Layout.bottomMargin: 10
-                            text: hznpRectangle.opis
+                            text: kartaRectangle.opis
                         }
                     }
-                  /*  Controls.RoundButton {
-                        Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
-                        Layout.columnSpan: 2
-                        radius: 4
-                        text: qsTr("Otwórz")
-                        highlighted: true
-                        Layout.rightMargin: 10
-                        Layout.bottomMargin: 10
-                        onClicked: pageStack.push(Qt.resolvedUrl("HZNP.qml"))
-                    } */
                 }
-                 Rectangle
-                    {
-                     id: mask
-                     height: 100
-                     width: 100
-                     color: "black"
-                      visible: false
-                     radius: 10
-                    }
                 }
