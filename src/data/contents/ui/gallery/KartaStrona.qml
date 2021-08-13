@@ -41,10 +41,9 @@ import QtQuick.Layouts 1.2
     border.color: "transparent"
     MouseArea {
     anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl(hznpRectangle.adres))
+    onClicked: pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
     }
                 GridLayout {
-                    id: hznpLayout
                     anchors {
                         left: parent.left
                         top: parent.top
