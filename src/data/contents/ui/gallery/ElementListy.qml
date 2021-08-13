@@ -20,20 +20,14 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
          Rectangle {
              // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
              property string header: ""
-//              property string opis: "Brak opisu"
-             property url ikona: "qrc:/contents/ui/img/blank.svg"
+             property url ikona: ""
              property url odnosnik: ""
              property bool symbolika: false
-             property int wysokosc: cardRectangle.symbolika ? cardRectangle.height - 5 : cardRectangle.height / 2
-             property string kolor: "white"
-             property bool mask: cardRectangle.symbolika ? true : false
-//              property url adres: "harcerz.qml"
     id: cardRectangle
     Layout.fillWidth: true
     Layout.topMargin: 10
@@ -44,42 +38,27 @@ import org.kde.kirigami 2.4 as Kirigami
     onClicked: Qt.openUrlExternally(cardRectangle.odnosnik)
     }
              Layout.minimumHeight : cardRectangle.symbolika ? 150 : 120
-//     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"
              RowLayout {
                  anchors.fill: parent
                  id: row
-                    Kirigami.Icon {
-                        id: ikona
+                    Image {
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        // potrzebujemy większych ilustracji dla symboliki
-                        smooth: true
-                        antialiasing: true
                         Layout.leftMargin: 10
-                        Layout.minimumHeight: cardRectangle.wysokosc
-                        Layout.maximumHeight: cardRectangle.wysokosc
-                        Layout.preferredWidth: cardRectangle.wysokosc
-                        isMask: cardRectangle.mask ? true : false
-                        color: cardRectangle.kolor
-//                        anchors.verticalCenter: row.verticalCenter
-//                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: cardRectangle.height - 20
+                        fillMode: Image.PreserveAspectFit
                         source: cardRectangle.ikona
-//                         Layout.fillWidth: true
-//                         Layout.maximumHeight: 80
-               //         Layout.maximumHeight: cardRectangle.implicitHeight
+                        Layout.fillWidth: false
                     }
                     // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
 
                         Controls.Label {
-//                            Layout.alignment: Qt.AlignLeft
                             horizontalAlignment: Text.AlignHCenter
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
 //                            Layout.rightMargin: 100
                             Layout.fillWidth: true
-//                            leftPadding: cardRectangle.symbolika ? ikona.width + 10 : 0
-//                            rightPadding: cardRectangle.symbolika ? ikona.width + 10 : 0
                             Layout.rightMargin: 10
  //                           anchors.centerIn: parent
                              text: cardRectangle.header
