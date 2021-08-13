@@ -53,17 +53,12 @@ HPSPage
                     // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
 
                         Controls.Label {
-//                            Layout.alignment: Qt.AlignLeft
                             horizontalAlignment: Text.AlignHCenter
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
-//                            Layout.rightMargin: 100
                             Layout.fillWidth: true
-//                            leftPadding: cardRectangle.symbolika ? ikona.width + 10 : 0
-//                            rightPadding: cardRectangle.symbolika ? ikona.width + 10 : 0
                             Layout.rightMargin: 10
- //                           anchors.centerIn: parent
                              text: "Postacie"
                     }
                 }
@@ -93,10 +88,10 @@ KartaStronaIkona {
     {
         Layout.fillWidth: true
     }
-    KartaStrona { 
+    KartaStronaIkona {
         header: "Zlot ZHP w Spale"
         opis: "Jubileuszowy Zlot w Spale"
-        ikona: "qrc:/contents/ui/img/spala.svg"
+        ikona: "image://icons/spala.svg"
         adres: "spala.qml"
     }
         HPSSeparator
@@ -106,7 +101,7 @@ KartaStronaIkona {
     KartaStrona { 
         header: "Kamień pamiątkowy"
         opis: "Ku czci harcerzy poległych w walce o polskość Wrocławia"
-        ikona: "qrc:/contents/ui/img/kamien.jpg"
+        ikona: "image://images/kamien.jpg"
         adres: "kamien.qml"
     }
         HPSSeparator
@@ -116,7 +111,7 @@ KartaStronaIkona {
     KartaStrona {
         header: "Wyjątkowe krzyże harcerskie"
         opis: "Ciekawe i nietypowe formy krzyża"
-        ikona: "qrc:/contents/ui/img/krzyz2.jpg"
+        ikona: "image://images/krzyz2.jpg"
         adres: "wyjatkowe.qml"
     }
 
@@ -127,7 +122,7 @@ KartaStronaIkona {
 
     KartaStronaIkona {
         header: "Dzień Myśli Braterskiej"
-        ikona: "qrc:/contents/ui/img/dmb.svg"
+        ikona: "image://icons/dmb.svg,white"
         opis: "Historia święta skautów"
         adres: "DMB.qml"
     }
@@ -137,7 +132,7 @@ KartaStronaIkona {
     }
     KartaStronaIkona {
         header: "Najważniejsze daty w historii harcerstwa"
-        ikona: "qrc:/contents/ui/img/1907.svg"
+        ikona: "image://icons/1907.svg,white"
         opis: ""
         adres: "daty.qml"
     }
