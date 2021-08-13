@@ -20,38 +20,18 @@ import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
-import QtGraphicalEffects 1.12
 
 HPSPage
 {
-    id: pageEko
+    id: page
     title: "Ekosystem w słoiku"
-    /*
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
-    */
         ColumnLayout {
-        width: pageEko.width
+        width: page.width
         spacing: 10
-Image {
+        HPSImage
+            {
          id: autor
-         source: "qrc:/contents/ui/img/ekosystem.jpg"   
-         visible: true
-          Layout.fillWidth: true
-         Layout.maximumHeight: 350
-//          Layout.maximumWidth: tresc.implicitWidth
-         verticalAlignment: Image.AlignTop
-         fillMode: Image.PreserveAspectFit
+         source: "image://images/ekosystem.jpg,10"
         }
         ElementListyNoImage
         {

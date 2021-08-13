@@ -5,18 +5,12 @@ import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
-    id: pageFoto
+    id: page
     title: "Pomysł na zbiórkę fotograficzną"
         ColumnLayout {
         width: pageFoto.width
-        spacing: Units.smallSpacing
-Image {
-         source: "qrc:/contents/ui/img/fotograficzna.jpg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 350
-//          Layout.maximumWidth: tresc.implicitWidth
-         verticalAlignment: Image.AlignTop
-         fillMode: Image.PreserveAspectFit
+HPSImage {
+         source: "image://images/fotograficzna.jpg,10"
         }
         ElementListyNoImage
         {

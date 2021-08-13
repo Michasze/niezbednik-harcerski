@@ -40,15 +40,8 @@ HPSPage {
     }
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-        Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/geo.jpg"   
-           Layout.fillWidth: true
-         Layout.maximumWidth: 1200
-         fillMode: Image.PreserveAspectCrop
-         Layout.alignment: Qt.AlignHCenter
+        HPSImage {
+         source: "image://images/geo.jpg,10"
         }
         ElementListyNoImage
         {
