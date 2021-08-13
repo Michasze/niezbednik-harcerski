@@ -21,12 +21,10 @@ import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.13
-import QtGraphicalEffects 1.15
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Wybór noża"
 
@@ -41,7 +39,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
      ElementListyNoImage
      {
         color: "royalblue"
@@ -299,31 +296,11 @@ ElementListyNoImage
         align: 0
         header: "Rodzaje szlifów"
      }
-        Image {
+        HPSImage {
             id: test
-fillMode: Image.PreserveAspectFit
-           Layout.fillWidth: true
-//         Layout.maximumHeight: 300
-//            width: 100
-            height: 300
-//           width: page.width
-            visible: false
-            source: "qrc:/contents/ui/img/szlify.svg"
-        antialiasing: true
+            fillMode: Image.PreserveAspectFit
+            source: "image://icons/szlify.svg,white"
    }
- ColorOverlay{
-        source:test
-            Layout.fillWidth: true
- //        Layout.maximumHeight: 300
-     color:"white"
-//     width: 100
-     height: test.height
-     width: test.width
-        transform:rotation
-//           width: page.width
-        antialiasing: true
-    }
-
             }
  
     
