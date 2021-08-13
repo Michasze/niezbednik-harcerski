@@ -36,7 +36,7 @@ HPSPage {
 
 ColumnLayout
 {
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/tur.svg"
         header: "Czerwone Harcerstwo"
         opis: ""
@@ -46,7 +46,7 @@ KartaStrona {
     {
         Layout.fillWidth: true
     }
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/skaut.jpg"
         header: "Prawo skautowe"
         opis: "Opublikowane przez Andrzeja Małkowskiego"

@@ -44,7 +44,7 @@ HPSPage {
         
     
 
-KartaStrona { 
+KartaStronaIkona {
         header: "Poradnik dla zastępowych zastępów starszoharcerskich"
         opis: ""
         ikona: "qrc:/contents/ui/img/HS.svg"
@@ -55,7 +55,7 @@ KartaStrona {
         Layout.fillWidth: true
     }
 
-    KartaStrona { 
+    KartaStronaIkona {
         header: "Poradnik dla zastępowych zastępów wędrowniczych"
         opis: ""
         ikona: "qrc:/contents/ui/img/Wedro.svg"

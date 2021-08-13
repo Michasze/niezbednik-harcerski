@@ -121,7 +121,7 @@ HPSPage
             delegate: KartaStronaIkona {
     header: modelData
     opis: spiewnik.autorPiosenki[index]
-    ikona: "qrc:/contents/ui/img/" + spiewnik.ikonaPiosenki[index]
+    ikona: "image://icons/" + spiewnik.ikonaPiosenki[index] + ".svg"
     MouseArea {
     anchors.fill: parent
         onClicked:

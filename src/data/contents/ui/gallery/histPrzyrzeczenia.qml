@@ -36,7 +36,7 @@ HPSPage {
 
 ColumnLayout
 {
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/tur.svg"
         header: "Czerwone Harcerstwo"
         opis: ""
@@ -47,7 +47,7 @@ KartaStrona {
         Layout.fillWidth: true
     }
 
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhp.svg"
         header: "Związek Harcerstwa Polskiego"
         opis: ""
@@ -59,7 +59,7 @@ KartaStrona {
     }
 
 KartaStrona {
-        ikona: "qrc:/contents/ui/img/skaut.jpg"
+        ikona: "image://images/skaut.jpg"
         header: "Ślubowanie Skautowe"
         opis: ""
         adres: "przyrzeczenieSkaut.qml"

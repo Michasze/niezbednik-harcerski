@@ -36,7 +36,7 @@ HPSPage {
 
 ColumnLayout
 {
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhp.svg"
         header: "ZHP"
         opis: ""
@@ -47,7 +47,7 @@ KartaStrona {
         Layout.fillWidth: true
     }
 
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhr.svg"
         header: "ZHR"
         opis: ""
@@ -58,7 +58,7 @@ KartaStrona {
         Layout.fillWidth: true
     }
 
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/fse.svg"
         header: "SHK „Zawisza”"
         opis: ""
@@ -68,7 +68,7 @@ KartaStrona {
     {
         Layout.fillWidth: true
     }
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/sh.svg"
         header: "Stowarzyszenie Harcerskie"
         opis: ""
@@ -78,7 +78,7 @@ KartaStrona {
     {
         Layout.fillWidth: true
     }
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/RR.svg"
         header: "Royal Rangers"
         opis: ""
@@ -88,7 +88,7 @@ KartaStrona {
     {
         Layout.fillWidth: true
     }
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/rodlo.svg"
         header: "Organizacja Harcerska „Rodło”"
         opis: ""
@@ -98,7 +98,7 @@ KartaStrona {
     {
         Layout.fillWidth: true
     }
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/tarcza.svg"
         header: "Skauci Króla"
         opis: ""

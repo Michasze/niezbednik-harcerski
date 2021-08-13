@@ -39,7 +39,7 @@ ColumnLayout{
     KartaStrona {
         header: "Robert Baden-Powell"
         opis: "Twórca skautingu"
-        ikona: "qrc:/contents/ui/img/Baden-Powell.jpg"
+        ikona: "image://images/Baden-Powell.jpg"
         adres: "badenPowell.qml"
     }
         HPSSeparator
@@ -50,7 +50,7 @@ ColumnLayout{
     KartaStrona { 
         header: "gen. August Fieldorf pseudonim \"Nil\""
         opis: "Dowódca Kedywu, zastępca Komendanta AK"
-        ikona: "qrc:/contents/ui/img/Nil2.jpg"
+        ikona: "image://images/Nil2.jpg"
         adres: "Nil.qml"
     }
         HPSSeparator
@@ -60,7 +60,7 @@ ColumnLayout{
     KartaStrona {
         header: "Jan Bytnar \"Rudy\""
         opis: "Komendant hufca \"Ochota\" "
-        ikona: "qrc:/contents/ui/img/rudy2.jpg"
+        ikona: "image://images/rudy2.jpg"
         adres: "rudy.qml"
     }
         HPSSeparator
@@ -70,7 +70,7 @@ ColumnLayout{
     KartaStrona {
         header: "Andrzej Małkowski"
         opis: " "
-        ikona: "qrc:/contents/ui/img/Andrzej_Malkowski.jpg"
+        ikona: "image://images/Andrzej_Malkowski.jpg"
         adres: "malkowski.qml"
     }
         HPSSeparator
@@ -80,7 +80,7 @@ ColumnLayout{
     KartaStrona {
         header: "Olga Małkowska"
         opis: " "
-        ikona: "qrc:/contents/ui/img/Olga_Malkowska.jpg"
+        ikona: "image://images/Olga_Malkowska.jpg"
         adres: "malkowska.qml"
     }
         HPSSeparator
@@ -90,7 +90,7 @@ ColumnLayout{
     KartaStrona { 
         header: "Święty Jerzy"
         opis: "Ciekawostki o patronie harcerstwa"
-        ikona: "qrc:/contents/ui/img/swJerzy2.jpg"
+        ikona: "image://images/swJerzy2.jpg"
         adres: "swJerzy.qml"
     }
         HPSSeparator
@@ -100,7 +100,7 @@ ColumnLayout{
     KartaStrona { 
         header: "Hubert Bonin"
         opis: "O życiu założyciela harcerstwa w Bolesławcu"
-        ikona: "qrc:/contents/ui/img/HubertBonin.jpg"
+        ikona: "image://images/HubertBonin.jpg"
         adres: "hubertBonin.qml"
     }
         HPSSeparator
@@ -110,7 +110,7 @@ ColumnLayout{
     KartaStrona { 
         header: "Stefan \“Grot\” Rowecki"
         opis: "Dowódca Armii Krajowej, Komendant Związku Walki Zbrojnej"
-        ikona: "qrc:/contents/ui/img/Grot2.jpg"
+        ikona: "image://images/Grot2.jpg"
         adres: "Grot.qml"
     }
         HPSSeparator
@@ -120,7 +120,7 @@ ColumnLayout{
         KartaStrona { 
         header: "Marian Pluciński"
         opis: "pseudonim \"Mściciel\""
-        ikona: "qrc:/contents/ui/img/msciciel.jpg"
+        ikona: "image://images/msciciel.jpg"
         adres: "msciciel2.qml"
     }
         HPSSeparator
@@ -130,7 +130,7 @@ ColumnLayout{
         KartaStrona { 
         header: "Ludwik Idzikowski"
         opis: "Pilot okresu międzywojennego"
-        ikona: "qrc:/contents/ui/img/LudwikIdzikowski2.jpg"
+        ikona: "image://images/LudwikIdzikowski2.jpg"
         adres: "LudwikIdzikowski.qml"
     }
         HPSSeparator
@@ -141,7 +141,7 @@ ColumnLayout{
         header: "Stanisław Skalski"
         opis: "lotnik w Wojsku Polskim w trakcie II wojny światowej"
         adres: "stanislawSkalski.qml"
-        ikona: "qrc:/contents/ui/img/Stanislaw_skalski2.jpg"
+        ikona: "image://images/Stanislaw_skalski2.jpg"
     }
         HPSSeparator
     {
@@ -151,7 +151,7 @@ ColumnLayout{
         header: "Janusz Brochwicz-Lewiński pseudonim \"Gryf\" "
         opis: "żołnierz batalionu AK \"Parasol\""
         adres: "gryf.qml"
-        ikona: "qrc:/contents/ui/img/gryf2.jpg"
+        ikona: "image://images/gryf2.jpg"
     }
         HPSSeparator
     {
@@ -162,7 +162,7 @@ ColumnLayout{
         header: "Zabójstwo Władysława Mroza"
         opis: "Porównanie informacji prasowych"
         adres: "zabojstwo_mroza.qml"
-        ikona: "qrc:/contents/ui/img/zabojstwo_mroza.jpg"
+        ikona: "image://images/zabojstwo_mroza.jpg"
     }
         HPSSeparator
     {
@@ -172,7 +172,7 @@ ColumnLayout{
         KartaStrona { 
         header: "Władysław Mróz"
         opis: "Dowódca I batalionu 5 pułku Strzelców Podhalańskich"
-        ikona: "qrc:/contents/ui/img/mroz3.jpg"
+        ikona: "image://images/mroz3.jpg"
         adres: "mroz.qml"
     }
 

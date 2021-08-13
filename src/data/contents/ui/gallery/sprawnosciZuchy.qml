@@ -36,7 +36,7 @@ HPSPage {
 
 ColumnLayout
 {
-KartaStrona {
+KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/lesny.svg"
         header: "Leśny ludź"
         opis: "Autor: sam. Klara Świątek"

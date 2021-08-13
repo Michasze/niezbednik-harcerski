@@ -36,9 +36,8 @@ HPSPage {
     ColumnLayout {
         id: mainlayout
 KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/noz.svg"
+        ikona: "image://icons/noz.svg,white"
         header: "Poradnik wyboru noża"
-        mask: true
         opis: ""
         adres: "noz.qml"
     }
@@ -49,8 +48,7 @@ KartaStronaIkona {
 
 KartaStronaIkona {
         header: "Jak wybrać odpowiedni śpiwór?"
-        ikona: "qrc:/contents/ui/img/spiwor.svg"
-        mask: true
+        ikona: "image://icons/spiwor.svg,white"
         opis: ""
         adres: "Spiwor.qml"
     }
@@ -60,9 +58,8 @@ KartaStronaIkona {
     }
 
 KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/karimata.svg"
+        ikona: "image://icons/karimata.svg,white"
         header: "Wybór karimaty, maty lub materaca"
-        mask: true
         opis: ""
         adres: "maty.qml"
     }

@@ -76,7 +76,7 @@ HPSPage {
     delegate: KartaStrona {
         visible: index == 0 ? false : true
         header: modelData
-        ikona: "qrc:/contents/ui/img/" + infoData.image[index]
+        ikona: "image://images/" + infoData.image[index]
         adres: cytatyPage
         opis: ""
     MouseArea {
