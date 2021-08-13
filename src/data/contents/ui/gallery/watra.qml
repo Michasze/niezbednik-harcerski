@@ -45,11 +45,13 @@ HPSPage {
          Layout.fillHeight: true
          Layout.fillWidth: true
    color: "#47483c"
-         Kirigami.Icon
+         Image
          {
-             anchors.fill: parent
+             sourceSize.width: page.width / 4
+             Layout.alignment: Qt.AlignHCenter
+             Layout.fillWidth: false
+             anchors.centerIn: parent
              source: "qrc:/contents/ui/img/watra.svg"
-
          }
         }
                          ElementListy
@@ -57,8 +59,6 @@ HPSPage {
              ikona: "qrc:/contents/ui/img/watra_cialo.svg"
             color: "steelblue"
             symbolika: true
-            wysokosc: 90
-            mask: false
             header: "Siła ciała"
                          }
                          ElementListy
@@ -66,8 +66,6 @@ HPSPage {
              ikona: "qrc:/contents/ui/img/watra_rozum.svg"
             color: "steelblue"
             symbolika: true
-            wysokosc: 110
-            mask: false
             header: "Siła rozumu"
                          }
                          ElementListy
@@ -75,7 +73,6 @@ HPSPage {
              ikona: "qrc:/contents/ui/img/watra_duch.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Siła ducha"
                          }
                          ElementListy
@@ -83,7 +80,6 @@ HPSPage {
              ikona: "qrc:/contents/ui/img/watra_sluzba.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Służba"
                          }
                          ElementListy
@@ -91,7 +87,6 @@ HPSPage {
              ikona: "qrc:/contents/ui/img/watra_miejsce.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Szukanie swego miejsca w społeczeństwie"
                          }
                          ElementListy
@@ -99,7 +94,6 @@ HPSPage {
              ikona: "qrc:/contents/ui/img/watra_praca.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Praca nad sobą"
                          }
     }
