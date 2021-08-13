@@ -49,7 +49,7 @@ import QtQuick.Layouts 1.2
                         right: parent.right
                         //IMPORTANT: never put the bottom margin
                     }
-                    HPSIcon {
+                    Image {
                         Layout.leftMargin: 10
                         Layout.topMargin: 10
                         Layout.bottomMargin: 10
