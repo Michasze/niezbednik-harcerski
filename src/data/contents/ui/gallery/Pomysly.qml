@@ -61,7 +61,7 @@ KartaStronaIkona {
     KartaStronaIkona { 
         header: "Podróże małe i duże"
         opis: "czyli harcerskie wędrowanie tam i z powrotem"
-        ikona: "qrc:/contents/ui/img/edit-paste-in-place.svg"
+        ikona: "image://icons/edit-paste-in-place.svg,white"
         adres: "podroze.qml"
     }
     HPSSeparator
@@ -72,6 +72,10 @@ KartaStronaIkona {
         header: "Geoguessr"
         opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości"
         adres: "geoguessr.qml"
+    }
+    HPSSeparator
+    {
+        Layout.fillWidth: true
     }
     KartaStronaNoImage {
         header: "Gra fabularna"
