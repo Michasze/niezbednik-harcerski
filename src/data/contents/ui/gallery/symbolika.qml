@@ -38,9 +38,7 @@ HPSPage
 
         ElementListy {
     header: "Krzyż harcerski"
-    ikona: "qrc:/contents/ui/img/krzyz.svg"
-    mask: true
-    wysokosc: 115
+    ikona: "image://icons/krzyz.svg,white"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaKrzyz.qml"))
@@ -49,7 +47,6 @@ HPSPage
         ElementListy {
     header: "WOSM"
     ikona: "qrc:/contents/ui/img/wosm_tlo.svg"
-    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWosm.qml"))
@@ -58,7 +55,6 @@ HPSPage
         ElementListy {
     header: "WAGGGS"
     ikona: "qrc:/contents/ui/img/wagggs.svg"
-    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWagggs.qml"))
@@ -67,7 +63,6 @@ HPSPage
         ElementListy {
     header: "Watra wędrownicza"
     ikona: "qrc:/contents/ui/img/watra.svg"
-    wysokosc: 115
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("watra.qml"))

@@ -22,7 +22,6 @@ import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
 import QtQuick.Window 2.15
 import org.kde.kirigami 2.4 as Kirigami
-import QtGraphicalEffects 1.15
 
 HPSPage
 {
@@ -39,41 +38,34 @@ HPSPage
 
                      ColumnLayout {
         Layout.fillHeight: true
-                         Kirigami.Icon
+                         HPSIcon
                          {
-                             width: page.width
-                             Layout.minimumHeight: page.width / 2
-                        Layout.fillHeight: true
-                             isMask: true
-                             color: invisibleCheckbox.checked ? "white" : "black"
-                             source: "qrc:/contents/ui/img/krzyz.svg"
-                             Layout.fillWidth: true
+                             source: "image://icons/krzyz.svg,white"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_ramiona.svg"
+             ikona: "image://icons/krzyz_ramiona.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Ramiona - długa droga, którą musi przejść harcerz"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_lilijka.svg"
+             ikona: "image://icons/krzyz_lilijka.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Promienie biegnące z lilijki do okręgu - dążenie do doskonałości"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_czuwaj.svg"
+             ikona: "image://icons/krzyz_czuwaj.svg,white"
             color: "steelblue"
             symbolika: true
-            wysokosc: 100
             header: "Czuwaj - wezwanie do działania"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_ziarenka.svg"
+             ikona: "image://icons/krzyz_ziarenka.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Ziarenka piasku - niezliczona rzesza harcerzy i harcerek"
@@ -81,27 +73,27 @@ HPSPage
                          ElementListy
                          {
             color: "steelblue"
+            ikona: "image://icons/blank.svg"
             symbolika: true
-//            wysokosc: 50
             header: "Puste miejsce - harcerstwo jest zawsze chętne do przyjmowania nowych osób"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_laurowy.svg"
+             ikona: "image://icons/krzyz_laurowy.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Wieniec z liści laurowych - zwycięstwo"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_debowy.svg"
+             ikona: "image://icons/krzyz_debowy.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Wieniec z liści dębowych - męstwo i wytrwałość"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/krzyz_wezel.svg"
+             ikona: "image://icons/krzyz_wezel.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Węzeł - codzienne wykonywanie dobrego uczynku"

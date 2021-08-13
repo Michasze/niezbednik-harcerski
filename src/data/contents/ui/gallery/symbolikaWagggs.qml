@@ -20,9 +20,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import QtQuick.Window 2.15
 import org.kde.kirigami 2.4 as Kirigami
-import QtGraphicalEffects 1.15
 
 HPSPage
 {
@@ -47,11 +45,13 @@ HPSPage
          Layout.fillHeight: true
          Layout.fillWidth: true
    color: "#0079c2"
-         Kirigami.Icon
+         Image
          {
-             anchors.fill: parent
-                             source: "qrc:/contents/ui/img/wagggs.svg"
-
+             sourceSize.width: page.width / 4
+             Layout.alignment: Qt.AlignHCenter
+             Layout.fillWidth: false
+             anchors.centerIn: parent
+             source: "qrc:/contents/ui/img/wagggs.svg"
          }
     }
                          ElementListy
@@ -59,16 +59,13 @@ HPSPage
              ikona: "qrc:/contents/ui/img/wagggs.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
-            header: "Złota koniczyna na jasnoniebieskim tle oznacza, że tak jak słońce świeci dla wszystkich ludzi,
-tak i ruch skautowy jest dostępny dla wszystkich dziewcząt na świecie"
+            header: "Złota koniczyna na jasnoniebieskim tle - ruch skautowy jest dostępny dla wszystkich dziewcząt na świecie"
                          }
                          ElementListy
                          {
              ikona: "qrc:/contents/ui/img/wagggs_ramiona.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Trzy ramiona - trzy służby: Bogu, Ojczyźnie i bliźnim"
                          }
                          ElementListy
@@ -76,7 +73,6 @@ tak i ruch skautowy jest dostępny dla wszystkich dziewcząt na świecie"
              ikona: "qrc:/contents/ui/img/wagggs_gwiazdki.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Dwie gwiazdki - Prawo i Przyrzeczenie \n
 Oczy harcerki szeroko otwarte na świat"
                          }
@@ -85,7 +81,6 @@ Oczy harcerki szeroko otwarte na świat"
              ikona: "qrc:/contents/ui/img/wagggs_igla.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Igła kompasu wskazująca harcerce dobrą drogę"
                          }
                          ElementListy
@@ -93,7 +88,6 @@ Oczy harcerki szeroko otwarte na świat"
              ikona: "qrc:/contents/ui/img/wagggs_plomien.svg"
             color: "steelblue"
             symbolika: true
-            mask: false
             header: "Płomień miłości do ludzi"
                          }
 

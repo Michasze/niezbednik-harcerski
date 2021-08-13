@@ -22,7 +22,6 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import QtQuick.Window 2.15
 import org.kde.kirigami 2.4 as Kirigami
-import QtGraphicalEffects 1.15
 
 HPSPage
 {
@@ -47,14 +46,13 @@ HPSPage
          Layout.fillHeight: true
          Layout.fillWidth: true
         color: "#6e20a0"
-         Kirigami.Icon
+         Image
          {
-             anchors.fill: parent
-//                        Layout.fillHeight: true
-                             isMask: true
-                             color: invisibleCheckbox.checked ? "white" : "black"
-                             source: "qrc:/contents/ui/img/wosm.svg"
-//                             Layout.fillWidth: true
+             sourceSize.width: page.width / 4
+             Layout.alignment: Qt.AlignHCenter
+             Layout.fillWidth: false
+             anchors.centerIn: parent
+             source: "qrc:/contents/ui/img/wosm.svg"
 
          }
      }
@@ -99,12 +97,11 @@ HPSPage
              ikona: "qrc:/contents/ui/img/wosm_kolor.svg"
             color: "steelblue"
             symbolika: true
-            kolor: "#6e20a0"
             header: "Królewska purpura - oznaka przywództwa i udzielania pomocy innym"
                          }
                          ElementListy
                          {
-             ikona: "qrc:/contents/ui/img/wosm_kolor.svg"
+             ikona: "image://icons/wosm_kolor.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Kolor biały - czystość"
