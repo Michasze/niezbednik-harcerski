@@ -31,18 +31,17 @@ import org.kde.kirigami 2.4 as Kirigami
              property string kolor: "#303030"
              property bool mask: false
 
-    id: hznpRectangle
+    id: kartaRectangle
     Layout.fillWidth: true
     Layout.topMargin: 10
     Layout.bottomMargin: 10
     radius: 10
     color: kolor
     Layout.minimumHeight : 120
-//     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"
     MouseArea {
     anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl(hznpRectangle.adres))
+    onClicked: pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
     }
                 GridLayout {
                     id: hznpLayout
@@ -55,34 +54,24 @@ import org.kde.kirigami 2.4 as Kirigami
                     rowSpacing: Kirigami.Units.largeSpacing
                     columnSpacing: Kirigami.Units.largeSpacing
                     columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
-                    Kirigami.Icon {
-                        id:autor
-//                         visible: false
-                        smooth: true
+                    HPSIcon {
                         Layout.leftMargin: 10
                         Layout.topMargin: 10
-                        isMask: mask
-                        color: "white"
                         Layout.bottomMargin: 10
+                        Layout.fillWidth: false
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        source: hznpRectangle.ikona
-                        Layout.fillHeight: true
-//                         Layout.fillWidth: true
-                         Layout.minimumHeight: 100
-//                         Layout.maximumHeight: 80
-               //         Layout.maximumHeight: hznpRectangle.implicitHeight
-                        Layout.preferredWidth: height
+                        source: kartaRectangle.ikona
+                        sourceSize.width: kartaRectangle.height - 20
                     }
                    
                     
-                    // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
                     ColumnLayout {
                         Controls.Label {
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
                             Layout.fillWidth: true
-                             text: hznpRectangle.header
+                             text: kartaRectangle.header
                         }
                         HPSSeparator {
                             Layout.fillWidth: true
@@ -92,18 +81,8 @@ import org.kde.kirigami 2.4 as Kirigami
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value - 2
                             Layout.bottomMargin: 10
-                            text: hznpRectangle.opis
+                            text: kartaRectangle.opis
                         }
                     }
-                  /*  Controls.RoundButton {
-                        Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
-                        Layout.columnSpan: 2
-                        radius: 4
-                        text: qsTr("Otwórz")
-                        highlighted: true
-                        Layout.rightMargin: 10
-                        Layout.bottomMargin: 10
-                        onClicked: pageStack.push(Qt.resolvedUrl("HZNP.qml"))
-                    } */
-                }
+               }
                 }
