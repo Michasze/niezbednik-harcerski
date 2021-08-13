@@ -20,16 +20,14 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
          Rectangle {
              property string header: "Brak tekstu"
              property string opis: "Brak opisu"
-             property url ikona: "qrc:/contents/ui/img/harcerz.svg"
+             property url ikona: "qrc:/contents/ui/img/blank.svg"
              property url adres: "harcerz.qml"
              property string kolor: "#303030"
-             property bool mask: false
 
     id: kartaRectangle
     Layout.fillWidth: true
@@ -51,9 +49,6 @@ import org.kde.kirigami 2.4 as Kirigami
                         right: parent.right
                         //IMPORTANT: never put the bottom margin
                     }
-                    rowSpacing: Kirigami.Units.largeSpacing
-                    columnSpacing: Kirigami.Units.largeSpacing
-                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
                     HPSIcon {
                         Layout.leftMargin: 10
                         Layout.topMargin: 10
