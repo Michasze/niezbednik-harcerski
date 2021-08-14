@@ -1,0 +1,38 @@
+#+TITLE: Wprowadzenie
+#+SETUPFILE: setup.conf
+#+OPTIONS: num:nil
+#+LANGUAGE: pl
+#+AUTHOR: Osiołek
+* O aplikacji
+Niezbędnik Harcerski jest aplikacją stworzoną przez społeczność skupioną wokół grupy "Harcerze - Poznajemy Się". Aplikacja zawiera treści o szeroko pojętej tematyce harcerskiej. Treści podzielone są na kategorie tematyczne.
+* Obsługa programu
+** Gesty
+Aplikacja przeznaczona jest przede wszystkim dla urządzeń mobilnych. W domyślnym trybie mobilnym nawigacja po aplikacji odbywa się za pomocą dotknięć i gestów.
+*** Przesuwanie wstecz
+Aby cofnąć się o jedną kategorię wstecz przesuń palcem od prawej do lewej strony ekranu. Aby powrócić do wcześniej opuszczonej strony wykonaj gest od lewej do prawej strony
+*** Przewijanie stron
+Aby przewinąć treści w górę i w dół przesuń po ekranie od góry do dołu i od dołu do góry.
+*** Kopiowanie treści
+Niektóre elementy umożliwiają skopiowanie ich treści do schowka:
+- treści cytatów
+- szyfry (pole z zaszyfrowanym tekstem)
+- tekst piosenki
+Aby skopiować tekst do schowka kliknij i przytrzymaj tekst do momentu pojawienia się powiadomienia:
+
+[[./clipboard.jpg]]
+*** Zaznaczanie elementów
+Zakładka "Listy rzeczy do spakowania" zawiera elementy, które można zaznaczać i odznaczać. Aplikacja przechowuje informacje, który element został zaznaczony, więc po ponownym uruchomieniu program będzie pamiętał wcześniej zaznaczone "boxy".
+* Dostosowane przez nas komponenty
+** Elementy graficzne (QML)
+*** KartaStrona
+Karta zawierająca nagłówek, opis i grafikę rastrową z zaokrąglonymi rogami. Po naciśnięciu przenosi użytkownika na stronę podaną jako odnośnik.
+- header: Treść nagłówka
+- opis: Mniejszy tekst pod nagłówkiem (opcjonalny)
+- ikona: ścieżka do grafiki (koniecznie JPG)
+- adres: adres do pliku QML
+*** KartaStronaIkona
+Karta zawierająca nagłówek, opis i grafikę wektorową. Po naciśnięciu przenosi użytkownika na podaną stronę.
+- header: Treść nagłówka
+- opis: Mniejszy tekst pod nagłówkiem (opcjonalny)
+- ikona: ścieżka do grafiki wektorowej
+- adres: adres do pliku QML
