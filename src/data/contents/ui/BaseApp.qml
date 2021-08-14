@@ -28,6 +28,7 @@ import Data 1.0
 Kirigami.ApplicationWindow {
     id: root
     property Kirigami.ApplicationWindow appWindow : root
+    property bool isHorizontal : root.width > root.height ? true : false
     visible: true
 
     color: "Black"

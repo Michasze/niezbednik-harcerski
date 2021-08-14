@@ -4,14 +4,14 @@
 <svg
    version="1.1"
    id="Layer_1"
-   width="285.90579"
+   width="326.84122"
    height="326.84122"
-   viewBox="0 0 442.9234 506.34022"
+   viewBox="0 0 506.34029 506.34022"
    overflow="visible"
    enable-background="new 0 0 600 400"
    xml:space="preserve"
    sodipodi:docname="wosm.svg"
-   inkscape:version="1.2-dev (fd8ac3146e, 2021-05-04, custom)"
+   inkscape:version="1.2-dev (5f01de93b4, 2021-08-06, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -149,9 +149,9 @@
    inkscape:pageopacity="0"
    inkscape:pagecheckerboard="0"
    showgrid="false"
-   inkscape:zoom="0.63904225"
-   inkscape:cx="-102.49714"
-   inkscape:cy="61.028829"
+   inkscape:zoom="1.8074844"
+   inkscape:cx="2.489648"
+   inkscape:cy="68.880261"
    inkscape:window-width="1920"
    inkscape:window-height="1080"
    inkscape:window-x="0"
@@ -163,7 +163,8 @@
    fit-margin-right="10"
    fit-margin-bottom="10"
    lock-margins="true"
-   showguides="false" />
+   showguides="false"
+   height="326.84122px" />
 
 
 
@@ -176,9 +177,9 @@
    id="layer1"
    inkscape:label="Layer 1"
    style="display:inline"
-   transform="translate(166.48649,-54.166994)"><g
+   transform="translate(135.50259,-54.166994)"><g
      id="fleur_de_lis-6"
-     transform="matrix(1.4113757,0,0,1.4113757,-368.85595,24.835844)"><path
+     transform="matrix(1.4113757,0,0,1.4113757,-303.78976,24.835844)"><path
        fill="#ffffff"
        d="m 342.851,254.746 c 11,0.492 17.967,-7.94 19.892,-18.764 -13.302,6.222 -24.863,-2.646 -27.627,-13.862 -4.361,0.888 -9.297,1.608 -14.646,2.138 2.843,12.835 8.272,29.856 22.381,30.488 z"
        id="path4-8" /><path
@@ -210,7 +211,7 @@
        d="m 300.173,260.278 -0.036,0.003 c -2.66,-13.44 -2.731,-31.218 -2.716,-34.871 -4.975,-0.055 -9.77,-0.282 -14.303,-0.654 -2.844,18.396 -12.931,30.785 -12.931,30.785 10.333,20.268 29.949,27.979 29.949,27.979 l 0.036,-0.003 c 0,0 19.616,-7.712 29.949,-27.979 0,0 -10.104,-12.409 -12.936,-30.831 -4.528,0.387 -9.32,0.629 -14.298,0.697 0.018,3.643 -0.054,21.429 -2.714,34.874 z"
        id="path24-8" /></g><g
      id="rope-9"
-     transform="matrix(1.4113757,0,0,1.4113757,-368.85595,24.835844)"><path
+     transform="matrix(1.4113757,0,0,1.4113757,-303.78976,24.835844)"><path
        fill-rule="evenodd"
        clip-rule="evenodd"
        fill="#ffffff"
@@ -539,20 +540,20 @@
        fill-rule="evenodd"
        clip-rule="evenodd"
        fill="#ffffff"
-       points="354.498,355.05 347.564,361.109 348.431,362.149 355.366,356.092 "
+       points="355.366,356.092 354.498,355.05 347.564,361.109 348.431,362.149 "
        id="polygon157-9" /><polygon
        fill-rule="evenodd"
        clip-rule="evenodd"
        fill="#ffffff"
-       points="243.829,358.862 237.247,352.623 236.38,353.666 242.961,359.897 "
+       points="242.961,359.897 243.829,358.862 237.247,352.623 236.38,353.666 "
        id="polygon159-8" /></g><text
      xml:space="preserve"
      style="font-size:61.9677px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:1.54919"
-     x="-435.53217"
+     x="-404.54828"
      y="-124.76617"
      id="text2843"><tspan
        sodipodi:role="line"
        id="tspan2841"
        style="stroke-width:1.54919"
-       x="-435.53217"
+       x="-404.54828"
        y="-124.76617" /></text></g></svg>

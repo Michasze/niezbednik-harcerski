@@ -41,16 +41,17 @@ HPSPage
      Rectangle {
          radius: 10
          width: page.width
-         Layout.maximumHeight: page.width / 3
-         Layout.minimumHeight: page.width / 3
+         Layout.preferredHeight: page.width / 3
          Layout.fillHeight: true
          Layout.fillWidth: true
         color: "#6e20a0"
          Image
          {
-             sourceSize.width: page.width / 4
+             sourceSize.width: (page.width / 3)
              Layout.alignment: Qt.AlignHCenter
              Layout.fillWidth: false
+             anchors.bottomMargin: 20
+             anchors.topMargin: 20
              anchors.centerIn: parent
              source: "qrc:/contents/ui/img/wosm.svg"
 
