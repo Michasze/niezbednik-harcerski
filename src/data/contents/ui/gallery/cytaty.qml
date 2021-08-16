@@ -42,6 +42,7 @@ HPSPage {
     Component.onCompleted: {
         if(!hpsSettings.neverShow3IsToggled)
         {
+            mediaPlayer2.play()
             aboutDialog3.open()
         }
     }

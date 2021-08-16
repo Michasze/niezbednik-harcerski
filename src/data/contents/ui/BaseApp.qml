@@ -48,20 +48,21 @@ Kirigami.ApplicationWindow {
         {
             if(!hpsSettings.neverShow2IsToggled)
         {
+            mediaPlayer.play()
             aboutDialog2.open()
         }
         }
 }
    MediaPlayer {
         id: mediaPlayer
-        autoPlay: true
+        autoPlay: false
         loops: MediaPlayer.Infinite
         autoLoad: true
         source:"qrc:/contents/ui/media/gesty1.mkv"
     }
    MediaPlayer {
         id: mediaPlayer2
-        autoPlay: true
+        autoPlay: false
         loops: MediaPlayer.Infinite
         autoLoad: true
         source:"qrc:/contents/ui/media/gesty2.mkv"
@@ -110,6 +111,7 @@ może ulec zmianie."
                             aboutDialog.close()
                             if(!hpsSettings.neverShow2IsToggled)
                             {
+                                mediaPlayer.play()
                                 aboutDialog2.open()
                             }
 //
@@ -214,7 +216,6 @@ może ulec zmianie."
     ColumnLayout
     {
     anchors.fill: parent
-    //implicitWidth: page.width
 
     VideoOutput {
         id:videoOutput3
