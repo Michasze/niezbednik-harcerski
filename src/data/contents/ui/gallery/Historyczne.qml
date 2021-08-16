@@ -114,7 +114,16 @@ KartaStronaIkona {
         ikona: "image://images/krzyz2.jpg"
         adres: "wyjatkowe.qml"
     }
-
+        HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
+    KartaStrona {
+        header: "Lista znanych osób, które były w harcerstwie"
+        ikona: "image://images/neilA.jpg"
+        opis: "Znani harcerze i skauci"
+        adres: "listaZnanych.qml"
+    }
         HPSSeparator
     {
         Layout.fillWidth: true
@@ -140,8 +149,9 @@ KartaStronaIkona {
     {
         Layout.fillWidth: true
     }
-    KartaStronaNoImage {
+    KartaStronaIkona {
         header: "Dawne roty przyrzeczenia"
+        ikona: "image://icons/zwoj.svg,white"
         opis: ""
         adres: "histPrzyrzeczenia.qml"
     }
@@ -150,19 +160,11 @@ KartaStronaIkona {
     {
         Layout.fillWidth: true
     }
-    KartaStronaNoImage {
+    KartaStronaIkona {
         header: "Historyczne prawa harcerskie"
+        ikona: "image://icons/zwoj.svg,white"
         opis: ""
         adres: "histPrawa.qml"
-    }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-    KartaStronaNoImage {
-        header: "Lista znanych osób, które były w harcerstwie"
-        opis: "Znani harcerze i skauci"
-        adres: "listaZnanych.qml"
     }
 
     }
