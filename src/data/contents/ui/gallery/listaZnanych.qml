@@ -40,453 +40,163 @@ HPSPage
     }
         ColumnLayout {
         width: pageFoto.width
-        spacing: 20
                 ElementListyNoImage
         {
             color: "green"
             header: "<h3>Harcerstwo</h3>"
         }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Andrzej Celiński"
+                HPSLista {
+ label: "Andrzej Celiński"
              }
+                HPSLista {
+ label: "Andrzej Duda"
         }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Andrzej Duda"
-             }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Andrzej Jaworski"
-             }
+                HPSLista {
+ label: "Andrzej Jaworski"
                 }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Andrzej Wajda"
-             }
+                HPSLista {
+ label: "Andrzej Wajda"
         }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Antoni Macierewicz"
+                HPSLista {
+ label: "Antoni Macierewicz"
+                }
+            HPSLista {
+ label: "Bronisław Komorowski"
              }
-        }                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Bronisław Komorowski"
+            HPSLista {
+ label: "Ewa Drzyzga"
+            }
+            HPSLista {
+            label: "Jan Dziedziczak"
+            }
+            HPSLista {
+            label: "Konrad Ciesiołkiewicz"
              }
-        }                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-   wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Ewa Drzyzga"
+            HPSLista {
+            label: "Piotr Naimski"
              }
-        }                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Jan Dziedziczak"
-             }
-        }                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Konrad Ciesiołkiewicz"
-             }
-        }                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Piotr Naimski"
-             }
-        }                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
+            HPSLista {
             text: "Szymon Majewski"
              }
-        }
                 ElementListyNoImage
         {
             color: "blueviolet"
             align: 1
             header: "<h3>Scouting</h3>"
         }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Barack Obama"
+                HPSLista {
+            label: "Barack Obama"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Bill Gates"
+                HPSLista {
+            label: "Bill Gates"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Buzz Aldrin"
+HPSLista {
+            label: "Buzz Aldrin"
              }
-                }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Charles Duke"
+                HPSLista {
+            label: "Charles Duke"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Chris Pratt"
+                HPSLista {
+            label: "Chris Pratt"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Dan Reynolds"
+                HPSLista {
+            label: "Dan Reynolds"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "David Lynch"
+                HPSLista {
+            label: "David Lynch"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Derek Hough"
+                HPSLista {
+            label: "Derek Hough"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Dwight D. Eisenhower"
+                HPSLista {
+            label: "Dwight D. Eisenhower"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Edward Michael “BearGrylls”"
+                HPSLista {
+            label: "Edward Michael “BearGrylls”"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Gerald Ford"
+                HPSLista {
+            label: "Gerald Ford"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Guion Bluford"
+                HPSLista {
+            label: "Guion Bluford"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Hank Aaron"
+                HPSLista {
+            label: "Hank Aaron"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Harrison Ford"
+                HPSLista {
+            label: "Harrison Ford"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Jack Black"
+                HPSLista {
+            label: "Jack Black"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "James Andrews"
+                HPSLista {
+            label: "James Andrews"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Jay Leno"
+                HPSLista {
+            label: "Jay Leno"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Jim Morrison"
+                HPSLista {
+            label: "Jim Morrison"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Jimmy Buffett"
+                HPSLista {
+            label: "Jimmy Buffett"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Joe Biden"
+                HPSLista {
+            label: "Joe Biden"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "John F. Kennedy"
+                HPSLista {
+            label: "John F. Kennedy"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "John Lithgow"
+                HPSLista {
+            label: "John Lithgow"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Jon Heder"
+                HPSLista {
+            label: "Jon Heder"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Lee Berger"
+                HPSLista {
+            label: "Lee Berger"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Michael Bloomberg"
+                HPSLista {
+            label: "Michael Bloomberg"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Michael Jordan"
+                HPSLista {
+            label: "Michael Jordan"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Michael Moore"
+                HPSLista {
+            label: "Michael Moore"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Mike Rowe"
+                HPSLista {
+            label: "Mike Rowe"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Neil Armstrong"
+                HPSLista {
+            label: "Neil Armstrong"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Nolan Gould"
+                HPSLista {
+            label: "Nolan Gould"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Peter Agre"
+                HPSLista {
+            label: "Peter Agre"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Richard Gere"
+                HPSLista {
+            label: "Richard Gere"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Rob Corddry"
+                HPSLista {
+            label: "Rob Corddry"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Roger Chaffee"
+                HPSLista {
+            label: "Roger Chaffee"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Steven Holcomb"
+                HPSLista {
+            label: "Steven Holcomb"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Steven Spielberg"
+                HPSLista {
+            label: "Steven Spielberg"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Thomas Cech"
+                HPSLista {
+            label: "Thomas Cech"
              }
-        }
-                Kirigami.BasicListItem {
-             Controls.Label {
-             font.pointSize: invisibleSlider.value
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "Zach Galifianakis"
+                HPSLista {
+            label: "Zach Galifianakis"
              }
-        }
-
                       }
 }
