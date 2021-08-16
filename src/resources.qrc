@@ -197,14 +197,7 @@
         <file alias="contents/ui/gallery/PoradnikHS.qml">./data/contents/ui/gallery/PoradnikHS.qml</file>
         <file alias="contents/ui/gallery/PoradnikWedro.qml">./data/contents/ui/gallery/PoradnikWedro.qml</file>
         <file alias="contents/ui/gallery/ksiazki.qml">./data/contents/ui/gallery/ksiazki.qml</file>
-        <file alias="contents/ui/gallery/Piosenka.qml">./data/contents/ui/gallery/Piosenka.qml</file>
         <file alias="contents/ui/gallery/Spiewniki.qml">./data/contents/ui/gallery/Spiewniki.qml</file>
-        <file alias="contents/ui/gallery/wlasne/nieMasz.qml">./data/contents/ui/gallery/wlasne/nieMasz.qml</file>
-        <file alias="contents/ui/gallery/wlasne/chleb.qml">./data/contents/ui/gallery/wlasne/chleb.qml</file>
-        <file alias="contents/ui/gallery/wlasne/iskierka.qml">./data/contents/ui/gallery/wlasne/iskierka.qml</file>
-        <file alias="contents/ui/gallery/wlasne/wkregu.qml">./data/contents/ui/gallery/wlasne/wkregu.qml</file>
-        <file alias="contents/ui/gallery/wlasne/lecaiskry.qml">./data/contents/ui/gallery/wlasne/lecaiskry.qml</file>
-        <file alias="contents/ui/gallery/wlasne/niechSie.qml">./data/contents/ui/gallery/wlasne/niechSie.qml</file>
         <file alias="contents/ui/gallery/poradnikHS/konspekty.qml">./data/contents/ui/gallery/poradnikHS/konspekty.qml</file>
         <file alias="contents/ui/gallery/poradnikHS/wprowadzenie.qml">./data/contents/ui/gallery/poradnikHS/wprowadzenie.qml</file>
         <file alias="contents/ui/gallery/poradnikHS/instrumenty.qml">./data/contents/ui/gallery/poradnikHS/instrumenty.qml</file>
@@ -244,7 +237,6 @@
         <file alias="contents/ui/gallery/Spiwor.qml">./data/contents/ui/gallery/Spiwor.qml</file>
         <file alias="contents/ui/gallery/maty.qml">./data/contents/ui/gallery/maty.qml</file>
         <file alias="contents/ui/gallery/noz.qml">./data/contents/ui/gallery/noz.qml</file>
-        <file alias="contents/ui/gallery/mapa.qml">./data/contents/ui/gallery/mapa.qml</file>
         <file alias="contents/ui/gallery/cytatyInni.qml">./data/contents/ui/gallery/cytatyInni.qml</file>
         <file alias="contents/ui/BaseApp.qml">./data/contents/ui/BaseApp.qml</file>
         <file alias="contents/ui/mobileApp.qml">./data/contents/ui/mobileApp.qml</file>

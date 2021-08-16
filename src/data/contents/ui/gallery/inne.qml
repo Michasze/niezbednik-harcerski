@@ -24,7 +24,7 @@ import org.kde.kirigami 2.4 as Kirigami
 HPSPage
 
 {
-    title: "Aplikacje pogodowe"
+    title: "Inne aplikacje"
         actions.main: Kirigami.Action {
         iconName: "qrc:/contents/ui/img/go-previous.svg"
         text: qsTr("Powrót do listy")

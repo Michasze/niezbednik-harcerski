@@ -88,7 +88,7 @@ HPSPage
    wrapMode: Text.WordWrap
     Layout.alignment: Qt.AlignHCenter
     Layout.fillWidth: true
-            text: "Antoni Maciarewicz"
+            text: "Antoni Macierewicz"
              }
         }                Kirigami.BasicListItem {
              Controls.Label {
