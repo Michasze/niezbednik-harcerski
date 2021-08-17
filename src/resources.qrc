@@ -368,5 +368,6 @@
         <file alias="qtquickcontrols2.conf">qtquickcontrols2.conf</file>
         <file alias="info-data.json">./data/info-data.json</file>
         <file alias="spiewniki.json">./data/spiewniki.json</file>
+        <file alias="spiewnik1924.json">./data/spiewnik1924.json</file>
     </qresource>
 </RCC>

@@ -45,17 +45,15 @@ HPSPage {
     }
 ColumnLayout
 {
-        Repeater {
+/*        Repeater {
         property string tytul: ""
         property string tekst: ""
         property string tytulPiosenki: ""
     id: karta
-//    property int kartaIndex: index
     model: spiewnik.nazwaSpiewnika
     delegate: KartaStronaNoImage {
         visible: index == 0 ? false : true
         header: modelData
-//        adres: cytatyPage
         opis: ""
     MouseArea {
         id: area
@@ -69,7 +67,23 @@ ColumnLayout
         }
     }
     }
-}
+} */
+    KartaStronaNoImage {
+        id: karta
+        property string tytul: ""
+        property string tekst: ""
+        property string tytulPiosenki: ""
+        header: "Harcerski śpiewnik obozowy z 1924 roku"
+        MouseArea {
+            anchors.fill: parent
+            onClicked:
+            {
+                spiewnik.adres = "://spiewnik1924.json"
+                karta.tytul = karta.header
+                pageStack.push(spiewnikPage)
+            }
+        }
+    }
 Controls.Slider {
     id: slider
     Layout.fillWidth: true
@@ -85,7 +99,7 @@ Controls.Slider {
 HPSPage
 {
     id: strona
-    title: karta.tytul
+    title: karta.header
     actions.main: Kirigami.Action {
         iconName: "qrc:/contents/ui/img/go-previous.svg"
         text: qsTr("Powrót")
@@ -117,17 +131,17 @@ HPSPage
 
      }
         Repeater {
-        model: spiewnik.nazwaPiosenki
+        model: spiewnik.content
             delegate: KartaStronaIkona {
     header: modelData
-    opis: spiewnik.autorPiosenki[index]
+    opis: ""
     ikona: "image://icons/" + spiewnik.ikonaPiosenki[index] + ".svg"
     MouseArea {
     anchors.fill: parent
         onClicked:
         {
-            karta.tekst = spiewnik.tekstPiosenki[index]
-            karta.tytulPiosenki = spiewnik.nazwaPiosenki[index]
+            karta.tekst = spiewnik.nazwaPiosenki[index]
+            karta.tytulPiosenki = spiewnik.content[index]
             pageStack.push(piosenkaPage)
         }
     }
