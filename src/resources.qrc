@@ -247,7 +247,7 @@
         <file alias="contents/ui/img/sprzet.svg">./data/contents/ui/img/sprzet.svg</file>
         <file alias="contents/ui/img/karimata.svg">./data/contents/ui/img/karimata.svg</file>
         <file alias="contents/ui/img/spiwor.svg">./data/contents/ui/img/spiwor.svg</file>
-        <file alias="contents/ui/img/trabka.svg">./data/contents/ui/img/spiwor.svg</file>
+        <file alias="contents/ui/img/trabka.svg">./data/contents/ui/img/trabka.svg</file>
         <file alias="contents/ui/img/noz.svg">./data/contents/ui/img/noz.svg</file>
         <file alias="contents/ui/img/szlify.svg">./data/contents/ui/img/szlify.svg</file>
         <file alias="contents/ui/img/plecak.svg">./data/contents/ui/img/plecak.svg</file>
@@ -367,7 +367,8 @@
         <file alias="metadata.desktop">./data/metadata.desktop</file>
         <file alias="qtquickcontrols2.conf">qtquickcontrols2.conf</file>
         <file alias="info-data.json">./data/info-data.json</file>
-        <file alias="spiewniki.json">./data/spiewniki.json</file>
         <file alias="spiewnik1924.json">./data/spiewnik1924.json</file>
+        <file alias="spiewnikWlasne.json">./data/spiewnikWlasne.json</file>
+        <file alias="spiewnikHymny.json">./data/spiewnikHymny.json</file>
     </qresource>
 </RCC>

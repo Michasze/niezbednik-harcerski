@@ -24,7 +24,7 @@ import QtQuick.Layouts 1.2
 
          Rectangle {
              property string header: "Brak tekstu"
-             property string opis: "Brak opisu"
+             property string opis: ""
              property url ikona: "qrc:/contents/ui/img/blank.svg"
              property url adres: "harcerz.qml"
              property string kolor: "#303030"

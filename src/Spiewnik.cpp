@@ -41,6 +41,9 @@ if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     }
         value = jsonObject.value("piosenka");
         array = value.toArray();
+      autorArray = jsonObject.value("autor").toArray();
+      textArray = jsonObject.value("tresc").toArray();
+      iconArray = jsonObject.value("ikona").toArray();
       return array;
     }
   void Spiewnik::setIndex(const int &a)
@@ -72,9 +75,7 @@ if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
       m_nazwaPiosenki.clear();
       m_tekstPiosenki.clear();
       m_autorPiosenki.clear();
-      autorArray = jsonObject.value("autor").toArray();
-      textArray = jsonObject.value("tresc").toArray();
-      iconArray = jsonObject.value("ikona").toArray();
+      iconArray = QJsonArray();
       piosenkaChanged();
       return textArray;
     }
@@ -82,19 +83,18 @@ if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     {
       return m_tekstPiosenki;
     }
-  QStringList Spiewnik::autorPiosenki()
+  QJsonArray Spiewnik::autorPiosenki()
     {
-      return m_autorPiosenki;
+      return autorArray;
     }
   QJsonArray Spiewnik::ikonaPiosenki()
     {
       if (iconArray.size() == 0)
         {
-            qInfo() << "tabela z nutami pusta";
-            //FIXME: replace with correct value
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < array.size(); i++)
           {
-            iconArray.append("nuta");
+            qInfo() << "uzupełniam bufor ikon...";
+            iconArray.append("nuta.svg,white");
           }
         }
       qInfo() << iconArray;

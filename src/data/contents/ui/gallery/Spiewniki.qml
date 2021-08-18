@@ -68,21 +68,33 @@ ColumnLayout
     }
     }
 } */
-    KartaStronaNoImage {
+    ListModel {
+        id: spiewnikModel
+        ListElement { title: "Harcerski śpiewnik obozowy z 1924 roku"; url: "://spiewnik1924.json"; icon: "blank"}
+        ListElement { title: "Harcerska twórczość własna"; url: "://spiewnikWlasne.json"; icon: "blank" }
+        ListElement { title: "Hymny"; url: "://spiewnikHymny.json"; icon: "trabka" }
+    }
+    Repeater {
         id: karta
         property string tytul: ""
         property string tekst: ""
         property string tytulPiosenki: ""
-        header: "Harcerski śpiewnik obozowy z 1924 roku"
+        model: spiewnikModel
+        delegate: KartaStronaIkona {
+            id: kartaSpiewnik
+        header: title
+        opis: ""
+        ikona: "image://icons/" + icon + ".svg,white"
         MouseArea {
             anchors.fill: parent
             onClicked:
             {
-                spiewnik.adres = "://spiewnik1924.json"
-                karta.tytul = karta.header
+                spiewnik.adres = url
+                karta.tytul = kartaSpiewnik.header
                 pageStack.push(spiewnikPage)
             }
         }
+    }
     }
 Controls.Slider {
     id: slider
@@ -99,7 +111,7 @@ Controls.Slider {
 HPSPage
 {
     id: strona
-    title: karta.header
+    title: karta.tytul
     actions.main: Kirigami.Action {
         iconName: "qrc:/contents/ui/img/go-previous.svg"
         text: qsTr("Powrót")
@@ -134,8 +146,8 @@ HPSPage
         model: spiewnik.content
             delegate: KartaStronaIkona {
     header: modelData
-    opis: ""
-    ikona: "image://icons/" + spiewnik.ikonaPiosenki[index] + ".svg"
+    opis: spiewnik.autorPiosenki[index]
+    ikona: "image://icons/" + spiewnik.ikonaPiosenki[index]
     MouseArea {
     anchors.fill: parent
         onClicked:
