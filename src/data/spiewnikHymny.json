@@ -1,0 +1,40 @@
+{
+
+        "piosenka": ["Hymn ZHP i ZHR",
+                    "Hymn FSE"],
+        "autor": ["Ignacy Kozielewski
+Olga Małkowska",
+                 "Perig Geraud-Keraod
+Tłum. Anna Rogowska"],
+        "tresc": ["Wszystko co nasze, Polsce oddamy
+W niej tylko życie, więc idziem żyć.
+Świty się bielą, otwórzmy bramy,
+Rozkaz wydany: „Wstań! W słońce idź!”
+
+Ramię pręż, słabość krusz,
+Ducha tęż, Ojczyźnie miłej służ!
+Na jej zew, w bój czy w trud,
+Pójdzie rad, harcerzy polskich ród.
+Harcerzy polskich ród.",
+                 "Ref. Na tej drodze, szlaku dziejów,
+który wstęgą opasuje stary świat.
+W twoje słowa się wsłuchuję,
+krok swój zrównał ze mną Europy skaut.
+
+Nocą też, tak jak ty, w leśną głuszę idę sam,
+by na mapie nieba szukać własnych gwiazd.
+Ognia blask budzi sny, liści szept, obok ty,
+jasny cel, wszechświat dusz nas jednoczy.
+
+Nie wiem jaki odcień ma niebo tam, gdzie jest twój dom,
+jednak wiem, że jesteś dla mnie jak brat.
+Prostych praw niewielki zbiór, ideału czysty ton,
+najpierw zmieni trzeba siebie, później świat.
+
+Przyszłe dni rzeźbi czas, gdy wybrałeś nie patrz wstecz.
+Co przyszedłeś trwa aż po życia kres.
+Jasnym wzrokiem w przyszłość patrz, wielkie smutki odrzuć precz,
+by móc innym miłość i nadzieję nieść. "],
+        "ikona": ["zhp_zhr.svg",
+                 "fse.svg"]
+}
