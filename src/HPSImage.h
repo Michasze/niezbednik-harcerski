@@ -36,9 +36,7 @@ public:
   QImageReader reader(QString("://contents/ui/img/") + adres, "jpg");
   QSize imgSize = reader.size();
   float ratio = (float) imgSize.width() / (float) imgSize.height();
-  qInfo() << "ratio: " << ratio;
   int fixedHeight = (float) requestedSize.width() / ratio;
-  qInfo() << "fixed: " << fixedHeight;
   reader.setScaledSize(QSize(requestedSize.width() > 0 ? requestedSize.width() : width, fixedHeight > 0 ? fixedHeight : 400));
   QImage image(reader.read());
   if(list.size() == 2)

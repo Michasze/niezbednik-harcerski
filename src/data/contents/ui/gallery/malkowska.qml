@@ -18,26 +18,15 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Olga Małkowska"
 
-/*    actions.main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        }
-        */
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         Image {
          source: "qrc:/contents/ui/img/Olga_Malkowska.jpg"
           Layout.fillWidth: true
@@ -48,7 +37,6 @@ HPSPage {
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Olga Drahonowska urodziła się w Krzeszowicach 1 września 1888 roku. Ojciec jej był pochodzenia ormiańskiego, a matka czeskiego.
@@ -72,7 +60,6 @@ W latach 1948-1960 prowadziła sierociniec dla polskich dzieci w Wielkiej Brytan
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Juliusz Idzikowski"

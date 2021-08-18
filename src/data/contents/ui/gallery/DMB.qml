@@ -20,34 +20,16 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Dzień Myśli Braterskiej"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        visible: !Settings.isMobile ? true : false
-        }
-    }
     ColumnLayout {
         width: page.width
         spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
         Controls.Label {
             id: opis
             Layout.fillWidth: true

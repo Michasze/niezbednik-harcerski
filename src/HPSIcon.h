@@ -38,9 +38,7 @@ public:
   render.setAspectRatioMode(Qt::KeepAspectRatio);
   QSize imgSize = render.defaultSize();
   float ratio = (float) imgSize.width() / (float) imgSize.height();
-  qInfo() << "ratio: " << ratio;
   int fixedHeight = (float) requestedSize.width() / ratio;
-  qInfo() << "color: " << color;
   QImage image(requestedSize.width() > 0 ? requestedSize.width() : width, fixedHeight > 0 ? fixedHeight : 400, QImage::Format_ARGB32);
   image.fill(Qt::transparent);
   QPainter painter(&image);

@@ -18,58 +18,24 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Leśny ludź"
 
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-       /* left: Action {
-            iconName: "qrc:/contents/ui/img/go-previous.svg"
-            text: "Left Action Text"
-            onTriggered: {
-                showPassiveNotification("Left action triggered")
-            }
-        } 
-        contextualActions: [
-            Action {
-                text:"Action 1"
-                iconName: "go-next"
-                onTriggered: showPassiveNotification("Action 1 clicked")
-            },
-            Action {
-                text:"Action 2"
-                iconName: "folder"
-                enabled: false
-                onTriggered: showPassiveNotification("Action 2 clicked")
-            }
-        ] */
-    }
 
     ColumnLayout {
         width: page.width
         spacing: 10
-
         ElementListyNoImage
         {
             color: "Green"
             header: "Autor: sam. Klara Świątek <br>
 Grupa metodyczna: Zuchy"
         }
-
         ElementListyNoImage
         {
             color: "saddlebrown"

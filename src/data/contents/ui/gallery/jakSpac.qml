@@ -18,35 +18,19 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Jak spać ciepło?"
-
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
-
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
                 format: Text.PlainText
-                textSize: invisibleSlider.value
                 color: "Black"
             header: "Pytanie to potrafi spędzać nam sen z powiek… i to dosłownie. Sytuacja robi się szczególnie trudna, jeśli nie mamy jeszcze doświadczenia, a dodatkowo jedziemy na dłuższy okres, przez co nie do końca możemy być pewni, co nas czeka.
 
@@ -71,6 +55,4 @@ Trzymanie termosu w śpiworze ma dwojakie znaczenie, z jednej strony termos nie 
 Juliusz Idzikowski"
         }
     }
- 
-    
 }

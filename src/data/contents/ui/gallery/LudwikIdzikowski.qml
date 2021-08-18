@@ -20,21 +20,12 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
 
     title: "Ludwik Idzikowski"
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
     ColumnLayout {
         width: page.width
         spacing: 20
@@ -48,9 +39,8 @@ HPSPage {
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
-                format: Text.PlainText
-                color: "Black"
+            format: Text.PlainText
+            color: "Black"
             header: "Ludwik Idzikowski - major Wojska Polskiego, pilot w czasie okresu międzywojennego. Urodził się w Warszawie w 1891 roku.
 
 Maturę zdał w Rosji, później studiował w Belgii na wydziale górniczym. Podczas I wojny światowej trafił do armii rosyjskiej gdzie został przydzielony do lotnictwa. Po rewolucji październikowej (1917) powrócił do Polski gdzie wstąpił do Wojska Polskiego.
@@ -75,6 +65,4 @@ Juliusz Idzikowski
 "
         }
     }
- 
-    
 }

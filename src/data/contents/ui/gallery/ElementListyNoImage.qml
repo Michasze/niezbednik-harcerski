@@ -20,7 +20,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
          Rectangle {
@@ -39,16 +38,10 @@ import org.kde.kirigami 2.4 as Kirigami
     radius: 10
     color: kolor
     Layout.minimumHeight: wysokosc
-//     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"
                 GridLayout {
                     id: cardLayout
                     anchors.fill: parent
-                    rowSpacing: Kirigami.Units.largeSpacing
-                    columnSpacing: Kirigami.Units.largeSpacing
-                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
-
-                    // Tekst nie chce się układać na górze
                     ColumnLayout {
                     Layout.alignment: cardRectangle.lAlign
                         Controls.Label {

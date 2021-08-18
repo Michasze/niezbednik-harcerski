@@ -18,21 +18,12 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage {
     id: page
     Layout.fillWidth: true
     title: "Poradniki wyboru sprzętu"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
     ColumnLayout {
         id: mainlayout
 KartaStronaIkona {

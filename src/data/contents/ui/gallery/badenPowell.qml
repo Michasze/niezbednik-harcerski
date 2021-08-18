@@ -18,26 +18,16 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Robert Baden-Powell"
 
-/*    actions.main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        }
-        */
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         Image {
          source: "qrc:/contents/ui/img/bp1.jpg"
           Layout.fillWidth: true
@@ -48,7 +38,6 @@ HPSPage {
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Robert Stephenson Smyth Baden Powell - urodził się 22 lutego 1857 roku w Londynie. Jego ojciec był duchownym anglikańskim oraz profesorem geometrii na uniwersytecie w Oksfordzie. Jego matka była wnuczką admirała Williama Smytha. Robert jako dziecko nauczył się grać na pianinie i skrzypcach.
@@ -67,7 +56,6 @@ Brał udział w działaniach armii na terenie Afryki i Indii, w tym w Wojnach Bu
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Podczas II Wojny Burskiej dowodził Obroną Mafekingu. Jako zwiadowców i łączników wykorzystywał wtedy chłopców podzielonych na małe grupy. Napisał książkę “Wskazówki dla zwiadowców”, która była wykorzystywana jako podręcznik dla żołnierzy, ale też wykorzystywały ją organizacje młodzieżowe. W 1907 roku zorganizował eksperymentalny obóz na wyspie Brownsea. Testował tam między innymi system małych grup, czyli system zastępów. Na podstawie swoich doświadczeń wydał w 1908 roku książkę Scouting for boys. Chciał on zapewnić młodzieży z wielkich miast lepszy kontakt z naturą.

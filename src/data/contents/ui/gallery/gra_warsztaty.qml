@@ -1,29 +1,12 @@
 import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
     id: pageFoto
     title: "Gra w klimatach PRL"
-    /*
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.layers.pop(-1);
-        shortcut: "Alt+Q"
-    }
-    */
         ColumnLayout {
         width: pageFoto.width
-        spacing: Units.smallSpacing
 
         ElementListyNoImage
         {

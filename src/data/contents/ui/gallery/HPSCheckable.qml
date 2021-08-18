@@ -1,11 +1,9 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.0 as Controls
-import org.kde.kirigami 2.12
 import Data 1.0
 
 Controls.CheckDelegate {
-//    property string label: ""
                     id: przedmiot
                     Layout.fillWidth: true
                     text: modelData

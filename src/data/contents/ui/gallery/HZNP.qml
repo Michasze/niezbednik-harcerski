@@ -21,20 +21,12 @@ import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.4 as Kirigami
-import QtQuick.Window 2.15
 
 HPSPage {
     id: page
 
     title: qsTr("HZNP")
 
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        visible: !Kirigami.Settings.isMobile ? true : false
-        shortcut: Qt.Key_Back
-    }
 header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
@@ -52,9 +44,7 @@ header: Controls.TabBar {
 
     ColumnLayout {
         id: mainList
-        //headerPositioning: ListView.OverlayHeader
-        //headerPositioning: ListView.PullBackHeader
-        
+
                  Controls.SwipeView {
         id: swipeView
         Layout.fillWidth: true

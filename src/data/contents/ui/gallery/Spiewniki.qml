@@ -20,20 +20,12 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 import Data 1.0
 
 HPSPage {
     id: page
     title: qsTr("Śpiewniki")
 
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        visible: !Kirigami.Settings.isMobile ? true : false
-        shortcut: "Alt+Q"
-    }
        Clipboard
      {
        id: clipboard
@@ -89,13 +81,6 @@ HPSPage
 {
     id: strona
     title: karta.tytul
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
 
     ColumnLayout {
      id: mainList
@@ -141,13 +126,6 @@ HPSPage
             HPSPage
             {
                 title: karta.tytulPiosenki
-     actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
                 ColumnLayout
                 {
                     GridLayout

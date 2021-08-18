@@ -18,37 +18,14 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Najważniejsze daty"
-
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
-        }
-    }
-
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
 	ElementListyNoImage
 	{
            header: "<b>• 1857</b> Generał Robert Baden Powell urodził się 22 lutego"

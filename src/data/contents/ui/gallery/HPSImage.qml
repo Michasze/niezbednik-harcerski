@@ -3,7 +3,6 @@ import QtQuick.Layouts 1.2
 
      Image
  {
-//     Layout.fillWidth: !isHorizontal
      Layout.alignment: Qt.AlignHCenter
      sourceSize.width: isHorizontal ? page.width / 3 : page.width / 2
  }

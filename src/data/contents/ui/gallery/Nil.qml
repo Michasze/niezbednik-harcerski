@@ -20,25 +20,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "gen. \"Nil\""
-
-    /*
-    actions.main: Action {
-           iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        }
-        */
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         Image {
          source: "qrc:/contents/ui/img/Nil.jpg"   
           Layout.fillWidth: true
@@ -47,12 +35,11 @@ HPSPage {
         }
             ElementListyNoImage
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+                Layout.fillWidth: true
+                alignH: Text.AlignJustify
                 format: Text.PlainText
-                textSize: invisibleSlider.value
                 color: "Black"
-            header: "August Emil Fieldorf pseudonim \"Nil\" urodzony 20 marca 1895 roku w Krakowie. Dowódca Kedywu, zastępca Komendanta Głównego Armii Krajowej, dowódca organizacji  \"NIE\".
+                header: "August Emil Fieldorf pseudonim \"Nil\" urodzony 20 marca 1895 roku w Krakowie. Dowódca Kedywu, zastępca Komendanta Głównego Armii Krajowej, dowódca organizacji  \"NIE\".
             
 Swoją służbę wojskową rozpoczął w 1914 roku wstępując do 1 Brygady Legionów, którą dowodził sam Józef Piłsudski. Następnie po zakończeniu I Wojny Światowej, kontynuował swoją karierę, brał między innymi udział w wojnie polsko - bolszewickiej (1919-1920). Po klęsce jego oddziałów w Kampanii Wrześniowej (1939), przedostał się do Francji, gdzie został wyznaczony emisariuszem Rządu i Naczelnego Wodza w kraju. Po powrocie do Polski działał w Związku Walki Zbrojnej, następnie został wyznaczony dowódcą Kedywu Komendy Głównej Armii Krajowej. Był odpowiedzialny za organizację wykonywania wyroków na najgroźniejszych niemieckich oficerach, takich jak brawurowa akcja likwidacji Franza Kutschery, dowódcy SS i Gestapo w Dystrykcie Warszawskim.
 
@@ -64,6 +51,4 @@ Juliusz Idzikowski
 "
         }
     }
- 
-    
 }

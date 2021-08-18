@@ -17,9 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
@@ -39,28 +37,28 @@ HPSPage
             align: 1
             color: "green"
           }
-HPSLista {
+        HPSLista {
             label: "• Słoik (najlepiej plastikowe wieczko, jeśli nie może być metalowe, ale wtedy dodatkowo potrzebujemy kawałka folii spożywczej)"
              }
-HPSLista {
+        HPSLista {
             label: "• Kamyczki (mogą być zwykłe mogą być kolorowe co kto lubi)"
              }
-HPSLista {
+        HPSLista {
             label: "• Węgiel (w lesie łatwo znaleźć po dawnych ogniskach)"
              }
-HPSLista {
+        HPSLista {
             label: "• Piasek"
              }
-HPSLista {
+        HPSLista {
             label: "• Ziemia do kwiatków (nie ma robaków)"
              }
-HPSLista {
+        HPSLista {
             label: "• 4 łyżki wody"
              }
-HPSLista {
+        HPSLista {
             label: "• Można wrzucić własną plastikową figurkę"
              }
-HPSLista {
+        HPSLista {
             label: "• Roślinka, może być nawet malutkie drzewko. (skarłowacieje) Roślinka musi mieć korzonek!"
              }
 ElementListyNoImage
@@ -75,34 +73,34 @@ ElementListyNoImage
   align: 1
   color: "green"
 }
-HPSLista {
+        HPSLista {
             label: "1. Myjemy dokładnie słoik i wycieramy do sucha."
              }
-HPSLista {
+        HPSLista {
             label: "2. Myjemy roślinkę, którą przynieśliśmy. (robaki)"
              }
-HPSLista {
+        HPSLista {
             label: "3. Dodajemy węgiel z ogniska."
         }
-HPSLista {
+        HPSLista {
             label: "4. Dodajemy piasek."
         }
-HPSLista {
+        HPSLista {
             label: "5. Dodajemy ziemię do kwiatków. (patrzymy czy nie ma w niej robaków!)"
              }
-HPSLista {
+        HPSLista {
             label: "6. Sadzimy naszą roślinkę."
         }
-HPSLista {
+        HPSLista {
             label: "7. Dodajemy ozdobną figurkę."
         }
-HPSLista {
+        HPSLista {
             label: "8. Dodajemy 4 łyżki wody."
         }
-HPSLista {
+        HPSLista {
             label: "9. Jeśli mamy plastikowe wieczko zakręcamy. Jeśli nie podkładamy plastikową folię tak, żeby wystawała na zewnątrz i zakręcamy. Ma izolować nakrętkę od środka słoika, żeby nie zardzewiała."
         }
-HPSLista {
+        HPSLista {
             label: "10. Nie trzymamy na ostrym słońcu."
              }
 

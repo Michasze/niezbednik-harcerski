@@ -19,7 +19,6 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
          Controls.RadioButton {
              property int rozmiar: invisibleSlider.value - 5

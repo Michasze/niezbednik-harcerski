@@ -57,10 +57,8 @@ import QtQuick.Layouts 1.2
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
-//                            Layout.rightMargin: 100
                             Layout.fillWidth: true
                             Layout.rightMargin: 10
- //                           anchors.centerIn: parent
                              text: cardRectangle.header
                     }
                 }

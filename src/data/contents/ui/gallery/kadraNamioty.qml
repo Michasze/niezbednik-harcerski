@@ -17,38 +17,20 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
     title: "Namiot kadry"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
-        width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
+                Layout.fillWidth: true
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
-            header: "Tak to już jest w naszym świecie, że wiele z pozoru prostych tematów dla starszych harcerzy wydaje się nie oczywiste dla tych młodszych. I tak jest też z namiotami kadry na obozach czy innymi \"przywilejami\". I oczywiście-nie można obrosnąć w wygodnictwo i pozwalać sobie czy innej kadrze na bycie pączkiem w biwakowym maśle. We wszystkim należy zachowywać umiar i zdrowy rozsądek.
+                header: "Tak to już jest w naszym świecie, że wiele z pozoru prostych tematów dla starszych harcerzy wydaje się nie oczywiste dla tych młodszych. I tak jest też z namiotami kadry na obozach czy innymi \"przywilejami\". I oczywiście-nie można obrosnąć w wygodnictwo i pozwalać sobie czy innej kadrze na bycie pączkiem w biwakowym maśle. We wszystkim należy zachowywać umiar i zdrowy rozsądek.
 
 Namioty to jeden z głównych przykładów takich \"przywilejów\". Dlaczego kadra je ma?
 
