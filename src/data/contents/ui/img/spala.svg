@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    width="160.79108mm"
-   height="160.79108mm"
-   viewBox="0 0 160.79108 160.79108"
+   height="160.93326mm"
+   viewBox="0 0 160.79108 160.93326"
    version="1.1"
    id="svg6"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.2-dev (5f01de93b4, 2021-08-06, custom)"
    sodipodi:docname="spala.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -20,36 +20,37 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="138.3909"
-     inkscape:cy="330.31988"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="26.162951"
+     inkscape:cy="376.88791"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:pagecheckerboard="0" />
+     inkscape:pagecheckerboard="0"
+     lock-margins="true" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Warstwa 2"
      style="display:inline;opacity:1"
-     transform="translate(-33.617683,-128.4192)">
+     transform="translate(-34.080502,-128.71153)">
     <rect
        style="fill:#a06c45;fill-opacity:1;fill-rule:evenodd;stroke-width:0.687834;stroke-linecap:round;stroke-linejoin:round"
        id="rect43"
        width="160.79108"
        height="160.93326"
-       x="34.609669"
+       x="34.080502"
        y="128.71153"
-       ry="22.183371" />
+       ry="16.480083" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        d="m 64.540839,173.52041 -0.15411,2.90967 -10.669592,-0.50599 0.255349,-3.73217 4.23646,-6.1008 c 1.010454,-1.26534 1.075071,-2.28301 -2.140359,-1.81926 l -2.651324,0.0565 c -0.573395,0.0576 -0.339927,-3.67611 0.371264,-3.81328 3.59597,0.28072 7.286786,-0.0366 10.786128,0.85341 1.296198,0.37128 -6.911033,11.19687 -6.242926,11.44237 z"
@@ -160,7 +161,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Warstwa 3"
-     transform="translate(-33.617683,-128.4192)"
+     transform="translate(-34.080502,-128.71153)"
      style="display:inline">
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#a46f48;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
