@@ -45,33 +45,10 @@ HPSPage {
     }
 ColumnLayout
 {
-/*        Repeater {
-        property string tytul: ""
-        property string tekst: ""
-        property string tytulPiosenki: ""
-    id: karta
-    model: spiewnik.nazwaSpiewnika
-    delegate: KartaStronaNoImage {
-        visible: index == 0 ? false : true
-        header: modelData
-        opis: ""
-    MouseArea {
-        id: area
-    anchors.fill: parent
-            readonly property int kartaIndex: index
-        onClicked:
-        {
-            spiewnik.spiewnikIndex = kartaIndex
-            karta.tytul = spiewnik.nazwaSpiewnika[spiewnik.spiewnikIndex]
-            pageStack.push(spiewnikPage)
-        }
-    }
-    }
-} */
     ListModel {
         id: spiewnikModel
-        ListElement { title: "Harcerski śpiewnik obozowy z 1924 roku"; url: "://spiewnik1924.json"; icon: "blank"}
-        ListElement { title: "Harcerska twórczość własna"; url: "://spiewnikWlasne.json"; icon: "blank" }
+        ListElement { title: "Harcerski śpiewnik obozowy z 1924 roku"; url: "://spiewnik1924.json"; icon: "lutnia"}
+        ListElement { title: "Harcerska twórczość własna"; url: "://spiewnikWlasne.json"; icon: "gitara" }
         ListElement { title: "Hymny"; url: "://spiewnikHymny.json"; icon: "trabka" }
     }
     Repeater {
@@ -199,12 +176,6 @@ HPSPage
                             highlighted: true
                             icon.source: "qrc:/contents/ui/img/gtk-select-font.svg"
                             onClicked: tweaks.open();
-/*                            background: Rectangle {
-                                anchors.fill: parent
-                                color: "transparent"
-                                border.color: "Grey"
-                                border.width: 2
-                            } */
                         }
                     }
                 Controls.Popup
