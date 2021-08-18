@@ -12,7 +12,6 @@
         <file alias="contents/ui/gallery/HPSPage.qml">./data/contents/ui/gallery/HPSPage.qml</file>
         <file alias="contents/ui/gallery/HPSPopup.qml">./data/contents/ui/gallery/HPSPopup.qml</file>
         <file alias="contents/ui/gallery/HPSText.qml">./data/contents/ui/gallery/HPSText.qml</file>
-        <file alias="contents/ui/gallery/Lista.qml">./data/contents/ui/gallery/Lista.qml</file>
         <file alias="contents/ui/gallery/HPSLista.qml">./data/contents/ui/gallery/HPSLista.qml</file>
         <file alias="contents/ui/gallery/DefaultListItemBackground.qml">./data/contents/ui/gallery/DefaultListItemBackground.qml</file>
         <file alias="contents/ui/gallery/HPSSeparator.qml">./data/contents/ui/gallery/HPSSeparator.qml</file>

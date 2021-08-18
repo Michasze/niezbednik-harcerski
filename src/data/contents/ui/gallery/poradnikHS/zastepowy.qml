@@ -66,54 +66,54 @@ HPSPage {
                 color: "royalblue"
                 header: "<h3>Prawa zastępowego:</h3>"
             }
-            Lista {
-                tresc: "prawo do korzystania z pomocy innych funkcyjnych i ich wsparcia"
+            HPSLista {
+                label: "prawo do korzystania z pomocy innych funkcyjnych i ich wsparcia"
             }
-            Lista {
-                tresc: "prawo do korzystania z różnorodnych inspiracji"
+            HPSLista {
+                label: "prawo do korzystania z różnorodnych inspiracji"
             }
-            Lista {
-                tresc: "prawo do przekazania prowadzenia danej zbiórki podzastępowemu lub innej osobie"
+            HPSLista {
+                label: "prawo do przekazania prowadzenia danej zbiórki podzastępowemu lub innej osobie"
             }
-            Lista {
-                tresc: "prawo do tworzenia obrzędowości i identyfikacji zastępu"
+            HPSLista {
+                label: "prawo do tworzenia obrzędowości i identyfikacji zastępu"
             }
-            Lista {
-                tresc: "prawo do samodoskonalenia, zdobywania stopni i sprawności wraz z zastępem"
+            HPSLista {
+                label: "prawo do samodoskonalenia, zdobywania stopni i sprawności wraz z zastępem"
             }
-            Lista {
-                tresc: "prawo do oddania zastępu swojemu następcy"
+            HPSLista {
+                label: "prawo do oddania zastępu swojemu następcy"
             }
             ElementListyNoImage {
                 color: "royalblue"
                 header: "<h3>Obowiązki zastępowego:</h3>"
             }
-            Lista {
-                tresc: "obowiązek prowadzenia zbiórek zastępu"
+            HPSLista {
+                label: "obowiązek prowadzenia zbiórek zastępu"
             }
-            Lista {
-                tresc: "obowiązek pisania konspektów zbiórek i terminowego przekazywania drużynowemu"
+            HPSLista {
+                label: "obowiązek pisania konspektów zbiórek i terminowego przekazywania drużynowemu"
             }
-            Lista {
-                tresc: "zastępowy bierze też odpowiedzialność za członków zastępu, gdy podopieczny zwraca się o pomoc, zastępowy ma powinność udzielenia jej (jeżeli nie jest w stanie pomóc, zwraca się do osoby wyższej funkcją)"
+            HPSLista {
+                label: "zastępowy bierze też odpowiedzialność za członków zastępu, gdy podopieczny zwraca się o pomoc, zastępowy ma powinność udzielenia jej (jeżeli nie jest w stanie pomóc, zwraca się do osoby wyższej funkcją)"
             }
-            Lista {
-                tresc: "obowiązek zaplanowania pracy zastępu w planie pracy zastępu (zależnie od środowiska)"
+            HPSLista {
+                label: "obowiązek zaplanowania pracy zastępu w planie pracy zastępu (zależnie od środowiska)"
             }
-            Lista {
-                tresc: "obowiązek sprawdzania obecności na zbiórkach zastępu"
+            HPSLista {
+                label: "obowiązek sprawdzania obecności na zbiórkach zastępu"
             }
-            Lista {
-                tresc: "obowiązek zgłaszania niepokojących sytuacji wyższym funkcyjnym"
+            HPSLista {
+                label: "obowiązek zgłaszania niepokojących sytuacji wyższym funkcyjnym"
             }
-            Lista {
-                tresc: "obowiązek dawania dobrego przykładu (nie tylko w mundurze!)"
+            HPSLista {
+                label: "obowiązek dawania dobrego przykładu (nie tylko w mundurze!)"
             }
-            Lista {
-                tresc: "obowiązek pracy zgodnie z metodą harcerską"
+            HPSLista {
+                label: "obowiązek pracy zgodnie z metodą harcerską"
             }
-            Lista {
-                tresc: "obowiązek samodoskonalenia"
+            HPSLista {
+                label: "obowiązek samodoskonalenia"
             }
         }
     }

@@ -50,77 +50,77 @@ HPSPage {
                 align: 0
                 header: "<p>Idziesz pierwszy i wykładasz przed stopami kolejne formy pracy, po których Twoi harcerze starsi przechodzą ku celowi.</p>"
             }
-            Lista {
-                tresc: "film (noc filmowa, seans) - humorystyczny dla integracji, a może poruszający problem środowiska, społeczności, zastępu? YouTube, cda.pl, Netflix, i wiele innych platform, a nawet płyty DVD pozwalają na integrację zastępu i poruszenie ważnych kwestii."
+            HPSLista {
+                label: "film (noc filmowa, seans) - humorystyczny dla integracji, a może poruszający problem środowiska, społeczności, zastępu? YouTube, cda.pl, Netflix, i wiele innych platform, a nawet płyty DVD pozwalają na integrację zastępu i poruszenie ważnych kwestii."
             }
-            Lista {
-                tresc: "gra strategiczna — kolejny sposób na integrację zastępu połączoną z rozwijaniem umiejętności i wiedzy. Logiczne myślenie, szybkość i spryt harcerzom niestraszne!"
+            HPSLista {
+                label: "gra strategiczna — kolejny sposób na integrację zastępu połączoną z rozwijaniem umiejętności i wiedzy. Logiczne myślenie, szybkość i spryt harcerzom niestraszne!"
             }
-            Lista {
-                tresc: "próba - na sprawność, stopień harcerski, instruktorski, naramiennik wędrowniczy..."
+            HPSLista {
+                label: "próba - na sprawność, stopień harcerski, instruktorski, naramiennik wędrowniczy..."
             }
-            Lista {
-                tresc: "gawęda - zazwyczaj o charakterze refleksyjnym, czytana lub opowiadana przy ogniu, skłaniająca do przemyśleń związanych z tematem zbiórki."
+            HPSLista {
+                label: "gawęda - zazwyczaj o charakterze refleksyjnym, czytana lub opowiadana przy ogniu, skłaniająca do przemyśleń związanych z tematem zbiórki."
             }
-            Lista {
-                tresc: "piosenka - dobrana odpowiednio do tematyki potrafi poruszyć, rozbawić. Korzystajcie z muzycznych zdolności harcerzy — gitara, keyboard, trąbka, a może jeszcze coś innego? Rozpalcie chęć działania w grajkach!"
+            HPSLista {
+                label: "piosenka - dobrana odpowiednio do tematyki potrafi poruszyć, rozbawić. Korzystajcie z muzycznych zdolności harcerzy — gitara, keyboard, trąbka, a może jeszcze coś innego? Rozpalcie chęć działania w grajkach!"
             }
-            Lista {
-                tresc: "scenki — aktywna forma pozwalająca nie tylko ruszyć się z miejsca, ale też rozwinąć kreatywność i umiejętność współpracy. Wcielcie się w rycerzy z 5. punktu Prawa Harcerskiego, w szaroszeregowców z czasów wojny, w kogo tylko chcecie!"
+            HPSLista {
+                label: "scenki — aktywna forma pozwalająca nie tylko ruszyć się z miejsca, ale też rozwinąć kreatywność i umiejętność współpracy. Wcielcie się w rycerzy z 5. punktu Prawa Harcerskiego, w szaroszeregowców z czasów wojny, w kogo tylko chcecie!"
             }
-            Lista {
-                tresc: "gra terenowa - róbcie je jak najczęściej, w pogodę i niepogodę, w lesie i mieście, po miejscach znanych i takich, które wymagają eksploracji przez nieustraszonych HS-ów! Wszystko w granicach rozsądku, oczywiście :P"
+            HPSLista {
+                label: "gra terenowa - róbcie je jak najczęściej, w pogodę i niepogodę, w lesie i mieście, po miejscach znanych i takich, które wymagają eksploracji przez nieustraszonych HS-ów! Wszystko w granicach rozsądku, oczywiście :P"
             }
-            Lista {
-                tresc: "zwiad - forma podobna do gry terenowej, z tą różnicą, że celem nie jest zebranie wszystkich punktów i dojście do mety, ale zebranie jak najwięcej informacji o danym zabytku, charakterystycznym elemencie miasta lub o regionie."
+            HPSLista {
+                label: "zwiad - forma podobna do gry terenowej, z tą różnicą, że celem nie jest zebranie wszystkich punktów i dojście do mety, ale zebranie jak najwięcej informacji o danym zabytku, charakterystycznym elemencie miasta lub o regionie."
             }
-            Lista {
-                tresc: "ognisko - chyba każdy kocha chwile przy ogniu spędzone z przyjaciółmi przy dźwięku gitary, wzbogacone fabułą, opowieściami sprzed lat. Jest to jedna z moich ulubionych form pracy i bardzo polecam!"
+            HPSLista {
+                label: "ognisko - chyba każdy kocha chwile przy ogniu spędzone z przyjaciółmi przy dźwięku gitary, wzbogacone fabułą, opowieściami sprzed lat. Jest to jedna z moich ulubionych form pracy i bardzo polecam!"
             }
-            Lista {
-                tresc: "manewry (np. z I pomocy, ratownictwa taktycznego, kamuflażu, etc.)"
+            HPSLista {
+                label: "manewry (np. z I pomocy, ratownictwa taktycznego, kamuflażu, etc.)"
             }
-            Lista {
-                tresc: "wycieczka - kino, teatr, zoo, escape room, basen, paintball, park linowy - do wyboru do koloru, dobre do integracji i zdobywania fizycznych, a czasem poznawczych umiejętności."
+            HPSLista {
+                label: "wycieczka - kino, teatr, zoo, escape room, basen, paintball, park linowy - do wyboru do koloru, dobre do integracji i zdobywania fizycznych, a czasem poznawczych umiejętności."
             }
-            Lista {
-                tresc: "warsztaty - z terenoznawstwa, kartografii, kuchmistrzostwa, ratownictwa — możliwości jest bez liku, a z odpowiednimi ludźmi z wiedzą i przydatnymi kwalifikacjami można naprawdę wiele zdziałać."
+            HPSLista {
+                label: "warsztaty - z terenoznawstwa, kartografii, kuchmistrzostwa, ratownictwa — możliwości jest bez liku, a z odpowiednimi ludźmi z wiedzą i przydatnymi kwalifikacjami można naprawdę wiele zdziałać."
             }
-            Lista {
-                tresc: "wędrówka - paręnaście kilometrów świetnych przeżyć stoi przed Wami otworem!"
+            HPSLista {
+                label: "wędrówka - paręnaście kilometrów świetnych przeżyć stoi przed Wami otworem!"
             }
-            Lista {
-                tresc: "ogniobranie - to refleksyjna gra terenowa, zamiast zwyczajowych punktów są rozpalone świece, z cytatami, zdaniami odpowiednimi do tematu."
+            HPSLista {
+                label: "ogniobranie - to refleksyjna gra terenowa, zamiast zwyczajowych punktów są rozpalone świece, z cytatami, zdaniami odpowiednimi do tematu."
             }
-            Lista {
-                tresc: "RPG - można przenieść się do średniowiecza, prehistorii albo przyszłości — wszystko zależy od Was, mistrza gry oraz kostek!"
+            HPSLista {
+                label: "RPG - można przenieść się do średniowiecza, prehistorii albo przyszłości — wszystko zależy od Was, mistrza gry oraz kostek!"
             }
-            Lista {
-                tresc: "pląs - każdy z Was zna ich na pewno wiele, działajcie! Poznawajcie też pląsy z innych środowisk, to zawsze fajne doświadczenie."
+            HPSLista {
+                label: "pląs - każdy z Was zna ich na pewno wiele, działajcie! Poznawajcie też pląsy z innych środowisk, to zawsze fajne doświadczenie."
             }
-            Lista {
-                tresc: "śpiewogranie - gitara, parę gardeł, świece, śpiewnik - czego chcieć więcej?"
+            HPSLista {
+                label: "śpiewogranie - gitara, parę gardeł, świece, śpiewnik - czego chcieć więcej?"
             }
-            Lista {
-                tresc: "burza mózgów - co zastęp głów, to nie jedna! Macie problem - rozwiąźcie go wspólnie."
+            HPSLista {
+                label: "burza mózgów - co zastęp głów, to nie jedna! Macie problem - rozwiąźcie go wspólnie."
             }
-            Lista {
-                tresc: "dyskusja — świetna do poznania opinii reszty na dany temat, prowadzona z szacunkiem do zdania innych jest bardzo konstruktywna."
+            HPSLista {
+                label: "dyskusja — świetna do poznania opinii reszty na dany temat, prowadzona z szacunkiem do zdania innych jest bardzo konstruktywna."
             }
-            Lista {
-                tresc: "spotkanie z gościem - ratownik medyczny, leśnik, informatyk, policjant, dziennikarz, żołnierz - a nuż któryś z rodziców harcerzy lub instruktor z hufca zechce opowiedzieć o swojej profesji albo hobby?"
+            HPSLista {
+                label: "spotkanie z gościem - ratownik medyczny, leśnik, informatyk, policjant, dziennikarz, żołnierz - a nuż któryś z rodziców harcerzy lub instruktor z hufca zechce opowiedzieć o swojej profesji albo hobby?"
             }
-            Lista {
-                tresc: "zbiórka w terenie - nie siedźcie w czterech ścianach, wyjdźcie w świat!"
+            HPSLista {
+                label: "zbiórka w terenie - nie siedźcie w czterech ścianach, wyjdźcie w świat!"
             }
-            Lista {
-                tresc: "zbiórka z kodami QR - świetna i inmnowacyjna metoda. Można rozwiesić karteczki z kodami po danym obszarze gry, z zapisanymi w kodzie informacjami, szyframi, wskazówkami do następnego punktu. Wymagane posiadanie przez uczestników co najmniej jednego telefonu z aplikacją do odczytywania kodów QR."
+            HPSLista {
+                label: "zbiórka z kodami QR - świetna i inmnowacyjna metoda. Można rozwiesić karteczki z kodami po danym obszarze gry, z zapisanymi w kodzie informacjami, szyframi, wskazówkami do następnego punktu. Wymagane posiadanie przez uczestników co najmniej jednego telefonu z aplikacją do odczytywania kodów QR."
             }
-            Lista {
-                tresc: "kahoot - kolejna nowoczesna forma pracy; to platforma pozwalająca tworzyć i rozwiązywać quizy w wiele osób. Wymagany 1 telefon na osobę lub zespół, laptop i dobrze jest też dysponować rzutnikiem."
+            HPSLista {
+                label: "kahoot - kolejna nowoczesna forma pracy; to platforma pozwalająca tworzyć i rozwiązywać quizy w wiele osób. Wymagany 1 telefon na osobę lub zespół, laptop i dobrze jest też dysponować rzutnikiem."
             }
-            Lista {
-                tresc: "i wiele, wiele więcej - ogranicza Cię tylko Twoja kreatywność!"
+            HPSLista {
+                label: "i wiele, wiele więcej - ogranicza Cię tylko Twoja kreatywność!"
             }
         }
     }

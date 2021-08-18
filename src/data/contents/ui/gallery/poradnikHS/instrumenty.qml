@@ -39,50 +39,50 @@ actions.main: Kirigami.Action {
                 color: "royalblue"
                 header: "<h3> Próba harcerza</h3>"
             }
-            Lista {
-                tresc: "zakończona Przyrzeczeniem Harcerskim "
+            HPSLista {
+                label: "zakończona Przyrzeczeniem Harcerskim "
             }
-            Lista {
-                tresc: "ma za zadanie przygotować HS-a do wejścia w harcerski świat, „zarazić go harcerskim bakcylem\"  "
+            HPSLista {
+                label: "ma za zadanie przygotować HS-a do wejścia w harcerski świat, „zarazić go harcerskim bakcylem\"  "
             }
-            Lista {
-                tresc: "początek harcerskiej drogi "
+            HPSLista {
+                label: "początek harcerskiej drogi "
             }
-ElementListyNoImage {
+            ElementListyNoImage {
                 color: "royalblue"
                 header: "<h3>Stopnie harcerskie</h3>"
             }
-            Lista {
-                tresc: "realzowane odpowiedno do wieku (HS = pionierka/odkrywca i samarytanka/ćwik)"
+            HPSLista {
+                label: "realizowane odpowiednio do wieku (HS = pionierka/odkrywca i samarytanka/ćwik)"
             }
-            Lista {
-                tresc: "zadania realizowane podczas zbiórek, wyjazdów i w życiu codziennym"
+            HPSLista {
+                label: "zadania realizowane podczas zbiórek, wyjazdów i w życiu codziennym"
             }
-ElementListyNoImage {
+            ElementListyNoImage {
                 color: "royalblue"
                 header: "<h3>Sprawności ** i ***</h3>"
             }
-            Lista {
-                tresc: "mają za zadanie rozwinąć harcerza na różnych płaszczyznach "
+            HPSLista {
+                label: "mają za zadanie rozwinąć harcerza na różnych płaszczyznach "
             }
-            Lista {
-                tresc: "realilzowane przede wszystkim podczas zbiórek"
+            HPSLista {
+                label: "realizowane przede wszystkim podczas zbiórek"
             }
-            Lista {
-                tresc: "sprawności miesiąca jako zachęta do zdobywania sprawności"
+            HPSLista {
+                label: "sprawności miesiąca jako zachęta do zdobywania sprawności"
             }
-ElementListyNoImage {
+            ElementListyNoImage {
                 color: "royalblue"
                 header: "<h3>Projekt starszoharcerski</h3>"
             }
-            Lista {
-                tresc: "uczy pracy zespołowej i współpracy"
+            HPSLista {
+                label: "uczy pracy zespołowej i współpracy"
             }
-            Lista {
-                tresc: "kształtuje odpowiedzialność"
+            HPSLista {
+                label: "kształtuje odpowiedzialność"
             }
-            Lista {
-                tresc: "chciałabym, jak pewnie każdy drużynowy starszoharcerski, żebyście realizowali ich Jak najwięcej :P"
+            HPSLista {
+                label: "chciałabym, jak pewnie każdy drużynowy starszoharcerski, żebyście realizowali ich jak najwięcej :P"
             }
 
         }

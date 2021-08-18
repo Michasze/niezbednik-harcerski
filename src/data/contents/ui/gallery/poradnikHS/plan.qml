@@ -49,25 +49,25 @@ HPSPage {
 
 <p>2) zrób analizę SWOT zastępu (załącznik 2) i charakterystykę zastępu:</p>"
         }
-            Lista
+            HPSLista
             {
-            tresc: "jak długo zastęp działa?"
+            label: "jak długo zastęp działa?"
             }
-            Lista
+            HPSLista
             {
-            tresc: "kto jest zastępowym i podzastępowym?"
+            label: "kto jest zastępowym i podzastępowym?"
             }
-            Lista
+            HPSLista
             {
-            tresc: "ilu zastęp ma członków?"
+            label: "ilu zastęp ma członków?"
             }
-            Lista
+            HPSLista
             {
-            tresc: "ile osób złożyło Przyrzeczenie?"
+            label: "ile osób złożyło Przyrzeczenie?"
             }
-            Lista
+            HPSLista
             {
-            tresc: "ile osób ma jaki stopień harcerski?"
+            label: "ile osób ma jaki stopień harcerski?"
             }
         ElementListyNoImage
         {

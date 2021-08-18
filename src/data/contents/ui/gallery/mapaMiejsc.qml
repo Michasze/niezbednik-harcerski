@@ -131,30 +131,25 @@ Strona/aplikacja Moje Mapy jest wręcz stworzona do takiego wykorzystania. Oferu
         alignH: Text.AlignJustify
         header: "Warto też:"
      }
-        Lista
+        HPSLista
         {
-            tresc: "- skontaktować się z nadleśnictwem w sprawie takich miejsc"
-            alignH: Text.AlignJustify
+            label: "- skontaktować się z nadleśnictwem w sprawie takich miejsc"
         }
-        Lista
+        HPSLista
         {
-            tresc: "- zajrzeć do muzeum regionalnego i spróbować zapytać o ciekawe miejsca w okolicach"
-            alignH: Text.AlignJustify
+            label: "- zajrzeć do muzeum regionalnego i spróbować zapytać o ciekawe miejsca w okolicach"
         }
-        Lista
+        HPSLista
         {
-            tresc: "- przeczytać broszury turystyczne"
-            alignH: Text.AlignJustify
+            label: "- przeczytać broszury turystyczne"
         }
-        Lista
+        HPSLista
         {
-            tresc: "- spróbować zdobyć dostęp do starych map"
-            alignH: Text.AlignJustify
+            label: "- spróbować zdobyć dostęp do starych map"
         }
-        Lista
+        HPSLista
         {
-            tresc: "- przejrzeć aplikację geocaching"
-            alignH: Text.AlignJustify
+            label: "- przejrzeć aplikację geocaching"
         }
     ElementListyNoImage
      {

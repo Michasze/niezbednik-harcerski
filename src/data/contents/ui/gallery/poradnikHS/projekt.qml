@@ -47,20 +47,20 @@ HPSPage {
                 align: 0
                 header: "<p>Pytania, które warto zadać grupie podczas rozpisywania projektu SH:</p>"
             }
-            Lista {
-                tresc: "Co chciałbym zrobić dla siebie?"
+            HPSLista {
+                label: "Co chciałbym zrobić dla siebie?"
             }
-            Lista {
-                tresc: "Co mogę dać od siebie innym?"
+            HPSLista {
+                label: "Co mogę dać od siebie innym?"
             }
-            Lista {
-                tresc: "Czego potrzebuje moje otoczenie?"
+            HPSLista {
+                label: "Czego potrzebuje moje otoczenie?"
             }
-            Lista {
-                tresc: "Gdzie potrzebne jest wsparcie?"
+            HPSLista {
+                label: "Gdzie potrzebne jest wsparcie?"
             }
-            Lista {
-                tresc: "Jaką świetną akcję chcemy przeżyć z zastępem?"
+            HPSLista {
+                label: "Jaką świetną akcję chcemy przeżyć z zastępem?"
             }
             ElementListyNoImage {
                 color: "#FF003c00"
