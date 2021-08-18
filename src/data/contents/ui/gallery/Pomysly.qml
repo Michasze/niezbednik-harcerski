@@ -68,19 +68,21 @@ KartaStronaIkona {
     {
         Layout.fillWidth: true
     }
-    KartaStronaNoImage {
-        header: "Geoguessr"
-        opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości"
-        adres: "geoguessr.qml"
+    KartaStronaIkona {
+        header: "Gra fabularna"
+        opis: "w klimatach bloku wschodniego"
+        ikona: "image://icons/kosci.svg,white"
+        adres: "gra_warsztaty.qml"
     }
     HPSSeparator
     {
         Layout.fillWidth: true
     }
-    KartaStronaNoImage {
-        header: "Gra fabularna"
-        opis: "w klimatach bloku wschodniego"
-        adres: "gra_warsztaty.qml"
+    KartaStronaIkona {
+        header: "Geoguessr"
+        opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości"
+        ikona: "image://icons/atmosphere.svg,white"
+        adres: "geoguessr.qml"
     }
         }
     }

@@ -248,6 +248,10 @@
         <file alias="contents/ui/img/karimata.svg">./data/contents/ui/img/karimata.svg</file>
         <file alias="contents/ui/img/spiwor.svg">./data/contents/ui/img/spiwor.svg</file>
         <file alias="contents/ui/img/trabka.svg">./data/contents/ui/img/trabka.svg</file>
+        <file alias="contents/ui/img/gitara.svg">./data/contents/ui/img/gitara.svg</file>
+        <file alias="contents/ui/img/lutnia.svg">./data/contents/ui/img/lutnia.svg</file>
+        <file alias="contents/ui/img/kosci.svg">./data/contents/ui/img/kosci.svg</file>
+        <file alias="contents/ui/img/atmosphere.svg">./data/contents/ui/img/atmosphere.svg</file>
         <file alias="contents/ui/img/noz.svg">./data/contents/ui/img/noz.svg</file>
         <file alias="contents/ui/img/szlify.svg">./data/contents/ui/img/szlify.svg</file>
         <file alias="contents/ui/img/plecak.svg">./data/contents/ui/img/plecak.svg</file>
