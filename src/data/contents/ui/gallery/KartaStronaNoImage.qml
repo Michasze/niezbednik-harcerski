@@ -58,7 +58,8 @@ import org.kde.kirigami 2.4 as Kirigami
                     ColumnLayout {
                         Controls.Label {
                             id: naglowek
-                            Layout.leftMargin: 10
+                            Layout.leftMargin: 20
+                            Layout.rightMargin: 10
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
                             Layout.fillWidth: true
@@ -70,7 +71,8 @@ import org.kde.kirigami 2.4 as Kirigami
                         }
                         Controls.Label {
                             Layout.fillWidth: true
-                            Layout.leftMargin: 10
+                            Layout.leftMargin: 20
+                            Layout.rightMargin: 10
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value - 2
                             Layout.bottomMargin: 10

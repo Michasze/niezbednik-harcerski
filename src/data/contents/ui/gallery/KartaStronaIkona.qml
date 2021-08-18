@@ -64,6 +64,8 @@ import QtQuick.Layouts 1.2
                         Controls.Label {
                             id: naglowek
                             wrapMode: Text.Wrap
+                            Layout.rightMargin: 10
+                            Layout.leftMargin: 10
                             font.pointSize: invisibleSlider.value
                             Layout.fillWidth: true
                              text: kartaRectangle.header
@@ -74,6 +76,8 @@ import QtQuick.Layouts 1.2
                         Controls.Label {
                             Layout.fillWidth: true
                             wrapMode: Text.Wrap
+                            Layout.rightMargin: 10
+                            Layout.leftMargin: 10
                             font.pointSize: invisibleSlider.value - 2
                             Layout.bottomMargin: 10
                             text: kartaRectangle.opis
