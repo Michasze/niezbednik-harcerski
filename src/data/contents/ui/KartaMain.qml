@@ -28,7 +28,7 @@ import org.kde.kirigami 2.4 as Kirigami
              property string header: "Brak tekstu"
              property url ikona: {}
              property url adres: "harcerz.qml"
-             property color kolor_ikony: "white"
+             property string kolor_ikony: ",white"
     id: hznpRectangle
     Layout.fillWidth: true
     radius: 10
@@ -40,7 +40,6 @@ import org.kde.kirigami 2.4 as Kirigami
      Layout.maximumWidth: 300
      Layout.maximumHeight: 300
      Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-     //height: hznpRectangle.implicitWidth
     //border.color: "white"
     MouseArea {
     anchors.fill: parent
@@ -52,19 +51,13 @@ import org.kde.kirigami 2.4 as Kirigami
                 ColumnLayout {
                     id: hznpLayout
                     anchors.fill: parent
-                    Kirigami.Icon {
+                    Image {
                         //Layout.bottomMargin: 10
-                        Layout.alignment: Qt.AlignTop | Qt.AlignLeft
-                        source: hznpRectangle.ikona
-                        Layout.fillWidth: true
-                        isMask: true
-                        color: hznpRectangle.kolor_ikony
-                        Layout.minimumHeight: hznpRectangle.height - 40
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                        source: hznpRectangle.ikona + hznpRectangle.kolor_ikony
+                        sourceSize.width: hznpRectangle.height - 40
                         Layout.topMargin: 10
-//                          Layout.minimumHeight: 100
-//                         Layout.maximumHeight: 80
-               //         Layout.maximumHeight: hznpRectangle.implicitHeight
-                        Layout.preferredWidth: height
+//                        Layout.preferredWidth: height
                     }
                     // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
                     ColumnLayout {
@@ -72,8 +65,7 @@ import org.kde.kirigami 2.4 as Kirigami
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value - 2
-                            Layout.alignment: Qt.AlignTop
-                            verticalAlignment: Text.AlignTop
+                            Layout.alignment: Qt.AlignBottom
                             horizontalAlignment: Text.AlignHCenter
                             Layout.fillWidth: true
                              text: hznpRectangle.header

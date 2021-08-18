@@ -130,93 +130,83 @@ background: Rectangle {
         ListElement {
             title: "Historia"
             targetPage: "gallery/Historyczne.qml"
-            img: "img/krzyz.svg"
-            kolor: "#ffffff"
+            img: "image://icons/krzyz.svg"
         }
         ListElement {
             title: "Pomysły na zbiórki"
             targetPage: "gallery/Pomysly.qml"
-            img: "img/zarowka.svg"
-            kolor: "#ffffff"
+            img: "image://icons/zarowka.svg"
         }
         ListElement {
             title: "Artykuły"
             targetPage: "gallery/Artykuly.qml"
-            img: "img/Artykuly.svg"
-            kolor: "#ffffff"
+            img: "image://icons/Artykuly.svg"
         }
         ListElement {
             title: "Szyfry"
             targetPage: "gallery/szyfry.qml"
-            img: "img/szyfry.svg"
-            kolor: "#ffffff"
+            img: "image://icons/szyfry.svg"
         }
         ListElement {
             title: "Symbolika"
             targetPage: "gallery/symbolika.qml"
-            img: "img/wosm.svg"
-            kolor: "#ffffff"
+            img: "image://icons/wosm.svg"
         }
         ListElement {
             title: "Książki"
             targetPage: "gallery/ksiazki.qml"
-            img: "img/ksiazki.svg"
-            kolor: "#ffffff"
+            img: "image://icons/ksiazki.svg"
         }
         ListElement {
             title: "Cytaty"
             targetPage: "gallery/cytaty.qml"
-            img: "img/cytaty.svg"
-            kolor: "#ffffff"
+            img: "image://icons/cytaty.svg"
         }
         ListElement {
             title: "Śpiewnik"
             targetPage: "gallery/Spiewniki.qml"
-            img: "img/spiewnik.svg"
-            kolor: "#ffffff"
+            img: "image://icons/spiewnik.svg"
         }
         ListElement {
             title: "Poradnik zastępowego"
             targetPage: "gallery/Poradniki.qml"
-            img: "img/sznur.svg"
-            kolor: "#574136"
+            img: "image://icons/sznur.svg"
+            kolor: ",#574136"
         }
         ListElement {
             title: "Poradniki harcerskie"
             targetPage: "gallery/harcerskie.qml"
-            img: "img/ognisko.svg"
-            kolor: "#ffffff"
+            img: "image://icons/ognisko.svg"
         }
         ListElement {
             title: "Poradniki wyboru sprzętu"
             targetPage: "gallery/Sprzet.qml"
-            img: "img/sprzet.svg"
-            kolor: "#ffffff"
+            img: "image://icons/sprzet.svg"
         }
         ListElement {
             title: "Kącik drużynowego"
             targetPage: "gallery/poradnikiDruzynowy.qml"
-            img: "img/sznur.svg"
-            kolor: "#0000cd"
+            img: "image://icons/sznur.svg"
+            kolor: ",#0000cd"
         }
         ListElement {
             title: "Listy rzeczy do spakowania"
             targetPage: "gallery/poradnikiPakowanie.qml"
-            img: "img/plecak.svg"
+            img: "image://icons/plecak.svg"
         }
         ListElement {
             title: "Stopnie harcerskie"
-            img: "img/hrS.svg"
+            img: "image://icons/hrS.svg"
             targetPage: "gallery/stopnie.qml"
         }
         ListElement {
             title: "Prawo harcerskie"
-            img: "img/zwoj.svg"
+            img: "image://icons/zwoj.svg"
             targetPage: "gallery/prawo.qml"
         }
         ListElement {
             title: "Roty Przyrzeczenia"
-            img: "img/zwoj.svg"
+            img: "image://icons/zwoj.svg"
             targetPage: "gallery/przyrzeczenia.qml"
         }
 
@@ -224,7 +214,7 @@ background: Rectangle {
  /*       ListElement {
             title: "Gawędy"
             targetPage: "gallery/gawedy.qml"
-            img: "img/ognisko.svg"
+            img: "image://icons/ognisko.svg"
             kolor: "#ffffff"
 
         }
