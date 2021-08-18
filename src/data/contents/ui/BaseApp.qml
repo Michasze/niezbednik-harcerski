@@ -267,6 +267,7 @@ może ulec zmianie."
         RowLayout {
             anchors.fill: parent
              Controls.ToolButton {
+                 id: menuButton
                  onClicked: globalDrawer.open()
 		 icon.source: "qrc:/contents/ui/img/application-menu.svg"
 
@@ -278,9 +279,23 @@ może ulec zmianie."
             Layout.rightMargin: 40
 	    horizontalAlignment: Text.AlignHCenter
 	    // Pokazuje tytul właśnie otwartej strony
-                text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
-// text: page ? page.title : ""
+             text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
              level: 2
+            }
+            Controls.ToolButton
+            {
+                visible: (!Kirigami.Settings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1) ? true : false
+                icon.source: "image://icons/go-previous.svg,white"
+                onClicked: {
+                    if (pageStack.layers.depth == 1)
+                    {
+                        pageStack.pop();
+                    }
+                    else
+                    {
+                        pageStack.layers.pop();
+                    }
+                }
             }
         }
     }
