@@ -59,7 +59,7 @@ HPSPage
              }
         Cytat
         {
-            tresc: "\"Księga Urwisów\" -Edmund Niziurski"
+            tresc: "\"Księga Urwisów\" - Edmund Niziurski"
              }
         Cytat
         {
