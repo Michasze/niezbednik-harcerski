@@ -96,12 +96,10 @@ HPSPage {
             header: "Jaki efekt wywoła dane rozstawienie punktów?"
         }
         Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe2.png"
-           Layout.fillWidth: true
-         fillMode: Image.PreserveAspectFit
-         Layout.alignment: Qt.AlignHCenter
+            source: "image://images/terenowe2.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
         HPSLista
         {
@@ -116,12 +114,10 @@ HPSPage {
             label: "Ryzyko, że patrole będą chodziły razem"
         }
         Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe3.png"
-           Layout.fillWidth: true
-         fillMode: Image.PreserveAspectFit
-         Layout.alignment: Qt.AlignHCenter
+            source: "image://images/terenowe3.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
         HPSLista
         {
@@ -140,12 +136,10 @@ HPSPage {
             label: "Często pojawia się problem dwóch różnych długości tras, dlatego warto się zastanowić jak ewentualnie zrekompensować jednemu z patroli dłuższy spacer."
         }
         Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe4.png"
-           Layout.fillWidth: true
-         fillMode: Image.PreserveAspectFit
-         Layout.alignment: Qt.AlignHCenter
+            source: "image://images/terenowe4.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
         HPSLista
         {
@@ -160,12 +154,10 @@ HPSPage {
             label: "Mniejsza szansa na łączenie się patroli."
         }
         Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe5.png"
-           Layout.fillWidth: true
-         fillMode: Image.PreserveAspectFit
-         Layout.alignment: Qt.AlignHCenter
+            source: "image://images/terenowe5.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
         HPSLista
         {
@@ -180,12 +172,10 @@ HPSPage {
             label: "Brak istotnego wpływu na współzawodnictwo w porównaniu z innymi mapami."
         }
         Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe6.png"
-           Layout.fillWidth: true
-         fillMode: Image.PreserveAspectFit
-         Layout.alignment: Qt.AlignHCenter
+            source: "image://images/terenowe6.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
         HPSLista
         {
@@ -210,7 +200,7 @@ HPSPage {
         Image {
         Layout.maximumHeight: 400
         Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe7.png"
+         source: "qrc:/contents/ui/img/terenowe.jpg"
            Layout.fillWidth: true
          fillMode: Image.PreserveAspectFit
          Layout.alignment: Qt.AlignHCenter

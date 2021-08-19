@@ -20,18 +20,10 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
         id: page
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
         Layout.fillHeight: true
         title: qsTr("Filary wędrownictwa")
         ColumnLayout {
@@ -196,14 +188,10 @@ HPSPage {
           }
                   Image {
         id: watra
-        Layout.maximumHeight: watra.width 
-        Layout.topMargin: 10
-        Layout.preferredWidth: page.width - 10
-         source: "qrc:/contents/ui/img/Wedro.svg"   
-           Layout.fillWidth: true
-         Layout.maximumWidth: 1200
-         fillMode: Image.PreserveAspectCrop
-         Layout.alignment: Qt.AlignHCenter
+            source: "qrc:/contents/ui/img/Wedro.svg"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
           ElementListyNoImage
           {

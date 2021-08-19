@@ -44,8 +44,9 @@ HPSPage {
     {
         Layout.fillWidth: true
     }
-        KartaStronaNoImage { 
+        KartaStronaIkona {
         header: "Obóz"
+        ikona: "image://icons/namiot_dycha.svg,white"
         opis: "Co zabrać na obóz?"
         adres: "pakowanieOboz.qml"
 } 
