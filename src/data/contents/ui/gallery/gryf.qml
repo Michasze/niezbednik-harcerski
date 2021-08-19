@@ -19,7 +19,6 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
@@ -29,10 +28,10 @@ HPSPage {
     ColumnLayout {
         width: page.width
         Image {
-         source: "qrc:/contents/ui/img/gryf.jpg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 200
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/gryf.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
             ElementListyNoImage
             {

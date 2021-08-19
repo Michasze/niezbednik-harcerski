@@ -28,10 +28,10 @@ HPSPage {
     ColumnLayout {
         width: page.width
         Image {
-         source: "qrc:/contents/ui/img/Olga_Malkowska.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/Olga_Malkowska.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
             ElementListyNoImage
             {

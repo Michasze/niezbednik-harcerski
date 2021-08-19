@@ -28,11 +28,8 @@ HPSPage {
     ColumnLayout {
         width: page.width
         spacing: 20
-        Image {
-         source: "qrc:/contents/ui/img/harcerz.jpg"   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-         fillMode: Image.PreserveAspectFit
+        HPSImage {
+         source: "image://images/harcerz.jpg,10"
         }
         Controls.Label {
             font.pixelSize: 10

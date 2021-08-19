@@ -26,7 +26,6 @@ HPSPage {
     id: page
     title: qsTr("Postacie")
 ColumnLayout{
-    spacing: 15
     KartaStrona {
         header: "Robert Baden-Powell"
         opis: "Twórca skautingu"

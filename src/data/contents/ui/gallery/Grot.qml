@@ -30,10 +30,10 @@ HPSPage {
     ColumnLayout {
         width: page.width
         Image {
-         source: "qrc:/contents/ui/img/Grot.jpg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 200
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/Grot.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
             ElementListyNoImage
             {
@@ -68,6 +68,4 @@ Juliusz Idzikowski
 "
         }
     }
- 
-    
 }

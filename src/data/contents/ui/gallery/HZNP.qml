@@ -20,7 +20,6 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage {
     id: page
@@ -65,11 +64,8 @@ Organizacja działała prawdopodobnie jeszcze w czasach po II Wojnie Światowej,
 Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospolitej. <br>
 "
           }
-                         Image {
-         source: "qrc:/contents/ui/img/oHZNP.jpg"
-         Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+                         HPSImage {
+         source: "image://images/oHZNP.jpg"
                          }
             ElementListyNoImage
             {
@@ -95,11 +91,8 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
 
 "
         }
-                         Image {
-         source: "qrc:/contents/ui/img/oHZNP_Mundury.jpg"
-         Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+                         HPSImage {
+         source: "image://images/oHZNP_Mundury.jpg"
                          }
             ElementListyNoImage
             {
@@ -123,11 +116,8 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
 Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospolitej.
 "
           }
-Image {
-         source: "qrc:/contents/ui/img/oHZNP_kursy.jpg"
-         Layout.fillWidth: true
-         Layout.maximumHeight: 500
-         fillMode: Image.PreserveAspectFit
+                   HPSImage {
+         source: "image://images/oHZNP_kursy.jpg"
                          }
             ElementListyNoImage
             {

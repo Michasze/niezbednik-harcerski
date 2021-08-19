@@ -20,21 +20,11 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
-import QtQuick.Window 2.15
 
 HPSPage {
     id: page
 
     title: qsTr("Zabójstwo Władysława Mroza")
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
@@ -241,18 +231,14 @@ inf. o aut.], “Le Monde”, 05 listopada 1960.<br>
 	        }
                      }
      }
-
-
     }
     footer: RowLayout
     {
     Controls.PageIndicator {
     id: indicator
-//        Layout.fillWidth: true
     count: swipeView.count
         Layout.alignment: Qt.AlignHCenter
     currentIndex: swipeView.currentIndex
-//    anchors.centerIn: parent
     }
     }
 }

@@ -20,30 +20,18 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Jan Roman Bytnar \"Rudy\""
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         Image {
-         source: "qrc:/contents/ui/img/rudy1.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/rudy1.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            Layout.alignment: Qt.AlignHCenter
+            fillMode: Image.PreserveAspectFit
         }
             ElementListyNoImage
             {
@@ -58,10 +46,10 @@ Janek urodził się 6 maja 1921 roku w Kolbuszowej. Jego ojciec był nauczyciele
 Do konspiracji wstąpił jeszcze w 1939 roku. Najpierw do Polskiej Ludowej Akcji Niepodległościowej, a następnie do Związku Walki Zbrojnej. W Szarych Szeregach służył od 1941 roku. Jego przyrzeczenie Szarych Szeregów odbierał Stefan Mirowski. Pełnił funkcję komendanta hufca “Ochota”, gdzie był odpowiedzialny za akcje małego sabotażu. Zasłynął między innymi z akcji namalowania kotwicy na pomniku lotnika."
         }
         Image {
-         source: "qrc:/contents/ui/img/rudy3.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/rudy3.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            Layout.alignment: Qt.AlignHCenter
+            fillMode: Image.PreserveAspectFit
         }
             ElementListyNoImage
             {

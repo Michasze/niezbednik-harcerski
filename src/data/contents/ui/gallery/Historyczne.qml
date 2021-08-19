@@ -42,7 +42,6 @@ HPSPage
                         fillMode: Image.PreserveAspectFit
                         source: "image://images/Baden-Powell.jpg,20"
                     }
-                    // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
 
                         Controls.Label {
                             horizontalAlignment: Text.AlignHCenter
@@ -62,7 +61,7 @@ HPSPage
 
 KartaStronaIkona { 
         header: "Harcerstwo Związku Narodowego Polskiego"
-        opis: "Ciekawostki o Harcerstwie Związku Narodowego Polskiego"
+        opis: "Organizacja harcerska w Stanach Zjednoczonych"
         ikona: "qrc:/contents/ui/img/HZNP.svg"
         adres: "HZNP.qml"
     }

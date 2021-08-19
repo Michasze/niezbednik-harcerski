@@ -29,9 +29,9 @@ HPSPage {
     ColumnLayout {
         width: page.width
         Image {
-         source: "qrc:/contents/ui/img/bp1.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 400
+         source: "image://images/bp1.jpg,10"
+         sourceSize.width: isHorizontal ? page.height / 3 : page.width / 2
+         Layout.alignment: Qt.AlignHCenter
          fillMode: Image.PreserveAspectFit
         }
             ElementListyNoImage
@@ -47,9 +47,10 @@ Uczył się w Charterhouse School. Tam w ramach zabaw w przyszkolnym parku, szko
 Brał udział w działaniach armii na terenie Afryki i Indii, w tym w Wojnach Burskich. Podczas jednego ze swoich pobytów w Afryce otrzymał przydomek “Impeesa”, czyli “Wilk, który nigdy nie śpi”."
         }
         Image {
-         source: "qrc:/contents/ui/img/bp2.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 400
+         source: "image://images/bp2.jpg,10"
+         Layout.fillWidth: true
+         sourceSize.width: isHorizontal ? page.height / 3 : page.width / 2
+         Layout.alignment: Qt.AlignHCenter
          fillMode: Image.PreserveAspectFit
         }
             ElementListyNoImage

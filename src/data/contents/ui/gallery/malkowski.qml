@@ -24,31 +24,20 @@ import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Andrzej Małkowski"
 
-/*    actions.main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        }
-        */
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         Image {
-         source: "qrc:/contents/ui/img/Andrzej_Malkowski.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/Andrzej_Malkowski.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Andrzej Juliusz Małkowski urodził się 31 października 1888 roku w Trębkach, zmarł 16 stycznia 1919 roku w Zatoce Mesyńskiej.
@@ -60,16 +49,15 @@ Był elewem w Organizacji Armii Polskiej, gdzie za dwukrotne spóźnienie, musia
 W 1911 roku przeprowadził pierwszy kurs skautowy we Lwowie. Rozpoczął też wydawanie czasopisma “Skaut”, które stało się nośnikiem idei ruchu skautowego. Był on inicjatorem wprowadzenia abstynencji w Polskiej wersji prawa skautowego. Widział on szansę w idei skautowej na odrodzenie młodzieży. Drużyny i zastępy, które tworzył nie składały się jedynie z wzorowych dzieci. Znajdowała się tam również trudna młodzież na przykład chłopcy odpowiedzialni za napad. Wizytował również drużyny i zastępy, między innymi zastęp skautowy utworzony przez Stefana Grota Roweckiego.  W 1912 roku Małkowski wyjechał do Londynu, gdzie zbierał informacje do swojej książki. Kiedy wrócił na ziemie polskie został jednak odsunięty od pracy w Naczelnej Komendzie Skautowej i czasopiśmie “Skaut”."
         }
         Image {
-         source: "qrc:/contents/ui/img/Andrzej_Malkowski2.jpg"
-          Layout.fillWidth: true
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/Andrzej_Malkowski2.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "W 1913 roku wziął ślub z Olgą Drahonowską w Zakopanem, ślubu udzielił im ksiądz Kazimierz Lutosławski. Tam razem tworzyli niezależny ośrodek skautowy.

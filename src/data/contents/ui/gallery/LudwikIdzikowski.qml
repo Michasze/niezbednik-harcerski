@@ -30,10 +30,10 @@ HPSPage {
         width: page.width
         spacing: 20
         Image {
-         source: "qrc:/contents/ui/img/LudwikIdzikowski.jpg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 200
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/LudwikIdzikowski.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
              ElementListyNoImage
             {

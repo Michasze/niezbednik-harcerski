@@ -20,35 +20,24 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
     title: "Stanisław Skalski"
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
     ColumnLayout {
         width: page.width
         spacing: Units.smallSpacing
                 Image {
-         source: "qrc:/contents/ui/img/Stanislaw_skalski.jpg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 400
-
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/Stanislaw_skalski.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Ukończył Szkołę Podchorążych Lotnictwa w Dęblinie. Podczas wojny obronnej Polski w 1939 roku służył w 142 Eskadrze Myśliwskiej. Następnie przedostał się do Anglii gdzie służył w dywizjonach 306 i 316,317. Brał udział w bitwie o Anglię, gdzie latał myśliwcem Hawker Hurricane. Udało mu się strącić kilka samolotów przeciwnika. Podczas jednej z misji w bitwie o Anglię został zestrzelony. Udało mu się wyskoczyć z płonącej kabiny samolotu i otworzyć spadochron. Odniósł obrażenia w wyniku których nie mógł przez pewien czas brać udziału w walkach.
@@ -73,6 +62,4 @@ Juliusz Idzikowski
 "
         }
     }
- 
-    
 }

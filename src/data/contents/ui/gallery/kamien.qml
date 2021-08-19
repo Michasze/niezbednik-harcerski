@@ -27,11 +27,8 @@ HPSPage {
     title: "Kamień pamiątkowy"
     ColumnLayout {
         width: page.width
-        Image {
-         source: "qrc:/contents/ui/img/kamien.jpg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 400
-         fillMode: Image.PreserveAspectFit
+        HPSImage {
+         source: "image://images/kamien.jpg,10"
         }
             ElementListyNoImage
             {

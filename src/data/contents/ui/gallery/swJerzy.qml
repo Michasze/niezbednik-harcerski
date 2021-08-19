@@ -4,38 +4,26 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Święty Jerzy"
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
+
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-     Image {
-         source: "qrc:/contents/ui/img/swJerzy.jpg"   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-         Layout.maximumHeight: 300
+    Image {
 
-         fillMode: Image.PreserveAspectFit
+            source: "image://images/swJerzy.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
-            ElementListyNoImage
+    ElementListyNoImage
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
-                textSize: !Settings.isMobile ? 12 : 14
+                Layout.fillWidth: true
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
             header: "Święty Jerzy- święty kościoła katolickiego, patron rycerzy, harcerzy, wędrowców, skautów, górników oraz kowali. Dzień Świętego Jerzego obchodzony jest 23 kwietnia. Święty Jerzy mógł być postacią historyczną, na co wskazują niektóre źródła.
