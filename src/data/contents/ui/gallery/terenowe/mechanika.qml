@@ -20,26 +20,17 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
         Layout.fillHeight: true
         title: qsTr("Mechanika")
      actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }       ColumnLayout {
+        ColumnLayout {
         id: rozdzial
-        property int naglowekSize: 12
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Losowość"
         }
         ElementListyNoImage
@@ -52,7 +43,6 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Hazardowa"
         }
         ElementListyNoImage
@@ -63,7 +53,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Elementy matematyczne"
         }
         ElementListyNoImage
@@ -74,7 +63,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Targowanie się"
         }
         ElementListyNoImage
@@ -86,7 +74,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Odkrywanie elementów mapy"
         }
         ElementListyNoImage
@@ -97,7 +84,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Podejmowanie decyzji"
         }
         ElementListyNoImage

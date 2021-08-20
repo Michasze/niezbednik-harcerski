@@ -20,39 +20,28 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
         Layout.fillHeight: true
         title: qsTr("Najczęściej popełniane błędy")
-     actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }       ColumnLayout {
-        id: rozdzial
-        property int naglowekSize: 12
-        ElementListyNoImage
-        {
-            color: "green"
-            textSize: rozdzial.naglowekSize
-            header: "Źle dobrany ubiór do pogody"
-        }
-        ElementListyNoImage
-        {
+        ColumnLayout {
+            id: rozdzial
+            ElementListyNoImage
+            {
+                color: "green"
+                header: "Źle dobrany ubiór do pogody"
+            }
+            ElementListyNoImage
+            {
             color: "black"
             alignH: Text.AlignJustify
             header: "<p>Komfort termiczny jest niezwykle ważny. Jeśli jest nam zbyt zimno, to ciężko będzie wzbić się na wyżyny kreatywności w pisaniu peanu na cześć drużynowego. Należy o tym przypominać młodszym i nowym harcerzom, szczególnie jeśli zamierzamy organizować grę terenową podczas deszczu. To świetna okazja, aby pogoda pomogła nam w przeżywaniu przygody.</p><br>
 <p>*pean- pieśń triumfalna lub dziękczynna, gatunek wywodzi się ze starożytnej Grecji</p>"
-        }
+            }
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Źle zaznaczone punkty na mapie  "
         }
         ElementListyNoImage
@@ -63,7 +52,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Zbyt duże patrole"
         }
         ElementListyNoImage
@@ -74,7 +62,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Źle wytłumaczone zasady gry"
         }
         ElementListyNoImage
@@ -85,7 +72,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Brak motywacji do zdobywania kolejnych punktów"
         }
         ElementListyNoImage
@@ -96,7 +82,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Harcerze nie potrafią odczytać mapy"
         }
         ElementListyNoImage
@@ -107,7 +92,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Schematyczne \"nudne\" gry terenowe (znów szukamy kartek)"
         }
         ElementListyNoImage
@@ -118,7 +102,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Źle odmierzony czas na wykonanie zadań"
         }
         ElementListyNoImage
@@ -129,7 +112,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Brak planu B na wypadek nieprzewidzianego wydarzenia"
         }
         ElementListyNoImage
@@ -140,7 +122,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Źle schowane punkty"
         }
         ElementListyNoImage
@@ -151,7 +132,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Ginące punkty na grze terenowej"
         }
         ElementListyNoImage

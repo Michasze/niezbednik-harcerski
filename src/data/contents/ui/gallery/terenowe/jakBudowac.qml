@@ -26,26 +26,16 @@ import ".."
 HPSPage {
         Layout.fillHeight: true
         title: qsTr("Jak budować fabułę?")
-     actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }       ColumnLayout {
+        ColumnLayout {
         id: rozdzial
-        property int naglowekSize: 12
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "<h3>Zasady dobrej fabuły:</h3>"
         }
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Spójna z mechaniką gry i ze samą sobą."
         }
         ElementListyNoImage
@@ -58,7 +48,6 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Ciągła i mająca istotny wpływ na przebieg gry."
         }
         ElementListyNoImage
@@ -70,7 +59,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Namacalna, czyli musi dać się zauważyć częściej niż jedynie na początku gry."
         }
         ElementListyNoImage
@@ -81,7 +69,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Pomoce przy budowaniu fabuły"
         }
         ElementListyNoImage
@@ -93,7 +80,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Rekwizyty"
         }
         ElementListyNoImage
@@ -106,7 +92,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Stroje"
         }
         ElementListyNoImage
@@ -117,7 +102,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Listy, wiersze"
         }
         ElementListyNoImage
@@ -128,7 +112,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Nagrania głosowe"
         }
         ElementListyNoImage
@@ -139,7 +122,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Filmiki"
         }
         ElementListyNoImage
@@ -150,7 +132,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Gawędy"
         }
         ElementListyNoImage
@@ -162,7 +143,6 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Ozdobne mapy"
         }
         ElementListyNoImage
@@ -174,7 +154,6 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Posty na facebooku czy instagramie z zapowiedzią zbiórki"
         }
         ElementListyNoImage
@@ -186,7 +165,6 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Klimatyczne miejsca"
         }
         ElementListyNoImage
@@ -198,13 +176,11 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "<h3>Jak wykorzystywać stroje na zbiórkach?</h3>"
         }
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Spójna z mechaniką gry i ze samą sobą."
         }
         ElementListyNoImage

@@ -20,27 +20,17 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
     id: page
         Layout.fillHeight: true
         title: qsTr("Jak tworzyć punkty:")
-     actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }       ColumnLayout {
+        ColumnLayout {
         id: rozdzial
-        property int naglowekSize: 12
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "#leavenotrace"
         }
         HPSLista
@@ -62,7 +52,6 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Jak sprawić, żeby nasze punkty nie znikały?"
         }
         ElementListyNoImage
@@ -73,7 +62,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Prosta legenda"
         }
         Image {
@@ -92,7 +80,6 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            textSize: rozdzial.naglowekSize
             header: "Jaki efekt wywoła dane rozstawienie punktów?"
         }
         Image {
@@ -200,7 +187,7 @@ HPSPage {
         Image {
         Layout.maximumHeight: 400
         Layout.preferredWidth: page.width
-         source: "qrc:/contents/ui/img/terenowe.jpg"
+        source: "image://images/terenowe7.jpg,10"
            Layout.fillWidth: true
          fillMode: Image.PreserveAspectFit
          Layout.alignment: Qt.AlignHCenter
