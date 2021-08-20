@@ -185,12 +185,10 @@ HPSPage {
             label: "Widać temperament patrolowych, jeszcze bardziej niż przy samych znakach zapytania. "
         }
         Image {
-        Layout.maximumHeight: 400
-        Layout.preferredWidth: page.width
-        source: "image://images/terenowe7.jpg,10"
-           Layout.fillWidth: true
-         fillMode: Image.PreserveAspectFit
-         Layout.alignment: Qt.AlignHCenter
+            source: "image://images/terenowe7.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            Layout.alignment: Qt.AlignHCenter
         }
         HPSLista
         {
