@@ -255,6 +255,7 @@
         <file alias="contents/ui/img/szlify.svg">./data/contents/ui/img/szlify.svg</file>
         <file alias="contents/ui/img/plecak.svg">./data/contents/ui/img/plecak.svg</file>
         <file alias="contents/ui/img/namiot_dycha.svg">./data/contents/ui/img/namiot_dycha.svg</file>
+        <file alias="contents/ui/img/rower.svg">./data/contents/ui/img/rower.svg</file>
         <file alias="contents/ui/img/ognisko.svg">./data/contents/ui/img/ognisko.svg</file>
         <file alias="contents/ui/img/ksiazki.svg">./data/contents/ui/img/ksiazki.svg</file>
         <file alias="contents/ui/img/zwoj.svg">./data/contents/ui/img/zwoj.svg</file>

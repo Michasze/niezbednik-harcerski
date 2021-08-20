@@ -50,8 +50,9 @@ HPSPage {
         opis: "Co zabrać na obóz?"
         adres: "pakowanieOboz.qml"
 } 
-        KartaStronaNoImage { 
+        KartaStronaIkona {
         header: "Wyjazd rowerowy"
+        ikona: "image://icons/rower.svg,white"
         opis: "Lista rzeczy na wyjazd rowerowy"
         adres: "pakowanieRower.qml"
 }
