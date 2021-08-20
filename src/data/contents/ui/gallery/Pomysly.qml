@@ -41,7 +41,7 @@ KartaStronaIkona {
     }
     KartaStronaIkona { 
         header: "Ekosystem w słoiku"
-        opis: "Jak przygotować roślinkę w słoiku"
+        opis: "Jak przygotować roślinkę w słoiku?"
         ikona: "qrc:/contents/ui/img/applications-science.svg"
         adres: "ekosystem.qml"
     }
@@ -51,7 +51,7 @@ KartaStronaIkona {
     }
     KartaStronaIkona { 
         header: "Podróże małe i duże"
-        opis: "czyli harcerskie wędrowanie tam i z powrotem"
+        opis: "Harcerskie wędrowanie tam i z powrotem."
         ikona: "image://icons/edit-paste-in-place.svg,white"
         adres: "podroze.qml"
     }
@@ -61,7 +61,7 @@ KartaStronaIkona {
     }
     KartaStronaIkona {
         header: "Gra fabularna"
-        opis: "w klimatach bloku wschodniego"
+        opis: "w klimatach bloku wschodniego."
         ikona: "image://icons/kosci.svg,white"
         adres: "gra_warsztaty.qml"
     }
@@ -71,7 +71,7 @@ KartaStronaIkona {
     }
     KartaStronaIkona {
         header: "Geoguessr"
-        opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości"
+        opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości."
         ikona: "image://icons/atmosphere.svg,white"
         adres: "geoguessr.qml"
     }
