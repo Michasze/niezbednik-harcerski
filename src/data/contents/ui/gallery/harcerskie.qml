@@ -37,7 +37,7 @@ KartaStronaNoImage {
     }
 KartaStronaNoImage {
         header: "Porady i harc tricki na wyjazdy harcerskie"
-        opis: "autor: Julia “Inka” Karpowicz"
+        opis: "Autor: Julia “Inka” Karpowicz"
         adres: "porady.qml"
     }
      HPSSeparator
