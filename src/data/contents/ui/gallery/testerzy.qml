@@ -30,15 +30,6 @@ HPSPage {
     title: "Testerzy"
 
     globalToolBarStyle: ApplicationHeaderStyle.None
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        onTriggered: pageStack.layers.pop(-1);
-        shortcut: "Alt+B"
-    }
-
-    }
 ColumnLayout
 {
     ElementListy 
@@ -102,20 +93,4 @@ ColumnLayout
     header: "Alicja Kowalska"
     }
 }
-/*        Controls.Button {
-            text: "Push A New Layer"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: pageStack.layers.push(Qt.resolvedUrl("LayersGallery.qml"));
-        }
-        Controls.Button {
-            text: "Pop A Layer"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: pageStack.layers.pop();
-        }
-        Controls.Button {
-            text: "Toggle header"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: page.globalToolBarStyle = ApplicationHeaderStyle.None
-        } */
     }
-

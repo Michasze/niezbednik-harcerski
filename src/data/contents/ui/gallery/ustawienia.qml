@@ -30,15 +30,6 @@ HPSPage {
     title: "Ustawienia"
 
     globalToolBarStyle: ApplicationHeaderStyle.None
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        onTriggered: pageStack.layers.pop(-1);
-        shortcut: "Alt+B"
-    }
-    }
-
 ColumnLayout
 {
     Controls.Label

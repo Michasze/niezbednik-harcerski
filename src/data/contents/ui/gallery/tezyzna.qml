@@ -19,34 +19,16 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
     title: "Tężyzna fizyczna"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        //visible: !Kirigami.Settings.isMobile ? true : false
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
-        width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Tężyzna fizyczna, czyli inaczej sprawność fizyczna.

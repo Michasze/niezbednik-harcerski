@@ -7,28 +7,13 @@ HPSPage
 {
     id: pageFoto
     title: "ZJAZD ZHP w Bydgoszczy"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
         width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "  Dokładnie 30 lat temu, 6 grudnia 1990 roku, w Bydgoszczy rozpoczął obrady XXVII Zjazd ZHP. Uważany za przełomowy, chociaż półtora roku wcześniej odbył się Zjazd ZHP, który podjął szereg bardzo ważnych decyzji dla naszego stowarzyszenia, rozpoczynając zasadnicze zmiany. Ale dzisiaj krótko, w możliwej tutaj formule, o „legendzie zjazdu bydgoskiego”.

@@ -19,27 +19,12 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 
 {
     title: "10 Zasad biwaku wędrownego"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        visible: false
-        text: qsTr("Powrót do listy")
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
-        width: pageFoto.width
         spacing: 20
 
                 ElementListyNoImage

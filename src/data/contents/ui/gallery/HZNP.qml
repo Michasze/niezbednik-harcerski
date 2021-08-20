@@ -65,7 +65,10 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
 "
           }
                          HPSImage {
-         source: "image://images/oHZNP.jpg"
+                             source: "image://images/oHZNP.jpg"
+                             sourceSize.width: isHorizontal ? page.width / 2 : page.width
+                             Layout.fillWidth: !isHorizontal
+                             fillMode: Image.PreserveAspectFit
                          }
             ElementListyNoImage
             {
@@ -92,7 +95,10 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
 "
         }
                          HPSImage {
-         source: "image://images/oHZNP_Mundury.jpg"
+                             source: "image://images/oHZNP_Mundury.jpg"
+                             sourceSize.width: isHorizontal ? page.width / 2 : page.width
+                             Layout.fillWidth: !isHorizontal
+                             fillMode: Image.PreserveAspectFit
                          }
             ElementListyNoImage
             {
@@ -116,8 +122,9 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
 Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospolitej.
 "
           }
-                   HPSImage {
-         source: "image://images/oHZNP_kursy.jpg"
+                         HPSImage {
+                             source: "image://images/oHZNP_kursy.jpg"
+                             sourceSize.width: isHorizontal ? page.height / 3 : page.width / 2
                          }
             ElementListyNoImage
             {

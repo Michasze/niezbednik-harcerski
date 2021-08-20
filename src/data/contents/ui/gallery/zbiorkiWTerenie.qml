@@ -19,29 +19,17 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
     id: pageFoto
     title: "Zbiórki w terenie"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        //visible: !Kirigami.Settings.isMobile ? true : false
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
                 ColumnLayout {
-        width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Przemyślenia te rozpocząłem już kilka lat temu, patrząc na wyniki ankiet na grupie Harcerze- Poznajemy Się. Ankiety dotyczyły miejsca odbywania się zbiórek: \"W terenie czy pomieszczeniu?\". Wyniki były różne, ale zawsze na korzyść zbiórek w pomieszczeniu. Pięć zbiórek w harcówce do jednej na dworze taki jest wynik najnowszej ankiety. Wydaje się, że to nie jest to najlepsza droga, którą może iść harcerstwo. Odchodzimy od naszych puszczańskich korzeni.
