@@ -137,10 +137,11 @@ background: Rectangle {
             targetPage: "gallery/Pomysly.qml"
             img: "image://icons/zarowka.svg"
         }
+
         ListElement {
-            title: "Artykuły"
-            targetPage: "gallery/Artykuly.qml"
-            img: "image://icons/Artykuly.svg"
+            title: "Poradniki harcerskie"
+            targetPage: "gallery/harcerskie.qml"
+            img: "image://icons/ognisko.svg"
         }
         ListElement {
             title: "Szyfry"
@@ -152,15 +153,15 @@ background: Rectangle {
             targetPage: "gallery/symbolika.qml"
             img: "image://icons/wosm.svg"
         }
+       ListElement {
+            title: "Cytaty"
+            targetPage: "gallery/cytaty.qml"
+            img: "image://icons/cytaty.svg"
+        }
         ListElement {
             title: "Książki"
             targetPage: "gallery/ksiazki.qml"
             img: "image://icons/ksiazki.svg"
-        }
-        ListElement {
-            title: "Cytaty"
-            targetPage: "gallery/cytaty.qml"
-            img: "image://icons/cytaty.svg"
         }
         ListElement {
             title: "Śpiewnik"
@@ -168,15 +169,15 @@ background: Rectangle {
             img: "image://icons/spiewnik.svg"
         }
         ListElement {
+            title: "Artykuły"
+            targetPage: "gallery/Artykuly.qml"
+            img: "image://icons/Artykuly.svg"
+        }
+        ListElement {
             title: "Poradnik zastępowego"
             targetPage: "gallery/Poradniki.qml"
             img: "image://icons/sznur.svg"
             kolor: ",#574136"
-        }
-        ListElement {
-            title: "Poradniki harcerskie"
-            targetPage: "gallery/harcerskie.qml"
-            img: "image://icons/ognisko.svg"
         }
         ListElement {
             title: "Poradniki wyboru sprzętu"
