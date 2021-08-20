@@ -27,31 +27,31 @@ HPSPage {
 
 
 ColumnLayout{
-    KartaStronaNoImage {
+    KartaStronaIkona {
         header: "Książki dla harcerzy"
         opis: ""
+        ikona: "image://icons/sznur.svg,#747f81"
         adres: "ksiazkiHarcerz.qml"
-        color: "#747f81"
     }
      HPSSeparator
     {
         Layout.fillWidth: true
     }
-    KartaStronaNoImage { 
+    KartaStronaIkona {
         header: "Książki dla zastępowych"
         opis: ""
+        ikona: "image://icons/sznur.svg,#574136"
         adres: "ksiazkiZastepowy.qml"
-        color: "#574136"
     }
      HPSSeparator
     {
         Layout.fillWidth: true
     }
-    KartaStronaNoImage { 
+    KartaStronaIkona {
         header: "Książki dla drużynowych"
         opis: ""
         adres: "ksiazkiDruzynowy.qml"
-        color: "mediumblue"
+        ikona: "image://icons/sznur.svg,mediumblue"
     }
 }
 }
