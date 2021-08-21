@@ -86,7 +86,7 @@ private:
     int m_shift = 0;
     QStringList baconDecList;
     QMap<QChar, QString> bacontable;
-    QMap<QString, QChar> bacondectable;
+    QMap<QString, QString> bacondectable;
     QMap<QChar, QString> morsetable;
     QVector<QString> enctable;
     QVector<QString> dectable;

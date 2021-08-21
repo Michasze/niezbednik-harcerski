@@ -84,6 +84,10 @@ HPSPage {
             pole.text = cipher.baconDec
         }
     }
+        Keys.onSpacePressed:
+        {
+            showPassiveNotification("Nie używaj spacji", 2000)
+        }
         }
     }
 }

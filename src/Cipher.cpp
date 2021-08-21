@@ -683,32 +683,31 @@ void Cipher::setBaconDec(const QString &c)
 QString Cipher::baconDec()
 {
   // Tabela z wartościami szyfru dla każdej litery
-  bacondectable["aaaaa"] = QChar('a');
-  bacondectable["aaaab"] = QChar('b');
-  bacondectable["aaaba"] = QChar('c');
-  bacondectable["aaabb"] = QChar('d');
-  bacondectable["aabaa"] = QChar('e');
-  bacondectable["aabab"] = QChar('f');
-  bacondectable["aabba"] = QChar('g');
-  bacondectable["aabbb"] = QChar('h');
-  bacondectable["abaaa"] = QChar('i');
-  bacondectable["abaaa"] = QChar('j');
-  bacondectable["abaab"] = QChar('k');
-  bacondectable["ababa"] = QChar('l');
-  bacondectable["ababb"] = QChar('m');
-  bacondectable["abbaa"] = QChar('n');
-  bacondectable["abbab"] = QChar('o');
-  bacondectable["abbba"] = QChar('p');
-  bacondectable["abbbb"] = QChar('q');
-  bacondectable["baaaa"] = QChar('r');
-  bacondectable["baaab"] = QChar('s');
-  bacondectable["baaba"] = QChar('t');
-  bacondectable["baabb"] = QChar('u');
-  bacondectable["baabb"] = QChar('v');
-  bacondectable["babaa"] = QChar('w');
-  bacondectable["babab"] = QChar('x');
-  bacondectable["babba"] = QChar('y');
-  bacondectable["babbb"] = QChar('z');
+  bacondectable["aaaaa"] = QString("a");
+  bacondectable["aaaab"] = QString("b");
+  bacondectable["aaaba"] = QString("c");
+  bacondectable["aaabb"] = QString("d");
+  bacondectable["aabaa"] = QString("e");
+  bacondectable["aabab"] = QString("f");
+  bacondectable["aabba"] = QString("g");
+  bacondectable["aabbb"] = QString("h");
+  bacondectable["abaaa"] = QString("(i/j)");
+  bacondectable["abaab"] = QString("k");
+  bacondectable["ababa"] = QString("l");
+  bacondectable["ababb"] = QString("m");
+  bacondectable["abbaa"] = QString("n");
+  bacondectable["abbab"] = QString("o");
+  bacondectable["abbba"] = QString("p");
+  bacondectable["abbbb"] = QString("q");
+  bacondectable["baaaa"] = QString("r");
+  bacondectable["baaab"] = QString("s");
+  bacondectable["baaba"] = QString("t");
+  bacondectable["baabb"] = QString("u");
+  bacondectable["baabb"] = QString("v");
+  bacondectable["babaa"] = QString("w");
+  bacondectable["babab"] = QString("x");
+  bacondectable["babba"] = QString("y");
+  bacondectable["babbb"] = QString("z");
   m_baconDecryptedWhole = "";
    for(int i = 0; i < ((m_baconDec.length() / 5)); i++)
    {
@@ -733,7 +732,7 @@ QString Cipher::baconDec()
      }
      else
      {
-         dectable.append(baconDecList.at(i));
+         dectable.append(QString("(?)"));
      }
          m_baconDecryptedWhole.append(dectable.value(i));
 
