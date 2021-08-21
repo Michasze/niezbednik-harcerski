@@ -7,6 +7,7 @@
 set(HPS_SRCS
     main.cpp
     Cipher.cpp
+    Decipher.cpp
     Clipboard.cpp
     InfoData.cpp
     HPSSettings.cpp

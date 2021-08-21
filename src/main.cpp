@@ -23,6 +23,7 @@
 #include <QUrl>
 #include <QColor>
 #include "Cipher.h"
+#include "Decipher.h"
 #include "Clipboard.h"
 #include "InfoData.h"
 #include "HPSSettings.h"
@@ -67,7 +68,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     //qputenv("QML_IMPORT_TRACE", "1");
     QQmlApplicationEngine engine;
 
-    qmlRegisterType<Cipher>("Data", 1, 0, "Cipher");
+    qmlRegisterType<Cipher>("Cipher", 1, 0, "Cipher");
+    qmlRegisterType<Decipher>("Decipher", 1, 0, "Decipher");
     qmlRegisterType<Clipboard>("Data", 1, 0, "Clipboard");
     qmlRegisterType<InfoData>("Data", 1, 0, "InfoData");
     qmlRegisterType<HPSSettings>("Data", 1, 0, "HPSSettings");

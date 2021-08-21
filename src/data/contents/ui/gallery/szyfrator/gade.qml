@@ -20,8 +20,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
+import Cipher 1.0
 import Data 1.0
 
 HPSPage {
@@ -31,14 +31,6 @@ HPSPage {
 
     title: "Szyfrator"
 
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
-        }
-    }
      Cipher
      {
        id: cipher

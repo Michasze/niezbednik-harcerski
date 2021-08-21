@@ -22,6 +22,8 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.13 as Kirigami
 import ".."
+import Cipher 1.0
+import Decipher 1.0
 import Data 1.0
 
 HPSPage {
@@ -42,6 +44,11 @@ HPSPage {
      Cipher
      {
        id: cipher
+     }
+
+     Decipher
+     {
+       id: decipher
      }
     Clipboard
     {
@@ -117,8 +124,16 @@ Controls.TextField {
                         {
                            cipher.shift = "0"
                         }
+                          if (zaszyfrowane.text == "")
+                          {
                           cipher.caesar = niezaszyfrowane.text
-                          zaszyfrowane.text = cipher.caesar
+                              zaszyfrowane.text = cipher.caesar
+                          }
+                          else
+                          {
+                              decipher.caesarDec = zaszyfrowane.text
+                              niezaszyfrowane.text = decipher.caesarDec
+                          }
                       }
 }
          Controls.TextArea
@@ -152,8 +167,9 @@ Controls.TextField {
     {
         if (activeFocus)
         {
-            cipher.caesarDec = zaszyfrowane.text
-            niezaszyfrowane.text = cipher.caesarDec
+            decipher.decShift = cipher.shift
+            decipher.caesarDec = zaszyfrowane.text
+            niezaszyfrowane.text = decipher.caesarDec
         }
     }
 
