@@ -1,5 +1,5 @@
 #include "Decipher.h"
-
+#include "Cipher.h"
 #include <QDebug>
 #include <QFile>
 #include <QVariantMap>

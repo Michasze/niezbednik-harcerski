@@ -27,7 +27,6 @@ import Data 1.0
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Szyfrator"
 

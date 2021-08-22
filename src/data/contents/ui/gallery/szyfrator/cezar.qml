@@ -61,40 +61,21 @@ HPSPage {
             color: "brown"
             header: "Szyfr Cezara"
         }
-        Controls.TextArea {
-//    width: 500
-    id: niezaszyfrowane
-    Layout.fillWidth: true
-    Layout.preferredHeight: (page.height / 2) - 90
-    Layout.fillHeight: true
-    inputMethodHints: Qt.ImhNoPredictiveText
-    leftPadding: 10
-    color: "white"
-    wrapMode: TextEdit.WrapAnywhere
-    placeholderTextColor: "White"
-    Layout.topMargin: 10
-//    inputMask: "abc"
-    placeholderText: qsTr("Tekst do zaszyfrowania...")
-    background: Rectangle {
-                    radius: 5
-                    color: "#1d1d1d"
-                    implicitWidth: 100
-                    implicitHeight: 24
-                    border.color: "#333"
-                    border.width: 1
-                }
-        onTextChanged:
-    {
-        if (activeFocus)
-        {
-       cipher.caesar = niezaszyfrowane.text
-            zaszyfrowane.text = cipher.caesar
-        }
+        HPSText {
+            id: pole
+            onTextChanged:
+            {
+            if (activeFocus)
+            {
+            cipher.caesar = pole.text
+                pole2.text = cipher.caesar
+            }
     }
 }
 Controls.TextField {
     id: shift
     Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+    Layout.fillWidth: true
     width: 100
     leftPadding: 5
     Layout.topMargin: 10
@@ -106,61 +87,34 @@ Controls.TextField {
 //    inputMask: "99999999"
     inputMethodHints: Qt.ImhDigitsOnly
     background: Rectangle {
-                    radius: 5
-                    color: "brown"
-                    implicitWidth: niezaszyfrowane.width
-                    implicitHeight: 24
-                    border.color: "#333"
-                    border.width: 1
+        radius: 5
+        color: "brown"
+        anchors.fill: parent
+        border.color: "#333"
+        border.width: 1
                 }
         onTextChanged:
                       {
-                        if(shift.text != "")
-                        {
                           cipher.shift = shift.text
-                        }
-                        // nie działa
-                        else if (shift.text = "")
-                        {
-                           cipher.shift = "0"
-                        }
-                          if (zaszyfrowane.text == "")
+                          if (pole2.text == "")
                           {
-                          cipher.caesar = niezaszyfrowane.text
-                              zaszyfrowane.text = cipher.caesar
+                              decipher.caesarDec = pole2.text
+                              pole.text = decipher.caesarDec
                           }
                           else
                           {
-                              decipher.caesarDec = zaszyfrowane.text
-                              niezaszyfrowane.text = decipher.caesarDec
+                              cipher.caesar = pole.text
+                              pole2.text = cipher.caesar
                           }
                       }
 }
-         Controls.TextArea
+         HPSText
     {
-       id: zaszyfrowane
-       verticalAlignment: Text.AlignTop
-       horizontalAlignment: Text.AlignLeft
-       Layout.alignment: Qt.AlignTop
-       Layout.fillWidth: true
-       font.pointSize: 13
-       color: "white"
-       wrapMode: TextEdit.WrapAnywhere
-       placeholderTextColor: "White"
-       inputMethodHints: Qt.ImhNoPredictiveText
-       Layout.preferredHeight: (page.height / 2) - 90
-       placeholderText: qsTr("Zaszyfrowany tekst...")
-       background: Rectangle {
-                    radius: 5
-                    color: "#1d1d1d"
-                    implicitWidth: 100
-                    implicitHeight: 24
-                    border.color: "#333"
-                    border.width: 1
-                }
+       id: pole2
+        deszyfrowanie: true
       onPressAndHold:
       {
-       clipboard.paste = zaszyfrowane.text
+       clipboard.paste = pole2.text
        showPassiveNotification("Tekst skopiowany do schowka", 2000)
       }
         onTextChanged:
@@ -168,8 +122,8 @@ Controls.TextField {
         if (activeFocus)
         {
             decipher.decShift = cipher.shift
-            decipher.caesarDec = zaszyfrowane.text
-            niezaszyfrowane.text = decipher.caesarDec
+            decipher.caesarDec = pole2.text
+            pole.text = decipher.caesarDec
         }
     }
 
