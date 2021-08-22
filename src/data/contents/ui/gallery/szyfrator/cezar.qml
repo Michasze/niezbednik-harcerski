@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 import Cipher 1.0
 import Decipher 1.0
@@ -29,18 +28,9 @@ import Data 1.0
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Szyfrator"
 
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
-        }
-    }
      Cipher
      {
        id: cipher
@@ -58,11 +48,13 @@ HPSPage {
         width: page.width
         ElementListyNoImage
         {
+            id: naglowek
             color: "brown"
             header: "Szyfr Cezara"
         }
         HPSText {
             id: pole
+            Layout.preferredHeight: (page.height / 2) - (shift.height / 2) - (naglowek.height / 2) - 40
             onTextChanged:
             {
             if (activeFocus)
@@ -110,20 +102,21 @@ Controls.TextField {
 }
          HPSText
     {
-       id: pole2
+        id: pole2
         deszyfrowanie: true
-      onPressAndHold:
-      {
-       clipboard.paste = pole2.text
-       showPassiveNotification("Tekst skopiowany do schowka", 2000)
-      }
-        onTextChanged:
-    {
-        if (activeFocus)
+        Layout.preferredHeight: (page.height / 2) - (shift.height / 2) - (naglowek.height / 2) - 40
+        onPressAndHold:
         {
-            decipher.decShift = cipher.shift
-            decipher.caesarDec = pole2.text
-            pole.text = decipher.caesarDec
+            clipboard.paste = pole2.text
+            showPassiveNotification("Tekst skopiowany do schowka", 2000)
+        }
+        onTextChanged:
+        {
+            if (activeFocus)
+            {
+                decipher.decShift = cipher.shift
+                decipher.caesarDec = pole2.text
+                pole.text = decipher.caesarDec
         }
     }
 

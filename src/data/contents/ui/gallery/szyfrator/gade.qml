@@ -42,12 +42,13 @@ HPSPage {
         width: page.width
         ElementListyNoImage
         {
+            id: naglowek
             color: "brown"
             header: "GA-DE-RY-PO-LU-KI"
         }
-        Controls.TextArea {
+        HPSText {
 //    width: 500
-    id: niezaszyfrowane
+    id: pole
     Layout.fillWidth: true
     Layout.preferredHeight: (page.height / 2) - 90
     Layout.fillHeight: true
@@ -68,8 +69,8 @@ HPSPage {
                 }
         onTextChanged:
     {
-       cipher.gade = niezaszyfrowane.text
-       zaszyfrowane.header = cipher.gade
+       cipher.gade = pole.text
+       pole2.text = cipher.gade
     }
 }
 Controls.ComboBox {
@@ -104,20 +105,6 @@ Controls.ComboBox {
         height: 8
         contextType: "2d"
 
-        Connections {
-            target: control
-            function onPressedChanged() { canvas.requestPaint(); }
-        }
-
-        onPaint: {
-            context.reset();
-            context.moveTo(0, 0);
-            context.lineTo(width, 0);
-            context.lineTo(width / 2, height);
-            context.closePath();
-            context.fillStyle = control.pressed ? "brown" : "brown";
-            context.fill();
-        }
     }
 
     background: Rectangle {
@@ -151,31 +138,25 @@ popup: Controls.Popup {
     model: ["GA-DE-RY-PO-LU-KI", "PO-LI-TY-KA-RE-NU", "MA-LI-NO-WE-BU-TY", "BI-TW-AO-CH-MU-RY", "KU-LO-PE-RY-ZA-GI", "NO-WE-BU-TY-LI-SA", "RE-GU-LA-MI-NO-WY", "MO-TY-LE-CU-DA-KI", "KA-CE-MI-NU-TO-WY", "KO-NI-EC-MA-TU-RY", "NA-SZ-HU-FI-EC", "RÓ-ŻO-WE-TU-LI-PA-NY", "PA-DY-GI-MO-ZE-TU"]
             onActivated: {
             cipher.wariant = currentIndex
-            cipher.gade = niezaszyfrowane.text
-            zaszyfrowane.header = cipher.gade
+            cipher.gade = pole.text
+            pole2.text = cipher.gade
             }
         }
 
-         ElementListyNoImage
+         HPSText
     {
-       id: zaszyfrowane
-       color: "black"
-       align: Text.AlignTop
-        alignH: Text.AlignLeft
-        lAlign: Qt.AlignTop
-        textSize: 13
-        border.color: "grey"
-        border.width: 1
-        Layout.preferredHeight: (page.height / 2) - 70
-       MouseArea {
-      anchors.fill: parent
-      hoverEnabled: true
+       id: pole2
+
       onPressAndHold:
       {
-       clipboard.paste = zaszyfrowane.header
+       clipboard.paste = pole2.text
        showPassiveNotification("Tekst skopiowany do schowka", 2000)
       }
-       }
+        onTextChanged:
+    {
+       cipher.gade = pole2.text
+       pole.text = cipher.gade
+    }
         }
     }
 }

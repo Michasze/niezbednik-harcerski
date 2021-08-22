@@ -27,7 +27,7 @@ import ".."
    property bool deszyfrowanie: false
     id: pole
     Layout.fillWidth: true
-    Layout.preferredHeight: (page.height / 2) - 50
+    Layout.preferredHeight: (page.height / 2) - (naglowek.height / 2) - 40
     Layout.fillHeight: true
     inputMethodHints: Qt.ImhNoPredictiveText
     leftPadding: 10
