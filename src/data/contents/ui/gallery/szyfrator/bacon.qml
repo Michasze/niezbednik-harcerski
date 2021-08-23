@@ -18,7 +18,6 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import ".."
 import Cipher 1.0
@@ -47,6 +46,7 @@ HPSPage {
         width: page.width
         ElementListyNoImage
         {
+            id: naglowek
             color: "brown"
             header: "Szyfr Bacona"
         }
@@ -80,10 +80,6 @@ HPSPage {
             pole.text = decipher.baconDec
         }
     }
-        Keys.onSpacePressed:
-        {
-            showPassiveNotification("Nie używaj spacji", 2000)
-        }
         }
     }
 }

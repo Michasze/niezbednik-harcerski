@@ -20,6 +20,8 @@ public:
     QString caesarDec();
     QString baconDec();
     int decShift();
+    int konwerter(int i, QString s);
+    bool sprawdz_czy_prawidlowe(int i, QString s);
 
     void setDecShift(const int &b);
     void setCaesarDec(const QString &a);
@@ -35,9 +37,6 @@ private:
     QString m_cipherDec;
     QString m_baconDec;
     QString m_baconDecryptedWhole;
-    QStringList baconDecList;
-    QMap<QString, QString> bacondectable;
-    QVector<QString> dectable;
 };
 
 #endif // DECIPHER_H_

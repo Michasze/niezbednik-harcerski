@@ -66,63 +66,55 @@ void Decipher::setBaconDec(const QString &c)
 }
 QString Decipher::baconDec()
 {
-  // Tabela z wartościami szyfru dla każdej litery
-  bacondectable["aaaaa"] = QString("a");
-  bacondectable["aaaab"] = QString("b");
-  bacondectable["aaaba"] = QString("c");
-  bacondectable["aaabb"] = QString("d");
-  bacondectable["aabaa"] = QString("e");
-  bacondectable["aabab"] = QString("f");
-  bacondectable["aabba"] = QString("g");
-  bacondectable["aabbb"] = QString("h");
-  bacondectable["abaaa"] = QString("(i/j)");
-  bacondectable["abaab"] = QString("k");
-  bacondectable["ababa"] = QString("l");
-  bacondectable["ababb"] = QString("m");
-  bacondectable["abbaa"] = QString("n");
-  bacondectable["abbab"] = QString("o");
-  bacondectable["abbba"] = QString("p");
-  bacondectable["abbbb"] = QString("q");
-  bacondectable["baaaa"] = QString("r");
-  bacondectable["baaab"] = QString("s");
-  bacondectable["baaba"] = QString("t");
-  bacondectable["baabb"] = QString("u");
-  bacondectable["baabb"] = QString("v");
-  bacondectable["babaa"] = QString("w");
-  bacondectable["babab"] = QString("x");
-  bacondectable["babba"] = QString("y");
-  bacondectable["babbb"] = QString("z");
-  m_baconDecryptedWhole = "";
-   for(int i = 0; i < ((m_baconDec.length() / 5)); i++)
-   {
-     baconDecList.clear();
-     m_baconDec = m_baconDec.toLower();
-      int count = m_baconDec.length();
-     for (int i = 0; i < (count / 5); i++)
-      {
-        if(count%5==0)
-          {
-     baconDecList.append(m_baconDec.left(5));
-     m_baconDec.remove(0,5);
-      qInfo() << "baconDecList:" << baconDecList;
-      }
-      }
-     // Pobierz wartość szyfru z tabeli dla danej litery
-     for (int i = 0; i < baconDecList.size(); i++)
+  int count = m_baconDec.length();
+     if (m_baconDec == "")
        {
-      if (bacondectable.contains(baconDecList.at(i)))
-     {
-     dectable.append(bacondectable.value(baconDecList.at(i)));
-     }
-     else
-     {
-         dectable.append(QString("(?)"));
-     }
-         m_baconDecryptedWhole.append(dectable.value(i));
-
+         return m_baconDec;
        }
-   }
-   bacondectable.clear();
-   dectable.clear();
+   for(int i = 0; i < count; i+=5)
+   {
+     m_baconDec = m_baconDec.toLower();
+     m_baconDecryptedWhole = "";
+     for (int i = 0; i < m_baconDec.size(); i += 5)
+       {
+     qInfo() << i;
+         while(m_baconDec[i] == QChar(' '))
+           {
+             m_baconDecryptedWhole += QString(" ");
+             i++;
+           }
+         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > 122)
+           {
+             return m_baconDecryptedWhole;
+           }
+         m_baconDecryptedWhole += konwerter(i, m_baconDec);
+       }
+     }
    return m_baconDecryptedWhole;
 }
+int Decipher::konwerter(int i, QString s)
+  {
+    int wynik = 97;
+    int mnoznik = 1;
+    for(int k = i + 4; k >= i; k--)
+      {
+        if(s[k] == QChar('b'))
+          wynik += mnoznik;
+        mnoznik *= 2;
+      }
+    return wynik;
+  }
+bool Decipher::sprawdz_czy_prawidlowe(int i, QString s)
+  {
+    if(i + 5 > s.size())
+      {
+        return 1;
+        }
+        int wartosc = i;
+        for(i; i < wartosc + 5; i++)
+          {
+            if(s[i] != 'a' && s[i] != 'b')
+              return 1;
+          }
+        return 0;
+  }
