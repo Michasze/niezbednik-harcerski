@@ -256,6 +256,8 @@ może ulec zmianie."
      pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.None
      header: Controls.ToolBar {
        id: pasek
+//         width: root.width
+         height: menuButton.height
         background: Rectangle {
               anchors.fill: parent
               color: "Black"
@@ -264,8 +266,6 @@ może ulec zmianie."
               border.color: "Grey"
             border.width: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0
     }
-        RowLayout {
-            anchors.fill: parent
              Controls.ToolButton {
                  id: menuButton
                  onClicked: globalDrawer.open()
@@ -274,9 +274,8 @@ może ulec zmianie."
             }
  Kirigami.Heading
             {
-            Layout.fillWidth: true
             id: naglowek
-            Layout.rightMargin: 40
+                anchors.centerIn: parent
 	    horizontalAlignment: Text.AlignHCenter
 	    // Pokazuje tytul właśnie otwartej strony
              text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
@@ -297,7 +296,6 @@ może ulec zmianie."
                     }
                 }
             }
-        }
     }
     title: "Niezbędnik Harcerski"
     globalDrawer: Kirigami.GlobalDrawer {
