@@ -28,7 +28,8 @@ HPSPage {
     ColumnLayout {
         width: page.width
         HPSImage {
-         source: "image://images/kamien.jpg,10"
+            sourceSize.width: !isHorizontal ? page.width / 1.5 : page.width / 3
+            source: "image://images/kamien.jpg,10"
         }
             ElementListyNoImage
             {
