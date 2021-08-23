@@ -19,49 +19,38 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 import Data 1.0
 
- Kirigami.AbstractCard {
+ HPSLista {
        Clipboard
      {
        id: clipboard
      }
-  background: Rectangle {
-              color: invisibleCheckbox.checked ? "Black" : "grey"
-      border.color: "white"
-      border.width: 1
-    }
-
+     height: label1.height + label2.height + 10
+     separatorVisible: false
 
             id: listItem1
-                  showClickFeedback: true
 property string tresc: "Brak treści"
 property string autor: "Brak autora"
 Layout.fillHeight: true
-                hoverEnabled: true
-                 MouseArea {
-    anchors.fill: parent
-                hoverEnabled: true
-      onEntered: listItem1.highlighted = true
-      onExited: listItem1.highlighted = false 
       onPressAndHold:
       {
       clipboard.paste = listItem1.tresc + "\n" + listItem1.autor
       showPassiveNotification("Cytat skopiowany do schowka", 2000)
       }
-    }
 
                 contentItem: ColumnLayout
                              {
                                Controls.Label {
+                                   id: label1
     wrapMode: Text.WordWrap
     color: invisibleCheckbox.checked ? "white" : "black"
     Layout.alignment: Qt.AlignHCenter
     Layout.fillWidth: true
             text: listItem1.tresc 
              }
-                               Controls.Label {
+                                 Controls.Label {
+                                     id: label2
     wrapMode: Text.WordWrap
     color: invisibleCheckbox.checked ? "white" : "black"
     horizontalAlignment: Text.AlignRight
