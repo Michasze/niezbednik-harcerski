@@ -37,29 +37,22 @@ import QtQuick.Layouts 1.2
     anchors.fill: parent
     onClicked: Qt.openUrlExternally(cardRectangle.odnosnik)
     }
-             Layout.minimumHeight : cardRectangle.symbolika ? 150 : 120
+             height : cardRectangle.symbolika ? 150 : 120
     border.color: "transparent"
-             RowLayout {
-                 anchors.fill: parent
-                 id: row
                     Image {
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        Layout.leftMargin: 10
+                        anchors.verticalCenter: parent.verticalCenter
                         sourceSize.width: cardRectangle.height - 20
                         fillMode: Image.PreserveAspectFit
                         source: cardRectangle.ikona
-                        Layout.fillWidth: false
                     }
                     // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
 
                         Controls.Label {
                             horizontalAlignment: Text.AlignHCenter
+                            anchors.centerIn: parent
                             id: naglowek
                             wrapMode: Text.Wrap
                             font.pointSize: invisibleSlider.value
-                            Layout.fillWidth: true
-                            Layout.rightMargin: 10
                              text: cardRectangle.header
                     }
-                }
                 }
