@@ -40,6 +40,7 @@ import QtQuick.Layouts 1.2
              height : cardRectangle.symbolika ? 150 : 120
     border.color: "transparent"
                     Image {
+                        id: img
                         anchors.verticalCenter: parent.verticalCenter
                         sourceSize.width: cardRectangle.height - 20
                         fillMode: Image.PreserveAspectFit
@@ -52,6 +53,7 @@ import QtQuick.Layouts 1.2
                             anchors.centerIn: parent
                             id: naglowek
                             wrapMode: Text.Wrap
+                            width: page.width - img.width * 2
                             font.pointSize: invisibleSlider.value
                              text: cardRectangle.header
                     }
