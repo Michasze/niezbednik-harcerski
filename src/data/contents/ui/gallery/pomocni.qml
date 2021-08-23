@@ -60,5 +60,11 @@ ColumnLayout
     header: "Antoni Łasica"
     }
 
+    ElementListy
+    {
+    ikona: "qrc:/contents/ui/img/user.svg"
+    header: "Jakub Gałaszewski"
+    }
+
 }
     }
