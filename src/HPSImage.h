@@ -21,6 +21,7 @@ public:
     }
  QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize) override
 {
+  Q_UNUSED(size);
   int width = 400;
   QString adres;
   int radius = 0;
