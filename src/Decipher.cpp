@@ -82,21 +82,11 @@ QString Decipher::baconDec()
              m_baconDecryptedWhole += QString(" ");
              i++;
            }
-         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > 120)
+         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > 122)
            {
              return m_baconDecryptedWhole;
            }
-         else if(konwerter(i, m_baconDec) >= 117)
-           {
-             m_baconDecryptedWhole += (konwerter(i,m_baconDec) + 2);
-           }
-         else if(konwerter(i, m_baconDec) >= 106)
-           {
-             m_baconDecryptedWhole += (konwerter(i,m_baconDec) + 1);
-           }
-         else {
          m_baconDecryptedWhole += konwerter(i, m_baconDec);
-         }
        }
      }
    return m_baconDecryptedWhole;

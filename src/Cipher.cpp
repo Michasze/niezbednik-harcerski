@@ -1,9 +1,6 @@
 #include "Cipher.h"
 #include <QDebug>
 #include <QFile>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QApplication>
 #include <QVariantMap>
 #include <QMap>
 
@@ -572,7 +569,6 @@ QString Cipher::kaczor()
      {
          kaczorEnctable.append(QString(m_kaczor[i]));
      }
-     qInfo() << "Items in list:" << kaczortable.value(m_kaczor[i]);
          m_kaczorEncrypted.append(kaczorEnctable.value(i));
          m_kaczorEncrypted.append('-');
 
@@ -592,58 +588,133 @@ void Cipher::setBacon(const QString &c)
 QString Cipher::bacon()
 {
   // Tabela z wartościami szyfru dla każdej litery
-  bacontable[QChar('a')] = "aaaaa";
-  bacontable[QChar(261)] = "aaaaa"; // ą
-  bacontable[QChar('b')] = "aaaab";
-  bacontable[QChar('c')] = "aaaba";
-  bacontable[QChar(263)] = "aaaba"; // ć
-  bacontable[QChar('d')] = "aaabb";
-  bacontable[QChar('e')] = "aabaa";
-  bacontable[QChar(281)] = "aabaa"; // ę
-  bacontable[QChar('f')] = "aabab";
-  bacontable[QChar('g')] = "aabba";
-  bacontable[QChar('h')] = "aabbb";
-  bacontable[QChar('i')] = "abaaa";
-  bacontable[QChar('j')] = "abaaa";
-  bacontable[QChar('k')] = "abaab";
-  bacontable[QChar('l')] = "ababa";
-  bacontable[QChar(322)] = "ababa"; // ł
-  bacontable[QChar('m')] = "ababb";
-  bacontable[QChar('n')] = "abbaa";
-  bacontable[QChar(324)] = "abbaa";
-  bacontable[QChar('o')] = "abbab";
-  bacontable[QChar(243)] = "abbab"; // ó
-  bacontable[QChar('p')] = "abbba";
-  bacontable[QChar('q')] = "abbbb";
-  bacontable[QChar('r')] = "baaaa";
-  bacontable[QChar('s')] = "baaab";
-  bacontable[QChar(347)] = "baaab";
-  bacontable[QChar('t')] = "baaba";
-  bacontable[QChar('u')] = "baabb";
-  bacontable[QChar('v')] = "baabb";
-  bacontable[QChar('w')] = "babaa";
-  bacontable[QChar('x')] = "babab";
-  bacontable[QChar('y')] = "babba";
-  bacontable[QChar('z')] = "babbb";
-  bacontable[QChar(380)] = "babbb"; // ż
-  bacontable[QChar(378)] = "babbb"; // ź
   m_baconEncryptedWhole = "";
    for(int i = 0; i < m_bacon.length(); i++)
    {
      // Przekonwertuj literę na małą
-     m_bacon[i] = m_bacon[i].toLower(); 
-     // Pobierz wartość szyfru z tabeli dla danej litery
-     if (bacontable.contains(m_bacon[i]))
-     {
-     enctable.append(bacontable.value(m_bacon[i]));
+     m_bacon[i] = m_bacon[i].toLower();
+     if(m_bacon[i].toLatin1() == 0 || 243)
+       {
+         ushort unic = m_bacon[i].unicode();
+         switch(unic)
+           {
+             case 243:
+               m_bacon[i] = QChar('o');
+               break;
+             case 261:
+               m_bacon[i] = QChar('a');
+               break;
+             case 263:
+               m_bacon[i] = QChar('c');
+               break;
+             case 281:
+               m_bacon[i] = QChar('e');
+               break;
+             case 322:
+               m_bacon[i] = QChar('l');
+               break;
+             case 324:
+               m_bacon[i] = QChar('n');
+               break;
+             case 347:
+               m_bacon[i] = QChar('s');
+               break;
+             case 378:
+               m_bacon[i] = QChar('z');
+               break;
+             case 380:
+               m_bacon[i] = QChar('z');
+               break;
+              default:
+                m_bacon[i] = m_bacon[i];
+           }
+       }
+     switch(m_bacon[i].toLatin1())
+       {
+      case 'a':
+        m_baconEncryptedWhole.append(QString("aaaaa"));
+        break;
+      case 'b':
+        m_baconEncryptedWhole.append(QString("aaaab"));
+        break;
+      case 'c':
+        m_baconEncryptedWhole.append(QString("aaaba"));
+        break;
+      case 'd':
+        m_baconEncryptedWhole.append(QString("aaabb"));
+        break;
+      case 'e':
+        m_baconEncryptedWhole.append(QString("aabaa"));
+        break;
+      case 'f':
+        m_baconEncryptedWhole.append(QString("aabab"));
+        break;
+      case 'g':
+        m_baconEncryptedWhole.append(QString("aabba"));
+        break;
+      case 'h':
+        m_baconEncryptedWhole.append(QString("aabbb"));
+        break;
+      case 'i':
+        m_baconEncryptedWhole.append(QString("abaaa"));
+        break;
+      case 'j':
+        m_baconEncryptedWhole.append(QString("abaaa"));
+        break;
+      case 'k':
+        m_baconEncryptedWhole.append(QString("abaab"));
+        break;
+      case 'l':
+        m_baconEncryptedWhole.append(QString("ababa"));
+        break;
+      case 'm':
+        m_baconEncryptedWhole.append(QString("ababb"));
+        break;
+      case 'n':
+        m_baconEncryptedWhole.append(QString("abbaa"));
+        break;
+      case 'o':
+        m_baconEncryptedWhole.append(QString("abbab"));
+        break;
+      case 'p':
+        m_baconEncryptedWhole.append(QString("abbba"));
+        break;
+      case 'q':
+        m_baconEncryptedWhole.append(QString("abbbb"));
+        break;
+      case 'r':
+        m_baconEncryptedWhole.append(QString("baaaa"));
+        break;
+      case 's':
+        m_baconEncryptedWhole.append(QString("baaab"));
+        break;
+      case 't':
+        m_baconEncryptedWhole.append(QString("baaba"));
+        break;
+      case 'u':
+        m_baconEncryptedWhole.append(QString("baabb"));
+        break;
+      case 'v':
+        m_baconEncryptedWhole.append(QString("baabb"));
+        break;
+      case 'w':
+        m_baconEncryptedWhole.append(QString("babaa"));
+        break;
+      case 'x':
+        m_baconEncryptedWhole.append(QString("babab"));
+        break;
+      case 'y':
+        m_baconEncryptedWhole.append(QString("babba"));
+        break;
+      case 'z':
+        m_baconEncryptedWhole.append(QString("babbb"));
+        break;
+      case ' ':
+        m_baconEncryptedWhole.append(QChar(' '));
+        break;
+      default:
+        m_baconEncryptedWhole.append(QString(""));
      }
-     else
-     {
-         enctable.append(QString(m_bacon[i]));
-     }
-         m_baconEncryptedWhole.append(enctable.value(i));
    }
-   bacontable.clear();
-   enctable.clear();
    return m_baconEncryptedWhole;
 }

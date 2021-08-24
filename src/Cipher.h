@@ -54,12 +54,6 @@ private:
     QString m_morse;
     QString m_morseEncryptedWhole;
     QString m_bacon;
-    QString m_baconEncrypted;
-    QString m_baconEncryptedA;
-    QString m_baconEncryptedB;
-    QString m_baconEncryptedC;
-    QString m_baconEncryptedD;
-    QString m_baconEncryptedE;
     QString m_baconEncryptedWhole;
     int m_wariant = 0;
     int m_kaczorwariant = 0;
@@ -73,9 +67,7 @@ private:
      int e;
      int f;
     int m_shift = 0;
-    QMap<QChar, QString> bacontable;
     QMap<QChar, QString> morsetable;
-    QVector<QString> enctable;
     QVector<QString> morseEnctable;
     QVector<QString> kaczorEnctable;
     QMap<QChar, QChar> gadetable;
