@@ -66,6 +66,7 @@ HPSPage {
     id: karta
     model: infoData.autor
     delegate: KartaStrona {
+        visible: index == 0 ? false : true
         header: modelData
         ikona: "image://images/" + infoData.image[index]
         adres: cytatyPage
