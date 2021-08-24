@@ -77,17 +77,26 @@ QString Decipher::baconDec()
      m_baconDecryptedWhole = "";
      for (int i = 0; i < m_baconDec.size(); i += 5)
        {
-     qInfo() << i;
          while(m_baconDec[i] == QChar(' '))
            {
              m_baconDecryptedWhole += QString(" ");
              i++;
            }
-         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > 122)
+         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > 120)
            {
              return m_baconDecryptedWhole;
            }
+         else if(konwerter(i, m_baconDec) >= 117)
+           {
+             m_baconDecryptedWhole += (konwerter(i,m_baconDec) + 2);
+           }
+         else if(konwerter(i, m_baconDec) >= 106)
+           {
+             m_baconDecryptedWhole += (konwerter(i,m_baconDec) + 1);
+           }
+         else {
          m_baconDecryptedWhole += konwerter(i, m_baconDec);
+         }
        }
      }
    return m_baconDecryptedWhole;
