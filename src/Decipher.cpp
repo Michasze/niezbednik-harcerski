@@ -117,3 +117,26 @@ bool Decipher::sprawdz_czy_prawidlowe(int i, QString s)
           }
         return 0;
   }
+void Decipher::setAlfaDec(const QString &c)
+  {
+    if(m_alfaDec != c)
+      {
+        m_alfaDec = c;
+      }
+  }
+QString Decipher::alfaDec()
+  {
+    QStringList alfaDecList = m_alfaDec.split(QChar('-'));
+    QString m_alfaDecrypted;
+    for(int i = 0; i < alfaDecList.size(); i++)
+      {
+        if(alfaDecList.at(i).toInt() > 26 || alfaDecList.at(i).toInt() < 1)
+          {
+          m_alfaDecrypted += "";
+}
+        else {
+        m_alfaDecrypted += QChar(alfaDecList.at(i).toInt() + 96);
+        }
+      }
+        return m_alfaDecrypted;
+  }

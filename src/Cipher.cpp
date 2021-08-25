@@ -187,7 +187,42 @@ QString Cipher::morse()
    morseEnctable.clear();
    return m_morseEncryptedWhole;
   }
-
+void Cipher::setAlfa(const QString &e)
+  {
+    if (m_alfa !=e)
+      {
+        m_alfa = e;
+        alfaChanged();
+      }
+  }
+QString Cipher::alfa()
+  {
+    m_alfaEnc = "";
+    for(int i = 0; i < m_alfa.length(); i++)
+      {
+        m_alfa[i] = m_alfa[i].toLower();
+        unsigned charEncoded = m_alfa[i].toLatin1() - 96;
+        if(charEncoded > 26)
+          {
+            m_alfaEnc.append("");
+          }
+        else {
+        if(m_alfa[i].toLatin1() == 0)
+          {
+            m_alfa[i] = convertDiacritics(m_alfa[i]);
+          }
+        if (i == m_alfa.length() - 1)
+          {
+        m_alfaEnc.append(QString::number(charEncoded));
+        }
+        else
+          {
+        m_alfaEnc.append(QString::number(charEncoded) + "-");
+          }
+        }
+        }
+    return m_alfaEnc;
+  }
 void Cipher::setWariant(const int &e)
 {
      if (m_wariant != e)
@@ -595,40 +630,8 @@ QString Cipher::bacon()
      m_bacon[i] = m_bacon[i].toLower();
      if(m_bacon[i].toLatin1() == 0 || 243)
        {
-         ushort unic = m_bacon[i].unicode();
-         switch(unic)
-           {
-             case 243:
-               m_bacon[i] = QChar('o');
-               break;
-             case 261:
-               m_bacon[i] = QChar('a');
-               break;
-             case 263:
-               m_bacon[i] = QChar('c');
-               break;
-             case 281:
-               m_bacon[i] = QChar('e');
-               break;
-             case 322:
-               m_bacon[i] = QChar('l');
-               break;
-             case 324:
-               m_bacon[i] = QChar('n');
-               break;
-             case 347:
-               m_bacon[i] = QChar('s');
-               break;
-             case 378:
-               m_bacon[i] = QChar('z');
-               break;
-             case 380:
-               m_bacon[i] = QChar('z');
-               break;
-              default:
-                m_bacon[i] = m_bacon[i];
+         m_bacon[i] = convertDiacritics(m_bacon[i]);
            }
-       }
      switch(m_bacon[i].toLatin1())
        {
       case 'a':
@@ -718,3 +721,41 @@ QString Cipher::bacon()
    }
    return m_baconEncryptedWhole;
 }
+QChar Cipher::convertDiacritics(const QChar &c)
+  {
+    QChar ch;
+    ushort unic = c.unicode();
+    switch(unic)
+      {
+        case 243:
+          ch = QChar('o');
+          break;
+        case 261:
+          ch = QChar('a');
+          break;
+        case 263:
+          ch = QChar('c');
+          break;
+        case 281:
+          ch = QChar('e');
+          break;
+        case 322:
+          ch = QChar('l');
+          break;
+        case 324:
+          ch = QChar('n');
+          break;
+        case 347:
+          ch = QChar('s');
+          break;
+        case 378:
+          ch = QChar('z');
+          break;
+        case 380:
+          ch = QChar('z');
+          break;
+         default:
+           ch = c;
+  }
+         return ch;
+       }

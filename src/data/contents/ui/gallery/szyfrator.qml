@@ -90,7 +90,14 @@ HPSPage
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/bacon.qml"))
     }
-
+        }
+                ElementListyNoImage {
+    header: "Szyfr alfabetyczno-liczbowy"
+    color: "Brown"
+        MouseArea {
+    anchors.fill: parent
+    onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/alfa-liczbowy.qml"))
+    }
         }
     }
 }

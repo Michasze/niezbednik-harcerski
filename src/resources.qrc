@@ -178,6 +178,7 @@
         <file alias="contents/ui/gallery/szyfrator/bacon.qml">./data/contents/ui/gallery/szyfrator/bacon.qml</file>
         <file alias="contents/ui/gallery/szyfrator/kaczor.qml">./data/contents/ui/gallery/szyfrator/kaczor.qml</file>
         <file alias="contents/ui/gallery/szyfrator/mafeking.qml">./data/contents/ui/gallery/szyfrator/mafeking.qml</file>
+        <file alias="contents/ui/gallery/szyfrator/alfa-liczbowy.qml">./data/contents/ui/gallery/szyfrator/alfa-liczbowy.qml</file>
         <file alias="contents/ui/gallery/malaKsiega.qml">./data/contents/ui/gallery/malaKsiega.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/przedmowa.qml">./data/contents/ui/gallery/malaKsiega/przedmowa.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/czeko.qml">./data/contents/ui/gallery/malaKsiega/czeko.qml</file>
