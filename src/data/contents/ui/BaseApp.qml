@@ -252,6 +252,22 @@ może ulec zmianie."
     }
 }
 }
+    Controls.Action
+    {
+        id: powrotAction
+        text: qsTr("Powrót")
+        shortcut: "Backspace"
+        onTriggered: {
+                    if (pageStack.layers.depth == 1 && pageStack.depth > 1)
+                    {
+                        pageStack.pop();
+                    }
+                    else
+                    {
+                        pageStack.layers.pop();
+                    }
+                }
+    }
 
      pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.None
      header: Controls.ToolBar {
@@ -266,8 +282,12 @@ może ulec zmianie."
               border.color: "Grey"
             border.width: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0
     }
+         RowLayout
+         {
+             anchors.fill: parent
              Controls.ToolButton {
                  id: menuButton
+                 Layout.alignment: Qt.AlignLeft
                  onClicked: globalDrawer.open()
 		 icon.source: "qrc:/contents/ui/img/application-menu.svg"
 
@@ -276,6 +296,7 @@ może ulec zmianie."
             {
             id: naglowek
                 anchors.centerIn: parent
+                 Layout.alignment: Qt.AlignHCenter
 	    horizontalAlignment: Text.AlignHCenter
 	    // Pokazuje tytul właśnie otwartej strony
              text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
@@ -283,19 +304,12 @@ może ulec zmianie."
             }
             Controls.ToolButton
             {
-                visible: (!Kirigami.Settings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1) ? true : false
+                visible: ((!Kirigami.Settings.isMobile ) && (pageStack.currentItem.title != "Niezbędnik Harcerski")) || pageStack.layers.depth != 1 ? true : false
+                 Layout.alignment: Qt.AlignRight
                 icon.source: "image://icons/go-previous.svg,white"
-                onClicked: {
-                    if (pageStack.layers.depth == 1)
-                    {
-                        pageStack.pop();
-                    }
-                    else
-                    {
-                        pageStack.layers.pop();
-                    }
+                action: powrotAction
                 }
-            }
+         }
     }
     title: "Niezbędnik Harcerski"
     globalDrawer: Kirigami.GlobalDrawer {
