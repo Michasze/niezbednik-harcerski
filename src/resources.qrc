@@ -61,6 +61,7 @@
         <file alias="contents/ui/img/Stanislaw_skalski2.jpg">./data/contents/ui/img/Stanislaw_skalski2.jpg</file>
         <file alias="contents/ui/img/fotograficzna.jpg">./data/contents/ui/img/fotograficzna.jpg</file>
         <file alias="contents/ui/img/geo.jpg">./data/contents/ui/img/geo.jpg</file>
+        <file alias="contents/ui/img/geo2.svg">./data/contents/ui/img/geo2.svg</file>
         <file alias="contents/ui/img/ekosystem.jpg">./data/contents/ui/img/ekosystem.jpg</file>
         <file alias="contents/ui/img/swJerzy.jpg">./data/contents/ui/img/swJerzy.jpg</file>
         <file alias="contents/ui/img/swJerzy2.jpg">./data/contents/ui/img/swJerzy2.jpg</file>
@@ -256,6 +257,7 @@
         <file alias="contents/ui/img/szlify.svg">./data/contents/ui/img/szlify.svg</file>
         <file alias="contents/ui/img/plecak.svg">./data/contents/ui/img/plecak.svg</file>
         <file alias="contents/ui/img/namiot_dycha.svg">./data/contents/ui/img/namiot_dycha.svg</file>
+        <file alias="contents/ui/img/settings.svg">./data/contents/ui/img/settings.svg</file>
         <file alias="contents/ui/img/rower.svg">./data/contents/ui/img/rower.svg</file>
         <file alias="contents/ui/img/ognisko.svg">./data/contents/ui/img/ognisko.svg</file>
         <file alias="contents/ui/img/ksiazki.svg">./data/contents/ui/img/ksiazki.svg</file>

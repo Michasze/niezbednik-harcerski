@@ -44,10 +44,11 @@ KartaStronaNoImage {
     {
         Layout.fillWidth: true
     }
-KartaStronaNoImage {
-        header: "Harcerska geoskrytka"
-        opis: ""
-        adres: "geo.qml"
+KartaStronaIkona {
+    header: "Harcerska geoskrytka"
+    opis: ""
+    ikona: "image://icons/geo2.svg,white"
+    adres: "geo.qml"
     }
         HPSSeparator
     {
