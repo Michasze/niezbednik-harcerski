@@ -30,13 +30,6 @@ HPSPage {
     title: "Social media"
 
     globalToolBarStyle: ApplicationHeaderStyle.None
-    actions {
-        main: Action {
-            iconName: "qrc:/contents/ui/img/go-home.svg"
-            text: qsTr("Powrót")
-            onTriggered: pageStack.layers.pop();
-        }
-    }
     ColumnLayout
     {
 ElementListy 

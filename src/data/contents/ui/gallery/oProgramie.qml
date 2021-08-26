@@ -17,16 +17,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import org.kde.kirigami 2.6 as Kirigami
 
 OProgramieSzablon
 {
-actions.main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.layers.pop(-1);
-        shortcut: Qt.Key_Back
-        }
     aboutData: {
  "displayName" : "Niezbędnik HPS",
  "productName" : "Niezbędnik HPS",
