@@ -1,12 +1,11 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
     id: pageFoto
-    title: "ZJAZD ZHP w Bydgoszczy"
+    title: "Zjazd ZHP w Bydgoszczy"
         ColumnLayout {
         width: pageFoto.width
 
@@ -49,12 +48,23 @@ x x x
     Dzisiaj, po 30 latach pracy ZHP w wolnej Polsce, widzimy , że warto było podjąć pracę, trud i poświęcenie dla przyszłości ZHP. Stowarzyszenia szanującego tradycyjne wartości, demokratycznego, proponującego młodym ludziom atrakcyjny program.
     
     Należy podziękować wszystkim, którzy przez kolejne lata budowali tożsamość ZHP i jego mocną pozycję w kraju, w ruchu harcerskim oraz w europejskim i światowym skautingu.
-Czuwaj !
-Ryszard Pacławski
-Naczelnik ZHP 1990-2000
-P.S. Więcej w przygotowywanej do druku książce „Gra o harcerstwo” .
+Czuwaj!"
+        }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Ryszard Pacławski
+Naczelnik ZHP 1990-2000"
+         }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+            color: "black"
+           header: "P.S. Więcej w przygotowywanej do druku książce „Gra o harcerstwo”.
 Podobnie jak w 100 lecie ZHP tak i teraz nie zdążyłem na czas…
 Dziękuję wszystkim Przyjaciołom w Harcerstwie."
-        }
+         }
         }
 } 

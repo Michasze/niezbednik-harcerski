@@ -46,12 +46,16 @@ W 1932 roku powstał \"Fundusz Myśli Braterskiej\" z inicjatywy belgijskiej ska
 Skauci (Rangers) w Nowej Zelandii przed zmrokiem zdobywają Górę Mount Eden. Tam rozpalają małe ognisko i stawiają flagę, następnie czekają aż nad oceanem zacznie wschodzić słońce. Gdy to nastąpi zaczynają wciągać flagę Ruchu Skautowego. Śpiewają tam The World Song. 
 <a href=\"https://www.youtube.com/watch?v=2_aHL-6Tb0k\">link</a><br><br>
 
-Swego czasu słyszałem też o tradycji wymieniania się kwiatami.<br><br>
-
-Juliusz Idzikowski"
+Swego czasu słyszałem też o tradycji wymieniania się kwiatami."
 onLinkActivated: Qt.openUrlExternally(link)
         }
+
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
+        }
     }
- 
-    
 }

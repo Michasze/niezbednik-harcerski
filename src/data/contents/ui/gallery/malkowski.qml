@@ -64,11 +64,14 @@ W 1911 roku przeprowadził pierwszy kurs skautowy we Lwowie. Rozpoczął też wy
 
 Kiedy wybuchła I wojna światowa Małkowski wstąpił do Legionów Piłsudskiego. W trakcie służby zachorował na tyfus. Wyjechał na kurację do Zakopanego, gdzie nie zaprzestał działalności niepodległościowej. Próbował on utworzyć niepodległą Rzeczpospolitą Podhalańską. Z powodu zagrożenia represjami musiał wyjechać za granicę: najpierw do Anglii, potem do Stanów. W obu tych miejscach tworzył drużyny skautowe. Następnie wyjechał do Kanady, gdzie po ukończeniu szkoły wojskowej walczył w ramach armii kanadyjskiej we Francji. Trafił do armii Generała Hallera, który oddelegował Małkowskiego do Odessy, aby ten pomógł przy ewakuacji znajdujących się tam Polaków.
 
-Małkowski wypłynął z Marsylii na statku “Chaouia”. Statek uderzył w zabłąkaną na morzu minę i zatonął w pobliżu Messyny. W katastrofie zginęło ponad czterysta osób. Ciała Małkowskiego nigdy nie odnaleziono.
-
-
-
-Juliusz Idzikowski"
+Małkowski wypłynął z Marsylii na statku “Chaouia”. Statek uderzył w zabłąkaną na morzu minę i zatonął w pobliżu Messyny. W katastrofie zginęło ponad czterysta osób. Ciała Małkowskiego nigdy nie odnaleziono."
+        }
+        ElementListyNoImage
+        {
+            Layout.fillWidth: true
+            alignH: Text.AlignHCenter
+            format: Text.PlainText
+            header: "Juliusz Idzikowski"
         }
     }
 }

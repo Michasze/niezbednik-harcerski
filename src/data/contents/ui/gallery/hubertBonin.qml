@@ -49,10 +49,14 @@ Nabory do swojej drużyny prowadził chodząc w mundurze po mieście, dzieci zac
 
 Do końca życia wychowywał mieszkańców mojego miasta w duchu przedwojennego harcerstwa. 
 
-Zmarł 26 marca 2008 roku. 
-
-
-Juliusz Idzikowski"
+Zmarł 26 marca 2008 roku."
+        }
+       ElementListyNoImage
+       {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
         }
     }
 }

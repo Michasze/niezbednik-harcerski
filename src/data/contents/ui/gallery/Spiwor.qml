@@ -141,5 +141,12 @@ HPSPage {
 
 Juliusz Idzikowski"
      }
+        ElementListyNoImage
+        {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
             }
 }

@@ -49,13 +49,14 @@ w niewolę, udało mu się uciec Niemcom, udał się do Wilna gdzie związał si
 
 Od 1944 roku dowódca jednego z plutonów 5 Wileńskiej Brygady AK (do której został przeniesiony z 6 Wileńskiej Brygady). 5 Wileńska Brygada AK była nazywana \"Brygadą Śmierci\", walczyła zarówno przeciwko Niemcom jak i sowieckim partyzantom. Brał udział 
 w wielu akcjach partyzanckich zdobywanie mostów, uwolnienie jeńców i tak dalej. Po demobilizacji swojego oddziału razem  z częścią kadry 5 Brygady starali się reaktywować część żołnierzy. W 1946 Pluciński wyjechał w pobliże miejscowości Wysokie Mazowieckie. W tym czasie został wydany władzom komunistycznym. Po krótkim czasie przebywania w areszcie został skazany na karę śmierci. Wyrok wykonano 28 czerwca 1946 w białostockim więzieniu.
-Środkowa postać na zdjęciu.
-
-Juliusz Idzikowski
-
- 
-
-"
+Środkowa postać na zdjęciu."
+            }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
+        }
         }
     }
-}

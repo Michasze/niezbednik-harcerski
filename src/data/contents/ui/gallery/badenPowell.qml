@@ -67,10 +67,14 @@ W momencie wybuchu I Wojny Światowej chciał służyć w armii brytyjskiej, ale
 
 Na pierwszym Jamboree w 1920 roku został wybrany pierwszym skautem świata. Za swoją pracę skaut otrzymał tytuł lorda Gilwell.
 
-W 1939 roku wyjechał na leczenie do Kenii, gdzie zmarł w 1941 roku
-
-
-Juliusz Idzikowski"
+W 1939 roku wyjechał na leczenie do Kenii, gdzie zmarł w 1941 roku"
+        }
+        ElementListyNoImage
+        {
+             Layout.fillWidth: true
+            alignH: Text.AlignHCenter
+                format: Text.PlainText
+            header: "Juliusz Idzikowski"
         }
     }
 }

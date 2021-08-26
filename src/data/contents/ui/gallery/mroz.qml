@@ -49,9 +49,7 @@ Po przejściu Armii Czerwonej i wejściu jednostek NKWD, Władysław Mróz wyjec
 Podczas pobytu w Bolesławcu został aresztowany przez UB.
 Władysław Mróz zmarł 1 września w piętnastą rocznicę ataku Niemiec na Polskę (1954 r).
 Wiele lat później jego rodzina została powiadomiona, że podpułkownik został otruty przez lekarza pracującego w areszcie, który przeprowadzał eksperymenty na więźniach.
-Jego grób znajduje się w środkowej alei zasłużonych dla Bolesławca, grobem opiekują się harcerze z Hufca im Szarych Szeregów.
-
-Juliusz Idzikowski"
+Jego grób znajduje się w środkowej alei zasłużonych dla Bolesławca, grobem opiekują się harcerze z Hufca im Szarych Szeregów."
         }
          Image {
          source: "qrc:/contents/ui/img/mroz2.jpg"   
@@ -59,6 +57,13 @@ Juliusz Idzikowski"
           horizontalAlignment: Image.AlignHCenter
          Layout.maximumHeight: 300
          fillMode: Image.PreserveAspectFit
-        } 
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
+        }
     }
 }

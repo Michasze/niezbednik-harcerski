@@ -19,34 +19,18 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 
 {
     title: "O sprawnościach"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        onTriggered: pageStack.pop(-1);
-        visible: false
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
         width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
             header: "Prawie Wszystko o sprawnościach
@@ -127,14 +111,22 @@ Na zakończenie jeszcze jedna dygresja
 
 „...Sprawności bywają rozmaicie zdobywane; Zbiorowo I pojedynczo, pod czyimś kierunkiem i samodzielnie. Zawsze jednak sposób „uczenia się” jest inny aniżeli w szkole, gdzie nauczyciel, w większym lub w mniejszym stopniu prowadzi ucznia, stosując metody wypróbowane i najskuteczniej prowadzące do celu – opanowania materiału. Tu zaś chodzi o sam wysiłek, o przezwyciężenie przeszkody, o dobieranie sobie samemu sposobu dojścia do celu. (…) Nie narzucamy więc drogi jaką harcerka zdobędzie sprawność, pozostawiamy pole do jej samodzielności i inicjatywy. Podajemy w programie sprawności rezultat do osiągnięcia lecz nie podajemy metody jaką go należy osiągnąć....”
 
-I to by było na tyle.
- 
-
-hm. Janusz Sikorski
-
-ps. Druhno Jago, spotkanie z Tobą jak zawsze. Inspirujące, za co szczerze dziękuję poprzez czas który nas dzieli lecz dzięki ideałom które nas łączą...
+I to by było na tyle."
+            }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "hm. Janusz Sikorski"
+         }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+            color: "black"
+           header: "ps. Druhno Jago, spotkanie z Tobą jak zawsze. Inspirujące, za co szczerze dziękuję poprzez czas który nas dzieli lecz dzięki ideałom które nas łączą...
 
 Czuwaj!"
-        }
+         }
         }
 }

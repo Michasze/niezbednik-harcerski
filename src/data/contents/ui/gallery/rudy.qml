@@ -63,10 +63,14 @@ Został aresztowany wraz ze swoim ojcem 23 marca 1943 roku. Zostali osadzeni na 
 
 Akcja jego odbicia nosiła kryptonim “Meksyk II” szerzej znana jest jako Akcja pod Arsenałem. Po akcji został przeniesiony do punktu sanitarnego, a następnie do kolejnych kryjówek. Niestety jego stan ciągle się pogarszał. Ostatecznie trafił do Szpitala Wolskiego, gdzie zmarł.
 
-Pochowano go pod zmienionym nazwiskiem “Jan Domański”. Pośmiertnie został mianowany do stopnia harcmistrza. Ojciec Bytnara zginął w 1945 roku podczas ewakuacji obozu koncentracyjnego.
-
-
-Juliusz Idzikowski"
+Pochowano go pod zmienionym nazwiskiem “Jan Domański”. Pośmiertnie został mianowany do stopnia harcmistrza. Ojciec Bytnara zginął w 1945 roku podczas ewakuacji obozu koncentracyjnego."
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
 }

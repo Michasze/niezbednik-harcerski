@@ -19,31 +19,14 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 
 {
     title: "Harc-triki pakowania"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        //visible: !Kirigami.Settings.isMobile ? true : false
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
             id: rozdzial
         property int naglowekSize: 14
-        width: pageFoto.width
-        spacing: Units.smallSpacing
         ElementListyNoImage
         {
             color: "green"
@@ -105,8 +88,14 @@ HPSPage
             alignH: Text.AlignJustify
             header: "<p>Zawsze wiem gdzie co jest. I myślę, że każdy chciałby wiedzieć gdzie co ma.</p>
 <p>Zdradzę Wam jedną z moich tajemnic… nie biorę dużej ilość ubrań oraz wszystko zawijam w rulony, jest to bardzo przydatne. A jak już zrobisz przed wyjazdem zestawy ubrań na dany dzień to masz zaoszczędzony również czas na wyjeździe.</p>
-<p>Co z brudnymi ubraniami i bielizną? Dla wielu osób może to być niekomfortowe i chciały by jak najgłębiej schować te ubrania. Już lecę z pomocą, reklamówka wielorazowa na pewno będzie Waszym zbawieniem. Dlaczego wielorazowa? Rzadko one prześwitują, a dodatkowo izolują od zapachu. Jednocześnie nie marnujemy toreb jednorazowym wykorzystaniem.</p>
-<p>Julia “Inka” Karpowicz</p>"
+<p>Co z brudnymi ubraniami i bielizną? Dla wielu osób może to być niekomfortowe i chciały by jak najgłębiej schować te ubrania. Już lecę z pomocą, reklamówka wielorazowa na pewno będzie Waszym zbawieniem. Dlaczego wielorazowa? Rzadko one prześwitują, a dodatkowo izolują od zapachu. Jednocześnie nie marnujemy toreb jednorazowym wykorzystaniem.</p>"
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header:"Julia “Inka” Karpowicz"
         }
         }
 }

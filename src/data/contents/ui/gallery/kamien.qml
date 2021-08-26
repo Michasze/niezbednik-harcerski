@@ -45,14 +45,20 @@ Tekst odrzucony: <br>
 Tekst umieszczony na pomniku:<br>
 <i>“Harcerzom i instruktorom poległym w walce o polskość Wrocławia w 20 rocznicę powstania Hufca ZHP Wrocław-Śródmieście Maj 1977”</i><br><br>
 
-Okres międzywojenny był dla Polaków we Wrocławiu czasem wzmożonego działania. W 1927 roku powstała drużyna harcerska założona przez Druha Wiktora Urbanowicza. Szybko stała się jedną z najbardziej aktywnych polskich organizacji działających na terenie miasta. Drużyna organizowała wycieczki śladami polskości Wrocławia (Breslau). Brała udział w uroczystościach organizowanych przez polonię. Sytuacja zmieniła się po dojściu Adolfa Hitlera i NSDAP do władzy; harcerze spotkali się z coraz większymi represjami. Zakazano noszenia mundurów harcerskich, działanie ZHP kontrolowane było przez gestapo. W momencie wybuchu wojny starsi harcerze zostali aresztowani, założyciel drużyny zaginął bez wieści, współzałożyciel Tadeusz Grajkowski i ostatni drużynowy Władysław Zarembowicz zginęli w obozach koncentracyjnych.<br><br><br>
-
-pwd. Juliusz Idzikowski  <br><br>
+Okres międzywojenny był dla Polaków we Wrocławiu czasem wzmożonego działania. W 1927 roku powstała drużyna harcerska założona przez Druha Wiktora Urbanowicza. Szybko stała się jedną z najbardziej aktywnych polskich organizacji działających na terenie miasta. Drużyna organizowała wycieczki śladami polskości Wrocławia (Breslau). Brała udział w uroczystościach organizowanych przez polonię. Sytuacja zmieniła się po dojściu Adolfa Hitlera i NSDAP do władzy; harcerze spotkali się z coraz większymi represjami. Zakazano noszenia mundurów harcerskich, działanie ZHP kontrolowane było przez gestapo. W momencie wybuchu wojny starsi harcerze zostali aresztowani, założyciel drużyny zaginął bez wieści, współzałożyciel Tadeusz Grajkowski i ostatni drużynowy Władysław Zarembowicz zginęli w obozach koncentracyjnych.<br><br>
 
 Bibliografia:<br>
 <i>Antkowiak Zygmunt, Pomniki Wrocławia, Wrocław, Ossolineum, 1985,  ​ISBN 83-04-01953-1</i>"
+            }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header:"pwd. Juliusz Idzikowski"
+                }
+
         }
     }
  
     
-}

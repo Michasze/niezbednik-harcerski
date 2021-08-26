@@ -53,14 +53,14 @@ Podczas walk z Sowietami przybrał pseudonim \"Mściciel\". W nocy z 6 na 7 grud
 
 Sowieci za wszelką cenę chcieli się go pozbyć. Jego oddział wpadł w zasadzkę, podczas której Borysewicz poległ. Partyzantom nie udało się zabrać ciała z pola walki. Sowieci obwozili je po wielu miastach i wioskach. Nie wiadomo gdzie został pochowany. 
 
-Pośmiertnie został odznaczony Orderem Virtuti Militari (Męstwu Wojskowemu) 5 klasy.
-
-Juliusz Idzikowski
- 
-
-"
+Pośmiertnie został odznaczony Orderem Virtuti Militari (Męstwu Wojskowemu) 5 klasy."
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
- 
-    
 }

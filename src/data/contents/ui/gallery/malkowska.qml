@@ -59,9 +59,8 @@ W latach 1948-1960 prowadziła sierociniec dla polskich dzieci w Wielkiej Brytan
             ElementListyNoImage
             {
             Layout.fillWidth: true
-            alignH: Text.AlignJustify
-                format: Text.PlainText
-                color: "Black"
+            alignH: Text.AlignHCenter
+            format: Text.PlainText
             header: "Juliusz Idzikowski"
         }
     }

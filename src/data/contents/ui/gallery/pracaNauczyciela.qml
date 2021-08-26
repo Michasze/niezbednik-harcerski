@@ -25,25 +25,16 @@ HPSPage
 {
     id: pageFoto
     title: "Fazy rozwoju drużynowego"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
         ColumnLayout {
         width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
+                Layout.fillWidth: true
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
-            header: "Czuwaj! Mam właśnie egzaminy z pedagogiki i psychologii, przerabiając materiał wpadłem na ciekawy schemat odnoszący się do pracy nauczyciela. Są to tak uniwersalne zasady pracy z jakąś grupą młodszych osób, że są użyteczne również w pracy drużynowych czy zastępowych.
+                header: "Czuwaj! Mam właśnie egzaminy z pedagogiki i psychologii, przerabiając materiał wpadłem na ciekawy schemat odnoszący się do pracy nauczyciela. Są to tak uniwersalne zasady pracy z jakąś grupą młodszych osób, że są użyteczne również w pracy drużynowych czy zastępowych.
 
 Przede wszystkim schemat ten pozwala na zrozumie tego, że na wszystko przyjdzie pora i że nasze obecne umiejscowienie nie jest stałe, a przynajmniej nie musi takie być. Przejście przez te wszystkie fazy jest konieczne, aby zdobyć doświadczenie i jest tylko elementem większej układanki. Wydaje mi się też, że zrozumienie procesów które nas dotyczą pozwala nam lepiej sobie z nimi radzić.
 
@@ -61,10 +52,14 @@ Faza trzecia Nastawienie na ucznia - w naszym wypadku nastawienie na harcerza.
 Jest to moment osiągnięcia dojrzałości na danym stanowisku. W tej sytuacji drużynowy/zastępowy opanował już strategię panowania nad drużyną i wypracował metody przygotowywania zbiórek, dzięki temu może się skupić na bardziej złożonych problemach. A są nimi problemy środowiska społecznego w którym działamy, uczucia poszczególnych harcerzy w drużynie- zbiórka nie tylko ma się podobać, ale ma również spełniać konkretne  cele wychowawcze. W tej fazie dochodzi również do refleksji, rachunku sumienia, do naszych wcześniejszych działań. Możemy przeanalizować błędy popełniane przez nas i na wnioskach z nich wyciągniętych, wypracowywać nowe rozwiązania i strategie, dzięki którym osiągniemy wyższy poziom działania.
 
 Model Fuller przydaje się, by wniknąć w proces uczenia się, jak nauczać. Pomaga spojrzeć na aktualne zmartwienia z odległej perspektywy oraz przygotować początkujących nauczycieli do przejścia do następnej, wyższej fazy.
-Arends R.I., Uczymy się nauczać, WSiP, Warszawa 1998, s. 49;
-
-
-Juliusz Idzikowski"
+Arends R.I., Uczymy się nauczać, WSiP, Warszawa 1998, s. 49;"
+            }
+        ElementListyNoImage
+        {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
         }
         }
-}

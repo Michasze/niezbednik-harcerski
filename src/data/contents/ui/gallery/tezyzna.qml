@@ -52,10 +52,13 @@ Na przykład poprzez zbieranie geoskrzynek, konkurs fotograficzny na zrobienie z
 \"Istotę życia skautowego stanowi pełne tężyzny życie w terenie.\"
 Generał Robert Baden-Powell
 
-Dbanie o tężyznę fizyczną to nie tylko sport. To również zwykła aktywność fizyczna, która powinna stać się zdrową codziennością naszych harcerzy, której nie możemy zaniedbywać. Bo kiedy przyjdzie czas sprawdzenia sprawności naszego harcerza ten powinien sobie poradzić.
-
-Juliusz Idzikowski
-"
+Dbanie o tężyznę fizyczną to nie tylko sport. To również zwykła aktywność fizyczna, która powinna stać się zdrową codziennością naszych harcerzy, której nie możemy zaniedbywać. Bo kiedy przyjdzie czas sprawdzenia sprawności naszego harcerza ten powinien sobie poradzić."
         }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
         }
 }

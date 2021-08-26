@@ -48,7 +48,10 @@ Poniżej propozycja podania: za pomocą Google Maps, w łatwy sposób możecie z
          }
         ElementListyNoImage
         {
-            color: "black"
+            Layout.fillWidth: true
+            alignH: Text.AlignHCenter
+            format: Text.PlainText
+            color: "Green"
             header: "pwd. Radosław Kalamarz"
          }
                 }

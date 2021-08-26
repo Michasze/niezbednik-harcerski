@@ -57,10 +57,15 @@ Wykonujemy zdjęcia na różne sposoby, Lord Vader na Mustafar (panorama pokoju 
   {
     header: "Pamiętajcie, że taka zbiórka jest świetnym momentem do zaproponowania naszym harcerzom zdobywania sprawności fotograficznych.<br><br>
 
-Powodzenia!<br><br>
-
-Juliusz Idzikowski"
-    color: "green"
+Powodzenia!"
+  }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    color: "green"
+                    header: "Juliusz Idzikowski"
         }
         }
 }

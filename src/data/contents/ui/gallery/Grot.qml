@@ -61,11 +61,14 @@ Mimo to Rowecki poruszał się po Warszawie bez obstawy. Zgadzał się na nią j
 
 Informacje o jego miejscu położenia wykryła agentura NKWD. Wywiad Rosyjski podrzucił te dane Gestapo. Ostatecznie jednak został zdradzony przez agentów Gestapo, ukrytych w szeregach AK. Został aresztowany 30 czerwca 1943 roku. Został przetransportowany do Berlina. Tam odrzucił propozycję współpracy z Niemcami, trafił do obozu koncentracyjnego.
 
-Został zgładzony 2 sierpnia, z rozkazu Henricha Himmler. Rozkaz został wydany w furii na wieść o wybuchu Powstania Warszawskiego.
-
-Juliusz Idzikowski
-
-"
+Został zgładzony 2 sierpnia, z rozkazu Henricha Himmler. Rozkaz został wydany w furii na wieść o wybuchu Powstania Warszawskiego."
+            }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
 }

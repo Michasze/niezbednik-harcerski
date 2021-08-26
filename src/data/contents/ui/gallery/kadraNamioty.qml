@@ -42,9 +42,13 @@ Chwila spokoju. Drużynowy czy komendant na obozie jest ważny dla wszystkich. K
 
 Różnica wieku jest chyba zbyt oczywista, żeby ją tłumaczyć, ale z pewnością jest jednym z ważnych aspektów tego rozwiązania.
 
-Pamiętajcie, świat nie jest czarno biały. Czasem coś co wydaje się nam niesprawiedliwe jest bardzo przemyślanym rozwiązaniem, które ma zagwarantować dobrą i wygodną pracę.
-Juliusz Idzikowski
-"
+Pamiętajcie, świat nie jest czarno biały. Czasem coś co wydaje się nam niesprawiedliwe jest bardzo przemyślanym rozwiązaniem, które ma zagwarantować dobrą i wygodną pracę."
         }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
         }
 }

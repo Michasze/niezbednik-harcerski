@@ -338,6 +338,14 @@ ElementListyNoImage
             {
                 label: "*Farby"
             }
+        ElementListyNoImage
+        {
+            Layout.fillWidth: true
+            alignH: Text.AlignHCenter
+            format: Text.PlainText
+            color: "Green"
+            header:"Juliusz Idzikowski"
+        }
 
         }
 }

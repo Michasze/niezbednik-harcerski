@@ -27,11 +27,12 @@ HPSPage
         ColumnLayout {
         width: pageFoto.width
 
-        Controls.Label {
+        ElementListyNoImage {
             Layout.fillWidth: true
-            wrapMode: Text.WordWrap
-            horizontalAlignment: Text.AlignJustify
-            text: "Im lżejszy plecak tym lepiej dla naszych pleców. No chyba, że weźmiemy zbyt cienki śpiwór i zmarzniemy śpiąc na hamaku, wtedy nasze plecy dostaną w kość jeszcze bardziej. Jak to mawia jeden z Druhów w moim hufcu: “Tak was na starość powykręca za to marznięcie, że się nie pozbieracie.” 
+            format: Text.PlainText
+            alignH: Text.AlignJustify
+            color: "black"
+            header: "Im lżejszy plecak tym lepiej dla naszych pleców. No chyba, że weźmiemy zbyt cienki śpiwór i zmarzniemy śpiąc na hamaku, wtedy nasze plecy dostaną w kość jeszcze bardziej. Jak to mawia jeden z Druhów w moim hufcu: “Tak was na starość powykręca za to marznięcie, że się nie pozbieracie.”
 
 I chyba w tym wstępie zawiera się cały problem ultralight owego wędrowania. Z jednej strony super jest mieć buty, które ona ważą tyle co puszka coli, a z drugiej strony takie buty będą miały gorszą amortyzację i będą mniej wygodne. Musimy potrafić wyważyć to co zapewni nam odpowiedni komfort w stosunku do tego ile waży. Nie ma co targać ze sobą całej wielkiej menażki na krótki wypad w teren, czy też nie ma sensu zabierać zawsze ze sobą dwóch kubków do termosu, bo może akurat się przyda. Jest jednak kilka trików, które mogą nas trochę zbliżyć do odchudzenia naszego ekwipunku.
 
@@ -65,11 +66,15 @@ I chyba w tym wstępie zawiera się cały problem ultralight owego wędrowania. 
    • Pozbądź się dodatkowych opakowań z jedzenia. Niektóre produkty są zapakowane w dwie warstwy ochronne. Nie ma sensu zabierać obu kawałków folii czy kartonów. Z jednej strony waga, a z drugiej problem ze znalezieniem koszy z segregacją na trasie.
 
 
-   • Nie zabieraj całej szpulki nici. Odetnij spory kawałek i zwiń go tak, żeby się nie splątał. Dzięki temu oszczędzisz wagi na zabraniu rzeczy w zbyt dużej ilości niż ta której potrzebujesz.
-
-
-Juliusz Idzikowski
-"
+   • Nie zabieraj całej szpulki nici. Odetnij spory kawałek i zwiń go tak, żeby się nie splątał. Dzięki temu oszczędzisz wagi na zabraniu rzeczy w zbyt dużej ilości niż ta której potrzebujesz."
         }
+
+        ElementListyNoImage
+        {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
         }
 }

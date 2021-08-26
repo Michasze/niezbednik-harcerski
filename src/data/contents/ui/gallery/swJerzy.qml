@@ -36,11 +36,14 @@ Inna wersja podaje, że podczas ustanowienia przez Cesarza dekretu nakazującego
 
 Istnieje również legendarna wersja zdarzeń, podłóg której miał on pewnego razu przybyć do miasta Silena (na terenie obecnej Libii). Miasto miało być atakowane przez nikczemnego smoka mieszkającego w jeziorze. Mieszkańcy, aby udobruchać potwora, składali ofiary ze zwierząt lub ludzi, kolejne ofiary wybierali w drodze losowania. Pewnego razu wylosowano księżniczkę, Święty Jerzy stanął w obronie niewiasty i w imię Chrystusa ruszył na smoka. Powierzając się opiece Boga zadał bestii dwa ciosy i zabił smoka.
 
-Atrybutami Świętego Jerzego są miecz i lanca. Na obrazach często przedstawiany jest podczas pojedynku ze smokiem.
-
-Juliusz Idzikowski"
+Atrybutami Świętego Jerzego są miecz i lanca. Na obrazach często przedstawiany jest podczas pojedynku ze smokiem."
+            }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
- 
-    
 }

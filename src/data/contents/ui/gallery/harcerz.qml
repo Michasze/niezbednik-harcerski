@@ -47,8 +47,7 @@ HPSPage {
             ElementListyNoImage
             {
             Layout.fillWidth: true
-            alignH: Text.AlignRight
-                color: "Black"
+            alignH: Text.AlignHCenter
             header: "Juliusz Idzikowski"
         }
     }

@@ -57,12 +57,14 @@ z tego samego lotniska niedaleko Paryża. Po przeleceniu około dwóch tysięcy 
 
 W katastrofie 13 lipca 1929 zginął Major Ludwik Idzikowski, a major Kazimierz Kubala odniósł lekkie obrażenia. 
 
-Ciało majora zostało przetransportowane do Polski. Został pochowany na Cmentarzu Powązkowskim.
-
-
-Juliusz Idzikowski
-
-"
+Ciało majora zostało przetransportowane do Polski. Został pochowany na Cmentarzu Powązkowskim."
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
 }

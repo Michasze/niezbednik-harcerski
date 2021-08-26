@@ -20,35 +20,16 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Wybór karimaty, maty lub materaca"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
-       /* Image {
-         source: ""   
-          Layout.fillWidth: true
-         Layout.minimumHeight: 200
-
-         fillMode: Image.PreserveAspectFit
-         anchors.horizontalCenter: opis.horizontalCenter
-        }*/
         ElementListyNoImage
         {
             color: "black"
@@ -169,13 +150,19 @@ HPSPage {
         {
             color: "black"
             alignH: Text.AlignLeft
+            align: 0
             header: "<br>Ważne rzeczy przy wyborze:<br><br>
 ●    R-Value to współczynnik izolacji im wyższy tym lepsza izolacja, ale zazwyczaj też wyższa cena.<br><br>
 ●    Jeśli chcemy spać w hamaku to moim zdaniem najlepszy będzie materac, poniważ nadaje hamakowi kształtu i lepiej się w nim układa, dzięki czemu nie wysuwa się spod nas.<br><br>
-●    Jeśli mamy materac, warto mieć zestaw naprawczy który pozwoli nam go załatać.<br><br>
-Juliusz Idzikowski"
-            align: 0
+●    Jeśli mamy materac, warto mieć zestaw naprawczy który pozwoli nam go załatać."
         }
+        ElementListyNoImage
+        {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
     }
  
     

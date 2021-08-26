@@ -126,13 +126,11 @@ HPSPage {
            header: "<p>W wiadomości do recenzenta należy opisać jak wygląda skrzynka, gdzie i jak jest schowana oraz nasze możliwości serwisowania skrytki. Czasem kesz zniknie, a innym razem zamoknie i musimy mieć możliwość jego wymiany, dlatego nie warto zakładać skrytek na obozach kiedy jesteśmy 400 kilometrów od domu i nie będziemy mogli tam zajrzeć.</p>
 <p>Skrytka zostanie zrecenzowana w maksymalnie 7 dni. Chociaż mi zdarzało się otrzymać pozytywną recenzję po kilku godzinach. </p>"
          }
-        ElementListyNoImage
-        {
-           color: "Darkgreen"
-           header: "<P>Juliusz Idzikowski</P>"
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
          }
-
     }
- 
-    
 }

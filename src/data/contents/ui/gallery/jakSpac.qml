@@ -50,9 +50,15 @@ Izolacja, czyli nasza najlepsza przyjaciółka.  I nie wcale nie musicie być ja
 
 Jeśli ktoś jeszcze dotrwał jeszcze do tego miejsca, to znajdziecie tutaj kilka dodatkowych sposobów jak spać ciepło. Termofor, ogrzewacze chemiczne (nawet takie serduszka), termos z herbatą. Wszystkie te rzeczy pomogą podnieść komfort termiczny w śpiworze. Niestety nie są one idealne,  zwłaszcza termofor i ogrzewacz \"z blaszką\", ponieważ działają tylko przez jakiś czas, ogrzewacz z blaszką około 15-30 minut, termofor zależnie od warunków. Oczywiście  nawet jeśli dana rzecz już nie grzeje to przynajmniej przez pewien czas, w śpiworze będzie jeszcze w miarę ciepło, no chyba, że wieje wiatr, albo nie mamy izolacji i szybko oddamy ciepło do podłoża. 
 
-Trzymanie termosu w śpiworze ma dwojakie znaczenie, z jednej strony termos nie oddaje swojej temperatury \"w las\", a oddaje ją do naszego śpiwora, a z drugiej strony oddaje jej mniej, bo różnica temperatur jest mniejsza. Dlatego mamy cieplejsza herbatę rano, niż gdyby termos leżał na ziemi.
+Trzymanie termosu w śpiworze ma dwojakie znaczenie, z jednej strony termos nie oddaje swojej temperatury \"w las\", a oddaje ją do naszego śpiwora, a z drugiej strony oddaje jej mniej, bo różnica temperatur jest mniejsza. Dlatego mamy cieplejsza herbatę rano, niż gdyby termos leżał na ziemi."
+        }
 
-Juliusz Idzikowski"
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
 }

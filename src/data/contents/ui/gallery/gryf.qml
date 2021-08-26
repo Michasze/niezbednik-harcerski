@@ -55,12 +55,14 @@ Wyemigrował do Wielkiej Brytanii, gdzie służył w Brytyjskiej Armii (III Puł
 
 W 2002 roku powrócił na stałe do Polski. Należał do organizacji kombatanckich, pomagał realizować różne projekty związane na przykład  z upamiętnieniem Powstania Warszawskiego
 
-Zmarł 5 stycznia 2017 roku. Został pośmiertnie mianowany do stopnia Generała Dywizji.
-
-
-Juliusz Idzikowski
-
-"
+Zmarł 5 stycznia 2017 roku. Został pośmiertnie mianowany do stopnia Generała Dywizji."
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
 }

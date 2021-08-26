@@ -54,12 +54,14 @@ W 1947 roku zdecydował się powrócić do Polski, gdzie służył przez pewien 
 W okresie PRL nie należał do żadnej partii politycznej. 
 
 Pod koniec życia był bardzo schorowany i nie był w stanie samodzielnie funkcjonować. Został okradziony przez swoich opiekunów, w wyniku czego stracił własne mieszkanie. Zamieszkał w domu pomocy społecznej.
-Zmarł 12 listopada 2004 roku.
-
-
-Juliusz Idzikowski
-
-"
+Zmarł 12 listopada 2004 roku."
+        }
+                ElementListyNoImage
+                {
+                    Layout.fillWidth: true
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
         }
     }
 }

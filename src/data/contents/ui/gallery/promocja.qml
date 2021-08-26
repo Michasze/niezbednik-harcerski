@@ -19,35 +19,18 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 
 {
     title: "Jak promować harcerstwo"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        //visible: !Kirigami.Settings.isMobile ? true : false
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
         width: pageFoto.width
-        spacing: Units.smallSpacing
 
             ElementListyNoImage
             {
             Layout.fillWidth: true
             alignH: Text.AlignJustify
-                textSize: !Kirigami.Settings.isMobile ? 12 : 14
                 format: Text.PlainText
                 color: "Black"
                 header: "Promocja harcerstwa jest w dzisiejszych czasach bardzo ważna. Jesteśmy ze wszystkich stron bombardowani różnymi propozycjami spędzania wolnego czasu. Istnienie harcerstwa nie jest wcale tak oczywiste dla wszystkich. Dlatego często słyszy się stwierdzenia: \"To wy jeszcze istniejecie?\", \"Harcerstwo? Sprzedajecie ciastka?\". Jest to szczególnie widoczne u młodzieży, która kojarzy nas i nasze działania jedynie przez pryzmat zachodnich filmów w których pojawiają się skauci, których obraz zostaje bardzo “wypłaszczony i w pewien sposób przekłamany. Rodzice, mieszkańcy naszego miasta, środowisko rówieśników harcerzy z naszej drużyny jest naszym docelowym gronem odbiorców. Dlatego trzeba to wykorzystać!
@@ -66,9 +49,13 @@ Nie możemy też pominąć, udziału w innych lokalnych imprezach: wyścigi rowe
 Instagram drużyny jest czymś co może przyciągnąć rówieśników waszych harcerzy, może on przybliżyć im to jak harcerstwo wygląda. Zdjęcia ognisk, harcerzy podczas gier terenowych i ciekawych miejsc na pewno zainteresują, zwłaszcza, jeśli są dobrze wykonane. Dodatkowo spełnia rolę kroniki do której w każdej chwili można zajrzeć i przypomnieć sobie wspaniałe chwile. 
 Promocja naszej jednostki czy nawet samej idei harcerstwa jest bardzo ważna, bez promocji i rozgłosu w harcerstwie nie będzie przybywać tak wiele nowych osób. Dzisiejszy świat pozwala nam wykonywać wiele różnych środków i młodych ludzi trzeba przekonać do tego, że warto zostać harcerzem. 
 
-Chociaż żadna promocja nie zastąpi tego, że musimy przede wszystkim działać prężnie i w przemyślany sposób, aby osiągnąć sukces.
- 
-Juliusz Idzikowski"
+Chociaż żadna promocja nie zastąpi tego, że musimy przede wszystkim działać prężnie i w przemyślany sposób, aby osiągnąć sukces."
         }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
         }
 }

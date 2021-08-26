@@ -44,11 +44,14 @@ HPSPage {
 Swoją służbę wojskową rozpoczął w 1914 roku wstępując do 1 Brygady Legionów, którą dowodził sam Józef Piłsudski. Następnie po zakończeniu I Wojny Światowej, kontynuował swoją karierę, brał między innymi udział w wojnie polsko - bolszewickiej (1919-1920). Po klęsce jego oddziałów w Kampanii Wrześniowej (1939), przedostał się do Francji, gdzie został wyznaczony emisariuszem Rządu i Naczelnego Wodza w kraju. Po powrocie do Polski działał w Związku Walki Zbrojnej, następnie został wyznaczony dowódcą Kedywu Komendy Głównej Armii Krajowej. Był odpowiedzialny za organizację wykonywania wyroków na najgroźniejszych niemieckich oficerach, takich jak brawurowa akcja likwidacji Franza Kutschery, dowódcy SS i Gestapo w Dystrykcie Warszawskim.
 
 Po upadku Powstania Warszawskiego został aresztowany przez NKWD pod fałszywym nazwiskiem. Został zesłany na Ural gdzie przebywał, aż do 1947 roku, w którym powrócił do Polski. Nie chciał już kontynuować walki konspiracyjnej. Ujawnił się w 1948 roku podczas amnestii. Mimo to, że podał swoje prawdziwe dane został wpisany do ewidencji Rejonowej Komendy Uzupełnień pod przybranym nazwiskiem. Po kolejnej próbie podania w RKU swoich prawdziwych danych został aresztowany przez UB. Był wielokrotnie torturowany, ale wciąż odmawiał współpracy.
-W wyniku nieuczciwego procesu został skazany na śmierć za wydawanie rozkazów likwidacji \"sojuszniczych\" partyzantów radzieckich. Wyrok śmierci przez powieszenie wykonano 24 lutego 1953 roku.
-
-Juliusz Idzikowski
-
-"
+W wyniku nieuczciwego procesu został skazany na śmierć za wydawanie rozkazów likwidacji \"sojuszniczych\" partyzantów radzieckich. Wyrok śmierci przez powieszenie wykonano 24 lutego 1953 roku."
+            }
+        ElementListyNoImage
+        {
+            Layout.fillWidth: true
+            alignH: Text.AlignHCenter
+            format: Text.PlainText
+            header:"Juliusz Idzikowski"
         }
     }
 }

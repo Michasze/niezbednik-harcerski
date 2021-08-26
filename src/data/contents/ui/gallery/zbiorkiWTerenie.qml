@@ -71,9 +71,13 @@ Czy to podejście jest harcerskie? Moim zdaniem nie. I gdybym był drużynowym t
 
 Wielu harcerzy po usłyszeniu o tym, że większość zbiórek, nawet tych zimowych, odbywa się na dworze reaguje bardzo entuzjastycznie i stwierdza, że chciałoby brać udział w takich zbiórkach. Skoro harcerze chcą brać udział w takich zbiórkach to trzeba je robić! 
 
-A zatem: Druhu drużynowy! Druhu zastępowy! Przygotuj swoją następną zbiórkę na dworze!
-
-Juliusz Idzikowski"
+A zatem: Druhu drużynowy! Druhu zastępowy! Przygotuj swoją następną zbiórkę na dworze!"
         }
+        ElementListyNoImage {
+           Layout.fillWidth: true
+           alignH: Text.AlignHCenter
+           format: Text.PlainText
+           header: "Juliusz Idzikowski"
+         }
         }
 }
