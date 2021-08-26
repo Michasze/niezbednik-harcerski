@@ -28,30 +28,51 @@ HPSPage {
     title: "Geoguessr"
     ColumnLayout {
         width: page.width
+
 ElementListyNoImage
         {
-           color: "Green"
-           header: "GeoGuessr to gra wykorzystująca aplikację Google Street View. Zasada działania jest bardzo prosta, wybieramy daną kategorię np.: Polska, Rosja, zabytki, świat lub wiele innych. Gra przenosi nas w losowe miejsce w danej kategorii, a następnie naszym zadaniem jest na mapie zaznaczyć gdzie jesteśmy. Im bliżej prawidłowej lokacji zaznaczymy, tym więcej punktów otrzymamy.
-"
+            color: "green"
+           header: "O aplikacji"
          }
 ElementListyNoImage
         {
-           color: "Green"
+           color: "black"
+           header: "GeoGuessr to gra wykorzystująca aplikację Google Street View. Zasada działania jest bardzo prosta, wybieramy daną kategorię np.: Polska, Rosja, zabytki, świat lub wiele innych. Gra przenosi nas w losowe miejsce w danej kategorii, a następnie naszym zadaniem jest na mapie zaznaczyć gdzie jesteśmy. Im bliżej prawidłowej lokacji zaznaczymy, tym więcej punktów otrzymamy."
+         }
+ElementListyNoImage
+        {
+           color: "green"
+           header: "Jak wykorzystać aplikację?"
+         }
+ElementListyNoImage
+        {
+           color: "black"
            header: "Gra jest świetną odskocznią do wykorzystania podczas zdalnych zbiórek drużyny lub zastępu. Pozwala na przećwiczenie spostrzegawczości naszych harcerzy, a ta z pewnością przyda się podczas stacjonarnych zajęć z terenoznawstwa. Pomaga poznać różne kraje, części Polski czy roślinność danego regionu, a to wszystko przez chęci jak najdokładniejszego oznaczenia swojej lokacji."
          }
 ElementListyNoImage
         {
-           color: "Green"
+           color: "black"
            header: "Może być świetnym sposobem na współzawodnictwo między zastępami, podczas zdalnych zbiórek. Należy wtedy założyć kilka kont (chociaż to może być problematyczne) lub grać “turami”."
+         }
+
+ElementListyNoImage
+        {
+           color: "green"
+           header: "Cena"
          }
 ElementListyNoImage
         {
-           color: "Green"
+           color: "black"
            header: "Zabawa jest płatna, ale możemy wykorzystać darmowy okres próbny, a następnie anulować subskrypcję (konieczne jest podanie numeru karty płatniczej). Do grania wspólnie najłatwiej wykorzystać udostępnianie ekranu na discordzie lub innej platformie."
          }
 ElementListyNoImage
         {
-           color: "Green"
+           color: "green"
+           header: "Przygotowanie do zbiórki"
+         }
+ElementListyNoImage
+        {
+           color: "black"
            header: "Przed pokazaniem tej gry warto ją oczywiście sprawdzić samemu tak, abyśmy łatwiej kierowali współzawodnictwem naszych harcerzy. Możemy też w ramach zbiórki obejrzeć filmik na YouTube gracza GeoWizard, naprawdę jest on czarodziejem tej gry."
          }
 ElementListyNoImage
