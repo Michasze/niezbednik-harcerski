@@ -130,6 +130,7 @@ HPSPage {
            Layout.fillWidth: true
            alignH: Text.AlignHCenter
            format: Text.PlainText
+            color: "cornflowerblue"
            header: "Juliusz Idzikowski"
          }
     }

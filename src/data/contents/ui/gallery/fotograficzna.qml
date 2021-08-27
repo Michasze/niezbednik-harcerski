@@ -37,21 +37,21 @@ ElementListyNoImage
 }
 ElementListyNoImage
 {
-  header: "Sposób pierwszy:
+  header: "<b>Sposób pierwszy:</b>
 
 Opowiadamy historię. Tworzymy historyjkę składająca się ze zdjęć. Ważnym jest, aby historia miała zachowaną w miarę logiczną spójność.<br><br>
 
 *Dobrze mieć przygotowany scenariusz przed zbiórką, ale modyfikować go wedle pomysłów i możliwości harcerzy."
-   color: "darkcyan"
+   color: "black"
 }
 ElementListyNoImage
 {
-  header: "Sposób drugi:
+  header: "<b>Sposób drugi:</b>
 
 Wykonujemy zdjęcia na różne sposoby, Lord Vader na Mustafar (panorama pokoju okraszona czerwonym światłem) lub Hełmu Detale (zdjęcie makro).
 
 *Tutaj warto połączyć to z pracą np. w Canvie, tak żeby każdy mógł obrobić swoje zdjęcie. Kontrolę nad pracą w Canvie możemy mieć dzięki funkcji streamingu na discordzie."
-  color: "Brown"
+  color: "black"
 }
   ElementListyNoImage
   {

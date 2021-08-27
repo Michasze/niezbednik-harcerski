@@ -20,60 +20,47 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Mapa miejsc wędrówkowych"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
-
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
      ElementListyNoImage
      {
         color: "royalblue"
         align: 0
-        header: "<p>A komu to potrzebne?</p>"
+        header: "A komu to potrzebne?"
      }
      ElementListyNoImage
      {
         color: "black"
         align: 0
-        header: "<p>Mapa miejsc wędrówkowych w obrębie jednej drużyny nie jest zbyt użyteczna. Zazwyczaj większość osób w drużynie zna często odwiedzane miejsca. Jednak, jak się okazało, w moim związku drużyn nie wszyscy znali te same miejsca w które można się wybrać na wędrówkę. Podczas jednej z rozmów wpadłem na pomysł stworzenia mapy miejsc wędrówkowych, która pozwoliłaby nam na wymianę informacji.</p>"
+        header: "Mapa miejsc wędrówkowych w obrębie jednej drużyny nie jest zbyt użyteczna. Zazwyczaj większość osób w drużynie zna często odwiedzane miejsca. Jednak, jak się okazało, w moim związku drużyn nie wszyscy znali te same miejsca w które można się wybrać na wędrówkę. Podczas jednej z rozmów wpadłem na pomysł stworzenia mapy miejsc wędrówkowych, która pozwoliłaby nam na wymianę informacji."
         alignH: Text.AlignJustify
      }
      ElementListyNoImage
      {
         color: "royalblue"
         align: 0
-        header: "<p>Gdzie stworzyć mapę?</p>"
+        header: "Gdzie stworzyć mapę?"
      }
      ElementListyNoImage
      {
         color: "black"
         align: 0
         alignH: Text.AlignJustify
-        header: "<p>Najlepiej mieć jakiś wygodny “nośnik” na którym stworzymy mapę. Oczywiście, może to być np. duża mapa powieszona w biurze komendy hufca, ale czy ktoś będzie ją wykorzystywać? Za każdym razem kiedy trzeba będzie ją uzupełnić, musisz pojawić się w biurze. A stos kartek przyczepianych do niej będzie zatrważał serca minimalistów.</p> "
+        header: "Najlepiej mieć jakiś wygodny “nośnik” na którym stworzymy mapę. Oczywiście, może to być np. duża mapa powieszona w biurze komendy hufca, ale czy ktoś będzie ją wykorzystywać? Za każdym razem kiedy trzeba będzie ją uzupełnić, musisz pojawić się w biurze. A stos kartek przyczepianych do niej będzie zatrważał serca minimalistów."
      }
      ElementListyNoImage
      {
         color: "black"
         align: 0
         alignH: Text.AlignJustify
-        header: "<p>Dużo lepszym rozwiązaniem wydaje się stworzenie wirtualnej mapy. Możesz stworzyć własną stronę internetową, ale jeśli nie masz takich umiejętności, nic straconego.
-Strona/aplikacja Moje Mapy jest wręcz stworzona do takiego wykorzystania. Oferuje nam możliwość nanoszenia punktów na mapę, tworzenia do nich opisów i oznaczania ich kolorystycznie.</p>"
+        header: "Dużo lepszym rozwiązaniem wydaje się stworzenie wirtualnej mapy. Możesz stworzyć własną stronę internetową, ale jeśli nie masz takich umiejętności, nic straconego. Strona/aplikacja Moje Mapy jest wręcz stworzona do takiego wykorzystania. Oferuje nam możliwość nanoszenia punktów na mapę, tworzenia do nich opisów i oznaczania ich kolorystycznie."
      }
      ElementListyNoImage
      {
@@ -160,11 +147,17 @@ Strona/aplikacja Moje Mapy jest wręcz stworzona do takiego wykorzystania. Oferu
         Controls.Label
         {
             text: "<a href=\"https://www.google.com/maps/d/u/0/edit?mid=1hNgVm4Iz8dIQRquf3U7qXYlvGWdiJTBh&usp=sharing\">link</a>"
+            Layout.alignment: Qt.AlignHCenter
             font.pointSize: invisibleSlider.value
             onLinkActivated: Qt.openUrlExternally(link)
         }
-
+        ElementListyNoImage
+        {
+            Layout.fillWidth: true
+            alignH: Text.AlignHCenter
+            format: Text.PlainText
+            color: "royalblue"
+            header:"Juliusz Idzikowski"
+        }
             }
-
-
 }

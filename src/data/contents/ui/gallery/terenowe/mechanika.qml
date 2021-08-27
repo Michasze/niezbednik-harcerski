@@ -25,7 +25,6 @@ import ".."
 HPSPage {
         Layout.fillHeight: true
         title: qsTr("Mechanika")
-     actions {
         ColumnLayout {
         id: rozdzial
         ElementListyNoImage
@@ -81,7 +80,8 @@ HPSPage {
             color: "black"
             alignH: Text.AlignJustify
             header: "<p>Wieże z Assassin's Creed, które pozwalają odkryć co jeszcze ciekawego można znaleźć w okolicy? Nic trudnego wystarczy znaleźć jakieś ciekawe miejsce i umieścić tam fragment mapy, który odkryje przed patrolem świat znaków zapytania.</p>"
-        }        ElementListyNoImage
+        }
+        ElementListyNoImage
         {
             color: "green"
             header: "Podejmowanie decyzji"

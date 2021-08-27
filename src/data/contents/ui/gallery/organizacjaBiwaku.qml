@@ -251,10 +251,14 @@ ElementListyNoImage
         color: "black"
         align: 0
         alignH: Text.AlignJustify
-        header: "<p>Druhno! Druhu! Poradnik ten powstał z myślą o ludziach, którzy nie mają jeszcze pełnej wiedzy odnośnie takich przedsięwzięć, a chcieliby samemu bądź z czyjąś drobną pomocą zrobić dla innych coś więcej. Mam wielką nadzieję, że uda Ci się przeprowadzić biwak tak, jak to planowałeś i że ten poradnik choć trochę Ci w tym pomógł. Może dowiedziałeś się czegoś nowego? Może zmienisz coś w swoim działaniu? Tak czy inaczej, życzę Ci jak najlepiej. Powodzenia! Czuwaj!</p>
-phm. Beniamin Marek"
+        header: "<p>Druhno! Druhu! Poradnik ten powstał z myślą o ludziach, którzy nie mają jeszcze pełnej wiedzy odnośnie takich przedsięwzięć, a chcieliby samemu bądź z czyjąś drobną pomocą zrobić dla innych coś więcej. Mam wielką nadzieję, że uda Ci się przeprowadzić biwak tak, jak to planowałeś i że ten poradnik choć trochę Ci w tym pomógł. Może dowiedziałeś się czegoś nowego? Może zmienisz coś w swoim działaniu? Tak czy inaczej, życzę Ci jak najlepiej. Powodzenia! Czuwaj!</p>"
+     }
+ElementListyNoImage
+     {
+        color: "royalblue"
+        align: 0
+        alignH: Text.AlignHCenter
+        header: "phm. Beniamin Marek"
      }
             }
-
-
 }

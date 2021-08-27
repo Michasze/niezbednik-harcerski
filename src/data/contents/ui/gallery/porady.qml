@@ -31,7 +31,7 @@ HPSPage
         {
             color: "green"
             textSize: rozdzial.naglowekSize
-            header: "<h3>Porady i harc tricki na wyjazdy harcerskie:</h3>"
+            header: "<b>Porady i harc tricki na wyjazdy harcerskie:</b>"
         }
         ElementListyNoImage
         {
@@ -95,6 +95,7 @@ HPSPage
                     Layout.fillWidth: true
                     alignH: Text.AlignHCenter
                     format: Text.PlainText
+                    color: "green"
                     header:"Julia “Inka” Karpowicz"
         }
         }

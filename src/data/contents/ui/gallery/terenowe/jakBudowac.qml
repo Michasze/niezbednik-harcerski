@@ -31,7 +31,7 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            header: "<h3>Zasady dobrej fabuły:</h3>"
+            header: "<b>Zasady dobrej fabuły:</b>"
         }
         ElementListyNoImage
         {
@@ -176,12 +176,7 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            header: "<h3>Jak wykorzystywać stroje na zbiórkach?</h3>"
-        }
-        ElementListyNoImage
-        {
-            color: "green"
-            header: "Spójna z mechaniką gry i ze samą sobą."
+            header: "Jak wykorzystywać stroje na zbiórkach?"
         }
         ElementListyNoImage
         {

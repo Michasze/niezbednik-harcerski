@@ -201,8 +201,8 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            alignH: Text.AlignJustify
-            header: "<p>Jakie mogą być rodzaje punktów?</p>"
+            alignH: Text.AlignHCenter
+            header: "Jakie mogą być rodzaje punktów?"
         }
                 HPSLista
         {
@@ -231,8 +231,8 @@ HPSPage {
         ElementListyNoImage
         {
             color: "green"
-            alignH: Text.AlignJustify
-            header: "<p>Koordynaty GPS - o czym należy pamiętać:</p>"
+            alignH: Text.AlignHCenter
+            header: "Koordynaty GPS - o czym należy pamiętać:"
         }
         HPSLista
         {
