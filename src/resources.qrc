@@ -357,6 +357,7 @@
         <file alias="contents/ui/img/snapchat_logo.svg">./data/contents/ui/img/snapchat_logo.svg</file>
         <file alias="contents/ui/img/snapchat_symbolic.svg">./data/contents/ui/img/snapchat_symbolic.svg</file>
         <file alias="contents/ui/img/hand.svg">./data/contents/ui/img/hand.svg</file>
+        <file alias="contents/ui/img/go-home_symbolic.svg">./data/contents/ui/img/go-home_symbolic.svg</file>
         <file alias="contents/ui/img/snapchatHPS.jpg">./data/contents/ui/img/snapchatHPS.jpg</file>
         <file alias="contents/ui/img/szyfry/czeko.svg">./data/contents/ui/img/szyfry/czeko.svg</file>
         <file alias="contents/ui/img/szyfry/kaczor.svg">./data/contents/ui/img/szyfry/kaczor.svg</file>

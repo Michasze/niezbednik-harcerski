@@ -18,7 +18,7 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 2.0 as Controls
+import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
 import "gallery"
@@ -28,5 +28,17 @@ BaseApp {
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
+    }
+    Controls.RoundButton {
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        icon.source: "image://icons/go-home.svg"
+        visible: pageStack.layers.depth != 1
+        highlighted: true
+        onClicked:
+        {
+            pageStack.layers.pop()
+        }
+//        color: "Blue"
     }
 }
