@@ -396,8 +396,10 @@ topContent: [ColumnLayout {
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
   Layout.rightMargin: 10
   Layout.leftMargin: 10
-ElementListyNoImage {
+ElementListy {
     header: "O aplikacji"
+    ikona: "image://icons/documentinfo.svg,white"
+    Layout.maximumHeight: 60
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
         MouseArea {
     anchors.fill: parent
@@ -407,8 +409,10 @@ ElementListyNoImage {
       globalDrawer.close()
     }  }
         }
-ElementListyNoImage {
+ElementListy {
     header: "Social media"
+    ikona: "image://icons/snapchat_symbolic.svg,white"
+    Layout.maximumHeight: 60
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
         MouseArea {
     anchors.fill: parent
@@ -418,8 +422,10 @@ ElementListyNoImage {
       globalDrawer.close()
     }  }
         }
-ElementListyNoImage {
+ElementListy {
     header: "Testerzy"
+    ikona: "image://icons/user.svg,white"
+    Layout.maximumHeight: 60
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
         MouseArea {
     anchors.fill: parent
@@ -430,8 +436,10 @@ ElementListyNoImage {
     }
         }
       }
-ElementListyNoImage {
+ElementListy {
     header: "Pomocne dłonie"
+    ikona: "image://icons/hand.svg,white"
+    Layout.maximumHeight: 60
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
         MouseArea {
     anchors.fill: parent
@@ -441,8 +449,10 @@ ElementListyNoImage {
       globalDrawer.close()
     }    }
   }
-ElementListyNoImage {
+ElementListy {
     header: "Ustawienia"
+    ikona: "image://icons/settings.svg,white"
+    Layout.maximumHeight: 60
   Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
         MouseArea {
     anchors.fill: parent
