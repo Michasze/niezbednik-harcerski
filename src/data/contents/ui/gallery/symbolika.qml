@@ -19,20 +19,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
 HPSPage
 {
  id: page
  title: qsTr("Symbolika")
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
     ColumnLayout {
      id: mainList
 
@@ -44,6 +36,11 @@ HPSPage
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaKrzyz.qml"))
     }
         }
+    HPSSeparator
+    {
+        Layout.topMargin: 10
+        Layout.fillWidth: true
+    }
         ElementListy {
     header: "WOSM"
     ikona: "qrc:/contents/ui/img/wosm_tlo.svg"
@@ -52,6 +49,11 @@ HPSPage
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWosm.qml"))
     }
         }
+    HPSSeparator
+    {
+        Layout.topMargin: 10
+        Layout.fillWidth: true
+    }
         ElementListy {
     header: "WAGGGS"
     ikona: "qrc:/contents/ui/img/wagggs.svg"
@@ -60,6 +62,11 @@ HPSPage
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWagggs.qml"))
     }
         }
+    HPSSeparator
+    {
+        Layout.topMargin: 10
+        Layout.fillWidth: true
+    }
         ElementListy {
     header: "Watra wędrownicza"
     ikona: "qrc:/contents/ui/img/watra.svg"

@@ -30,6 +30,7 @@ HPSPage
         ElementListy {
             id: postacie
             height: 150
+            Layout.bottomMargin: 10
              RowLayout {
                  anchors.fill: parent
                  id: row
@@ -58,7 +59,10 @@ HPSPage
     onClicked: pageStack.push(Qt.resolvedUrl("postacie.qml"))
     }
         }
-
+    HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
 KartaStronaIkona { 
         header: "Harcerstwo Związku Narodowego Polskiego"
         opis: "Organizacja harcerska w Stanach Zjednoczonych"

@@ -19,7 +19,6 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.14 as Kirigami
 import Data 1.0
 
 HPSPage
@@ -31,22 +30,7 @@ HPSPage
     {
         id: hpsSettings
     }
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
-        width: pageFoto.width
-        spacing: 20
                 ElementListyNoImage
         {
             color: "green"
@@ -57,7 +41,7 @@ Lista potrzebnych rzeczy:</h4>"
         {
             color: "Brown"
             align: 1
-            header: "<p>Jedzenie:</p>"
+            header: "Jedzenie:"
         }
 
             Repeater
@@ -72,7 +56,7 @@ Lista potrzebnych rzeczy:</h4>"
         {
             color: "royalblue"
             align: 1
-            header: "<p>Spanie:</p>"
+            header: "Spanie:"
         }
 
             Repeater
@@ -87,7 +71,7 @@ ElementListyNoImage
         {
             color: "darkolivegreen"
             align: 1
-            header: "<p>Ubrania:</p>"
+            header: "Ubrania:"
         }
 Repeater
             {
@@ -106,7 +90,7 @@ ElementListyNoImage
         {
             color: "plum"
             align: 1
-            header: "<p>Higiena:</p>"
+            header: "Higiena:"
         }
 Repeater
             {
@@ -123,7 +107,7 @@ ElementListyNoImage
         {
             color: "lightseagreen"
             align: 1
-            header: "<p>Leki:</p>"
+            header: "Leki:"
         }
                 HPSLista {
             label: "*należy zgłosić konieczność ich przyjmowania drużynowemu"
@@ -132,7 +116,7 @@ ElementListyNoImage
         {
             color: "indianred"
             align: 1
-            header: "<p>Ważne:</p>"
+            header: "Ważne:"
         }
 Repeater
             {

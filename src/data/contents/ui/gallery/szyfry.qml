@@ -32,6 +32,10 @@ KartaStronaNoImage {
         opis: "Opracował: Piotr Parkita HO"
         adres: "malaKsiega.qml"
     }
+    HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
 KartaStronaNoImage { 
         header: "Program szyfrujący"
         kolor: "Brown"

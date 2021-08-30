@@ -19,20 +19,11 @@
 
 import QtQuick 2.6
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
 HPSPage {
     id: page
     title: qsTr("Prawo harcerskie")
-
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
 
 ColumnLayout
 {
@@ -104,7 +95,5 @@ KartaStronaIkona {
         opis: ""
         adres: "prawoSK.qml"
     }
-
-
         }
     }

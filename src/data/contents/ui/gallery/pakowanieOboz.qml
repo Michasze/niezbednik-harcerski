@@ -19,26 +19,12 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 
 {
     id: page
     title: "Pakowanie na obóz"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
         ColumnLayout {
     ElementListyNoImage {
         color: "black"
@@ -47,13 +33,13 @@ HPSPage
                 ElementListyNoImage
         {
             color: "green"
-            header: "<h3>Lista potrzebnych rzeczy:</h3>"
+            header: "<b>Lista potrzebnych rzeczy:</b>"
         }
                 ElementListyNoImage
         {
             color: "Brown"
             align: 1
-            header: "<p>Jedzenie:</p>"
+            header: "Jedzenie:"
         }
 Repeater
             {
@@ -68,7 +54,7 @@ Repeater
         {
             color: "royalblue"
             align: 1
-            header: "<p>Spanie:</p>"
+            header: "Spanie:"
         }
 Repeater
             {
@@ -81,7 +67,7 @@ ElementListyNoImage
         {
             color: "darkolivegreen"
             align: 1
-            header: "<p>Ubrania:</p>"
+            header: "Ubrania:"
         }
 Repeater
             {
@@ -110,7 +96,7 @@ ElementListyNoImage
         {
             color: "plum"
             align: 1
-            header: "<p>Higiena:</p>"
+            header: "Higiena:"
         }
 Repeater
             {
@@ -130,7 +116,7 @@ ElementListyNoImage
         {
             color: "darkkhaki"
             align: 1
-            header: "<p>Obozowe/Biegowe/Pionierskie:</p>"
+            header: "Obozowe/Biegowe/Pionierskie:"
         }
 Repeater
             {
@@ -148,7 +134,7 @@ ElementListyNoImage
         {
             color: "lightseagreen"
             align: 1
-            header: "<p>Apteczka:</p>"
+            header: "Apteczka:"
         }
 Repeater
             {
@@ -160,7 +146,7 @@ ElementListyNoImage
         {
             color: "indianred"
             align: 1
-            header: "<p>Inne:</p>"
+            header: "Inne:"
         }
 Repeater
             {

@@ -20,19 +20,12 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage {
     id: page
     Layout.fillWidth: true
     title: "Pakowanie"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        visible: !Kirigami.Settings.isMobile ? true : false
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
+
     ColumnLayout {
         id: mainlayout
         KartaStronaNoImage { 
@@ -49,7 +42,11 @@ HPSPage {
         ikona: "image://icons/namiot_dycha.svg,white"
         opis: "Co zabrać na obóz?"
         adres: "pakowanieOboz.qml"
-} 
+}
+    HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
         KartaStronaIkona {
         header: "Wyjazd rowerowy"
         ikona: "image://icons/rower.svg,white"

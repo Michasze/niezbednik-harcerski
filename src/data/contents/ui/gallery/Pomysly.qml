@@ -28,8 +28,7 @@ HPSPage {
 
 ColumnLayout
 {
-    spacing: 15
-KartaStronaIkona { 
+    KartaStronaIkona {
         header: "Zbiórka fotograficzna"
         opis: "Jak przygotować zbiórkę fotograficzną online?"
         ikona: "qrc:/contents/ui/img/camera-photo.svg"

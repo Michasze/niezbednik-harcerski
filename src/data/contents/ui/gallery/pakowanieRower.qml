@@ -19,9 +19,8 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 import Data 1.0
-
+import org.kde.kirigami 2.11 as Kirigami
 HPSPage
 
 {
@@ -31,23 +30,7 @@ HPSPage
     {
         id: hpsSettings
     }
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
-
         ColumnLayout {
-        width: pageFoto.width
-        spacing: 20
     ElementListyNoImage {
         color: "black"
         header: "Obóz kolarski z Polski do Toskanii na około 2-4 tygodnie. Sprawdzi się również na obóz w Polsce, chociaż wtedy nie będzie potrzebny paszport."
@@ -56,7 +39,7 @@ HPSPage
         {
             color: "Darkolivegreen"
             align: 1
-            header: "<p>Coś do ubrania i nie tylko:</p>"
+            header: "Coś do ubrania i nie tylko:"
         }
             Repeater
             {
@@ -86,7 +69,7 @@ HPSPage
         {
             color: "royalblue"
             align: 1
-            header: "<p>Sprzęt turystyczny:</p>"
+            header: "Sprzęt turystyczny:"
         }
             Repeater
             {
@@ -124,7 +107,7 @@ ElementListyNoImage
         {
             color: "Indianred"
             align: 1
-            header: "<p>Legitymacje:</p>"
+            header: "Legitymacje:"
         }
             Repeater
             {
@@ -136,7 +119,7 @@ ElementListyNoImage
         {
             color: "Green"
             align: 1
-            header: "<p>To wszystko z powodzeniem mieści się w sakwach i w jamniku, na bagażniku roweru (niczego nie wieziemy na plecach), gdyby jednak były problemy pomożemy się zapakować</p>"
+            header: "To wszystko z powodzeniem mieści się w sakwach i w jamniku, na bagażniku roweru (niczego nie wieziemy na plecach), gdyby jednak były problemy pomożemy się zapakować"
         }
     Component {
         id: przedmiotComponent
