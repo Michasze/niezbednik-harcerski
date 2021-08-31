@@ -20,21 +20,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
         id: rozdzial6
         Layout.fillHeight: true
         title: qsTr("Cechy i zasady dobrej zbiórki")
-     actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }       ColumnLayout {
+        ColumnLayout {
         ElementListyNoImage
         {
             color: "#FF003c00"
@@ -43,7 +35,7 @@ HPSPage {
         ElementListyNoImage
         {
             color: "royalblue"
-            header: "<h3>Cechy dobrej zbiórki:</h3>"
+            header: "<b>Cechy dobrej zbiórki:</b>"
         }
         ElementListyNoImage
         {
