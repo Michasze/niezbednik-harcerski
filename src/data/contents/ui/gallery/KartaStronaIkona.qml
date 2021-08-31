@@ -72,6 +72,8 @@ import QtQuick.Layouts 1.2
                         }
                         HPSSeparator {
                             Layout.fillWidth: true
+                            color: "#7a7979"
+                            Layout.rightMargin: 10
                         }
                         Controls.Label {
                             Layout.fillWidth: true

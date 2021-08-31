@@ -67,7 +67,9 @@ import org.kde.kirigami 2.4 as Kirigami
                         }
                         HPSSeparator {
                             Layout.leftMargin: 10
+                            Layout.rightMargin: 10
                             Layout.fillWidth: true
+                            color: "#7a7979"
                         }
                         Controls.Label {
                             Layout.fillWidth: true
@@ -79,15 +81,5 @@ import org.kde.kirigami 2.4 as Kirigami
                             text: hznpRectangle.opis
                         }
                     }
-                  /*  Controls.RoundButton {
-                        Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
-                        Layout.columnSpan: 2
-                        radius: 4
-                        text: qsTr("Otwórz")
-                        highlighted: true
-                        Layout.rightMargin: 10
-                        Layout.bottomMargin: 10
-                        onClicked: pageStack.push(Qt.resolvedUrl("HZNP.qml"))
-                    } */
                 }
                 }
