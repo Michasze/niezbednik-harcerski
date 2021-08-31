@@ -26,27 +26,9 @@ HPSPage {
     title: "Poradniki harcerskie"
     ColumnLayout {
         id: mainlayout
-KartaStronaNoImage {
-        header: "Jak organizować gry terenowe?"
-        opis: ""
-        adres: "terenowe.qml"
-    }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage {
-        header: "Porady i harc tricki na wyjazdy harcerskie"
-        opis: "Autor: Julia “Inka” Karpowicz"
-        adres: "porady.qml"
-    }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
     header: "Harcerska geoskrytka"
-    opis: ""
+    opis: "pwd. Juliusz Idzikowski"
     ikona: "image://icons/geo2.svg,white"
     adres: "geo.qml"
     }
@@ -55,9 +37,27 @@ KartaStronaIkona {
         Layout.fillWidth: true
     }
 KartaStronaNoImage {
-        header: "Jak stworzyć mapę miejsc wędrówkowych?"
-        opis: ""
-        adres: "mapaMiejsc.qml"
+    header: "Jak organizować gry terenowe?"
+    opis: "pwd. Juliusz Idzikowski"
+    adres: "terenowe.qml"
+    }
+        HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
+KartaStronaNoImage {
+    header: "Porady i harc tricki na wyjazdy harcerskie"
+    opis: "Julia “Inka” Karpowicz"
+    adres: "porady.qml"
+    }
+     HPSSeparator
+    {
+        Layout.fillWidth: true
+    }
+KartaStronaNoImage {
+    header: "Jak stworzyć mapę miejsc wędrówkowych?"
+    opis: "pwd. Juliusz Idzikowski"
+    adres: "mapaMiejsc.qml"
     }
         HPSSeparator
     {
@@ -65,9 +65,9 @@ KartaStronaNoImage {
     }
 
 KartaStronaNoImage {
-        header: "Ultralight"
-        opis: ""
-        adres: "ultralight.qml"
+    header: "Ultralight"
+    opis: "pwd. Juliusz Idzikowski"
+    adres: "ultralight.qml"
     }
         HPSSeparator
     {
@@ -75,9 +75,9 @@ KartaStronaNoImage {
     }
 
 KartaStronaNoImage { 
-        header: "Jak spać ciepło podczas biwaków i wędrówek?"
-        opis: ""
-        adres: "jakSpac.qml"
+    header: "Jak spać ciepło podczas biwaków i wędrówek?"
+    opis: "pwd. Juliusz Idzikowski"
+    adres: "jakSpac.qml"
     }
 
 }
