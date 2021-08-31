@@ -69,7 +69,7 @@ import org.kde.kirigami 2.4 as Kirigami
                             Layout.leftMargin: 10
                             Layout.rightMargin: 10
                             Layout.fillWidth: true
-                            color: "#7a7979"
+                            color: "#615f5f"
                         }
                         Controls.Label {
                             Layout.fillWidth: true
