@@ -42,10 +42,6 @@ KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/HS.svg"
         adres: "PoradnikHS.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 
     KartaStronaIkona {
         header: "Poradnik dla zastępowych zastępów wędrowniczych"

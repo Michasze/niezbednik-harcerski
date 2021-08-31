@@ -27,75 +27,42 @@ HPSPage {
     title: qsTr("Artykuły")
 ColumnLayout
 {
-    spacing: 15
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Fazy rozwoju drużynowego"
         opis: "Juliusz Idzikowski"
         adres: "pracaNauczyciela.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Zbiórki w terenie"
         opis: "Juliusz Idzikowski"
         adres: "zbiorkiWTerenie.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Jak promować harcerstwo?"
         opis: "Juliusz Idzikowski"
         adres: "promocja.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Tężyzna fizyczna"
         opis: "Juliusz Idzikowski"
         adres: "tezyzna.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Ekwipunek harcerski"
         opis: "Juliusz Idzikowski"
         adres: "nowoczesny.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Dlaczego kadra ma własne namioty?"
         opis: "Juliusz Idzikowski"
         adres: "kadraNamioty.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Zjazd ZHP w Bydgoszczy - 30 lat minęło"
         opis: "Ryszard Pacławski"
         adres: "zjazd.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage { 
+KartaStronaNoImage {
         header: "Prawie Wszystko o sprawnościach"
         opis: "Janusz Sikorski"
         adres: "prawie.qml"

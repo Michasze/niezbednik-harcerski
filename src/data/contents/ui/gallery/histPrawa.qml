@@ -32,19 +32,11 @@ KartaStronaIkona {
         opis: ""
         adres: "prawoTur.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/skaut.jpg"
         header: "Prawo skautowe"
         opis: "Opublikowane przez Andrzeja Małkowskiego"
         adres: "prawoSkaut.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 KartaStronaNoImage {
         header: "Prawo skautowe"

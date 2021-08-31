@@ -30,45 +30,34 @@ HPSPage
 
         ElementListy {
     header: "Krzyż harcerski"
+    Layout.bottomMargin: 10
     ikona: "image://icons/krzyz.svg,white"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaKrzyz.qml"))
     }
         }
-    HPSSeparator
-    {
-        Layout.topMargin: 10
-        Layout.fillWidth: true
-    }
         ElementListy {
     header: "WOSM"
+    Layout.bottomMargin: 10
     ikona: "qrc:/contents/ui/img/wosm_tlo.svg"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWosm.qml"))
     }
         }
-    HPSSeparator
-    {
-        Layout.topMargin: 10
-        Layout.fillWidth: true
-    }
         ElementListy {
     header: "WAGGGS"
+    Layout.bottomMargin: 10
     ikona: "qrc:/contents/ui/img/wagggs.svg"
         MouseArea {
     anchors.fill: parent
     onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWagggs.qml"))
     }
         }
-    HPSSeparator
-    {
-        Layout.topMargin: 10
-        Layout.fillWidth: true
-    }
         ElementListy {
     header: "Watra wędrownicza"
+    Layout.bottomMargin: 10
     ikona: "qrc:/contents/ui/img/watra.svg"
         MouseArea {
     anchors.fill: parent

@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
@@ -28,17 +27,8 @@ HPSPage {
 
     title: "Stopnie Harcerskie - Rodło"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/mlodzik_oh.svg"

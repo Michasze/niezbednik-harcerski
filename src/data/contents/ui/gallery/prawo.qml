@@ -33,20 +33,12 @@ KartaStronaIkona {
         opis: ""
         adres: "prawoZHP.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhr.svg"
         header: "ZHR"
         opis: ""
         adres: "prawoZHR.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 
 KartaStronaIkona {
@@ -55,19 +47,11 @@ KartaStronaIkona {
         opis: ""
         adres: "prawoFSE.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/sh.svg"
         header: "Stowarzyszenie Harcerskie"
         opis: ""
         adres: "prawoSH.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/RR.svg"
@@ -75,19 +59,11 @@ KartaStronaIkona {
         opis: ""
         adres: "prawoRR.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/rodlo.svg"
         header: "Organizacja Harcerska „Rodło”"
         opis: ""
         adres: "prawoOH.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/tarcza.svg"

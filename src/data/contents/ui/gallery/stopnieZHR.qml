@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
@@ -28,14 +27,6 @@ HPSPage {
 
     title: "Stopnie Harcerskie - ZHR"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
@@ -60,19 +51,19 @@ header: Controls.TabBar {
                          {
              ikona: "qrc:/contents/ui/img/ho.svg"
             color: "steelblue"
-            header: "Zuch pierwszej gwiazdki/Zuch wtajemniczony"
+            header: "Zuch pierwszej gwiazdki/\nZuch wtajemniczony"
                          }
                          ElementListy
                          {
              ikona: "qrc:/contents/ui/img/hr.svg"
             color: "steelblue"
-            header: "Zuch drugiej gwiazdki/Zuch zaradny"
+            header: "Zuch drugiej gwiazdki/\nZuch zaradny"
                          }
                          ElementListy
                          {
              ikona: "qrc:/contents/ui/img/zuchG.svg"
             color: "steelblue"
-            header: "Zuch trzeciej gwiazdki/Zuch opiekuńczy"
+            header: "Zuch trzeciej gwiazdki/\nZuch opiekuńczy"
                          }
         //HACK: ukryte prostokąty sprawiają że obydwie strony są takiej samej wysokości
         // przez co layout nie rozjeżdża się przy przesuwaniu
@@ -97,31 +88,36 @@ header: Controls.TabBar {
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Młodzik/Ochotniczka"
+            format: Text.PlainText
+            header: "Młodzik/\n Ochotniczka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Wywiadowca/Tropicielka"
+            format: Text.PlainText
+            header: "Wywiadowca/\n Tropicielka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Odkrywca/Pionierka"
+            format: Text.PlainText
+            header: "Odkrywca/\n Pionierka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Ćwik/Samarytanka"
+            format: Text.PlainText
+            header: "Ćwik/\n Samarytanka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Harcerz Rzeczypospolitej/ \n Harcerka Rzeczypospolitej"
+            format: Text.PlainText
+            header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
         }
 
                  }

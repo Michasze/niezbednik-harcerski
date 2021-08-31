@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
@@ -28,54 +27,50 @@ HPSPage {
 
     title: "Stopnie Harcerskie - SH"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
-
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Młodzik/Ochotniczka"
+            format: Text.PlainText
+            header: "Młodzik/\nOchotniczka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Wywiadowca/Tropicielka"
+            format: Text.PlainText
+            header: "Wywiadowca/\nTropicielka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Odkrywca/Pionierka"
+            format: Text.PlainText
+            header: "Odkrywca/\nPionierka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Ćwik/Samarytanka"
+            format: Text.PlainText
+            header: "Ćwik/\nSamarytanka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Harcerz Orli/Harcerka Orla"
+            format: Text.PlainText
+            header: "Harcerz Orli/\nHarcerka Orla"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
-            header: "Harcerz Rzeczypospolitej/ \n Harcerka Rzeczypospolitej"
+            format: Text.PlainText
+            header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
         }
 
     }

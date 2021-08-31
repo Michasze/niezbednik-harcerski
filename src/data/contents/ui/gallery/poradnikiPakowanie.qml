@@ -33,20 +33,12 @@ HPSPage {
         opis: "Co spakować na trzydniowy biwak w budynku?"
         adres: "pakowanieBiwaki.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
         KartaStronaIkona {
         header: "Obóz"
         ikona: "image://icons/namiot_dycha.svg,white"
         opis: "Co zabrać na obóz?"
         adres: "pakowanieOboz.qml"
 }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
         KartaStronaIkona {
         header: "Wyjazd rowerowy"
         ikona: "image://icons/rower.svg,white"

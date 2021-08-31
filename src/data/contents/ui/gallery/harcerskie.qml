@@ -32,49 +32,29 @@ KartaStronaIkona {
     ikona: "image://icons/geo2.svg,white"
     adres: "geo.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage {
+KartaStronaIkona {
     header: "Jak organizować gry terenowe?"
     opis: "pwd. Juliusz Idzikowski"
+    ikona: "image://icons/kosci.svg,white"
     adres: "terenowe.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaNoImage {
-    header: "Porady i harc tricki na wyjazdy harcerskie"
-    opis: "Julia “Inka” Karpowicz"
-    adres: "porady.qml"
-    }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
+KartaStronaIkona {
+    header: "Ultralight"
+    opis: "pwd. Juliusz Idzikowski"
+    ikona: "image://icons/plecak.svg,white"
+    adres: "ultralight.qml"
     }
 KartaStronaNoImage {
     header: "Jak stworzyć mapę miejsc wędrówkowych?"
     opis: "pwd. Juliusz Idzikowski"
     adres: "mapaMiejsc.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-
 KartaStronaNoImage {
-    header: "Ultralight"
-    opis: "pwd. Juliusz Idzikowski"
-    adres: "ultralight.qml"
+    header: "Porady i harc tricki na wyjazdy harcerskie"
+    opis: "Julia “Inka” Karpowicz"
+    adres: "porady.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-
-KartaStronaNoImage { 
+KartaStronaNoImage {
     header: "Jak spać ciepło podczas biwaków i wędrówek?"
     opis: "pwd. Juliusz Idzikowski"
     adres: "jakSpac.qml"

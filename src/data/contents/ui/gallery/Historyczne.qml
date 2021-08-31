@@ -59,29 +59,17 @@ HPSPage
     onClicked: pageStack.push(Qt.resolvedUrl("postacie.qml"))
     }
         }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-KartaStronaIkona { 
+KartaStronaIkona {
         header: "Harcerstwo Związku Narodowego Polskiego"
         opis: "Organizacja harcerska w Stanach Zjednoczonych"
         ikona: "qrc:/contents/ui/img/HZNP.svg"
         adres: "HZNP.qml"
     }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-    KartaStronaIkona { 
+    KartaStronaIkona {
         header: "Harcerz "
         opis: "Skąd pochodzi ten wyraz?"
         ikona: "qrc:/contents/ui/img/harcerz.svg"
         adres: "harcerz.qml"
-    }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStronaIkona {
         header: "Zlot ZHP w Spale"
@@ -89,19 +77,11 @@ KartaStronaIkona {
         ikona: "image://icons/spala.svg"
         adres: "spala.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-    KartaStrona { 
+    KartaStrona {
         header: "Kamień pamiątkowy"
         opis: "Ku czci harcerzy poległych w walce o polskość Wrocławia"
         ikona: "image://images/kamien.jpg"
         adres: "kamien.qml"
-    }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStrona {
         header: "Wyjątkowe krzyże harcerskie"
@@ -109,30 +89,17 @@ KartaStronaIkona {
         ikona: "image://images/krzyz2.jpg"
         adres: "wyjatkowe.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
     KartaStrona {
         header: "Lista znanych osób, które były w harcerstwie"
         ikona: "image://images/neilA.jpg"
         opis: "Znani harcerze i skauci"
         adres: "listaZnanych.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-
     KartaStronaIkona {
         header: "Dzień Myśli Braterskiej"
         ikona: "image://icons/dmb.svg,white"
         opis: "Historia święta skautów"
         adres: "DMB.qml"
-    }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStronaIkona {
         header: "Najważniejsze daty w historii harcerstwa"
@@ -140,20 +107,11 @@ KartaStronaIkona {
         opis: ""
         adres: "daty.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
     KartaStronaIkona {
         header: "Dawne roty przyrzeczenia"
         ikona: "image://icons/zwoj.svg,white"
         opis: ""
         adres: "histPrzyrzeczenia.qml"
-    }
-
-        HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStronaIkona {
         header: "Historyczne prawa harcerskie"

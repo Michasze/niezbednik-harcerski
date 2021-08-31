@@ -32,30 +32,17 @@ KartaStronaIkona {
         opis: ""
         adres: "przyrzeczenieTur.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhp.svg"
         header: "Związek Harcerstwa Polskiego"
         opis: ""
         adres: "przyrzeczeniaZHP.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStrona {
         ikona: "image://images/skaut.jpg"
         header: "Ślubowanie Skautowe"
         opis: ""
         adres: "przyrzeczenieSkaut.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 KartaStronaNoImage {
         header: "Przysięga skautowa"

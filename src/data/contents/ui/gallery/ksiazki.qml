@@ -33,19 +33,11 @@ ColumnLayout{
         ikona: "image://icons/sznur.svg,#747f81"
         adres: "ksiazkiHarcerz.qml"
     }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
     KartaStronaIkona {
         header: "Książki dla zastępowych"
         opis: ""
         ikona: "image://icons/sznur.svg,#574136"
         adres: "ksiazkiZastepowy.qml"
-    }
-     HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStronaIkona {
         header: "Książki dla drużynowych"

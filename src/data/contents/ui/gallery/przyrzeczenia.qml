@@ -19,20 +19,11 @@
 
 import QtQuick 2.6
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
 HPSPage {
     id: page
     title: qsTr("Roty Przyrzeczenia")
-
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
 
 ColumnLayout
 {
@@ -42,19 +33,11 @@ KartaStronaIkona {
         opis: ""
         adres: "przyrzeczenieRR.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhp.svg"
         header: "Związek Harcerstwa Polskiego"
         opis: ""
         adres: "przyrzeczenieZHP.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/zhr.svg"
@@ -62,29 +45,17 @@ KartaStronaIkona {
         opis: ""
         adres: "przyrzeczenieZHP.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/fse.svg"
         header: "SHK „Zawisza”"
         opis: ""
         adres: "przyrzeczenieFSE.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/rodlo.svg"
         header: "Organizacja Harcerska „Rodło”"
         opis: ""
         adres: "przyrzeczenieOH.qml"
-    }
- HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 KartaStronaIkona {
         ikona: "qrc:/contents/ui/img/tarcza.svg"

@@ -34,39 +34,23 @@ ColumnLayout
         ikona: "qrc:/contents/ui/img/camera-photo.svg"
         adres: "fotograficzna.qml"
     }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-    KartaStronaIkona { 
+    KartaStronaIkona {
         header: "Ekosystem w słoiku"
         opis: "Jak przygotować roślinkę w słoiku?"
         ikona: "qrc:/contents/ui/img/applications-science.svg"
         adres: "ekosystem.qml"
     }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-    KartaStronaIkona { 
+    KartaStronaIkona {
         header: "Podróże małe i duże"
         opis: "Harcerskie wędrowanie tam i z powrotem."
         ikona: "image://icons/edit-paste-in-place.svg,white"
         adres: "podroze.qml"
-    }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStronaIkona {
         header: "Gra fabularna"
         opis: "w klimatach bloku wschodniego."
         ikona: "image://icons/kosci.svg,white"
         adres: "gra_warsztaty.qml"
-    }
-    HPSSeparator
-    {
-        Layout.fillWidth: true
     }
     KartaStronaIkona {
         header: "Geoguessr"

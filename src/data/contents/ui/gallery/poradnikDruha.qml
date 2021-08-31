@@ -20,7 +20,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
 HPSPage {
@@ -28,13 +27,6 @@ HPSPage {
 
     title: qsTr("Poradnik harcerski")
 
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
 
 ColumnLayout{
 KartaStronaNoImage { 
@@ -42,22 +34,12 @@ KartaStronaNoImage {
         opis: ""
         adres: "historiaSkautingu.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
     KartaStronaNoImage {
         header: "Roty Przyrzeczenia"
         opis: ""
         adres: "przyrzeczenia.qml"
     }
- HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
-
-
-    KartaStronaNoImage { 
+    KartaStronaNoImage {
         header: "Harcerstwo na terenie Bolesławca"
         opis: ""
         adres: "historiaBoleslawiec.qml"

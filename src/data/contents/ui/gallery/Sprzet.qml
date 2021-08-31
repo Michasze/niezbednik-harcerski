@@ -32,20 +32,12 @@ KartaStronaIkona {
         opis: ""
         adres: "noz.qml"
     }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
-    }
 
 KartaStronaIkona {
         header: "Jak wybrać odpowiedni śpiwór?"
         ikona: "image://icons/spiwor.svg,white"
         opis: ""
         adres: "Spiwor.qml"
-    }
-        HPSSeparator
-    {
-        Layout.fillWidth: true
     }
 
 KartaStronaIkona {

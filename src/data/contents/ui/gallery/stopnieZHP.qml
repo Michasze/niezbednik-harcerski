@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
@@ -28,14 +27,6 @@ HPSPage {
 
     title: "Stopnie Harcerskie - ZHP"
 
-    actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
@@ -92,42 +83,41 @@ header: Controls.TabBar {
                      }
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/mlodzik.svg"
             color: "steelblue"
-            header: "Młodzik/Ochotniczka"
+            header: "Młodzik/\nOchotniczka"
         }
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/wywiadowca.svg"
             color: "steelblue"
-            header: "Wywiadowca/Tropicielka"
+            header: "Wywiadowca/\nTropicielka"
         }
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/odkrywca.svg"
             color: "steelblue"
-            header: "Odkrywca/Pionierka"
+            header: "Odkrywca/\nPionierka"
         }
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/cwik.svg"
             color: "steelblue"
-            header: "Ćwik/Samarytanka"
+            header: "Ćwik/\nSamarytanka"
         }
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/ho.svg"
             color: "steelblue"
-            header: "Harcerz Orli/Harcerka Orla"
+            header: "Harcerz Orli/\nHarcerka Orla"
         }
         ElementListy
         {
             ikona: "qrc:/contents/ui/img/hr.svg"
             color: "steelblue"
-            header: "Harcerz Rzeczypospolitej/ \n Harcerka Rzeczypospolitej"
+            header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
         }
 
     }
