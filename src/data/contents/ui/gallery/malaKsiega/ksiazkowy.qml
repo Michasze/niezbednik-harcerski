@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
@@ -29,14 +28,6 @@ HPSPage {
 
     title: "Szyfr Ottendorfa | szyfr ksiązkowy"
 
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
-        }
-    }
 
     ColumnLayout {
         width: page.width
@@ -55,60 +46,59 @@ HPSPage {
         {
             color: "brown"
             alignH: Text.AlignJustify
-            header: "<p>Klucz zapisujemy w następujący sposób:</p>"
+            header: "Klucz zapisujemy w następujący sposób:"
         }
         ElementListyNoImage
         {
             color: "brown"
             alignH: Text.AlignHCenter
             textSize: 18
-            header: "<p><font color=\"#1B95E2\">W</font>  -  <font color=\"#7fff00\">X</font>  - <font color=\"#9370db\">Y</font>  -  <font color=\"#E2E11B\">Z</font> np.:</p>
-<p><font color=\"#1B95E2\">1</font>  -  <font color=\"#7fff00\">10</font>  - <font color=\"#9370db\">5</font>  -  <font color=\"#E2E11B\">4</font> gdzie:</p>
-<p><font color=\"#1B95E2\">W</font> (<font color=\"#1B95E2\">1</font>) oznacza: numer strony, na której znajduje się poszukiwana literka (w przypadku, gdy jest tylko jedna strona wpisujemy „1”, w innych przypadkach oznaczamy właściwym numerem)</p>
-<p><font color=\"#7fff00\">X</font> (<font color=\"#7fff00\">10</font>) oznacza: numer linijki na danej stronie</p>
-<p><font color=\"#9370db\">Y</font> (<font color=\"#9370db\">5</font>) oznacza: wyraz w danej linijce</p>
-<p><font color=\"#E2E11B\">Z</font> (<font color=\"#E2E11B\">4</font>) oznacza: numer litery w danym wyrazie</p>"
+            header: "<font color=\"#1B95E2\">W</font>  -  <font color=\"#7fff00\">X</font>  - <font color=\"#9370db\">Y</font>  -  <font color=\"#E2E11B\">Z</font> np.:<br><br>
+<font color=\"#1B95E2\">1</font>  -  <font color=\"#7fff00\">10</font>  - <font color=\"#9370db\">5</font>  -  <font color=\"#E2E11B\">4</font> gdzie:<br><br>
+<font color=\"#1B95E2\">W</font> (<font color=\"#1B95E2\">1</font>) oznacza: numer strony, na której znajduje się poszukiwana literka (w przypadku, gdy jest tylko jedna strona wpisujemy „1”, w innych przypadkach oznaczamy właściwym numerem)<br><br>
+<font color=\"#7fff00\">X</font> (<font color=\"#7fff00\">10</font>) oznacza: numer linijki na danej stronie<br><br>
+<font color=\"#9370db\">Y</font> (<font color=\"#9370db\">5</font>) oznacza: wyraz w danej linijce<br><br>
+<font color=\"#E2E11B\">Z</font> (<font color=\"#E2E11B\">4</font>) oznacza: numer litery w danym wyrazie"
 }
         ElementListyNoImage
         {
             color: "brown"
             alignH: Text.AlignHCenter
-            header: "<p>Przykład:</p>
-<p>„Testament mój” autorstwa Juliusza Słowackiego (fragment)</p>"
+            header: "Przykład:<br><br>
+„Testament mój” autorstwa Juliusza Słowackiego (fragment)"
         }
         ElementListyNoImage
         {
             color: "black"
             alignH: Text.AlignHCenter
-            header:"<p><i>Żyłem z wami, cierpiałem i płakałem z wami;</p>
-<p>Nigdy mi, kto szlachetny, nie był obojętny:</p>
-<p>Dziś was rzucam i dalej idę w cień — z duchami,</p>
-<p>A jak gdyby tu szczęście było, idę smętny.</p>
-<p>Nie zostawiłem tutaj żadnego dziedzica</p>
-<p>Ani dla mojej lutni, ani dla imienia:</p>
-<p>Imię moje tak przeszło, jako błyskawica,</p>
-<p>I będzie, jak dźwięk pusty, trwać przez pokolenia.
-</i></p>"
+            header:"<i>Żyłem z wami, cierpiałem i płakałem z wami;<br><br>
+Nigdy mi, kto szlachetny, nie był obojętny:<br><br>
+Dziś was rzucam i dalej idę w cień — z duchami,<br><br>
+A jak gdyby tu szczęście było, idę smętny.<br><br>
+Nie zostawiłem tutaj żadnego dziedzica<br><br>
+Ani dla mojej lutni, ani dla imienia:<br><br>
+Imię moje tak przeszło, jako błyskawica,<br><br>
+I będzie, jak dźwięk pusty, trwać przez pokolenia.</i>"
         }
         ElementListyNoImage
         {
             color: "brown"
             alignH: Text.AlignHCenter
-            header: "<p>Poszukiwane słowo: Harcerz</p>
-<p>Klucz:</p>"
+            header: "Poszukiwane słowo: Harcerz<br><br>
+Klucz:"
         }
         ElementListyNoImage
         {
             color: "black"
             alignH: Text.AlignHCenter
             textSize: 18
-            header: "<p>1 – 2 – 4 - 6</p>
-<p>1 – 1 – 3 - 2</p>
-<p>1 – 8 – 6 - 2</p>
-<p>1 – 4 – 5 - 3</p>
-<p>1 – 6 – 3 - 4</p>
-<p>1 – 8 – 6 - 2</p>
-<p>1 – 7 – 4 - 6</p>"
+            header: "1 – 2 – 4 - 6<br><br>
+1 – 1 – 3 - 2<br><br>
+1 – 8 – 6 - 2<br><br>
+1 – 4 – 5 - 3<br><br>
+1 – 6 – 3 - 4<br><br>
+1 – 8 – 6 - 2<br><br>
+1 – 7 – 4 - 6"
         }
         }
 }

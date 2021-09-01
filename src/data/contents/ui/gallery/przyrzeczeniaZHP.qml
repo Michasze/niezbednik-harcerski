@@ -20,7 +20,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
@@ -28,15 +27,6 @@ HPSPage {
 
     title: "Przyrzeczenia ZHP"
 
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-     }
 
     ColumnLayout {
         width: page.width

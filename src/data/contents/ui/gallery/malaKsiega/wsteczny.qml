@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
@@ -29,14 +28,6 @@ HPSPage {
 
     title: "Wsteczny"
 
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 
     ColumnLayout {
         width: page.width
@@ -53,9 +44,9 @@ HPSPage {
                        ElementListyNoImage
         {
             color: "brown"
-            header: "<p>„Ala ma kota” → atok am ala</p>
-<p>„Kilimandżaro” → orażdnamilik</p>
-<p>„Kajak” → kajak</p>"
+            header: "„Ala ma kota” → atok am ala<br><br>
+„Kilimandżaro” → orażdnamilik<br><br>
+„Kajak” → kajak"
         }
     }
 }

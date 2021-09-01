@@ -20,7 +20,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
@@ -28,15 +27,6 @@ HPSPage {
 
     title: "Przyrzeczenie Czerwonego Harcerstwa"
 
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-     }
 
     ColumnLayout {
         width: page.width
@@ -54,6 +44,4 @@ ElementListyNoImage
             header: "Przyrzekam uroczyście pracować nad wyzwoleniem klasy robotniczej, praw harcerskich przestrzegać, dbać o rozwój Czerwonego Harcerstwa."
         }
     }
-
-
 }

@@ -20,24 +20,13 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Przysięga skautowa"
 
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-     }
 
     ColumnLayout {
         width: page.width
@@ -45,7 +34,7 @@ HPSPage {
 ElementListyNoImage
         {
             color: "brown"
-            header: "<h4>Przetłumaczona przysięga skautowa autorstwa sir Roberta Baden-Powella.</h4>"
+            header: "<b>Przetłumaczona przysięga skautowa autorstwa sir Roberta Baden-Powella.</b>"
         }
 ElementListyNoImage
         {

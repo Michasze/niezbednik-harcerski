@@ -26,7 +26,7 @@ HPSPage
                 ElementListyNoImage
         {
             color: "green"
-            header: "<h3>Harcerstwo</h3>"
+            header: "<b>Harcerstwo</b>"
         }
                 HPSLista {
  label: "Andrzej Celiński"
@@ -65,7 +65,7 @@ HPSPage
         {
             color: "blueviolet"
             align: 1
-            header: "<h3>Scouting</h3>"
+            header: "<b>Scouting</b>"
         }
                 HPSLista {
             label: "Barack Obama"

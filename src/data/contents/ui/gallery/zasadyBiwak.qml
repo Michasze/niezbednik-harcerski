@@ -62,7 +62,7 @@ A może po drodze warto pozbierać geoskrzynki?"
 
 Nie potrzeba nam 20 past do zębów dla każdego z uczestników, wystarczą cztery. Dobrze jest zabrać lornetkę, żeby móc podziwiać widoki, ale również nie warto ich zabierać zbyt wielu. <br><br>
 
-Warto jest dobrać ekwipunek do zainteresowań konkretnych harcerzy, jeden lubi robić zdjęcia, a inny świetnie sobie radzi w pracy z mapą i będzie czuł się wyróżniony mogąc prowadzić całą drużynę.<br><br>"
+Warto jest dobrać ekwipunek do zainteresowań konkretnych harcerzy, jeden lubi robić zdjęcia, a inny świetnie sobie radzi w pracy z mapą i będzie czuł się wyróżniony mogąc prowadzić całą drużynę."
         }
                 ElementListyNoImage
         {
@@ -80,7 +80,7 @@ Trzeba zwrócić szczególna uwagę na redukcję ekwipunku, warto poczytać
 o ultralight. I spróbować zastosować niektóre z tych metod/tricków pakowania.<br><br>
 
 Jeśli nie mamy pewności czy któryś 
-z naszych harcerzy jest dobrze spakowany, warto to sprawdzić przed wyjściem. Dzięki temu nie okaże się, że nagle mamy problem ze zbyt ciężkim plecakiem.<br><br> "
+z naszych harcerzy jest dobrze spakowany, warto to sprawdzić przed wyjściem. Dzięki temu nie okaże się, że nagle mamy problem ze zbyt ciężkim plecakiem."
         }
                 ElementListyNoImage
         {
@@ -88,7 +88,7 @@ z naszych harcerzy jest dobrze spakowany, warto to sprawdzić przed wyjściem. D
             header: "<b>7. Biwak wędrowny to nie tylko wędrowanie.</b><br><br>
             Na biwaku wędrownym również trzeba mieć przygotowane zajęcia: gry terenowe, podchody czy inne gry.<br><br>
 
-Zwiady terenowe, pierwsza pomoc, zajęcia z topografii czy zajęcia fotograficzne, to nie tylko tradycyjne zajęcia harcerskie, ale również nabywanie bardzo przydatnych umiejętności, które możemy wykorzystać już podczas samego biwaku.<br><br> "
+Zwiady terenowe, pierwsza pomoc, zajęcia z topografii czy zajęcia fotograficzne, to nie tylko tradycyjne zajęcia harcerskie, ale również nabywanie bardzo przydatnych umiejętności, które możemy wykorzystać już podczas samego biwaku."
         }
                 ElementListyNoImage
         {

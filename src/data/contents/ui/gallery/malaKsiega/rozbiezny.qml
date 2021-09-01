@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
@@ -29,14 +28,6 @@ HPSPage {
 
     title: "Rozbieżny"
 
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
 
     ColumnLayout {
         width: page.width
@@ -53,11 +44,11 @@ HPSPage {
                        ElementListyNoImage
         {
             color: "brown"
-            header: "<p>J<font color=\"#7fff00\">A</font>N → JN <font color=\"#7fff00\">A</font></p>
-<p>J<font color=\"#7fff00\">A</font>N N<font color=\"#7fff00\">O</font>W<font color=\"#7fff00\">A</font>K → JN <font color=\"#7fff00\">A</font> NWK <font color=\"#7fff00\">O</font><font color=\"#7fff00\">A</font></p>
+            header: "J<font color=\"#7fff00\">A</font>N → JN <font color=\"#7fff00\">A</font><br><br>
+J<font color=\"#7fff00\">A</font>N N<font color=\"#7fff00\">O</font>W<font color=\"#7fff00\">A</font>K → JN <font color=\"#7fff00\">A</font> NWK <font color=\"#7fff00\">O</font><font color=\"#7fff00\">A</font><br><br>
 J<font color=\"#7fff00\">A</font>N N<font color=\"#7fff00\">O</font>W<font color=\"#7fff00\">A</font>K G<font color=\"#7fff00\">O</font>T<font color=\"#7fff00\">U</font>JE → JN <font color=\"#7fff00\">A</font> NWK <font color=\"#7fff00\">O</font><font color=\"#7fff00\">A</font> GTJ
 <font color=\"#7fff00\">OUE</font>
-</p>"
+"
         }
     }
 }

@@ -34,8 +34,8 @@ HPSPage
                 ElementListyNoImage
         {
             color: "green"
-            header: "<h4>Biwak trzydniowy w budynku. Latem lub wiosną.<br><br>
-Lista potrzebnych rzeczy:</h4>"
+            header: "<b>Biwak trzydniowy w budynku. Latem lub wiosną.<br><br>
+Lista potrzebnych rzeczy:</b>"
         }
                 ElementListyNoImage
         {

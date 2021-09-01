@@ -55,7 +55,7 @@ Grupa metodyczna: Zuchy"
     
     7. Wiemy, które elementy naszej gromady/szczepu są puszczańskie.<br><br>
 
-    8. Poznaliśmy leśne piosenki i zaśpiewaliśmy je przy ognisku.<br><br>"
+    8. Poznaliśmy leśne piosenki i zaśpiewaliśmy je przy ognisku."
         }
         ElementListyNoImage
         {
