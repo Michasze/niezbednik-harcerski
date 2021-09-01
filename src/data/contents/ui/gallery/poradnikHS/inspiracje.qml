@@ -20,21 +20,12 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
                id: rozdzial12
         Layout.fillHeight: true
         title: qsTr("Skąd czerpać inspiracje?")
-        actions {
-        main: Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        }
-    }
         ColumnLayout {
         ElementListyNoImage
         {
@@ -86,9 +77,9 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "royalblue"
-            header: "<h3>RÓWNIEŻ TY BĄDŹ INSPIRACJĄ DLA SWOICH HARCERZY!<br>
+            header: "<b>RÓWNIEŻ TY BĄDŹ INSPIRACJĄ DLA SWOICH HARCERZY!<br>
 NA CO JESZCZE CZEKASZ? DZIAŁAJ, POSZUKUJ, INSPIRUJ —<br>
-CZUWAJ!</h3>"
+CZUWAJ!</b>"
         }
         }
     }

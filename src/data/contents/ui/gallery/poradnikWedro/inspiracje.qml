@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
@@ -32,61 +31,61 @@ HPSPage {
           {
              color: "#FF003c00"
              align: 0
-             header: "<p>Planowanie i prowadzenie zbiórek wymaga wzbudzenia w sobie kreatywności. Czasami potrzebujemy inspiracji, czegoś co popchnie nas do stworzenia niepowtarzalnej zbiórki — z pomocą przychodzą nam liczne źródła, z których możemy czerpać.</p>"
+             header: "Planowanie i prowadzenie zbiórek wymaga wzbudzenia w sobie kreatywności. Czasami potrzebujemy inspiracji, czegoś co popchnie nas do stworzenia niepowtarzalnej zbiórki — z pomocą przychodzą nam liczne źródła, z których możemy czerpać."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Przełożeni</b> - drużynowi, przyboczni, instruktorzy hufca potrafią być chodzącym doświadczeniem i inspracją. Nie bój się spytać o radę. Ich wspomnienia z wielu lat działania mogą być zalążkiem zupełnie nowego pomysłu na Wasze wędrownicze działanie.</p>"
+             header: "<b>Przełożeni</b> - drużynowi, przyboczni, instruktorzy hufca potrafią być chodzącym doświadczeniem i inspracją. Nie bój się spytać o radę. Ich wspomnienia z wielu lat działania mogą być zalążkiem zupełnie nowego pomysłu na Wasze wędrownicze działanie."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Centralny Bank Pomysłów ZHP</b> - cbp.pl - to spiżarnia konspektów i propozycji programowych, które dowolnie możesz wplatać w pracę zastępu, dodając swoje elementy. Nie jestem za przepisywaniem gotowego konspektu żywcem, zawsze jest coś, co będzie lepiej się łączyć z identyfikacją i specyfiką waszej grupy.</p>"
+             header: "<b>Centralny Bank Pomysłów ZHP</b> - cbp.pl - to spiżarnia konspektów i propozycji programowych, które dowolnie możesz wplatać w pracę zastępu, dodając swoje elementy. Nie jestem za przepisywaniem gotowego konspektu żywcem, zawsze jest coś, co będzie lepiej się łączyć z identyfikacją i specyfiką waszej grupy."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Harcerskie blogi</b> - skauciak.pl, czuwaj.pl Na Tropie, harcerskie.pl i wiele więcej — dobre teksty, rady, inspiracje.</p>"
+             header: "<b>Harcerskie blogi</b> - skauciak.pl, czuwaj.pl Na Tropie, harcerskie.pl i wiele więcej — dobre teksty, rady, inspiracje."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Issuu</b> - strona z elektronicznymi wydaniami biuletynów i magazynów, także ZHP i organizacji skautowych.</p>"
+             header: "<b>Issuu</b> - strona z elektronicznymi wydaniami biuletynów i magazynów, także ZHP i organizacji skautowych."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Propozycje programowe WOSM i WAGGGS</b> - rokrocznie pojawiają się na Dzień Myśl Braterskiej, inne dotyczą zero waste, inne rozwoju i naszego wpływu na społeczeństwo.</p>"
+             header: "<b>Propozycje programowe WOSM i WAGGGS</b> - rokrocznie pojawiają się na Dzień Myśl Braterskiej, inne dotyczą zero waste, inne rozwoju i naszego wpływu na społeczeństwo."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Propozycje środowisk specjalnościowych</b> - np. inspektoratów ratowniczych chorągwi, PTTK, WOT itp.</p>"
+             header: "<b>Propozycje środowisk specjalnościowych</b> - np. inspektoratów ratowniczych chorągwi, PTTK, WOT itp."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Wydarzenia programowe</b> - Wędrownicza Watra jest najbardziej znanym wydarzeniem wędrowniczym. Odbywa się rokrocznie, poprzedzona zadaniami przedzlotowymi. Rajd Odkrywców jest propozycją dla wszystkich grup metodycznych, a wędrownicy znajdą tam swoje miejsce - każda z tras oferuje inne doświadczenia. Warto!</p>"
+             header: "<b>Wydarzenia programowe</b> - Wędrownicza Watra jest najbardziej znanym wydarzeniem wędrowniczym. Odbywa się rokrocznie, poprzedzona zadaniami przedzlotowymi. Rajd Odkrywców jest propozycją dla wszystkich grup metodycznych, a wędrownicy znajdą tam swoje miejsce - każda z tras oferuje inne doświadczenia. Warto!"
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Twoja wyobraźnia i otoczenie </b> - wszystko zależy od Twojej kreatywności, a ogranicza Cię własna głowa. Z kolei otoczenie potrafi być najlepszą inspiracją - wystarczy potrafić obserwować. Opowiedzenie sytuacji z własnego życia potrafi być lepszą gawędą niż opowieść o Zawiszy, a ubogi człowiek na ulicy proszący o pomoc może obudzić więcej działania niż tysiąc przeczytanych tekstów o służbie.</p>"
+             header: "<b>Twoja wyobraźnia i otoczenie </b> - wszystko zależy od Twojej kreatywności, a ogranicza Cię własna głowa. Z kolei otoczenie potrafi być najlepszą inspiracją - wystarczy potrafić obserwować. Opowiedzenie sytuacji z własnego życia potrafi być lepszą gawędą niż opowieść o Zawiszy, a ubogi człowiek na ulicy proszący o pomoc może obudzić więcej działania niż tysiąc przeczytanych tekstów o służbie."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><i>Wyjdź w świat!</i></p>"
+             header: "<i>Wyjdź w świat!</i>"
           }
         }
     }

@@ -20,35 +20,27 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
         id: rozdzial5
         Layout.fillHeight: true
         title: qsTr("Formy pracy w zastępie starszoharcerskim")
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
         ColumnLayout {
             ElementListyNoImage {
                 color: "#FF003c00"
                 align: 0
-                header: "<p>Wyobraź sobie dwa brzegi rzeki oraz metalowe przęsła - szkielet mostu zawieszony ponad nurtem. Stoisz na jednym brzegu razem ze swoim zastępem, a po drugiej stronie czeka cel — realizacja zadania w próbie, sprawności, projekcie lub inny cel, który obierzesz sobie na danej zbiórce.</p>"
+                header: "Wyobraź sobie dwa brzegi rzeki oraz metalowe przęsła - szkielet mostu zawieszony ponad nurtem. Stoisz na jednym brzegu razem ze swoim zastępem, a po drugiej stronie czeka cel — realizacja zadania w próbie, sprawności, projekcie lub inny cel, który obierzesz sobie na danej zbiórce."
             }
             ElementListyNoImage {
                 color: "#FF003c00"
                 align: 0
-                header: "<p>Musicie dostać się na drugą stronę - niby możecie przejść na przełaj, ale jaki to będzie miało sens wychowawczy dla zastępu? Rozwiązaniem są formy pracy. To deski, po których przejdziecie na drugą stronę.</p>"
+                header: "Musicie dostać się na drugą stronę - niby możecie przejść na przełaj, ale jaki to będzie miało sens wychowawczy dla zastępu? Rozwiązaniem są formy pracy. To deski, po których przejdziecie na drugą stronę."
             }
             ElementListyNoImage {
                 color: "#FF003c00"
                 align: 0
-                header: "<p>Idziesz pierwszy i wykładasz przed stopami kolejne formy pracy, po których Twoi harcerze starsi przechodzą ku celowi.</p>"
+                header: "Idziesz pierwszy i wykładasz przed stopami kolejne formy pracy, po których Twoi harcerze starsi przechodzą ku celowi."
             }
             HPSLista {
                 label: "film (noc filmowa, seans) - humorystyczny dla integracji, a może poruszający problem środowiska, społeczności, zastępu? YouTube, cda.pl, Netflix, i wiele innych platform, a nawet płyty DVD pozwalają na integrację zastępu i poruszenie ważnych kwestii."

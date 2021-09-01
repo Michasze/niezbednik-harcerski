@@ -20,24 +20,16 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
         id: rozdzial2
         Layout.fillHeight: true
         title: qsTr("Instrumenty metodyczne")
-actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
         ColumnLayout {
             ElementListyNoImage {
                 color: "royalblue"
-                header: "<h3> Próba harcerza</h3>"
+                header: "<b> Próba harcerza</b>"
             }
             HPSLista {
                 label: "zakończona Przyrzeczeniem Harcerskim "
@@ -50,7 +42,7 @@ actions.main: Kirigami.Action {
             }
             ElementListyNoImage {
                 color: "royalblue"
-                header: "<h3>Stopnie harcerskie</h3>"
+                header: "<b>Stopnie harcerskie</b>"
             }
             HPSLista {
                 label: "realizowane odpowiednio do wieku (HS = pionierka/odkrywca i samarytanka/ćwik)"
@@ -60,7 +52,7 @@ actions.main: Kirigami.Action {
             }
             ElementListyNoImage {
                 color: "royalblue"
-                header: "<h3>Sprawności ** i ***</h3>"
+                header: "<b>Sprawności ** i ***</b>"
             }
             HPSLista {
                 label: "mają za zadanie rozwinąć harcerza na różnych płaszczyznach "
@@ -73,7 +65,7 @@ actions.main: Kirigami.Action {
             }
             ElementListyNoImage {
                 color: "royalblue"
-                header: "<h3>Projekt starszoharcerski</h3>"
+                header: "<b>Projekt starszoharcerski</b>"
             }
             HPSLista {
                 label: "uczy pracy zespołowej i współpracy"

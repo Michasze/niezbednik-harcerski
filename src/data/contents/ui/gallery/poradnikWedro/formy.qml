@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 
@@ -28,69 +27,62 @@ HPSPage {
         id: rozdzial6
         Layout.fillHeight: true
         title: qsTr("Wędrownicze formy pracy")
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
         ColumnLayout {
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Burza mózgów</b> - pobudzająca kreatywność i angażująca forma pracy, pozwalająca wykreować wiele pomysłów. Można połączyć ją z tworzeniem map myśl.</p>"
+             header: "<b>Burza mózgów</b> - pobudzająca kreatywność i angażująca forma pracy, pozwalająca wykreować wiele pomysłów. Można połączyć ją z tworzeniem map myśl."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Dyskusja</b> - może odbywać się na przeróżne tematy. Poznajemy punkt widzenia innych ludzi, przedstawiamy swój. Każdy prowadzi dyskusje w życiu - nawet nieświadomie. Ważne jest, aby prowadzący pilnował czasu i kultury wypowiedzi.</p>"
+             header: "<b>Dyskusja</b> - może odbywać się na przeróżne tematy. Poznajemy punkt widzenia innych ludzi, przedstawiamy swój. Każdy prowadzi dyskusje w życiu - nawet nieświadomie. Ważne jest, aby prowadzący pilnował czasu i kultury wypowiedzi."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Studium przypadku</b> - forma dyskusyjna, której założeniem jest rozważanie pewnego problemu na podstawie przykładu wziętego z życia i wypracowaniu dalszego ciągu historii, sformułowania lub rozwiązania zawartego w niej problemu.</p>"
+             header: "<b>Studium przypadku</b> - forma dyskusyjna, której założeniem jest rozważanie pewnego problemu na podstawie przykładu wziętego z życia i wypracowaniu dalszego ciągu historii, sformułowania lub rozwiązania zawartego w niej problemu."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Scenka, pantomima, drama</b> - czyli formy ekspresji ruchowej.</p>"
+             header: "<b>Scenka, pantomima, drama</b> - czyli formy ekspresji ruchowej."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Spotkanie z ekspertem</b> - ratownik, cieśla, malarz, muzyk, policjant, strażak, żołnierz — szukajcie a znajdziecie. Bardzo często rodzice i znajomi wędrowników są chętni żeby pokazać i opowiedzieć o swoim fachu.</p>"
+             header: "<b>Spotkanie z ekspertem</b> - ratownik, cieśla, malarz, muzyk, policjant, strażak, żołnierz — szukajcie a znajdziecie. Bardzo często rodzice i znajomi wędrowników są chętni żeby pokazać i opowiedzieć o swoim fachu."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Kuźnica</b> - jedna z najbardziej charakterystycznych form wędrowniczej pracy. Jest refleksyjna, obrzędowa. Jej zasady są bardzo konkretne - każdy ma prawo do wypowiedzenia własnego zdania, kolejne wypowiedzi nie mogą być komentarzem czy osądem poprzedniej opinii (nie komentujemy słów poprzednika, a wyrażamy czysto swoje zdanie) — a wszystko, co zostaje powiedziane pozostaje w kręgu uczestników.</p>"
+             header: "<b>Kuźnica</b> - jedna z najbardziej charakterystycznych form wędrowniczej pracy. Jest refleksyjna, obrzędowa. Jej zasady są bardzo konkretne - każdy ma prawo do wypowiedzenia własnego zdania, kolejne wypowiedzi nie mogą być komentarzem czy osądem poprzedniej opinii (nie komentujemy słów poprzednika, a wyrażamy czysto swoje zdanie) — a wszystko, co zostaje powiedziane pozostaje w kręgu uczestników."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Ogniobranie</b> - to kolejna refleksyjna forma, często organizowana np podczas nadania naramiennika wędrowniczego. Zazwyczaj idzie się z punktu do punktu, w którym zapalony jest ogień/świeca, a każdemu z nich towarzyszy jakaś forma przemyśleń - wygłaszana gawęda, zadawane pytania, czytane cytaty (z rozwieszonych karteczek).</p>"
+             header: "<b>Ogniobranie</b> - to kolejna refleksyjna forma, często organizowana np podczas nadania naramiennika wędrowniczego. Zazwyczaj idzie się z punktu do punktu, w którym zapalony jest ogień/świeca, a każdemu z nich towarzyszy jakaś forma przemyśleń - wygłaszana gawęda, zadawane pytania, czytane cytaty (z rozwieszonych karteczek)."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p><b>Wędrówka fizyczna</b> - może mieć różne cele, rozwój siły fizycznej, poznanie nowych miejsc, stworzenie więzi, etc...</p>"
+             header: "<b>Wędrówka fizyczna</b> - może mieć różne cele, rozwój siły fizycznej, poznanie nowych miejsc, stworzenie więzi, etc..."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p>Powyższe formy są charakterystyczne dla metodyki wędrowniczej, Co nie oznacza, że nie możesz wprowadzać swoich lub korzystać z form ogólnych dla metodyk: gra strategiczna, gawęda, piosenka, majsterkowanie, gra terenowa, zwiad, ognisko, manewry (np. z I pomocy), warsztaty, RPG, pląs, InO, akcja zarobkowa, śpiewogranie, zbiórka w terenie i wiele innych.<br><br>
+             header: "Powyższe formy są charakterystyczne dla metodyki wędrowniczej, Co nie oznacza, że nie możesz wprowadzać swoich lub korzystać z form ogólnych dla metodyk: gra strategiczna, gawęda, piosenka, majsterkowanie, gra terenowa, zwiad, ognisko, manewry (np. z I pomocy), warsztaty, RPG, pląs, InO, akcja zarobkowa, śpiewogranie, zbiórka w terenie i wiele innych.<br><br>
 Rozbudowane opisy powyższych i mniej znanych wędrowniczych form pracy znajdziesz tutaj:<br><br>
-<i>http://cbp.zhp.pl/wp-content/uploads/2018/01/Formy-pracy-w-drużynie-wędrowniczej.pdf</i></p>"
+<i>http://cbp.zhp.pl/wp-content/uploads/2018/01/Formy-pracy-w-drużynie-wędrowniczej.pdf</i>"
           }
         }
     }

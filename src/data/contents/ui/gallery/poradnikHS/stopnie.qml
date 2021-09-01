@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
@@ -30,11 +29,11 @@ HPSPage {
         ColumnLayout {
             ElementListyNoImage {
                 color: "#FF003c00"
-                header: "<p>Stopnie i sprawności są nieodłącznym elementem pracy harcerskiej, powinny być jej podstawą. Są sposobem na rozwój harcerski i pozaharcerski - w końcu zdobywamy umiejętności, które są przydatne w codziennym życiu. W Waszej gestii leży motywowanie członków swojego zastępu do ich realizacji, między innymi poprzez realizowanie zadań na zbiórkach zastępu.</p> "
+                header: "Stopnie i sprawności są nieodłącznym elementem pracy harcerskiej, powinny być jej podstawą. Są sposobem na rozwój harcerski i pozaharcerski - w końcu zdobywamy umiejętności, które są przydatne w codziennym życiu. W Waszej gestii leży motywowanie członków swojego zastępu do ich realizacji, między innymi poprzez realizowanie zadań na zbiórkach zastępu."
             }
             ElementListyNoImage {
                 color: "#FF003c00"
-                header: "<p>Czasem też trzeba pomóc w realizacji któregoś zadania, podsunąć pomysł, jak dane zadanie można wykonać. Ale musicie pamiętać, że HS jest samodzielny i trzeba stawiać przed nim wyzwania - nie za proste, nie za trudne. Nie jest łatwo znaleźć ten złoty środek, ale nikt nie mówił że będzie łatwo!</p>"
+                header: "Czasem też trzeba pomóc w realizacji któregoś zadania, podsunąć pomysł, jak dane zadanie można wykonać. Ale musicie pamiętać, że HS jest samodzielny i trzeba stawiać przed nim wyzwania - nie za proste, nie za trudne. Nie jest łatwo znaleźć ten złoty środek, ale nikt nie mówił że będzie łatwo!"
             }
         }
     }

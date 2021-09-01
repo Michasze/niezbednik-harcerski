@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13
 import ".."
 
 HPSPage {
@@ -32,19 +31,19 @@ HPSPage {
           {
              color: "#FF003c00"
              align: 0
-             header: "<p>Wędrownicza praca może się odbywać w zastępach lub patrolach, działających albo w przy drużynie wielopoziomowej lub wędrowniczej. Zastępowy wędrowniczy nie jest wodzem ani przywódcą ale kompanem i przyjacielem - jest częścią składową całości, spoiwem.</p>"
+             header: "Wędrownicza praca może się odbywać w zastępach lub patrolach, działających albo w przy drużynie wielopoziomowej lub wędrowniczej. Zastępowy wędrowniczy nie jest wodzem ani przywódcą ale kompanem i przyjacielem - jest częścią składową całości, spoiwem."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p>Potrafi dostrzegać potrzeby grupy i zawiązać z nimi relację nie na zasadzie wyższości, ale równości - jak w grupie rówieśniczej. Inicjuje formy prowadzenia zbiórek.</p>"
+             header: "Potrafi dostrzegać potrzeby grupy i zawiązać z nimi relację nie na zasadzie wyższości, ale równości - jak w grupie rówieśniczej. Inicjuje formy prowadzenia zbiórek."
           }
           ElementListyNoImage
           {
              color: "#FF003c00"
              align: 0
-             header: "<p>Zastęp/patrol wędrowniczy jest zespołem. Każdy członek ma w niego swój wkład. Zastępowy głową tego ciała, słucha i rozumie resztę.</p>"
+             header: "Zastęp/patrol wędrowniczy jest zespołem. Każdy członek ma w niego swój wkład. Zastępowy głową tego ciała, słucha i rozumie resztę."
           }
         }
     }
