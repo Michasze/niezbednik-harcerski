@@ -233,6 +233,7 @@
         <file alias="contents/ui/gallery/pakowanieBiwaki.qml">./data/contents/ui/gallery/pakowanieBiwaki.qml</file>
         <file alias="contents/ui/gallery/pakowanieOboz.qml">./data/contents/ui/gallery/pakowanieOboz.qml</file>
         <file alias="contents/ui/gallery/pakowanieRower.qml">./data/contents/ui/gallery/pakowanieRower.qml</file>
+        <file alias="contents/ui/gallery/pakowanieBP.qml">./data/contents/ui/gallery/pakowanieBP.qml</file>
         <file alias="contents/ui/gallery/Sprzet.qml">./data/contents/ui/gallery/Sprzet.qml</file>
         <file alias="contents/ui/gallery/gawedy.qml">./data/contents/ui/gallery/gawedy.qml</file>
         <file alias="contents/ui/gallery/grzybiarz.qml">./data/contents/ui/gallery/grzybiarz.qml</file>

@@ -45,5 +45,11 @@ HPSPage {
         opis: "Lista rzeczy na wyjazd rowerowy"
         adres: "pakowanieRower.qml"
 }
+        KartaStrona {
+        header: "Ekwipunek obozowy według BP"
+        ikona: "image://images/Baden-Powell.jpg"
+        opis: "Lista rzeczy do spakowania dla każdego skauta"
+        adres: "pakowanieBP.qml"
+}
 }
 }
