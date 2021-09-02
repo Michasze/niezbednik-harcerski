@@ -44,6 +44,12 @@ KartaStronaIkona {
     ikona: "image://icons/plecak.svg,white"
     adres: "ultralight.qml"
     }
+KartaStronaIkona {
+    header: "Jak spać ciepło podczas biwaków i wędrówek?"
+    ikona: "image://icons/spiwor.svg,white"
+    opis: "pwd. Juliusz Idzikowski"
+    adres: "jakSpac.qml"
+    }
 KartaStronaNoImage {
     header: "Jak stworzyć mapę miejsc wędrówkowych?"
     opis: "pwd. Juliusz Idzikowski"
@@ -53,11 +59,6 @@ KartaStronaNoImage {
     header: "Porady i harc tricki na wyjazdy harcerskie"
     opis: "Julia “Inka” Karpowicz"
     adres: "porady.qml"
-    }
-KartaStronaNoImage {
-    header: "Jak spać ciepło podczas biwaków i wędrówek?"
-    opis: "pwd. Juliusz Idzikowski"
-    adres: "jakSpac.qml"
     }
 
 }

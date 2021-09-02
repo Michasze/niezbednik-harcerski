@@ -28,11 +28,13 @@ HPSPage {
 
     ColumnLayout {
         id: mainlayout
-        KartaStronaNoImage { 
-        header: "Biwak"
-        opis: "Co spakować na trzydniowy biwak w budynku?"
-        adres: "pakowanieBiwaki.qml"
-    }
+
+        KartaStrona {
+        header: "Ekwipunek obozowy według BP"
+        ikona: "image://images/Baden-Powell.jpg"
+        opis: "Lista rzeczy do spakowania dla każdego skauta"
+        adres: "pakowanieBP.qml"
+}
         KartaStronaIkona {
         header: "Obóz"
         ikona: "image://icons/namiot_dycha.svg,white"
@@ -45,11 +47,10 @@ HPSPage {
         opis: "Lista rzeczy na wyjazd rowerowy"
         adres: "pakowanieRower.qml"
 }
-        KartaStrona {
-        header: "Ekwipunek obozowy według BP"
-        ikona: "image://images/Baden-Powell.jpg"
-        opis: "Lista rzeczy do spakowania dla każdego skauta"
-        adres: "pakowanieBP.qml"
-}
+        KartaStronaNoImage {
+        header: "Biwak"
+        opis: "Co spakować na trzydniowy biwak w budynku?"
+        adres: "pakowanieBiwaki.qml"
+    }
 }
 }

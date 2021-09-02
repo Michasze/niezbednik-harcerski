@@ -26,7 +26,7 @@ Zalecana ilość patroli: 2-3"
         ElementListyNoImage
         {
         color: "green"
-            alignH: Text.AlignLeft
+            alignH: Text.AlignHCenter
             format: Text.PlainText
             header: "Wskazówki:"
 }

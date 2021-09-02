@@ -51,7 +51,7 @@ import QtQuick.Layouts 1.2
                             wrapMode: Text.Wrap
                             Layout.alignment: Qt.AlignTop
                             font.pointSize: cardRectangle.textSize
-                            rightPadding: 20
+                            rightPadding: 10
                             leftPadding: 10
                             Layout.topMargin: 10
                             Layout.bottomMargin: 10
