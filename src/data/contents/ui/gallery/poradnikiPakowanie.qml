@@ -28,6 +28,30 @@ HPSPage {
 
     ColumnLayout {
         id: mainlayout
+            Rectangle {
+                    color: "darkolivegreen"
+                    radius: 10
+                    Layout.fillWidth: true
+                    Layout.minimumHeight: 80
+                    Item {
+                            anchors.fill: parent
+                            Controls.Label {
+                                    anchors.leftMargin: 10
+                                    anchors.left: parent.left
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    horizontalAlignment: Text.AlignLeft
+                                    font.pointSize: invisibleSlider.value + 4
+                                    text: "+"
+                            }
+                            Controls.Label {
+                                    Layout.rightMargin: 10
+                                    anchors.centerIn: parent
+                                    font.pointSize: invisibleSlider.value + 4
+                                    horizontalAlignment: Text.AlignHCenter
+                                    text: "Dodaj własną listę"
+                            }
+                    }
+            }
 
         KartaStrona {
         header: "Ekwipunek obozowy według BP"
