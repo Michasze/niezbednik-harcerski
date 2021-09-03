@@ -20,6 +20,7 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
+import QtQml.Models 2.15
 
 HPSPage
 
@@ -27,27 +28,22 @@ HPSPage
     id: page
     title: "Utwórz własną listę"
     ColumnLayout {
-        RowLayout {
-            width: page.width
         ElementListyNoImage {
             id: listId
             header: "Nazwa listy"
-            Layout.preferredWidth: page.width / 2
-            Layout.fillWidth: false
-            Layout.alignment: Qt.AlignLeft
+            Layout.fillWidth: true
             kolor: "darkolivegreen"
         }
         Controls.TextField {
             Layout.preferredHeight: listId.height
             Layout.preferredWidth: page.width / 2
             Layout.topMargin: 10
-            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.rightMargin: 10
             background: Rectangle {
                 anchors.fill: parent
                 color: "Grey"
             }
-        }
         }
         ElementListyNoImage {
             header: "Kategorie"
@@ -57,22 +53,49 @@ HPSPage
         {
             Layout.alignment: Qt.AlignHCenter
             columns: 2
-        HPSCheckBox
-        {
-            id: box1
-            tresc: "Jedzenie"
-        }
-        HPSCheckBox
-        {
-            id: box2
-            tresc: "Spanie"
-        }
-        HPSCheckBox
-        {
-            id: box3
-            tresc: "Ubrania"
-        }
-        HPSCheckBox
+            ListModel {
+                    id: pakowanieModel
+                ListElement { ikona: "papryka.svg,white"; tekst: "Jedzenie" }
+                ListElement { ikona: "karimata.svg,white"; tekst: "Spanie" }
+                ListElement { ikona: "koszulka.svg,white"; tekst: "Ubrania" }
+                ListElement { ikona: "szampon.svg,white"; tekst: "Higiena" }
+                }
+            Repeater
+            {
+                id: karta
+                model: pakowanieModel
+                delegate: Controls.AbstractButton {
+                    id: control
+                    width: page.width / 2
+                    height: width
+                    checkable: true
+                    background: Rectangle {
+                        width: page.width / 2
+                        height: width
+                        color: control.down ? "grey" : "black"
+                        border.width: 1
+                        border.color: "grey"
+                    }
+                    contentItem: ColumnLayout {
+                        anchors.fill: parent
+                        Image {
+                            source: "image://icons/" + ikona
+                            Layout.preferredWidth: page.width / 3
+                            Layout.preferredHeight: width
+                        }
+                        Controls.Label {
+                            font.pointSize: invisibleSlider.value
+                            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                            Layout.bottomMargin: 10
+                            text: tekst
+                            color: "white"
+                        }
+                    }
+                onPressed: {
+                }
+                }
+            }
+/*              HPSCheckBox
         {
             id: box4
             tresc: "Higiena"
@@ -97,6 +120,22 @@ HPSPage
             id: box8
             tresc: "Ważne"
         }
+            Component {
+                id: hpsPakowanie
+                Controls.CheckBox
+                {
+                    id: control
+                    indicator: Rectangle {
+                        width: page.width / 2
+                        height: width
+                        color: control.checked ? "black" : "grey"
+                        border.width: 1
+                    }
+                    contentItem: Controls.Label {
+                        text: tresc
+                    }
+                }
+            } */
         }
     }
 }
