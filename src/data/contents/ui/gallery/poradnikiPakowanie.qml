@@ -51,6 +51,10 @@ HPSPage {
                                     text: "Dodaj własną listę"
                             }
                     }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
+                }
             }
 
         KartaStrona {
