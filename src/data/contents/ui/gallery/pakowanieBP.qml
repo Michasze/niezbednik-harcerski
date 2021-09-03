@@ -25,7 +25,7 @@ HPSPage
 
 {
     id: page
-    title: "Pakowanie na biwak"
+    title: "Pakowanie według BP"
     HPSSettings
     {
         id: hpsSettings
