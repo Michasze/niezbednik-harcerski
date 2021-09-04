@@ -72,7 +72,7 @@ HPSPage
                     background: Rectangle {
                         width: page.width / 2
                         height: width
-                        color: control.down ? "grey" : "black"
+                        color: control.checked ? "grey" : "black"
                         border.width: 1
                         border.color: "grey"
                     }
@@ -91,7 +91,7 @@ HPSPage
                             color: "white"
                         }
                     }
-                onPressed: {
+                onToggled: {
                 }
                 }
             }

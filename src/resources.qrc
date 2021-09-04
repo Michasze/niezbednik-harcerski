@@ -335,6 +335,7 @@
         <file alias="contents/ui/img/applications-science.svg">./data/contents/ui/img/applications-science.svg</file>
         <file alias="contents/ui/img/applications-graphics.svg">./data/contents/ui/img/applications-graphics.svg</file>
         <file alias="contents/ui/img/go-previous.svg">./data/contents/ui/img/go-previous.svg</file>
+        <file alias="contents/ui/img/go-next.svg">./data/contents/ui/img/go-next.svg</file>
          <file alias="contents/ui/img/edit-paste-in-place.svg">./data/contents/ui/img/edit-paste-in-place.svg</file>
          <file alias="contents/ui/img/mail-sent.svg">./data/contents/ui/img/mail-sent.svg</file>
          <file alias="contents/ui/img/user.svg">./data/contents/ui/img/user.svg</file>
