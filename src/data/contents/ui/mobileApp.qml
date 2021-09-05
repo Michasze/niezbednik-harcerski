@@ -41,11 +41,4 @@ BaseApp {
         }
 //        color: "Blue"
     }
-    Controls.RoundButton {
-        anchors.bottom: parent.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-        visible: pageStack.currentItem.title == "Utwórz własną listę"
-        icon.source: "image://icons/go-next.svg,white"
-        highlighted: true
-    }
 }

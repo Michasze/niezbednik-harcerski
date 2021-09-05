@@ -35,6 +35,7 @@ HPSPage
             kolor: "darkolivegreen"
         }
         Controls.TextField {
+            id: nazwaListy
             Layout.preferredHeight: listId.height
             Layout.preferredWidth: page.width / 2
             Layout.topMargin: 10
@@ -55,10 +56,10 @@ HPSPage
             columns: 2
             ListModel {
                     id: pakowanieModel
-                ListElement { ikona: "papryka.svg,white"; tekst: "Jedzenie" }
-                ListElement { ikona: "karimata.svg,white"; tekst: "Spanie" }
-                ListElement { ikona: "koszulka.svg,white"; tekst: "Ubrania" }
-                ListElement { ikona: "szampon.svg,white"; tekst: "Higiena" }
+                ListElement { ikona: "papryka.svg,white"; tekst: "Jedzenie"; kolorNaglowka: "Brown" }
+                ListElement { ikona: "karimata.svg,white"; tekst: "Spanie"; kolorNaglowka: "royalblue" }
+                ListElement { ikona: "koszulka.svg,white"; tekst: "Ubrania"; kolorNaglowka: "darkolivegreen" }
+                ListElement { ikona: "szampon.svg,white"; tekst: "Higiena"; kolorNaglowka: "plum" }
                 }
             Repeater
             {
@@ -66,6 +67,7 @@ HPSPage
                 model: pakowanieModel
                 delegate: Controls.AbstractButton {
                     id: control
+                    property string kolor: kolorNaglowka
                     width: page.width / 2
                     height: width
                     checkable: true
@@ -84,6 +86,7 @@ HPSPage
                             Layout.preferredHeight: width
                         }
                         Controls.Label {
+                            id: category
                             font.pointSize: invisibleSlider.value
                             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                             Layout.bottomMargin: 10
@@ -92,6 +95,14 @@ HPSPage
                         }
                     }
                 onToggled: {
+                    if(control.checked)
+                    {
+                        db.addCategory(category.text)
+                    }
+                    else
+                    {
+                        db.deleteCategory(category.text)
+                    }
                 }
                 }
             }
@@ -120,22 +131,33 @@ HPSPage
             id: box8
             tresc: "Ważne"
         }
-            Component {
-                id: hpsPakowanie
-                Controls.CheckBox
-                {
-                    id: control
-                    indicator: Rectangle {
-                        width: page.width / 2
-                        height: width
-                        color: control.checked ? "black" : "grey"
-                        border.width: 1
-                    }
-                    contentItem: Controls.Label {
-                        text: tresc
+             */
+        }
+    Controls.RoundButton {
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        visible: pageStack.currentItem.title == "Utwórz własną listę"
+        icon.source: "image://icons/go-next.svg,white"
+        highlighted: true
+        onClicked:
+        {
+            db.addList(nazwaListy.text)
+            pageStack.push(addElementsPage)
+        }
+    }
+        Component {
+            id: addElementsPage
+            HPSPage
+            {
+                ColumnLayout {
+                    Repeater {
+                        model: db.getList
+                        delegate: ElementListyNoImage {
+                            header: modelData
+                        }
                     }
                 }
-            } */
+            }
         }
     }
 }

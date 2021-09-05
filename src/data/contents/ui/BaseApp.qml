@@ -24,6 +24,7 @@ import org.kde.kirigami 2.11 as Kirigami
 import QtMultimedia 5.0
 import "gallery"
 import Data 1.0
+import HPSDatabase 1.0
 
 Kirigami.ApplicationWindow {
     id: root
@@ -35,6 +36,9 @@ Kirigami.ApplicationWindow {
 
 
 
+    HPSDatabase {
+        id: db
+    }
     HPSSettings
     {
         id: hpsSettings

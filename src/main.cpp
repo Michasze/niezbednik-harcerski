@@ -31,6 +31,7 @@
 #include "HPSFilter.h"
 #include "HPSIcon.h"
 #include "HPSImage.h"
+#include "HPSDatabase.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -76,6 +77,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<Spiewnik>("Data", 1, 0, "Spiewnik");
 //    qmlRegisterType<HPSIcon>("Icon", 1, 0, "HPSIcon");
     qmlRegisterType<HPSFilter>("Filter", 1, 0, "HPSFilter");
+    qmlRegisterType<HPSDatabase>("HPSDatabase", 1, 0, "HPSDatabase");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
     //we want different main files on desktop or mobile

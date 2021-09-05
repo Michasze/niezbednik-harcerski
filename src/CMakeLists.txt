@@ -13,6 +13,7 @@ set(HPS_SRCS
     HPSSettings.cpp
     Spiewnik.cpp
     HPSFilter.cpp
+    HPSDatabase.cpp
     )
 
 qt5_add_resources(RESOURCES resources.qrc)
@@ -47,7 +48,7 @@ else()
 endif()
 
 add_executable(HPS ${HPS_SRCS} ${RESOURCES})
-target_link_libraries(HPS Qt5::Core  Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Multimedia ${HPS_EXTRA_LIBS})
+target_link_libraries(HPS Qt5::Core  Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Multimedia Qt5::Sql ${HPS_EXTRA_LIBS})
 
 if (ANDROID)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)
