@@ -26,18 +26,43 @@ void HPSDatabase::addList(const QString &list)
     m_listName = list;
     addlist.exec();
   }
-void HPSDatabase::addCategory(const QString &category)
+QStringList HPSDatabase::getList()
+    {
+        QSqlQuery getList(m_database);
+        getList.prepare(QStringLiteral("SELECT name FROM packingLists ORDER BY name"));
+        getList.exec();
+        while(getList.next())
+            {
+               m_packingList.append(getList.value(0).toString());
+            }
+        return m_packingList;
+    }
+void HPSDatabase::deleteList(const QString &list)
+    {
+        QSqlQuery removeList(m_database);
+        removeList.prepare(QStringLiteral("DELETE FROM packingLists WHERE name = :name"));
+        removeList.bindValue(QStringLiteral(":name"), list);
+        qInfo() << "List name: " << list;
+        removeList.exec();
+    }
+void HPSDatabase::addCategory(const QString &category, const QString &color)
     {
         m_categoryList.append(category);
-        qDebug() << m_categoryList;
+        m_colorList.append(color);
+        qDebug() << m_categoryList << m_colorList;
     }
-void HPSDatabase::deleteCategory(const QString &category)
+void HPSDatabase::deleteCategory(const QString &category, const QString &color)
     {
         m_categoryList.removeOne(category);
-        qDebug() << m_categoryList;
+        m_colorList.removeOne(color);
+        qDebug() << m_categoryList << m_colorList;
     }
-QStringList HPSDatabase::getList()
+QStringList HPSDatabase::getCategory()
     {
         qDebug() << m_categoryList;
         return m_categoryList;
+    }
+QStringList HPSDatabase::getCategoryColor()
+    {
+        return m_colorList;
     }

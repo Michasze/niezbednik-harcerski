@@ -97,11 +97,12 @@ HPSPage
                 onToggled: {
                     if(control.checked)
                     {
-                        db.addCategory(category.text)
+                        console.log(control.kolor)
+                        db.addCategory(category.text, control.kolor)
                     }
                     else
                     {
-                        db.deleteCategory(category.text)
+                        db.deleteCategory(category.text, control.kolor)
                     }
                 }
                 }
@@ -151,9 +152,10 @@ HPSPage
             {
                 ColumnLayout {
                     Repeater {
-                        model: db.getList
+                        model: db.getCategory
                         delegate: ElementListyNoImage {
                             header: modelData
+                            color: db.getCategoryColor[index]
                         }
                     }
                 }

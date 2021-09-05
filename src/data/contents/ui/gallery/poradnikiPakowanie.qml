@@ -56,6 +56,13 @@ HPSPage {
                     onClicked: pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
                 }
             }
+        Repeater {
+            model: db.getList
+            delegate: KartaPakowanie {
+                header: modelData
+                opis: ""
+            }
+        }
 
         KartaStrona {
         header: "Ekwipunek obozowy według BP"

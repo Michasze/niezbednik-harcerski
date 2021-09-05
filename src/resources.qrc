@@ -6,6 +6,7 @@
         <file alias="contents/ui/gallery/KartaStrona.qml">./data/contents/ui/gallery/KartaStrona.qml</file>
         <file alias="contents/ui/gallery/KartaStronaNoImage.qml">./data/contents/ui/gallery/KartaStronaNoImage.qml</file>
         <file alias="contents/ui/gallery/KartaStronaIkona.qml">./data/contents/ui/gallery/KartaStronaIkona.qml</file>
+        <file alias="contents/ui/gallery/KartaPakowanie.qml">./data/contents/ui/gallery/KartaPakowanie.qml</file>
         <file alias="contents/ui/gallery/ElementListy.qml">./data/contents/ui/gallery/ElementListy.qml</file>
         <file alias="contents/ui/gallery/ElementListyNoImage.qml">./data/contents/ui/gallery/ElementListyNoImage.qml</file>
         <file alias="contents/ui/gallery/HPSRadioButton.qml">./data/contents/ui/gallery/HPSRadioButton.qml</file>
@@ -336,6 +337,7 @@
         <file alias="contents/ui/img/applications-graphics.svg">./data/contents/ui/img/applications-graphics.svg</file>
         <file alias="contents/ui/img/go-previous.svg">./data/contents/ui/img/go-previous.svg</file>
         <file alias="contents/ui/img/go-next.svg">./data/contents/ui/img/go-next.svg</file>
+        <file alias="contents/ui/img/edit-delete.svg">./data/contents/ui/img/edit-delete.svg</file>
          <file alias="contents/ui/img/edit-paste-in-place.svg">./data/contents/ui/img/edit-paste-in-place.svg</file>
          <file alias="contents/ui/img/mail-sent.svg">./data/contents/ui/img/mail-sent.svg</file>
          <file alias="contents/ui/img/user.svg">./data/contents/ui/img/user.svg</file>
