@@ -43,7 +43,7 @@ import QtQuick.Layouts 1.2
                         left: parent.left
                         top: parent.top
                         right: parent.right
-                        //IMPORTANT: never put the bottom margin
+                        bottom: parent.bottom
                     }
                     ColumnLayout {
                         Controls.Label {
@@ -69,6 +69,13 @@ import QtQuick.Layouts 1.2
                             Layout.bottomMargin: 10
                             text: kartaRectangle.opis
                         }
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                            db.getCategoryList(kartaRectangle.header)
+                            pageStack.push(Qt.resolvedUrl("pakowanieTemplate.qml"))
+                        }
+                        }
                     }
                     Controls.AbstractButton {
                         Layout.leftMargin: 10
@@ -77,15 +84,15 @@ import QtQuick.Layouts 1.2
                         contentItem: Image {
                             anchors.fill: parent
                         Layout.fillWidth: false
+                            Layout.fillHeight: true
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
                         source: kartaRectangle.ikona
-                            sourceSize.width: kartaRectangle.height - 20
+                            sourceSize.width: (kartaRectangle.height / 2) - 20
                         }
                         onPressed: {
+                            kartaRectangle.visible = false
                             db.deleteList(kartaRectangle.header)
                         }
                     }
-
-
                }
                 }

@@ -1,4 +1,3 @@
-
 /*
  *   Copyright 2021 HPS <aplikacjahps@gmail.com>
  *
@@ -97,7 +96,6 @@ HPSPage
                 onToggled: {
                     if(control.checked)
                     {
-                        console.log(control.kolor)
                         db.addCategory(category.text, control.kolor)
                     }
                     else
@@ -142,24 +140,12 @@ HPSPage
         highlighted: true
         onClicked:
         {
+            db.saveCategory()
             db.addList(nazwaListy.text)
-            pageStack.push(addElementsPage)
+            db.setList(nazwaListy.text)
+            pageStack.pop()
+            pageStack.push(Qt.resolvedUrl("pakowanieKreator.qml"))
         }
     }
-        Component {
-            id: addElementsPage
-            HPSPage
-            {
-                ColumnLayout {
-                    Repeater {
-                        model: db.getCategory
-                        delegate: ElementListyNoImage {
-                            header: modelData
-                            color: db.getCategoryColor[index]
-                        }
-                    }
-                }
-            }
-        }
     }
 }

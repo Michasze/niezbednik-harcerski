@@ -53,7 +53,10 @@ HPSPage {
                     }
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
+                    onClicked: {
+                        db.clearCategory()
+                        pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
+                    }
                 }
             }
         Repeater {
