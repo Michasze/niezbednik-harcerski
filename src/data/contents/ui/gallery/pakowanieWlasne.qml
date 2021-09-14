@@ -140,9 +140,10 @@ HPSPage
         highlighted: true
         onClicked:
         {
-            db.saveCategory()
             db.addList(nazwaListy.text)
             db.setList(nazwaListy.text)
+            db.saveCategory()
+            db.getCategoryList(nazwaListy.text)
             pageStack.pop()
             pageStack.push(Qt.resolvedUrl("pakowanieKreator.qml"))
         }

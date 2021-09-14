@@ -72,8 +72,9 @@ import QtQuick.Layouts 1.2
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
-                            db.getCategoryList(kartaRectangle.header)
-                            pageStack.push(Qt.resolvedUrl("pakowanieTemplate.qml"))
+                                db.getCategoryList(kartaRectangle.header)
+                                db.setList(kartaRectangle.header)
+                                pageStack.push(Qt.resolvedUrl("pakowanieTemplate.qml"))
                         }
                         }
                     }

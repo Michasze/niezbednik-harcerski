@@ -24,12 +24,13 @@ import QtQuick.Layouts 1.2
             HPSPage
             {
                 id: page
-                title: "Własna lista"
+                title: db.getCurrentList
                 ColumnLayout {
                     Repeater {
                         model: db.getCategory
                         delegate: PakowanieLista
                         {
+                            visible: index == 0 ? false : true
                             tytul: modelData
                         }
                     }

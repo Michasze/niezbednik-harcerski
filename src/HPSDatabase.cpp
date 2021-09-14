@@ -35,6 +35,10 @@ void HPSDatabase::setList(const QString &list)
     {
         m_currentList = list;
     }
+QString HPSDatabase::getCurrentList()
+    {
+        return m_currentList;
+    }
 QStringList HPSDatabase::getList()
     {
         m_packingList.clear();
@@ -57,47 +61,59 @@ void HPSDatabase::deleteList(const QString &list)
         removeList.bindValue(QStringLiteral(":name"), list);
         removeList.exec();
         removeList.prepare(QStringLiteral("DELETE FROM packingItems WHERE list = :list"));
-        removeList.bindValue(QStringLiteral(":item"), list);
+        removeList.bindValue(QStringLiteral(":list"), list);
         removeList.exec();
+    }
+void HPSDatabase::deleteItem(const QString &item)
+    {
+        QSqlQuery removeItem(m_database);
+        removeItem.prepare(QStringLiteral("DELETE FROM packingItems WHERE (list = :list) AND (item = :item)"));
+        removeItem.bindValue(QStringLiteral(":list"), m_currentList);
+        removeItem.bindValue(QStringLiteral(":item"), item);
+        removeItem.exec();
     }
 void HPSDatabase::clearCategory()
     {
         m_categoryList.clear();
+        m_colorList.clear();
     }
 void HPSDatabase::addCategory(const QString &category, const QString &color)
     {
         m_categoryList.append(category);
         m_colorList.append(color);
-        qDebug() << m_categoryList << m_colorList;
+        qInfo() << "current color list state: " << m_colorList;
     }
 void HPSDatabase::deleteCategory(const QString &category, const QString &color)
     {
         m_categoryList.removeOne(category);
         m_colorList.removeOne(color);
-        qDebug() << m_categoryList << m_colorList;
     }
 QStringList HPSDatabase::getCategory()
     {
-        qDebug() << m_categoryList;
         return m_categoryList;
     }
 QStringList HPSDatabase::getCategoryColor()
     {
+        qInfo() << m_colorList;
         return m_colorList;
     }
 void HPSDatabase::getCategoryList(const QString &list)
     {
         m_categoryList.clear();
+        m_colorList.clear();
+        //HACK: z jakiegoś powodu modele z c++ nie zawsze działają w QMLu prawidłowo
+        // W tym przypadku konieczne jest przesunięcie modelu o jeden
+        m_categoryList.append("");
+        m_colorList.append("");
         QSqlQuery fetch(m_database);
-        fetch.prepare(QStringLiteral("SELECT category FROM packingItems WHERE (list = :list)"));
-        fetch.bindValue(QStringLiteral(":list"), list);
+        fetch.prepare(QStringLiteral("SELECT category, color FROM packingCategories WHERE (name = :name)"));
+        fetch.bindValue(QStringLiteral(":name"), list);
         fetch.exec();
         while (fetch.next())
             {
                 m_categoryList.append(fetch.value(0).toString());
+                m_colorList.append(fetch.value(1).toString());
             }
-        qInfo() << list;
-        qInfo() << "Category list:" << m_categoryList;
     }
 QStringList HPSDatabase::categoryList()
     {
@@ -106,7 +122,6 @@ QStringList HPSDatabase::categoryList()
 void HPSDatabase::saveCategory()
     {
         QSqlQuery save(m_database);
-        qInfo() << "packingCategories" << m_categoryList;
         for (int i = 0; i < m_categoryList.size(); i++)
             {
                 save.prepare(QStringLiteral("INSERT INTO packingCategories (name, category, color ) VALUES (:name, :category, :color)"));
@@ -115,6 +130,7 @@ void HPSDatabase::saveCategory()
                 save.bindValue(QStringLiteral(":color"), m_colorList.at(i));
                 save.exec();
                                }
+        m_colorList.clear();
     }
 void HPSDatabase::addItem(const QString &item, const QString &category)
     {
@@ -124,6 +140,8 @@ void HPSDatabase::addItem(const QString &item, const QString &category)
         add.bindValue(QStringLiteral(":category"), category);
         add.bindValue(QStringLiteral(":list"), m_currentList);
         add.exec();
+        getItemList(category);
+        categoryListChanged();
         itemListChanged();
     }
 void HPSDatabase::getItemList(const QString &category)
@@ -136,11 +154,12 @@ void HPSDatabase::getItemList(const QString &category)
         fetch.exec();
         while(fetch.next())
             {
+               qInfo() << "selecting item " << fetch.value(0).toString() << "from category" << category;
                m_itemList.append(fetch.value(0).toString());
             }
-        qInfo() << m_itemList;
     }
 QStringList HPSDatabase::itemList()
     {
+        qInfo() << "Item List: " << m_itemList;
         return m_itemList;
     }

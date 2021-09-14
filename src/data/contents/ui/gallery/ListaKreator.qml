@@ -17,7 +17,8 @@ ColumnLayout {
     Repeater {
         visible: naglowek.index == 0 ? false : true
         model: db.itemList
-        delegate: HPSCheckable {
+        delegate: PakowanieDelegate {
+            tresc: modelData
         }
     }
 }

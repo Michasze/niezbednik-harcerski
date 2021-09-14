@@ -239,6 +239,8 @@
         <file alias="contents/ui/gallery/pakowanieKreator.qml">./data/contents/ui/gallery/pakowanieKreator.qml</file>
         <file alias="contents/ui/gallery/pakowanieTemplate.qml">./data/contents/ui/gallery/pakowanieTemplate.qml</file>
         <file alias="contents/ui/gallery/PakowanieLista.qml">./data/contents/ui/gallery/PakowanieLista.qml</file>
+        <file alias="contents/ui/gallery/PakowanieDelegate.qml">./data/contents/ui/gallery/PakowanieDelegate.qml</file>
+        <file alias="contents/ui/gallery/ListaKreator.qml">./data/contents/ui/gallery/ListaKreator.qml</file>
         <file alias="contents/ui/gallery/Sprzet.qml">./data/contents/ui/gallery/Sprzet.qml</file>
         <file alias="contents/ui/gallery/gawedy.qml">./data/contents/ui/gallery/gawedy.qml</file>
         <file alias="contents/ui/gallery/grzybiarz.qml">./data/contents/ui/gallery/grzybiarz.qml</file>

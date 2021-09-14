@@ -14,6 +14,7 @@ class HPSDatabase : public QObject
   Q_PROPERTY(QStringList getList READ getList NOTIFY packingChanged)
   Q_PROPERTY(QStringList itemList READ itemList NOTIFY itemListChanged)
   Q_PROPERTY(QStringList categoryList READ categoryList NOTIFY categoryListChanged)
+  Q_PROPERTY(QString getCurrentList READ getCurrentList NOTIFY currentListChanged)
 
 public:
   HPSDatabase(QObject *parent=0);
@@ -32,6 +33,8 @@ public:
   Q_INVOKABLE void clearCategory();
   QStringList categoryList();
   QStringList itemList();
+  QString getCurrentList();
+  Q_INVOKABLE void deleteItem(const QString &item);
 
 private:
   QSqlDatabase m_database;
@@ -48,6 +51,7 @@ signals:
   void packingChanged();
   void itemListChanged();
   void categoryListChanged();
+  void currentListChanged();
 };
 
 #endif // HPSDATABASE_H_
