@@ -34,7 +34,7 @@ HPSPage {
      {
         color: "royalblue"
         align: 0
-        header: "<p>Wstęp</p>"
+        header: "Wstęp"
      }
      ElementListyNoImage
      {
