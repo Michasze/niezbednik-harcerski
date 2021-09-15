@@ -28,7 +28,6 @@ HPSPage {
 
     ColumnLayout {
         width: page.width
-        spacing: Units.smallSpacing
         Controls.Label {
             id: opis
             Layout.fillWidth: true

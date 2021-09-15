@@ -32,5 +32,10 @@ KartaStronaNoImage {
         opis: "autor: Jacek Wątroba"
         adres: "grzybiarz.qml"
     }
+KartaStronaNoImage {
+        header: "Powstaniec"
+        opis: "autor: Ćwikowie na próbie 2021 Szenajda"
+        adres: "powstaniec.qml"
+    }
         }
     }

@@ -212,14 +212,13 @@ background: Rectangle {
         }
 
 
- /*       ListElement {
+       ListElement {
             title: "Gawędy"
             targetPage: "gallery/gawedy.qml"
             img: "image://icons/ognisko.svg"
-            kolor: "#ffffff"
 
         }
-        ListElement {
+/*        ListElement {
             title: "Lista miejsc obozowych"
             targetPage: "gallery/mapa.qml"
         }
