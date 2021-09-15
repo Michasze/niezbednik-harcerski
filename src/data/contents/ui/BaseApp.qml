@@ -401,6 +401,7 @@ topContent: [ColumnLayout {
   Layout.rightMargin: 10
   Layout.leftMargin: 10
 ElementListy {
+    color: "transparent"
     header: "O aplikacji"
     ikona: "image://icons/documentinfo.svg,white"
     Layout.maximumHeight: 60
@@ -413,7 +414,12 @@ ElementListy {
       globalDrawer.close()
     }  }
         }
+    HPSSeparator {
+        Layout.fillWidth: true
+        color: "#615f5f"
+    }
 ElementListy {
+    color: "transparent"
     header: "Social media"
     ikona: "image://icons/snapchat_symbolic.svg,white"
     Layout.maximumHeight: 60
@@ -426,7 +432,13 @@ ElementListy {
       globalDrawer.close()
     }  }
         }
+
+    HPSSeparator {
+        Layout.fillWidth: true
+        color: "#615f5f"
+    }
 ElementListy {
+    color: "transparent"
     header: "Testerzy"
     ikona: "image://icons/user.svg,white"
     Layout.maximumHeight: 60
@@ -440,7 +452,12 @@ ElementListy {
     }
         }
       }
+    HPSSeparator {
+        Layout.fillWidth: true
+        color: "#615f5f"
+    }
 ElementListy {
+    color: "transparent"
     header: "Pomocne dłonie"
     ikona: "image://icons/hand.svg,white"
     Layout.maximumHeight: 60
@@ -453,7 +470,12 @@ ElementListy {
       globalDrawer.close()
     }    }
   }
+    HPSSeparator {
+        Layout.fillWidth: true
+        color: "#615f5f"
+    }
 ElementListy {
+    color: "transparent"
     header: "Ustawienia"
     ikona: "image://icons/settings.svg,white"
     Layout.maximumHeight: 60
