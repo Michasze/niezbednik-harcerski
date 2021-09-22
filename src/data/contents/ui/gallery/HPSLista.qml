@@ -316,6 +316,7 @@ AbstractListItem {
                 QQC2.Label {
                     id: labelItem
                     text: listItem.text
+                    textFormat: Text.StyledText
                     Layout.fillWidth: true
                     wrapMode: Text.WordWrap
                     horizontalAlignment: listItem.alignH

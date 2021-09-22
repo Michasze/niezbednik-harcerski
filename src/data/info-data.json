@@ -141,6 +141,54 @@
         "tresc": ["„Trudności życia są błogosławieństwem, gdyż przezwyciężanie ich oznacza zwycięstwo.“",
                   "„Skautostwo baden-powellowskie posiada tak niezmiernie bogatą treść i jest tak świetnie dostosowane do wrodzonych skłonności młodzieży, że zarówno chłopcy, jak i dziewczęta mogą nieograniczenie zeń czerpać. Dlatego nie uzasadnionym jest twierdzenie niektórych osób, jakoby skautki były tylko naśladownictwem chłopców.“"
                  ]
-    }
+    },
+    {
+        "autor":"Adam Mickiewicz",
+        "zdjecie":"mickiewicz",
+        "tresc": ["„Bo kto nie był ni razu człowiekiem, temu człowiek nic nie pomoże.“<br>
+<b>Dziady część II</b>",
+                  "„Bo serce nie jest sługa, nie zna, co to pany,
+I nie da się przemocą okuwać w kajdany.“<br>
+<b>Pan Tadeusz</b>",
+                  "„Tam sięgaj, gdzie wzrok nie sięga;
+Łam, czego rozum nie złamie“<br>
+<b>Wiersze</b>",
+                  "„... Nasz naród jak lawa,
+Z wierzchu zimna i twarda, sucha i plugawa,
+Lecz wewnętrznego ognia sto lat nie wyziębi;
+Plwajmy na tę skorupę i zstąpmy do głębi.“<br>
+<b>Dziady część III</b>",
+                  "„Ciemno wszędzie, głucho wszędzie,/ Co to będzie, co to będzie?“<br>
+<b>Dziady część II</b>",
+                  "„Kto nie dozna goryczy ni razu, Ten nie dozna słodyczy w niebie.“<br>
+<b>Dziady część II</b>",
+                  "„Źle mnie w złych ludzi tłumie,
+Płaczę, a oni szydzą;
+Mówię, nikt nie rozumie;
+Widzę, oni nie widzą!“<br>
+<b>Ballady i romanse</b>"
+                 ]
+    },
+                {
+                    "autor":"Juliusz Słowacki",
+                    "zdjecie":"slowacki",
+                    "tresc": [
+                        "„Lecz zaklinam - niech żywi nie tracą nadziei
+I przed narodem niosą oświaty kaganiec;
+A kiedy trzeba, na śmierć idą po kolei,
+Jak kamienie przez Boga rzucone na szaniec!“<br>
+<b>Testament Mój</b>",
+                        "„Biada, kto daje ojczyźnie pół duszy,
+A drugie tu pół dla szczęścia zachowa.“<br>
+<b>Beniowski</b>",
+                        "„Nie czas żałować róż, gdy płoną lasy.“<br>
+<b>Lilla Weneda</b>",
+                        "„Gdzież anioł przeczucia? Czy przyjdzie? poprowadzi? Więc myśli i uczucia Trzeba skąpca przykładem, na lata rozłożyć, I nigdy zmysłów w jednej nie utracić burzy. Trzeba się dziś zwyciężyć, aby jutra dożyć. Dziwna ciekawość życia prowadzi w podróży. A za ciekawość trzeba nieszczęściami płacić, I nigdy zmysłów w jednej burzy nie utracić…“<br>
+<b>Kordian</b>",
+                        "„Każdy człowiek, który się poświęca
+Za wolność – jest człowiekiem, nowym Boga tworem.“<br>
+<b>Kordian</b>"
+                    ]
+                }
               ]
 }
