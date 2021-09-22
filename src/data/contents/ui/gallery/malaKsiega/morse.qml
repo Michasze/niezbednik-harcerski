@@ -20,24 +20,14 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
 import ".."
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
     title: "Alfabet Morse'a"
 
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
-        }
-    }
 
     ColumnLayout {
         width: page.width
@@ -54,6 +44,8 @@ HPSPage {
             HPSIcon
  {
      source: "image://icons/szyfry/morse.svg,white"
+     Layout.fillWidth: !isHorizontal
+     sourceSize.width: isHorizontal ? page.width / 2 : page.width
  }
    }
 }
