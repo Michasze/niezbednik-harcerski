@@ -8,7 +8,12 @@ HPSDatabase::HPSDatabase(QObject *parent)
     : QObject(parent)
     , m_database(QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("packing")))
 {
+    // Dostęp do GenericDataLocation na Androidzie wymaga uprawnień więc skorzystajmy z innego folderu
+    #ifdef Q_OS_ANDROID
+    const QString loc = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+    #else
     const QString loc = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/hps");
+    #endif
     m_database.setDatabaseName(loc + QStringLiteral("/pakowanie.sqlite"));
     const bool open = m_database.open();
     qInfo() << open;
@@ -38,6 +43,10 @@ void HPSDatabase::setList(const QString &list)
 QString HPSDatabase::getCurrentList()
     {
         return m_currentList;
+    }
+QString HPSDatabase::getCurrentCategory()
+    {
+        return m_currentCategory;
     }
 QStringList HPSDatabase::getList()
     {
@@ -132,7 +141,7 @@ void HPSDatabase::saveCategory()
                                }
         m_colorList.clear();
     }
-void HPSDatabase::addItem(const QString &item, const QString &category)
+void HPSDatabase::addItem(const QString &item, const QString &category, const int index)
     {
         QSqlQuery add(m_database);
         add.prepare(QStringLiteral("INSERT INTO packingItems (item, category, list) VALUES (:item, :category, :list)"));
@@ -140,11 +149,18 @@ void HPSDatabase::addItem(const QString &item, const QString &category)
         add.bindValue(QStringLiteral(":category"), category);
         add.bindValue(QStringLiteral(":list"), m_currentList);
         add.exec();
+        m_currentIndex = index;
         getItemList(category);
-        categoryListChanged();
+        // categoryListChanged();
+        listChanged();
         itemListChanged();
     }
-void HPSDatabase::getItemList(const QString &category)
+int HPSDatabase::index()
+    {
+        qInfo() << "index: " << m_currentIndex;
+        return m_currentIndex;
+    }
+QStringList HPSDatabase::getItemList(const QString &category)
     {
         m_itemList.clear();
         QSqlQuery fetch(m_database);
@@ -157,6 +173,8 @@ void HPSDatabase::getItemList(const QString &category)
                qInfo() << "selecting item " << fetch.value(0).toString() << "from category" << category;
                m_itemList.append(fetch.value(0).toString());
             }
+        qInfo() << m_itemList;
+        return m_itemList;
     }
 QStringList HPSDatabase::itemList()
     {

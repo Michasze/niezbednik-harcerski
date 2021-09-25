@@ -345,6 +345,8 @@
         <file alias="contents/ui/img/applications-graphics.svg">./data/contents/ui/img/applications-graphics.svg</file>
         <file alias="contents/ui/img/go-previous.svg">./data/contents/ui/img/go-previous.svg</file>
         <file alias="contents/ui/img/go-next.svg">./data/contents/ui/img/go-next.svg</file>
+        <file alias="contents/ui/img/document-save.svg">./data/contents/ui/img/document-save.svg</file>
+        <file alias="contents/ui/img/document-edit.svg">./data/contents/ui/img/document-edit.svg</file>
         <file alias="contents/ui/img/edit-delete.svg">./data/contents/ui/img/edit-delete.svg</file>
          <file alias="contents/ui/img/edit-paste-in-place.svg">./data/contents/ui/img/edit-paste-in-place.svg</file>
          <file alias="contents/ui/img/mail-sent.svg">./data/contents/ui/img/mail-sent.svg</file>

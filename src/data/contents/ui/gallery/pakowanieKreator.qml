@@ -23,7 +23,8 @@ import QtQuick.Layouts 1.2
             HPSPage
             {
                 id: page
-                title: "Utwórz własną listę"
+                //HACK: rozróżnianie między tą stroną a poprzednią by wyświetlić odpowiednie przyciski
+                title: "Utwórz własną listę "
                 ColumnLayout {
                     Repeater {
                         model: db.getCategory
@@ -118,8 +119,8 @@ import QtQuick.Layouts 1.2
                         }
                         onClicked:
                         {
-                            console.log(kategoria.currentValue)
-                            db.addItem(przedmiot.text, kategoria.currentValue)
+                            db.addItem(przedmiot.text, kategoria.currentValue, kategoria.currentIndex)
+                            db.indexChanged
                             przedmiot.clear()
                         }
                     }

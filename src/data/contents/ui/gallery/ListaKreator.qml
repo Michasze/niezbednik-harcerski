@@ -9,14 +9,15 @@ ColumnLayout {
         visible: index == 0 ? false : true
         header: tytul
         color: db.getCategoryColor[index]
-        Component.onCompleted: {
-            console.log(naglowek.header)
-            db.getItemList(db.getCategory[index + 1])
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                console.log(db.itemList)
+            }
         }
     }
     Repeater {
-        visible: naglowek.index == 0 ? false : true
-        model: db.itemList
+        model: db.getItemList(db.getCategory[index])
         delegate: PakowanieDelegate {
             tresc: modelData
         }

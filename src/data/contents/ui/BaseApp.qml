@@ -521,6 +521,18 @@ Controls.CheckBox {
     pageStack.initialPage: mainPageComponent
     pageStack.defaultColumnWidth: 1920
 
+    Controls.RoundButton {
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottomMargin: 60
+        icon.source: "image://icons/document-save.svg"
+        visible: pageStack.currentItem.title == "Utwórz własną listę "
+        highlighted: true
+        onClicked:
+        {
+            pageStack.pop()
+        }
+    }
 
     //Main app content
     Component {

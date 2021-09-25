@@ -26,6 +26,7 @@ import QtQuick.Layouts 1.2
              property string header: "Brak tekstu"
              property string opis: ""
              property url ikona: "image://icons/edit-delete.svg,red"
+             property url ikona2: "image://icons/document-edit.svg,white"
              property url adres: "harcerz.qml"
              property string kolor: "#303030"
 
@@ -77,6 +78,25 @@ import QtQuick.Layouts 1.2
                                 pageStack.push(Qt.resolvedUrl("pakowanieTemplate.qml"))
                         }
                         }
+                    }
+                    Image {
+                        Layout.leftMargin: 10
+                        Layout.topMargin: 10
+                        Layout.bottomMargin: 10
+                        Layout.fillWidth: false
+                        fillMode: Image.PreserveAspectFit
+                            Layout.fillHeight: true
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                        source: kartaRectangle.ikona2
+                            sourceSize.width: (kartaRectangle.height / 2) - 20
+                        MouseArea {
+                            anchors.fill: parent
+                        onClicked: {
+                            db.setList(kartaRectangle.header)
+                            db.getCategoryList(kartaRectangle.header)
+                            pageStack.push(Qt.resolvedUrl("pakowanieKreator.qml"))
+                        }
+                    }
                     }
                     Controls.AbstractButton {
                         Layout.leftMargin: 10
