@@ -42,7 +42,10 @@ HPSPage
             Layout.rightMargin: 10
             background: Rectangle {
                 anchors.fill: parent
-                color: "Grey"
+                color: "black"
+                border.width: 1
+                border.color: "white"
+                radius: 5
             }
         }
         ElementListyNoImage {

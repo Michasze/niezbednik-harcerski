@@ -60,6 +60,7 @@ import QtQuick.Layouts 1.2
                         Layout.fillHeight: true
                         Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                         Layout.bottomMargin: 10
+                        currentIndex: 1
                         delegate: Controls.ItemDelegate {
                                 visible: index == 0 ? false : true
                             contentItem: Controls.Label {
@@ -77,7 +78,7 @@ import QtQuick.Layouts 1.2
                         }
                        popup: Controls.Popup {
                            y: kategoria.height + 10
-                           width: page.width / 6
+                           width: kategoria.width / 2
                            implicitHeight: contentItem.implicitHeight
                            padding: 1
 
@@ -85,7 +86,7 @@ import QtQuick.Layouts 1.2
                                clip: true
                                implicitHeight: contentHeight
                                model: kategoria.popup.visible ? kategoria.delegateModel : null
-                               currentIndex: kategoria.highlightedIndex
+                               currentIndex: kategoria.highlightedIndex != 0 ? kategoria.highlightedIndex : kategoria.highlightedIndex + 1
 
                            }
 
