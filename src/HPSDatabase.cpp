@@ -2,6 +2,7 @@
 #include <QStandardPaths>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QDir>
 #include <QDebug>
 
 HPSDatabase::HPSDatabase(QObject *parent)
@@ -12,6 +13,12 @@ HPSDatabase::HPSDatabase(QObject *parent)
     #ifdef Q_OS_ANDROID
     const QString loc = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     #else
+    QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/hps"));
+        //utwórz folder z bazą jeśli nie istnieje
+        if(!dir.exists())
+            {
+                dir.mkpath("../hps");
+            }
     const QString loc = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/hps");
     #endif
     m_database.setDatabaseName(loc + QStringLiteral("/pakowanie.sqlite"));
