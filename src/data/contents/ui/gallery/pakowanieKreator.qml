@@ -46,7 +46,7 @@ import QtQuick.Layouts 1.2
                         verticalAlignment: TextInput.AlignVCenter
                         placeholderTextColor: "White"
                         color: "white"
-                        placeholderText: qsTr("Przedmiot")
+                        placeholderText: qsTr("Nowy przedmiot")
                         background: Rectangle {
                             anchors.fill: parent
                             radius: 5
