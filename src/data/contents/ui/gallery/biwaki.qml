@@ -24,18 +24,19 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     title: qsTr("Biwaki")
+    ColumnLayout
+    {
+        KartaStronaIkona {
+            header: "10 Zasad biwaku wędrownego"
+            opis: "pwd. Juliusz Idzikowski"
+            adres: "zasadyBiwak.qml"
+            ikona: "image://icons/sylwetka.svg,white"
 
-ColumnLayout
-{
-KartaStronaNoImage { 
-        header: "10 Zasad biwaku wędrownego"
-        opis: "pwd. Juliusz Idzikowski"
-        adres: "zasadyBiwak.qml"
     }
-KartaStronaNoImage {
-        header: "Poradnik organizacji biwaku"
-        opis: "phm. Beniamin Marek"
-        adres: "organizacjaBiwaku.qml"
+        KartaStronaNoImage {
+            header: "Poradnik organizacji biwaku"
+            opis: "phm. Beniamin Marek"
+            adres: "organizacjaBiwaku.qml"
     }
 
         }
