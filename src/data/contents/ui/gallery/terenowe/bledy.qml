@@ -92,7 +92,7 @@ HPSPage {
         }        ElementListyNoImage
         {
             color: "green"
-            header: "Schematyczne \"nudne\" gry terenowe (znów szukamy kartek)"
+            header: "Schematyczne \"nudne\" gry terenowe <br> (znów szukamy kartek)"
         }
         ElementListyNoImage
         {
