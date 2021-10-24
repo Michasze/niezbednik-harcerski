@@ -15,6 +15,7 @@ import QtQuick.Layouts 1.2
                 anchors.centerIn: parent
                 anchors.fill: parent
                 Image {
+                    id: krzyz
                     z: 1
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                     Layout.fillWidth: false
@@ -31,9 +32,15 @@ import QtQuick.Layouts 1.2
                 }
                 Controls.Label {
                     horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignTop
+                    Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                     wrapMode: Text.Wrap
-                    font.pointSize: invisibleSlider.value
+                    fontSizeMode: Text.VerticalFit
+                    minimumPointSize: 10
+                    font.pointSize: invisibleSlider.value - 2
                     Layout.fillWidth: true
+                    Layout.maximumHeight: stopien.height - krzyz.height - 10
+                    Layout.bottomMargin: 20
                     Layout.rightMargin: 10
                     text: stopien.header
                 }
