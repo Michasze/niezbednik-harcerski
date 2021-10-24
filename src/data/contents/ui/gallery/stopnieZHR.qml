@@ -81,45 +81,34 @@ header: Controls.TabBar {
                              }
                          }
                      }
-    ColumnLayout {
-        width: page.width
-        spacing: Units.smallSpacing
-        ElementListyNoImage
+    GridLayout {
+        columns: 2
+        StopienRectangle
         {
-            wysokosc: 120
-            color: "steelblue"
-            format: Text.PlainText
             header: "Młodzik/\n Ochotniczka"
         }
-        ElementListyNoImage
+        StopienRectangle
         {
-            wysokosc: 120
-            color: "steelblue"
-            format: Text.PlainText
+            ikona: "image://icons/krzyz_lilijka_srebrna.svg"
             header: "Wywiadowca/\n Tropicielka"
         }
-        ElementListyNoImage
+        StopienRectangle
         {
-            wysokosc: 120
-            color: "steelblue"
-            format: Text.PlainText
-            header: "Odkrywca/\n Pionierka"
-        }
-        ElementListyNoImage
-        {
-            wysokosc: 120
-            color: "steelblue"
-            format: Text.PlainText
+            ikona: "image://icons/krzyz_lilijka_zlota.svg"
             header: "Ćwik/\n Samarytanka"
         }
-        ElementListyNoImage
+        StopienRectangle
         {
-            wysokosc: 120
-            color: "steelblue"
-            format: Text.PlainText
+            ikona: "image://icons/krzyz_lilijka_okrag.svg"
+            divider: 2.35
+            header: "Harcerz orli/\n Wędrowniczka"
+        }
+        StopienRectangle
+        {
+            ikona: "image://icons/krzyz_wieniec.svg"
+            divider: 1.0
             header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
         }
-
                  }
-                  }
+    }
 }

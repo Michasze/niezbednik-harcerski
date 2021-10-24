@@ -20,6 +20,7 @@
         <file alias="contents/ui/gallery/HPSCheckBox.qml">./data/contents/ui/gallery/HPSCheckBox.qml</file>
         <file alias="contents/ui/gallery/HPSIcon.qml">./data/contents/ui/gallery/HPSIcon.qml</file>
         <file alias="contents/ui/gallery/HPSImage.qml">./data/contents/ui/gallery/HPSImage.qml</file>
+        <file alias="contents/ui/gallery/StopienRectangle.qml">./data/contents/ui/gallery/StopienRectangle.qml</file>
         <file alias="contents/ui/gallery/CytatAutor.qml">./data/contents/ui/gallery/CytatAutor.qml</file>
         <file alias="contents/ui/gallery/Cytat.qml">./data/contents/ui/gallery/Cytat.qml</file>
         <file alias="contents/ui/img/skaut.jpg">./data/contents/ui/img/skaut.jpg</file>
@@ -281,6 +282,10 @@
         <file alias="contents/ui/img/krzyz.svg">./data/contents/ui/img/krzyz.svg</file>
         <file alias="contents/ui/img/krzyz_ramiona.svg">./data/contents/ui/img/krzyz_ramiona.svg</file>
         <file alias="contents/ui/img/krzyz_lilijka.svg">./data/contents/ui/img/krzyz_lilijka.svg</file>
+        <file alias="contents/ui/img/krzyz_lilijka_srebrna.svg">./data/contents/ui/img/krzyz_lilijka_srebrna.svg</file>
+        <file alias="contents/ui/img/krzyz_lilijka_zlota.svg">./data/contents/ui/img/krzyz_lilijka_zlota.svg</file>
+        <file alias="contents/ui/img/krzyz_lilijka_okrag.svg">./data/contents/ui/img/krzyz_lilijka_okrag.svg</file>
+        <file alias="contents/ui/img/krzyz_wieniec.svg">./data/contents/ui/img/krzyz_wieniec.svg</file>
         <file alias="contents/ui/img/krzyz_czuwaj.svg">./data/contents/ui/img/krzyz_czuwaj.svg</file>
         <file alias="contents/ui/img/krzyz_ziarenka.svg">./data/contents/ui/img/krzyz_ziarenka.svg</file>
         <file alias="contents/ui/img/krzyz_laurowy.svg">./data/contents/ui/img/krzyz_laurowy.svg</file>
