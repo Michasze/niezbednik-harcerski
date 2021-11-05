@@ -125,6 +125,7 @@
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
         <file alias="contents/ui/gallery/symbolikaWosm.qml">./data/contents/ui/gallery/symbolikaWosm.qml</file>
         <file alias="contents/ui/gallery/symbolikaWagggs.qml">./data/contents/ui/gallery/symbolikaWagggs.qml</file>
+        <file alias="contents/ui/gallery/znaki.qml">./data/contents/ui/gallery/znaki.qml</file>
         <file alias="contents/ui/gallery/prawoZHR.qml">./data/contents/ui/gallery/prawoZHR.qml</file>
         <file alias="contents/ui/gallery/prawoFSE.qml">./data/contents/ui/gallery/prawoFSE.qml</file>
         <file alias="contents/ui/gallery/prawoSH.qml">./data/contents/ui/gallery/prawoSH.qml</file>
@@ -383,6 +384,16 @@
         <file alias="contents/ui/img/hand.svg">./data/contents/ui/img/hand.svg</file>
         <file alias="contents/ui/img/go-home_symbolic.svg">./data/contents/ui/img/go-home_symbolic.svg</file>
         <file alias="contents/ui/img/snapchatHPS.jpg">./data/contents/ui/img/snapchatHPS.jpg</file>
+        <file alias="contents/ui/img/dziecku.svg">./data/contents/ui/img/dziecku.svg</file>
+        <file alias="contents/ui/img/gospodarce.svg">./data/contents/ui/img/gospodarce.svg</file>
+        <file alias="contents/ui/img/kulturze.svg">./data/contents/ui/img/kulturze.svg</file>
+        <file alias="contents/ui/img/nauce.svg">./data/contents/ui/img/nauce.svg</file>
+        <file alias="contents/ui/img/pamieci.svg">./data/contents/ui/img/pamieci.svg</file>
+        <file alias="contents/ui/img/przyjazni.svg">./data/contents/ui/img/przyjazni.svg</file>
+        <file alias="contents/ui/img/przyrodzie.svg">./data/contents/ui/img/przyrodzie.svg</file>
+        <file alias="contents/ui/img/turystyce.svg">./data/contents/ui/img/turystyce.svg</file>
+        <file alias="contents/ui/img/wspolnocie.svg">./data/contents/ui/img/wspolnocie.svg</file>
+        <file alias="contents/ui/img/zdrowiu.svg">./data/contents/ui/img/zdrowiu.svg</file>
         <file alias="contents/ui/img/szyfry/czeko.svg">./data/contents/ui/img/szyfry/czeko.svg</file>
         <file alias="contents/ui/img/szyfry/kaczor.svg">./data/contents/ui/img/szyfry/kaczor.svg</file>
         <file alias="contents/ui/img/szyfry/kaczor2.svg">./data/contents/ui/img/szyfry/kaczor2.svg</file>

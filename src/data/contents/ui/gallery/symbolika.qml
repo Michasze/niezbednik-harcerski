@@ -29,6 +29,15 @@ HPSPage
      id: mainList
 
         ElementListy {
+    header: "Znaki służb ZHP"
+    Layout.bottomMargin: 10
+    ikona: "image://icons/przyrodzie.svg"
+        MouseArea {
+    anchors.fill: parent
+    onClicked: pageStack.push(Qt.resolvedUrl("znaki.qml"))
+    }
+        }
+        ElementListy {
     header: "Krzyż harcerski"
     Layout.bottomMargin: 10
     ikona: "image://icons/krzyz.svg,white"
