@@ -34,7 +34,7 @@ KartaStronaNoImage {
     }
 KartaStronaNoImage {
         header: "Powstaniec"
-        opis: "autor: Ćwikowie na próbie 2021 Szenajda"
+        opis: "autor: Ćwikowie na próbie 2021 Chomętowo"
         adres: "powstaniec.qml"
     }
         }
