@@ -99,13 +99,9 @@ void InfoData::setTresci()
         for (int a = m_trescAutor.size(); a < m_cytaty.size(); a++)
           {
             m_trescAutor[m_cytaty.at(a).toString()] = m_autorzy;
-//            qInfo() << "Tabelka:" << m_trescAutor;
           }
-//            last = m_trescAutor.size();
       }
 
-//        qInfo() << "cytaty:" << m_cytaty;
-//        qInfo() << "autor:" << m_trescAutor;
   }
 QVariantList InfoData::tresci()
   {
@@ -116,10 +112,14 @@ QVariantList InfoData::tresci()
 QVariant InfoData::losuj()
   {
 losowa =  QRandomGenerator::global()->bounded(m_cytaty.size());
-//       qInfo() << "Losowa:" << losowa;
+       if (90 > losowa)
+         {
        m_losowyCytat = m_cytaty.at(losowa);
+       }
+       else {
+       m_losowyCytat = m_cytaty.at(losowa - 1);
+       }
        m_tresciAutorzy = m_trescAutor.value(m_losowyCytat.toString());
-//       qInfo() << "Autor:" << m_tresciAutorzy;
        return m_cytaty.at(losowa);
   }
 QString InfoData::losowyAutor()
