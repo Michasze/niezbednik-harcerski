@@ -46,6 +46,7 @@ Layout.fillHeight: true
     wrapMode: Text.WordWrap
     color: invisibleCheckbox.checked ? "white" : "black"
     Layout.alignment: Qt.AlignHCenter
+    textFormat: Text.StyledText
     Layout.fillWidth: true
             text: listItem1.tresc 
              }
