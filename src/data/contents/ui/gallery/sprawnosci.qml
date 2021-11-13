@@ -28,7 +28,8 @@ HPSPage {
 
 ColumnLayout
 {
-KartaStronaNoImage { 
+KartaStronaIkona {
+        ikona: "qrc:/contents/ui/img/znaczek-zucha.svg"
         header: "Zuchy"
         opis: ""
         adres: "sprawnosciZuchy.qml"
