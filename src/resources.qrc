@@ -125,6 +125,7 @@
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
         <file alias="contents/ui/gallery/symbolikaWosm.qml">./data/contents/ui/gallery/symbolikaWosm.qml</file>
         <file alias="contents/ui/gallery/symbolikaWagggs.qml">./data/contents/ui/gallery/symbolikaWagggs.qml</file>
+        <file alias="contents/ui/gallery/symbolikaZnaczek.qml">./data/contents/ui/gallery/symbolikaZnaczek.qml</file>
         <file alias="contents/ui/gallery/znaki.qml">./data/contents/ui/gallery/znaki.qml</file>
         <file alias="contents/ui/gallery/prawoZHR.qml">./data/contents/ui/gallery/prawoZHR.qml</file>
         <file alias="contents/ui/gallery/prawoFSE.qml">./data/contents/ui/gallery/prawoFSE.qml</file>
@@ -313,6 +314,10 @@
         <file alias="contents/ui/img/watra_sluzba.svg">./data/contents/ui/img/watra_sluzba.svg</file>
         <file alias="contents/ui/img/watra_miejsce.svg">./data/contents/ui/img/watra_miejsce.svg</file>
         <file alias="contents/ui/img/watra_praca.svg">./data/contents/ui/img/watra_praca.svg</file>
+        <file alias="contents/ui/img/znaczek-zucha.svg">./data/contents/ui/img/znaczek-zucha.svg</file>
+        <file alias="contents/ui/img/znaczek_orzel.svg">./data/contents/ui/img/znaczek_orzel.svg</file>
+        <file alias="contents/ui/img/znaczek-napis.svg">./data/contents/ui/img/znaczek-napis.svg</file>
+        <file alias="contents/ui/img/znaczek-slonce.svg">./data/contents/ui/img/znaczek-slonce.svg</file>
         <file alias="contents/ui/img/mlodzik.svg">./data/contents/ui/img/mlodzik.svg</file>
         <file alias="contents/ui/img/mlodzik_oh.svg">./data/contents/ui/img/mlodzik_oh.svg</file>
         <file alias="contents/ui/img/zwiadowca.svg">./data/contents/ui/img/zwiadowca.svg</file>

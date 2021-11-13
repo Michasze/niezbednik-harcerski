@@ -65,6 +65,15 @@ HPSPage
     }
         }
         ElementListy {
+    header: "Znaczek zucha"
+    Layout.bottomMargin: 10
+    ikona: "qrc:/contents/ui/img/znaczek-zucha.svg"
+        MouseArea {
+    anchors.fill: parent
+    onClicked: pageStack.push(Qt.resolvedUrl("symbolikaZnaczek.qml"))
+    }
+        }
+        ElementListy {
     header: "Watra wędrownicza"
     Layout.bottomMargin: 10
     ikona: "qrc:/contents/ui/img/watra.svg"
