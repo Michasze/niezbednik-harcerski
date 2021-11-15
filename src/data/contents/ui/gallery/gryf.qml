@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-    title: "Janusz Brochwicz-Lewiński pseudonim \"Gryf\""
+    title: "Janusz Brochwicz-Lewiński"
 
     ColumnLayout {
         width: page.width
