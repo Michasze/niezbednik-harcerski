@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(KF5_VERSION "1.0.7") # handled by release scripts
+set(KF5_VERSION "1.0.8") # handled by release scripts
 set(KF5_DEP_VERSION "5.47.0") # handled by release scripts
 #set(CMAKE_EXE_LINKER_FLAGS " -static")
 project(HPS VERSION ${KF5_VERSION})
