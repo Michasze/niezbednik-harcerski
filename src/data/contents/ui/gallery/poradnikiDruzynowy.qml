@@ -37,12 +37,12 @@ HPSPage {
         opis: ""
         adres: "blank.qml"
 } 
-*/
-        KartaStronaNoImage { 
+        KartaStronaNoImage {
         header: "Sprawności"
         opis: ""
         adres: "sprawnosci.qml"
     }
+*/
         KartaStronaNoImage {
         header: "Praca drużyny"
         opis: ""
