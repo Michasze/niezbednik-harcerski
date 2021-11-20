@@ -29,12 +29,6 @@ HPSPage {
 ColumnLayout
 {
     KartaStronaIkona {
-        header: "Zbiórka fotograficzna"
-        opis: "Jak przygotować zbiórkę fotograficzną online?"
-        ikona: "qrc:/contents/ui/img/camera-photo.svg"
-        adres: "fotograficzna.qml"
-    }
-    KartaStronaIkona {
         header: "Ekosystem w słoiku"
         opis: "Jak przygotować roślinkę w słoiku?"
         ikona: "qrc:/contents/ui/img/applications-science.svg"
@@ -57,6 +51,12 @@ ColumnLayout
         opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości."
         ikona: "image://icons/atmosphere.svg,white"
         adres: "geoguessr.qml"
+    }
+    KartaStronaIkona {
+        header: "Zbiórka fotograficzna"
+        opis: "Jak przygotować zbiórkę fotograficzną online?"
+        ikona: "qrc:/contents/ui/img/camera-photo.svg"
+        adres: "fotograficzna.qml"
     }
         }
     }
