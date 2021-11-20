@@ -164,6 +164,11 @@ background: Rectangle {
             img: "image://icons/ksiazki.svg"
         }
         ListElement {
+            title: "Filmy"
+            targetPage: "gallery/filmy.qml"
+            img: "image://icons/filmy.svg"
+        }
+        ListElement {
             title: "Śpiewnik"
             targetPage: "gallery/Spiewniki.qml"
             img: "image://icons/spiewnik.svg"

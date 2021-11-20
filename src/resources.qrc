@@ -229,6 +229,7 @@
         <file alias="contents/ui/gallery/ksiazkiZastepowy.qml">./data/contents/ui/gallery/ksiazkiZastepowy.qml</file>
         <file alias="contents/ui/gallery/ksiazkiDruzynowy.qml">./data/contents/ui/gallery/ksiazkiDruzynowy.qml</file>
         <file alias="contents/ui/gallery/ksiazkiHarcerz.qml">./data/contents/ui/gallery/ksiazkiHarcerz.qml</file>
+        <file alias="contents/ui/gallery/filmy.qml">./data/contents/ui/gallery/filmy.qml</file>
         <file alias="contents/ui/gallery/biwaki.qml">./data/contents/ui/gallery/biwaki.qml</file>
         <file alias="contents/ui/gallery/sprawnosci.qml">./data/contents/ui/gallery/sprawnosci.qml</file>
         <file alias="contents/ui/gallery/sprawnosciZuchy.qml">./data/contents/ui/gallery/sprawnosciZuchy.qml</file>
@@ -413,6 +414,7 @@
         <file alias="contents/ui/img/szyfry/mafeking.svg">./data/contents/ui/img/szyfry/mafeking.svg</file>
         <file alias="contents/ui/img/szyfry/bacon.svg">./data/contents/ui/img/szyfry/bacon.svg</file>
         <file alias="contents/ui/img/szyfry/morse.svg">./data/contents/ui/img/szyfry/morse.svg</file>
+        <file alias="contents/ui/img/filmy.svg">./data/contents/ui/img/filmy.svg</file>
         <file alias="contents/ui/media/gesty1.mkv">./data/contents/ui/media/gesty1.mkv</file>
         <file alias="contents/ui/media/gesty2.mkv">./data/contents/ui/media/gesty2.mkv</file>
         <file alias="contents/ui/media/gesty3.mkv">./data/contents/ui/media/gesty3.mkv</file>
