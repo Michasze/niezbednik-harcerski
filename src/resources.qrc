@@ -69,6 +69,7 @@
         <file alias="contents/ui/img/ekosystem.jpg">./data/contents/ui/img/ekosystem.jpg</file>
         <file alias="contents/ui/img/swJerzy.jpg">./data/contents/ui/img/swJerzy.jpg</file>
         <file alias="contents/ui/img/swJerzy2.jpg">./data/contents/ui/img/swJerzy2.jpg</file>
+        <file alias="contents/ui/img/brownsea.jpg">./data/contents/ui/img/brownsea.jpg</file>
         <file alias="contents/ui/img/znaki.png">./data/contents/ui/img/znaki.png</file>
         <file alias="contents/ui/gallery/blank.qml">./data/contents/ui/gallery/blank.qml</file>
         <file alias="contents/ui/gallery/blankLayer.qml">./data/contents/ui/gallery/blankLayer.qml</file>

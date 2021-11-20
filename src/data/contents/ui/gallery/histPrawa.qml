@@ -38,7 +38,8 @@ KartaStronaIkona {
         opis: "Opublikowane przez Andrzeja Małkowskiego"
         adres: "prawoSkaut.qml"
     }
-KartaStronaNoImage {
+KartaStrona {
+        ikona: "image://images/brownsea.jpg"
         header: "Prawo skautowe"
         opis: "Przetłumaczone prawo skautowe"
         adres: "prawoSkautEng.qml"

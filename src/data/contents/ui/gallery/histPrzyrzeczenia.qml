@@ -44,7 +44,8 @@ KartaStrona {
         opis: ""
         adres: "przyrzeczenieSkaut.qml"
     }
-KartaStronaNoImage {
+KartaStrona {
+        ikona: "image://images/brownsea.jpg"
         header: "Przysięga skautowa"
         opis: ""
         adres: "przyrzeczenieSkautEng.qml"
