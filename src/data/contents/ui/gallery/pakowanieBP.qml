@@ -30,7 +30,37 @@ HPSPage
     {
         id: hpsSettings
     }
+    Clipboard
+    {
+        id: clipboard
+    }
         ColumnLayout {
+            id: lista
+            Controls.Button
+            {
+              Layout.alignment: Qt.AlignHCenter
+              highlighted: true
+              text: "kopiuj"
+              onClicked:
+              {
+                  var trescListy = "";
+                  for (var i = 0; i < lista.children.length; ++i)
+                  {
+                      if (!lista.children[i].header && !lista.children[i].model)
+                      {
+                          trescListy = trescListy + lista.children[i].text + "\n"
+                      }
+                      else if (!lista.children[i].model)
+                      {
+                          trescListy = trescListy + lista.children[i].header + "\n"
+                      }
+                  }
+                  trescListy = trescListy.replace("</b>","\n")
+                  trescListy = trescListy.replace("<b>","")
+                  clipboard.paste = trescListy
+                  showPassiveNotification("Skopiowano do schowka", 2000)
+              }
+            }
                 ElementListyNoImage
         {
             color: "green"
