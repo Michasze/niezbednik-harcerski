@@ -362,6 +362,7 @@
         <file alias="contents/ui/img/document-save.svg">./data/contents/ui/img/document-save.svg</file>
         <file alias="contents/ui/img/document-edit.svg">./data/contents/ui/img/document-edit.svg</file>
         <file alias="contents/ui/img/edit-delete.svg">./data/contents/ui/img/edit-delete.svg</file>
+        <file alias="contents/ui/img/edit-copy.svg">./data/contents/ui/img/edit-copy.svg</file>
          <file alias="contents/ui/img/edit-paste-in-place.svg">./data/contents/ui/img/edit-paste-in-place.svg</file>
          <file alias="contents/ui/img/mail-sent.svg">./data/contents/ui/img/mail-sent.svg</file>
          <file alias="contents/ui/img/user.svg">./data/contents/ui/img/user.svg</file>

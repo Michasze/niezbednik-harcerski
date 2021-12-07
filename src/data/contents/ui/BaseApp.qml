@@ -43,6 +43,10 @@ Kirigami.ApplicationWindow {
     {
         id: hpsSettings
     }
+    Clipboard
+    {
+        id: clipboard
+    }
     Component.onCompleted: {
         if(!hpsSettings.neverShowIsToggled)
         {
@@ -312,6 +316,35 @@ może ulec zmianie."
                  Layout.alignment: Qt.AlignRight
                 icon.source: "image://icons/go-previous.svg,white"
                 action: powrotAction
+                }
+            Controls.ToolButton
+            {
+                visible: pageStack.currentItem.title.includes("Pakowanie") && pageStack.currentItem.title != "Pakowanie"
+                Layout.alignment: Qt.AlignRight
+                icon.source: "image://icons/edit-copy.svg,white"
+                onClicked:
+                {
+                    var trescListy = "";
+                    var lista=pageStack.currentItem.contentItem.contentItem
+                    if (lista.children)
+                    {
+                        for (var i = 0; i < lista.children.length; ++i)
+                        {
+                            if (!lista.children[i].header && !lista.children[i].model)
+                            {
+                                trescListy = trescListy + lista.children[i].text + "\n"
+                            }
+                            else if (!lista.children[i].model)
+                            {
+                                trescListy = trescListy + lista.children[i].header + "\n"
+                            }
+                        }
+                    }
+                    trescListy = trescListy.replace("</b>","\n")
+                    trescListy = trescListy.replace("<b>","")
+                    clipboard.paste = trescListy
+                    showPassiveNotification("Skopiowano do schowka", 2000)
+                }
                 }
          }
     }
