@@ -57,6 +57,11 @@ ColumnLayout
     ikona: "qrc:/contents/ui/img/user.svg"
     header: "Jakub Gałaszewski"
     }
+    ElementListy
+    {
+    ikona: "qrc:/contents/ui/img/user.svg"
+    header: "Bartosz Ostański"
+    }
 
 }
     }
