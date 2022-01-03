@@ -25,43 +25,50 @@ HPSPage {
     id: page
     Layout.fillWidth: true
     title: "Pakowanie"
-
     ColumnLayout {
         id: mainlayout
-            Rectangle {
-                    color: "darkolivegreen"
-                    radius: 10
-                    Layout.fillWidth: true
-                    Layout.minimumHeight: 80
-                    Item {
-                            anchors.fill: parent
-                            Controls.Label {
-                                    anchors.leftMargin: 10
-                                    anchors.left: parent.left
-                                    anchors.verticalCenter: parent.verticalCenter
-                                    horizontalAlignment: Text.AlignLeft
-                                    font.pointSize: invisibleSlider.value + 4
-                                    text: "+"
-                            }
-                            Controls.Label {
-                                    Layout.rightMargin: 10
-                                    anchors.centerIn: parent
-                                    font.pointSize: invisibleSlider.value + 4
-                                    horizontalAlignment: Text.AlignHCenter
-                                    text: "Dodaj własną listę"
-                            }
-                    }
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        db.clearCategory()
-                        pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
-                    }
+        Rectangle
+        {
+            color: "darkolivegreen"
+            radius: 10
+            Layout.fillWidth: true
+            Layout.minimumHeight: 80
+            Item
+            {
+                anchors.fill: parent
+                Controls.Label
+                {
+                    anchors.leftMargin: 10
+                    anchors.left: parent.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignLeft
+                    font.pointSize: invisibleSlider.value + 4
+                    text: "+"
+                }
+                Controls.Label
+                {
+                    Layout.rightMargin: 10
+                    anchors.centerIn: parent
+                    font.pointSize: invisibleSlider.value + 4
+                    horizontalAlignment: Text.AlignHCenter
+                    text: "Dodaj własną listę"
                 }
             }
-        Repeater {
+            MouseArea
+            {
+                anchors.fill: parent
+                onClicked:
+                {
+                    db.clearCategory()
+                    pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
+                }
+            }
+        }
+        Repeater
+        {
             model: db.getList
-            delegate: KartaPakowanie {
+            delegate: KartaPakowanie
+            {
                 header: modelData
                 opis: ""
             }
