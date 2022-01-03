@@ -27,6 +27,11 @@ import Data 1.0
        id: clipboard
      }
      height: label1.height + label2.height + 10
+     background: Rectangle {
+         color: "transparent"
+         border.color: "white"
+         border.width: 1
+     }
      separatorVisible: false
 
             id: listItem1
