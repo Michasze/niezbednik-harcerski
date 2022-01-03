@@ -97,5 +97,15 @@ HPSPage {
         opis: "Co spakować na trzydniowy biwak w budynku?"
         adres: "pakowanieBiwaki.qml"
     }
+        KartaStronaNoImage {
+        header: "Biwak z hamakami"
+        opis: "Lista rzeczy do zabrania na hamaki"
+        adres: "pakowanieHamaki.qml"
+    }
+        KartaStronaNoImage {
+        header: "Biwak zimą trwający 3 dni"
+        opis: "Zimowy biwak z wieloma wędrówkami"
+        adres: "pakowanieZima.qml"
+    }
 }
 }

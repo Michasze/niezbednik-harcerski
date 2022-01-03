@@ -242,6 +242,8 @@
         <file alias="contents/ui/gallery/pakowanieOboz.qml">./data/contents/ui/gallery/pakowanieOboz.qml</file>
         <file alias="contents/ui/gallery/pakowanieRower.qml">./data/contents/ui/gallery/pakowanieRower.qml</file>
         <file alias="contents/ui/gallery/pakowanieBP.qml">./data/contents/ui/gallery/pakowanieBP.qml</file>
+        <file alias="contents/ui/gallery/pakowanieHamaki.qml">./data/contents/ui/gallery/pakowanieHamaki.qml</file>
+        <file alias="contents/ui/gallery/pakowanieZima.qml">./data/contents/ui/gallery/pakowanieZima.qml</file>
         <file alias="contents/ui/gallery/pakowanieWlasne.qml">./data/contents/ui/gallery/pakowanieWlasne.qml</file>
         <file alias="contents/ui/gallery/pakowanieKreator.qml">./data/contents/ui/gallery/pakowanieKreator.qml</file>
         <file alias="contents/ui/gallery/pakowanieTemplate.qml">./data/contents/ui/gallery/pakowanieTemplate.qml</file>
