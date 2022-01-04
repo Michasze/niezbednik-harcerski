@@ -25,6 +25,22 @@ HPSPage {
     id: page
     Layout.fillWidth: true
     title: "Przyrzeczenie ZHP/ZHR"
+    header: Controls.TabBar {
+        id: tabBar
+        currentIndex: swipeView.currentIndex
+        Controls.TabButton {
+            text: "Harcerze"
+        }
+        Controls.TabButton {
+            text: "Zuchy"
+        }
+    }
+    Controls.SwipeView {
+        id: swipeView
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        currentIndex: tabBar.currentIndex
+        clip: true
     ColumnLayout {
         width: page.width
         spacing: 10
@@ -34,4 +50,14 @@ HPSPage {
             header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
         }
     }
+    ColumnLayout {
+        width: page.width
+        spacing: 10
+        ElementListyNoImage
+        {
+            color: "brown"
+            header: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
+        }
+    }
+}
 }
