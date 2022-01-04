@@ -24,18 +24,21 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     title: qsTr("Gawędy")
-
-ColumnLayout
-{
-KartaStronaNoImage { 
-        header: "Opowieść o grzybiarzu"
-        opis: "autor: Jacek Wątroba"
-        adres: "grzybiarz.qml"
-    }
-KartaStronaNoImage {
-        header: "Powstaniec"
-        opis: "autor: Ćwikowie na próbie 2021 Chomętowo"
-        adres: "powstaniec.qml"
-    }
+    ColumnLayout {
+        KartaStronaNoImage {
+            header: "Opowieść o grzybiarzu"
+            opis: "autor: Jacek Wątroba"
+            adres: "grzybiarz.qml"
+        }
+        KartaStronaNoImage {
+            header: "Powstaniec"
+            opis: "autor: Ćwikowie na próbie 2021 Chomętowo"
+            adres: "powstaniec.qml"
+        }
+        KartaStronaNoImage {
+            header: "Zwyczaje przy ognisku"
+            opis: "autor: Wojciech Jakubczyk"
+            adres: "zwyczaje.qml"
+        }
         }
     }
