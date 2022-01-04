@@ -92,13 +92,9 @@ HPSPage {
         opis: "Lista rzeczy na wyjazd rowerowy"
         adres: "pakowanieRower.qml"
 }
-        KartaStronaNoImage {
-        header: "Biwak"
-        opis: "Co spakować na trzydniowy biwak w budynku?"
-        adres: "pakowanieBiwaki.qml"
-    }
-        KartaStronaNoImage {
+        KartaStronaIkona {
         header: "Biwak z hamakami"
+        ikona: "image://icons/hamak.svg,white"
         opis: "Lista rzeczy do zabrania na hamaki"
         adres: "pakowanieHamaki.qml"
     }
@@ -106,6 +102,11 @@ HPSPage {
         header: "Biwak zimą trwający 3 dni"
         opis: "Zimowy biwak z wieloma wędrówkami"
         adres: "pakowanieZima.qml"
+    }
+        KartaStronaNoImage {
+        header: "Biwak"
+        opis: "Co spakować na trzydniowy biwak w budynku?"
+        adres: "pakowanieBiwaki.qml"
     }
 }
 }
