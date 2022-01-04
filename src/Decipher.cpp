@@ -110,7 +110,7 @@ bool Decipher::sprawdz_czy_prawidlowe(int i, QString s)
         return 1;
         }
         int wartosc = i;
-        for(i; i < wartosc + 5; i++)
+        for(;i < wartosc + 5; i++)
           {
             if(s[i] != 'a' && s[i] != 'b')
               return 1;
