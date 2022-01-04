@@ -59,9 +59,23 @@ HPSPage
         Cytat{
             tresc: "\"Księga Jaszczurki\" - Aimee Degallier-Martin (Obowiązkowa pozycja dla Druhen)"
      }
-
+        Cytat{
+            tresc: "\"Jak skauci pracują\" - Andrzej Małkowski"
+        }
+        Cytat{
+            tresc: "\"Wskazówki dla skautmistrzów\" - Generał Robert Baden Powell"
+        }
         Cytat{
             tresc: "\"Wilk, który nigdy nie śpi\" - Walter Hansen"
+                        }
+        ElementListyNoImage
+        {
+            color: "Grey"
+            header: "Historyczne"
+            align: 1
+        }
+        Cytat{
+            tresc: "\"Szkice z dziejów harcerstwa polskiego w latach 1911-1939\" - Eugeniusz Sikorski"
                         }
     }
 }
