@@ -50,13 +50,15 @@ KartaStronaIkona {
     opis: "pwd. Juliusz Idzikowski"
     adres: "jakSpac.qml"
     }
-KartaStronaNoImage {
+KartaStronaIkona {
     header: "Jak stworzyć mapę miejsc wędrówkowych?"
+    ikona: "image://icons/mapa.svg,white"
     opis: "pwd. Juliusz Idzikowski"
     adres: "mapaMiejsc.qml"
     }
-KartaStronaNoImage {
+KartaStronaIkona {
     header: "Porady i harc tricki na wyjazdy harcerskie"
+    ikona: "image://icons/karimata.svg,white"
     opis: "Julia “Inka” Karpowicz"
     adres: "porady.qml"
     }
