@@ -24,18 +24,44 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Przyrzeczenie SHK „Zawisza”"
-
-
-    ColumnLayout {
-        width: page.width
-ElementListyNoImage
-        {
-            color: "brown"
-            header: "Na mój honor, z Łaską Bożą, przyrzekam całym życiem służyć Bogu, Kościołowi, mojej Ojczyźnie i Europie chrześcijańskiej, nieść w każdej potrzebie pomoc bliźnim i przestrzegać Prawa Harcerskiego."
+    header: Controls.TabBar {
+        id: tabBar
+        currentIndex: swipeView.currentIndex
+        Controls.TabButton {
+            text: "Harcerze"
+        }
+        Controls.TabButton {
+            text: "Wilczki"
         }
     }
-
-
+    Controls.SwipeView {
+        id: swipeView
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        height: root.height
+        currentIndex: tabBar.currentIndex
+        clip: true
+        ColumnLayout {
+            ElementListyNoImage
+                {
+                    Layout.alignment: Qt.AlignTop
+                    color: "brown"
+                    header: "Na mój honor, z Łaską Bożą, przyrzekam całym życiem służyć Bogu, Kościołowi, mojej Ojczyźnie i Europie chrześcijańskiej, nieść w każdej potrzebie pomoc bliźnim i przestrzegać Prawa Harcerskiego."
+                }
+        }
+        ColumnLayout {
+            ElementListyNoImage
+                {
+                    Layout.alignment: Qt.AlignTop
+                    color: "brown"
+                    header: "Obiecuję - ze wszystkich sił:<br>
+starać się być wiernym Bogu,<br>
+moim rodzicom,<br>
+mojej Ojczyźnie,<br>
+Prawu Gromady i Wilczka<br>
+oraz każdego dnia czynić komuś dobry uczynek."
+                }
+        }
+    }
 }
