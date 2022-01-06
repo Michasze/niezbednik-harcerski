@@ -40,6 +40,7 @@ ColumnLayout
     ListModel {
         id: spiewnikModel
         ListElement { title: "Harcerski śpiewnik obozowy z 1924 roku"; url: "://spiewnik1924.json"; icon: "lutnia"}
+        ListElement { title: "Harcerski śpiewnik z Lubeki"; url: "://spiewnikLubeka.json"; icon: "lutnia"}
         ListElement { title: "Harcerska twórczość własna"; url: "://spiewnikWlasne.json"; icon: "gitara" }
         ListElement { title: "Hymny"; url: "://spiewnikHymny.json"; icon: "trabka" }
     }
