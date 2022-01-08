@@ -24,12 +24,10 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Prawo Harcerskie"
     header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
-
         Controls.TabButton {
             text: "Harcerze"
         }
@@ -39,94 +37,53 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        Layout.fillHeight: true
-        Layout.fillWidth: true
+        height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-        ColumnLayout {
-            width: page.width
-            ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>1.</b> Harcerz sumiennie spełnia swoje obowiązki wynikające z Przyrzeczenia harcerskiego."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>2.</b> Na słowie harcerza polegaj jak na Zawiszy."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>3.</b> Harcerz jest pożyteczny i niesie pomoc bliźnim."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>4.</b> Harcerz w każdym widzi bliźniego, a za brata uważa każdego innego harcerza."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>5.</b> Harcerz postępuje po rycersku."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>6.</b> Harcerz miłuje przyrodę i stara się ją poznać."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>7.</b> Harcerz jest karny i posłuszny rodzicom i wszystkim swoim przełożonym."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>8.</b> Harcerz jest zawsze pogodny."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>9.</b> Harcerz jest oszczędny i ofiarny."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>10.</b> Harcerz pracuje nad sobą, jest czysty w myśli, mowie i uczynkach; jest wolny od nałogów."
+        Item {
+            width: root.width
+            height: root.height
+            ColumnLayout {
+                Repeater
+                {
+                    model: ["<b>1.</b> Harcerz sumiennie spełnia swoje obowiązki wynikające z Przyrzeczenia harcerskiego.",
+                            "<b>2.</b> Na słowie harcerza polegaj jak na Zawiszy.",
+                            "<b>3.</b> Harcerz jest pożyteczny i niesie pomoc bliźnim.",
+                            "<b>4.</b> Harcerz w każdym widzi bliźniego, a za brata uważa każdego innego harcerza.",
+                            "<b>5.</b> Harcerz postępuje po rycersku.",
+                            "<b>6.</b> Harcerz miłuje przyrodę i stara się ją poznać.",
+                            "<b>7.</b> Harcerz jest karny i posłuszny rodzicom i wszystkim swoim przełożonym.",
+                            "<b>8.</b> Harcerz jest zawsze pogodny.",
+                            "<b>9.</b> Harcerz jest oszczędny i ofiarny.",
+                            "<b>10.</b> Harcerz pracuje nad sobą, jest czysty w myśli, mowie i uczynkach; jest wolny od nałogów."]
+                    delegate: ElementListyNoImage {
+                        color: "royalblue"
+                        header: modelData
+                        Layout.alignment: Qt.AlignTop
+                        width: page.width - 50
+                    }
+                }
             }
         }
-        ColumnLayout {
-            width: page.width
-            ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>1.</b> Zuch kocha Boga i Polskę."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>2.</b> Zuch jest dzielny."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>3.</b> Zuch mówi prawdę."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>4.</b> Zuch pamięta o swoich obowiązkach."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>5.</b> Wszystkim jest z zuchem dobrze."
-            }
-                    ElementListyNoImage
-            {
-                color: "royalblue"
-                header: "<b>6.</b> Zuch stara się być coraz lepszy."
+        Item {
+            width: root.width
+            height: root.height
+            ColumnLayout {
+                Repeater
+                {
+                    model: ["<b>1.</b> Zuch kocha Boga i Polskę.",
+                            "<b>2.</b> Zuch jest dzielny.",
+                            "<b>3.</b> Zuch mówi prawdę.",
+                            "<b>4.</b> Zuch pamięta o swoich obowiązkach.",
+                            "<b>5.</b> Wszystkim jest z zuchem dobrze.",
+                            "<b>6.</b> Zuch stara się być coraz lepszy."]
+                    delegate: ElementListyNoImage {
+                        color: "royalblue"
+                        header: modelData
+                        Layout.alignment: Qt.AlignTop
+                        width: page.width - 50
+                    }
+                }
             }
         }
     }

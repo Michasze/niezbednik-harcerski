@@ -39,25 +39,28 @@ HPSPage {
         id: swipeView
         Layout.fillHeight: true
         Layout.fillWidth: true
+        height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-    ColumnLayout {
-        width: page.width
-        spacing: 10
-        ElementListyNoImage
-        {
-            color: "brown"
-            header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
+        ColumnLayout {
+            width: page.width
+            spacing: 10
+            ElementListyNoImage
+            {
+                Layout.alignment: Qt.AlignTop
+                color: "brown"
+                header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
+            }
         }
-    }
-    ColumnLayout {
-        width: page.width
-        spacing: 10
-        ElementListyNoImage
-        {
-            color: "brown"
-            header: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
+        ColumnLayout {
+            width: page.width
+            spacing: 10
+            ElementListyNoImage
+            {
+                Layout.alignment: Qt.AlignTop
+                color: "brown"
+                header: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
+            }
         }
-    }
 }
 }
