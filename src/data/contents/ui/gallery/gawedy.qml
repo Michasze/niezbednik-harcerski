@@ -32,7 +32,7 @@ HPSPage {
         }
         KartaStronaNoImage {
             header: "Powstaniec"
-            opis: "autor: Ćwikowie na próbie 2021 Chomętowo"
+            opis: "autorzy: Ćwikowie na próbie 2021 Chomętowo"
             adres: "powstaniec.qml"
         }
         KartaStronaNoImage {
