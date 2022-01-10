@@ -43,8 +43,6 @@ HPSPage {
         currentIndex: tabBar.currentIndex
         clip: true
         ColumnLayout {
-            width: page.width
-            spacing: 10
             ElementListyNoImage
             {
                 Layout.alignment: Qt.AlignTop
@@ -53,8 +51,6 @@ HPSPage {
             }
         }
         ColumnLayout {
-            width: page.width
-            spacing: 10
             ElementListyNoImage
             {
                 Layout.alignment: Qt.AlignTop
