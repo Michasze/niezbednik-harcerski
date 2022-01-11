@@ -10,7 +10,6 @@ import QtQuick.Layouts 1.2
             color: "#303030"
             radius: 10
             Layout.preferredHeight: width
-            Layout.fillWidth: true
             ColumnLayout {
                 anchors.centerIn: parent
                 anchors.fill: parent

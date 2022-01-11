@@ -24,13 +24,10 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Stopnie Harcerskie - Zawisza"
-
-header: Controls.TabBar {
+    header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
-
         Controls.TabButton {
             text: "Męskie"
         }
@@ -38,90 +35,88 @@ header: Controls.TabBar {
             text: "Żeńskie"
         }
     }
-                 Controls.SwipeView {
+    Controls.SwipeView {
         id: swipeView
         Layout.fillHeight: true
         Layout.fillWidth: true
+        height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
+        Item {
+            width: root.width
+            height: root.height
+            ColumnLayout {
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Wywiadowca"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Ćwik"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Harcerz orli"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Harcerz Rzeczypospolitej"
+                }
+            }
+        }
+        Item {
+            width: root.width
+            height: root.height
+            ColumnLayout {
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Tropicielka"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Pionierka"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Samarytanka"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Wędrowniczka"
+                }
+                ElementListyNoImage
+                {
+                    wysokosc: 120
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Harcerka Rzeczypospolitej"
+                }
 
-                     ColumnLayout {
-        Layout.fillHeight: true
-                         ElementListyNoImage
-                         {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Wywiadowca"
-                         }
-                         ElementListyNoImage
-                         {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Ćwik"
-                         }
-                         ElementListyNoImage
-                         {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Harcerz orli"
-                         }
-                         ElementListyNoImage
-                         {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Harcerz Rzeczypospolitej"
-                         }
-        //HACK: ukryte prostokąty sprawiają że obydwie strony są takiej samej wysokości
-        // przez co layout nie rozjeżdża się przy przesuwaniu
-                         Repeater
-                         {
-                             model: 1
-                             Rectangle
-                             {
-                                 Layout.leftMargin: 10
-                                 Layout.topMargin: 10
-                                 Layout.fillWidth: true
-                                 color: "Transparent"
-                                 height: 120
-                                 radius: 10
-                             }
-                         }
-                     }
-    ColumnLayout {
-        width: page.width
-        spacing: Units.smallSpacing
-        ElementListyNoImage
-        {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Tropicielka"
+            }
         }
-        ElementListyNoImage
-        {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Pionierka"
-        }
-        ElementListyNoImage
-        {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Samarytanka"
-        }
-        ElementListyNoImage
-        {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Wędrowniczka"
-        }
-        ElementListyNoImage
-        {
-            wysokosc: 120
-            color: "steelblue"
-            header: "Harcerka Rzeczypospolitej"
-        }
-
     }
-                 }
-
 }

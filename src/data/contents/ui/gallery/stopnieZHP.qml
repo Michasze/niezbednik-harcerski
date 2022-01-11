@@ -24,10 +24,8 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Stopnie Harcerskie - ZHP"
-
-header: Controls.TabBar {
+    header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
 
@@ -38,89 +36,87 @@ header: Controls.TabBar {
             text: "Harcerze"
         }
     }
-                 Controls.SwipeView {
+    Controls.SwipeView {
         id: swipeView
         Layout.fillHeight: true
         Layout.fillWidth: true
+        height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-
-                     ColumnLayout {
-        Layout.fillHeight: true
-                         ElementListy
-                         {
-             ikona: "qrc:/contents/ui/img/ho.svg"
-            color: "steelblue"
-            header: "Zuch Ochoczy"
-                         }
-                         ElementListy
-                         {
-             ikona: "qrc:/contents/ui/img/hr.svg"
-            color: "steelblue"
-            header: "Zuch Sprawny"
-                         }
-                         ElementListy
-                         {
-             ikona: "qrc:/contents/ui/img/zuchG.svg"
-            color: "steelblue"
-            header: "Zuch Gospodarny"
-                         }
-        //HACK: ukryte prostokąty sprawiają że obydwie strony są takiej samej wysokości
-        // przez co layout nie rozjeżdża się przy przesuwaniu
-                         Repeater
-                         {
-                             model: 3
-                             Rectangle
-                             {
-                                 Layout.leftMargin: 10
-                                 Layout.topMargin: 10
-                                 Layout.fillWidth: true
-                                 color: "Transparent"
-                                 height: 120
-                                 radius: 10
-                             }
-                         }
-                     }
-    ColumnLayout {
-        width: page.width
-        ElementListy
-        {
-            ikona: "qrc:/contents/ui/img/mlodzik.svg"
-            color: "steelblue"
-            header: "Młodzik/\nOchotniczka"
+        Item {
+            width: root.width
+            height: root.height
+            ColumnLayout {
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/ho.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Zuch Ochoczy"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/hr.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Zuch Sprawny"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/zuchG.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Zuch Zaradny"
+                }
+            }
         }
-        ElementListy
-        {
-            ikona: "qrc:/contents/ui/img/wywiadowca.svg"
-            color: "steelblue"
-            header: "Wywiadowca/\nTropicielka"
+        Item {
+            width: root.width
+            height: root.height
+            ColumnLayout {
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/mlodzik.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Młodzik/\nOchotniczka"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/wywiadowca.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Wywiadowca/\nTropicielka"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/odkrywca.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Odkrywca/\nPionierka"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/cwik.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Ćwik/\nSamarytanka"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/ho.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Harcerz Orli/\nHarcerka Orla"
+                }
+                ElementListy
+                {
+                    ikona: "qrc:/contents/ui/img/hr.svg"
+                    width: page.width - 50
+                    color: "steelblue"
+                    header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
+                }
+            }
         }
-        ElementListy
-        {
-            ikona: "qrc:/contents/ui/img/odkrywca.svg"
-            color: "steelblue"
-            header: "Odkrywca/\nPionierka"
-        }
-        ElementListy
-        {
-            ikona: "qrc:/contents/ui/img/cwik.svg"
-            color: "steelblue"
-            header: "Ćwik/\nSamarytanka"
-        }
-        ElementListy
-        {
-            ikona: "qrc:/contents/ui/img/ho.svg"
-            color: "steelblue"
-            header: "Harcerz Orli/\nHarcerka Orla"
-        }
-        ElementListy
-        {
-            ikona: "qrc:/contents/ui/img/hr.svg"
-            color: "steelblue"
-            header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
-        }
-
     }
-                 }
-
 }
