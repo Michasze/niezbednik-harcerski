@@ -9,6 +9,7 @@
         <file alias="contents/ui/gallery/KartaPakowanie.qml">./data/contents/ui/gallery/KartaPakowanie.qml</file>
         <file alias="contents/ui/gallery/ElementListy.qml">./data/contents/ui/gallery/ElementListy.qml</file>
         <file alias="contents/ui/gallery/ElementListyNoImage.qml">./data/contents/ui/gallery/ElementListyNoImage.qml</file>
+        <file alias="contents/ui/gallery/ElementListyNoLayout.qml">./data/contents/ui/gallery/ElementListyNoLayout.qml</file>
         <file alias="contents/ui/gallery/HPSRadioButton.qml">./data/contents/ui/gallery/HPSRadioButton.qml</file>
         <file alias="contents/ui/gallery/HPSPage.qml">./data/contents/ui/gallery/HPSPage.qml</file>
         <file alias="contents/ui/gallery/HPSPopup.qml">./data/contents/ui/gallery/HPSPopup.qml</file>
@@ -55,6 +56,7 @@
         <file alias="contents/ui/img/gryf2.jpg">./data/contents/ui/img/gryf2.jpg</file>
         <file alias="contents/ui/img/neilA.jpg">./data/contents/ui/img/neilA.jpg</file>
         <file alias="contents/ui/img/zabojstwo_mroza.jpg">./data/contents/ui/img/zabojstwo_mroza.jpg</file>
+        <file alias="contents/ui/img/mlody_mroz.jpg">./data/contents/ui/img/mlody_mroz.jpg</file>
         <file alias="contents/ui/img/Grot2.jpg">./data/contents/ui/img/Grot2.jpg</file>
         <file alias="contents/ui/img/rudy1.jpg">./data/contents/ui/img/rudy1.jpg</file>
         <file alias="contents/ui/img/rudy2.jpg">./data/contents/ui/img/rudy2.jpg</file>

@@ -19,11 +19,9 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Prawo Harcerskie"
     header: Controls.TabBar {
         id: tabBar
@@ -40,10 +38,12 @@ HPSPage {
         height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
+        Controls.Pane {
+            width: swipeView.width
+            height: swipeView.height
+            Column {
+                spacing: 10
+                width: parent.width
                 Repeater
                 {
                     model: ["<b>1.</b> Harcerz sumiennie spełnia swoje obowiązki wynikające z Przyrzeczenia harcerskiego.",
@@ -56,19 +56,20 @@ HPSPage {
                             "<b>8.</b> Harcerz jest zawsze pogodny.",
                             "<b>9.</b> Harcerz jest oszczędny i ofiarny.",
                             "<b>10.</b> Harcerz pracuje nad sobą, jest czysty w myśli, mowie i uczynkach; jest wolny od nałogów."]
-                    delegate: ElementListyNoImage {
-                        color: "royalblue"
+                    delegate: ElementListyNoLayout {
                         header: modelData
-                        Layout.alignment: Qt.AlignTop
-                        width: page.width - 50
+                        color: "royalblue"
+                        width: parent.width
                     }
                 }
             }
         }
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
+        Controls.Pane {
+            width: swipeView.width
+            height: swipeView.height
+            Column {
+                spacing: 10
+                width: parent.width
                 Repeater
                 {
                     model: ["<b>1.</b> Zuch kocha Boga i Polskę.",
@@ -77,11 +78,10 @@ HPSPage {
                             "<b>4.</b> Zuch pamięta o swoich obowiązkach.",
                             "<b>5.</b> Wszystkim jest z zuchem dobrze.",
                             "<b>6.</b> Zuch stara się być coraz lepszy."]
-                    delegate: ElementListyNoImage {
-                        color: "royalblue"
+                    delegate: ElementListyNoLayout {
                         header: modelData
-                        Layout.alignment: Qt.AlignTop
-                        width: page.width - 50
+                        color: "royalblue"
+                        width: parent.width
                     }
                 }
             }
