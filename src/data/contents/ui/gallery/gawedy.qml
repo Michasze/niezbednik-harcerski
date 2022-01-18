@@ -40,5 +40,10 @@ HPSPage {
             opis: "autor: Wojciech Jakubczyk"
             adres: "zwyczaje.qml"
         }
+        KartaStronaNoImage {
+            header: "Iskra braterstwa"
+            opis: "autor: Alicja Kowalska"
+            adres: "iskra.qml"
+        }
         }
     }

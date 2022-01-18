@@ -259,6 +259,7 @@
         <file alias="contents/ui/gallery/grzybiarz.qml">./data/contents/ui/gallery/grzybiarz.qml</file>
         <file alias="contents/ui/gallery/powstaniec.qml">./data/contents/ui/gallery/powstaniec.qml</file>
         <file alias="contents/ui/gallery/zwyczaje.qml">./data/contents/ui/gallery/zwyczaje.qml</file>
+        <file alias="contents/ui/gallery/iskra.qml">./data/contents/ui/gallery/iskra.qml</file>
         <file alias="contents/ui/gallery/Spiwor.qml">./data/contents/ui/gallery/Spiwor.qml</file>
         <file alias="contents/ui/gallery/maty.qml">./data/contents/ui/gallery/maty.qml</file>
         <file alias="contents/ui/gallery/noz.qml">./data/contents/ui/gallery/noz.qml</file>
