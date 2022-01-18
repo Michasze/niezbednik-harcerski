@@ -18,49 +18,31 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Pomocne dłonie"
-
     globalToolBarStyle: ApplicationHeaderStyle.None
-ColumnLayout
-{
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Julia Inka Karpowicz"
+    Controls.Pane {
+        Column
+        {
+            spacing: 10
+            width: parent.width
+            Repeater
+            {
+                model: ["Julia Inka Karpowicz",
+                        "Kinga Żeglińska HO",
+                        "Piotr Parkita HO",
+                        "Antoni Łasica",
+                        "Jakub Gałaszewski",
+                        "Bartosz Ostański"]
+                delegate: ElementListyImageNoLayout {
+                    ikona: "qrc:/contents/ui/img/user.svg"
+                    header: modelData
+                }
+            }
+        }
     }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Kinga Żeglińska HO"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Piotr Parkita HO"
-    }
-    ElementListy
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Antoni Łasica"
-    }
-
-    ElementListy
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Jakub Gałaszewski"
-    }
-    ElementListy
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Bartosz Ostański"
-    }
-
 }
-    }

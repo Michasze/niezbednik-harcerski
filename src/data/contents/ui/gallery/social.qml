@@ -24,70 +24,71 @@ import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Social media"
-
     globalToolBarStyle: ApplicationHeaderStyle.None
-    ColumnLayout
+    Controls.Pane
     {
-ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/Instagram_new.svg"
-    header: "_harcerze_poznajemy_sie_"
-    odnosnik: "https://instagram.com/_harcerze_poznajemy_sie_"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/snapchat_logo.svg"
-    header: "harcerze_snap"
-    MouseArea {
-    anchors.fill: parent
-        onClicked: snap.open();
-    }
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/Discord-Logo.svg"
-    header: "Harcerze - Poznajemy Się!"
-    odnosnik: "https://discord.gg/9ZFZeRsvc8"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/tellonym.svg"
-    header: "Harcerze_Poznajemy_Sie"
-    odnosnik: "https://tellonym.me/Harcerze_Poznajemy_Sie"
-    }
-    Controls.Popup
-    {
-        id: snap
-        width: page.width / 4
-        height: snap.width
-        anchors.centerIn: parent
-        background: Rectangle {
+        Column
+        {
+            spacing: 10
             anchors.fill: parent
-            color: "Transparent"
-        }
-        Controls.Pane
-        {
-        ColumnLayout
-        {
-            Controls.Button
+            ElementListyImageNoLayout
             {
-                text: "x"
-                flat: true
-                Layout.alignment: Qt.AlignRight|Qt.AlignTop
-                onClicked: snap.close()
+                ikona: "qrc:/contents/ui/img/Instagram_new.svg"
+                header: "_harcerze_poznajemy_sie_"
+                odnosnik: "https://instagram.com/_harcerze_poznajemy_sie_"
             }
-        Image {
-            Layout.maximumWidth: page.width / 4
-            Layout.preferredHeight: page.width / 4
-            Layout.alignment: Qt.AlignLeft|Qt.AlignBottom
-            source: "qrc:/contents/ui/img/snapchatHPS.jpg"
-        }
-        }
+            ElementListyImageNoLayout
+            {
+                ikona: "qrc:/contents/ui/img/snapchat_logo.svg"
+                header: "harcerze_snap"
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: snap.open();
+                }
+            }
+            ElementListyImageNoLayout
+            {
+                ikona: "qrc:/contents/ui/img/Discord-Logo.svg"
+                header: "Harcerze - Poznajemy Się!"
+                odnosnik: "https://discord.gg/9ZFZeRsvc8"
+            }
+            ElementListyImageNoLayout
+            {
+                ikona: "qrc:/contents/ui/img/tellonym.svg"
+                header: "Harcerze_Poznajemy_Sie"
+                odnosnik: "https://tellonym.me/Harcerze_Poznajemy_Sie"
+            }
+            Controls.Popup
+            {
+                id: snap
+                width: page.width / 4
+                height: snap.width
+                anchors.centerIn: parent
+                background: Rectangle {
+                    anchors.fill: parent
+                    color: "Transparent"
+                }
+                Controls.Pane
+                {
+                    ColumnLayout
+                    {
+                        Controls.Button
+                        {
+                            text: "x"
+                            flat: true
+                            Layout.alignment: Qt.AlignRight|Qt.AlignTop
+                            onClicked: snap.close()
+                        }
+                        Image {
+                            Layout.maximumWidth: page.width / 4
+                            Layout.preferredHeight: page.width / 4
+                            Layout.alignment: Qt.AlignLeft|Qt.AlignBottom
+                            source: "qrc:/contents/ui/img/snapchatHPS.jpg"
+                        }
+                    }
+                }
+            }
         }
     }
-   } 
 }

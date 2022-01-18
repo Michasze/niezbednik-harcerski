@@ -19,78 +19,37 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Testerzy"
-
     globalToolBarStyle: ApplicationHeaderStyle.None
-ColumnLayout
-{
-    ElementListy 
+    Controls.Pane
     {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Julia Inka Karpowicz"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Olga Bajer"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Gabriela Figarska"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Szymon Kochaniak"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Szymon Chmielewski"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Oliwier Korolski"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Bartek Muszak"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Gabrysia Salej"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Klara Świątek"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Klaudia Śliwa"
-    }
-    ElementListy 
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Maciej Lorek"
-    }
-    ElementListy
-    {
-    ikona: "qrc:/contents/ui/img/user.svg"
-    header: "Alicja Kowalska"
+        Column
+        {
+            spacing: 10
+            anchors.fill: parent
+            Repeater
+            {
+                model: ["Julia Inka Karpowicz",
+                        "Olga Bajer",
+                        "Gabriela Figarska",
+                        "Szymon Kochaniak",
+                        "Szymon Chmielewski",
+                        "Oliwier Korolski",
+                        "Bartek Muszek",
+                        "Gabrysia Salej",
+                        "Klara Świątek",
+                        "Klaudia Śliwa",
+                        "Maciej Lorek",
+                        "Alicja Kowalska"]
+                delegate: ElementListyImageNoLayout {
+                    ikona: "qrc:/contents/ui/img/user.svg"
+                    header: modelData
+                }
+            }
+        }
     }
 }
-    }

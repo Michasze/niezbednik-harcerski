@@ -10,6 +10,7 @@
         <file alias="contents/ui/gallery/ElementListy.qml">./data/contents/ui/gallery/ElementListy.qml</file>
         <file alias="contents/ui/gallery/ElementListyNoImage.qml">./data/contents/ui/gallery/ElementListyNoImage.qml</file>
         <file alias="contents/ui/gallery/ElementListyNoLayout.qml">./data/contents/ui/gallery/ElementListyNoLayout.qml</file>
+        <file alias="contents/ui/gallery/ElementListyImageNoLayout.qml">./data/contents/ui/gallery/ElementListyImageNoLayout.qml</file>
         <file alias="contents/ui/gallery/HPSRadioButton.qml">./data/contents/ui/gallery/HPSRadioButton.qml</file>
         <file alias="contents/ui/gallery/HPSPage.qml">./data/contents/ui/gallery/HPSPage.qml</file>
         <file alias="contents/ui/gallery/HPSPopup.qml">./data/contents/ui/gallery/HPSPopup.qml</file>
