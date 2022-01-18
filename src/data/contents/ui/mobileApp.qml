@@ -29,16 +29,4 @@ BaseApp {
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }
-    Controls.RoundButton {
-        anchors.bottom: parent.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-        icon.source: "image://icons/go-home.svg"
-        visible: pageStack.layers.depth != 1
-        highlighted: true
-        onClicked:
-        {
-            pageStack.layers.pop()
-        }
-//        color: "Blue"
-    }
 }

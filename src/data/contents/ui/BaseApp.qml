@@ -293,7 +293,7 @@ może ulec zmianie."
             }
             Controls.ToolButton
             {
-                visible: (!Kirigami.Settings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1) ? true : false
+                visible: pageStack.layers.depth != 1 || ((!Kirigami.Settings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1)) ? true : false
                 Layout.alignment: Qt.AlignRight
                 icon.source: "image://icons/go-previous.svg,white"
                 action: powrotAction
