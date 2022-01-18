@@ -38,16 +38,6 @@ HPSPage
         }
         CytatAutor
         {
-            tresc: "“Programy [w harcerstwie] są różne i zmienne, ale istnieje to samo wspólne dla wszystkich źródło rzeczy: Prawo Harcerskie, metoda, system zastępowy.”"
-            autor: "Ewa Grodecka"
-        }
-        CytatAutor
-        {
-           tresc: "“Harcerstwo nie jest starą, skostniałą wiedzą, którą wpajać masz w swoje dziewczęta. Jest ono życiem.”"
-           autor: "Ewa Grodecka"
-        }
-        CytatAutor
-        {
            tresc: "“Wierność Ojczyźnie była i jest naczelnym prawem harcerskim.”"
            autor: "Tadeusz Strumiłło"
         }
