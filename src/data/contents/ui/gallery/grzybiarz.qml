@@ -18,23 +18,19 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Gawęda o grzybiarzu"
-
-    ColumnLayout {
-        width: page.width
-        Controls.Label {
+    Controls.Pane {
+        width: parent.width
+        ElementListyNoLayout {
             id: opis
-            Layout.fillWidth: true
-            wrapMode: Text.WordWrap
-            horizontalAlignment: Text.AlignLeft
-            text: "
-Dawno, dawno temu koło Krokowej w małej wiosce żył sobie w małej chatce grzybiarz. 
+            color: "transparent"
+            format: Text.PlainText
+            alignH: Text.AlignJustify
+            header: "Dawno, dawno temu koło Krokowej w małej wiosce żył sobie w małej chatce grzybiarz.
 Jak możecie się wywiedzieć zbierał grzyby, a potem sprzedawał je na targu w Wejherowie. Pewnego lata obok jego chatki pojawili się harcerze. 
 
 Podszedł do nich przywitał się i opowiedział im o sobie. Zaproponował że będzie mi przynosił grzyby na różne potrawy. Oczywiście, harcerze zgodzili się z uśmiechem na twarzy. Mijały lata, a harcerzy z Małopolski przybywało coraz więcej, a grzybiarz dalej zbierał dla nich grzyby w  pobliskim lesie, który ich otaczał.
@@ -49,6 +45,4 @@ Jacek Wątroba, Szary Dwór, 8 PDH \"Widmo\" im. Kamyka
 "
         }
     }
- 
-    
 }
