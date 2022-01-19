@@ -18,23 +18,25 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Hubert Bonin"
-    ColumnLayout {
-        width: page.width
-        Image {
-            source: "image://images/HubertBonin.jpg,10"
-            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
-            fillMode: Image.PreserveAspectFit
-            Layout.alignment: Qt.AlignHCenter
-        }
-            ElementListyNoImage
+    Controls.Pane
+    {
+        Column {
+            width: parent.width
+            spacing: 10
+            Image {
+                source: "image://images/HubertBonin.jpg,10"
+                sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+                width: isHorizontal ? page.height / 3 : page.width / 2
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
             {
-                Layout.fillWidth: true
                 alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
@@ -45,18 +47,30 @@ Harcmistrz Hubert Bonin, założyciel pierwszej drużyny harcerskiej w Bolesław
 
 Już po wojnie wraz ze swoją przyszłą żoną Jadwigą przybył do Bolesławca, gdzie założył  pierwszą w mieście drużynę harcerską im. Józefa Poniatowskiego. Komunistyczna władza wymusiła zmianę patrona drużyny na Gustawa Morcinka. Hubert Bonin został odsunięty od pracy z młodzieżą. Powrócił dopiero w 1956 roku. 
 
-Nabory do swojej drużyny prowadził chodząc w mundurze po mieście, dzieci zaciekawione mundurem chciały wstępować do harcerstwa. Mieszkańcy miasta często widywali umundurowanych harcerzy, stojących w pocztach podczas wielu uroczystości czy na uroczystościach kościelnych. Mieszkańcy miasta wspominają również przemarsze harcerzy, które były uświetnione przez werblistów. 
-
-Do końca życia wychowywał mieszkańców mojego miasta w duchu przedwojennego harcerstwa. 
+Nabory do swojej drużyny prowadził chodząc w mundurze po mieście, dzieci zaciekawione mundurem chciały wstępować do harcerstwa. Mieszkańcy miasta często widywali umundurowanych harcerzy, stojących w pocztach podczas wielu uroczystości czy na uroczystościach kościelnych. Mieszkańcy miasta wspominają również przemarsze harcerzy, które były uświetnione przez werblistów."
+            }
+            Image {
+                source: "image://images/HubertBonin2.jpg,10"
+                sourceSize.width: isHorizontal ?  page.width / 2 : page.width - 50
+                width: isHorizontal ? page.width / 2 : page.width - 50
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignJustify
+                format: Text.PlainText
+                color: "Black"
+                header:"Do końca życia wychowywał mieszkańców mojego miasta w duchu przedwojennego harcerstwa.
 
 Zmarł 26 marca 2008 roku."
-        }
-       ElementListyNoImage
-       {
-           Layout.fillWidth: true
-           alignH: Text.AlignHCenter
-           format: Text.PlainText
-           header: "Juliusz Idzikowski"
+            }
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header: "Juliusz Idzikowski"
+            }
         }
     }
 }

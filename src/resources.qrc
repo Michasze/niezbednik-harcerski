@@ -35,6 +35,7 @@
         <file alias="contents/ui/img/Kazimierz_Lutosławski.jpg">./data/contents/ui/img/Kazimierz_Lutosławski.jpg</file>
         <file alias="contents/ui/img/Karol_Wojtyla.jpg">./data/contents/ui/img/Karol_Wojtyla.jpg</file>
         <file alias="contents/ui/img/Olga_Malkowska.jpg">./data/contents/ui/img/Olga_Malkowska.jpg</file>
+        <file alias="contents/ui/img/Olga_Malkowska2.jpg">./data/contents/ui/img/Olga_Malkowska2.jpg</file>
         <file alias="contents/ui/img/Baden-Powell.jpg">./data/contents/ui/img/Baden-Powell.jpg</file>
         <file alias="contents/ui/img/StefanMirowski.jpg">./data/contents/ui/img/StefanMirowski.jpg</file>
         <file alias="contents/ui/img/Henryk_Glass.jpg">./data/contents/ui/img/Henryk_Glass.jpg</file>
@@ -48,7 +49,9 @@
         <file alias="contents/ui/img/harcerz.jpg">./data/contents/ui/img/harcerz.jpg</file>
         <file alias="contents/ui/img/Nil.jpg">./data/contents/ui/img/Nil.jpg</file>
         <file alias="contents/ui/img/Nil2.jpg">./data/contents/ui/img/Nil2.jpg</file>
+        <file alias="contents/ui/img/Nil3.jpg">./data/contents/ui/img/Nil3.jpg</file>
         <file alias="contents/ui/img/HubertBonin.jpg">./data/contents/ui/img/HubertBonin.jpg</file>
+        <file alias="contents/ui/img/HubertBonin2.jpg">./data/contents/ui/img/HubertBonin2.jpg</file>
         <file alias="contents/ui/img/msciciel.jpg">./data/contents/ui/img/msciciel.jpg</file>
         <file alias="contents/ui/img/mroz1.jpg">./data/contents/ui/img/mroz1.jpg</file>
         <file alias="contents/ui/img/mroz2.jpg">./data/contents/ui/img/mroz2.jpg</file>
@@ -60,11 +63,13 @@
         <file alias="contents/ui/img/zabojstwo_mroza.jpg">./data/contents/ui/img/zabojstwo_mroza.jpg</file>
         <file alias="contents/ui/img/mlody_mroz.jpg">./data/contents/ui/img/mlody_mroz.jpg</file>
         <file alias="contents/ui/img/Grot2.jpg">./data/contents/ui/img/Grot2.jpg</file>
+        <file alias="contents/ui/img/Grot3.jpg">./data/contents/ui/img/Grot3.jpg</file>
         <file alias="contents/ui/img/rudy1.jpg">./data/contents/ui/img/rudy1.jpg</file>
         <file alias="contents/ui/img/rudy2.jpg">./data/contents/ui/img/rudy2.jpg</file>
         <file alias="contents/ui/img/rudy3.jpg">./data/contents/ui/img/rudy3.jpg</file>
         <file alias="contents/ui/img/LudwikIdzikowski.jpg">./data/contents/ui/img/LudwikIdzikowski.jpg</file>
         <file alias="contents/ui/img/LudwikIdzikowski2.jpg">./data/contents/ui/img/LudwikIdzikowski2.jpg</file>
+        <file alias="contents/ui/img/LudwikIdzikowski3.jpg">./data/contents/ui/img/LudwikIdzikowski3.jpg</file>
         <file alias="contents/ui/img/Stanislaw_skalski.jpg">./data/contents/ui/img/Stanislaw_skalski.jpg</file>
         <file alias="contents/ui/img/Stanislaw_skalski2.jpg">./data/contents/ui/img/Stanislaw_skalski2.jpg</file>
         <file alias="contents/ui/img/fotograficzna.jpg">./data/contents/ui/img/fotograficzna.jpg</file>

@@ -18,29 +18,29 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Stanisław Skalski"
-    ColumnLayout {
-        width: page.width
-        spacing: Units.smallSpacing
-                Image {
-            source: "image://images/Stanislaw_skalski.jpg,10"
-            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
-            fillMode: Image.PreserveAspectFit
-            Layout.alignment: Qt.AlignHCenter
-        }
-            ElementListyNoImage
+    Controls.Pane
+    {
+        Column {
+            width: parent.width
+            spacing: 10
+            Image {
+                source: "image://images/Stanislaw_skalski.jpg,10"
+                sourceSize.width: isHorizontal ?  page.width / 2 : page.width - 50
+                width: isHorizontal ? page.width / 2 : page.width - 50
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
-            header: "Ukończył Szkołę Podchorążych Lotnictwa w Dęblinie. Podczas wojny obronnej Polski w 1939 roku służył w 142 Eskadrze Myśliwskiej. Następnie przedostał się do Anglii gdzie służył w dywizjonach 306 i 316,317. Brał udział w bitwie o Anglię, gdzie latał myśliwcem Hawker Hurricane. Udało mu się strącić kilka samolotów przeciwnika. Podczas jednej z misji w bitwie o Anglię został zestrzelony. Udało mu się wyskoczyć z płonącej kabiny samolotu i otworzyć spadochron. Odniósł obrażenia w wyniku których nie mógł przez pewien czas brać udziału w walkach.
+                header: "Ukończył Szkołę Podchorążych Lotnictwa w Dęblinie. Podczas wojny obronnej Polski w 1939 roku służył w 142 Eskadrze Myśliwskiej. Następnie przedostał się do Anglii gdzie służył w dywizjonach 306 i 316,317. Brał udział w bitwie o Anglię, gdzie latał myśliwcem Hawker Hurricane. Udało mu się strącić kilka samolotów przeciwnika. Podczas jednej z misji w bitwie o Anglię został zestrzelony. Udało mu się wyskoczyć z płonącej kabiny samolotu i otworzyć spadochron. Odniósł obrażenia w wyniku których nie mógł przez pewien czas brać udziału w walkach.
 
 Następnie służył w dywizjonie 306 z którym wykonywał loty bojowe nad okupowaną przez III Rzeszę Europą Zachodnią.  W tym czasie w Royal Air Force został mianowany kapitanem, a Wojsku Polskim kapitanem. 
 
@@ -55,13 +55,13 @@ W okresie PRL nie należał do żadnej partii politycznej.
 
 Pod koniec życia był bardzo schorowany i nie był w stanie samodzielnie funkcjonować. Został okradziony przez swoich opiekunów, w wyniku czego stracił własne mieszkanie. Zamieszkał w domu pomocy społecznej.
 Zmarł 12 listopada 2004 roku."
-        }
-                ElementListyNoImage
-                {
-                    Layout.fillWidth: true
-                    alignH: Text.AlignHCenter
-                    format: Text.PlainText
-                    header: "Juliusz Idzikowski"
+            }
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header: "Juliusz Idzikowski"
+            }
         }
     }
 }

@@ -18,39 +18,51 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Stefan Rowecki pseudonim \“Grot\”"
-
-    ColumnLayout {
-        width: page.width
-        Image {
-            source: "image://images/Grot.jpg,10"
-            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
-            fillMode: Image.PreserveAspectFit
-            Layout.alignment: Qt.AlignHCenter
-        }
-            ElementListyNoImage
+    Controls.Pane
+    {
+        Column {
+            spacing: 10
+            anchors.fill: parent
+            Image {
+                source: "image://images/Grot.jpg,10"
+                sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+                width: isHorizontal ? page.height / 3 : page.width / 2
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
-            header: "Stefan Rowecki pseudonim “Grot” urodzony w 1895 roku w Piotrkowie Trybunalskim, generał dywizji Wojska Polskiego, Dowódca Armii Krajowej, Komendant Związku Walki Zbrojnej.
+                header: "Stefan Rowecki pseudonim “Grot” urodzony w 1895 roku w Piotrkowie Trybunalskim, generał dywizji Wojska Polskiego, Dowódca Armii Krajowej, Komendant Związku Walki Zbrojnej.
 
 Podczas nauki w gimnazjum był współorganizatorem pierwszego zastępu skautowego. Zastęp ten był wizytowany przez Andrzeja Małkowskiego i uzyskał pozytywną opinię. 
 
 Od 1912 roku studiował w Warszawie w Szkole Mechaniczno-Technicznej.
 Uczęszczał do organizacji niepodległościowej \"Polskie drużyny strzeleckie\". Podczas I wojny światowej służył w Legionach Polskich. 
 
-W okresie międzywojennym kontynuował karierę wojskową. W tym czasie był również redaktorem i założycielem kwartalnika \"Przegląd Wojskowy\".
-
-Na krótko przed wybuchem II wojny światowej został mianowany dowódcą Warszawskiej Brygady Pancerno-Motorowej. Bardzo prężnie działał na rzecz jak najlepszego wyszkolenia i zgrania swojej brygady. Niestety miał zbyt mało czasu, aby mógł osiągnąć oczekiwany poziom. W czasie kampanii wrześniowej jego brygada brała udział w obronie środkowej Wisły. Po kapitulacji Armii \"Lubin\" do której należała jego brygada, udało mu się uciec do Warszawy.
+W okresie międzywojennym kontynuował karierę wojskową. W tym czasie był również redaktorem i założycielem kwartalnika \"Przegląd Wojskowy\"."
+            }
+            Image
+            {
+                source: "image://images/Grot3.jpg,10"
+                sourceSize.width: isHorizontal ? page.height / 2 : page.width - 50
+                width: isHorizontal ? page.height / 2 : page.width - 50
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                color: "Black"
+                header: "Na krótko przed wybuchem II wojny światowej został mianowany dowódcą Warszawskiej Brygady Pancerno-Motorowej. Bardzo prężnie działał na rzecz jak najlepszego wyszkolenia i zgrania swojej brygady. Niestety miał zbyt mało czasu, aby mógł osiągnąć oczekiwany poziom. W czasie kampanii wrześniowej jego brygada brała udział w obronie środkowej Wisły. Po kapitulacji Armii \"Lubin\" do której należała jego brygada, udało mu się uciec do Warszawy.
 
 W maju 1940 roku mianowano go komendantem ZWZ (Związek Walki Zbrojnej) na Obszar Warszawski. Już 30 czerwca tego samego roku został powołany na komendanta głównego ZWZ. Jako komendant powoływał różne oddziały zbrojne które miały walczyć z okupantem. Między innymi oddziały dywersyjne takie jak \"N\" czy \"Wachlarz\". Doprowadził do połączenia różnych organizacji podziemia w jedną organizację wojskową o nazwie Armia Krajowa (powstała 14 lutego 1942). Został komendantem AK. W styczniu 1943 roku powołał Kierownictwo Dywersji (Kedyw). Jako dowódca był przeciwny nawiązywaniu współpracy z PPR (komunistycznym podziemiem w Polsce). 
 Niemcy uparcie polowali na Roweckiego. 
@@ -63,12 +75,13 @@ Informacje o jego miejscu położenia wykryła agentura NKWD. Wywiad Rosyjski po
 
 Został zgładzony 2 sierpnia, z rozkazu Henricha Himmler. Rozkaz został wydany w furii na wieść o wybuchu Powstania Warszawskiego."
             }
-                ElementListyNoImage
-                {
-                    Layout.fillWidth: true
-                    alignH: Text.AlignHCenter
-                    format: Text.PlainText
-                    header: "Juliusz Idzikowski"
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                color: "Black"
+                header: "Juliusz Idzikowski"
+            }
         }
     }
 }

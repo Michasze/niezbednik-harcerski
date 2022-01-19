@@ -19,25 +19,24 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Ludwik Idzikowski"
-    ColumnLayout {
-        width: page.width
-        spacing: 20
+    Controls.Pane
+    {
+    Column {
+        anchors.fill: parent
+        spacing: 10
         Image {
             source: "image://images/LudwikIdzikowski.jpg,10"
             sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            width: isHorizontal ? page.height / 3 : page.width / 2
             fillMode: Image.PreserveAspectFit
-            Layout.alignment: Qt.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
         }
-             ElementListyNoImage
+             ElementListyNoLayout
             {
-            Layout.fillWidth: true
             alignH: Text.AlignJustify
             format: Text.PlainText
             color: "Black"
@@ -47,10 +46,21 @@ Maturę zdał w Rosji, później studiował w Belgii na wydziale górniczym. Pod
 
 Walczył w trakcie wojny polsko-ukraińskiej w obronie Lwowa, w wojny polsko-bolszewickiej latał bojowo przeciwko Rosjanom. Po zakończeniu wojny został instruktorem w Wyższej Szkole Pilotów. W 1926 roku objął dowodzenie nad dywizjonem lotnictwa.  
 
-Następnie został przydzielony do polskiej misji wojskowej zakupów we Francji, gdzie testował samoloty które Polska chciała zakupić. Wpadł on wtedy na pomysł oblecenia Ziemi w kierunku zachodnim, dużo trudniejszym, wymagającym lotu pod wiatr, co jeszcze nikomu się nie udało. Władze zakupiły bombowiec Amiot 123, któremu nadano mu imię “Marszałek Piłsudski”. Idzikowskiego awansowano do stopnia majora oraz przydzielono mu nawigatora  majora Kazimierza Kubalę. 
-
-Wystartowali 3 sierpnia 1928 roku z lotniska znajdującego się niedaleko Paryża. Po kilku godzinach lotu załoga zauważyła uszkodzenie zbiornika oleju i zdecydowała się zawrócić 
-w kierunku Europy. Major Idzikowski podjął decyzję o wodowaniu w pobliżu niemieckiego statku. Załoga statku ocaliła lotników oraz zabrała na pokład ich samolot. 
+Następnie został przydzielony do polskiej misji wojskowej zakupów we Francji, gdzie testował samoloty które Polska chciała zakupić. Wpadł on wtedy na pomysł oblecenia Ziemi w kierunku zachodnim, dużo trudniejszym, wymagającym lotu pod wiatr, co jeszcze nikomu się nie udało. Władze zakupiły bombowiec Amiot 123, któremu nadano mu imię “Marszałek Piłsudski”. Idzikowskiego awansowano do stopnia majora oraz przydzielono mu nawigatora  majora Kazimierza Kubalę."
+            }
+        Image {
+            source: "image://images/LudwikIdzikowski3.jpg,10"
+            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+            width: isHorizontal ? page.height / 3 : page.width / 2
+            fillMode: Image.PreserveAspectFit
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+             ElementListyNoLayout
+            {
+            alignH: Text.AlignJustify
+            format: Text.PlainText
+            color: "Black"
+            header: "Wystartowali 3 sierpnia 1928 roku z lotniska znajdującego się niedaleko Paryża. Po kilku godzinach lotu załoga zauważyła uszkodzenie zbiornika oleju i zdecydowała się zawrócić w kierunku Europy. Major Idzikowski podjął decyzję o wodowaniu w pobliżu niemieckiego statku. Załoga statku ocaliła lotników oraz zabrała na pokład ich samolot.
 Rok później postanowili powtórzyć próbę. Zakupiono nowy samolot Amiot 123
 z mocniejszym silnikiem, został nazwany \"Orzeł Biały\". Wystartowali 13 lipca 1929 roku 
 z tego samego lotniska niedaleko Paryża. Po przeleceniu około dwóch tysięcy kilometrów samolot doznał awarii silnika. Zdecydowano lądować na wyspie Graciosa, podczas lądowania samolot natrafił na pas kamieni i doszło do zapłonu silnika. 
@@ -59,12 +69,12 @@ W katastrofie 13 lipca 1929 zginął Major Ludwik Idzikowski, a major Kazimierz 
 
 Ciało majora zostało przetransportowane do Polski. Został pochowany na Cmentarzu Powązkowskim."
         }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
-                    Layout.fillWidth: true
                     alignH: Text.AlignHCenter
                     format: Text.PlainText
                     header: "Juliusz Idzikowski"
         }
+    }
     }
 }
