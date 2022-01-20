@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,29 +18,28 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Władysław Mróz"
-    ColumnLayout {
-      
-        Image {
-            source: "image://images/mroz1.jpg,10"
-            sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
-            fillMode: Image.PreserveAspectFit
-            Layout.alignment: Qt.AlignHCenter
-        }
-            ElementListyNoImage
+    Controls.Pane {
+        Column {
+            spacing: 10
+            anchors.fill: parent
+            Image {
+                source: "image://images/mroz1.jpg,10"
+                sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+                width: isHorizontal ? page.height / 3 : page.width / 2
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
-            header: "Władysław Mróz
+                header: "Władysław Mróz
 Urodzony w 1897 roku.
 Podpułkownik Wojska Polskiego, zawodowy żołnierz. W stopniu majora dowodził I batalionem 5 pułku Strzelców Podhalańskich w Armii \"Kraków\".
 Po krwawych walkach września 1939 roku, po bitwie pod Bronią został uznany za zaginionego, a tak naprawdę został ranny.
@@ -50,20 +49,21 @@ Podczas pobytu w Bolesławcu został aresztowany przez UB.
 Władysław Mróz zmarł 1 września w piętnastą rocznicę ataku Niemiec na Polskę (1954 r).
 Wiele lat później jego rodzina została powiadomiona, że podpułkownik został otruty przez lekarza pracującego w areszcie, który przeprowadzał eksperymenty na więźniach.
 Jego grób znajduje się w środkowej alei zasłużonych dla Bolesławca, grobem opiekują się harcerze z Hufca im Szarych Szeregów."
-        }
-         Image {
-         source: "qrc:/contents/ui/img/mroz2.jpg"   
-          Layout.fillWidth: true
-          horizontalAlignment: Image.AlignHCenter
-         Layout.maximumHeight: 300
-         fillMode: Image.PreserveAspectFit
-        }
-                ElementListyNoImage
-                {
-                    Layout.fillWidth: true
-                    alignH: Text.AlignHCenter
-                    format: Text.PlainText
-                    header: "Juliusz Idzikowski"
+            }
+            Image {
+                source: "image://images/mroz2.jpg,10"
+                horizontalAlignment: Image.AlignHCenter
+                sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
+                width: isHorizontal ? page.height / 3 : page.width / 2
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header: "Juliusz Idzikowski"
+            }
         }
     }
 }
