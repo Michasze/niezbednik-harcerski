@@ -19,7 +19,6 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
