@@ -16,30 +16,22 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Przyrzeczenie"
 
-
-    ColumnLayout {
-        width: page.width
-ElementListyNoImage
+ElementListyNoLayout
         {
             color: "brown"
-            header: "Wyznaję, że Jezus jest moim Panem i Zbawicielem.<br><br>
-Z Jego pomocą uczynię wszystko,<br><br>
-aby służyć Bogu, Kościołowi oraz bliźnim<br><br>
-przestrzegając prawa Skautów Króla<br><br>
+            format: Text.PlainText
+            header: "Wyznaję, że Jezus jest moim Panem i Zbawicielem.
+Z Jego pomocą uczynię wszystko,
+aby służyć Bogu, Kościołowi oraz bliźnim
+przestrzegając prawa Skautów Króla
 i wprowadzając w życie Złotą Zasadę Ewangelii."
         }
     }
 
 
-}
