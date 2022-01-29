@@ -1,8 +1,9 @@
 import QtQuick 2.0
-import QtQuick.Layouts 1.2
 
-     Image
- {
-     Layout.alignment: Qt.AlignHCenter
-     sourceSize.width: isHorizontal ? page.width / 3 : page.width / 2
- }
+Image
+{
+    sourceSize.width: isHorizontal ? page.height / 2 : page.width - 50
+    width: isHorizontal ? page.height / 2 : page.width - 50
+    fillMode: Image.PreserveAspectFit
+    anchors.horizontalCenter: parent.horizontalCenter
+}

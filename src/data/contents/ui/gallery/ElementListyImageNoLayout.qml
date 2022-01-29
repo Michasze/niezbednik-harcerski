@@ -20,7 +20,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 
-
 Rectangle {
     // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
     property string header: ""
@@ -30,24 +29,35 @@ Rectangle {
     radius: 10
     width: parent.width
     color: "#303030"
-    height: 120
+    // Jeśli tekst jest za duży powiększ wysokość kafelka
+    height: naglowek.height > 120 ? naglowek.height + 30 : 120
     MouseArea {
         anchors.fill: parent
         onClicked: Qt.openUrlExternally(cardRectangle.odnosnik)
     }
     Image {
+        id: img
         anchors.left: parent.left
+        anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
         sourceSize.width: cardRectangle.height - 20
+        width: 100
         fillMode: Image.PreserveAspectFit
         source: cardRectangle.ikona
     }
-    Controls.Label {
-        horizontalAlignment: Text.AlignHCenter
-        id: naglowek
-        wrapMode: Text.Wrap
-        font.pointSize: invisibleSlider.value
-        anchors.centerIn: parent
-        text: cardRectangle.header
+    Item
+    {
+        height: parent.height
+        width: parent.width - img.width - 10
+        anchors.right: parent.right
+        Controls.Label {
+            horizontalAlignment: Text.AlignHCenter
+            id: naglowek
+            wrapMode: Text.Wrap
+            width: parent.width - 10
+            font.pointSize: invisibleSlider.value - 2
+            anchors.centerIn: parent
+            text: cardRectangle.header
+        }
     }
 }

@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,17 +18,14 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Stopnie Harcerskie - ZHP"
     header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
-
         Controls.TabButton {
             text: "Zuchy"
         }
@@ -38,30 +35,29 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        height: root.height
+        height: highest.height + 50
         currentIndex: tabBar.currentIndex
         clip: true
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
-                ElementListy
+        Controls.Pane {
+            height: highest.height
+            Column {
+                spacing: 10
+                anchors.fill: parent
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/ho.svg"
                     width: page.width - 50
                     color: "steelblue"
                     header: "Zuch Ochoczy"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
                     width: page.width - 50
                     color: "steelblue"
                     header: "Zuch Sprawny"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/zuchG.svg"
                     width: page.width - 50
@@ -70,49 +66,45 @@ HPSPage {
                 }
             }
         }
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
-                ElementListy
+        Controls.Pane {
+            height: highest.height + 50
+            Column {
+                id: highest
+                spacing: 10
+                width: parent.width
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/mlodzik.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Młodzik/\nOchotniczka"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/wywiadowca.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Wywiadowca/\nTropicielka"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/odkrywca.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Odkrywca/\nPionierka"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/cwik.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Ćwik/\nSamarytanka"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/ho.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Harcerz Orli/\nHarcerka Orla"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
                 }

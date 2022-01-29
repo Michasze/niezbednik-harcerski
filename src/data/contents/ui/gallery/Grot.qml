@@ -28,12 +28,9 @@ HPSPage {
         Column {
             spacing: 10
             anchors.fill: parent
-            Image {
+            HPSImage {
                 source: "image://images/Grot.jpg,10"
-                sourceSize.width: isHorizontal ?  page.height / 3 : page.width / 2
                 width: isHorizontal ? page.height / 3 : page.width / 2
-                fillMode: Image.PreserveAspectFit
-                anchors.horizontalCenter: parent.horizontalCenter
             }
             ElementListyNoLayout
             {
@@ -49,13 +46,10 @@ Uczęszczał do organizacji niepodległościowej \"Polskie drużyny strzeleckie\
 
 W okresie międzywojennym kontynuował karierę wojskową. W tym czasie był również redaktorem i założycielem kwartalnika \"Przegląd Wojskowy\"."
             }
-            Image
+            HPSImage
             {
                 source: "image://images/Grot3.jpg,10"
-                sourceSize.width: isHorizontal ? page.height / 2 : page.width - 50
-                width: isHorizontal ? page.height / 2 : page.width - 50
                 fillMode: Image.PreserveAspectFit
-                anchors.horizontalCenter: parent.horizontalCenter
             }
             ElementListyNoLayout
             {
