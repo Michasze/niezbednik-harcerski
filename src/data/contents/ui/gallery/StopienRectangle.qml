@@ -1,23 +1,37 @@
+/*
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License as
+ *   published by the Free Software Foundation; either version 2 or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU Library General Public License for more details
+ *
+ *   You should have received a copy of the GNU Library General Public
+ *   License along with this program; if not, write to the
+ *   Free Software Foundation, Inc.,
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 
         Rectangle {
             property url ikona: "image://icons/blank.svg,transparent"
-            property double divider: 3
+            property double divider: 2.5
             property string header: ""
             id: stopien
             color: "#303030"
             radius: 10
-            Layout.preferredHeight: width
-            ColumnLayout {
-                anchors.centerIn: parent
-                anchors.fill: parent
+            width: (page.width / 2) - 50
+            height: width
                 Image {
                     id: krzyz
                     z: 1
-                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                    Layout.fillWidth: false
+                    anchors.centerIn:parent
                     sourceSize.width: stopien.height / 1.2
                     source: "image://icons/krzyz.svg,white"
                     fillMode: Image.PreserveAspectFit
@@ -32,16 +46,15 @@ import QtQuick.Layouts 1.2
                 Controls.Label {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignTop
-                    Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.top: krzyz.bottom
                     wrapMode: Text.Wrap
                     fontSizeMode: Text.VerticalFit
                     minimumPointSize: 10
                     font.pointSize: invisibleSlider.value - 2
-                    Layout.fillWidth: true
-                    Layout.maximumHeight: stopien.height - krzyz.height - 10
-                    Layout.bottomMargin: 20
-                    Layout.rightMargin: 10
+                    height: stopien.height - krzyz.height - 10
+                    anchors.bottomMargin: 20
+                    anchors.rightMargin: 10
                     text: stopien.header
                 }
             }
-        }

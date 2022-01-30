@@ -104,6 +104,8 @@
         <file alias="contents/ui/gallery/ustawienia.qml">./data/contents/ui/gallery/ustawienia.qml</file>
         <file alias="contents/ui/gallery/fotograficzna.qml">./data/contents/ui/gallery/fotograficzna.qml</file>
         <file alias="contents/ui/gallery/ekosystem.qml">./data/contents/ui/gallery/ekosystem.qml</file>
+        <file alias="contents/ui/gallery/wiedzmin.qml">./data/contents/ui/gallery/wiedzmin.qml</file>
+        <file alias="contents/ui/gallery/wiedzminLARP/wprowadzenie.qml">./data/contents/ui/gallery/wiedzminLARP/wprowadzenie.qml</file>
         <file alias="contents/ui/gallery/podroze.qml">./data/contents/ui/gallery/podroze.qml</file>
         <file alias="contents/ui/gallery/geo.qml">./data/contents/ui/gallery/geo.qml</file>
         <file alias="contents/ui/gallery/HZNP.qml">./data/contents/ui/gallery/HZNP.qml</file>
@@ -391,6 +393,7 @@
         <file alias="contents/ui/img/tellonym.svg">./data/contents/ui/img/tellonym.svg</file>
         <file alias="contents/ui/img/blank.svg">./data/contents/ui/img/blank.svg</file>
         <file alias="contents/ui/img/logo.svg">./data/contents/ui/img/logo.svg</file>
+        <file alias="contents/ui/img/wiedzmin.svg">./data/contents/ui/img/wiedzmin.svg</file>
         <file alias="contents/ui/img/terenowe1.svg">./data/contents/ui/img/terenowe1.svg</file>
         <file alias="contents/ui/img/terenowe2.jpg">./data/contents/ui/img/terenowe2.jpg</file>
         <file alias="contents/ui/img/terenowe3.jpg">./data/contents/ui/img/terenowe3.jpg</file>

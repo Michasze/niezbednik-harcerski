@@ -71,7 +71,7 @@ HPSPage {
                 width: parent.width
                 Image
                 {
-                    source: "image://images/mlody_mroz.jpg"
+                    source: "image://images/mlody_mroz.jpg,10"
                     sourceSize.width: isHorizontal ? page.width / 3 : page.width / 2
                     width: isHorizontal ? page.width / 3 : page.width /2
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -126,7 +126,7 @@ HPSPage {
                 width: parent.width
                 Image
                 {
-                    source: "image://images/zabojstwo_mroza.jpg"
+                    source: "image://images/zabojstwo_mroza.jpg,10"
                     sourceSize.width: isHorizontal ? page.width / 3 : page.width / 2
                     width: isHorizontal ? page.width / 3 : page.width / 2
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -233,6 +233,13 @@ HPSPage {
                     format: Text.PlainText
                     color: "Black"
                     header: "Całość informacji zgromadzonych przez “Le Monde” stanowi jedynie wycinek danych posiadanych przez służby wywiadu. Dlatego wzmianki w gazecie nie są wolne od pewnych nieścisłości lub omyłek. Prawdopodobne jest również to, że dziennikarze mogli wiedzieć więcej, ale ze względu na dobro śledztwa zdecydowała się na ich nieupublicznienie, możliwe jest również, że D.S.T. blokowała dostęp do bardziej wrażliwych danych. Z pewnością brakuje informacji odnoszących się do działalności Mroza jak agenta polskiego wywiadu we Francji oraz faktów na temat jego przewerbowania. Natomiast reszta informacji podawanych przez “Le Monde” jest zgodna z dokumentami upublicznionymi przez służy francuskie oraz tymi sporządzonymi przez polski wywiad."
+	            }
+                ElementListyNoLayout
+                {
+                    width: root.width - 50
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
 	            }
             }
         }

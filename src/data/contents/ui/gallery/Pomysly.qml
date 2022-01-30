@@ -25,38 +25,43 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     title: qsTr("Pomysły na zbiórki")
-
-ColumnLayout
-{
-    KartaStronaIkona {
-        header: "Ekosystem w słoiku"
-        opis: "Jak przygotować roślinkę w słoiku?"
-        ikona: "qrc:/contents/ui/img/applications-science.svg"
-        adres: "ekosystem.qml"
-    }
-    KartaStronaIkona {
-        header: "Podróże małe i duże"
-        opis: "Harcerskie wędrowanie tam i z powrotem."
-        ikona: "image://icons/edit-paste-in-place.svg,white"
-        adres: "podroze.qml"
-    }
-    KartaStronaIkona {
-        header: "Gra fabularna"
-        opis: "w klimatach bloku wschodniego."
-        ikona: "image://icons/kosci.svg,white"
-        adres: "gra_warsztaty.qml"
-    }
-    KartaStronaIkona {
-        header: "Geoguessr"
-        opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości."
-        ikona: "image://icons/atmosphere.svg,white"
-        adres: "geoguessr.qml"
-    }
-    KartaStronaIkona {
-        header: "Zbiórka fotograficzna"
-        opis: "Jak przygotować zbiórkę fotograficzną online?"
-        ikona: "qrc:/contents/ui/img/camera-photo.svg"
-        adres: "fotograficzna.qml"
-    }
+    ColumnLayout
+    {
+        KartaStronaIkona {
+            header: "Ekosystem w słoiku"
+            opis: "Jak przygotować roślinkę w słoiku?"
+            ikona: "qrc:/contents/ui/img/applications-science.svg"
+            adres: "ekosystem.qml"
+        }
+        KartaStronaIkona {
+            header: "Wiedźmiński LARP"
+            opis: "Zbiórka o tematyce Wiedźmina"
+            ikona: "image://icons/wiedzmin.svg,white"
+            adres: "wiedzmin.qml"
+        }
+        KartaStronaIkona {
+            header: "Podróże małe i duże"
+            opis: "Harcerskie wędrowanie tam i z powrotem."
+            ikona: "image://icons/edit-paste-in-place.svg,white"
+            adres: "podroze.qml"
+        }
+        KartaStronaIkona {
+            header: "Gra fabularna"
+            opis: "w klimatach bloku wschodniego."
+            ikona: "image://icons/kosci.svg,white"
+            adres: "gra_warsztaty.qml"
+        }
+        KartaStronaIkona {
+            header: "Geoguessr"
+            opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości."
+            ikona: "image://icons/atmosphere.svg,white"
+            adres: "geoguessr.qml"
+        }
+        KartaStronaIkona {
+            header: "Zbiórka fotograficzna"
+            opis: "Jak przygotować zbiórkę fotograficzną online?"
+            ikona: "qrc:/contents/ui/img/camera-photo.svg"
+            adres: "fotograficzna.qml"
         }
     }
+}

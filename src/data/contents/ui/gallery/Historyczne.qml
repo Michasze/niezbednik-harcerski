@@ -28,11 +28,12 @@ HPSPage
     {
     Column {
         anchors.fill: parent
-        spacing: 10
+        spacing: 20
         ElementListyImageNoLayout {
             id: postacie
             height: 150
             ikona: "image://images/Baden-Powell.jpg,20"
+            isUrl: false
             odnosnik: "postacie.qml"
             header: "Postacie"
         }

@@ -1,6 +1,5 @@
-
 /*
- *   Copyright 2021 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
+ *   Copyright 2022 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,44 +18,39 @@
  */
 
 import QtQuick 2.3
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage
 {
     id: page
-    Layout.fillWidth: true
     title: qsTr("Znaki służb")
-    GridLayout {
+    Controls.Pane
+    {
+    Grid {
         id: gridl
-        width: page.width
+        anchors.fill: parent
         columns: 3
         property var labels: [ "dziecku", "gospodarce", "kulturze", "nauce", "pamięci", "przyjaźni", "przyrodzie", "turystyce", "wspólnocie lokalnej", "zdrowiu" ]
         property var icons: [ "dziecku", "gospodarce", "kulturze", "nauce", "pamieci", "przyjazni", "przyrodzie", "turystyce", "wspolnocie", "zdrowiu" ]
         Repeater
         {
             model: gridl.labels
-            delegate: ColumnLayout {
+            anchors.horizontalCenter: parent.horizontalCenter
+            delegate: Column {
                 Image {
                     id: krzyz
-                    Layout.fillWidth: true
+                    width: (page.width / 3) - 30
                     source: "qrc:/contents/ui/img/" + gridl.icons[index] + ".svg"
                     fillMode: Image.PreserveAspectFit
                 }
-                Controls.Label {
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignTop
-                    Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                    wrapMode: Text.Wrap
-                    fontSizeMode: Text.VerticalFit
-                    minimumPointSize: 10
-                    font.pointSize: invisibleSlider.value - 2
-                    Layout.fillWidth: true
-                    Layout.bottomMargin: 20
-                    Layout.rightMargin: 10
-                    text: modelData
+                ElementListyNoLayout {
+                    align: Text.AlignTop
+                    width: krzyz.width
+                    header: modelData
+                    color: "transparent"
                 }
             }
         }
+    }
     }
 }

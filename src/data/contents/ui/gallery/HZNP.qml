@@ -137,6 +137,12 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
                     color: "Black"
                     header: "Kurs na stopień ćwika dla instruktorów Harcerstwa Związku Narodowego Polskiego w Kolegium Związku w Cambridge Springs, w Pensylwanii w Stanach Zjednoczonych.\n 1934 r."
                 }
+                ElementListyNoLayout
+                {
+                    alignH: Text.AlignHCenter
+                    format: Text.PlainText
+                    header: "Juliusz Idzikowski"
+                }
             }
         }
     }

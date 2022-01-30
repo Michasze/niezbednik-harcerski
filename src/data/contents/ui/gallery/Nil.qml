@@ -63,7 +63,6 @@ W wyniku nieuczciwego procesu został skazany na śmierć za wydawanie rozkazów
             {
                 alignH: Text.AlignHCenter
                 format: Text.PlainText
-                color: "Black"
                 header: "Juliusz Idzikowski"
             }
         }

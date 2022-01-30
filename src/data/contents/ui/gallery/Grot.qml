@@ -49,6 +49,7 @@ W okresie międzywojennym kontynuował karierę wojskową. W tym czasie był ró
             HPSImage
             {
                 source: "image://images/Grot3.jpg,10"
+                width: isHorizontal ? page.height / 3 : page.width / 2
                 fillMode: Image.PreserveAspectFit
             }
             ElementListyNoLayout
@@ -56,7 +57,7 @@ W okresie międzywojennym kontynuował karierę wojskową. W tym czasie był ró
                 alignH: Text.AlignHCenter
                 format: Text.PlainText
                 color: "Black"
-                header: "Na krótko przed wybuchem II wojny światowej został mianowany dowódcą Warszawskiej Brygady Pancerno-Motorowej. Bardzo prężnie działał na rzecz jak najlepszego wyszkolenia i zgrania swojej brygady. Niestety miał zbyt mało czasu, aby mógł osiągnąć oczekiwany poziom. W czasie kampanii wrześniowej jego brygada brała udział w obronie środkowej Wisły. Po kapitulacji Armii \"Lubin\" do której należała jego brygada, udało mu się uciec do Warszawy.
+                header: "Na krótko przed wybuchem II wojny światowej został mianowany dowódcą Warszawskiej Brygady Pancerno-Motorowej. Bardzo prężnie działał na rzecz jak najlepszego wyszkolenia i zgrania swojej brygady. Niestety miał zbyt mało czasu, aby mógł osiągnąć oczekiwany poziom. W czasie kampanii wrześniowej jego brygada brała udział w obronie środkowej Wisły. Po kapitulacji Armii \"Lublin\" do której należała jego brygada, udało mu się uciec do Warszawy.
 
 W maju 1940 roku mianowano go komendantem ZWZ (Związek Walki Zbrojnej) na Obszar Warszawski. Już 30 czerwca tego samego roku został powołany na komendanta głównego ZWZ. Jako komendant powoływał różne oddziały zbrojne które miały walczyć z okupantem. Między innymi oddziały dywersyjne takie jak \"N\" czy \"Wachlarz\". Doprowadził do połączenia różnych organizacji podziemia w jedną organizację wojskową o nazwie Armia Krajowa (powstała 14 lutego 1942). Został komendantem AK. W styczniu 1943 roku powołał Kierownictwo Dywersji (Kedyw). Jako dowódca był przeciwny nawiązywaniu współpracy z PPR (komunistycznym podziemiem w Polsce). 
 Niemcy uparcie polowali na Roweckiego. 
@@ -73,7 +74,6 @@ Został zgładzony 2 sierpnia, z rozkazu Henricha Himmler. Rozkaz został wydany
             {
                 alignH: Text.AlignHCenter
                 format: Text.PlainText
-                color: "Black"
                 header: "Juliusz Idzikowski"
             }
         }

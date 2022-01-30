@@ -25,6 +25,7 @@ Rectangle {
     property string header: ""
     property url ikona: ""
     property url odnosnik: ""
+    property bool isUrl: true
     id: cardRectangle
     radius: 10
     width: parent.width
@@ -33,7 +34,7 @@ Rectangle {
     height: naglowek.height > 120 ? naglowek.height + 30 : 120
     MouseArea {
         anchors.fill: parent
-        onClicked: Qt.openUrlExternally(cardRectangle.odnosnik)
+        onClicked: isUrl ? Qt.openUrlExternally(cardRectangle.odnosnik) : pageStack.push(Qt.resolvedUrl(cardRectangle.odnosnik))
     }
     Image {
         id: img

@@ -24,7 +24,6 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Prawo Harcerskie"
 
 

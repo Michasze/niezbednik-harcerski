@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,12 +18,11 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
+import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Stopnie Harcerskie - ZHR"
     header: Controls.TabBar {
         id: tabBar
@@ -37,71 +36,63 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        Layout.fillHeight: true
-        Layout.fillWidth: true
         height: root.height * 1.5
         currentIndex: tabBar.currentIndex
         clip: true
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
-                ElementListy
+        Controls.Pane {
+            Column {
+                anchors.fill:parent
+                spacing: 10
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/ho.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Zuch pierwszej gwiazdki/\nZuch wtajemniczony"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Zuch drugiej gwiazdki/\nZuch zaradny"
                 }
-                ElementListy
+                ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/zuchG.svg"
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Zuch trzeciej gwiazdki/\nZuch opiekuńczy"
                 }
             }
-        }
-        Item {
-            width: root.width
-            GridLayout {
+            }
+        Controls.Pane {
+            Grid {
+                anchors.fill: parent
+                spacing: 20
                 columns: 2
                 StopienRectangle
                 {
-                    width: (page.width / 2) - 25
+                    ikona: "image://icons/blank.svg,transparent"
                     header: "Młodzik/\n Ochotniczka"
                 }
                 StopienRectangle
                 {
-                    width: (page.width / 2) - 25
                     ikona: "image://icons/krzyz_lilijka_srebrna.svg"
                     header: "Wywiadowca/\n Tropicielka"
                 }
                 StopienRectangle
                 {
-                    width: (page.width / 2) - 25
                     ikona: "image://icons/krzyz_lilijka_zlota.svg"
                     header: "Ćwik/\n Samarytanka"
                 }
                 StopienRectangle
                 {
-                    width: (page.width / 2) - 25
                     ikona: "image://icons/krzyz_lilijka_okrag.svg"
-                    divider: 2.35
+                    divider: 2.1
                     header: "Harcerz orli/\n Wędrowniczka"
                 }
                 StopienRectangle
                 {
-                    width: (page.width / 2) - 25
                     ikona: "image://icons/krzyz_wieniec.svg"
-                    divider: 1.0
+                    divider: 0.90
                     header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
                 }
             }
