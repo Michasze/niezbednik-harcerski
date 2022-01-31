@@ -272,36 +272,39 @@ może ulec zmianie."
             border.color: "Grey"
             border.width: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0
         }
-        RowLayout
+        Item
         {
             anchors.fill: parent
             Controls.ToolButton {
+                anchors.left: parent.left
+                anchors.leftMargin: 10
                 id: menuButton
-                Layout.alignment: Qt.AlignLeft
                 onClicked: globalDrawer.open()
                 icon.source: "qrc:/contents/ui/img/application-menu.svg"
             }
             Kirigami.Heading
             {
                 id: naglowek
-                anchors.centerIn: parent
-                Layout.alignment: Qt.AlignHCenter
                 horizontalAlignment: Text.AlignHCenter
+                anchors.centerIn: parent
                 // Pokazuje tytul właśnie otwartej strony
                 text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
                 level: 2
             }
             Controls.ToolButton
             {
+                id: powrotButton
+                anchors.right: parent.right
+                anchors.rightMargin: 10
                 visible: pageStack.layers.depth != 1 || ((!Kirigami.Settings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1)) ? true : false
-                Layout.alignment: Qt.AlignRight
                 icon.source: "image://icons/go-previous.svg,white"
                 action: powrotAction
             }
             Controls.ToolButton
             {
+                anchors.right: parent.right
+                anchors.rightMargin: powrotButton.visible ? (powrotButton.width + 10) : 10
                 visible: pageStack.currentItem.title.includes("Pakowanie") && pageStack.currentItem.title != "Pakowanie"
-                Layout.alignment: Qt.AlignRight
                 icon.source: "image://icons/edit-copy.svg,white"
                 onClicked:
                 {
