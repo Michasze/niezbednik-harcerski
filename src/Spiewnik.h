@@ -27,7 +27,7 @@ public:
   QJsonArray autorPiosenki();
   QJsonArray ikonaPiosenki();
 
-signals:
+Q_SIGNALS:
   void adresChanged();
   void contentChanged();
   void piosenkaChanged();

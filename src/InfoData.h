@@ -37,7 +37,7 @@ public:
   void setZakladka(const QString &autorCytatu);
   void setAutorIndex(const int &a);
 
-signals:
+Q_SIGNALS:
   void zakladkaChanged();
   void autorIndexChanged();
   void cytatChanged();

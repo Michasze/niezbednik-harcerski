@@ -17,7 +17,7 @@ public:
     QString paste();
     void setClipboard(const QString &quote);
 
-signals:
+Q_SIGNALS:
     void clipboardChanged();
 
 private:

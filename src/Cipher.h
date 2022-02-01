@@ -42,7 +42,7 @@ public:
     void setWariant(const int &e);
     void setKaczorWariant(const int &h);
 
-signals:
+Q_SIGNALS:
     void caesarChanged();
     void morseChanged();
     void alfaChanged();

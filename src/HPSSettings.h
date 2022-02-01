@@ -41,7 +41,7 @@ public:
     bool pakowanieIsToggled();
     void pakowanieToggle(const bool &e);
 
-signals:
+Q_SIGNALS:
     void neverShowChanged();
     void neverShow2Changed();
     void neverShow3Changed();

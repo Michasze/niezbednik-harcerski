@@ -30,7 +30,7 @@ public:
     void setBaconDec(const QString &c);
     void setAlfaDec(const QString &c);
 
-signals:
+Q_SIGNALS:
     void caesarDecChanged();
     void baconDecChanged();
     void alfaDecChanged();

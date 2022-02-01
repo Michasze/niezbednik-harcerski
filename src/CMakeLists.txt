@@ -1,5 +1,3 @@
-#set(CMAKE_EXE_LINKER_FLAGS " -static")
-
 # if (ENABLE_QML_PROFILING)
 #    add_definitions(-DQT_QML_DEBUG)
 # endif()
@@ -16,11 +14,20 @@ set(HPS_SRCS
     HPSDatabase.cpp
     )
 
+if (QT_MAJOR_VERSION EQUAL 6)
+qt6_add_resources(RESOURCES resources.qrc)
+else()
 qt5_add_resources(RESOURCES resources.qrc)
+endif()
+remove_definitions(
+    -DQT_NO_CAST_FROM_BYTEARRAY
+    -DQT_NO_CAST_FROM_ASCII
+    -DQT_NO_CAST_TO_ASCII
+)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Android")
     find_package(KF5Kirigami2 ${KF5_DEP_VERSION})
-    set(HPS_EXTRA_LIBS Qt5::AndroidExtras KF5::Kirigami2)
+    set(HPS_EXTRA_LIBS Qt${QT_MAJOR_VERSION}::AndroidExtras KF5::Kirigami2)
 endif()
 
 find_program(kpackagetool_cmd kpackagetool5)
@@ -48,7 +55,7 @@ else()
 endif()
 
 add_executable(HPS ${HPS_SRCS} ${RESOURCES})
-target_link_libraries(HPS Qt5::Core  Qt5::Qml Qt5::Quick Qt5::Svg Qt5::QuickControls2 Qt5::Multimedia Qt5::Sql ${HPS_EXTRA_LIBS})
+target_link_libraries(HPS Qt${QT_MAJOR_VERSION}::Core  Qt${QT_MAJOR_VERSION}::Qml Qt${QT_MAJOR_VERSION}::Quick Qt${QT_MAJOR_VERSION}::Svg Qt${QT_MAJOR_VERSION}::QuickControls2 Qt${QT_MAJOR_VERSION}::Multimedia Qt${QT_MAJOR_VERSION}::Sql ${HPS_EXTRA_LIBS})
 
 if (ANDROID)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)

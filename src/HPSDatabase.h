@@ -51,7 +51,7 @@ private:
   QStringList m_itemList;
   int m_currentIndex;
 
-signals:
+Q_SIGNALS:
   void listChanged();
   void colorListChanged();
   void packingChanged();

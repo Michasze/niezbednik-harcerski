@@ -57,8 +57,9 @@ QStringList InfoData::autor()
   {
     m_autor.clear();
     m_image.clear();
-foreach (const QJsonValue & v, array)
+    for (int i = 0; i < array.size(); i++)
           {
+            QJsonValue v = array.at(i);
         m_autor.append(v.toObject().value("autor").toString());
         m_image.append(v.toObject().value("zdjecie").toString());
         }
@@ -68,8 +69,9 @@ foreach (const QJsonValue & v, array)
 QStringList InfoData::naglowek()
   {
     m_naglowek.clear();
-       foreach (const QJsonValue & v, array)
+    for (int i = 0; i < array.size(); i++)
          {
+            QJsonValue v = array.at(i);
            m_naglowek.append(v.toObject().value("naglowek").toString());
          }
        return m_naglowek;

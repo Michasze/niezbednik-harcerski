@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 set(KF5_VERSION "1.0.10") # handled by release scripts
 set(KF5_DEP_VERSION "5.47.0") # handled by release scripts
-#set(CMAKE_EXE_LINKER_FLAGS " -static")
 project(HPS VERSION ${KF5_VERSION})
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -static-libgcc -static-libstdc++")
 set(REQUIRED_QT_VERSION 5.8.0)
 
 SET(CMAKE_CXX_STANDARD 11)
@@ -14,12 +12,15 @@ SET(CMAKE_CXX_STANDARD 11)
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
    message(FATAL_ERROR "aplikacja HPS wymaga kompilacji poza katalogiem zrodlowym. Utworz taki i wpisz tam 'cmake sciezka_do_kodu [opcje]'.")
 endif()
+find_package(ECM 5.90.0 NO_MODULE)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
 # Make CPack available to easy generate binary packages
 include(CPack)
 include(FeatureSummary)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg QuickControls2 Multimedia Sql )
+include(KDEInstallDirs5)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg QuickControls2 Multimedia Sql )
 
 set(CMAKE_AUTOMOC ON)
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
@@ -27,15 +28,11 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 ################# set KDE specific information #################
 
-find_package(ECM 5.47.0 NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 
 # option(ENABLE_QML_PROFILING "Enable QML profiler support" ON)
 
-# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
-include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
@@ -43,10 +40,6 @@ include(ECMQMLModules)
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Android")
     find_package(Qt5AndroidExtras ${REQUIRED_QT_VERSION} REQUIRED)
-#    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS )
-    #    find_package(OpenSSL REQUIRED)
-    #  find_package(Crypto REQUIRED)
-#    find_package(TIFF)
 endif()
 
 
