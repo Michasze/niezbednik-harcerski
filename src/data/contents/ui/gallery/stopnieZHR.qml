@@ -36,12 +36,13 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        height: root.height * 1.5
         currentIndex: tabBar.currentIndex
+        height: grid.height + 30
         clip: true
         Controls.Pane {
             Column {
-                anchors.fill:parent
+                height: grid.height
+                width: parent.width
                 spacing: 10
                 ElementListyImageNoLayout
                 {
@@ -65,7 +66,8 @@ HPSPage {
             }
         Controls.Pane {
             Grid {
-                anchors.fill: parent
+                id: grid
+                width: parent.width
                 spacing: 20
                 columns: 2
                 StopienRectangle

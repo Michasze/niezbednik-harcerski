@@ -31,8 +31,9 @@ import QtQuick.Controls 2.0 as Controls
                 Image {
                     id: krzyz
                     z: 1
-                    anchors.centerIn:parent
-                    sourceSize.width: stopien.height / 1.2
+                    anchors.centerIn: parent
+                    sourceSize.width: stopien.height / 1.3
+                    anchors.bottomMargin: etykieta.height
                     source: "image://icons/krzyz.svg,white"
                     fillMode: Image.PreserveAspectFit
                     Image {
@@ -44,17 +45,17 @@ import QtQuick.Controls 2.0 as Controls
                 }
                 }
                 Controls.Label {
+                    id: etykieta
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignTop
                     anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.bottom: parent.bottom
                     anchors.top: krzyz.bottom
                     wrapMode: Text.Wrap
                     fontSizeMode: Text.VerticalFit
-                    minimumPointSize: 10
                     font.pointSize: invisibleSlider.value - 2
-                    height: stopien.height - krzyz.height - 10
-                    anchors.bottomMargin: 20
-                    anchors.rightMargin: 10
+//                    height: stopien.height - krzyz.height - 10
+                    anchors.bottomMargin: 10
                     text: stopien.header
                 }
             }
