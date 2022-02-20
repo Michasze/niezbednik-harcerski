@@ -35,21 +35,20 @@ HPSPage
                     onClicked: pageStack.push(Qt.resolvedUrl("wiedzminLARP/wprowadzenie.qml"))
                 }
             }
-            /* ElementListyNoLayout { */
-            /*     header: "Aplikacje pogodowe" */
-            /*     MouseArea { */
-            /*         anchors.fill: parent */
-            /*         onClicked: pageStack.push(Qt.resolvedUrl("pogoda.qml")) */
-            /*     } */
-            /* } */
-            /* ElementListyNoLayout { */
-            /*     header: "Inne" */
-            /*     MouseArea { */
-            /*         anchors.fill: parent */
-            /*         onClicked: pageStack.push(Qt.resolvedUrl("inne.qml")) */
-            /*     } */
-            /* } */
-
+            ElementListyNoLayout {
+                header: "Demony (postacie)"
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl("wiedzminLARP/demony.qml"))
+                }
+            }
+            ElementListyNoLayout {
+                header: "Zasady"
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl("wiedzminLARP/zasady.qml"))
+                }
+            }
         }
     }
 }

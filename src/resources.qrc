@@ -106,6 +106,9 @@
         <file alias="contents/ui/gallery/ekosystem.qml">./data/contents/ui/gallery/ekosystem.qml</file>
         <file alias="contents/ui/gallery/wiedzmin.qml">./data/contents/ui/gallery/wiedzmin.qml</file>
         <file alias="contents/ui/gallery/wiedzminLARP/wprowadzenie.qml">./data/contents/ui/gallery/wiedzminLARP/wprowadzenie.qml</file>
+        <file alias="contents/ui/gallery/wiedzminLARP/demony.qml">./data/contents/ui/gallery/wiedzminLARP/demony.qml</file>
+        <file alias="contents/ui/gallery/wiedzminLARP/Postac.qml">./data/contents/ui/gallery/wiedzminLARP/Postac.qml</file>
+        <file alias="contents/ui/gallery/wiedzminLARP/zasady.qml">./data/contents/ui/gallery/wiedzminLARP/zasady.qml</file>
         <file alias="contents/ui/gallery/podroze.qml">./data/contents/ui/gallery/podroze.qml</file>
         <file alias="contents/ui/gallery/geo.qml">./data/contents/ui/gallery/geo.qml</file>
         <file alias="contents/ui/gallery/HZNP.qml">./data/contents/ui/gallery/HZNP.qml</file>
