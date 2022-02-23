@@ -18,24 +18,14 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Przyrzeczenie Royal Rangers"
-
-
-    ColumnLayout {
-        width: page.width
-        ElementListyNoImage
-        {
-            color: "brown"
-            header: "Z Bożą pomocą uczynię wszystko, aby służyć Bogu, Jego Kościołowi i bliźnim przestrzegając prawa Royal Rangers i wprowadzając w życie Złotą Zasadę."
-        }
+    ElementListyNoLayout
+    {
+        color: "brown"
+        isPromise: true
+        header: "Z Bożą pomocą uczynię wszystko, aby służyć Bogu, Jego Kościołowi i bliźnim przestrzegając prawa Royal Rangers i wprowadzając w życie Złotą Zasadę."
     }
- 
-    
 }

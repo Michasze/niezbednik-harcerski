@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,50 +18,35 @@
  */
 
 import QtQuick 2.6
-import QtQuick.Layouts 1.2
-
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
     title: qsTr("Roty Przyrzeczenia")
-
-ColumnLayout
-{
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/RR.svg"
-        header: "Royal Rangers"
-        opis: ""
-        adres: "przyrzeczenieRR.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/zhp.svg"
-        header: "Związek Harcerstwa Polskiego"
-        opis: ""
-        adres: "przyrzeczenieZHP.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/zhr.svg"
-        header: "Związek Harcerstwa Rzeczypospolitej"
-        opis: ""
-        adres: "przyrzeczenieZHP.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/fse.svg"
-        header: "SHK „Zawisza”"
-        opis: ""
-        adres: "przyrzeczenieFSE.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/rodlo.svg"
-        header: "Organizacja Harcerska „Rodło”"
-        opis: ""
-        adres: "przyrzeczenieOH.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/tarcza.svg"
-        header: "Skauci Króla"
-        opis: ""
-        adres: "przyrzeczenieSK.qml"
-    }
+    Controls.Pane
+    {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ListModel {
+                id: przyrzeczenia
+                ListElement { icon: "qrc:/contents/ui/img/RR.svg"; title: "Royal Rangers"; address: "przyrzeczenieRR.qml" }
+                ListElement { icon: "qrc:/contents/ui/img/zhp.svg"; title: "Związek Harcerstwa Polskiego"; address: "przyrzeczenieZHP.qml" }
+                ListElement { icon: "qrc:/contents/ui/img/zhr.svg"; title: "Związek Harcerstwa Rzeczypospolitej"; address: "przyrzeczenieZHP.qml" }
+                ListElement { icon: "qrc:/contents/ui/img/fse.svg"; title: "SHK „Zawisza”"; address: "przyrzeczenieFSE.qml" }
+                ListElement { icon: "qrc:/contents/ui/img/rodlo.svg"; title: "Organizacja Harcerska „Rodło”"; address: "przyrzeczenieOH.qml" }
+                ListElement { icon: "qrc:/contents/ui/img/tarcza.svg"; title: "Skauci Króla"; address: "przyrzeczenieSK.qml" }
+            }
+            Repeater {
+                model: przyrzeczenia
+                delegate: KartaStronaNoLayout {
+                    ikona: icon
+                    header: title
+                    opis: ""
+                    isVector: true
+                    adres: address
+                }
+            }
         }
     }
+}

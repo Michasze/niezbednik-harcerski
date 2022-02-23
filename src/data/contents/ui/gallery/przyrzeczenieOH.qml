@@ -19,53 +19,30 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Przyrzeczenie OH „Rodło”"
-
-    actions {
-        main: Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
-    }
-     }
-
-    ColumnLayout {
-        width: page.width
-        spacing: 0
-ElementListyNoImage
-        {
-            color: "black"
-            textSize: tresc.textSize + 2
-            header: "Przyrzeczenie Harcerskie"
+    header: Controls.TabBar {
+        id: tabBar
+        currentIndex: swipeView.currentIndex
+        Controls.TabButton {
+            text: "Harcerze"
         }
-ElementListyNoImage
-        {
-            id: tresc
-            color: "brown"
-            header: "Mam szczerą wolę całym życiem pełnić służbę Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
-        }
-ElementListyNoImage
-        {
-            color: "black"
-            textSize: tresc.textSize + 2
-            header: "Obietnica Zuchowa"
-        }
-ElementListyNoImage
-        {
-            color: "brown"
-            header: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa zucha."
+        Controls.TabButton {
+            text: "Zuchy"
         }
     }
-
-
+    Controls.SwipeView {
+        id: swipeView
+        height: root.height
+        currentIndex: tabBar.currentIndex
+        clip: true
+        PromisePane {
+            tresc: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
+        }
+        PromisePane {
+            tresc: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
+        }
+    }
 }

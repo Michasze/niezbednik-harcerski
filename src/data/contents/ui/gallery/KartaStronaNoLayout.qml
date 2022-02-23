@@ -51,7 +51,6 @@ Rectangle {
         source: isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius
     }
     Item {
-        id: topLabel
         height: parent.height
         width: parent.width - img.width - 20
         anchors.right: parent.right
@@ -61,11 +60,11 @@ Rectangle {
             font.pointSize: invisibleSlider.value
             text: kartaRectangle.header
             anchors.bottom: bar.top
-            anchors.bottomMargin: 10
+            anchors.bottomMargin: 5
             anchors.right: parent.right
             anchors.rightMargin: 10
-//            anchors.leftMargin: 10
-            width: parent.width - 10
+            anchors.leftMargin: 10
+            width: parent.width - 20
         }
         HPSSeparator {
             id: bar

@@ -25,6 +25,7 @@
         <file alias="contents/ui/gallery/HPSImage.qml">./data/contents/ui/gallery/HPSImage.qml</file>
         <file alias="contents/ui/gallery/CytatAutor.qml">./data/contents/ui/gallery/CytatAutor.qml</file>
         <file alias="contents/ui/gallery/Cytat.qml">./data/contents/ui/gallery/Cytat.qml</file>
+        <file alias="contents/ui/gallery/PromisePane.qml">./data/contents/ui/gallery/PromisePane.qml</file>
         <file alias="contents/ui/img/skaut.jpg">./data/contents/ui/img/skaut.jpg</file>
         <file alias="contents/ui/img/oHZNP.jpg">./data/contents/ui/img/oHZNP.jpg</file>
         <file alias="contents/ui/img/Andrzej_Malkowski.jpg">./data/contents/ui/img/Andrzej_Malkowski.jpg</file>
@@ -156,7 +157,6 @@
         <file alias="contents/ui/gallery/histPrawa.qml">./data/contents/ui/gallery/histPrawa.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieRR.qml">./data/contents/ui/gallery/przyrzeczenieRR.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieSzeregi.qml">./data/contents/ui/gallery/przyrzeczenieSzeregi.qml</file>
-        <file alias="contents/ui/gallery/przyrzeczeniaPRL.qml">./data/contents/ui/gallery/przyrzeczeniaPRL.qml</file>
         <file alias="contents/ui/gallery/przyrzeczeniaZHP.qml">./data/contents/ui/gallery/przyrzeczeniaZHP.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieZHP.qml">./data/contents/ui/gallery/przyrzeczenieZHP.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieFSE.qml">./data/contents/ui/gallery/przyrzeczenieFSE.qml</file>

@@ -26,6 +26,7 @@ ElementListyNoLayout
         {
             color: "brown"
             format: Text.PlainText
+            isPromise: true
             header: "Wyznaję, że Jezus jest moim Panem i Zbawicielem.
 Z Jego pomocą uczynię wszystko,
 aby służyć Bogu, Kościołowi oraz bliźnim

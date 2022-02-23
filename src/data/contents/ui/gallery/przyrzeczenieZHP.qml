@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,11 +19,9 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Przyrzeczenie ZHP/ZHR"
     header: Controls.TabBar {
         id: tabBar
@@ -37,26 +35,14 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        Layout.fillHeight: true
-        Layout.fillWidth: true
         height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-        ColumnLayout {
-            ElementListyNoImage
-            {
-                Layout.alignment: Qt.AlignTop
-                color: "brown"
-                header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
-            }
+        PromisePane {
+            tresc: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
         }
-        ColumnLayout {
-            ElementListyNoImage
-            {
-                Layout.alignment: Qt.AlignTop
-                color: "brown"
-                header: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
-            }
+        PromisePane {
+            tresc: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
         }
-}
+    }
 }

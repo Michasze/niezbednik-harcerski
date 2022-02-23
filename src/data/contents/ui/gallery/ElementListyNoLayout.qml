@@ -26,14 +26,15 @@ Rectangle {
     property string header: "Zaszyfrowany tekst..."
     property int align: Text.AlignVCenter
     property int alignH: Text.AlignHCenter
-    property int textSize: invisibleSlider.value
+    property int textSize: isPromise ? invisibleSlider.value + 5 : invisibleSlider.value
     property int format: Text.StyledText
     property int wysokosc: naglowek.contentHeight + 30
     property string kolor: "#303030"
+    property bool isPromise: false
     id: cardRectangle
     radius: 10
     color: kolor
-    width: page.width - 50
+    width: parent.width
     height: wysokosc
     border.color: "transparent"
     Controls.Label {

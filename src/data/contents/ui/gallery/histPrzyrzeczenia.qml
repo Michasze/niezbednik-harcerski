@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,37 +18,34 @@
  */
 
 import QtQuick 2.6
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
 
 HPSPage {
     id: page
     title: qsTr("Dawne roty przyrzeczenia")
-ColumnLayout
-{
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/tur.svg"
-        header: "Czerwone Harcerstwo"
-        opis: ""
-        adres: "przyrzeczenieTur.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/zhp.svg"
-        header: "Związek Harcerstwa Polskiego"
-        opis: ""
-        adres: "przyrzeczeniaZHP.qml"
-    }
-KartaStrona {
-        ikona: "image://images/skaut.jpg"
-        header: "Ślubowanie Skautowe"
-        opis: ""
-        adres: "przyrzeczenieSkaut.qml"
-    }
-KartaStrona {
-        ikona: "image://images/brownsea.jpg"
-        header: "Przysięga skautowa"
-        opis: ""
-        adres: "przyrzeczenieSkautEng.qml"
-    }
+    Controls.Pane
+    {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ListModel {
+                id: przyrzeczenia
+                ListElement { icon: "qrc:/contents/ui/img/tur.svg"; title: "Czerwone Harcerstwo"; address: "przyrzeczenieTur.qml"; vector: true}
+                ListElement { icon: "qrc:/contents/ui/img/zhp.svg"; title: "Związek Harcerstwa Polskiego"; address: "przyrzeczeniaZHP.qml"; vector: true }
+                ListElement { icon: "image://images/skaut.jpg"; title: "Ślubowanie Skautowe"; address: "przyrzeczenieSkaut.qml"; vector: false }
+                ListElement { icon: "image://images/brownsea.jpg"; title: "Przysięga skautowa"; address: "przyrzeczenieSkautEng.qml"; vector: false }
+            }
+            Repeater {
+                model: przyrzeczenia
+                delegate: KartaStronaNoLayout {
+                    ikona: icon
+                    header: title
+                    opis: ""
+                    adres: address
+                    isVector: vector
+                }
+            }
         }
     }
+}

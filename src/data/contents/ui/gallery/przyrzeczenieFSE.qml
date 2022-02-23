@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,11 +19,9 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Przyrzeczenie SHK „Zawisza”"
     header: Controls.TabBar {
         id: tabBar
@@ -37,31 +35,19 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        Layout.fillHeight: true
-        Layout.fillWidth: true
         height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-        ColumnLayout {
-            ElementListyNoImage
-                {
-                    Layout.alignment: Qt.AlignTop
-                    color: "brown"
-                    header: "Na mój honor, z Łaską Bożą, przyrzekam całym życiem służyć Bogu, Kościołowi, mojej Ojczyźnie i Europie chrześcijańskiej, nieść w każdej potrzebie pomoc bliźnim i przestrzegać Prawa Harcerskiego."
-                }
+        PromisePane {
+            tresc: "Na mój honor, z Łaską Bożą, przyrzekam całym życiem służyć Bogu, Kościołowi, mojej Ojczyźnie i Europie chrześcijańskiej, nieść w każdej potrzebie pomoc bliźnim i przestrzegać Prawa Harcerskiego."
         }
-        ColumnLayout {
-            ElementListyNoImage
-                {
-                    Layout.alignment: Qt.AlignTop
-                    color: "brown"
-                    header: "Obiecuję - ze wszystkich sił:<br>
+        PromisePane {
+            tresc: "Obiecuję - ze wszystkich sił:<br>
 starać się być wiernym Bogu,<br>
 moim rodzicom,<br>
 mojej Ojczyźnie,<br>
 Prawu Gromady i Wilczka<br>
 oraz każdego dnia czynić komuś dobry uczynek."
-                }
         }
     }
 }
