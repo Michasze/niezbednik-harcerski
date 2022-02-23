@@ -26,6 +26,8 @@ Rectangle {
     property url ikona: ""
     property url odnosnik: ""
     property bool isUrl: true
+    property bool isRank: false
+    property double divider: 1
     id: cardRectangle
     radius: 10
     width: parent.width
@@ -38,13 +40,21 @@ Rectangle {
     }
     Image {
         id: img
+        z: 1
         anchors.left: parent.left
         anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
         sourceSize.width: cardRectangle.height - 20
         width: 100
         fillMode: Image.PreserveAspectFit
-        source: cardRectangle.ikona
+        source: isRank ? "image://icons/krzyz.svg,white" : cardRectangle.ikona
+        Image {
+            z:0
+            visible: isRank
+            anchors.centerIn: parent
+            sourceSize.width: parent.height / cardRectangle.divider
+            source: isRank ? cardRectangle.ikona : "image://icons/blank.svg,transparent"
+        }
     }
     Item
     {

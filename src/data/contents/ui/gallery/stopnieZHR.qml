@@ -37,11 +37,11 @@ HPSPage {
     Controls.SwipeView {
         id: swipeView
         currentIndex: tabBar.currentIndex
-        height: grid.height + 30
+        height: column.height + 30
         clip: true
         Controls.Pane {
             Column {
-                height: grid.height
+                height: column.height
                 width: parent.width
                 spacing: 10
                 ElementListyImageNoLayout
@@ -65,34 +65,40 @@ HPSPage {
             }
             }
         Controls.Pane {
-            Grid {
-                id: grid
+            Column {
+                id: column
                 width: parent.width
-                spacing: 20
-                columns: 2
-                StopienRectangle
+                spacing: 10
+                ElementListyImageNoLayout
                 {
+                    isRank: true
                     ikona: "image://icons/blank.svg,transparent"
                     header: "Młodzik/\n Ochotniczka"
                 }
-                StopienRectangle
+                ElementListyImageNoLayout
                 {
+                    isRank: true
+                    divider: 2.4
                     ikona: "image://icons/krzyz_lilijka_srebrna.svg"
                     header: "Wywiadowca/\n Tropicielka"
                 }
-                StopienRectangle
+                ElementListyImageNoLayout
                 {
+                    isRank: true
+                    divider: 2.4
                     ikona: "image://icons/krzyz_lilijka_zlota.svg"
                     header: "Ćwik/\n Samarytanka"
                 }
-                StopienRectangle
+                ElementListyImageNoLayout
                 {
+                    isRank: true
                     ikona: "image://icons/krzyz_lilijka_okrag.svg"
                     divider: 2.1
                     header: "Harcerz orli/\n Wędrowniczka"
                 }
-                StopienRectangle
+                ElementListyImageNoLayout
                 {
+                    isRank: true
                     ikona: "image://icons/krzyz_wieniec.svg"
                     divider: 0.90
                     header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
