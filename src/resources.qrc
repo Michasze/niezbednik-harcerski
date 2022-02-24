@@ -45,6 +45,7 @@
         <file alias="contents/ui/img/slowacki.jpg">./data/contents/ui/img/slowacki.jpg</file>
         <file alias="contents/ui/img/grodecka.jpg">./data/contents/ui/img/grodecka.jpg</file>
         <file alias="contents/ui/img/kamien.jpg">./data/contents/ui/img/kamien.jpg</file>
+        <file alias="contents/ui/img/ktoPrzetlumaczyl.jpg">./data/contents/ui/img/ktoPrzetlumaczyl.jpg</file>
         <file alias="contents/ui/img/oHZNP_Mundury.jpg">./data/contents/ui/img/oHZNP_Mundury.jpg</file>
         <file alias="contents/ui/img/oHZNP_kursy.jpg">./data/contents/ui/img/oHZNP_kursy.jpg</file>
         <file alias="contents/ui/img/harcerz.jpg">./data/contents/ui/img/harcerz.jpg</file>
@@ -120,6 +121,7 @@
         <file alias="contents/ui/gallery/msciciel2.qml">./data/contents/ui/gallery/msciciel2.qml</file>
         <file alias="contents/ui/gallery/zabojstwo_mroza.qml">./data/contents/ui/gallery/zabojstwo_mroza.qml</file>
         <file alias="contents/ui/gallery/kamien.qml">./data/contents/ui/gallery/kamien.qml</file>
+        <file alias="contents/ui/gallery/ktoPrzetlumaczyl.qml">./data/contents/ui/gallery/ktoPrzetlumaczyl.qml</file>
         <file alias="contents/ui/gallery/listaZnanych.qml">./data/contents/ui/gallery/listaZnanych.qml</file>
         <file alias="contents/ui/gallery/wyjatkowe.qml">./data/contents/ui/gallery/wyjatkowe.qml</file>
         <file alias="contents/ui/gallery/prawie.qml">./data/contents/ui/gallery/prawie.qml</file>
