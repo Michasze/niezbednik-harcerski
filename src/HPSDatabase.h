@@ -19,7 +19,7 @@ class HPSDatabase : public QObject
   Q_PROPERTY(int index READ index NOTIFY indexChanged)
 
 public:
-  HPSDatabase(QObject *parent=0);
+  HPSDatabase(QObject *parent = nullptr);
   Q_INVOKABLE  void addList(const QString &list);
   Q_INVOKABLE void addCategory(const QString &category, const QString &color);
   Q_INVOKABLE void deleteCategory(const QString &category, const QString &color);

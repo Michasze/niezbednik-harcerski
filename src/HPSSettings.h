@@ -20,7 +20,7 @@ class HPSSettings : public QObject
     Q_PROPERTY(QString pakowanieId READ pakowanieId WRITE setPakowanieId NOTIFY pakowanieIdChanged)
     Q_PROPERTY(bool pakowanieIsToggled READ pakowanieIsToggled WRITE pakowanieToggle NOTIFY pakowanieChanged)
 public:
-    HPSSettings(QObject *parent=0);
+    HPSSettings(QObject *parent = nullptr);
 
     bool neverShowIsToggled();
     void neverToggle(const bool &a);

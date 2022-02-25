@@ -12,7 +12,7 @@ class Clipboard : public QObject
 
     Q_PROPERTY(QString paste READ paste WRITE setClipboard NOTIFY clipboardChanged)
 public:
-    Clipboard(QObject *parent=0);
+    Clipboard(QObject *parent = nullptr);
     QClipboard *clipboard = QApplication::clipboard();
     QString paste();
     void setClipboard(const QString &quote);

@@ -16,7 +16,7 @@ class Decipher : public QObject
     Q_PROPERTY(QString alfaDec READ alfaDec WRITE setAlfaDec NOTIFY alfaDecChanged)
 
 public:
-    Decipher(QObject *parent=0);
+    Decipher(QObject *parent = nullptr);
 
     QString caesarDec();
     QString baconDec();

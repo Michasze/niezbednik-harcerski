@@ -22,7 +22,7 @@ class InfoData : public QObject
   Q_PROPERTY(QString losowyAutor READ losowyAutor NOTIFY losowyAutorChanged)
 
 public:
-  InfoData(QObject *parent=0);
+  InfoData(QObject *parent = nullptr);
   QJsonDocument data;
   int autorIndex();
   QString autorString();

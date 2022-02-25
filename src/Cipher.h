@@ -20,7 +20,7 @@ class Cipher : public QObject
     Q_PROPERTY(QString morse READ morse WRITE setMorse NOTIFY morseChanged)
     Q_PROPERTY(QString alfa READ alfa WRITE setAlfa NOTIFY alfaChanged)
 public:
-    Cipher(QObject *parent=0);
+    Cipher(QObject *parent =  nullptr);
     
     QString caesar();
     QString bacon();

@@ -18,7 +18,7 @@ class Spiewnik : public QObject
   Q_PROPERTY(QJsonArray ikonaPiosenki READ ikonaPiosenki NOTIFY ikonaChanged)
 
 public:
-  Spiewnik(QObject *parent=0);
+  Spiewnik(QObject *parent = nullptr);
   void setAdres(const QString &f);
   QString adres();
   QJsonArray content();
