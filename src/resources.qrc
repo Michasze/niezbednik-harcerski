@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file alias="contents/ui/MainPage.qml">./data/contents/ui/MainPage.qml</file>
         <file alias="contents/ui/KartaMain.qml">./data/contents/ui/KartaMain.qml</file>
-        <file alias="contents/ui/gallery/Karta.qml">./data/contents/ui/gallery/Karta.qml</file>
         <file alias="contents/ui/gallery/KartaStrona.qml">./data/contents/ui/gallery/KartaStrona.qml</file>
         <file alias="contents/ui/gallery/KartaStronaNoLayout.qml">./data/contents/ui/gallery/KartaStronaNoLayout.qml</file>
         <file alias="contents/ui/gallery/KartaStronaNoImage.qml">./data/contents/ui/gallery/KartaStronaNoImage.qml</file>
