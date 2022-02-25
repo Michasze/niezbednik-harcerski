@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -296,7 +296,7 @@ może ulec zmianie."
                 id: powrotButton
                 anchors.right: parent.right
                 anchors.rightMargin: 10
-                visible: pageStack.layers.depth != 1 || ((!Kirigami.Settings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1)) ? true : false
+                visible: pageStack.layers.depth != 1 || ((!hpsSettings.isMobile ) && ((pageStack.currentItem.title != "Niezbędnik Harcerski") || pageStack.layers.depth != 1)) ? true : false
                 icon.source: "image://icons/go-previous.svg,white"
                 action: powrotAction
             }

@@ -96,3 +96,24 @@ bool HPSSettings::pakowanieIsToggled()
     qInfo() << "get " << m_settings.value(m_pakowanieId);
     return m_settings.value(m_pakowanieId).toBool();
   }
+void HPSSettings::setIsMobile(const bool &f)
+  {
+    m_mobile = f;
+    isMobileChanged();
+  }
+bool HPSSettings::isMobile()
+  {
+#if defined(Q_OS_ANDROID) || defined(Q_OS_IOS) || defined(UBUNTU_TOUCH)
+    m_mobile = true;
+#else
+    // Mostly for debug purposes and for platforms which are always mobile,
+    // such as Plasma Mobile
+    if (qEnvironmentVariableIsSet("QT_QUICK_CONTROLS_MOBILE")) {
+        m_mobile = QByteArrayList{"1", "true"}.contains(qgetenv("QT_QUICK_CONTROLS_MOBILE"));
+    } else {
+        m_mobile = false;
+    }
+    qInfo() << "is mobile: " << m_mobile;
+#endif
+    return m_mobile;
+  }

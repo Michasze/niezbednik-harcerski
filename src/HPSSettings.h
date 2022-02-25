@@ -19,6 +19,7 @@ class HPSSettings : public QObject
     Q_PROPERTY(int spiewnikTextSize READ spiewnikTextSize WRITE setSpiewnikTextSize NOTIFY spiewnikTextSizeChanged)
     Q_PROPERTY(QString pakowanieId READ pakowanieId WRITE setPakowanieId NOTIFY pakowanieIdChanged)
     Q_PROPERTY(bool pakowanieIsToggled READ pakowanieIsToggled WRITE pakowanieToggle NOTIFY pakowanieChanged)
+    Q_PROPERTY(bool isMobile READ isMobile WRITE setIsMobile NOTIFY isMobileChanged)
 public:
     HPSSettings(QObject *parent = nullptr);
 
@@ -40,6 +41,8 @@ public:
     void setPakowanieId(const QString &d);
     bool pakowanieIsToggled();
     void pakowanieToggle(const bool &e);
+    bool isMobile();
+    void setIsMobile(const bool &f);
 
 Q_SIGNALS:
     void neverShowChanged();
@@ -51,9 +54,11 @@ Q_SIGNALS:
     void spiewnikTextSizeChanged();
     void pakowanieIdChanged();
     void pakowanieChanged();
+    void isMobileChanged();
 
 private:
     QSettings m_settings;
     QString m_pakowanieId;
+    bool m_mobile;
 };
 #endif // __SETTINGS_H_
