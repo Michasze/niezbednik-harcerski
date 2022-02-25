@@ -35,7 +35,7 @@ public:
       adres = id;
     }
   int width = 400;
-  QSvgRenderer render(QString("://contents/ui/img/" + adres));
+  QSvgRenderer render(QString(u"://contents/ui/img/" + adres));
   render.setAspectRatioMode(Qt::KeepAspectRatio);
   QSize imgSize = render.defaultSize();
   float ratio = (float) imgSize.width() / (float) imgSize.height();

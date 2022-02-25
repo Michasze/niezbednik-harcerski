@@ -20,9 +20,7 @@ else()
 qt5_add_resources(RESOURCES resources.qrc)
 endif()
 remove_definitions(
-    -DQT_NO_CAST_FROM_BYTEARRAY
     -DQT_NO_CAST_FROM_ASCII
-    -DQT_NO_CAST_TO_ASCII
 )
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Android")

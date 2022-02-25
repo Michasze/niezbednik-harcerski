@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
 
 set(KF5_VERSION "1.0.10") # handled by release scripts
-set(KF5_DEP_VERSION "5.47.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.80.0") # handled by release scripts
 project(HPS VERSION ${KF5_VERSION})
-set(REQUIRED_QT_VERSION 5.8.0)
+set(REQUIRED_QT_VERSION 5.15.0)
 
-SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_STANDARD 17)
 
 ################# Disallow in-source build #################
 
@@ -21,6 +21,7 @@ include(FeatureSummary)
 
 include(KDEInstallDirs5)
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg QuickControls2 Multimedia Sql )
+find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2)
 
 set(CMAKE_AUTOMOC ON)
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
@@ -36,7 +37,7 @@ set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Mod
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
-include(ECMQMLModules)
+include(ECMFindQmlModule)
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Android")
     find_package(Qt5AndroidExtras ${REQUIRED_QT_VERSION} REQUIRED)

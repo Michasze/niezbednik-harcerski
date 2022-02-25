@@ -34,7 +34,7 @@ public:
   else {
     adres = id;
   }
-  QImageReader reader(QString("://contents/ui/img/") + adres, "jpg");
+  QImageReader reader(QStringLiteral("://contents/ui/img/") + adres, "jpg");
   QSize imgSize = reader.size();
   float ratio = (float) imgSize.width() / (float) imgSize.height();
   int fixedHeight = (float) requestedSize.width() / ratio;
