@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,33 +17,37 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 
 
 HPSPage {
     id: page
     title: qsTr("Gawędy")
-    ColumnLayout {
-        KartaStronaNoImage {
-            header: "Opowieść o grzybiarzu"
-            opis: "autor: Jacek Wątroba"
-            adres: "grzybiarz.qml"
-        }
-        KartaStronaNoImage {
-            header: "Powstaniec"
-            opis: "autorzy: Ćwikowie na próbie 2021 Chomętowo"
-            adres: "powstaniec.qml"
-        }
-        KartaStronaNoImage {
-            header: "Zwyczaje przy ognisku"
-            opis: "autor: Wojciech Jakubczyk"
-            adres: "zwyczaje.qml"
-        }
-        KartaStronaNoImage {
-            header: "Iskra braterstwa"
-            opis: "autor: Alicja Kowalska"
-            adres: "iskra.qml"
-        }
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            KartaStronaNoLayout {
+                header: "Opowieść o grzybiarzu"
+                opis: "autor: Jacek Wątroba"
+                adres: "grzybiarz.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Powstaniec"
+                opis: "autorzy: Ćwikowie na próbie 2021 Chomętowo"
+                adres: "powstaniec.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Zwyczaje przy ognisku"
+                opis: "autor: Wojciech Jakubczyk"
+                adres: "zwyczaje.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Iskra braterstwa"
+                opis: "autor: Alicja Kowalska"
+                adres: "iskra.qml"
+            }
         }
     }
+}

@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,43 +17,32 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 import ".."
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Szyfr ułamkowy"
-
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Trudność: *"
+            }
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Szyfr składa się z 24 liter podzielonych na 8 grup po trzy sztuki każda. Cały szyfr opiera się na ułamkach – licznik obrazuje numer litery, a mianownik grupę, w której należy jej szukać."
+            }
+            HPSIconNoLayout
+            {
+                source: "image://icons/szyfry/ulamkowy.svg,white"
+                sourceSize.width: isHorizontal ? page.width / 3 : page.width
+            }
         }
-    }
-
-    ColumnLayout {
-        width: page.width
-                       ElementListyNoImage
-        {
-            color: "brown"
-            header: "Trudność: *"
-        }
-                       ElementListyNoImage
-        {
-            color: "brown"
-            header: "Szyfr składa się z 24 liter podzielonych na 8 grup po trzy sztuki każda. Cały szyfr opiera się na ułamkach – licznik obrazuje numer litery, a mianownik grupę, w której należy jej szukać."
-        }
-    HPSIcon
- {
-     source: "image://icons/szyfry/ulamkowy.svg,white"
- }
     }
 }

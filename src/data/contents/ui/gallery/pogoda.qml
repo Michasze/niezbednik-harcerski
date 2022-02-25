@@ -16,71 +16,56 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 
-HPSPage
-
-{
+HPSPage {
+    id: page
     title: "Aplikacje pogodowe"
-        actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót do listy")
-        visible: false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+B"
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout
+            {
+                color: "Black"
+                header: "<h1>Lightning</h1>"
+            }
+            ElementListyNoLayout
+            {
+                color: "green"
+                header: "Pozwala zobaczyć w których miejscach jest burza i wyładowania"
+            }
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Reklamy"
+            }
+            ElementListyNoLayout
+            {
+                color: "Black"
+                header: "<h1>Windy</h1>"
+            }
+            ElementListyNoLayout
+            {
+                color: "green"
+                header: "Pozwala obserwować kierunki wiatru, siłę wiatru temperaturę czy ciśnienie"
+            }
+            ElementListyNoLayout
+            {
+                color: "Black"
+	            header: "<h1>Meteo</h1>"
+            }
+            ElementListyNoLayout
+            {
+                color: "green"
+                header: "Jedna z najlepszych aplikacji pogodowych"
+            }
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Dość skomplikowana wizualnie dla młodszych harcerzy"
+            }
+        }
     }
-        Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-home.svg"
-        text: qsTr("Powrót")
-        onTriggered: pageStack.pop(-2);
-        shortcut: "Alt+Q"
-    }
-        ColumnLayout {
-        width: pageFoto.width
-        spacing: 0
-
-                ElementListyNoImage
-        {
-            color: "Black"
-            header: "<h1>Lightning</h1>"
-        }
-                ElementListyNoImage
-        {
-            color: "green"
-            header: "Pozwala zobaczyć w których miejscach jest burza i wyładowania"
-        }
-                ElementListyNoImage
-        {
-            color: "brown"
-            header: "Reklamy"
-        }
-                ElementListyNoImage
-        {
-            color: "Black"
-            header: "<h1>Windy</h1>"
-        }
-                ElementListyNoImage
-        {
-            color: "green"
-            header: "Pozwala obserwować kierunki wiatru, siłę wiatru temperaturę czy ciśnienie"
-        }
-                ElementListyNoImage
-        {
-            color: "Black"
-	    header: "<h1>Meteo</h1>"
-        }
-                ElementListyNoImage
-        {
-            color: "green"
-            header: "Jedna z najlepszych aplikacji pogodowych"
-        }
-                ElementListyNoImage
-        {
-            color: "brown"
-            header: "Dość skomplikowana wizualnie dla młodszych harcerzy"
-        }
-        }
 }

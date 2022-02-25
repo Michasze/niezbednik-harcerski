@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,43 +17,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: "Zlot w Spale"
-
-    actions.main: Kirigami.Action {
-        iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: !Kirigami.Settings.isMobile ? true : false
-        onTriggered: pageStack.pop(-1);
-        shortcut: "Alt+Q"
-    }
-
-    
-    ColumnLayout {
-        width: page.width
-        spacing: Units.smallSpacing
-        Image {
-         source: "qrc:/contents/ui/img/spala.svg"   
-          Layout.fillWidth: true
-         Layout.maximumHeight: 400
-
-         fillMode: Image.PreserveAspectFit
-        }
-            ElementListyNoImage
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            Image {
+                source: "qrc:/contents/ui/img/spala.svg"
+                fillMode: Image.PreserveAspectFit
+                sourceSize.width: isHorizontal ? page.height / 3 : page.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            ElementListyNoLayout
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+                alignH: Text.AlignJustify
                 color: "Black"
-            header: "Jubileuszowy Zlot ZHP w Spale- zorganizowany przez Związek Harcerstwa Polskiego w jego 25 rocznicę powstania w dniach 10-25 lipca 1935.
+                width: parent.width
+                header: "Jubileuszowy Zlot ZHP w Spale- zorganizowany przez Związek Harcerstwa Polskiego w jego 25 rocznicę powstania w dniach 10-25 lipca 1935.
 
 Spała jest to miejscowość położona w województwie Łódzkim. Znajduje się w Puszczy Pilickiej, niegdyś zwanej Lasami Spalskimi. W miejscowości znajdowała się rezydencja Prezydenta RP.
 
@@ -67,13 +52,12 @@ Do obozu który miał powierzchnię 11 kilometrów kwadratowych i dzielił się 
 
 Harcerze mieli możliwość zdeponowania swoich pieniędzy w Zlotowej Ekspozyturze PKO, aby w ten sposób zabezpieczyć się przed ich utratą."
             }
-        ElementListyNoImage
-        {
-            Layout.fillWidth: true
-            alignH: Text.AlignHCenter
-            header:"Juliusz Idzikowski"
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                width: parent.width
+                header:"Juliusz Idzikowski"
+            }
         }
     }
- 
-    
 }

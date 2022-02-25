@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -16,33 +16,33 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 import Data 1.0
 
-HPSPage
-
-{
+HPSPage {
     id: page
     title: "Pakowanie na biwak"
     HPSSettings
     {
         id: hpsSettings
     }
-        ColumnLayout {
-                ElementListyNoImage
-        {
-            color: "green"
-            header: "<b>Biwak trzydniowy w budynku. Latem lub wiosną.<br><br>
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout
+            {
+                color: "green"
+                header: "<b>Biwak trzydniowy w budynku. Latem lub wiosną.<br><br>
 Lista potrzebnych rzeczy:</b>"
-        }
-                ElementListyNoImage
-        {
-            color: "Brown"
-            align: 1
-            header: "Jedzenie:"
-        }
+            }
+            ElementListyNoLayout
+            {
+                color: "Brown"
+                align: 1
+                header: "Jedzenie:"
+            }
 
             Repeater
             {
@@ -52,12 +52,12 @@ Lista potrzebnych rzeczy:</b>"
                         "sztućce"]
                 delegate: przedmiotComponent
             }
-                ElementListyNoImage
-        {
-            color: "royalblue"
-            align: 1
-            header: "Spanie:"
-        }
+            ElementListyNoLayout
+            {
+                color: "royalblue"
+                align: 1
+                header: "Spanie:"
+            }
 
             Repeater
             {
@@ -67,13 +67,13 @@ Lista potrzebnych rzeczy:</b>"
                         "*nie zabieramy poduszki, zamiast niej składamy bluzę pod głowę"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "darkolivegreen"
-            align: 1
-            header: "Ubrania:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "darkolivegreen"
+                align: 1
+                header: "Ubrania:"
+            }
+            Repeater
             {
                 model: ["mundur (koszula, pas, nakrycie głowy)",
                         "spodnie mundurowe",
@@ -86,13 +86,13 @@ Repeater
                         "buty do chodzenia w pomieszczeniach i na zajęcia sportowe"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "plum"
-            align: 1
-            header: "Higiena:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "plum"
+                align: 1
+                header: "Higiena:"
+            }
+            Repeater
             {
                 model: ["ręcznik (najlepiej szybkoschnący)",
                         "mydło",
@@ -103,22 +103,22 @@ Repeater
                         "chusteczki higieniczne"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "lightseagreen"
-            align: 1
-            header: "Leki:"
-        }
-                HPSLista {
-            label: "*należy zgłosić konieczność ich przyjmowania drużynowemu"
-        }
-ElementListyNoImage
-        {
-            color: "indianred"
-            align: 1
-            header: "Ważne:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "lightseagreen"
+                align: 1
+                header: "Leki:"
+            }
+            HPSLista {
+                label: "*należy zgłosić konieczność ich przyjmowania drużynowemu"
+            }
+            ElementListyNoLayout
+            {
+                color: "indianred"
+                align: 1
+                header: "Ważne:"
+            }
+            Repeater
             {
                 model: ["mały plecak na gry terenowe",
                         "latarka i zapasowy komplet baterii",
@@ -134,11 +134,11 @@ Repeater
             }
 
 
-    Component {
-        id: przedmiotComponent
-        HPSCheckable
-        {}
+            Component {
+                id: przedmiotComponent
+                HPSCheckable
+                {}
+            }
+        }
     }
-
-                        }
 }

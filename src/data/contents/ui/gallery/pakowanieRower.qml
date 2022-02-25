@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -16,13 +16,12 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import Data 1.0
-import org.kde.kirigami 2.11 as Kirigami
-HPSPage
 
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
+import Data 1.0
+
+HPSPage
 {
     id: page
     title: "Pakowanie na wyjazd rowerowy"
@@ -30,17 +29,21 @@ HPSPage
     {
         id: hpsSettings
     }
-        ColumnLayout {
-    ElementListyNoImage {
-        color: "black"
-        header: "Obóz kolarski z Polski do Toskanii na około 2-4 tygodnie. Sprawdzi się również na obóz w Polsce, chociaż wtedy nie będzie potrzebny paszport."
-    }
-                ElementListyNoImage
-        {
-            color: "Darkolivegreen"
-            align: 1
-            header: "Coś do ubrania i nie tylko:"
-        }
+    Controls.Pane {
+        id: pane
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout {
+                color: "black"
+                header: "Obóz kolarski z Polski do Toskanii na około 2-4 tygodnie. Sprawdzi się również na obóz w Polsce, chociaż wtedy nie będzie potrzebny paszport."
+            }
+            ElementListyNoLayout
+            {
+                color: "Darkolivegreen"
+                align: 1
+                header: "Coś do ubrania i nie tylko:"
+            }
             Repeater
             {
                 model: ["regulaminowy mundur",
@@ -65,12 +68,12 @@ HPSPage
                         "długie spodnie"]
                 delegate: przedmiotComponent
             }
-                ElementListyNoImage
-        {
-            color: "royalblue"
-            align: 1
-            header: "Sprzęt turystyczny:"
-        }
+            ElementListyNoLayout
+            {
+                color: "royalblue"
+                align: 1
+                header: "Sprzęt turystyczny:"
+            }
             Repeater
             {
                 model: ["rower z przerzutkami, bagażnikiem i bidonem (gdy jest szansa założenia błotników to warto założyć)",
@@ -86,45 +89,43 @@ HPSPage
                         "długie spodnie"]
                 delegate: przedmiotComponent
             }
-                Kirigami.BasicListItem {
-             Controls.Label {
-    wrapMode: Text.WordWrap
-    Layout.alignment: Qt.AlignHCenter
-    Layout.fillWidth: true
-            text: "torebka lub trójkąt podsiodłowy, a w nim:"
-             }
-                }
-            Repeater
-            {
-                model: ["a) Octenisept,,",
-                        "b) opatrunki prowizoryczne,",
-                        "c) zapasowa dętka lub łatki,",
-                        "d) rękawiczki cienkie gumowe lub foliowe",
-                        "e) chusteczki higieniczne"]
-                delegate: przedmiotComponent
+            ElementListyNoLayout {
+                color: "transparent"
+                header: "torebka lub trójkąt podsiodłowy, a w nim:"
             }
-ElementListyNoImage
+        Repeater
+        {
+            model: ["a) Octenisept,,",
+                    "b) opatrunki prowizoryczne,",
+                    "c) zapasowa dętka lub łatki,",
+                    "d) rękawiczki cienkie gumowe lub foliowe",
+                    "e) chusteczki higieniczne"]
+            delegate: przedmiotComponent
+        }
+        ElementListyNoLayout
         {
             color: "Indianred"
             align: 1
             header: "Legitymacje:"
         }
-            Repeater
-            {
-                model: ["Paszport i legitymacja szkolna z potwierdzonym przez szkołę nr PESEL",
-                        "karta rowerowa (może być potrzebna, gdyby ktoś chciał się na chwilkę, odłączyć się od kolumny)"]
-                delegate: przedmiotComponent
-            }
-ElementListyNoImage
+        Repeater
+        {
+            model: ["Paszport i legitymacja szkolna z potwierdzonym przez szkołę nr PESEL",
+                    "karta rowerowa (może być potrzebna, gdyby ktoś chciał się na chwilkę, odłączyć się od kolumny)"]
+            delegate: przedmiotComponent
+        }
+        ElementListyNoLayout
         {
             color: "Green"
             align: 1
             header: "To wszystko z powodzeniem mieści się w sakwach i w jamniku, na bagażniku roweru (niczego nie wieziemy na plecach), gdyby jednak były problemy pomożemy się zapakować"
         }
-    Component {
-        id: przedmiotComponent
-        HPSCheckable
-        {}
-    }
+        Component {
+            id: przedmiotComponent
+            HPSCheckable
+            {
+            }
         }
+        }
+    }
 }

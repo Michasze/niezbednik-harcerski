@@ -38,74 +38,78 @@ HPSPage {
             aboutDialog3.open()
         }
     }
-    ColumnLayout
-    {
-        Controls.Label
+    Controls.Pane {
+        Column
         {
-            visible: false
-            text: infoData.tresci
-        }
-        Controls.Button
-        {
-            Layout.alignment: Qt.AlignHCenter
-            highlighted: true
-            text: "Losuj cytat"
-            onClicked:
+            anchors.fill: parent
+            spacing: 10
+            Controls.Label
             {
-                losowy.tresc = infoData.losuj
-                losowy.autor = infoData.losowyAutor
-                losowy.visible = true
+                visible: false
+                text: infoData.tresci
             }
-        }
+            Controls.Button
+            {
+                anchors.horizontalCenter: parent.horizontalCenter
+                highlighted: true
+                text: "Losuj cytat"
+                onClicked:
+                {
+                    losowy.tresc = infoData.losuj
+                    losowy.autor = infoData.losowyAutor
+                    losowy.visible = true
+                }
+            }
             CytatAutor
             {
                 visible: false
                 id: losowy
             }
-        Repeater {
-    id: karta
-    model: infoData.autor
-            delegate: KartaStrona {
-        visible: index == 0 ? false : true
-        header: modelData
-        ikona: "image://images/" + infoData.image[index]
-        adres: cytatyPage
-        opis: ""
-    MouseArea {
-        id: area
-    anchors.fill: parent
-            readonly property int kartaIndex: index
-        onClicked:
-        {
-            console.log(infoData.image)
-            infoData.autorIndex = kartaIndex
-            pageStack.push(cytatyPage)
-        }
-    }
+            Repeater {
+                id: karta
+                model: infoData.autor
+                delegate: KartaStronaNoLayout {
+                    visible: index == 0 ? false : true
+                    header: modelData
+                    ikona: "image://images/" + infoData.image[index]
+                    adres: cytatyPage
+                    opis: ""
+                    MouseArea {
+                        id: area
+                        anchors.fill: parent
+                        readonly property int kartaIndex: index
+                        onClicked:
+                        {
+                            console.log(infoData.image)
+                            infoData.autorIndex = kartaIndex
+                            pageStack.push(cytatyPage)
+                        }
+                    }
+                }
             }
-}
-        KartaStronaNoImage {
-        header: "Inni"
-        opis: ""
-        adres: "cytatyInni.qml"
-    }
+            KartaStronaNoLayout {
+                header: "Inni"
+                opis: ""
+                adres: "cytatyInni.qml"
+            }
 
-    Component {
-        id: cytatyPage
-HPSPage
-{
- title: infoData.autorString + " - cytaty"
-    ColumnLayout {
-     id: mainList
-        Repeater {
-        model: infoData.tresc
-            delegate: Cytat {
-    tresc: modelData
-    autor: infoData.autorString
-     }
+            Component {
+                id: cytatyPage
+                HPSPage
+                {
+                    title: infoData.autorString + " - cytaty"
+                    ColumnLayout {
+                        id: mainList
+                        Repeater {
+                            model: infoData.tresc
+                            delegate: Cytat {
+                                tresc: modelData
+                                autor: infoData.autorString
+                            }
+                        }
+                    }
+                }
+            }
         }
-    }
-    }
-    }
     }
 }

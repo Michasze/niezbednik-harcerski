@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,54 +19,56 @@
 
 import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
 
 HPSPage {
     id: page
     title: qsTr("Artykuły")
-ColumnLayout
-{
-KartaStronaNoImage {
-        header: "Fazy rozwoju drużynowego"
-        opis: "Juliusz Idzikowski"
-        adres: "pracaNauczyciela.qml"
-    }
-KartaStronaNoImage {
-        header: "Zbiórki w terenie"
-        opis: "Juliusz Idzikowski"
-        adres: "zbiorkiWTerenie.qml"
-    }
-KartaStronaNoImage {
-        header: "Jak promować harcerstwo?"
-        opis: "Juliusz Idzikowski"
-        adres: "promocja.qml"
-    }
-KartaStronaNoImage {
-        header: "Tężyzna fizyczna"
-        opis: "Juliusz Idzikowski"
-        adres: "tezyzna.qml"
-    }
-KartaStronaNoImage {
-        header: "Ekwipunek harcerski"
-        opis: "Juliusz Idzikowski"
-        adres: "nowoczesny.qml"
-    }
-KartaStronaNoImage {
-        header: "Dlaczego kadra ma własne namioty?"
-        opis: "Juliusz Idzikowski"
-        adres: "kadraNamioty.qml"
-    }
-KartaStronaNoImage {
-        header: "Zjazd ZHP w Bydgoszczy - 30 lat minęło"
-        opis: "Ryszard Pacławski"
-        adres: "zjazd.qml"
-    }
-KartaStronaNoImage {
-        header: "Prawie Wszystko o sprawnościach"
-        opis: "Janusz Sikorski"
-        adres: "prawie.qml"
-    }
-
+    Controls.Pane
+    {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            KartaStronaNoLayout {
+                header: "Fazy rozwoju drużynowego"
+                opis: "Juliusz Idzikowski"
+                adres: "pracaNauczyciela.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Zbiórki w terenie"
+                opis: "Juliusz Idzikowski"
+                adres: "zbiorkiWTerenie.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Jak promować harcerstwo?"
+                opis: "Juliusz Idzikowski"
+                adres: "promocja.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Tężyzna fizyczna"
+                opis: "Juliusz Idzikowski"
+                adres: "tezyzna.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Ekwipunek harcerski"
+                opis: "Juliusz Idzikowski"
+                adres: "nowoczesny.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Dlaczego kadra ma własne namioty?"
+                opis: "Juliusz Idzikowski"
+                adres: "kadraNamioty.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Zjazd ZHP w Bydgoszczy - 30 lat minęło"
+                opis: "Ryszard Pacławski"
+                adres: "zjazd.qml"
+            }
+            KartaStronaNoLayout {
+                header: "Prawie Wszystko o sprawnościach"
+                opis: "Janusz Sikorski"
+                adres: "prawie.qml"
+            }
         }
     }
+}

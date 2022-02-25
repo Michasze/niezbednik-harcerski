@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,19 +18,17 @@
  */
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 HPSPage
 {
-    id: pageFoto
+    id: page
     title: "Fazy rozwoju drużynowego"
-        ColumnLayout {
-        width: pageFoto.width
-
-            ElementListyNoImage
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout
             {
-                Layout.fillWidth: true
                 alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
@@ -54,12 +52,12 @@ Jest to moment osiągnięcia dojrzałości na danym stanowisku. W tej sytuacji d
 Model Fuller przydaje się, by wniknąć w proces uczenia się, jak nauczać. Pomaga spojrzeć na aktualne zmartwienia z odległej perspektywy oraz przygotować początkujących nauczycieli do przejścia do następnej, wyższej fazy.
 Arends R.I., Uczymy się nauczać, WSiP, Warszawa 1998, s. 49;"
             }
-        ElementListyNoImage
-        {
-           Layout.fillWidth: true
-           alignH: Text.AlignHCenter
-           format: Text.PlainText
-           header: "Juliusz Idzikowski"
-         }
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header: "Juliusz Idzikowski"
+            }
         }
-        }
+    }
+}

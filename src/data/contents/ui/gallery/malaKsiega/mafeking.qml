@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,52 +17,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 import ".."
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Mafeking"
-
-    actions {
-        main: Kirigami.Action {
-           iconName: "qrc:/contents/ui/img/go-previous.svg"
-        text: qsTr("Powrót")
-        visible: false
-        onTriggered: pageStack.layers.pop(-1);
-        }
-    }
-
-    ColumnLayout {
-        width: page.width
-                              ElementListyNoImage
-        {
-            color: "brown"
-            header: "Trudność: **"
-        }
-                       ElementListyNoImage
-        {
-            color: "brown"
-            header: "Zasada działania podobna do Kaczora czy Liczbowego – po prostu lokalizujemy daną literkę w tabeli."
-        }
-            HPSIcon
- {
-     source: "image://icons/szyfry/mafeking.svg,white"
- }
-
-                       ElementListyNoImage
-        {
-            color: "brown"
-            header: "Dla zobrazowania: <b>G1-M1-M3-F1-K1-M3-G3</b>
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Trudność: **"
+            }
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Zasada działania podobna do Kaczora czy Liczbowego – po prostu lokalizujemy daną literkę w tabeli."
+            }
+            HPSIconNoLayout
+            {
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "image://icons/szyfry/mafeking.svg,white"
+            }
+            ElementListyNoLayout
+            {
+                color: "brown"
+                header: "Dla zobrazowania: <b>G1-M1-M3-F1-K1-M3-G3</b>
 oznacza „Harcerz”; <b>G1-M1-M3-F1-K1-M3-G3 | A2-K1-A3-F3 |  N2-E1-K3-M1-G3-I2-N3</b>
-natomiast „Harcerz jest odważny”.
-
-"
+natomiast „Harcerz jest odważny”."
+            }
         }
     }
 }

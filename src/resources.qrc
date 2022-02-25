@@ -21,6 +21,7 @@
         <file alias="contents/ui/gallery/HPSCheckable.qml">./data/contents/ui/gallery/HPSCheckable.qml</file>
         <file alias="contents/ui/gallery/HPSCheckBox.qml">./data/contents/ui/gallery/HPSCheckBox.qml</file>
         <file alias="contents/ui/gallery/HPSIcon.qml">./data/contents/ui/gallery/HPSIcon.qml</file>
+        <file alias="contents/ui/gallery/HPSIconNoLayout.qml">./data/contents/ui/gallery/HPSIconNoLayout.qml</file>
         <file alias="contents/ui/gallery/HPSImage.qml">./data/contents/ui/gallery/HPSImage.qml</file>
         <file alias="contents/ui/gallery/CytatAutor.qml">./data/contents/ui/gallery/CytatAutor.qml</file>
         <file alias="contents/ui/gallery/Cytat.qml">./data/contents/ui/gallery/Cytat.qml</file>

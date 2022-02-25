@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -16,8 +16,8 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.6
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 import Data 1.0
 
 HPSPage {
@@ -31,19 +31,21 @@ HPSPage {
     {
         id: clipboard
     }
-        ColumnLayout {
-            id: lista
-                ElementListyNoImage
-        {
-            color: "green"
-            header: "<b>Ekwipunek obozowy dla każdego Skauta według Baden Powella</b>"
-        }
-                ElementListyNoImage
-        {
-            color: "darkolivegreen"
-            align: 1
-            header: "Ubrania:"
-        }
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout
+            {
+                color: "green"
+                header: "<b>Ekwipunek obozowy dla każdego Skauta według Baden Powella</b>"
+            }
+            ElementListyNoLayout
+            {
+                color: "darkolivegreen"
+                align: 1
+                header: "Ubrania:"
+            }
 
             Repeater
             {
@@ -60,12 +62,12 @@ HPSPage {
                        ]
                 delegate: przedmiotComponent
             }
-                ElementListyNoImage
-        {
-            color: "plum"
-            align: 1
-            header: "Higiena:"
-        }
+            ElementListyNoLayout
+            {
+                color: "plum"
+                align: 1
+                header: "Higiena:"
+            }
 
             Repeater
             {
@@ -75,13 +77,13 @@ HPSPage {
                         "dwie chusteczki"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "darkolivegreen"
-            align: 1
-            header: "Wyposażenie:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "darkolivegreen"
+                align: 1
+                header: "Wyposażenie:"
+            }
+            Repeater
             {
                 model: ["sznur lub rzemień",
                         "torebki na cukier, herbatę, sól, pieprz, mąkę i proszek do pieczenia",
@@ -92,13 +94,13 @@ Repeater
                         "koce lub worki do spania"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "plum"
-            align: 1
-            header: "Kuchenne:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "plum"
+                align: 1
+                header: "Kuchenne:"
+            }
+            Repeater
             {
                 model: ["mały kociołek",
                         "nóż",
@@ -106,11 +108,11 @@ Repeater
                         "łyżka"]
                 delegate: przedmiotComponent
             }
-    Component {
-        id: przedmiotComponent
-        HPSCheckable
-        {}
+            Component {
+                id: przedmiotComponent
+                HPSCheckable
+                {}
+            }
+        }
     }
-
-                        }
 }

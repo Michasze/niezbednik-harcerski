@@ -20,7 +20,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
 
 
          Rectangle {
@@ -37,7 +36,6 @@ import org.kde.kirigami 2.4 as Kirigami
     radius: 10
     color: kolor
     Layout.minimumHeight : 120
-//     implicitHeight: hznpLayout.implicitHeight
     border.color: "transparent"
     MouseArea {
     anchors.fill: parent
@@ -51,9 +49,6 @@ import org.kde.kirigami 2.4 as Kirigami
                         right: parent.right
                         //IMPORTANT: never put the bottom margin
                     }
-                    rowSpacing: Kirigami.Units.largeSpacing
-                    columnSpacing: Kirigami.Units.largeSpacing
-                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
                     // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
                     ColumnLayout {
                         Controls.Label {

@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -16,32 +16,32 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 
-HPSPage
-
-{
+HPSPage {
     id: page
     title: "Pakowanie na obóz"
-        ColumnLayout {
-    ElementListyNoImage {
-        color: "black"
-        header: "Lista ta jest wykorzystywana na obóz trwający 3 tygodnie. Leśny bez dostępu do bieżącej wody lub prądu. Cały obóz jest postawiony przez drużynę/szczep. Obóz odbywa się pod namiotami gdzie śpimy na kanadyjkach."
-    }
-                ElementListyNoImage
-        {
-            color: "green"
-            header: "<b>Lista potrzebnych rzeczy:</b>"
-        }
-                ElementListyNoImage
-        {
-            color: "Brown"
-            align: 1
-            header: "Jedzenie:"
-        }
-Repeater
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout {
+                color: "black"
+                header: "Lista ta jest wykorzystywana na obóz trwający 3 tygodnie. Leśny bez dostępu do bieżącej wody lub prądu. Cały obóz jest postawiony przez drużynę/szczep. Obóz odbywa się pod namiotami gdzie śpimy na kanadyjkach."
+            }
+            ElementListyNoLayout
+            {
+                color: "green"
+                header: "<b>Lista potrzebnych rzeczy:</b>"
+            }
+            ElementListyNoLayout
+            {
+                color: "Brown"
+                align: 1
+                header: "Jedzenie:"
+            }
+            Repeater
             {
                 model: ["menażka",
                         "manierki/camelbak/bidon/kubek",
@@ -50,26 +50,26 @@ Repeater
                 delegate: przedmiotComponent
             }
 
-                ElementListyNoImage
-        {
-            color: "royalblue"
-            align: 1
-            header: "Spanie:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "royalblue"
+                align: 1
+                header: "Spanie:"
+            }
+            Repeater
             {
                 model: ["śpiwór",
                         "karimata",
                         "ciepłe ubranie do spania"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "darkolivegreen"
-            align: 1
-            header: "Ubrania:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "darkolivegreen"
+                align: 1
+                header: "Ubrania:"
+            }
+            Repeater
             {
                 model: ["kurtki ciepłe",
                         "spodnie mundurowe",
@@ -92,13 +92,13 @@ Repeater
                         "okulary przeciwsłoneczne"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "plum"
-            align: 1
-            header: "Higiena:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "plum"
+                align: 1
+                header: "Higiena:"
+            }
+            Repeater
             {
                 model: ["mydło w płynie najlepiej",
                         "środek na komary (np. Mugga, Ultrathon)",
@@ -111,14 +111,14 @@ Repeater
                         "inne potrzebne rzeczy"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
+            ElementListyNoLayout
 
-        {
-            color: "darkkhaki"
-            align: 1
-            header: "Obozowe/Biegowe/Pionierskie:"
-        }
-Repeater
+            {
+                color: "darkkhaki"
+                align: 1
+                header: "Obozowe/Biegowe/Pionierskie:"
+            }
+            Repeater
             {
                 model: ["scyzoryk/nóż/multitool",
                         "kompas/busola (jeśli ktoś posiada)",
@@ -130,25 +130,25 @@ Repeater
                         "rękawiczki (do pracy)"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "lightseagreen"
-            align: 1
-            header: "Apteczka:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "lightseagreen"
+                align: 1
+                header: "Apteczka:"
+            }
+            Repeater
             {
                 model: ["leki stale przyjmowane",
                         "plastry (można wziąć np. compeed na odciski)"]
                 delegate: przedmiotComponent
             }
-ElementListyNoImage
-        {
-            color: "indianred"
-            align: 1
-            header: "Inne:"
-        }
-Repeater
+            ElementListyNoLayout
+            {
+                color: "indianred"
+                align: 1
+                header: "Inne:"
+            }
+            Repeater
             {
                 model: ["legitymacje",
                         "śpiewniki",
@@ -161,11 +161,12 @@ Repeater
                 delegate: przedmiotComponent
             }
 
-    Component {
-        id: przedmiotComponent
-        HPSCheckable
-        {}
-    }
+            Component {
+                id: przedmiotComponent
+                HPSCheckable
+                {}
+            }
 
-                        }
+        }
+    }
 }
