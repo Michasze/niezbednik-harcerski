@@ -304,7 +304,7 @@ może ulec zmianie."
             {
                 anchors.right: parent.right
                 anchors.rightMargin: powrotButton.visible ? (powrotButton.width + 10) : 10
-                visible: pageStack.currentItem.title.includes("Pakowanie") && pageStack.currentItem.title != "Pakowanie"
+                visible: pageStack.currentItem.title.includes("Pakowanie") && pageStack.currentItem.title != "Pakowanie" && pageStack.layers.depth == 1
                 icon.source: "image://icons/edit-copy.svg,white"
                 onClicked:
                 {
