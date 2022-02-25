@@ -17,8 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.13
-import QtQuick.Controls 2.13 as Controls
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.11 as Kirigami
 import QtMultimedia 5.0
@@ -282,14 +282,13 @@ może ulec zmianie."
                 onClicked: globalDrawer.open()
                 icon.source: "qrc:/contents/ui/img/application-menu.svg"
             }
-            Kirigami.Heading
+            Controls.Label
             {
                 id: naglowek
                 horizontalAlignment: Text.AlignHCenter
                 anchors.centerIn: parent
                 // Pokazuje tytul właśnie otwartej strony
                 text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
-                level: 2
             }
             Controls.ToolButton
             {
@@ -333,203 +332,88 @@ może ulec zmianie."
         }
     }
     title: "Niezbędnik Harcerski"
-    globalDrawer: Kirigami.GlobalDrawer {
+    Controls.Drawer {
+        width: 250
+        height: root.height
         id: globalDrawer
-        background: Rectangle {
+        dragMargin: 20
+        Column {
             anchors.fill: parent
-            color: "Black"
-        }
-        header: RowLayout
-        {
-            Image
+            spacing: 10
+            Row {
+                id: drawerHeader
+                width: parent.width
+                height: drawerImg.height
+                            Image
             {
-                Layout.minimumHeight: globalDrawer.width / 4
+                id: drawerImg
+                height: globalDrawer.width / 3
                 fillMode: Image.PreserveAspectFit
                 source: "qrc:/contents/ui/img/applications-graphics.svg"
             }
             Controls.Label
             {
-                Layout.fillWidth: true
                 font.pointSize: 24
-                Layout.alignment: Qt.AlignHCenter
+                anchors.verticalCenter: drawerImg.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
                 text: "Menu"
             }
-        }
-        modal: true
-
-        dragMargin: 1
-        bannerVisible: true
-        //ukrywa zbędny przycisk od bocznego menu
-        //Nie jest nam potrzebny ponieważ jeden już znajduje się w toolbarze
-        handleVisible: false
-        actions: [
-
-            Kirigami.Action {
-                text: "O aplikacji"
-                visible: false
-                icon {
-                    source: "qrc:/contents/ui/img/configure.svg"
-                    color: "White"
-                }
-                onTriggered: {
-                    pageStack.layers.push(Qt.resolvedUrl("gallery/oProgramie.qml"));
-                }
-            },
-            Kirigami.Action {
-                text: "Social media"
-                visible: false
-                icon {
-                    source: "qrc:/contents/ui/img/configure.svg"
-                    color: Kirigami.Theme.activeTextColor
-                }
-                onTriggered: {
-                    pageStack.layers.push(Qt.resolvedUrl("gallery/social.qml"));
-                }
-            },
-            Kirigami.Action {
-                text: "Testerzy"
-                visible: false
-                icon {
-                    source: "qrc:/contents/ui/img/configure.svg"
-                    color: Kirigami.Theme.activeTextColor
-                }
-                onTriggered: {
-                    pageStack.layers.push(Qt.resolvedUrl("gallery/testerzy.qml"));
-                }
-            },
-            Kirigami.Action {
-                text: "Pomocne dłonie"
-                visible: false
-                icon {
-                    source: "qrc:/contents/ui/img/configure.svg"
-                    color: Kirigami.Theme.activeTextColor
-                }
-                onTriggered: {
-                    pageStack.layers.push(Qt.resolvedUrl("gallery/pomocni.qml"));
-                }
             }
-        ]
-        topContent: [ColumnLayout {
-            Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-            Layout.rightMargin: 10
-            Layout.leftMargin: 10
-            ElementListy {
-                color: "transparent"
-                header: "O aplikacji"
-                ikona: "image://icons/documentinfo.svg,white"
-                Layout.maximumHeight: 60
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        pageStack.layers.pop(-1)
-                        pageStack.layers.push(Qt.resolvedUrl("gallery/oProgramie.qml"))
-                        globalDrawer.close()
-                    }  }
+            ListModel {
+                id: drawerModel
+                ListElement { opis: "O aplikacji"; warstwa: "gallery/oProgramie.qml"; icon: "image://icons/documentinfo.svg,white" }
+                ListElement { opis: "Social media"; warstwa: "gallery/social.qml"; icon: "image://icons/snapchat_symbolic.svg,white" }
+                ListElement { opis: "Testerzy"; warstwa: "gallery/testerzy.qml"; icon: "image://icons/user.svg,white" }
+                ListElement { opis: "Pomocne dłonie"; warstwa: "gallery/pomocni.qml"; icon: "image://icons/hand.svg,white" }
+                ListElement { opis: "Ustawienia"; warstwa: "gallery/ustawienia.qml"; icon: "image://icons/settings.svg,white" }
             }
-            HPSSeparator {
-                Layout.fillWidth: true
-                color: "#615f5f"
-            }
-            ElementListy {
-                color: "transparent"
-                header: "Social media"
-                ikona: "image://icons/snapchat_symbolic.svg,white"
-                Layout.maximumHeight: 60
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        pageStack.layers.pop(-1)
-                        pageStack.layers.push(Qt.resolvedUrl("gallery/social.qml"))
-                        globalDrawer.close()
-                    }  }
-            }
-
-            HPSSeparator {
-                Layout.fillWidth: true
-                color: "#615f5f"
-            }
-            ElementListy {
-                color: "transparent"
-                header: "Testerzy"
-                ikona: "image://icons/user.svg,white"
-                Layout.maximumHeight: 60
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        pageStack.layers.pop(-1)
-                        pageStack.layers.push(Qt.resolvedUrl("gallery/testerzy.qml"))
-                        globalDrawer.close()
+            Repeater {
+                model: drawerModel
+                delegate: Item {
+                    width: parent.width
+                    height: 70
+                    ElementListyImageNoLayout {
+                        id: element
+                        property string adres: odnosnik
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        color: "Transparent"
+                        width: parent.width
+                        header: opis
+                        ikona: icon
+                        height: 60
+                        isUrl: false
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageStack.layers.pop()
+                                pageStack.layers.push(Qt.resolvedUrl(warstwa))
+                                globalDrawer.close()
+                            }
+                        }
+                    }
+                    HPSSeparator {
+                        width: parent.width - 20
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.top: element.bottom
                     }
                 }
             }
-            HPSSeparator {
-                Layout.fillWidth: true
-                color: "#615f5f"
-            }
-            ElementListy {
-                color: "transparent"
-                header: "Pomocne dłonie"
-                ikona: "image://icons/hand.svg,white"
-                Layout.maximumHeight: 60
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        pageStack.layers.pop(-1)
-                        pageStack.layers.push(Qt.resolvedUrl("gallery/pomocni.qml"))
-                        globalDrawer.close()
-                    }    }
-            }
-            HPSSeparator {
-                Layout.fillWidth: true
-                color: "#615f5f"
-            }
-            ElementListy {
-                color: "transparent"
-                header: "Ustawienia"
-                ikona: "image://icons/settings.svg,white"
-                Layout.maximumHeight: 60
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        pageStack.layers.pop(-1)
-                        pageStack.layers.push(Qt.resolvedUrl("gallery/ustawienia.qml"))
-                        globalDrawer.close()
-                    }    }
-            }
-            ElementListyNoImage {
-                header: "Zgłoś swoją zawartość"
-                visible: false
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        pageStack.layers.pop(-1)
-                        pageStack.layers.push(Qt.resolvedUrl("gallery/blankLayer.qml"))
-                        globalDrawer.close()
-                    }    }
-            }
-            Controls.Slider {
-                id: invisibleSlider
-                Layout.fillWidth: true
-                visible: false
-                from: 10
-                Layout.leftMargin: 20
-                value: hpsSettings.textSize
-                to: 17
-                stepSize: 1
-                snapMode: Controls.Slider.SnapAlways
-            }
-            Controls.CheckBox {
-                id: invisibleCheckbox
-                visible: false
-                checked: !hpsSettings.darkThemeIsToggled ? false : true
-            }
-        }]
+        }
+        Controls.Slider {
+            id: invisibleSlider
+            visible: false
+            from: 10
+            Layout.leftMargin: 20
+            value: hpsSettings.textSize
+            to: 17
+            stepSize: 1
+            snapMode: Controls.Slider.SnapAlways
+        }
+        Controls.CheckBox {
+            id: invisibleCheckbox
+            visible: false
+            checked: !hpsSettings.darkThemeIsToggled ? false : true
+        }
     }
     pageStack.initialPage: mainPageComponent
     pageStack.defaultColumnWidth: 1920

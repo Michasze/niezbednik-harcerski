@@ -18,7 +18,7 @@
  */
 
 import QtQuick 2.3
-import QtQuick.Controls 2.0 as QQC2
+import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.11 as Kirigami
 import Data 1.0
@@ -27,26 +27,19 @@ import "gallery"
 
 Kirigami.ScrollablePage {
     id: pageRoot
-
     HPSSettings
     {
         id: hpsSettings
     }
-
-background: Rectangle {
-              anchors.fill: parent
-              color: invisibleCheckbox.checked ? "Black" : "grey"
+    background: Rectangle {
+        anchors.fill: parent
+        color: invisibleCheckbox.checked ? "Black" : "grey"
     }
     leftPadding: 0
     rightPadding: 0
     bottomPadding: 0
     topPadding: 0
     title: qsTr("Niezbędnik Harcerski")
-
-   
-    Kirigami.PagePool {
-        id: mainPagePool
-    }
     ListModel {
         id: searchModel
         ListElement {
@@ -69,57 +62,57 @@ background: Rectangle {
             tags: "szyfry, szyfrator, bacon"
             targetPage: "gallery/szyfrator/bacon.qml"
         }
-         ListElement {
+        ListElement {
             title: "Harcerz - skąd pochodzi ten wyraz?"
             tags: "harcerz, historyczne, ciekawostki, wyraz"
             targetPage: "gallery/harcerz.qml"
         }
-         ListElement {
+        ListElement {
             title: "Zlot ZHP w Spale"
             tags: "Spała, ZHP, ciekawostki, zlot"
             targetPage: "gallery/spala.qml"
         }
-         ListElement {
+        ListElement {
             title: "Kamień pamiątkowy ku czci poległych harcerzy"
             tags: "kamień, pamiątkowy, ciekawostki, czci, poległych, Wrocław"
             targetPage: "gallery/kamien.qml"
         }
-         ListElement {
+        ListElement {
             title: "Wyjątkowe krzyże harcerskie"
             tags: "wyjątkowe, krzyże, harcerskie, historyczne, ciekawostki"
             targetPage: "gallery/wyjatkowe.qml"
         }
-         ListElement {
+        ListElement {
             title: "Dzień Myśli braterskiej"
             tags: "DMB, święto, dzień, myśli, braterskiej, historyczne, ciekawostki"
             targetPage: "gallery/DMB.qml"
         }
-         ListElement {
+        ListElement {
             title: "Najważniejsze daty w historii harcerstwa"
             tags: "daty, najważniejsze, Brownsea, 1907, historyczne, ciekawostki"
             targetPage: "gallery/daty.qml"
         }
-         ListElement {
+        ListElement {
             title: "Dawne roty przyrzeczenia"
             tags: "dawne, przyrzeczenie, roty, historyczne, ciekawostki"
             targetPage: "gallery/histPrzyrzeczenia.qml"
         }
-         ListElement {
+        ListElement {
             title: "Historyczne prawa harcerskie"
             tags: "dawne, prawo, harcerskie, historyczne, ciekawostki"
             targetPage: "gallery/histPrawa.qml"
         }
-         ListElement {
+        ListElement {
             title: "Lista znanych osób, które były w harcerstwie"
             tags: "lista, znani, ludzie, historyczne, ciekawostki"
             targetPage: "gallery/histPrawa.qml"
         }
-         ListElement {
+        ListElement {
             title: "Zbiórka fotograficzna"
             tags: "zbiórka, pomysły, fotograf, zdjęcia"
             targetPage: "gallery/fotograficzna.qml"
         }
-         ListElement {
+        ListElement {
             title: "Ekosystem w słoiku"
             tags: "słoik, ekosystem, rośliny, zbiórka, pomysł"
             targetPage: "gallery/ekosystem.qml"
@@ -137,7 +130,6 @@ background: Rectangle {
             targetPage: "gallery/Pomysly.qml"
             img: "image://icons/zarowka.svg"
         }
-
         ListElement {
             title: "Poradniki harcerskie"
             targetPage: "gallery/harcerskie.qml"
@@ -153,7 +145,7 @@ background: Rectangle {
             targetPage: "gallery/symbolika.qml"
             img: "image://icons/wosm.svg"
         }
-       ListElement {
+        ListElement {
             title: "Cytaty"
             targetPage: "gallery/cytaty.qml"
             img: "image://icons/cytaty.svg"
@@ -215,47 +207,44 @@ background: Rectangle {
             img: "image://icons/zwoj.svg"
             targetPage: "gallery/przyrzeczenia.qml"
         }
-
-
-       ListElement {
+        ListElement {
             title: "Gawędy"
             targetPage: "gallery/gawedy.qml"
             img: "image://icons/ognisko.svg"
 
         }
-/*        ListElement {
-            title: "Lista miejsc obozowych"
-            targetPage: "gallery/mapa.qml"
-        }
-        ListElement {
-            title: "Kuchnia polowa"
-            targetPage: "gallery/blank.qml"
-        }
-        ListElement {
-            title: "Ekologia"
-            targetPage: "gallery/blank.qml"
-        }
-        ListElement {
-            title: "Opowiadania"
-            targetPage: "gallery/blank.qml"
-        }
-        ListElement {
-            title: "Filmy"
-            targetPage: "gallery/blank.qml"
-        }
-*/
-            }
-    header: QQC2.ToolBar {
+        /*        ListElement {
+                  title: "Lista miejsc obozowych"
+                  targetPage: "gallery/mapa.qml"
+                  }
+                  ListElement {
+                  title: "Kuchnia polowa"
+                  targetPage: "gallery/blank.qml"
+                  }
+                  ListElement {
+                  title: "Ekologia"
+                  targetPage: "gallery/blank.qml"
+                  }
+                  ListElement {
+                  title: "Opowiadania"
+                  targetPage: "gallery/blank.qml"
+                  }
+                  ListElement {
+                  title: "Filmy"
+                  targetPage: "gallery/blank.qml"
+                  }
+        */
+    }
+    header: Controls.ToolBar {
         id: toolbar
         background: Rectangle {
-              radius: 10
-              anchors.fill: parent
-              color: "Green"
-    }
-
+            radius: 10
+            anchors.fill: parent
+            color: "Green"
+        }
         RowLayout {
             anchors.fill: parent
-            Kirigami.SearchField {
+            Controls.TextField {
                 id: searchField
                 inputMethodHints: Qt.ImhNoPredictiveText
                 placeholderText: "Szukaj..."
@@ -263,7 +252,6 @@ background: Rectangle {
                 placeholderTextColor: "White"
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
-                Layout.maximumWidth: Kirigami.Units.gridUnit*30
             }
         }
     }
@@ -281,7 +269,7 @@ background: Rectangle {
         Repeater {
             focus: true
             visible: searchField.text === "" ? false : true
-                model: searchField.text === "" ? 0 : filteredModel
+            model: searchField.text === "" ? 0 : filteredModel
             delegate: ElementListyNoImage {
                 header: title
                 textSize: invisibleSlider.value + 2
@@ -295,9 +283,6 @@ background: Rectangle {
             columns: 2
             Layout.alignment: Qt.AlignHCenter
             visible: !root.pageStack.wideMode
-            Layout.topMargin: Kirigami.Units.largeSpacing
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            Layout.rightMargin: Kirigami.Units.gridUnit
             Repeater {
                 focus: true
                 model: searchField.text === "" ? galleryModel : 0
@@ -307,12 +292,6 @@ background: Rectangle {
                     ikona: img
                     adres: targetPage
                     kolor_ikony: kolor
-                                        Kirigami.PagePoolAction {
-                        id: action
-                        pagePool: mainPagePool
-                        basePage: pageRoot
-                        page: targetPage
-                    }
                 }
 
             }

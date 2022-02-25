@@ -36,7 +36,11 @@ Rectangle {
     height: naglowek.height > 120 ? naglowek.height + 30 : 120
     MouseArea {
         anchors.fill: parent
-        onClicked: isUrl ? Qt.openUrlExternally(cardRectangle.odnosnik) : pageStack.push(Qt.resolvedUrl(cardRectangle.odnosnik))
+        onClicked:
+        {
+        console.log(odnosnik)
+            isUrl ? Qt.openUrlExternally(cardRectangle.odnosnik) : pageStack.push(Qt.resolvedUrl(cardRectangle.odnosnik))
+        }
     }
     Image {
         id: img
