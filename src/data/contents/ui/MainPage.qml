@@ -124,51 +124,61 @@ Kirigami.ScrollablePage {
             title: "Historia"
             targetPage: "gallery/Historyczne.qml"
             img: "image://icons/krzyz.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Pomysły na zbiórki"
             targetPage: "gallery/Pomysly.qml"
             img: "image://icons/zarowka.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Poradniki harcerskie"
             targetPage: "gallery/harcerskie.qml"
             img: "image://icons/ognisko.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Szyfry"
             targetPage: "gallery/szyfry.qml"
             img: "image://icons/szyfry.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Symbolika"
             targetPage: "gallery/symbolika.qml"
             img: "image://icons/wosm.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Cytaty"
             targetPage: "gallery/cytaty.qml"
             img: "image://icons/cytaty.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Książki"
             targetPage: "gallery/ksiazki.qml"
             img: "image://icons/ksiazki.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Filmy"
             targetPage: "gallery/filmy.qml"
             img: "image://icons/filmy.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Śpiewnik"
             targetPage: "gallery/Spiewniki.qml"
             img: "image://icons/spiewnik.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Artykuły"
             targetPage: "gallery/Artykuly.qml"
             img: "image://icons/Artykuly.svg"
+            kolor: ",white"
         }
         ListElement {
             title: "Poradnik zastępowego"
@@ -179,6 +189,7 @@ Kirigami.ScrollablePage {
         ListElement {
             title: "Poradniki wyboru sprzętu"
             targetPage: "gallery/Sprzet.qml"
+            kolor: ",white"
             img: "image://icons/sprzet.svg"
         }
         ListElement {
@@ -189,26 +200,31 @@ Kirigami.ScrollablePage {
         }
         ListElement {
             title: "Listy rzeczy do spakowania"
+            kolor: ",white"
             targetPage: "gallery/poradnikiPakowanie.qml"
             img: "image://icons/plecak.svg"
         }
         ListElement {
             title: "Stopnie harcerskie"
+            kolor: ",white"
             img: "image://icons/hrS.svg"
             targetPage: "gallery/stopnie.qml"
         }
         ListElement {
             title: "Prawo harcerskie"
+            kolor: ",white"
             img: "image://icons/zwoj.svg"
             targetPage: "gallery/prawo.qml"
         }
         ListElement {
             title: "Roty Przyrzeczenia"
+            kolor: ",white"
             img: "image://icons/zwoj.svg"
             targetPage: "gallery/przyrzeczenia.qml"
         }
         ListElement {
             title: "Gawędy"
+            kolor: ",white"
             targetPage: "gallery/gawedy.qml"
             img: "image://icons/ognisko.svg"
 
@@ -248,6 +264,7 @@ Kirigami.ScrollablePage {
                 id: searchField
                 inputMethodHints: Qt.ImhNoPredictiveText
                 placeholderText: "Szukaj..."
+                leftPadding: 10
                 color: "White"
                 placeholderTextColor: "White"
                 Layout.alignment: Qt.AlignHCenter
@@ -285,9 +302,10 @@ Kirigami.ScrollablePage {
             visible: !root.pageStack.wideMode
             Repeater {
                 focus: true
-                model: searchField.text === "" ? galleryModel : 0
+                model: galleryModel
                 delegate: KartaMain {
                     id: listItem
+                    visible: searchField.text === ""
                     header: title
                     ikona: img
                     adres: targetPage
