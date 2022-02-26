@@ -337,10 +337,7 @@ może ulec zmianie."
         height: root.height
         id: globalDrawer
         dragMargin: 20
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            Row {
+            Item {
                 id: drawerHeader
                 width: parent.width
                 height: drawerImg.height
@@ -348,6 +345,7 @@ może ulec zmianie."
             {
                 id: drawerImg
                 height: globalDrawer.width / 3
+                anchors.left: parent.left
                 fillMode: Image.PreserveAspectFit
                 source: "qrc:/contents/ui/img/applications-graphics.svg"
             }
@@ -359,6 +357,10 @@ może ulec zmianie."
                 text: "Menu"
             }
             }
+        Column {
+            anchors.fill: parent
+            anchors.topMargin: drawerHeader.height
+            spacing: 10
             ListModel {
                 id: drawerModel
                 ListElement { opis: "O aplikacji"; warstwa: "gallery/oProgramie.qml"; icon: "image://icons/documentinfo.svg,white" }
@@ -371,7 +373,7 @@ może ulec zmianie."
                 model: drawerModel
                 delegate: Item {
                     width: parent.width
-                    height: 70
+                    height: 65
                     ElementListyImageNoLayout {
                         id: element
                         property string adres: odnosnik
