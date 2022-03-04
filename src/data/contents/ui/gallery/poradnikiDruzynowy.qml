@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,40 +19,39 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Poradnik drużynowego"
-    ColumnLayout {
-        id: mainlayout
-        KartaStronaNoImage { 
-        header: "Biwaki"
-        opis: ""
-        adres: "biwaki.qml"
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            KartaStronaNoLayout {
+                header: "Biwaki"
+                opis: ""
+                adres: "biwaki.qml"
+            }
+            /*        KartaStronaNoLayout {
+                      header: "Zbiórki"
+                      opis: ""
+                      adres: "blank.qml"
+                      } */
+            KartaStronaNoLayout {
+                header: "Sprawności"
+                opis: ""
+                adres: "sprawnosci.qml"
+            }
+            /* KartaStronaNoLayout { */
+            /*     header: "Praca drużyny" */
+            /*     opis: "" */
+            /*     adres: "kacikInne.qml" */
+            /* } */
+            /*         KartaStronaNoLayout { */
+            /*           header: "Nabory" */
+            /*           opis: "" */
+            /*           adres: "blank.qml" */
+            /*           } */
+        }
     }
-/*        KartaStronaNoImage {
-        header: "Zbiórki"
-        opis: ""
-        adres: "blank.qml"
-} 
-        KartaStronaNoImage {
-        header: "Sprawności"
-        opis: ""
-        adres: "sprawnosci.qml"
-    }
-*/
-        KartaStronaNoImage {
-        header: "Praca drużyny"
-        opis: ""
-        adres: "kacikInne.qml"
-    }
-/*        KartaStronaNoImage {
-        header: "Nabory"
-        opis: ""
-        adres: "blank.qml"
-    }
-*/
-}
 }
