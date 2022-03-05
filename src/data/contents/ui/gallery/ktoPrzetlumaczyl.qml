@@ -36,25 +36,25 @@ HPSPage {
         ElementListyNoLayout
         {
             alignH: Text.AlignJustify
-            format: Text.PlainText
+            format: Text.StyledText
             color: "Black"
-            header: "Wszyscy wiemy, że \"Scouting for boys\" przetłumaczył Andrzej Małkowski, ale czy tylko on?
+            header: "Wszyscy wiemy, że \"Scouting for boys\" przetłumaczył Andrzej Małkowski, ale czy tylko on?<br><br>
 
-Pracę nad przetłumaczeniem książki w latach 1909-1910 trwały w trzech różnych ośrodkach: Lwowie, gdzie tłumaczeniem zajmował się Małkowski, Krakowie gdzie tłumaczeniem zajmował się Marian Stępowski i w Warszawie gdzie tłumaczył Bronisław Bouffał.
+Pracę nad przetłumaczeniem książki w latach 1909-1910 trwały w trzech różnych ośrodkach: Lwowie, gdzie tłumaczeniem zajmował się Małkowski, Krakowie gdzie tłumaczeniem zajmował się Marian Stępowski i w Warszawie gdzie tłumaczył Bronisław Bouffał.<br><br>
 
-Andrzej Małkowski rozpoczął prace w stycznia 1910 roku i zakończył je wydaniem w 1911 roku. Różne daty rozpoczęcia tłumaczenia podawane są w różnych opracowaniach.
+Andrzej Małkowski rozpoczął prace w stycznia 1910 roku i zakończył je wydaniem w 1911 roku. Różne daty rozpoczęcia tłumaczenia podawane są w różnych opracowaniach.<br><br>
 
-Podręcznik doczekał się również polskiej adaptacji pod tytułem \"Harce Młodzieży Polskiej\". Zostały napisane przez Eugeniusza Piaseckiego i Mieczysława Schreibera. Zastosowano tutaj inne nazewnictwo: skaut-harcerz, pluton-drużyna, patrol-zastęp. Prace zakończono na wiosnę 1911 jednak publikacje odsunięto na rok 1912, aby uniknąć zamieszania w nazewnictwie.
+Podręcznik doczekał się również polskiej adaptacji pod tytułem \"Harce Młodzieży Polskiej\". Zostały napisane przez Eugeniusza Piaseckiego i Mieczysława Schreibera. Zastosowano tutaj inne nazewnictwo: skaut-harcerz, pluton-drużyna, patrol-zastęp. Prace zakończono na wiosnę 1911 jednak publikacje odsunięto na rok 1912, aby uniknąć zamieszania w nazewnictwie.<br><br>
 
-Więcej na ten temat:
+Więcej na ten temat:<br><br>
 
-\"Sto lat harcerstwa\" Wojciech Hausner, Marek Wierzbicki
+\"Sto lat harcerstwa\" Wojciech Hausner, Marek Wierzbicki<br><br>
 
-https://przystanekhistoria.pl/pa2/tematy/mlodziez/76598,Prekursorzy-harcerstwa.html
+<a href=\"https://przystanekhistoria.pl/pa2/tematy/mlodziez/76598,Prekursorzy-harcerstwa.html\">https://przystanekhistoria.pl/pa2/tematy/mlodziez/76598,Prekursorzy-harcerstwa.html</a><br><br>
 
-Odpowiedź Druha Marka Popiela z kwartalnika historycznego Skaut.
+Odpowiedź Druha Marka Popiela z kwartalnika historycznego Skaut.<br><br>
 
-Andrzej Małkowski wbrew powszechnym opiniom nie przetłumaczył książki „Scouting for Boys”. Książka „Scouting jako system wychowania”, wydana w lipcu 1911 r. była streszczeniem konspektów zajęć prowadzonych przez niego na pierwszym kursie skautowym we Lwowie, rozpoczętym 20 marca 1911 r. Książkę Baden-Powella zamierzał A. Małkowski przetłumaczyć dopiero w 1913 r. W liście z 25 marca pisał do Wincentego Lutosławskiego: […] Dalej – chciałbym przetłumaczyć „textbook ” Baden-Powella – „Scouting for Boys” . Książka ta ma przeszło 400 stron, a jej spolszczenie musi być podstawą pracy, którą zamierzam. Będę w swoim czasie prosił Ojca o przeglądnięcie rękopisu tłumaczenia. Źródło: Andrzej Małkowski. Korespondencja 1911–1919
+Andrzej Małkowski wbrew powszechnym opiniom nie przetłumaczył książki „Scouting for Boys”. Książka „Scouting jako system wychowania”, wydana w lipcu 1911 r. była streszczeniem konspektów zajęć prowadzonych przez niego na pierwszym kursie skautowym we Lwowie, rozpoczętym 20 marca 1911 r. Książkę Baden-Powella zamierzał A. Małkowski przetłumaczyć dopiero w 1913 r. W liście z 25 marca pisał do Wincentego Lutosławskiego: […] Dalej – chciałbym przetłumaczyć „textbook ” Baden-Powella – „Scouting for Boys” . Książka ta ma przeszło 400 stron, a jej spolszczenie musi być podstawą pracy, którą zamierzam. Będę w swoim czasie prosił Ojca o przeglądnięcie rękopisu tłumaczenia. Źródło: Andrzej Małkowski. Korespondencja 1911–1919<br><br>
 
 zebrał i przypisami opatrzył Marek Popiel, Zakopane, 2018, s. 116."
         }
