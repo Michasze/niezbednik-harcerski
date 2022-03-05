@@ -25,19 +25,26 @@ HPSPage {
     title: "Iskra braterstwa"
     Controls.Pane
     {
-        ElementListyNoLayout {
-            color: "black"
-            format: Text.PlainText
-            alignH: Text.AlignJustify
-            header: "Miliardy lat temu w pewnej galaktyce świeciły piękne gwiazdy. Były one niesamowite i indywidualne. Cały kosmos - planety i odłamki skalne kręciły się właśnie wokół nich jednak one nie zwracały na nie większej uwagi. Były tak bardzo skupione na sobie. W którymś momencie zaczęło im czegoś brakować, czuły się bardzo osamotnione i bezużyteczne. Tak jakby ich wielomiliardowy żywot nie miał większego znaczenia we wszechświecie. Jedyne co miały to sławę i podziw, które budziły. Pewnego czasu jedna z gwiazd chciała podzielić się swoim ciepłem i wielką energią którą posiadała. W ten sposób ożywiła swoim ciepłem planety, które od tak dawna krążyły wokół niej. Wtedy poczuła się szczęśliwa.
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout {
+                color: "black"
+                format: Text.PlainText
+                alignH: Text.AlignJustify
+                header: "Miliardy lat temu w pewnej galaktyce świeciły piękne gwiazdy. Były one niesamowite i indywidualne. Cały kosmos - planety i odłamki skalne kręciły się właśnie wokół nich jednak one nie zwracały na nie większej uwagi. Były tak bardzo skupione na sobie. W którymś momencie zaczęło im czegoś brakować, czuły się bardzo osamotnione i bezużyteczne. Tak jakby ich wielomiliardowy żywot nie miał większego znaczenia we wszechświecie. Jedyne co miały to sławę i podziw, które budziły. Pewnego czasu jedna z gwiazd chciała podzielić się swoim ciepłem i wielką energią którą posiadała. W ten sposób ożywiła swoim ciepłem planety, które od tak dawna krążyły wokół niej. Wtedy poczuła się szczęśliwa.
 
 Jak się szybko okazało stała się wzorem dla innych gwiazd, które również zaczęły dzielić się swoim ciepłem i energią.
 
 Wkrótce całe układy gwiazd zaczęły ze sobą współpracować - tworząc na nieboskłonach piękne konstelacje.
 
-Ta iskra dobra rozpaliła płomień braterstwa również w innych galaktykach.
-
-Alicja Kowalska "
-        }
+Ta iskra dobra rozpaliła płomień braterstwa również w innych galaktykach."
+            }
+            ElementListyNoLayout {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header: "Alicja Kowalska"
+            }
         }
     }
+}
