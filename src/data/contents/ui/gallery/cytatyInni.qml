@@ -28,38 +28,8 @@ HPSPage
     {
         CytatAutor
         {
-            tresc: "“W świecie pełnym niepewności i niepokoju nasz Ruch błyszczy jak złoty łańcuch na ciemnym tle…”"
-            autor: "Lady Olave Baden-Powell"
-        }
-        CytatAutor
-        {
             tresc: "“Jesteśmy powołani do tego, żeby być oazą. Oaza jest znakiem nadziei na horyzoncie”"
             autor: "Phill Bosman"
-        }
-        CytatAutor
-        {
-           tresc: "“Wierność Ojczyźnie była i jest naczelnym prawem harcerskim.”"
-           autor: "Tadeusz Strumiłło"
-        }
-        CytatAutor
-        {
-           tresc: "“Ideał wychowawczy skautowy jest czynnikiem równowagi przez przenoszenie pierwiastka harmonii w świat ludzi i narodów.”"
-           autor: "Maria Kapiszewska"
-        }
-        CytatAutor
-        {
-           tresc: "“Nic nie znaczą słowa Przyrzeczenia, jeśli się wielokrotnie nie przełamały w pryzmacie codziennego życia.”"
-           autor: "Jadwiga Falkowska"
-        }
-        CytatAutor
-        {
-           tresc: "“Harcerz wie, że trzeba zawsze wytrwać i przetrwać, by nareszcie zwyciężyć, a nie tracić nadziei i nie mówić przedwcześnie, że wszystko stracone.”"
-           autor: "gen. Józef Haller"
-        }
-        CytatAutor
-        {
-           tresc: "“Przez braterstwo skautów do braterstwa narodów oto dewiza poczynań skautowych.”"
-           autor: "Antoni Olbromski"
         }
         CytatAutor
         {

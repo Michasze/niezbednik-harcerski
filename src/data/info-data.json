@@ -197,6 +197,36 @@ A drugie tu pół dla szczęścia zachowa.“<br>
 Za wolność – jest człowiekiem, nowym Boga tworem.“<br>
 <b>Kordian</b>"
                     ]
+                },
+                {
+                    "autor":"Lady Olave Baden-Powell",
+                    "zdjecie":"olave_baden_powell",
+                    "tresc": ["“W świecie pełnym niepewności i niepokoju nasz Ruch błyszczy jak złoty łańcuch na ciemnym tle…”"]
+                },
+                {
+                    "autor":"Antoni Olbromski",
+                    "zdjecie":"antoni_olbromski",
+                    "tresc": ["“Przez braterstwo skautów do braterstwa narodów oto dewiza poczynań skautowych.”"]
+                },
+                {
+                    "autor":"Jadwiga Falkowska",
+                    "zdjecie":"jadwiga_falkowska",
+                    "tresc": ["“Nic nie znaczą słowa Przyrzeczenia, jeśli się wielokrotnie nie przełamały w pryzmacie codziennego życia.”"]
+                },
+                {
+                    "autor":"Józef Haller",
+                    "zdjecie":"jozef_haller",
+                    "tresc": ["“Harcerz wie, że trzeba zawsze wytrwać i przetrwać, by nareszcie zwyciężyć, a nie tracić nadziei i nie mówić przedwcześnie, że wszystko stracone.”"]
+                },
+                {
+                    "autor":"Maria Kapiszewska",
+                    "zdjecie":"maria_kapiszewska",
+                    "tresc": ["“Ideał wychowawczy skautowy jest czynnikiem równowagi przez przenoszenie pierwiastka harmonii w świat ludzi i narodów.”"]
+                },
+                {
+                    "autor":"Tadeusz Strumiłło",
+                    "zdjecie":"strumillo",
+                    "tresc": ["“Wierność Ojczyźnie była i jest naczelnym prawem harcerskim.”"]
                 }
               ]
 }
