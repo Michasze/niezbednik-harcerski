@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,93 +17,45 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Najważniejsze daty"
-    ColumnLayout {
-        width: page.width
-	ElementListyNoImage
-	{
-           header: "<b>• 1857</b> Generał Robert Baden Powell urodził się 22 lutego"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1899</b> Bitwa o Mafeking"
-	}
-	ElementListyNoImage
-	{
-           header: "<b>• 1907</b> Pierwszy obóz skautowy na wyspie Brownsea"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1908</b> Wydanie książki “Scouting for boys”"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1909</b> Na ziemiach polskich powstają pierwsze drużyny skautowe"
-	}
-	ElementListyNoImage
-	{
-           header: "<b>• 1909</b> Andrzej Małkowski przetłumaczył “Scouting for boys“"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1918</b> listopad 1-2 założenie ZHP"
-	}
-	ElementListyNoImage
-	{
-           header: "<b>• 1939</b> wrzesień 1 wybuch II Wojny Światowej"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1939</b> wrzesień 17 Związek Radziecki atakuje Polskę"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1939</b> wrzesień 27 przejście harcerstwa do konspiracji i przyjęcie kryptonimu Szare Szeregi"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1943</b> marzec 26 Akcja pod Arsenałem “Meksyk II”"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1944</b> sierpień 1 - październik 3 Powstanie Warszawskie"
-	}
-        ElementListyNoImage
-	{
-           header: "<b>• 1945</b> styczeń 18 Szare Szeregi zostają rozwiązane przez Floriana Marciniaka"
-	}
-       ElementListyNoImage
-	{
-           header: "<b>• 1947</b> usunięcie ZHP ze struktur WOSM i WAGGGS"
-	}
-       ElementListyNoImage
-	{
-           header: "<b>• 1950</b> bezprawne wcielenie ZHP do Związku Młodzieży Polskiej"
-	}
-       ElementListyNoImage
-	{
-           header: "<b>• 1956</b> przywrócenie działalności ZHP"
-	}
-       ElementListyNoImage
-	{
-           header: "<b>• 1958</b> utworzenie Nieprzetartego Szlaku"
-	}
-       ElementListyNoImage
-	{
-           header: "<b>• 1980</b> powstanie Krąg Instruktorów Harcerskich im. Andrzeja Małkowskiego"
-	}
-       ElementListyNoImage
-	{
-           header: "<b>• 1989</b> powstanie ZHR i ZHP-1918"
-	}
-
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            Repeater {
+                model: ["Narodziny Generała Roberta Baden Powella <b>22 lutego 1857</b>",
+                        "Bitwa o Mafeking <b>1899</b>",
+                        "Pierwszy obóz skautowy na wyspie Brownsea <b>1907</b>",
+                        "Wydanie książki “Scouting for boys” <b>1908</b>",
+                        "Powstanie pierwszych drużyn skautowych na ziemiach polskich <b>1909</b>",
+                        "Andrzej Małkowski przetłumaczył “Scouting for boys” <b>1909</b>",
+                        "Pierwsza Wojna Światowa <b>1914-1918</b>",
+                        "Założenie Związku Harcerstwa Polskiego <b>1-2 listopada 1918</b>",
+                        "Powstanie World Organization of the Scout Movement (WOSM) <b>1922</b>",
+                        "Powstanie World Association of Girl Guides and Girl Scouts (WAGGGS) <b>1928</b>",
+                        "Jubileuszowy Zlot w Spale <b>1935</b>",
+                        "Wybuch II Wojny Światowej 1-ego września <b>1939</b>",
+                        "Atak Związku Radzieckiego na Polskę <b>17 września 1939</b>",
+                        "Przejście harcerstwa do konspiracji <b>27 września 1939</b>",
+                        "Przyjęcie przez konspiracyjne harcerstwo kryptonimu Szare Szeregi <b>1940</b>",
+                        "Akcja pod Arsenałem “Meksyk II” <b>26 marca 1943</b>",
+                        "Powstanie Warszawskie <b>od 1 sierpnia do 3 października 1944</b>",
+                        "Rozwiązanie Szarych Szeregów przez naczelnika Floriana Marciniaka <b>18 stycznia 1945</b>",
+                        "Usunięcie ZHP ze struktur WOSM i WAGGGS <b>1947</b>",
+                        "Bezprawne wcielenie ZHP do Związku Młodzieży Polskiej <b>1950</b>",
+                        "Przywrócenie działalności ZHP <b>1956</b>",
+                        "Utworzenie Nieprzetartego Szlaku <b>1958</b>",
+                        "Powstanie Kręgu Instruktorów Harcerskich im. Andrzeja Małkowskiego <b>1980</b>",
+                        "Powstanie ZHR I ZHP-1918 <b>1989</b>"]
+                delegate: ElementListyNoLayout {
+                    header: "• " + modelData
+                }
             }
- 
-    
+        }
+    }
 }
