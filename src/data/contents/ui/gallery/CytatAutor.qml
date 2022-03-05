@@ -21,48 +21,44 @@ import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
 import Data 1.0
 
- HPSLista {
-       Clipboard
-     {
-       id: clipboard
-     }
-     height: label1.height + label2.height + 10
-     background: Rectangle {
-         color: "transparent"
-         border.color: "white"
-         border.width: 1
-     }
-     separatorVisible: false
-
-            id: listItem1
-property string tresc: "Brak treści"
-property string autor: "Brak autora"
-Layout.fillHeight: true
-      onPressAndHold:
-      {
-      clipboard.paste = listItem1.tresc + "\n" + listItem1.autor
-      showPassiveNotification("Cytat skopiowany do schowka", 2000)
-      }
-
-                contentItem: ColumnLayout
-                             {
-                               Controls.Label {
-                                   id: label1
-    wrapMode: Text.WordWrap
-    color: invisibleCheckbox.checked ? "white" : "black"
-    Layout.alignment: Qt.AlignHCenter
-    textFormat: Text.StyledText
-    Layout.fillWidth: true
+HPSLista {
+    Clipboard {
+        id: clipboard
+    }
+    height: label1.height + label2.height + 20
+    background: Rectangle {
+        color: "transparent"
+        border.color: "white"
+        border.width: 1
+    }
+    separatorVisible: false
+    id: listItem1
+    property string tresc: "Brak treści"
+    property string autor: "Brak autora"
+    Layout.fillHeight: true
+    onPressAndHold:
+    {
+        clipboard.paste = listItem1.tresc + "\n" + listItem1.autor
+        showPassiveNotification("Cytat skopiowany do schowka", 2000)
+    }
+    contentItem: ColumnLayout
+    {
+        Controls.Label {
+            id: label1
+            wrapMode: Text.WordWrap
+            color: invisibleCheckbox.checked ? "white" : "black"
+            Layout.alignment: Qt.AlignHCenter
+            textFormat: Text.StyledText
+            Layout.fillWidth: true
             text: listItem1.tresc 
-             }
-                                 Controls.Label {
-                                     id: label2
-    wrapMode: Text.WordWrap
-    color: invisibleCheckbox.checked ? "white" : "black"
-    horizontalAlignment: Text.AlignRight
-    Layout.fillWidth: true
-            text: listItem1.autor 
-             }
-
-                             }
-        }  
+        }
+        Controls.Label {
+            id: label2
+            wrapMode: Text.WordWrap
+            color: invisibleCheckbox.checked ? "white" : "black"
+            horizontalAlignment: Text.AlignRight
+            Layout.fillWidth: true
+            text: listItem1.autor
+        }
+    }
+}
