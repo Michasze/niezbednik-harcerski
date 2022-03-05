@@ -313,7 +313,7 @@ może ulec zmianie."
                 onClicked:
                 {
                     var trescListy = "";
-                    var lista=pageStack.currentItem.contentItem.contentItem
+                    var lista=pageStack.currentItem.contentItem.contentItem.contentItem.children[0]
                     if (lista.children)
                     {
                         for (var i = 0; i < lista.children.length; ++i)
