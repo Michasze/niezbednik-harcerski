@@ -44,6 +44,12 @@
         <file alias="contents/ui/img/mickiewicz.jpg">./data/contents/ui/img/mickiewicz.jpg</file>
         <file alias="contents/ui/img/slowacki.jpg">./data/contents/ui/img/slowacki.jpg</file>
         <file alias="contents/ui/img/grodecka.jpg">./data/contents/ui/img/grodecka.jpg</file>
+        <file alias="contents/ui/img/olave_baden_powell.jpg">./data/contents/ui/img/olave_baden_powell.jpg</file>
+        <file alias="contents/ui/img/antoni_olbromski.jpg">./data/contents/ui/img/antoni_olbromski.jpg</file>
+        <file alias="contents/ui/img/jadwiga_falkowska.jpg">./data/contents/ui/img/jadwiga_falkowska.jpg</file>
+        <file alias="contents/ui/img/jozef_haller.jpg">./data/contents/ui/img/jozef_haller.jpg</file>
+        <file alias="contents/ui/img/maria_kapiszewska.jpg">./data/contents/ui/img/maria_kapiszewska.jpg</file>
+        <file alias="contents/ui/img/strumillo.jpg">./data/contents/ui/img/strumillo.jpg</file>
         <file alias="contents/ui/img/kamien.jpg">./data/contents/ui/img/kamien.jpg</file>
         <file alias="contents/ui/img/ktoPrzetlumaczyl.jpg">./data/contents/ui/img/ktoPrzetlumaczyl.jpg</file>
         <file alias="contents/ui/img/oHZNP_Mundury.jpg">./data/contents/ui/img/oHZNP_Mundury.jpg</file>
