@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,37 +17,36 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
+import Filter 1.0
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Poradniki dla zastępowych"
-    ColumnLayout {
-        id: mainlayout
- Controls.Label {
-            Layout.fillWidth: true
-            wrapMode: Text.WordWrap
-            font.pointSize: invisibleSlider.value
-            text: "Opracowanie: Kinga Żeglińska HO"
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout {
+                header: "Opracowanie: Kinga Żeglińska HO"
+                color: "black"
+            }
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("poradniki dla zastępowych"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
+            }
         }
-        
-    
-
-KartaStronaIkona {
-        header: "Poradnik dla zastępowych zastępów starszoharcerskich"
-        opis: ""
-        ikona: "qrc:/contents/ui/img/HS.svg"
-        adres: "PoradnikHS.qml"
     }
-
-    KartaStronaIkona {
-        header: "Poradnik dla zastępowych zastępów wędrowniczych"
-        opis: ""
-        ikona: "qrc:/contents/ui/img/Wedro.svg"
-        adres: "PoradnikWedro.qml"
-    }
-}
 }

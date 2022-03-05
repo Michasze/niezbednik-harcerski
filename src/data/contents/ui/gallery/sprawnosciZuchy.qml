@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,22 +17,15 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.2
-
+import QtQuick 2.15
 
 HPSPage {
     id: page
     title: qsTr("Sprawności dla zuchów")
-
-
-ColumnLayout
-{
-KartaStronaIkona {
+    KartaStronaNoLayout {
         ikona: "qrc:/contents/ui/img/lesny.svg"
         header: "Leśny ludź"
         opis: "Autor: sam. Klara Świątek"
         adres: "lesnyLudz.qml"
     }
-        }
-    }
+}
