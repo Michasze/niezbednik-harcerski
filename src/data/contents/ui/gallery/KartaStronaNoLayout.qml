@@ -43,7 +43,6 @@ Rectangle {
     }
     Image {
         id: img
-        asynchronous: true
         sourceSize.width: kartaRectangle.height - 30
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
