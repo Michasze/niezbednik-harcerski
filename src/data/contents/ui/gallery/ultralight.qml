@@ -96,7 +96,7 @@ I chyba w tym wstępie zawiera się cały problem ultralightowego wędrowania. Z
             ElementListyNoImage
             {
                 color: "cornflowerblue"
-                header: "Kup filtr"
+                header: "Kup filtr."
             }
             ElementListyNoImage
             {
