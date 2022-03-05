@@ -30,7 +30,7 @@ HPSPage
             HPSImage
             {
                 id: autor
-                width: isHorizontal ? page.height / 2 : page.width / 2
+                width: isHorizontal ? page.height / 2 : page.width / 1.5
                 source: "image://images/ekosystem.jpg,10"
             }
             ElementListyNoLayout
