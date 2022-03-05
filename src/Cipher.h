@@ -3,7 +3,6 @@
 
 #include <QObject>
 #include <QString>
-#include <QVariantMap>
 #include <QMap>
 
 class Cipher : public QObject

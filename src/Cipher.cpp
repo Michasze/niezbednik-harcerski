@@ -1,8 +1,4 @@
 #include "Cipher.h"
-#include <QDebug>
-#include <QFile>
-#include <QVariantMap>
-#include <QMap>
 
 Cipher::Cipher(QObject *parent)
     : QObject(parent)
