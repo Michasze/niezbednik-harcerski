@@ -19,6 +19,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
+import QtQuick.Layouts 1.2
 
 Rectangle {
     property string header: "Brak tekstu"
@@ -41,57 +42,52 @@ Rectangle {
             pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
         }
     }
-    Image {
-        id: img
-        sourceSize.width: kartaRectangle.height - 30
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        anchors.topMargin: 15
-        anchors.bottomMargin: 15
-        source: isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius
-    }
-    Item {
-        height: parent.height
-        width: parent.width - img.width - 20
-        anchors.right: parent.right
-        Controls.Label {
-            id: naglowek
-            wrapMode: Text.Wrap
-            font.pointSize: invisibleSlider.value
-            text: kartaRectangle.header
-            anchors.bottom: bar.top
-            anchors.bottomMargin: 5
-            anchors.topMargin: 5
-            anchors.right: parent.right
-            anchors.rightMargin: 10
-            anchors.leftMargin: 10
-            width: parent.width - 20
-        }
-        HPSSeparator {
-            id: bar
-            width: parent.width - 10
-            anchors.centerIn: parent
-            anchors.rightMargin: 10
-            color: "#615f5f"
-        }
-        Item {
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
-            anchors.rightMargin: 10
-            anchors.leftMargin: 15
-            anchors.topMargin: 10
-            anchors.bottomMargin: 10
-            anchors.top: bar.bottom
-            height: kartaRectangle.height
-            width: parent.width - 10
-            Controls.Label {
-                wrapMode: Text.Wrap
-                anchors.centerIn: parent
-                font.pointSize: invisibleSlider.value - 2
-                width: parent.width - 10
-                text: kartaRectangle.opis
-            }
-        }
-    }
+                GridLayout {
+                    id: hznpLayout
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                        //IMPORTANT: never put the bottom margin
+                    }
+                    Image {
+                        id: img
+                        visible: source != ""
+                        Layout.leftMargin: 10
+                        Layout.topMargin: 10
+                        Layout.bottomMargin: 10
+                        Layout.fillWidth: false
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+                        source: isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius
+                        sourceSize.width: kartaRectangle.height - 20
+                    }
+
+
+                    ColumnLayout {
+                        Controls.Label {
+                            id: naglowek
+                            wrapMode: Text.Wrap
+                            Layout.topMargin: img.visible ? 0 : 10
+                            Layout.rightMargin: 10
+                            Layout.leftMargin: 10
+                            font.pointSize: invisibleSlider.value
+                            Layout.fillWidth: true
+                             text: kartaRectangle.header
+                        }
+                        HPSSeparator {
+                            Layout.fillWidth: true
+                            color: "#615f5f"
+                            Layout.rightMargin: 10
+                        }
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            wrapMode: Text.Wrap
+                            Layout.rightMargin: 10
+                            Layout.leftMargin: 10
+                            font.pointSize: invisibleSlider.value - 2
+                            Layout.bottomMargin: 10
+                            text: kartaRectangle.opis
+                        }
+                    }
+               }
 }
