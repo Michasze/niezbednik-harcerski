@@ -59,7 +59,7 @@ Organizacja działała prawdopodobnie jeszcze w czasach po II Wojnie Światowej,
 Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospolitej. <br>"
                 }
                 Image {
-                    source: "image://images/oHZNP.jpg"
+                    source: "image://images/oHZNP.jpg,10"
                     sourceSize.width: isHorizontal ? page.width / 2 : page.width - 50
                     width: isHorizontal ? page.width / 2 : page.width - 50
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -92,7 +92,7 @@ Harcerze przed szałasem. Na lewym rękawie mundurów naszywki z emblematem \"Ha
 Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospolitej."
                 }
                 Image {
-                    source: "image://images/oHZNP_Mundury.jpg"
+                    source: "image://images/oHZNP_Mundury.jpg,10"
                     sourceSize.width: isHorizontal ? page.width / 2 : page.width - 50
                     width: isHorizontal ? page.width / 2 : page.width - 50
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -124,7 +124,7 @@ Informacje zaczerpnięte ze strony czasopisma internetowego Harcerz Rzeczypospol
 "
                 }
                 Image {
-                    source: "image://images/oHZNP_kursy.jpg"
+                    source: "image://images/oHZNP_kursy.jpg,10"
                     sourceSize.width: isHorizontal ? page.height / 3 : page.width / 2
                     width: isHorizontal ? page.width / 3 : page.width / 2
                     anchors.horizontalCenter: parent.horizontalCenter
