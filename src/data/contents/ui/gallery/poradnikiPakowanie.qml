@@ -24,7 +24,7 @@ import Filter 1.0
 HPSPage {
     id: page
     title: "Pakowanie"
-    Controls.Label {
+    Controls.Pane {
         Column {
             anchors.fill: parent
             spacing: 10
