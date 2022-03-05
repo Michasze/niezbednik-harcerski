@@ -26,6 +26,7 @@
         <file alias="contents/ui/gallery/CytatAutor.qml">./data/contents/ui/gallery/CytatAutor.qml</file>
         <file alias="contents/ui/gallery/Cytat.qml">./data/contents/ui/gallery/Cytat.qml</file>
         <file alias="contents/ui/gallery/PromisePane.qml">./data/contents/ui/gallery/PromisePane.qml</file>
+        <file alias="contents/ui/gallery/i18n/translation_ua.qm">./data/contents/ui/gallery/i18n/translation_ua.qm</file>
         <file alias="contents/ui/img/skaut.jpg">./data/contents/ui/img/skaut.jpg</file>
         <file alias="contents/ui/img/oHZNP.jpg">./data/contents/ui/img/oHZNP.jpg</file>
         <file alias="contents/ui/img/Andrzej_Malkowski.jpg">./data/contents/ui/img/Andrzej_Malkowski.jpg</file>
@@ -81,6 +82,8 @@
         <file alias="contents/ui/img/Stanislaw_skalski.jpg">./data/contents/ui/img/Stanislaw_skalski.jpg</file>
         <file alias="contents/ui/img/Stanislaw_skalski2.jpg">./data/contents/ui/img/Stanislaw_skalski2.jpg</file>
         <file alias="contents/ui/img/fotograficzna.jpg">./data/contents/ui/img/fotograficzna.jpg</file>
+        <file alias="contents/ui/img/poland.svg">./data/contents/ui/img/poland.svg</file>
+        <file alias="contents/ui/img/ukraine.svg">./data/contents/ui/img/ukraine.svg</file>
         <file alias="contents/ui/img/geo.jpg">./data/contents/ui/img/geo.jpg</file>
         <file alias="contents/ui/img/geo2.svg">./data/contents/ui/img/geo2.svg</file>
         <file alias="contents/ui/img/ekosystem.jpg">./data/contents/ui/img/ekosystem.jpg</file>

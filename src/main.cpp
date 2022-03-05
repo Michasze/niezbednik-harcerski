@@ -19,6 +19,7 @@
 
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
+#include <QQmlContext>
 #include "Cipher.h"
 #include "Decipher.h"
 #include "Clipboard.h"
@@ -30,6 +31,7 @@
 #include "HPSImage.h"
 #include "HPSDatabase.h"
 #include "HPSCardModel.h"
+#include "HPSTranslate.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -65,6 +67,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qputenv("QT_QUICK_CONTROLS_MATERIAL_THEME", "Dark");
     //Extra debug if needed
     //qputenv("QML_IMPORT_TRACE", "1");
+    HPSTranslate translate;
     QQmlApplicationEngine engine;
 
     qmlRegisterType<Cipher>("Cipher", 1, 0, "Cipher");
@@ -78,6 +81,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<HPSCardModel>("HPSCardModel", 1, 0, "HPSCardModel");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
+    engine.rootContext()->setContextProperty("HPSTranslate", &translate);
+    engine.rootContext()->setContextProperty("engine", &engine);
     //we want different main files on desktop or mobile
     //very small difference as they as they are subclasses of the same thing
     if (qEnvironmentVariableIsSet("QT_QUICK_CONTROLS_MOBILE") &&

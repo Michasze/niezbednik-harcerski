@@ -43,113 +43,113 @@ Kirigami.ScrollablePage {
     rightPadding: 0
     bottomPadding: 0
     topPadding: 0
-    title: qsTr("Niezbędnik Harcerski")
+    title: "Niezbędnik Harcerski"
     ListModel {
         id: galleryModel
         ListElement {
-            title: "Historia"
+            title: qsTr("Historia")
             targetPage: "gallery/Historyczne.qml"
             img: "image://icons/krzyz.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Pomysły na zbiórki"
+            title: qsTr("Pomysły na zbiórki")
             targetPage: "gallery/Pomysly.qml"
             img: "image://icons/zarowka.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Poradniki harcerskie"
+            title: qsTr("Poradniki harcerskie")
             targetPage: "gallery/harcerskie.qml"
             img: "image://icons/ognisko.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Szyfry"
+            title: qsTr("Szyfry")
             targetPage: "gallery/szyfry.qml"
             img: "image://icons/szyfry.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Symbolika"
+            title: qsTr("Symbolika")
             targetPage: "gallery/symbolika.qml"
             img: "image://icons/wosm.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Cytaty"
+            title: qsTr("Cytaty")
             targetPage: "gallery/cytaty.qml"
             img: "image://icons/cytaty.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Książki"
+            title: qsTr("Książki")
             targetPage: "gallery/ksiazki.qml"
             img: "image://icons/ksiazki.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Filmy"
+            title: qsTr("Filmy")
             targetPage: "gallery/filmy.qml"
             img: "image://icons/filmy.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Śpiewnik"
+            title: qsTr("Śpiewnik")
             targetPage: "gallery/Spiewniki.qml"
             img: "image://icons/spiewnik.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Artykuły"
+            title: qsTr("Artykuły")
             targetPage: "gallery/Artykuly.qml"
             img: "image://icons/Artykuly.svg"
             kolor: ",white"
         }
         ListElement {
-            title: "Poradnik zastępowego"
+            title: qsTr("Poradnik zastępowego")
             targetPage: "gallery/Poradniki.qml"
             img: "image://icons/sznur.svg"
             kolor: ",#574136"
         }
         ListElement {
-            title: "Poradniki wyboru sprzętu"
+            title: qsTr("Poradniki wyboru sprzętu")
             targetPage: "gallery/Sprzet.qml"
             kolor: ",white"
             img: "image://icons/sprzet.svg"
         }
         ListElement {
-            title: "Kącik drużynowego"
+            title: qsTr("Kącik drużynowego")
             targetPage: "gallery/poradnikiDruzynowy.qml"
             img: "image://icons/sznur.svg"
             kolor: ",#0000cd"
         }
         ListElement {
-            title: "Listy rzeczy do spakowania"
+            title: qsTr("Listy rzeczy do spakowania")
             kolor: ",white"
             targetPage: "gallery/poradnikiPakowanie.qml"
             img: "image://icons/plecak.svg"
         }
         ListElement {
-            title: "Stopnie harcerskie"
+            title: qsTr("Stopnie harcerskie")
             kolor: ",white"
             img: "image://icons/hrS.svg"
             targetPage: "gallery/stopnie.qml"
         }
         ListElement {
-            title: "Prawo harcerskie"
+            title: qsTr("Prawo harcerskie")
             kolor: ",white"
             img: "image://icons/zwoj.svg"
             targetPage: "gallery/prawo.qml"
         }
         ListElement {
-            title: "Roty Przyrzeczenia"
+            title: qsTr("Roty Przyrzeczenia")
             kolor: ",white"
             img: "image://icons/zwoj.svg"
             targetPage: "gallery/przyrzeczenia.qml"
         }
         ListElement {
-            title: "Gawędy"
+            title: qsTr("Gawędy")
             kolor: ",white"
             targetPage: "gallery/gawedy.qml"
             img: "image://icons/ognisko.svg"
@@ -189,7 +189,7 @@ Kirigami.ScrollablePage {
             Controls.TextField {
                 id: searchField
                 inputMethodHints: Qt.ImhNoPredictiveText
-                placeholderText: "Szukaj..."
+                placeholderText: qsTr("Szukaj...")
                 leftPadding: 10
                 color: "White"
                 placeholderTextColor: "White"

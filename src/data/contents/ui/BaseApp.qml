@@ -101,9 +101,66 @@ Kirigami.ApplicationWindow {
 Witaj w premierowej wersji Niezbędnika Harcerskiego. Pamiętaj, że jest to wczesna wersja i wiele elementów
 może ulec zmianie."
             }
+            ElementListyNoImage {
+                Layout.alignment: Qt.AlignHCenter
+                color: "black"
+                header: "Wybór języka:"
+            }
+            Controls.RadioButton
+            {
+                id: control
+                checked: true
+                Layout.alignment: Qt.AlignHCenter
+                text: "polski"
+                contentItem: Row {
+                    spacing: 5
+                    Controls.Label {
+                        id: label
+                        text: control.text
+                        opacity: enabled ? 1.0 : 0.3
+                        color: control.checked ? "white" : "grey"
+                        font.pointSize: invisibleSlider.value
+                        verticalAlignment: Text.AlignVCenter
+                        leftPadding: control.indicator.width + control.spacing
+                    }
+                    Image {
+                        source: "qrc:/contents/ui/img/poland.svg"
+                        height: label.height
+                        fillMode: Image.PreserveAspectFit
+                    }
+                }
+                onClicked: HPSTranslate.selectLanguage("pl")
+            }
+            Controls.RadioButton
+            {
+                id: control2
+                Layout.alignment: Qt.AlignHCenter
+                text: "Українська"
+                contentItem: Row {
+                    spacing: 5
+                    Controls.Label {
+                        id: label2
+                        text: control2.text
+                        opacity: enabled ? 1.0 : 0.3
+                        color: control2.checked ? "white" : "grey"
+                        font.pointSize: invisibleSlider.value
+                        verticalAlignment: Text.AlignVCenter
+                        leftPadding: control2.indicator.width + control2.spacing
+                    }
+                    Image {
+                        source: "qrc:/contents/ui/img/ukraine.svg"
+                        height: label2.height
+                        fillMode: Image.PreserveAspectFit
+                    }
+                }
+                onClicked: {
+                    HPSTranslate.selectLanguage("ua");
+                    engine.retranslate();
+                }
+            }
             Controls.CheckBox
             {
-                text: qsTr("Nie pokazuj więcej")
+                text: "Nie pokazuj więcej"
                 onToggled:
                 {
                     hpsSettings.neverShowIsToggled = true
@@ -112,7 +169,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: qsTr("Przejdź dalej")
+                text: "Przejdź dalej"
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
@@ -154,7 +211,7 @@ może ulec zmianie."
 
             Controls.CheckBox
             {
-                text: qsTr("Nie pokazuj więcej")
+                text: "Nie pokazuj więcej"
                 onToggled:
                 {
                     hpsSettings.neverShow2IsToggled = true
@@ -163,7 +220,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: qsTr("Uruchom aplikację")
+                text: "Uruchom aplikację"
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
@@ -199,7 +256,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: qsTr("Przejdź dalej")
+                text: "Przejdź dalej"
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
@@ -237,7 +294,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: qsTr("Przejdź dalej")
+                text: "Przejdź dalej"
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
@@ -253,7 +310,7 @@ może ulec zmianie."
     Controls.Action
     {
         id: powrotAction
-        text: qsTr("Powrót")
+        text: "Powrót"
         shortcut: "Backspace"
         onTriggered: {
             if (pageStack.layers.depth == 1 && pageStack.depth > 1)
@@ -368,8 +425,8 @@ może ulec zmianie."
             spacing: 10
             ListModel {
                 id: drawerModel
-                ListElement { opis: "O aplikacji"; warstwa: "gallery/oProgramie.qml"; icon: "image://icons/documentinfo.svg,white" }
-                ListElement { opis: "Social media"; warstwa: "gallery/social.qml"; icon: "image://icons/snapchat_symbolic.svg,white" }
+                ListElement { opis: qsTr("O aplikacji"); warstwa: "gallery/oProgramie.qml"; icon: "image://icons/documentinfo.svg,white" }
+                ListElement { opis: qsTr("Social media"); warstwa: "gallery/social.qml"; icon: "image://icons/snapchat_symbolic.svg,white" }
                 ListElement { opis: "Testerzy"; warstwa: "gallery/testerzy.qml"; icon: "image://icons/user.svg,white" }
                 ListElement { opis: "Pomocne dłonie"; warstwa: "gallery/pomocni.qml"; icon: "image://icons/hand.svg,white" }
                 ListElement { opis: "Ustawienia"; warstwa: "gallery/ustawienia.qml"; icon: "image://icons/settings.svg,white" }
