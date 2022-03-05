@@ -44,9 +44,10 @@ Rectangle {
         width: parent.width
         anchors.centerIn: parent
         font.pointSize: cardRectangle.textSize
-        rightPadding: 20
-        leftPadding: 20
+        rightPadding: 10
+        leftPadding: 10
         textFormat: cardRectangle.format
         text: cardRectangle.header
+        onLinkActivated: Qt.openUrlExternally(link)
     }
 }
