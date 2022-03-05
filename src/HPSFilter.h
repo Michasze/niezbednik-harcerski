@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
+ *   Copyright 2022 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
  *   Based on KItemModels source code
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -34,6 +34,7 @@ class HPSFilter : public QSortFilterProxyModel, public QQmlParserStatus
     Q_PROPERTY(QAbstractItemModel *sourceModel READ sourceModel WRITE setModel NOTIFY sourceModelChanged)
     Q_PROPERTY(QString filterRole READ filterRole WRITE setFilterRole NOTIFY filterRoleChanged)
     Q_PROPERTY(QString sortRole READ sortRole WRITE setSortRole NOTIFY sortRoleChanged)
+    Q_PROPERTY(QString secondRole READ secondRole WRITE setSecondRole NOTIFY secondRoleChanged)
     Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE setSortOrder NOTIFY sortOrderChanged)
     Q_PROPERTY(int sortColumn READ sortColumn WRITE setSortColumn NOTIFY sortColumnChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY rowCountChanged)
@@ -51,6 +52,9 @@ public:
     void setSortRole(const QString &role);
     QString sortRole() const;
 
+    void setSecondRole(const QString &role);
+    QString secondRole() const;
+
     void setSortOrder(const Qt::SortOrder order);
     void setSortColumn(int column);
 
@@ -64,6 +68,7 @@ Q_SIGNALS:
     void filterStringChanged();
     void filterRoleChanged();
     void sortRoleChanged();
+    void secondRoleChanged();
     void sortOrderChanged();
     void sortColumnChanged();
     void sourceModelChanged(QObject *);
@@ -73,6 +78,7 @@ Q_SIGNALS:
 
 protected:
     int roleNameToId(const QString &name) const;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 protected Q_SLOTS:
     void syncRoleNames();
@@ -82,6 +88,7 @@ private:
     QString m_filterRole;
     QString m_filterString;
     QString m_sortRole;
+    QString m_secondRole;
     QJSValue m_filterRowCallback;
     QJSValue m_filterColumnCallback;
     QHash<QString, int> m_roleIds;

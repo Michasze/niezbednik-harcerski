@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.11 as Kirigami
 import Data 1.0
 import Filter 1.0
+import HPSCardModel 1.0
 import "gallery"
 
 Kirigami.ScrollablePage {
@@ -30,6 +31,9 @@ Kirigami.ScrollablePage {
     HPSSettings
     {
         id: hpsSettings
+    }
+    HPSCardModel {
+        id: hpsModel
     }
     background: Rectangle {
         anchors.fill: parent
@@ -40,84 +44,6 @@ Kirigami.ScrollablePage {
     bottomPadding: 0
     topPadding: 0
     title: qsTr("Niezbędnik Harcerski")
-    ListModel {
-        id: searchModel
-        ListElement {
-            title: "Harcerstwo Związku Narodowego Polskiego"
-            tags: "HZNP, historyczne, organizacje, ciekawostki"
-            targetPage: "gallery/HZNP.qml"
-        }
-        ListElement {
-            title: "Zbiórki w terenie"
-            tags: "artykuły, terenie, zbiórki"
-            targetPage: "gallery/zbiorkiWTerenie.qml"
-        }
-        ListElement {
-            title: "Księga szyfrów - szyfr Bacona"
-            tags: "szyfry, księga, bacon"
-            targetPage: "gallery/malaKsiega/bacon.qml"
-        }
-        ListElement {
-            title: "Szyfrator - szyfr Bacona"
-            tags: "szyfry, szyfrator, bacon"
-            targetPage: "gallery/szyfrator/bacon.qml"
-        }
-        ListElement {
-            title: "Harcerz - skąd pochodzi ten wyraz?"
-            tags: "harcerz, historyczne, ciekawostki, wyraz"
-            targetPage: "gallery/harcerz.qml"
-        }
-        ListElement {
-            title: "Zlot ZHP w Spale"
-            tags: "Spała, ZHP, ciekawostki, zlot"
-            targetPage: "gallery/spala.qml"
-        }
-        ListElement {
-            title: "Kamień pamiątkowy ku czci poległych harcerzy"
-            tags: "kamień, pamiątkowy, ciekawostki, czci, poległych, Wrocław"
-            targetPage: "gallery/kamien.qml"
-        }
-        ListElement {
-            title: "Wyjątkowe krzyże harcerskie"
-            tags: "wyjątkowe, krzyże, harcerskie, historyczne, ciekawostki"
-            targetPage: "gallery/wyjatkowe.qml"
-        }
-        ListElement {
-            title: "Dzień Myśli braterskiej"
-            tags: "DMB, święto, dzień, myśli, braterskiej, historyczne, ciekawostki"
-            targetPage: "gallery/DMB.qml"
-        }
-        ListElement {
-            title: "Najważniejsze daty w historii harcerstwa"
-            tags: "daty, najważniejsze, Brownsea, 1907, historyczne, ciekawostki"
-            targetPage: "gallery/daty.qml"
-        }
-        ListElement {
-            title: "Dawne roty przyrzeczenia"
-            tags: "dawne, przyrzeczenie, roty, historyczne, ciekawostki"
-            targetPage: "gallery/histPrzyrzeczenia.qml"
-        }
-        ListElement {
-            title: "Historyczne prawa harcerskie"
-            tags: "dawne, prawo, harcerskie, historyczne, ciekawostki"
-            targetPage: "gallery/histPrawa.qml"
-        }
-        ListElement {
-            title: "Lista znanych osób, które były w harcerstwie"
-            tags: "lista, znani, ludzie, historyczne, ciekawostki"
-            targetPage: "gallery/histPrawa.qml"
-        }
-        ListElement {
-            title: "Zbiórka fotograficzna"
-            tags: "zbiórka, pomysły, fotograf, zdjęcia"
-            targetPage: "gallery/fotograficzna.qml"
-        }
-        ListElement {
-            title: "Ekosystem w słoiku"
-            tags: "słoik, ekosystem, rośliny, zbiórka, pomysł"
-            targetPage: "gallery/ekosystem.qml"
-        }
-    }
     ListModel {
         id: galleryModel
         ListElement {
@@ -274,32 +200,33 @@ Kirigami.ScrollablePage {
     }
     HPSFilter {
         id: filteredModel
-        sourceModel: searchModel
-        filterRole: "tags"
+        sourceModel: hpsModel
+        filterRole: "HeaderRole"
+        secondRole: "category"
         filterRegularExpression: {
             if (searchField.text === "") return new RegExp()
             return new RegExp("%1".arg(searchField.text), "i")
         }
     }
-    ColumnLayout {
-        spacing: 0
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+        spacing: 10
         Repeater {
             focus: true
             visible: searchField.text === "" ? false : true
             model: searchField.text === "" ? 0 : filteredModel
-            delegate: ElementListyNoImage {
-                header: title
-                textSize: invisibleSlider.value + 2
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: pageStack.push(Qt.resolvedUrl(targetPage))
-                }
+            delegate: KartaStronaNoLayout {
+                header: model.header
+                ikona: model.image
+                opis: model.category
+                adres: "gallery/" + model.address
             }
         }
         GridLayout {
             columns: 2
-            Layout.alignment: Qt.AlignHCenter
-            visible: !root.pageStack.wideMode
+            anchors.horizontalCenter: parent.horizontalCenter
+            visible: !root.pageStack.wideMode && searchField.text === ""
             Repeater {
                 focus: true
                 model: galleryModel
@@ -313,6 +240,7 @@ Kirigami.ScrollablePage {
                 }
 
             }
+        }
         }
     }
 }

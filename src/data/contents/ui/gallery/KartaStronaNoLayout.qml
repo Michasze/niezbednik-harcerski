@@ -27,27 +27,29 @@ Rectangle {
     property url adres: "harcerz.qml"
     property string kolor: "#303030"
     property int imageRadius: 20
-    property bool isVector: false
+    property bool isVector: ikona.toString().includes("svg")
 
     id: kartaRectangle
     radius: 10
     color: kolor
-    height: 120
+    height: 130
     width: parent.width
     border.color: "transparent"
     MouseArea {
         anchors.fill: parent
-        onClicked: pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
+        onClicked: {
+            pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
+        }
     }
     Image {
         id: img
         asynchronous: true
-        sourceSize.width: kartaRectangle.height - 20
+        sourceSize.width: kartaRectangle.height - 30
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.leftMargin: 10
-        anchors.topMargin: 10
-        anchors.bottomMargin: 10
+        anchors.topMargin: 15
+        anchors.bottomMargin: 15
         source: isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius
     }
     Item {
@@ -61,6 +63,7 @@ Rectangle {
             text: kartaRectangle.header
             anchors.bottom: bar.top
             anchors.bottomMargin: 5
+            anchors.topMargin: 5
             anchors.right: parent.right
             anchors.rightMargin: 10
             anchors.leftMargin: 10
@@ -77,7 +80,7 @@ Rectangle {
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             anchors.rightMargin: 10
-            anchors.leftMargin: 10
+            anchors.leftMargin: 15
             anchors.topMargin: 10
             anchors.bottomMargin: 10
             anchors.top: bar.bottom

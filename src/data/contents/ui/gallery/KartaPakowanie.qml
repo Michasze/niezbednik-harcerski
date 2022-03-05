@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -22,98 +22,96 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
 
-         Rectangle {
-             property string header: "Brak tekstu"
-             property string opis: ""
-             property url ikona: "image://icons/edit-delete.svg,red"
-             property url ikona2: "image://icons/document-edit.svg,white"
-             property url adres: "harcerz.qml"
-             property string kolor: "#303030"
+Rectangle {
+    property string header: "Brak tekstu"
+    property string opis: ""
+    property url ikona: "image://icons/edit-delete.svg,red"
+    property url ikona2: "image://icons/document-edit.svg,white"
+    property url adres: "harcerz.qml"
+    property string kolor: "#303030"
 
     id: kartaRectangle
-    Layout.fillWidth: true
-    Layout.topMargin: 10
-    Layout.bottomMargin: 10
+    width: parent.width
     radius: 10
     color: kolor
-    Layout.minimumHeight : 120
+    height: 120
     border.color: "transparent"
-                GridLayout {
-                    id: hznpLayout
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                        right: parent.right
-                        bottom: parent.bottom
-                    }
-                    ColumnLayout {
-                        Controls.Label {
-                            id: naglowek
-                            wrapMode: Text.Wrap
-                            Layout.rightMargin: 10
-                            Layout.leftMargin: 10
-                            font.pointSize: invisibleSlider.value
-                            Layout.fillWidth: true
-                             text: kartaRectangle.header
-                        }
-                        HPSSeparator {
-                            Layout.fillWidth: true
-                            color: "#615f5f"
-                            Layout.rightMargin: 10
-                        }
-                        Controls.Label {
-                            Layout.fillWidth: true
-                            wrapMode: Text.Wrap
-                            Layout.rightMargin: 10
-                            Layout.leftMargin: 10
-                            font.pointSize: invisibleSlider.value - 2
-                            Layout.bottomMargin: 10
-                            text: kartaRectangle.opis
-                        }
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                db.getCategoryList(kartaRectangle.header)
-                                db.setList(kartaRectangle.header)
-                                pageStack.push(Qt.resolvedUrl("pakowanieTemplate.qml"))
-                        }
-                        }
-                    }
-                    Image {
-                        Layout.leftMargin: 10
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                        Layout.fillWidth: false
-                        fillMode: Image.PreserveAspectFit
-                            Layout.fillHeight: true
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                        source: kartaRectangle.ikona2
-                            sourceSize.width: (kartaRectangle.height / 2) - 20
-                        MouseArea {
-                            anchors.fill: parent
-                        onClicked: {
-                            db.setList(kartaRectangle.header)
-                            db.getCategoryList(kartaRectangle.header)
-                            pageStack.push(Qt.resolvedUrl("pakowanieKreator.qml"))
-                        }
-                    }
-                    }
-                    Controls.AbstractButton {
-                        Layout.leftMargin: 10
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                        contentItem: Image {
-                            anchors.fill: parent
-                        Layout.fillWidth: false
-                            Layout.fillHeight: true
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                        source: kartaRectangle.ikona
-                            sourceSize.width: (kartaRectangle.height / 2) - 20
-                        }
-                        onPressed: {
-                            kartaRectangle.visible = false
-                            db.deleteList(kartaRectangle.header)
-                        }
-                    }
-               }
+    GridLayout {
+        id: hznpLayout
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+            bottom: parent.bottom
+        }
+        ColumnLayout {
+            Controls.Label {
+                id: naglowek
+                wrapMode: Text.Wrap
+                Layout.rightMargin: 10
+                Layout.leftMargin: 10
+                font.pointSize: invisibleSlider.value
+                Layout.fillWidth: true
+                text: kartaRectangle.header
+            }
+            HPSSeparator {
+                Layout.fillWidth: true
+                color: "#615f5f"
+                Layout.rightMargin: 10
+            }
+            Controls.Label {
+                Layout.fillWidth: true
+                wrapMode: Text.Wrap
+                Layout.rightMargin: 10
+                Layout.leftMargin: 10
+                font.pointSize: invisibleSlider.value - 2
+                Layout.bottomMargin: 10
+                text: kartaRectangle.opis
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    db.getCategoryList(kartaRectangle.header)
+                    db.setList(kartaRectangle.header)
+                    pageStack.push(Qt.resolvedUrl("pakowanieTemplate.qml"))
                 }
+            }
+        }
+        Image {
+            Layout.leftMargin: 10
+            Layout.topMargin: 10
+            Layout.bottomMargin: 10
+            Layout.fillWidth: false
+            fillMode: Image.PreserveAspectFit
+            Layout.fillHeight: true
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+            source: kartaRectangle.ikona2
+            sourceSize.width: (kartaRectangle.height / 2) - 20
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    db.setList(kartaRectangle.header)
+                    db.getCategoryList(kartaRectangle.header)
+                    pageStack.push(Qt.resolvedUrl("pakowanieKreator.qml"))
+                }
+            }
+        }
+        Controls.AbstractButton {
+            Layout.leftMargin: 10
+            Layout.topMargin: 10
+            Layout.bottomMargin: 10
+            contentItem: Image {
+                anchors.fill: parent
+                Layout.fillWidth: false
+                Layout.fillHeight: true
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                source: kartaRectangle.ikona
+                sourceSize.width: (kartaRectangle.height / 2) - 20
+            }
+            onPressed: {
+                kartaRectangle.visible = false
+                db.deleteList(kartaRectangle.header)
+            }
+        }
+    }
+}

@@ -17,8 +17,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
+import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 
 HPSPage {
@@ -29,45 +30,20 @@ HPSPage {
         Column {
             anchors.fill: parent
             spacing: 10
-            KartaStronaNoLayout {
-                header: "Fazy rozwoju drużynowego"
-                opis: "Juliusz Idzikowski"
-                adres: "pracaNauczyciela.qml"
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("artykuły"), "i")
             }
-            KartaStronaNoLayout {
-                header: "Zbiórki w terenie"
-                opis: "Juliusz Idzikowski"
-                adres: "zbiorkiWTerenie.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Jak promować harcerstwo?"
-                opis: "Juliusz Idzikowski"
-                adres: "promocja.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Tężyzna fizyczna"
-                opis: "Juliusz Idzikowski"
-                adres: "tezyzna.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Ekwipunek harcerski"
-                opis: "Juliusz Idzikowski"
-                adres: "nowoczesny.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Dlaczego kadra ma własne namioty?"
-                opis: "Juliusz Idzikowski"
-                adres: "kadraNamioty.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Zjazd ZHP w Bydgoszczy - 30 lat minęło"
-                opis: "Ryszard Pacławski"
-                adres: "zjazd.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Prawie Wszystko o sprawnościach"
-                opis: "Janusz Sikorski"
-                adres: "prawie.qml"
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
             }
         }
     }

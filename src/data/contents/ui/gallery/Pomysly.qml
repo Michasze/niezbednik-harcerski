@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,49 +19,31 @@
 
 import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
-
+import Filter 1.0
 
 HPSPage {
     id: page
     title: qsTr("Pomysły na zbiórki")
-    ColumnLayout
+    Controls.Pane
     {
-        KartaStronaIkona {
-            header: "Ekosystem w słoiku"
-            opis: "Jak przygotować roślinkę w słoiku?"
-            ikona: "qrc:/contents/ui/img/applications-science.svg"
-            adres: "ekosystem.qml"
-        }
-        KartaStronaIkona {
-            header: "Wiedźmiński LARP"
-            opis: "Zbiórka o tematyce Wiedźmina"
-            ikona: "image://icons/wiedzmin.svg,white"
-            adres: "wiedzmin.qml"
-        }
-        KartaStronaIkona {
-            header: "Podróże małe i duże"
-            opis: "Harcerskie wędrowanie tam i z powrotem."
-            ikona: "image://icons/edit-paste-in-place.svg,white"
-            adres: "podroze.qml"
-        }
-        KartaStronaIkona {
-            header: "Gra fabularna"
-            opis: "w klimatach bloku wschodniego."
-            ikona: "image://icons/kosci.svg,white"
-            adres: "gra_warsztaty.qml"
-        }
-        KartaStronaIkona {
-            header: "Geoguessr"
-            opis: "Pomysł na zdalną zbiórkę z ćwiczeniem spostrzegawczości."
-            ikona: "image://icons/atmosphere.svg,white"
-            adres: "geoguessr.qml"
-        }
-        KartaStronaIkona {
-            header: "Zbiórka fotograficzna"
-            opis: "Jak przygotować zbiórkę fotograficzną online?"
-            ikona: "qrc:/contents/ui/img/camera-photo.svg"
-            adres: "fotograficzna.qml"
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("pomysły na zbiórki"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
+            }
         }
     }
 }

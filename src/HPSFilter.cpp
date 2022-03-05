@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
+ *   Copyright 2022 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
  *   Based on KItemModels source code
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -19,10 +19,7 @@
  */
 
 #include "HPSFilter.h"
-
-#include <QQmlContext>
-#include <QQmlEngine>
-
+#include <QDebug>
 
 HPSFilter::HPSFilter(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -67,7 +64,24 @@ void HPSFilter::setModel(QAbstractItemModel *model)
     }
 }
 
-
+bool HPSFilter::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+{
+    QRegularExpression regularExpression = filterRegularExpression();
+    QModelIndex firstIndex = sourceModel()->index(source_row, 0, source_parent);
+    QString firstString = sourceModel()->data(firstIndex, QSortFilterProxyModel::filterRole()).toString();
+    QString secondString = sourceModel()->data(firstIndex, roleNameToId(secondRole())).toString();
+    QString modelString;
+    if(firstString == secondString)
+        {
+            modelString = firstString;
+        }
+    else
+        {
+            modelString = firstString + QStringLiteral(" - ") + secondString;
+        }
+    qInfo() << modelString;
+    return modelString.contains(regularExpression);
+}
 
 void HPSFilter::setFilterRole(const QString &role)
 {
@@ -98,6 +112,15 @@ QString HPSFilter::sortRole() const
     return m_sortRole;
 }
 
+void HPSFilter::setSecondRole(const QString &role)
+{
+    m_secondRole = role;
+    Q_EMIT secondRoleChanged();
+}
+QString HPSFilter::secondRole() const
+{
+    return m_secondRole;
+}
 void HPSFilter::setSortOrder(const Qt::SortOrder order)
 {
     sort(std::max(sortColumn(), 0), order);

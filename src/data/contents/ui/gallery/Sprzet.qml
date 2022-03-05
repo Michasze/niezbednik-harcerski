@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,35 +17,32 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Poradniki wyboru sprzętu"
-    ColumnLayout {
-        id: mainlayout
-KartaStronaIkona {
-        ikona: "image://icons/noz.svg,white"
-        header: "Poradnik wyboru noża"
-        opis: ""
-        adres: "noz.qml"
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("poradniki wyboru sprzętu"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
+            }
+        }
     }
-
-KartaStronaIkona {
-        header: "Jak wybrać odpowiedni śpiwór?"
-        ikona: "image://icons/spiwor.svg,white"
-        opis: ""
-        adres: "Spiwor.qml"
-    }
-
-KartaStronaIkona {
-        ikona: "image://icons/karimata.svg,white"
-        header: "Wybór karimaty, maty lub materaca"
-        opis: ""
-        adres: "maty.qml"
-    }
-
-}
 }

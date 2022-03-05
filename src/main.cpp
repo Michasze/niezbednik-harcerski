@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,9 +19,6 @@
 
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
-#include <QtQml>
-#include <QUrl>
-#include <QColor>
 #include "Cipher.h"
 #include "Decipher.h"
 #include "Clipboard.h"
@@ -32,6 +29,7 @@
 #include "HPSIcon.h"
 #include "HPSImage.h"
 #include "HPSDatabase.h"
+#include "HPSCardModel.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -52,7 +50,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-//The desktop QQC2 style needs it to be a QApplication
+    //The desktop QQC2 style needs it to be a QApplication
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
     QQuickStyle::setStyle(QStringLiteral("Material"));
@@ -75,9 +73,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<InfoData>("Data", 1, 0, "InfoData");
     qmlRegisterType<HPSSettings>("Data", 1, 0, "HPSSettings");
     qmlRegisterType<Spiewnik>("Data", 1, 0, "Spiewnik");
-//    qmlRegisterType<HPSIcon>("Icon", 1, 0, "HPSIcon");
     qmlRegisterType<HPSFilter>("Filter", 1, 0, "HPSFilter");
     qmlRegisterType<HPSDatabase>("HPSDatabase", 1, 0, "HPSDatabase");
+    qmlRegisterType<HPSCardModel>("HPSCardModel", 1, 0, "HPSCardModel");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
     //we want different main files on desktop or mobile

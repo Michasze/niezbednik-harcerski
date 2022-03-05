@@ -19,6 +19,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 
 HPSPage {
@@ -28,25 +29,20 @@ HPSPage {
         Column {
             anchors.fill: parent
             spacing: 10
-            KartaStronaNoLayout {
-                header: "Opowieść o grzybiarzu"
-                opis: "autor: Jacek Wątroba"
-                adres: "grzybiarz.qml"
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("gawędy"), "i")
             }
-            KartaStronaNoLayout {
-                header: "Powstaniec"
-                opis: "autorzy: Ćwikowie na próbie 2021 Chomętowo"
-                adres: "powstaniec.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Zwyczaje przy ognisku"
-                opis: "autor: Wojciech Jakubczyk"
-                adres: "zwyczaje.qml"
-            }
-            KartaStronaNoLayout {
-                header: "Iskra braterstwa"
-                opis: "autor: Alicja Kowalska"
-                adres: "iskra.qml"
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
             }
         }
     }

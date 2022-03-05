@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,96 +17,78 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
+import Filter 1.0
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Pakowanie"
-    ColumnLayout {
-        id: mainlayout
-        Rectangle
-        {
-            color: "darkolivegreen"
-            radius: 10
-            Layout.fillWidth: true
-            Layout.minimumHeight: 80
-            Item
+    Controls.Label {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            Rectangle
             {
-                anchors.fill: parent
-                Controls.Label
+                color: "darkolivegreen"
+                radius: 10
+                width: parent.width
+                height: 80
+                Item
                 {
-                    anchors.leftMargin: 10
-                    anchors.left: parent.left
-                    anchors.verticalCenter: parent.verticalCenter
-                    horizontalAlignment: Text.AlignLeft
-                    font.pointSize: invisibleSlider.value + 4
-                    text: "+"
+                    anchors.fill: parent
+                    Controls.Label
+                    {
+                        anchors.leftMargin: 10
+                        anchors.left: parent.left
+                        anchors.verticalCenter: parent.verticalCenter
+                        horizontalAlignment: Text.AlignLeft
+                        font.pointSize: invisibleSlider.value + 4
+                        text: "+"
+                    }
+                    Controls.Label
+                    {
+                        anchors.rightMargin: 10
+                        anchors.centerIn: parent
+                        font.pointSize: invisibleSlider.value + 4
+                        horizontalAlignment: Text.AlignHCenter
+                        text: "Dodaj własną listę"
+                    }
                 }
-                Controls.Label
+                MouseArea
                 {
-                    Layout.rightMargin: 10
-                    anchors.centerIn: parent
-                    font.pointSize: invisibleSlider.value + 4
-                    horizontalAlignment: Text.AlignHCenter
-                    text: "Dodaj własną listę"
+                    anchors.fill: parent
+                    onClicked:
+                    {
+                        db.clearCategory()
+                        pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
+                    }
                 }
             }
-            MouseArea
+            Repeater
             {
-                anchors.fill: parent
-                onClicked:
+                model: db.getList
+                delegate: KartaPakowanie
                 {
-                    db.clearCategory()
-                    pageStack.push(Qt.resolvedUrl("pakowanieWlasne.qml"))
+                    header: modelData
+                    opis: ""
+                }
+            }
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("pakowanie"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
                 }
             }
         }
-        Repeater
-        {
-            model: db.getList
-            delegate: KartaPakowanie
-            {
-                header: modelData
-                opis: ""
-            }
-        }
-
-        KartaStrona {
-        header: "Ekwipunek obozowy według BP"
-        ikona: "image://images/Baden-Powell.jpg"
-        opis: "Lista rzeczy do spakowania dla każdego skauta"
-        adres: "pakowanieBP.qml"
-}
-        KartaStronaIkona {
-        header: "Obóz"
-        ikona: "image://icons/namiot_dycha.svg,white"
-        opis: "Co zabrać na obóz?"
-        adres: "pakowanieOboz.qml"
-}
-        KartaStronaIkona {
-        header: "Wyjazd rowerowy"
-        ikona: "image://icons/rower.svg,white"
-        opis: "Lista rzeczy na wyjazd rowerowy"
-        adres: "pakowanieRower.qml"
-}
-        KartaStronaIkona {
-        header: "Biwak z hamakami"
-        ikona: "image://icons/hamak.svg,white"
-        opis: "Lista rzeczy do zabrania na hamaki"
-        adres: "pakowanieHamaki.qml"
     }
-        KartaStronaNoImage {
-        header: "Biwak zimą trwający 3 dni"
-        opis: "Zimowy biwak z wieloma wędrówkami"
-        adres: "pakowanieZima.qml"
-    }
-        KartaStronaNoImage {
-        header: "Biwak"
-        opis: "Co spakować na trzydniowy biwak w budynku?"
-        adres: "pakowanieBiwaki.qml"
-    }
-}
 }

@@ -18,32 +18,32 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 
 HPSPage {
     id: page
     title: qsTr("Książki")
-
-
-ColumnLayout{
-    KartaStronaIkona {
-        header: "Książki dla harcerzy"
-        opis: ""
-        ikona: "image://icons/sznur.svg,#747f81"
-        adres: "ksiazkiHarcerz.qml"
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("książki"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
+            }
+        }
     }
-    KartaStronaIkona {
-        header: "Książki dla zastępowych"
-        opis: ""
-        ikona: "image://icons/sznur.svg,#574136"
-        adres: "ksiazkiZastepowy.qml"
-    }
-    KartaStronaIkona {
-        header: "Książki dla drużynowych"
-        opis: ""
-        adres: "ksiazkiDruzynowy.qml"
-        ikona: "image://icons/sznur.svg,mediumblue"
-    }
-}
 }

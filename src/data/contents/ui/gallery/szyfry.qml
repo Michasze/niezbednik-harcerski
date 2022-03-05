@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,26 +17,33 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
+import Filter 1.0
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Szyfry"
-    ColumnLayout {
-KartaStronaNoImage {
-        header: "Mała księga szyfrów"
-        kolor: "Brown"
-        opis: "Opracował: Piotr Parkita HO"
-        adres: "malaKsiega.qml"
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("szyfry"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                    kolor: "brown"
+                }
+            }
+        }
     }
-KartaStronaNoImage {
-        header: "Program szyfrujący"
-        kolor: "Brown"
-        opis: "Autor: Osiołek"
-        adres: "szyfrator.qml"
-    }
-}
 }

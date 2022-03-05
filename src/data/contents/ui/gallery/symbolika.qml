@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,69 +17,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 import QtQuick 2.15
-import QtQuick.Layouts 1.2
-
+import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 HPSPage
 {
- id: page
- title: qsTr("Symbolika")
-    ColumnLayout {
-     id: mainList
-
-        ElementListy {
-    header: "Znaki służb ZHP"
-    Layout.bottomMargin: 10
-    ikona: "image://icons/przyrodzie.svg"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("znaki.qml"))
-    }
-        }
-        ElementListy {
-    header: "Krzyż harcerski"
-    Layout.bottomMargin: 10
-    ikona: "image://icons/krzyz.svg,white"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("symbolikaKrzyz.qml"))
-    }
-        }
-        ElementListy {
-    header: "WOSM"
-    Layout.bottomMargin: 10
-    ikona: "qrc:/contents/ui/img/wosm_tlo.svg"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWosm.qml"))
-    }
-        }
-        ElementListy {
-    header: "WAGGGS"
-    Layout.bottomMargin: 10
-    ikona: "qrc:/contents/ui/img/wagggs.svg"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("symbolikaWagggs.qml"))
-    }
-        }
-        ElementListy {
-    header: "Znaczek zucha"
-    Layout.bottomMargin: 10
-    ikona: "qrc:/contents/ui/img/znaczek-zucha.svg"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("symbolikaZnaczek.qml"))
-    }
-        }
-        ElementListy {
-    header: "Watra wędrownicza"
-    Layout.bottomMargin: 10
-    ikona: "qrc:/contents/ui/img/watra.svg"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("watra.qml"))
-    }
+    id: page
+    title: qsTr("Symbolika")
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("symbolika"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: ElementListyImageNoLayout {
+                    header: model.header
+                    ikona: model.image
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: pageStack.push(Qt.resolvedUrl(model.address))
+                    }
+                }
+            }
         }
     }
 }

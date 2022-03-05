@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,48 +17,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 
 HPSPage {
     id: page
     title: qsTr("Stopnie harcerskie")
-
-
-ColumnLayout
-{
-
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/zhp.svg"
-        header: "ZHP"
-        opis: ""
-        adres: "stopnieZHP.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/zhr.svg"
-        header: "ZHR"
-        opis: ""
-        adres: "stopnieZHR.qml"
-    }
-
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/sh.svg"
-        header: "Stowarzyszenie Harcerskie"
-        opis: ""
-        adres: "stopnieSH.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/rodlo.svg"
-        header: "Organizacja Harcerska „Rodło”"
-        opis: ""
-        adres: "stopnieOH.qml"
-    }
-KartaStronaIkona {
-        ikona: "qrc:/contents/ui/img/fse.svg"
-        header: "SHK „Zawisza”"
-        opis: ""
-        adres: "stopnieFSE.qml"
-    }
+    Controls.Pane
+    {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            HPSFilter {
+                id: filteredModel
+                sourceModel: hpsModel
+                filterRole: "category"
+                filterRegularExpression: RegExp("%1".arg("stopnie harcerskie"), "i")
+            }
+            Repeater {
+                model: filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    opis: model.description
+                    ikona: model.image
+                    adres: model.address
+                }
+            }
         }
     }
+}

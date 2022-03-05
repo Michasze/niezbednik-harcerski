@@ -12,6 +12,7 @@ set(HPS_SRCS
     Spiewnik.cpp
     HPSFilter.cpp
     HPSDatabase.cpp
+    HPSCardModel.cpp
     )
 
 if (QT_MAJOR_VERSION EQUAL 6)

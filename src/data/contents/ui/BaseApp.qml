@@ -25,6 +25,7 @@ import QtMultimedia 5.0
 import "gallery"
 import Data 1.0
 import HPSDatabase 1.0
+import HPSCardModel 1.0
 
 Kirigami.ApplicationWindow {
     id: root
@@ -43,6 +44,10 @@ Kirigami.ApplicationWindow {
     Clipboard
     {
         id: clipboard
+    }
+    HPSCardModel
+    {
+        id: hpsModel
     }
     Component.onCompleted: {
         if(!hpsSettings.neverShowIsToggled)
@@ -337,11 +342,11 @@ może ulec zmianie."
         height: root.height
         id: globalDrawer
         dragMargin: 20
-            Item {
-                id: drawerHeader
-                width: parent.width
-                height: drawerImg.height
-                            Image
+        Item {
+            id: drawerHeader
+            width: parent.width
+            height: drawerImg.height
+            Image
             {
                 id: drawerImg
                 height: globalDrawer.width / 3
@@ -353,10 +358,10 @@ może ulec zmianie."
             {
                 font.pointSize: 24
                 anchors.verticalCenter: drawerImg.verticalCenter
-                        anchors.horizontalCenter: parent.horizontalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
                 text: "Menu"
             }
-            }
+        }
         Column {
             anchors.fill: parent
             anchors.topMargin: drawerHeader.height
@@ -400,21 +405,20 @@ może ulec zmianie."
                     }
                 }
             }
-        }
-        Controls.Slider {
-            id: invisibleSlider
-            visible: false
-            from: 10
-            Layout.leftMargin: 20
-            value: hpsSettings.textSize
-            to: 17
-            stepSize: 1
-            snapMode: Controls.Slider.SnapAlways
-        }
-        Controls.CheckBox {
-            id: invisibleCheckbox
-            visible: false
-            checked: !hpsSettings.darkThemeIsToggled ? false : true
+            Controls.Slider {
+                id: invisibleSlider
+                visible: false
+                from: 10
+                value: hpsSettings.textSize
+                to: 17
+                stepSize: 1
+                snapMode: Controls.Slider.SnapAlways
+            }
+            Controls.CheckBox {
+                id: invisibleCheckbox
+                visible: false
+                checked: !hpsSettings.darkThemeIsToggled ? false : true
+            }
         }
     }
     pageStack.initialPage: mainPageComponent
