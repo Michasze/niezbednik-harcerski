@@ -23,7 +23,7 @@ import Filter 1.0
 
 HPSPage {
     id: page
-    title: "Szyfry"
+    title: qsTr("Szyfry")
     Controls.Pane {
         Column {
             anchors.fill: parent

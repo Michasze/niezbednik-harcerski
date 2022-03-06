@@ -27,14 +27,14 @@ HPSPage {
     Layout.fillWidth: true
     //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
 
-    title: "Ustawienia"
+    title: qsTr("Ustawienia")
 
     globalToolBarStyle: ApplicationHeaderStyle.None
 ColumnLayout
 {
     Controls.Label
     {
-        text: "Pokazuj:"
+        text: qsTr("Pokazuj:")
     }
     HPSCheckBox
     {

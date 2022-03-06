@@ -310,7 +310,7 @@ może ulec zmianie."
     Controls.Action
     {
         id: powrotAction
-        text: "Powrót"
+        text: qsTr("Powrót")
         shortcut: "Backspace"
         onTriggered: {
             if (pageStack.layers.depth == 1 && pageStack.depth > 1)
@@ -429,7 +429,7 @@ może ulec zmianie."
                 ListElement { opis: qsTr("Social media"); warstwa: "gallery/social.qml"; icon: "image://icons/snapchat_symbolic.svg,white" }
                 ListElement { opis: "Testerzy"; warstwa: "gallery/testerzy.qml"; icon: "image://icons/user.svg,white" }
                 ListElement { opis: "Pomocne dłonie"; warstwa: "gallery/pomocni.qml"; icon: "image://icons/hand.svg,white" }
-                ListElement { opis: "Ustawienia"; warstwa: "gallery/ustawienia.qml"; icon: "image://icons/settings.svg,white" }
+                ListElement { opis: qsTr("Ustawienia"); warstwa: "gallery/ustawienia.qml"; icon: "image://icons/settings.svg,white" }
             }
             Repeater {
                 model: drawerModel

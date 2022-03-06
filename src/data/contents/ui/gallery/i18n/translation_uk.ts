@@ -4,6 +4,11 @@
 <context>
     <name>BaseApp</name>
     <message>
+        <location filename="../../BaseApp.qml" line="313"/>
+        <source>Powrót</source>
+        <translation>Назад</translation>
+    </message>
+    <message>
         <location filename="../../BaseApp.qml" line="428"/>
         <source>O aplikacji</source>
         <translation>про аплікацію</translation>
@@ -12,6 +17,11 @@
         <location filename="../../BaseApp.qml" line="429"/>
         <source>Social media</source>
         <translation>наші сайті</translation>
+    </message>
+    <message>
+        <location filename="../../BaseApp.qml" line="432"/>
+        <source>Ustawienia</source>
+        <translation>Параметри</translation>
     </message>
 </context>
 <context>
@@ -131,37 +141,37 @@
         <location filename="../OProgramieSzablon.qml" line="54"/>
         <location filename="../OProgramieSzablon.qml" line="213"/>
         <source>Wyślij email do %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Надіслати повідомлення ел. пошти до %1</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="103"/>
         <source>Prawa autorskie</source>
-        <translation type="unfinished"></translation>
+        <translation>Авторські права</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="149"/>
         <source>Licencja:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ліцензування:</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="166"/>
         <source>Licencja: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ліцензування: %1</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="177"/>
         <source>Biblioteki w użyciu</source>
-        <translation type="unfinished"></translation>
+        <translation>Використані бібліотеки</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="191"/>
         <source>Autorzy:</source>
-        <translation type="unfinished"></translation>
+        <translation>Автори:</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="203"/>
         <source>Zgłoś błędy</source>
-        <translation type="unfinished"></translation>
+        <translation>Повідомити про ваду</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="220"/>
@@ -171,7 +181,7 @@
     <message>
         <location filename="../OProgramieSzablon.qml" line="231"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Перекладачі</translation>
     </message>
 </context>
 <context>
@@ -183,11 +193,43 @@
     </message>
 </context>
 <context>
+    <name>Spiewniki</name>
+    <message>
+        <location filename="../Spiewniki.qml" line="28"/>
+        <source>Śpiewniki</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>filmy</name>
     <message>
         <location filename="../filmy.qml" line="27"/>
         <source>Filmy z harcerzami</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ksiazki</name>
+    <message>
+        <location filename="../ksiazki.qml" line="27"/>
+        <source>Książki</source>
+        <translation>Книжки</translation>
+    </message>
+</context>
+<context>
+    <name>poradnikiPakowanie</name>
+    <message>
+        <location filename="../poradnikiPakowanie.qml" line="26"/>
+        <source>Pakowanie</source>
+        <translation>Пакувальний список</translation>
+    </message>
+</context>
+<context>
+    <name>prawo</name>
+    <message>
+        <location filename="../prawo.qml" line="27"/>
+        <source>Prawo harcerskie</source>
+        <translation>Скаутні правила</translation>
     </message>
 </context>
 <context>
@@ -199,11 +241,40 @@
     </message>
 </context>
 <context>
+    <name>stopnie</name>
+    <message>
+        <location filename="../stopnie.qml" line="27"/>
+        <source>Stopnie harcerskie</source>
+        <translation>Скаутні звання</translation>
+    </message>
+</context>
+<context>
     <name>symbolika</name>
     <message>
         <location filename="../symbolika.qml" line="26"/>
         <source>Symbolika</source>
         <translation>Символіка</translation>
+    </message>
+</context>
+<context>
+    <name>szyfry</name>
+    <message>
+        <location filename="../szyfry.qml" line="26"/>
+        <source>Szyfry</source>
+        <translation>Шифри</translation>
+    </message>
+</context>
+<context>
+    <name>ustawienia</name>
+    <message>
+        <location filename="../ustawienia.qml" line="30"/>
+        <source>Ustawienia</source>
+        <translation>Параметри</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="37"/>
+        <source>Pokazuj:</source>
+        <translation>Показати:</translation>
     </message>
 </context>
 </TS>

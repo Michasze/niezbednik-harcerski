@@ -24,7 +24,7 @@ import org.kde.kirigami 2.13
 
 HPSPage {
     id: page
-    title: "Social media"
+    title: qsTr("Social media")
     globalToolBarStyle: ApplicationHeaderStyle.None
     Controls.Pane
     {
