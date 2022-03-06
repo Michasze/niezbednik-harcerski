@@ -38,7 +38,7 @@ HPSPage {
                 alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
-                header: "Święty Jerzy- święty kościoła katolickiego, patron rycerzy, harcerzy, wędrowców, skautów, górników oraz kowali. Dzień Świętego Jerzego obchodzony jest 23 kwietnia. Święty Jerzy mógł być postacią historyczną, na co wskazują niektóre źródła.
+                header: "Święty Jerzy to święty kościoła katolickiego, patron rycerzy, harcerzy, wędrowców, skautów, górników oraz kowali. Dzień Świętego Jerzego obchodzony jest 23 kwietnia. Święty Jerzy mógł być postacią historyczną, na co wskazują niektóre źródła.
 
 Najbardziej znany jest z legendy według której miał walczyć ze smokiem.
 
