@@ -28,7 +28,7 @@ OProgramieSzablon
  "homepage" : "",
  "programLogo" : "qrc:/contents/ui/img/logo.svg",
  "bugAddress" : "aplikacjahps@gmail.com",
- "version" : "1.0.10",
+ "version" : "1.1.0",
  "otherText" : "",
  "authors" : [
      {
