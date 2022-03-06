@@ -154,7 +154,7 @@ może ulec zmianie."
             /*         } */
             /*     } */
             /*     onClicked: { */
-            /*         HPSTranslate.selectLanguage("ua"); */
+            /*         HPSTranslate.selectLanguage("uk"); */
             /*         engine.retranslate(); */
             /*     } */
             /* } */

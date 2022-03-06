@@ -19,7 +19,7 @@ set(HPS_SRCS
 if (QT_MAJOR_VERSION EQUAL 6)
 qt6_add_resources(RESOURCES resources.qrc)
 else()
-#qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR}/src/data/contents/ui translation_ua.ts)
+#qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR}/src/data/contents/ui translation_uk.ts)
 #qt5_add_translation(QM_FILES)
 qt5_add_resources(RESOURCES resources.qrc)
 endif()
