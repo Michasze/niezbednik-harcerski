@@ -26,31 +26,36 @@ HPSPage
     title: qsTr("Znaki służb")
     Controls.Pane
     {
-    Grid {
-        id: gridl
-        anchors.fill: parent
-        columns: 3
-        property var labels: [ "dziecku", "gospodarce", "kulturze", "nauce", "pamięci", "przyjaźni", "przyrodzie", "turystyce", "wspólnocie lokalnej", "zdrowiu" ]
-        property var icons: [ "dziecku", "gospodarce", "kulturze", "nauce", "pamieci", "przyjazni", "przyrodzie", "turystyce", "wspolnocie", "zdrowiu" ]
-        Repeater
-        {
-            model: gridl.labels
-            anchors.horizontalCenter: parent.horizontalCenter
-            delegate: Column {
-                Image {
-                    id: krzyz
-                    width: (page.width / 3) - 30
-                    source: "qrc:/contents/ui/img/" + gridl.icons[index] + ".svg"
-                    fillMode: Image.PreserveAspectFit
-                }
-                ElementListyNoLayout {
-                    align: Text.AlignTop
-                    width: krzyz.width
-                    header: modelData
-                    color: "transparent"
+        Grid {
+            id: gridl
+            anchors.fill: parent
+            columns: 3
+            horizontalItemAlignment: Grid.AlignHCenter
+            property var labels: [ "dziecku", "gospodarce", "kulturze", "nauce", "pamięci", "przyjaźni", "przyrodzie", "turystyce", "wspólnocie\n lokalnej", "zdrowiu" ]
+            property var icons: [ "dziecku", "gospodarce", "kulturze", "nauce", "pamieci", "przyjazni", "przyrodzie", "turystyce", "wspolnocie", "zdrowiu" ]
+            Repeater
+            {
+                model: gridl.labels
+                anchors.horizontalCenter: parent.horizontalCenter
+                delegate: Column {
+                    Image {
+                        id: krzyz
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: (page.width / 3) - 20
+                        source: "qrc:/contents/ui/img/" + gridl.icons[index] + ".svg"
+                        fillMode: Image.PreserveAspectFit
+                    }
+                    ElementListyNoLayout {
+                        align: Text.AlignTop
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        format: Text.PlainText
+                        wrap: Controls.Label.NoWrap
+                        width: krzyz.width
+                        header: modelData
+                        color: "transparent"
+                    }
                 }
             }
         }
-    }
     }
 }
