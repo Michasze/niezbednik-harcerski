@@ -101,63 +101,63 @@ Kirigami.ApplicationWindow {
 Witaj w premierowej wersji Niezbędnika Harcerskiego. Pamiętaj, że jest to wczesna wersja i wiele elementów
 może ulec zmianie."
             }
-            ElementListyNoImage {
-                Layout.alignment: Qt.AlignHCenter
-                color: "black"
-                header: "Wybór języka:"
-            }
-            Controls.RadioButton
-            {
-                id: control
-                checked: true
-                Layout.alignment: Qt.AlignHCenter
-                text: "polski"
-                contentItem: Row {
-                    spacing: 5
-                    Controls.Label {
-                        id: label
-                        text: control.text
-                        opacity: enabled ? 1.0 : 0.3
-                        color: control.checked ? "white" : "grey"
-                        font.pointSize: invisibleSlider.value
-                        verticalAlignment: Text.AlignVCenter
-                        leftPadding: control.indicator.width + control.spacing
-                    }
-                    Image {
-                        source: "qrc:/contents/ui/img/poland.svg"
-                        height: label.height
-                        fillMode: Image.PreserveAspectFit
-                    }
-                }
-                onClicked: HPSTranslate.selectLanguage("pl")
-            }
-            Controls.RadioButton
-            {
-                id: control2
-                Layout.alignment: Qt.AlignHCenter
-                text: "Українська"
-                contentItem: Row {
-                    spacing: 5
-                    Controls.Label {
-                        id: label2
-                        text: control2.text
-                        opacity: enabled ? 1.0 : 0.3
-                        color: control2.checked ? "white" : "grey"
-                        font.pointSize: invisibleSlider.value
-                        verticalAlignment: Text.AlignVCenter
-                        leftPadding: control2.indicator.width + control2.spacing
-                    }
-                    Image {
-                        source: "qrc:/contents/ui/img/ukraine.svg"
-                        height: label2.height
-                        fillMode: Image.PreserveAspectFit
-                    }
-                }
-                onClicked: {
-                    HPSTranslate.selectLanguage("ua");
-                    engine.retranslate();
-                }
-            }
+            /* ElementListyNoImage { */
+            /*     Layout.alignment: Qt.AlignHCenter */
+            /*     color: "black" */
+            /*     header: "Wybór języka:" */
+            /* } */
+            /* Controls.RadioButton */
+            /* { */
+            /*     id: control */
+            /*     checked: true */
+            /*     Layout.alignment: Qt.AlignHCenter */
+            /*     text: "polski" */
+            /*     contentItem: Row { */
+            /*         spacing: 5 */
+            /*         Controls.Label { */
+            /*             id: label */
+            /*             text: control.text */
+            /*             opacity: enabled ? 1.0 : 0.3 */
+            /*             color: control.checked ? "white" : "grey" */
+            /*             font.pointSize: invisibleSlider.value */
+            /*             verticalAlignment: Text.AlignVCenter */
+            /*             leftPadding: control.indicator.width + control.spacing */
+            /*         } */
+            /*         Image { */
+            /*             source: "qrc:/contents/ui/img/poland.svg" */
+            /*             height: label.height */
+            /*             fillMode: Image.PreserveAspectFit */
+            /*         } */
+            /*     } */
+            /*     onClicked: HPSTranslate.selectLanguage("pl") */
+            /* } */
+            /* Controls.RadioButton */
+            /* { */
+            /*     id: control2 */
+            /*     Layout.alignment: Qt.AlignHCenter */
+            /*     text: "Українська" */
+            /*     contentItem: Row { */
+            /*         spacing: 5 */
+            /*         Controls.Label { */
+            /*             id: label2 */
+            /*             text: control2.text */
+            /*             opacity: enabled ? 1.0 : 0.3 */
+            /*             color: control2.checked ? "white" : "grey" */
+            /*             font.pointSize: invisibleSlider.value */
+            /*             verticalAlignment: Text.AlignVCenter */
+            /*             leftPadding: control2.indicator.width + control2.spacing */
+            /*         } */
+            /*         Image { */
+            /*             source: "qrc:/contents/ui/img/ukraine.svg" */
+            /*             height: label2.height */
+            /*             fillMode: Image.PreserveAspectFit */
+            /*         } */
+            /*     } */
+            /*     onClicked: { */
+            /*         HPSTranslate.selectLanguage("ua"); */
+            /*         engine.retranslate(); */
+            /*     } */
+            /* } */
             Controls.CheckBox
             {
                 text: "Nie pokazuj więcej"
