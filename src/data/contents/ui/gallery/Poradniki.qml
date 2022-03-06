@@ -28,10 +28,6 @@ HPSPage {
         Column {
             anchors.fill: parent
             spacing: 10
-            ElementListyNoLayout {
-                header: "Opracowanie: Kinga Żeglińska HO"
-                color: "black"
-            }
             HPSFilter {
                 id: filteredModel
                 sourceModel: hpsModel
