@@ -320,7 +320,7 @@ AbstractListItem {
                     Layout.fillWidth: true
                     wrapMode: Text.WordWrap
                     horizontalAlignment: listItem.alignH
-                    font.pointSize: invisibleSlider.value - 1
+                    font.pointSize: invisibleSlider.value
                     color: invisibleCheckbox.checked ? "white" : "black"
                     elide: Text.ElideRight
                     font.weight: listItem.bold ? Font.Bold : Font.Normal
