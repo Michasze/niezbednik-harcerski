@@ -253,6 +253,7 @@ HPSPage {
             ElementListyNoLayout
             {
                 alignH: Text.AlignJustify
+                width: root.width - 50
                 format: Text.StyledText
                 color: "Black"
                 header: "<h1>Bibliografia:</h1><br>
