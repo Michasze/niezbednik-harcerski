@@ -19,7 +19,6 @@
  */
 
 #include "HPSFilter.h"
-#include <QDebug>
 
 HPSFilter::HPSFilter(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -79,7 +78,6 @@ bool HPSFilter::filterAcceptsRow(int source_row, const QModelIndex &source_paren
         {
             modelString = firstString + QStringLiteral(" - ") + secondString;
         }
-    qInfo() << modelString;
     return modelString.contains(regularExpression);
 }
 
