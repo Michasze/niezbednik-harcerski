@@ -26,6 +26,7 @@ Rectangle {
     property string header: "Zaszyfrowany tekst..."
     property int align: Text.AlignVCenter
     property int alignH: Text.AlignHCenter
+    property int wrap: Controls.Label.Wrap
     property int textSize: isPromise ? invisibleSlider.value + 5 : invisibleSlider.value
     property int format: Text.StyledText
     property int wysokosc: naglowek.contentHeight + 30
@@ -40,7 +41,7 @@ Rectangle {
     Controls.Label {
         id: naglowek
         horizontalAlignment: cardRectangle.alignH
-        wrapMode: Controls.Label.Wrap
+        wrapMode: cardRectangle.wrap
         width: parent.width
         anchors.centerIn: parent
         font.pointSize: cardRectangle.textSize
