@@ -4,24 +4,110 @@
 <context>
     <name>BaseApp</name>
     <message>
-        <location filename="../../BaseApp.qml" line="313"/>
+        <location filename="../../BaseApp.qml" line="319"/>
         <source>Powrót</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../../BaseApp.qml" line="428"/>
+        <location filename="../../BaseApp.qml" line="434"/>
         <source>O aplikacji</source>
         <translation>про аплікацію</translation>
     </message>
     <message>
-        <location filename="../../BaseApp.qml" line="429"/>
+        <location filename="../../BaseApp.qml" line="435"/>
         <source>Social media</source>
         <translation>наші сайті</translation>
     </message>
     <message>
-        <location filename="../../BaseApp.qml" line="432"/>
+        <location filename="../../BaseApp.qml" line="438"/>
         <source>Ustawienia</source>
         <translation>Параметри</translation>
+    </message>
+</context>
+<context>
+    <name>CategoryPage</name>
+    <message>
+        <location filename="../CategoryPage.qml" line="45"/>
+        <source>Historia</source>
+        <translation>Історія</translation>
+    </message>
+</context>
+<context>
+    <name>HPSCardModel</name>
+    <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="91"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="92"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="93"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="94"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="95"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="96"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="97"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="98"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="99"/>
+        <source>historia</source>
+        <translation>історія</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="115"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="116"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="117"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="118"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="119"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="120"/>
+        <source>pomysły na zbiórki</source>
+        <translation>ідеї для скаутських зустрічей</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="127"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="128"/>
+        <source>szyfry</source>
+        <translation>шифри</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="135"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="136"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="137"/>
+        <source>książki</source>
+        <translation>книжки</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="157"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="158"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="159"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="160"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="161"/>
+        <source>stopnie harcerskie</source>
+        <translation>скаутні звання</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="162"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="163"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="164"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="165"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="166"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="167"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="168"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="169"/>
+        <source>prawo harcerskie</source>
+        <translation>скаутні правила</translation>
+    </message>
+</context>
+<context>
+    <name>HPSSettings</name>
+    <message>
+        <location filename="../../../../../HPSSettings.cpp" line="123"/>
+        <source>Szkielety KDE %1</source>
+        <translation>KDE Frameworks %1</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSSettings.cpp" line="124"/>
+        <source>System okien %1</source>
+        <translation>Система керування вікнами %1</translation>
+    </message>
+    <message>
+        <location filename="../../../../../HPSSettings.cpp" line="125"/>
+        <source>Qt %2 (zbudowany na %3)</source>
+        <translation>Qt %2 (зібрано з використанням %3)</translation>
     </message>
 </context>
 <context>
@@ -35,97 +121,97 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../../MainPage.qml" line="50"/>
+        <location filename="../../MainPage.qml" line="40"/>
         <source>Historia</source>
         <translation>Історія</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="56"/>
+        <location filename="../../MainPage.qml" line="45"/>
         <source>Pomysły na zbiórki</source>
         <translation>Ідеї для скаутських зустрічей</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="62"/>
+        <location filename="../../MainPage.qml" line="50"/>
         <source>Poradniki harcerskie</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="68"/>
+        <location filename="../../MainPage.qml" line="55"/>
         <source>Szyfry</source>
         <translation>Шифри</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="74"/>
+        <location filename="../../MainPage.qml" line="62"/>
         <source>Symbolika</source>
         <translation>Символіка</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="80"/>
+        <location filename="../../MainPage.qml" line="69"/>
         <source>Cytaty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="86"/>
+        <location filename="../../MainPage.qml" line="76"/>
         <source>Książki</source>
         <translation>Книжки</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="92"/>
+        <location filename="../../MainPage.qml" line="81"/>
         <source>Filmy</source>
         <translation>Фільми</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="98"/>
+        <location filename="../../MainPage.qml" line="88"/>
         <source>Śpiewnik</source>
         <translation>Пісняр</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="104"/>
+        <location filename="../../MainPage.qml" line="95"/>
         <source>Artykuły</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="110"/>
+        <location filename="../../MainPage.qml" line="100"/>
         <source>Poradnik zastępowego</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="116"/>
+        <location filename="../../MainPage.qml" line="105"/>
         <source>Poradniki wyboru sprzętu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="122"/>
+        <location filename="../../MainPage.qml" line="111"/>
         <source>Kącik drużynowego</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="128"/>
+        <location filename="../../MainPage.qml" line="118"/>
         <source>Listy rzeczy do spakowania</source>
         <translation>Пакувальний список</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="134"/>
+        <location filename="../../MainPage.qml" line="125"/>
         <source>Stopnie harcerskie</source>
         <translation>Скаутні звання</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="140"/>
+        <location filename="../../MainPage.qml" line="130"/>
         <source>Prawo harcerskie</source>
         <translation>Скаутні правила</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="146"/>
+        <location filename="../../MainPage.qml" line="135"/>
         <source>Roty Przyrzeczenia</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="152"/>
+        <location filename="../../MainPage.qml" line="140"/>
         <source>Gawędy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="192"/>
+        <location filename="../../MainPage.qml" line="173"/>
         <source>Szukaj...</source>
         <translation>Шукати...</translation>
     </message>

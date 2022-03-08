@@ -117,3 +117,10 @@ bool HPSSettings::isMobile()
 #endif
     return m_mobile;
   }
+QStringList HPSSettings::information() const
+{
+    return {
+        tr("Szkielety KDE %1").arg(QStringLiteral("5.90.0")),
+        tr("System okien %1").arg(QGuiApplication::platformName()),
+        tr("Qt %2 (zbudowany na %3)").arg(QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR))};
+}

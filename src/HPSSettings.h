@@ -20,6 +20,7 @@ class HPSSettings : public QObject
     Q_PROPERTY(QString pakowanieId READ pakowanieId WRITE setPakowanieId NOTIFY pakowanieIdChanged)
     Q_PROPERTY(bool pakowanieIsToggled READ pakowanieIsToggled WRITE pakowanieToggle NOTIFY pakowanieChanged)
     Q_PROPERTY(bool isMobile READ isMobile WRITE setIsMobile NOTIFY isMobileChanged)
+    Q_PROPERTY(QStringList information READ information CONSTANT)
 public:
     HPSSettings(QObject *parent = nullptr);
 
@@ -43,6 +44,7 @@ public:
     void pakowanieToggle(const bool &e);
     bool isMobile();
     void setIsMobile(const bool &f);
+    QStringList information() const;
 
 Q_SIGNALS:
     void neverShowChanged();

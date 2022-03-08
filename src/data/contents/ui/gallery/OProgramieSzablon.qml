@@ -175,10 +175,10 @@ HPSPage
         Heading {
             FormData.isSection: visible
             text: qsTr("Biblioteki w użyciu")
-            visible: Settings.information
+            visible: hpsSettings.information
         }
         Repeater {
-            model: Settings.information
+            model: hpsSettings.information
             delegate: QQC2.Label {
                 Layout.leftMargin: Units.gridUnit
                 id: libraries
