@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -22,53 +22,45 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
 
-         Rectangle {
-             // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
-             property string header: "Brak tekstu"
-             property url ikona: {}
-             property url adres: "harcerz.qml"
-             property string kolor_ikony: ",white"
-    id: hznpRectangle
-    Layout.fillWidth: true
+Rectangle {
+    // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
+    property string header: "Brak tekstu"
+    property url ikona: {}
+    property url adres: "harcerz.qml"
+    property string kolor_ikony: ",white"
+    id: mainRectangle
     radius: 10
-    Layout.leftMargin: 20
-    Layout.topMargin: 20
     color: "black"
-     Layout.preferredHeight: (root.width / 2) - 10
-     Layout.preferredWidth: (root.width / 2) - 10
-     Layout.maximumWidth: 300
-     Layout.maximumHeight: 300
-     Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-    //border.color: "white"
+    Layout.preferredHeight: (root.width / 2) - 10
+    Layout.preferredWidth: (root.width / 2) - 10
+    Layout.maximumWidth: 300
+    Layout.maximumHeight: 300
+    Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+    //    width: (root.width / 2) > 400 ? (root.width / 2) - 20 : 400
     MouseArea {
-    anchors.fill: parent
+        anchors.fill: parent
         onClicked:
         {
-            pageStack.push(Qt.resolvedUrl(hznpRectangle.adres))
+            pageStack.push(Qt.resolvedUrl(mainRectangle.adres))
         }
     }
-                ColumnLayout {
-                    id: hznpLayout
-                    anchors.fill: parent
-                    Image {
-                        //Layout.bottomMargin: 10
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                        source: hznpRectangle.ikona + hznpRectangle.kolor_ikony
-                        sourceSize.width: hznpRectangle.height - 40
-                        Layout.topMargin: 10
-//                        Layout.preferredWidth: height
-                    }
-                    // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
-                    ColumnLayout {
-                        Controls.Label {
-                            id: naglowek
-                            wrapMode: Text.Wrap
-                            font.pointSize: invisibleSlider.value - 2
-                            Layout.alignment: Qt.AlignBottom
-                            horizontalAlignment: Text.AlignHCenter
-                            Layout.fillWidth: true
-                             text: hznpRectangle.header
-                        }
-                    }
-                }
-                }
+    Column {
+        anchors.fill: parent
+        spacing: 10
+        Image {
+            id: img
+            source: mainRectangle.ikona + mainRectangle.kolor_ikony
+            sourceSize.width: mainRectangle.height - 40
+        }
+        // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
+
+        Controls.Label {
+            id: naglowek
+            wrapMode: Text.Wrap
+            font.pointSize: invisibleSlider.value - 2
+            anchors.horizontalCenter: img.horizontalCenter
+            horizontalAlignment: Text.AlignHCenter
+            text: mainRectangle.header
+        }
+    }
+}

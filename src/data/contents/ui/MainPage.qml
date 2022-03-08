@@ -26,23 +26,14 @@ import Filter 1.0
 import HPSCardModel 1.0
 import "gallery"
 
-Kirigami.ScrollablePage {
+HPSPage {
     id: pageRoot
-    HPSSettings
-    {
+    HPSSettings {
         id: hpsSettings
     }
     HPSCardModel {
         id: hpsModel
     }
-    background: Rectangle {
-        anchors.fill: parent
-        color: invisibleCheckbox.checked ? "Black" : "grey"
-    }
-    leftPadding: 0
-    rightPadding: 0
-    bottomPadding: 0
-    topPadding: 0
     title: "Niezbędnik Harcerski"
     ListModel {
         id: galleryModel
@@ -171,10 +162,6 @@ Kirigami.ScrollablePage {
                   title: "Opowiadania"
                   targetPage: "gallery/blank.qml"
                   }
-                  ListElement {
-                  title: "Filmy"
-                  targetPage: "gallery/blank.qml"
-                  }
         */
     }
     header: Controls.ToolBar {
@@ -184,18 +171,14 @@ Kirigami.ScrollablePage {
             anchors.fill: parent
             color: "Green"
         }
-        RowLayout {
-            anchors.fill: parent
-            Controls.TextField {
-                id: searchField
-                inputMethodHints: Qt.ImhNoPredictiveText
-                placeholderText: qsTr("Szukaj...")
-                leftPadding: 10
-                color: "White"
-                placeholderTextColor: "White"
-                Layout.alignment: Qt.AlignHCenter
-                Layout.fillWidth: true
-            }
+        Controls.TextField {
+            id: searchField
+            inputMethodHints: Qt.ImhNoPredictiveText
+            placeholderText: qsTr("Szukaj...")
+            leftPadding: 10
+            color: "White"
+            placeholderTextColor: "White"
+            width: parent.width
         }
     }
     HPSFilter {
@@ -211,37 +194,35 @@ Kirigami.ScrollablePage {
     Controls.Pane {
         Column {
             anchors.fill: parent
-        spacing: 10
-        Repeater {
-            focus: true
-            visible: searchField.text === "" ? false : true
-            model: searchField.text === "" ? 0 : filteredModel
-            delegate: KartaStronaNoLayout {
-                header: model.header
-                ikona: model.image
-                opis: model.category
-                adres: "gallery/" + model.address
-            }
-        }
-        GridLayout {
-            columns: 2
-            anchors.horizontalCenter: parent.horizontalCenter
-            visible: !root.pageStack.wideMode && searchField.text === ""
+            spacing: 10
             Repeater {
                 focus: true
-                model: galleryModel
-                delegate: KartaMain {
-                    id: listItem
-                    visible: searchField.text === ""
-                    header: title
-                    ikona: img
-                    adres: targetPage
-                    kolor_ikony: kolor
+                visible: searchField.text === "" ? false : true
+                model: searchField.text === "" ? 0 : filteredModel
+                delegate: KartaStronaNoLayout {
+                    header: model.header
+                    ikona: model.image
+                    opis: model.category
+                    adres: "gallery/" + model.address
                 }
-
             }
-        }
+            GridLayout {
+                columns: 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                visible: !root.pageStack.wideMode && searchField.text === ""
+                Repeater {
+                    focus: true
+                    model: galleryModel
+                    delegate: KartaMain {
+                        id: listItem
+                        visible: searchField.text === ""
+                        header: title
+                        ikona: img
+                        adres: targetPage
+                        kolor_ikony: kolor
+                    }
+                }
+            }
         }
     }
 }
-
