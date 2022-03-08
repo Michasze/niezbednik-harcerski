@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
+ *   Copyright 2022 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -20,7 +20,6 @@
 import QtQuick 2.3
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.11 as Kirigami
 import Data 1.0
 import Filter 1.0
 import HPSCardModel 1.0
@@ -39,85 +38,85 @@ HPSPage {
         id: galleryModel
         ListElement {
             title: qsTr("Historia")
-            targetPage: "gallery/Historyczne.qml"
             img: "image://icons/krzyz.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Pomysły na zbiórki")
-            targetPage: "gallery/Pomysly.qml"
             img: "image://icons/zarowka.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Poradniki harcerskie")
-            targetPage: "gallery/harcerskie.qml"
             img: "image://icons/ognisko.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Szyfry")
             targetPage: "gallery/szyfry.qml"
+            separate: true
             img: "image://icons/szyfry.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Symbolika")
             targetPage: "gallery/symbolika.qml"
+            separate: true
             img: "image://icons/wosm.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Cytaty")
             targetPage: "gallery/cytaty.qml"
+            separate: true
             img: "image://icons/cytaty.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Książki")
-            targetPage: "gallery/ksiazki.qml"
             img: "image://icons/ksiazki.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Filmy")
             targetPage: "gallery/filmy.qml"
+            separate: true
             img: "image://icons/filmy.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Śpiewnik")
             targetPage: "gallery/Spiewniki.qml"
+            separate: true
             img: "image://icons/spiewnik.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Artykuły")
-            targetPage: "gallery/Artykuly.qml"
             img: "image://icons/Artykuly.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Poradnik zastępowego")
-            targetPage: "gallery/Poradniki.qml"
             img: "image://icons/sznur.svg"
             kolor: ",#574136"
         }
         ListElement {
             title: qsTr("Poradniki wyboru sprzętu")
-            targetPage: "gallery/Sprzet.qml"
             kolor: ",white"
             img: "image://icons/sprzet.svg"
         }
         ListElement {
             title: qsTr("Kącik drużynowego")
             targetPage: "gallery/poradnikiDruzynowy.qml"
+            separate: true
             img: "image://icons/sznur.svg"
             kolor: ",#0000cd"
         }
         ListElement {
             title: qsTr("Listy rzeczy do spakowania")
             kolor: ",white"
+            separate: true
             targetPage: "gallery/poradnikiPakowanie.qml"
             img: "image://icons/plecak.svg"
         }
@@ -125,24 +124,20 @@ HPSPage {
             title: qsTr("Stopnie harcerskie")
             kolor: ",white"
             img: "image://icons/hrS.svg"
-            targetPage: "gallery/stopnie.qml"
         }
         ListElement {
             title: qsTr("Prawo harcerskie")
             kolor: ",white"
             img: "image://icons/zwoj.svg"
-            targetPage: "gallery/prawo.qml"
         }
         ListElement {
             title: qsTr("Roty Przyrzeczenia")
             kolor: ",white"
             img: "image://icons/zwoj.svg"
-            targetPage: "gallery/przyrzeczenia.qml"
         }
         ListElement {
             title: qsTr("Gawędy")
             kolor: ",white"
-            targetPage: "gallery/gawedy.qml"
             img: "image://icons/ognisko.svg"
 
         }
@@ -217,8 +212,10 @@ HPSPage {
                         id: listItem
                         visible: searchField.text === ""
                         header: title
-                        ikona: img
+                        query: header.toLowerCase()
                         adres: targetPage
+                        oddzielne: separate
+                        ikona: img
                         kolor_ikony: kolor
                     }
                 }

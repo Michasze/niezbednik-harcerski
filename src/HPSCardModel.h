@@ -29,6 +29,7 @@ public:
   QVector< Data > m_data;
   QVector< Data > filteredDane();
   void setFilteredDane( const QString &query);
+  Q_INVOKABLE void reload();
   QHash<int, QByteArray> roleNames() const override;
   enum Roles {
     HeaderRole,

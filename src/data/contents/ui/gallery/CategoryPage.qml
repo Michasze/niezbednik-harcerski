@@ -16,25 +16,46 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import Filter 1.0
+import HPSCardModel 1.0
 
-
-HPSPage {
+HPSPage
+{
     id: page
-    title: qsTr("Artykuły")
+    property string tytul
+    property string query
+    title: tytul
+    //HACK nie wiem jak doładować dynamicznie zawartość więc załadujmy model
+    //dopiero po zmianie języka. To w sumie niespecjalnie rozwiązuje problem
+    //ale może do następnej wersji coś wymyślę
+
+    HPSCardModel
+    {
+        id: categoryModel
+    }
     Controls.Pane
     {
         Column {
             anchors.fill: parent
             spacing: 10
-            HPSFilter {
+            ElementListyImageNoLayout {
+                id: postacie
+                visible: page.title === qsTr("Historia")
+                height: 150
+                ikona: "image://images/Baden-Powell.jpg,20"
+                isUrl: false
+                odnosnik: "postacie.qml"
+                header: "Postacie"
+            }
+            HPSFilter
+            {
                 id: filteredModel
-                sourceModel: hpsModel
+                sourceModel: categoryModel
                 filterRole: "category"
-                filterRegularExpression: RegExp("%1".arg("artykuły"), "i")
+                secondRole: ""
+                filterRegularExpression: RegExp("%1".arg(page.query), "i")
             }
             Repeater {
                 model: filteredModel

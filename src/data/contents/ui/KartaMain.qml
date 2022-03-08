@@ -20,11 +20,14 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
+import "gallery"
 
 
 Rectangle {
     // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
     property string header: "Brak tekstu"
+    property string query
+    property bool oddzielne: false
     property url ikona: {}
     property url adres: "harcerz.qml"
     property string kolor_ikony: ",white"
@@ -41,7 +44,7 @@ Rectangle {
         anchors.fill: parent
         onClicked:
         {
-            pageStack.push(Qt.resolvedUrl(mainRectangle.adres))
+            mainRectangle.oddzielne ? pageStack.push(Qt.resolvedUrl(mainRectangle.adres)) : pageStack.push(categoryComponent)
         }
     }
     Column {
@@ -61,6 +64,13 @@ Rectangle {
             anchors.horizontalCenter: img.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
             text: mainRectangle.header
+        }
+    }
+    Component {
+        id: categoryComponent
+        CategoryPage {
+            tytul: mainRectangle.header
+            query: mainRectangle.query
         }
     }
 }

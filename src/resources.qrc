@@ -13,6 +13,7 @@
         <file alias="contents/ui/gallery/ElementListyImageNoLayout.qml">./data/contents/ui/gallery/ElementListyImageNoLayout.qml</file>
         <file alias="contents/ui/gallery/HPSRadioButton.qml">./data/contents/ui/gallery/HPSRadioButton.qml</file>
         <file alias="contents/ui/gallery/HPSPage.qml">./data/contents/ui/gallery/HPSPage.qml</file>
+        <file alias="contents/ui/gallery/CategoryPage.qml">./data/contents/ui/gallery/CategoryPage.qml</file>
         <file alias="contents/ui/gallery/HPSPopup.qml">./data/contents/ui/gallery/HPSPopup.qml</file>
         <file alias="contents/ui/gallery/HPSText.qml">./data/contents/ui/gallery/HPSText.qml</file>
         <file alias="contents/ui/gallery/HPSLista.qml">./data/contents/ui/gallery/HPSLista.qml</file>
@@ -93,11 +94,7 @@
         <file alias="contents/ui/img/znaki.png">./data/contents/ui/img/znaki.png</file>
         <file alias="contents/ui/gallery/blank.qml">./data/contents/ui/gallery/blank.qml</file>
         <file alias="contents/ui/gallery/blankLayer.qml">./data/contents/ui/gallery/blankLayer.qml</file>
-        <file alias="contents/ui/gallery/Pomysly.qml">./data/contents/ui/gallery/Pomysly.qml</file>
-        <file alias="contents/ui/gallery/Historyczne.qml">./data/contents/ui/gallery/Historyczne.qml</file>
         <file alias="contents/ui/gallery/postacie.qml">./data/contents/ui/gallery/postacie.qml</file>
-        <file alias="contents/ui/gallery/Artykuly.qml">./data/contents/ui/gallery/Artykuly.qml</file>
-        <file alias="contents/ui/gallery/poradnikiDruzynowy.qml">./data/contents/ui/gallery/poradnikiDruzynowy.qml</file>
         <file alias="contents/ui/gallery/kacikInne.qml">./data/contents/ui/gallery/kacikInne.qml</file>
         <file alias="contents/ui/gallery/aplikacje.qml">./data/contents/ui/gallery/aplikacje.qml</file>
         <file alias="contents/ui/gallery/mapy.qml">./data/contents/ui/gallery/mapy.qml</file>
@@ -134,7 +131,6 @@
         <file alias="contents/ui/gallery/listaZnanych.qml">./data/contents/ui/gallery/listaZnanych.qml</file>
         <file alias="contents/ui/gallery/wyjatkowe.qml">./data/contents/ui/gallery/wyjatkowe.qml</file>
         <file alias="contents/ui/gallery/prawie.qml">./data/contents/ui/gallery/prawie.qml</file>
-        <file alias="contents/ui/gallery/harcerskie.qml">./data/contents/ui/gallery/harcerskie.qml</file>
         <file alias="contents/ui/gallery/jakSpac.qml">./data/contents/ui/gallery/jakSpac.qml</file>
         <file alias="contents/ui/gallery/mapaMiejsc.qml">./data/contents/ui/gallery/mapaMiejsc.qml</file>
         <file alias="contents/ui/gallery/terenowe.qml">./data/contents/ui/gallery/terenowe.qml</file>
@@ -146,7 +142,6 @@
         <file alias="contents/ui/gallery/terenowe/punkty.qml">./data/contents/ui/gallery/terenowe/punkty.qml</file>
         <file alias="contents/ui/gallery/terenowe/dodatkowe.qml">./data/contents/ui/gallery/terenowe/dodatkowe.qml</file>
         <file alias="contents/ui/gallery/daty.qml">./data/contents/ui/gallery/daty.qml</file>
-        <file alias="contents/ui/gallery/prawo.qml">./data/contents/ui/gallery/prawo.qml</file>
         <file alias="contents/ui/gallery/prawoZHP.qml">./data/contents/ui/gallery/prawoZHP.qml</file>
         <file alias="contents/ui/gallery/symbolika.qml">./data/contents/ui/gallery/symbolika.qml</file>
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
@@ -163,7 +158,6 @@
         <file alias="contents/ui/gallery/prawoTur.qml">./data/contents/ui/gallery/prawoTur.qml</file>
         <file alias="contents/ui/gallery/prawoSkaut.qml">./data/contents/ui/gallery/prawoSkaut.qml</file>
         <file alias="contents/ui/gallery/prawoSkautEng.qml">./data/contents/ui/gallery/prawoSkautEng.qml</file>
-        <file alias="contents/ui/gallery/przyrzeczenia.qml">./data/contents/ui/gallery/przyrzeczenia.qml</file>
         <file alias="contents/ui/gallery/histPrzyrzeczenia.qml">./data/contents/ui/gallery/histPrzyrzeczenia.qml</file>
         <file alias="contents/ui/gallery/histPrawa.qml">./data/contents/ui/gallery/histPrawa.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieRR.qml">./data/contents/ui/gallery/przyrzeczenieRR.qml</file>
@@ -176,7 +170,6 @@
         <file alias="contents/ui/gallery/przyrzeczenieTur.qml">./data/contents/ui/gallery/przyrzeczenieTur.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieSkaut.qml">./data/contents/ui/gallery/przyrzeczenieSkaut.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieSkautEng.qml">./data/contents/ui/gallery/przyrzeczenieSkautEng.qml</file>
-        <file alias="contents/ui/gallery/stopnie.qml">./data/contents/ui/gallery/stopnie.qml</file>
         <file alias="contents/ui/gallery/stopnieZHP.qml">./data/contents/ui/gallery/stopnieZHP.qml</file>
         <file alias="contents/ui/gallery/stopnieZHR.qml">./data/contents/ui/gallery/stopnieZHR.qml</file>
         <file alias="contents/ui/gallery/stopnieSH.qml">./data/contents/ui/gallery/stopnieSH.qml</file>
@@ -202,7 +195,6 @@
         <file alias="contents/ui/gallery/swJerzy.qml">./data/contents/ui/gallery/swJerzy.qml</file>
         <file alias="contents/ui/gallery/DMB.qml">./data/contents/ui/gallery/DMB.qml</file>
         <file alias="contents/ui/gallery/zbiorkiWTerenie.qml">./data/contents/ui/gallery/zbiorkiWTerenie.qml</file>
-        <file alias="contents/ui/gallery/Poradniki.qml">./data/contents/ui/gallery/Poradniki.qml</file>
         <file alias="contents/ui/gallery/szyfry.qml">./data/contents/ui/gallery/szyfry.qml</file>
         <file alias="contents/ui/gallery/szyfrator.qml">./data/contents/ui/gallery/szyfrator.qml</file>
         <file alias="contents/ui/gallery/szyfrator/gade.qml">./data/contents/ui/gallery/szyfrator/gade.qml</file>
@@ -230,7 +222,6 @@
         <file alias="contents/ui/gallery/malaKsiega/rozbiezny.qml">./data/contents/ui/gallery/malaKsiega/rozbiezny.qml</file>
         <file alias="contents/ui/gallery/PoradnikHS.qml">./data/contents/ui/gallery/PoradnikHS.qml</file>
         <file alias="contents/ui/gallery/PoradnikWedro.qml">./data/contents/ui/gallery/PoradnikWedro.qml</file>
-        <file alias="contents/ui/gallery/ksiazki.qml">./data/contents/ui/gallery/ksiazki.qml</file>
         <file alias="contents/ui/gallery/Spiewniki.qml">./data/contents/ui/gallery/Spiewniki.qml</file>
         <file alias="contents/ui/gallery/poradnikHS/konspekty.qml">./data/contents/ui/gallery/poradnikHS/konspekty.qml</file>
         <file alias="contents/ui/gallery/poradnikHS/wprowadzenie.qml">./data/contents/ui/gallery/poradnikHS/wprowadzenie.qml</file>
@@ -254,6 +245,7 @@
         <file alias="contents/ui/gallery/ksiazkiZastepowy.qml">./data/contents/ui/gallery/ksiazkiZastepowy.qml</file>
         <file alias="contents/ui/gallery/ksiazkiDruzynowy.qml">./data/contents/ui/gallery/ksiazkiDruzynowy.qml</file>
         <file alias="contents/ui/gallery/ksiazkiHarcerz.qml">./data/contents/ui/gallery/ksiazkiHarcerz.qml</file>
+        <file alias="contents/ui/gallery/poradnikiDruzynowy.qml">./data/contents/ui/gallery/poradnikiDruzynowy.qml</file>
         <file alias="contents/ui/gallery/filmy.qml">./data/contents/ui/gallery/filmy.qml</file>
         <file alias="contents/ui/gallery/biwaki.qml">./data/contents/ui/gallery/biwaki.qml</file>
         <file alias="contents/ui/gallery/sprawnosci.qml">./data/contents/ui/gallery/sprawnosci.qml</file>
@@ -275,8 +267,6 @@
         <file alias="contents/ui/gallery/PakowanieLista.qml">./data/contents/ui/gallery/PakowanieLista.qml</file>
         <file alias="contents/ui/gallery/PakowanieDelegate.qml">./data/contents/ui/gallery/PakowanieDelegate.qml</file>
         <file alias="contents/ui/gallery/ListaKreator.qml">./data/contents/ui/gallery/ListaKreator.qml</file>
-        <file alias="contents/ui/gallery/Sprzet.qml">./data/contents/ui/gallery/Sprzet.qml</file>
-        <file alias="contents/ui/gallery/gawedy.qml">./data/contents/ui/gallery/gawedy.qml</file>
         <file alias="contents/ui/gallery/grzybiarz.qml">./data/contents/ui/gallery/grzybiarz.qml</file>
         <file alias="contents/ui/gallery/powstaniec.qml">./data/contents/ui/gallery/powstaniec.qml</file>
         <file alias="contents/ui/gallery/zwyczaje.qml">./data/contents/ui/gallery/zwyczaje.qml</file>

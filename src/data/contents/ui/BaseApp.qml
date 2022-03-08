@@ -129,7 +129,11 @@ może ulec zmianie."
             /*             fillMode: Image.PreserveAspectFit */
             /*         } */
             /*     } */
-            /*     onClicked: HPSTranslate.selectLanguage("pl") */
+            /*     onClicked: { */
+            /*         HPSTranslate.selectLanguage("pl") */
+            /*         engine.retranslate(); */
+            /*         hpsModel.reload() */
+            /*     } */
             /* } */
             /* Controls.RadioButton */
             /* { */
@@ -156,6 +160,7 @@ może ulec zmianie."
             /*     onClicked: { */
             /*         HPSTranslate.selectLanguage("uk"); */
             /*         engine.retranslate(); */
+            /*         hpsModel.reload() */
             /*     } */
             /* } */
             Controls.CheckBox
