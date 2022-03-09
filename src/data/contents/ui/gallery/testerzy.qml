@@ -23,7 +23,7 @@ import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
-    title: "Testerzy"
+    title: qsTr("Testerzy")
     globalToolBarStyle: ApplicationHeaderStyle.None
     Controls.Pane
     {

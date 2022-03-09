@@ -197,6 +197,7 @@ void HPSCardModel::reload()
   QModelIndex topLeft = createIndex(8,0);
   QModelIndex bottomRight = createIndex(35,0);
   beginResetModel();
-  Q_EMIT dataChanged(topLeft, bottomRight);
   endResetModel();
+  m_data = dane();
+  Q_EMIT dataChanged(topLeft, bottomRight);
 }

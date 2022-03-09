@@ -7,7 +7,7 @@
 import QtQuick 2.1
 import QtQuick.Controls 2.4 as QQC2
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.6
+import org.kde.kirigami 2.19 as Kirigami
 
 /**
  * An about page that is ready to integrate in a kirigami app
@@ -19,23 +19,18 @@ import org.kde.kirigami 2.6
  * @since 5.52
  * @since org.kde.kirigami 2.6
  */
-HPSPage
-{
+HPSPage {
     id: page
     property var aboutData
-
     title: qsTr("O aplikacji")
-
-    globalToolBarStyle: ApplicationHeaderStyle.None
+    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
     Component {
         id: personDelegate
-
         RowLayout {
-            height: implicitHeight + (Units.smallSpacing * 2)
-
-            spacing: Units.smallSpacing * 2
-            Icon {
-                width: Units.iconSizes.smallMedium
+            height: implicitHeight + (Kirigami.Units.smallSpacing * 2)
+            spacing: Kirigami.Units.smallSpacing * 2
+            Kirigami.Icon {
+                width: Kirigami.Units.iconSizes.smallMedium
                 height: width
                 source: "qrc:/contents/ui/img/user.svg"
             }
@@ -49,7 +44,7 @@ HPSPage
                     visible: modelData.emailAddress
                     width: height
                     icon.source: "qrc:/contents/ui/img/mail-sent"
-                    QQC2.ToolTip.delay: Units.toolTipDelay
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.text: qsTr("Wyślij email do %1").arg(modelData.emailAddress)
                     onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
@@ -58,7 +53,7 @@ HPSPage
                     visible: modelData.webAddress
                     width: height
                     icon.name: "globe"
-                    QQC2.ToolTip.delay: Units.toolTipDelay
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.text: modelData.webAddress
                     onClicked: Qt.openUrlExternally(modelData.webAddress)
@@ -66,73 +61,57 @@ HPSPage
             }
         }
     }
-
-    FormLayout {
+    Kirigami.FormLayout {
         id: form
-
         GridLayout {
             columns: 2
             Layout.fillWidth: true
-
-            Icon {
+            Image {
                 Layout.rowSpan: 2
-                Layout.preferredHeight: Units.iconSizes.huge
+                Layout.preferredHeight: Kirigami.Units.iconSizes.huge
                 Layout.preferredWidth: height
                 Layout.maximumWidth: page.width / 3;
-                Layout.rightMargin: Units.largeSpacing
-                source: Settings.applicationWindowIcon || page.aboutData.programLogo || page.aboutData.programIconName || page.aboutData.componentName
+                Layout.rightMargin: Kirigami.Units.largeSpacing
+                source: page.aboutData.programLogo
             }
-            Heading {
+            Kirigami.Heading {
                 Layout.fillWidth: true
                 text: page.aboutData.displayName + " " + page.aboutData.version
             }
-            Heading {
+            Kirigami.Heading {
                 Layout.fillWidth: true
                 level: 2
                 wrapMode: Text.WordWrap
                 text: page.aboutData.shortDescription
             }
         }
-
-        Separator {
+        Kirigami.Separator {
             Layout.fillWidth: true
         }
-
-        Heading {
-            FormData.isSection: true
+        Kirigami.Heading {
+            Kirigami.FormData.isSection: true
             text: qsTr("Prawa autorskie")
         }
         QQC2.Label {
-            Layout.leftMargin: Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
             text: aboutData.otherText
             visible: text.length > 0
         }
         QQC2.Label {
-            Layout.leftMargin: Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
             text: aboutData.copyrightStatement
             visible: text.length > 0
         }
-        UrlButton {
-            Layout.leftMargin: Units.gridUnit
+        Kirigami.UrlButton {
+            Layout.leftMargin: Kirigami.Units.gridUnit
             url: aboutData.homepage
             visible: url.length > 0
         }
-
-        OverlaySheet {
+        Kirigami.Dialog {
             id: licenseSheet
             property alias text: bodyLabel.text
-            property alias name: heading.text
-
-            header: Heading {
-                id: heading
-            }
-            background: Rectangle {
-              anchors.fill: parent
-              color: invisibleCheckbox.checked ? "Black" : "grey"
-    }
-
-
-            contentItem: QQC2.Label {
+            title: "GPL v2"
+            QQC2.Label {
                 id: bodyLabel
                 wrapMode: Text.WordWrap
                 rightPadding: 10
@@ -140,54 +119,47 @@ HPSPage
                 text: licenseSheet.text
             }
         }
-
         Component {
             id: licenseLinkButton
-
             RowLayout {
-                Layout.leftMargin: Units.smallSpacing
+                Layout.leftMargin: Kirigami.Units.smallSpacing
                 QQC2.Label { text: qsTr("Licencja:") }
-                LinkButton {
+                Kirigami.LinkButton {
                     text: modelData.name
                     onClicked: {
                         licenseSheet.text = modelData.text
-                        licenseSheet.name = modelData.name
                         licenseSheet.open()
                     }
                 }
             }
         }
-
         Component {
             id: licenseTextItem
-
             RowLayout {
-                Layout.leftMargin: Units.smallSpacing
+                Layout.leftMargin: Kirigami.Units.smallSpacing
                 QQC2.Label { text: qsTr("Licencja: %1").arg(modelData.name) }
             }
         }
-
         Repeater {
             model: aboutData.licenses
             delegate: applicationWindow().pageStack ? licenseLinkButton : licenseTextItem
         }
-
-        Heading {
-            FormData.isSection: visible
+        Kirigami.Heading {
+            Kirigami.FormData.isSection: visible
             text: qsTr("Biblioteki w użyciu")
             visible: hpsSettings.information
         }
         Repeater {
             model: hpsSettings.information
             delegate: QQC2.Label {
-                Layout.leftMargin: Units.gridUnit
+                Layout.leftMargin: Kirigami.Units.gridUnit
                 id: libraries
                 text: modelData
             }
         }
-        Heading {
+        Kirigami.Heading {
             Layout.fillWidth: true
-            FormData.isSection: visible
+            Kirigami.FormData.isSection: visible
             text: qsTr("Autorzy:")
             visible: aboutData.authors.length > 0
         }
@@ -195,28 +167,27 @@ HPSPage
             model: aboutData.authors
             delegate: personDelegate
         }
-        ColumnLayout
-        {
-        Heading {
-            height: visible ? implicitHeight : 0
-            FormData.isSection: visible
-            text: qsTr("Zgłoś błędy")
+        ColumnLayout {
+            Kirigami.Heading {
+                height: visible ? implicitHeight : 0
+                Kirigami.FormData.isSection: visible
+                text: qsTr("Zgłoś błędy")
+            }
+            QQC2.Button {
+                highlighted: true
+                visible: true
+                Layout.alignment: Qt.AlignHCenter
+                width: height
+                icon.source: "qrc:/contents/ui/img/mail-sent"
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: qsTr("Wyślij email do %1").arg("aplikacjahps@gmail.com")
+                onClicked: Qt.openUrlExternally("mailto:%1".arg("aplikacjahps@gmail.com"))
+            }
         }
-                QQC2.Button {
-                    highlighted: true
-                    visible: true
-                    Layout.alignment: Qt.AlignHCenter
-                    width: height
-                    icon.source: "qrc:/contents/ui/img/mail-sent"
-                    QQC2.ToolTip.delay: Units.toolTipDelay
-                    QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: qsTr("Wyślij email do %1").arg("aplikacjahps@gmail.com")
-                    onClicked: Qt.openUrlExternally("mailto:%1".arg("aplikacjahps@gmail.com"))
-                }
-        }
-        Heading {
+        Kirigami.Heading {
             height: visible ? implicitHeight : 0
-            FormData.isSection: visible
+            Kirigami.FormData.isSection: visible
             text: qsTr("Credits")
             visible: repCredits.count > 0
         }
@@ -225,9 +196,9 @@ HPSPage
             model: aboutData.credits
             delegate: personDelegate
         }
-        Heading {
+        Kirigami.Heading {
             height: visible ? implicitHeight : 0
-            FormData.isSection: visible
+            Kirigami.FormData.isSection: visible
             text: qsTr("Translators")
             visible: repTranslators.count > 0
         }

@@ -30,9 +30,6 @@ HPSPage {
     HPSSettings {
         id: hpsSettings
     }
-    HPSCardModel {
-        id: hpsModel
-    }
     title: "Niezbędnik Harcerski"
     ListModel {
         id: galleryModel

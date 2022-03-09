@@ -40,7 +40,7 @@ ColumnLayout
     {
         id: box1
         checked: !hpsSettings.neverShowIsToggled ? true : false
-        tresc: "Wiadomość powitalną"
+        tresc: qsTr("Wiadomość powitalną")
         onToggled:
         {
             if(box1.checked == true)
@@ -58,7 +58,7 @@ ColumnLayout
     {
         id: box2
         checked: !hpsSettings.neverShow2IsToggled ? true : false
-        tresc: "Powiadomienie o gestach"
+        tresc: qsTr("Powiadomienie o gestach")
         onToggled:
         {
             if(box2.checked == true)
@@ -76,7 +76,7 @@ ColumnLayout
     {
         id: box3
         checked: !hpsSettings.neverShow3IsToggled ? true : false
-        tresc: "Powiadomienie o kopiowaniu cytatów"
+        tresc: qsTr("Powiadomienie o kopiowaniu cytatów")
         onToggled:
         {
             if(box3.checked == true)
@@ -94,7 +94,7 @@ ColumnLayout
     {
         id: box4
         checked: !hpsSettings.neverShow4IsToggled ? true : false
-        tresc: "Powiadomienie o kopiowaniu szyfrów"
+        tresc: qsTr("Powiadomienie o kopiowaniu szyfrów")
         onToggled:
         {
             if(box4.checked == true)
@@ -130,13 +130,13 @@ ColumnLayout
     } */
     Controls.Label
     {
-        text: "Rozmiar tekstu (bez śpiewnika):"
+        text: qsTr("Rozmiar tekstu (bez śpiewnika):")
     }
 
 
     HPSRadioButton
     {
-        text: "Bardzo mały"
+        text: qsTr("Bardzo mały")
         checked: hpsSettings.textSize == 10 ? true : false
         onClicked:
         {
@@ -146,7 +146,7 @@ ColumnLayout
     }
     HPSRadioButton
     {
-        text: "Mały"
+        text: qsTr("Mały")
         checked: hpsSettings.textSize == 12 ? true : false
         onClicked:
         {
@@ -156,7 +156,7 @@ ColumnLayout
     }
     HPSRadioButton
     {
-        text: "Średni"
+        text: qsTr("Średni")
         checked: hpsSettings.textSize == 14 ? true : false
         onClicked:
         {
@@ -166,7 +166,7 @@ ColumnLayout
     }
     HPSRadioButton
     {
-        text: "Duży"
+        text: qsTr("Duży")
         checked: hpsSettings.textSize == 16 ? true : false
         onClicked:
         {
@@ -176,7 +176,7 @@ ColumnLayout
     }
         HPSRadioButton
     {
-        text: "Bardzo duży"
+        text: qsTr("Bardzo duży")
         checked: hpsSettings.textSize == 18 ? true : false
         onClicked:
         {
@@ -186,7 +186,7 @@ ColumnLayout
     }
     ElementListyNoImage
     {
-        header: "Podgląd"
+        header: qsTr("Podgląd")
         Layout.fillWidth: true
         textSize: invisibleSlider.value
     }

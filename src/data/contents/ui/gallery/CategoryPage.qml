@@ -21,22 +21,12 @@ import QtQuick.Controls 2.15 as Controls
 import Filter 1.0
 import HPSCardModel 1.0
 
-HPSPage
-{
+HPSPage {
     id: page
     property string tytul
     property string query
     title: tytul
-    //HACK nie wiem jak doładować dynamicznie zawartość więc załadujmy model
-    //dopiero po zmianie języka. To w sumie niespecjalnie rozwiązuje problem
-    //ale może do następnej wersji coś wymyślę
-
-    HPSCardModel
-    {
-        id: categoryModel
-    }
-    Controls.Pane
-    {
+    Controls.Pane {
         Column {
             anchors.fill: parent
             spacing: 10
@@ -52,7 +42,7 @@ HPSPage
             HPSFilter
             {
                 id: filteredModel
-                sourceModel: categoryModel
+                sourceModel: hpsModel
                 filterRole: "category"
                 secondRole: ""
                 filterRegularExpression: RegExp("%1".arg(page.query), "i")

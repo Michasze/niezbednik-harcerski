@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,19 +18,16 @@
  */
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 
-HPSPage
-
-{
+HPSPage {
+    id: page
     title: "Jak promować harcerstwo"
-        ColumnLayout {
-        width: pageFoto.width
-
-            ElementListyNoImage
-            {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout {
+                alignH: Text.AlignJustify
                 format: Text.PlainText
                 color: "Black"
                 header: "Promocja harcerstwa jest w dzisiejszych czasach bardzo ważna. Jesteśmy ze wszystkich stron bombardowani różnymi propozycjami spędzania wolnego czasu. Istnienie harcerstwa nie jest wcale tak oczywiste dla wszystkich. Dlatego często słyszy się stwierdzenia: \"To wy jeszcze istniejecie?\", \"Harcerstwo? Sprzedajecie ciastka?\". Jest to szczególnie widoczne u młodzieży, która kojarzy nas i nasze działania jedynie przez pryzmat zachodnich filmów w których pojawiają się skauci, których obraz zostaje bardzo “wypłaszczony i w pewien sposób przekłamany. Rodzice, mieszkańcy naszego miasta, środowisko rówieśników harcerzy z naszej drużyny jest naszym docelowym gronem odbiorców. Dlatego trzeba to wykorzystać!
@@ -50,12 +47,12 @@ Instagram drużyny jest czymś co może przyciągnąć rówieśników waszych ha
 Promocja naszej jednostki czy nawet samej idei harcerstwa jest bardzo ważna, bez promocji i rozgłosu w harcerstwie nie będzie przybywać tak wiele nowych osób. Dzisiejszy świat pozwala nam wykonywać wiele różnych środków i młodych ludzi trzeba przekonać do tego, że warto zostać harcerzem. 
 
 Chociaż żadna promocja nie zastąpi tego, że musimy przede wszystkim działać prężnie i w przemyślany sposób, aby osiągnąć sukces."
+            }
+            ElementListyNoLayout {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header: "Juliusz Idzikowski"
+            }
         }
-        ElementListyNoImage {
-           Layout.fillWidth: true
-           alignH: Text.AlignHCenter
-           format: Text.PlainText
-           header: "Juliusz Idzikowski"
-         }
-        }
+    }
 }

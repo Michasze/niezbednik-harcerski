@@ -1,5 +1,5 @@
 /*
- *   Copyright 2020 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,41 +17,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
-OProgramieSzablon
-{
+OProgramieSzablon {
     aboutData: {
- "displayName" : "Niezbędnik HPS",
- "productName" : "Niezbędnik HPS",
- "componentName" : "HPS",
- "shortDescription" : "Aplikacja grupy \"Harcerze - Poznajemy Się!\"    ",
- "homepage" : "",
- "programLogo" : "qrc:/contents/ui/img/logo.svg",
- "bugAddress" : "aplikacjahps@gmail.com",
- "version" : "1.1.0",
- "otherText" : "",
- "authors" : [
-     {
-         "name" : "Osiołek",
-         "task" : "Kod źródłowy, projekt interfejsu",
-         "emailAddress" : "aplikacjahps@gmail.com",
-         "webAddress" : "",
-         "ocsUsername" : ""
-     },
-     {
-         "name" : "Juliusz Idzikowski",
-         "task" : "Pomysł, zawartość",
-         "emailAddress" : "aplikacjahps@gmail.com",
-         "webAddress" : "",
-         "ocsUsername" : ""
-     }
- ],
- "credits" : [],
- "translators" : [],
- "licenses" : [
-     {
-         "name" : "GPL v2",
-         "text" : "GNU GENERAL PUBLIC LICENSE
+        "displayName" : "Niezbędnik HPS",
+        "productName" : "Niezbędnik HPS",
+        "componentName" : "HPS",
+        "shortDescription" : qsTr("Aplikacja grupy \"Harcerze - Poznajemy Się!\""),
+        "homepage" : "",
+        "programLogo" : "image://icons/logo.svg",
+        "bugAddress" : "aplikacjahps@gmail.com",
+        "version" : "1.1.0",
+        "otherText" : "",
+        "authors" : [
+            {
+                "name" : "Osiołek",
+                "task" : "Kod źródłowy, projekt interfejsu",
+                "emailAddress" : "aplikacjahps@gmail.com",
+                "webAddress" : "",
+                "ocsUsername" : ""
+            },
+            {
+                "name" : "Juliusz Idzikowski",
+                "task" : "Pomysł, zawartość",
+                "emailAddress" : "aplikacjahps@gmail.com",
+                "webAddress" : "",
+                "ocsUsername" : ""
+            }
+        ],
+        "credits" : [],
+        "translators" : [],
+        "licenses" : [
+            {
+                "name" : "GPL v2",
+                "text" : "GNU GENERAL PUBLIC LICENSE
 
 Version 2, June 1991
 
@@ -184,10 +182,10 @@ signature of Ty Coon, 1 April 1989
 Ty Coon, President of Vice
 
 This General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. ",
-         "spdx" : "GPL-2.0"
-     }
- ],
- "copyrightStatement" : "© 2020 Administracja HPS",
- "desktopFileName" : "com.hps.HPS"
- }
+                "spdx" : "GPL-2.0"
+            }
+        ],
+        "copyrightStatement" : qsTr("© 2022 Administracja HPS"),
+        "desktopFileName" : "com.hps.HPS"
+    }
 }

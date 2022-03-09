@@ -52,6 +52,7 @@ Rectangle {
         spacing: 10
         Image {
             id: img
+            anchors.horizontalCenter: parent.horizontalCenter
             source: mainRectangle.ikona + mainRectangle.kolor_ikony
             sourceSize.width: mainRectangle.height - 40
         }

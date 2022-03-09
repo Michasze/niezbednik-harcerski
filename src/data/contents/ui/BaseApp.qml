@@ -388,7 +388,7 @@ może ulec zmianie."
                 font.pointSize: 24
                 anchors.verticalCenter: drawerImg.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: "Menu"
+                text: qsTr("Menu")
             }
         }
         Column {
@@ -399,7 +399,7 @@ może ulec zmianie."
                 id: drawerModel
                 ListElement { opis: qsTr("O aplikacji"); warstwa: "gallery/oProgramie.qml"; icon: "image://icons/documentinfo.svg,white" }
                 ListElement { opis: qsTr("Social media"); warstwa: "gallery/social.qml"; icon: "image://icons/snapchat_symbolic.svg,white" }
-                ListElement { opis: "Testerzy"; warstwa: "gallery/testerzy.qml"; icon: "image://icons/user.svg,white" }
+                ListElement { opis: qsTr("Testerzy"); warstwa: "gallery/testerzy.qml"; icon: "image://icons/user.svg,white" }
                 ListElement { opis: "Pomocne dłonie"; warstwa: "gallery/pomocni.qml"; icon: "image://icons/hand.svg,white" }
                 ListElement { opis: qsTr("Ustawienia"); warstwa: "gallery/ustawienia.qml"; icon: "image://icons/settings.svg,white" }
             }

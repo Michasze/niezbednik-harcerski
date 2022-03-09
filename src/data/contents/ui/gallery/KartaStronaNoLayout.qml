@@ -42,52 +42,50 @@ Rectangle {
             pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
         }
     }
-                GridLayout {
-                    id: hznpLayout
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                        right: parent.right
-                        //IMPORTANT: never put the bottom margin
-                    }
-                    Image {
-                        id: img
-                        visible: source != ""
-                        Layout.leftMargin: 10
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                        Layout.fillWidth: false
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        source: isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius
-                        sourceSize.width: kartaRectangle.height - 20
-                    }
-
-
-                    ColumnLayout {
-                        Controls.Label {
-                            id: naglowek
-                            wrapMode: Text.Wrap
-                            Layout.topMargin: img.visible ? 0 : 10
-                            Layout.rightMargin: 10
-                            Layout.leftMargin: 10
-                            font.pointSize: invisibleSlider.value
-                            Layout.fillWidth: true
-                             text: kartaRectangle.header
-                        }
-                        HPSSeparator {
-                            Layout.fillWidth: true
-                            color: "#615f5f"
-                            Layout.rightMargin: 10
-                        }
-                        Controls.Label {
-                            Layout.fillWidth: true
-                            wrapMode: Text.Wrap
-                            Layout.rightMargin: 10
-                            Layout.leftMargin: 10
-                            font.pointSize: invisibleSlider.value - 2
-                            Layout.bottomMargin: 10
-                            text: kartaRectangle.opis
-                        }
-                    }
-               }
+    GridLayout {
+        id: hznpLayout
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+            //IMPORTANT: never put the bottom margin
+        }
+        Image {
+            id: img
+            visible: source != ""
+            Layout.leftMargin: 10
+            Layout.topMargin: 10
+            Layout.bottomMargin: 10
+            Layout.fillWidth: false
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+            source: kartaRectangle.ikona != "" ? (isVector ? kartaRectangle.ikona : kartaRectangle.ikona + "," + imageRadius) : "qrc:/contents/ui/img/blank.svg"
+            sourceSize.width: kartaRectangle.height - 20
+        }
+        ColumnLayout {
+            Controls.Label {
+                id: naglowek
+                wrapMode: Text.Wrap
+                Layout.topMargin: img.visible ? 0 : 10
+                Layout.rightMargin: 10
+                Layout.leftMargin: 10
+                font.pointSize: invisibleSlider.value
+                Layout.fillWidth: true
+                text: kartaRectangle.header
+            }
+            HPSSeparator {
+                Layout.fillWidth: true
+                color: "#615f5f"
+                Layout.rightMargin: 10
+            }
+            Controls.Label {
+                Layout.fillWidth: true
+                wrapMode: Text.Wrap
+                Layout.rightMargin: 10
+                Layout.leftMargin: 10
+                font.pointSize: invisibleSlider.value - 2
+                Layout.bottomMargin: 10
+                text: kartaRectangle.opis
+            }
+        }
+    }
 }

@@ -4,22 +4,32 @@
 <context>
     <name>BaseApp</name>
     <message>
-        <location filename="../../BaseApp.qml" line="319"/>
+        <location filename="../../BaseApp.qml" line="291"/>
         <source>Powrót</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../../BaseApp.qml" line="434"/>
+        <location filename="../../BaseApp.qml" line="391"/>
+        <source>Menu</source>
+        <translation>Меню</translation>
+    </message>
+    <message>
+        <location filename="../../BaseApp.qml" line="400"/>
         <source>O aplikacji</source>
         <translation>про аплікацію</translation>
     </message>
     <message>
-        <location filename="../../BaseApp.qml" line="435"/>
+        <location filename="../../BaseApp.qml" line="401"/>
         <source>Social media</source>
         <translation>наші сайті</translation>
     </message>
     <message>
-        <location filename="../../BaseApp.qml" line="438"/>
+        <location filename="../../BaseApp.qml" line="402"/>
+        <source>Testerzy</source>
+        <translation>Тестування</translation>
+    </message>
+    <message>
+        <location filename="../../BaseApp.qml" line="404"/>
         <source>Ustawienia</source>
         <translation>Параметри</translation>
     </message>
@@ -27,7 +37,7 @@
 <context>
     <name>CategoryPage</name>
     <message>
-        <location filename="../CategoryPage.qml" line="45"/>
+        <location filename="../CategoryPage.qml" line="43"/>
         <source>Historia</source>
         <translation>Історія</translation>
     </message>
@@ -111,107 +121,99 @@
     </message>
 </context>
 <context>
-    <name>Historyczne</name>
-    <message>
-        <location filename="../Historyczne.qml" line="26"/>
-        <source>Historia</source>
-        <translation>Історія</translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <location filename="../../MainPage.qml" line="40"/>
+        <location filename="../../MainPage.qml" line="37"/>
         <source>Historia</source>
         <translation>Історія</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="45"/>
+        <location filename="../../MainPage.qml" line="42"/>
         <source>Pomysły na zbiórki</source>
         <translation>Ідеї для скаутських зустрічей</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="50"/>
+        <location filename="../../MainPage.qml" line="47"/>
         <source>Poradniki harcerskie</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="55"/>
+        <location filename="../../MainPage.qml" line="52"/>
         <source>Szyfry</source>
         <translation>Шифри</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="62"/>
+        <location filename="../../MainPage.qml" line="59"/>
         <source>Symbolika</source>
         <translation>Символіка</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="69"/>
+        <location filename="../../MainPage.qml" line="66"/>
         <source>Cytaty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="76"/>
+        <location filename="../../MainPage.qml" line="73"/>
         <source>Książki</source>
         <translation>Книжки</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="81"/>
+        <location filename="../../MainPage.qml" line="78"/>
         <source>Filmy</source>
         <translation>Фільми</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="88"/>
+        <location filename="../../MainPage.qml" line="85"/>
         <source>Śpiewnik</source>
-        <translation>Пісняр</translation>
+        <translation>Співаники</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="95"/>
+        <location filename="../../MainPage.qml" line="92"/>
         <source>Artykuły</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="100"/>
+        <location filename="../../MainPage.qml" line="97"/>
         <source>Poradnik zastępowego</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="105"/>
+        <location filename="../../MainPage.qml" line="102"/>
         <source>Poradniki wyboru sprzętu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="111"/>
+        <location filename="../../MainPage.qml" line="107"/>
         <source>Kącik drużynowego</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="118"/>
+        <location filename="../../MainPage.qml" line="114"/>
         <source>Listy rzeczy do spakowania</source>
         <translation>Пакувальний список</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="125"/>
+        <location filename="../../MainPage.qml" line="121"/>
         <source>Stopnie harcerskie</source>
         <translation>Скаутні звання</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="130"/>
+        <location filename="../../MainPage.qml" line="126"/>
         <source>Prawo harcerskie</source>
         <translation>Скаутні правила</translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="135"/>
+        <location filename="../../MainPage.qml" line="131"/>
         <source>Roty Przyrzeczenia</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="140"/>
+        <location filename="../../MainPage.qml" line="136"/>
         <source>Gawędy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../MainPage.qml" line="173"/>
+        <location filename="../../MainPage.qml" line="169"/>
         <source>Szukaj...</source>
         <translation>Шукати...</translation>
     </message>
@@ -237,7 +239,7 @@
     <message>
         <location filename="../OProgramieSzablon.qml" line="149"/>
         <source>Licencja:</source>
-        <translation type="unfinished">Ліцензування:</translation>
+        <translation>Ліцензування:</translation>
     </message>
     <message>
         <location filename="../OProgramieSzablon.qml" line="166"/>
@@ -271,14 +273,6 @@
     </message>
 </context>
 <context>
-    <name>Pomysly</name>
-    <message>
-        <location filename="../Pomysly.qml" line="26"/>
-        <source>Pomysły na zbiórki</source>
-        <translation>Ідеї для скаутських зустрічей</translation>
-    </message>
-</context>
-<context>
     <name>Spiewniki</name>
     <message>
         <location filename="../Spiewniki.qml" line="28"/>
@@ -303,6 +297,19 @@
     </message>
 </context>
 <context>
+    <name>oProgramie</name>
+    <message>
+        <location filename="../oProgramie.qml" line="27"/>
+        <source>Aplikacja grupy &quot;Harcerze - Poznajemy Się!&quot;</source>
+        <translation>Програма команди &quot;Harcerze - Poznajemy Się!&quot;</translation>
+    </message>
+    <message>
+        <location filename="../oProgramie.qml" line="190"/>
+        <source>© 2022 Administracja HPS</source>
+        <translation>© 2022 Адміністра́тори HPS</translation>
+    </message>
+</context>
+<context>
     <name>poradnikiPakowanie</name>
     <message>
         <location filename="../poradnikiPakowanie.qml" line="26"/>
@@ -311,27 +318,11 @@
     </message>
 </context>
 <context>
-    <name>prawo</name>
-    <message>
-        <location filename="../prawo.qml" line="27"/>
-        <source>Prawo harcerskie</source>
-        <translation>Скаутні правила</translation>
-    </message>
-</context>
-<context>
     <name>social</name>
     <message>
         <location filename="../social.qml" line="27"/>
         <source>Social media</source>
         <translation>наші сайті</translation>
-    </message>
-</context>
-<context>
-    <name>stopnie</name>
-    <message>
-        <location filename="../stopnie.qml" line="27"/>
-        <source>Stopnie harcerskie</source>
-        <translation>Скаутні звання</translation>
     </message>
 </context>
 <context>
@@ -351,6 +342,14 @@
     </message>
 </context>
 <context>
+    <name>testerzy</name>
+    <message>
+        <location filename="../testerzy.qml" line="26"/>
+        <source>Testerzy</source>
+        <translation>Тестування</translation>
+    </message>
+</context>
+<context>
     <name>ustawienia</name>
     <message>
         <location filename="../ustawienia.qml" line="30"/>
@@ -361,6 +360,61 @@
         <location filename="../ustawienia.qml" line="37"/>
         <source>Pokazuj:</source>
         <translation>Показати:</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="43"/>
+        <source>Wiadomość powitalną</source>
+        <translation>Вікно вітання</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="61"/>
+        <source>Powiadomienie o gestach</source>
+        <translation>сповіщень про жестах</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="79"/>
+        <source>Powiadomienie o kopiowaniu cytatów</source>
+        <translation>сповіщень про копіювання цитата</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="97"/>
+        <source>Powiadomienie o kopiowaniu szyfrów</source>
+        <translation>сповіщень про копіювання шифрів</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="133"/>
+        <source>Rozmiar tekstu (bez śpiewnika):</source>
+        <translation>Розмір шрифту (без співаників):</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="139"/>
+        <source>Bardzo mały</source>
+        <translation>дуже малий</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="149"/>
+        <source>Mały</source>
+        <translation>Малий</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="159"/>
+        <source>Średni</source>
+        <translation>Середній</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="169"/>
+        <source>Duży</source>
+        <translation>Великий</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="179"/>
+        <source>Bardzo duży</source>
+        <translation>Дуже великий</translation>
+    </message>
+    <message>
+        <location filename="../ustawienia.qml" line="189"/>
+        <source>Podgląd</source>
+        <translation>Перегляд</translation>
     </message>
 </context>
 </TS>
