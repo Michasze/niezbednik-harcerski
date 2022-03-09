@@ -213,7 +213,7 @@ HPSPage {
                         visible: searchField.text === ""
                         header: title
                         query: header.toLowerCase()
-                        adres: targetPage
+                        adres: targetPage ? targetPage : ""
                         oddzielne: separate
                         ikona: img
                         kolor_ikony: kolor

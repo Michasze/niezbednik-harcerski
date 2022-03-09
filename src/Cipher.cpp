@@ -420,10 +420,10 @@ QString Cipher::gade()
   }
 else if(m_wariant == 11)
   {
-    gadetable[QChar('r')] = 243;
+    gadetable[QChar('r')] = QChar(243);
     gadetable[QChar(243)] = 'r';
     gadetable[QChar(380)] = 'o';
-    gadetable[QChar('o')] = 380;
+    gadetable[QChar('o')] = QChar(380);
     gadetable[QChar('w')] = 'e';
     gadetable[QChar('e')] = 'w';
     gadetable[QChar('t')] = 'u';
@@ -610,7 +610,7 @@ QString Cipher::kaczor()
   }
 void Cipher::setBacon(const QString &c)
 {
-     if (&c != m_bacon)
+     if (c != m_bacon)
      {
        m_bacon = c;
        baconChanged();

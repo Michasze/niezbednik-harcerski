@@ -89,6 +89,8 @@ android {
         exclude 'lib/*/*_imageformats_qwebp_*'
         exclude 'lib/*/*_imageformats_qwbmp_*'
         exclude 'lib/*/*_imageformats_qgif_*'
+        exclude 'lib/*/*_playlistformats_*'
+        exclude 'lib/*/*_audio_qtaudio_*'
         exclude 'lib/*/*_qmltooling_*'
         exclude 'lib/*/*_qtgeoservices_esri_*'
         exclude 'lib/*/*_qtgeoservices_mapbox_*'

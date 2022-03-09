@@ -33,20 +33,16 @@ Kirigami.ApplicationWindow {
     property bool isHorizontal : root.width > root.height ? true : false
     visible: true
     color: "Black"
-
     HPSDatabase {
         id: db
     }
-    HPSSettings
-    {
+    HPSSettings {
         id: hpsSettings
     }
-    Clipboard
-    {
+    Clipboard {
         id: clipboard
     }
-    HPSCardModel
-    {
+    HPSCardModel {
         id: hpsModel
     }
     Component.onCompleted: {
@@ -54,8 +50,7 @@ Kirigami.ApplicationWindow {
         {
             aboutDialog.open()
         }
-        else
-        {
+        else {
             if(!hpsSettings.neverShow2IsToggled)
             {
                 mediaPlayer.play()
@@ -85,14 +80,11 @@ Kirigami.ApplicationWindow {
         source:"qrc:/contents/ui/media/gesty3.mkv"
     }
 
-    HPSPopup
-    {
+    HPSPopup {
         id: aboutDialog
-        ColumnLayout
-        {
+        ColumnLayout {
             anchors.fill: parent
-            Controls.Label
-            {
+            Controls.Label {
                 font.pointSize: invisibleSlider.value
                 horizontalAlignment: Text.AlignHCenter
                 Layout.fillWidth: true
@@ -101,73 +93,69 @@ Kirigami.ApplicationWindow {
 Witaj w premierowej wersji Niezbędnika Harcerskiego. Pamiętaj, że jest to wczesna wersja i wiele elementów
 może ulec zmianie."
             }
-            /* ElementListyNoImage { */
-            /*     Layout.alignment: Qt.AlignHCenter */
-            /*     color: "black" */
-            /*     header: "Wybór języka:" */
-            /* } */
-            /* Controls.RadioButton */
-            /* { */
-            /*     id: control */
-            /*     checked: true */
-            /*     Layout.alignment: Qt.AlignHCenter */
-            /*     text: "polski" */
-            /*     contentItem: Row { */
-            /*         spacing: 5 */
-            /*         Controls.Label { */
-            /*             id: label */
-            /*             text: control.text */
-            /*             opacity: enabled ? 1.0 : 0.3 */
-            /*             color: control.checked ? "white" : "grey" */
-            /*             font.pointSize: invisibleSlider.value */
-            /*             verticalAlignment: Text.AlignVCenter */
-            /*             leftPadding: control.indicator.width + control.spacing */
-            /*         } */
-            /*         Image { */
-            /*             source: "qrc:/contents/ui/img/poland.svg" */
-            /*             height: label.height */
-            /*             fillMode: Image.PreserveAspectFit */
-            /*         } */
-            /*     } */
-            /*     onClicked: { */
-            /*         HPSTranslate.selectLanguage("pl") */
-            /*         engine.retranslate(); */
-            /*         hpsModel.reload() */
-            /*     } */
-            /* } */
-            /* Controls.RadioButton */
-            /* { */
-            /*     id: control2 */
-            /*     Layout.alignment: Qt.AlignHCenter */
-            /*     text: "Українська" */
-            /*     contentItem: Row { */
-            /*         spacing: 5 */
-            /*         Controls.Label { */
-            /*             id: label2 */
-            /*             text: control2.text */
-            /*             opacity: enabled ? 1.0 : 0.3 */
-            /*             color: control2.checked ? "white" : "grey" */
-            /*             font.pointSize: invisibleSlider.value */
-            /*             verticalAlignment: Text.AlignVCenter */
-            /*             leftPadding: control2.indicator.width + control2.spacing */
-            /*         } */
-            /*         Image { */
-            /*             source: "qrc:/contents/ui/img/ukraine.svg" */
-            /*             height: label2.height */
-            /*             fillMode: Image.PreserveAspectFit */
-            /*         } */
-            /*     } */
-            /*     onClicked: { */
-            /*         HPSTranslate.selectLanguage("uk"); */
-            /*         engine.retranslate(); */
-            /*         hpsModel.reload() */
-            /*     } */
-            /* } */
-            Controls.CheckBox
-            {
+            ElementListyNoImage {
+                Layout.alignment: Qt.AlignHCenter
+                color: "black"
+                header: "Wybór języka:"
+            }
+            Controls.RadioButton {
+                id: control
+                checked: true
+                Layout.alignment: Qt.AlignHCenter
+                text: "polski"
+                contentItem: Row {
+                    spacing: 5
+                    Controls.Label {
+                        id: label
+                        text: control.text
+                        opacity: enabled ? 1.0 : 0.3
+                        color: control.checked ? "white" : "grey"
+                        font.pointSize: invisibleSlider.value
+                        verticalAlignment: Text.AlignVCenter
+                        leftPadding: control.indicator.width + control.spacing
+                    }
+                    Image {
+                        source: "qrc:/contents/ui/img/poland.svg"
+                        height: label.height
+                        fillMode: Image.PreserveAspectFit
+                    }
+                }
+                onClicked: {
+                    HPSTranslate.selectLanguage("pl")
+                    engine.retranslate();
+                    hpsModel.refresh()
+                }
+            }
+            Controls.RadioButton {
+                id: control2
+                Layout.alignment: Qt.AlignHCenter
+                text: "Українська"
+                contentItem: Row {
+                    spacing: 5
+                    Controls.Label {
+                        id: label2
+                        text: control2.text
+                        opacity: enabled ? 1.0 : 0.3
+                        color: control2.checked ? "white" : "grey"
+                        font.pointSize: invisibleSlider.value
+                        verticalAlignment: Text.AlignVCenter
+                        leftPadding: control2.indicator.width + control2.spacing
+                    }
+                    Image {
+                        source: "qrc:/contents/ui/img/ukraine.svg"
+                        height: label2.height
+                        fillMode: Image.PreserveAspectFit
+                    }
+                }
+                onClicked: {
+                    HPSTranslate.selectLanguage("uk");
+                    engine.retranslate();
+                    hpsModel.reload()
+                }
+            }
+            Controls.CheckBox {
                 text: "Nie pokazuj więcej"
-                onToggled:
-                {
+                onToggled: {
                     hpsSettings.neverShowIsToggled = true
                 }
             }
@@ -178,8 +166,7 @@ może ulec zmianie."
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
-                onClicked:
-                {
+                onClicked: {
                     aboutDialog.close()
                     if(!hpsSettings.neverShow2IsToggled)
                     {
@@ -190,14 +177,10 @@ może ulec zmianie."
             }
         }
     }
-    HPSPopup
-    {
+    HPSPopup {
         id: aboutDialog2
-        ColumnLayout
-        {
+        ColumnLayout {
             anchors.fill: parent
-            implicitWidth: page.width
-
             VideoOutput {
                 id:videoOutput
                 source:mediaPlayer
@@ -205,17 +188,14 @@ może ulec zmianie."
                 Layout.maximumHeight: root.height / 2
                 Layout.fillWidth: true
             }
-            Controls.Label
-            {
+            Controls.Label {
                 font.pointSize: invisibleSlider.value
                 horizontalAlignment: Text.AlignHCenter
                 Layout.fillWidth: true
                 wrapMode: Text.Wrap
                 text: "Nawigacja po aplikacji odbywa się za pomocą gestów. Przesunięcie palcem od lewej do prawej umożliwia powrót do poprzedniej strony"
             }
-
-            Controls.CheckBox
-            {
+            Controls.CheckBox {
                 text: "Nie pokazuj więcej"
                 onToggled:
                 {
@@ -237,11 +217,9 @@ może ulec zmianie."
             }
         }
     }
-    HPSPopup
-    {
+    HPSPopup {
         id: aboutDialog3
-        ColumnLayout
-        {
+        ColumnLayout {
             anchors.fill: parent
             VideoOutput {
                 id:videoOutput2
@@ -250,8 +228,7 @@ może ulec zmianie."
                 Layout.maximumHeight: root.height / 2
                 Layout.fillWidth: true
             }
-            Controls.Label
-            {
+            Controls.Label {
                 font.pointSize: invisibleSlider.value
                 horizontalAlignment: Text.AlignHCenter
                 Layout.fillWidth: true
@@ -265,8 +242,7 @@ może ulec zmianie."
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
-                onClicked:
-                {
+                onClicked: {
                     hpsSettings.neverShow3IsToggled = true
                     mediaPlayer2.stop()
                     aboutDialog3.close()
@@ -288,8 +264,7 @@ może ulec zmianie."
                 Layout.maximumHeight: root.height / 2
                 Layout.fillWidth: true
             }
-            Controls.Label
-            {
+            Controls.Label {
                 font.pointSize: invisibleSlider.value
                 horizontalAlignment: Text.AlignHCenter
                 Layout.fillWidth: true
@@ -303,8 +278,7 @@ może ulec zmianie."
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
-                onClicked:
-                {
+                onClicked: {
                     hpsSettings.neverShow4IsToggled = true
                     mediaPlayer3.stop()
                     aboutDialog4.close()
@@ -312,8 +286,7 @@ może ulec zmianie."
             }
         }
     }
-    Controls.Action
-    {
+    Controls.Action {
         id: powrotAction
         text: qsTr("Powrót")
         shortcut: "Backspace"
@@ -339,8 +312,7 @@ może ulec zmianie."
             border.color: "Grey"
             border.width: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0
         }
-        Item
-        {
+        Item {
             anchors.fill: parent
             Controls.ToolButton {
                 anchors.left: parent.left
@@ -349,16 +321,14 @@ może ulec zmianie."
                 onClicked: globalDrawer.open()
                 icon.source: "qrc:/contents/ui/img/application-menu.svg"
             }
-            Controls.Label
-            {
+            Controls.Label {
                 id: naglowek
                 horizontalAlignment: Text.AlignHCenter
                 anchors.centerIn: parent
                 // Pokazuje tytul właśnie otwartej strony
                 text: pageStack.layers.depth == 1 ? pageStack.currentItem.title  : pageStack.layers.currentItem.title
             }
-            Controls.ToolButton
-            {
+            Controls.ToolButton {
                 id: powrotButton
                 anchors.right: parent.right
                 anchors.rightMargin: 10
@@ -366,8 +336,7 @@ może ulec zmianie."
                 icon.source: "image://icons/go-previous.svg,white"
                 action: powrotAction
             }
-            Controls.ToolButton
-            {
+            Controls.ToolButton {
                 anchors.right: parent.right
                 anchors.rightMargin: powrotButton.visible ? (powrotButton.width + 10) : 10
                 visible: pageStack.currentItem.title.includes("Pakowanie") && pageStack.currentItem.title != "Pakowanie" && pageStack.layers.depth == 1
@@ -408,16 +377,14 @@ może ulec zmianie."
             id: drawerHeader
             width: parent.width
             height: drawerImg.height
-            Image
-            {
+            Image {
                 id: drawerImg
                 height: globalDrawer.width / 3
                 anchors.left: parent.left
                 fillMode: Image.PreserveAspectFit
                 source: "qrc:/contents/ui/img/applications-graphics.svg"
             }
-            Controls.Label
-            {
+            Controls.Label {
                 font.pointSize: 24
                 anchors.verticalCenter: drawerImg.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -485,7 +452,6 @@ może ulec zmianie."
     }
     pageStack.initialPage: mainPageComponent
     pageStack.defaultColumnWidth: 1920
-
     Controls.RoundButton {
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
@@ -493,12 +459,10 @@ może ulec zmianie."
         icon.source: "image://icons/document-save.svg"
         visible: pageStack.currentItem.title == "Utwórz własną listę "
         highlighted: true
-        onClicked:
-        {
+        onClicked: {
             pageStack.pop()
         }
     }
-
     //Main app content
     Component {
         id: mainPageComponent

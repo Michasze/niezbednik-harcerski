@@ -58,7 +58,7 @@ QString Decipher::caesarDec()
 
 void Decipher::setBaconDec(const QString &c)
 {
-     if (&c != m_baconDec)
+     if (c != m_baconDec)
      {
        m_baconDec = c;
        baconDecChanged();
@@ -82,7 +82,7 @@ QString Decipher::baconDec()
              m_baconDecryptedWhole += QString(" ");
              i++;
            }
-         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > 122)
+         if(sprawdz_czy_prawidlowe(i, m_baconDec) || konwerter(i, m_baconDec) > QChar(122))
            {
              return m_baconDecryptedWhole;
            }
@@ -91,7 +91,7 @@ QString Decipher::baconDec()
      }
    return m_baconDecryptedWhole;
 }
-int Decipher::konwerter(int i, QString s)
+QChar Decipher::konwerter(int i, QString s)
   {
     int wynik = 97;
     int mnoznik = 1;
@@ -101,7 +101,7 @@ int Decipher::konwerter(int i, QString s)
           wynik += mnoznik;
         mnoznik *= 2;
       }
-    return wynik;
+    return QChar(wynik);
   }
 bool Decipher::sprawdz_czy_prawidlowe(int i, QString s)
   {

@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -16,20 +16,23 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-
 import QtQuick 2.6
 import QtQuick.Layouts 1.2
-
 
 HPSPage {
     id: page
     title: qsTr("Inne")
-ColumnLayout
-{
-KartaStronaNoImage { 
-        header: "Aplikacje przydatne dla harcerzy"
-        opis: ""
-        adres: "aplikacje.qml"
-    }
+    Item
+    {
+        Column
+        {
+            anchors.fill: parent
+            spacing:10
+            KartaStronaNoLayout {
+                header: "Aplikacje przydatne dla harcerzy"
+                opis: ""
+                adres: "aplikacje.qml"
+            }
         }
     }
+}

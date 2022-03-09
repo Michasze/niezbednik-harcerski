@@ -22,7 +22,7 @@ public:
     QString baconDec();
     QString alfaDec();
     int decShift();
-    int konwerter(int i, QString s);
+    QChar konwerter(int i, QString s);
     bool sprawdz_czy_prawidlowe(int i, QString s);
 
     void setDecShift(const int &b);

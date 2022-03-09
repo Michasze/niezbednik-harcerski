@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,25 +18,24 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.0 as Controls
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Kamień pamiątkowy"
-    ColumnLayout {
-        width: page.width
-        HPSImage {
-            sourceSize.width: !isHorizontal ? page.width / 1.5 : page.width / 3
-            source: "image://images/kamien.jpg,10"
-        }
-            ElementListyNoImage
+    Controls.Pane {
+        Column
+        {
+            anchors.fill: parent
+            HPSImage {
+                sourceSize.width: !isHorizontal ? page.width / 1.5 : page.width / 3
+                source: "image://images/kamien.jpg,10"
+            }
+            ElementListyNoLayout
             {
-            Layout.fillWidth: true
-            alignH: Text.AlignJustify
+                alignH: Text.AlignJustify
                 color: "Black"
-            header: "Pomnik wykonany z granitowego kamienia, na którym umieszczona jest tablica pamiątkowa, cały pomnik znajduje się u zbiegu ulic Prusa i Orzeszkowej, na skwerze “Ludzi ze znakiem P.”  Został on wzniesiony z inicjatywy Dzielnicowej Rady Przyjaciół Harcerstwa (obecnie dzielnica Ołbin), na dwudziestą rocznicę powstania Hufca ZHP Wrocław-Śródmieście. Pomnik został wykonany przez Tadeusza Hudźca - wrocławskiego kamieniarza. Autorem tekstu był ówczesny komendant hufca Harcmistrz Andrzej Barski pierwotnie proponował on fragment książki “Związek Harcerstwa Polskiego w Niemczech” Kapiszewskiego, ale fragment ten został odrzucony.<br><br>
+                header: "Pomnik wykonany z granitowego kamienia, na którym umieszczona jest tablica pamiątkowa, cały pomnik znajduje się u zbiegu ulic Prusa i Orzeszkowej, na skwerze “Ludzi ze znakiem P.”  Został on wzniesiony z inicjatywy Dzielnicowej Rady Przyjaciół Harcerstwa (obecnie dzielnica Ołbin), na dwudziestą rocznicę powstania Hufca ZHP Wrocław-Śródmieście. Pomnik został wykonany przez Tadeusza Hudźca - wrocławskiego kamieniarza. Autorem tekstu był ówczesny komendant hufca Harcmistrz Andrzej Barski pierwotnie proponował on fragment książki “Związek Harcerstwa Polskiego w Niemczech” Kapiszewskiego, ale fragment ten został odrzucony.<br><br>
 
 Tekst odrzucony: <br>
 <i>“Tym, którzy odeszli i tym, którzy przetrwali, działaczkom i działaczom byłego Związku Harcerstwa Polskiego w Niemczech.”<br>
@@ -50,15 +49,12 @@ Okres międzywojenny był dla Polaków we Wrocławiu czasem wzmożonego działan
 Bibliografia:<br>
 <i>Antkowiak Zygmunt, Pomniki Wrocławia, Wrocław, Ossolineum, 1985,  ​ISBN 83-04-01953-1</i>"
             }
-                ElementListyNoImage
-                {
-                    Layout.fillWidth: true
-                    alignH: Text.AlignHCenter
-                    format: Text.PlainText
-                    header:"pwd. Juliusz Idzikowski"
-                }
-
+            ElementListyNoLayout
+            {
+                alignH: Text.AlignHCenter
+                format: Text.PlainText
+                header:"pwd. Juliusz Idzikowski"
+            }
         }
     }
- 
-    
+}
