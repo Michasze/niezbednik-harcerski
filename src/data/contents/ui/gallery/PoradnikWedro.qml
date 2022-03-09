@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,80 +17,47 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 import QtQuick 2.15
-import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.15 as Controls
 
-
-HPSPage
-{
- id: page
- title: qsTr("Dla zastępów wędrowniczych")
-    ColumnLayout {
-     id: mainList
-
-ElementListyNoImage {
-    color: "Green"
-    header: "Druhno zastępowa! Druhu zastępowy! <br>
-Trzymasz w rękach wędrownictwo przelane na papier.<br>
-Ten styl życia jednak jest praktyką — żywą służbą i aktywną pracą nad sobą.<br><br>
-Życzę Tobie i Twoim wędrownikom, abyście to, co jest zawarte w tym poradniku — wcielili w życie, a wędrując Jego krętymi drogami, zawsze mieli przed sobą harcerskie ideały. <br><br>
-Czuwaj! <br>
-
-drużynowa 316 RwDW <br>
-Kinga Żeglińska HO <br><br>
-
+HPSPage {
+    id: page
+    title: qsTr("Dla zastępów wędrowniczych")
+    Controls.Pane {
+        Column {
+            anchors.fill: parent
+            spacing: 10
+            ElementListyNoLayout {
+                color: "Green"
+                format: Text.PlainText
+                header: "Druhno zastępowa! Druhu zastępowy!
+Trzymasz w rękach wędrownictwo przelane na papier.
+Ten styl życia jednak jest praktyką — żywą służbą i aktywną pracą nad sobą.\n
+Życzę Tobie i Twoim wędrownikom, abyście to, co jest zawarte w tym poradniku — wcielili w życie, a wędrując Jego krętymi drogami, zawsze mieli przed sobą harcerskie ideały.\n
+Czuwaj!
+drużynowa 316 RwDW
+Kinga Żeglińska HO \n\n
 Co znajdziesz w Poradniku?"
-          }
-
-ElementListyNoImage {
-    header: "1. Filary wędrownictwa"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/filary.qml"))
+            }
+            ListModel {
+                id: mainList
+                ListElement { title: "1. Filary wędrownictwa"; adres: "filary.qml" }
+                ListElement { title: "2. Zbiórka od kuchni"; adres: "zbiorka.qml" }
+                ListElement { title: "3. Inspiracje programowe"; adres: "inspiracje.qml" }
+                ListElement { title: "4. Jaki jest zastępowy wędrowniczy?"; adres: "zastepowy.qml" }
+                ListElement { title: "5. Wędrownicze formy pracy"; adres: "formy.qml" }
+                ListElement { title: "6. Instrumenty metodyczne"; adres: "instrumenty.qml" }
+                ListElement { title: "7. Rys historyczny wędrownictwa"; adres: "rys.qml" }
+            }
+            Repeater {
+                model: mainList
+                delegate: ElementListyNoLayout {
+                    header: title
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/" + adres))
+                    }
+                }
+            }
+        }
     }
-  }
-ElementListyNoImage {
-    header: "2. Zbiórka od kuchni"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/zbiorka.qml"))
-    }
-  }
-ElementListyNoImage {
-    header: "3. Inspiracje programowe"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/inspiracje.qml"))
-    }
-  }
-ElementListyNoImage {
-    header: "4. Jaki jest zastępowy wędrowniczy?"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/zastepowy.qml"))
-    }
-  }
-ElementListyNoImage {
-    header: "5. Wędrownicze formy pracy"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/formy.qml"))
-    }
-  }
-ElementListyNoImage {
-    header: "6. Instrumenty metodyczne"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/instrumenty.qml"))
-    }
-  }
-  ElementListyNoImage {
-    header: "7. Rys historyczny wędrownictwa"
-        MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl("poradnikWedro/rys.qml"))
-    }
-  }
-    }
-
-
 }
