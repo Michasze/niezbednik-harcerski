@@ -7,8 +7,7 @@
 
 class Decipher : public QObject
 {
-  Q_OBJECT
-
+    Q_OBJECT
 
     Q_PROPERTY(QString caesarDec READ caesarDec WRITE setCaesarDec NOTIFY caesarDecChanged)
     Q_PROPERTY(int decShift READ decShift WRITE setDecShift NOTIFY decShiftChanged)
@@ -17,14 +16,12 @@ class Decipher : public QObject
 
 public:
     Decipher(QObject *parent = nullptr);
-
     QString caesarDec();
     QString baconDec();
     QString alfaDec();
     int decShift();
     QChar konwerter(int i, QString s);
     bool sprawdz_czy_prawidlowe(int i, QString s);
-
     void setDecShift(const int &b);
     void setCaesarDec(const QString &a);
     void setBaconDec(const QString &c);

@@ -1,68 +1,81 @@
+/*
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License as
+ *   published by the Free Software Foundation; either version 2 or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU Library General Public License for more details
+ *
+ *   You should have received a copy of the GNU Library General Public
+ *   License along with this program; if not, write to the
+ *   Free Software Foundation, Inc.,
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
 #include "Spiewnik.h"
-#include <QDebug>
 #include <QFile>
 
 Spiewnik::Spiewnik(QObject *parent)
-    : QObject(parent)
-      {
-      }
-  void Spiewnik::setAdres(const QString &f)
+  : QObject(parent)
+{
+}
+void Spiewnik::setAdres(const QString &f)
+{
+  if (m_file != f)
     {
-      if (m_file != f)
-        {
-          m_file = f;
-          qInfo() << "url: " << m_file;
-          adresChanged();
-        }
+      m_file = f;
+      adresChanged();
     }
-  QString Spiewnik::adres()
-    {
-      return m_file;
-    }
-  QJsonArray Spiewnik::content()
-    {
+}
+QString Spiewnik::adres()
+{
+  return m_file;
+}
+QJsonArray Spiewnik::content()
+{
   QByteArray spiewnikData;
   QFile file (m_file);
-if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qInfo() << "odczytano plik";
-        spiewnikData = file.readAll();
-        file.close();
+  if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    spiewnikData = file.readAll();
+    file.close();
+  }
+  data = QJsonDocument::fromJson(spiewnikData, &jsonError);
+  spiewnikData.clear();
+  if(jsonError.error != QJsonParseError::NoError)
+    {
+      return QJsonArray();
     }
-   data = QJsonDocument::fromJson(spiewnikData, &jsonError);
-    spiewnikData.clear();
-     if(jsonError.error != QJsonParseError::NoError)
-{
-    qDebug() << QString("JsonError: %1").arg(jsonError.errorString());
+  if (!data.isEmpty()) {
+    jsonObject = data.object();
+  }
+  array = jsonObject.value("piosenka").toArray();
+  autorArray = jsonObject.value("autor").toArray();
+  textArray = jsonObject.value("tresc").toArray();
+  iconArray = jsonObject.value("ikona").toArray();
+  return array;
 }
-    if (!data.isEmpty()) {
-        jsonObject = data.object();
-    }
-        array = jsonObject.value("piosenka").toArray();
-      autorArray = jsonObject.value("autor").toArray();
-      textArray = jsonObject.value("tresc").toArray();
-      iconArray = jsonObject.value("ikona").toArray();
-      return array;
-    }
-  QJsonArray Spiewnik::nazwaPiosenki()
+QJsonArray Spiewnik::nazwaPiosenki()
+{
+  iconArray = QJsonArray();
+  piosenkaChanged();
+  return textArray;
+}
+QJsonArray Spiewnik::autorPiosenki()
+{
+  return autorArray;
+}
+QJsonArray Spiewnik::ikonaPiosenki()
+{
+  if (iconArray.size() == 0)
     {
-      iconArray = QJsonArray();
-      piosenkaChanged();
-      return textArray;
-    }
-  QJsonArray Spiewnik::autorPiosenki()
-    {
-      return autorArray;
-    }
-  QJsonArray Spiewnik::ikonaPiosenki()
-    {
-      if (iconArray.size() == 0)
+      for (int i = 0; i < array.size(); i++)
         {
-        for (int i = 0; i < array.size(); i++)
-          {
-            qInfo() << "uzupełniam bufor ikon...";
-            iconArray.append("nuta.svg,white");
-          }
+          iconArray.append("nuta.svg,white");
         }
-      qInfo() << iconArray;
-      return iconArray;
     }
+  return iconArray;
+}
