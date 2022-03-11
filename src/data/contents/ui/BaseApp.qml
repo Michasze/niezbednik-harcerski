@@ -27,9 +27,9 @@ import Data 1.0
 import HPSDatabase 1.0
 import HPSCardModel 1.0
 
-Kirigami.ApplicationWindow {
+HPSWindow {
     id: root
-    property Kirigami.ApplicationWindow appWindow : root
+    property Kirigami.AbstractApplicationWindow appWindow : root
     property bool isHorizontal : root.width > root.height ? true : false
     visible: true
     color: "Black"
@@ -368,6 +368,7 @@ może ulec zmianie."
         }
     }
     title: "Niezbędnik Harcerski"
+    contextDrawer: globalDrawer
     Controls.Drawer {
         width: 250
         height: root.height
@@ -451,7 +452,7 @@ może ulec zmianie."
         }
     }
     pageStack.initialPage: mainPageComponent
-    pageStack.defaultColumnWidth: 1920
+//    pageStack.defaultColumnWidth: 1920
     Controls.RoundButton {
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
