@@ -20,6 +20,7 @@ class HPSSettings : public QObject
     Q_PROPERTY(QString pakowanieId READ pakowanieId WRITE setPakowanieId NOTIFY pakowanieIdChanged)
     Q_PROPERTY(bool pakowanieIsToggled READ pakowanieIsToggled WRITE pakowanieToggle NOTIFY pakowanieChanged)
     Q_PROPERTY(bool isMobile READ isMobile WRITE setIsMobile NOTIFY isMobileChanged)
+    Q_PROPERTY(bool hasTransientTouchInput READ hasTransientTouchInput NOTIFY hasTransientTouchInputChanged)
     Q_PROPERTY(QStringList information READ information CONSTANT)
 public:
     HPSSettings(QObject *parent = nullptr);
@@ -44,6 +45,8 @@ public:
     void pakowanieToggle(const bool &e);
     bool isMobile();
     void setIsMobile(const bool &f);
+    void setTransientTouchInput(bool touch);
+    bool hasTransientTouchInput() const;
     QStringList information() const;
 
 Q_SIGNALS:
@@ -57,10 +60,14 @@ Q_SIGNALS:
     void pakowanieIdChanged();
     void pakowanieChanged();
     void isMobileChanged();
+    void hasTransientTouchInputChanged();
 
 private:
     QSettings m_settings;
     QString m_pakowanieId;
     bool m_mobile;
+    bool m_hasTransientTouchInput : 1;
+    bool isTabletModeAvailable;
+    bool m_tabletMode;
 };
 #endif // __SETTINGS_H_

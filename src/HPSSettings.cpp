@@ -6,6 +6,48 @@ HPSSettings::HPSSettings(QObject *parent)
     : QObject(parent)
 {
   QSettings  m_settings("HPS", "Niezbędnik Harcerski");
+#if !defined(KIRIGAMI_ENABLE_DBUS) && (defined(Q_OS_ANDROID) || defined(Q_OS_IOS))
+        isTabletModeAvailable = true;
+         m_tabletMode= true;
+#elif defined(KIRIGAMI_ENABLE_DBUS)
+        // Mostly for debug purposes and for platforms which are always mobile,
+        // such as Plasma Mobile
+        if (qEnvironmentVariableIsSet("QT_QUICK_CONTROLS_MOBILE") || qEnvironmentVariableIsSet("KDE_KIRIGAMI_TABLET_MODE")) {
+            /* clang-format off */
+             m_tabletMode=
+                (QString::fromLatin1(qgetenv("QT_QUICK_CONTROLS_MOBILE")) == QStringLiteral("1")
+                    || QString::fromLatin1(qgetenv("QT_QUICK_CONTROLS_MOBILE")) == QStringLiteral("true"))
+                || (QString::fromLatin1(qgetenv("KDE_KIRIGAMI_TABLET_MODE")) == QStringLiteral("1")
+                    || QString::fromLatin1(qgetenv("KDE_KIRIGAMI_TABLET_MODE")) == QStringLiteral("true"));
+            /* clang-format on */
+            isTabletModeAvailable = isTabletMode;
+        } else {
+            m_interface =
+                new OrgKdeKWinTabletModeManagerInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/org/kde/KWin"), QDBusConnection::sessionBus(), q);
+
+            if (m_interface->isValid()) {
+                // NOTE: the initial call is actually sync, because is better a tiny freeze than having the ui always recalculated and changed at the start
+                isTabletModeAvailable = m_interface->tabletModeAvailable();
+                 m_tabletMode= m_interface->tabletMode();
+                QObject::connect(m_interface, &OrgKdeKWinTabletModeManagerInterface::tabletModeChanged, q, [this](bool tabletMode) {
+                    setIsTablet(tabletMode);
+                });
+                QObject::connect(m_interface, &OrgKdeKWinTabletModeManagerInterface::tabletModeAvailableChanged, q, [this](bool avail) {
+                    isTabletModeAvailable = avail;
+                    Q_EMIT q->tabletModeAvailableChanged(avail);
+                });
+            } else {
+                isTabletModeAvailable = false;
+                 m_tabletMode= false;
+            }
+        }
+// TODO: case for Windows
+#else
+        isTabletModeAvailable = false;
+         m_tabletMode= false;
+#endif
+    bool isTabletModeAvailable = false;
+    bool  m_tabletMode= false;
 }
 
 void HPSSettings::neverToggle(const bool &a)
@@ -123,4 +165,19 @@ QStringList HPSSettings::information() const
         tr("Szkielety KDE %1").arg(QStringLiteral("5.90.0")),
         tr("System okien %1").arg(QGuiApplication::platformName()),
         tr("Qt %2 (zbudowany na %3)").arg(QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR))};
+}
+void HPSSettings::setTransientTouchInput(bool touch)
+{
+    if (touch == m_hasTransientTouchInput) {
+        return;
+    }
+
+    m_hasTransientTouchInput = touch;
+    if (!m_tabletMode) {
+        Q_EMIT hasTransientTouchInputChanged();
+    }
+}
+bool HPSSettings::hasTransientTouchInput() const
+{
+    return m_hasTransientTouchInput || m_tabletMode;
 }

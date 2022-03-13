@@ -32,6 +32,7 @@
 #include "HPSDatabase.h"
 #include "HPSCardModel.h"
 #include "HPSTranslate.h"
+#include "HPSUnits.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -46,7 +47,6 @@
 #else
 #include <QApplication>
 #endif
-
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -79,6 +79,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<HPSFilter>("Filter", 1, 0, "HPSFilter");
     qmlRegisterType<HPSDatabase>("HPSDatabase", 1, 0, "HPSDatabase");
     qmlRegisterType<HPSCardModel>("HPSCardModel", 1, 0, "HPSCardModel");
+    qmlRegisterType<HPSUnits>("HPSUnits", 1, 0, "HPSUnits");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
     engine.rootContext()->setContextProperty("HPSTranslate", &translate);
@@ -92,11 +93,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     } else {
         engine.load(QUrl(QStringLiteral("qrc:///contents/ui/BaseApp.qml")));
     }
-
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }
-
     //HACK to color the system bar on Android, use qtandroidextras and call the appropriate Java methods
 #ifdef Q_OS_ANDROID
     QtAndroid::runOnAndroidThread([=]() {

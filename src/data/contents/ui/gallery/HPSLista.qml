@@ -310,7 +310,7 @@ AbstractListItem {
             }
             ColumnLayout {
                 id: labelColumn
-                spacing: Units.smallSpacing
+                spacing: hpsUnits.smallSpacing
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignVCenter
                 QQC2.Label {

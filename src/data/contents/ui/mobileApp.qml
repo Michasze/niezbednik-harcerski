@@ -25,8 +25,4 @@ import "gallery"
 
 BaseApp {
     id: root
-
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-    }
 }

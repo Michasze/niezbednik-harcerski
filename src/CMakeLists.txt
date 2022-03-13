@@ -14,6 +14,7 @@ set(HPS_SRCS
     HPSDatabase.cpp
     HPSCardModel.cpp
     HPSTranslate.cpp
+    HPSUnits.cpp
     )
 
 if (QT_MAJOR_VERSION EQUAL 6)

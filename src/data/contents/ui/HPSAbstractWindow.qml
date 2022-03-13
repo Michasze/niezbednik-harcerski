@@ -19,16 +19,23 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-import org.kde.kirigami 2.11 as Kirigami
+import Data 1.0
+import HPSUnits 1.0
 
 Controls.ApplicationWindow {
     id: root
     property Item pageStack
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
+    HPSSettings {
+        id: hpsSettings
+    }
+    HPSUnits {
+        id: hpsUnits
+    }
     function showPassiveNotification(message, timeout, actionText, callBack) {
         if (!internal.__passiveNotification) {
-            var component = Qt.createComponent("templates/private/PassiveNotification.qml");
+            var component = Qt.createComponent("HPSNotification.qml");
             internal.__passiveNotification = component.createObject(overlay.parent);
         }
 
@@ -43,31 +50,9 @@ Controls.ApplicationWindow {
         return root;
     }
     property bool controlsVisible: true
-    property Kirigami.OverlayDrawer globalDrawer
-    property bool wideScreen: width >= Kirigami.Units.gridUnit * 60
-    property Kirigami.OverlayDrawer contextDrawer
+    property bool wideScreen: width >= 18 * 60
     property bool reachableMode: false
     property bool reachableModeEnabled: true
-    color: Kirigami.Theme.backgroundColor
-    MouseArea {
-        parent: contentItem.parent
-        z: 0
-        anchors.fill: parent
-        onClicked: root.reachableMode = false;
-        visible: root.reachableMode && root.reachableModeEnabled
-        Rectangle {
-            anchors.fill: parent
-            color: Qt.rgba(0, 0, 0, 0.3)
-            opacity: 0.15
-            Kirigami.Icon {
-                anchors.horizontalCenter: parent.horizontalCenter
-                y: x
-                width: Kirigami.Units.iconSizes.large
-                height: width
-                source: "go-up"
-            }
-        }
-    }
     contentItem.z: 1
     contentItem.anchors.left: contentItem.parent.left
     contentItem.anchors.right: contentItem.parent.right
@@ -95,7 +80,7 @@ Controls.ApplicationWindow {
     contentItem.transform: Translate {
         Behavior on y {
             NumberAnimation {
-                duration: Kirigami.Units.longDuration
+                duration: 200
                 easing.type: Easing.InOutQuad
             }
         }
@@ -114,15 +99,9 @@ Controls.ApplicationWindow {
         property: "parent"
         value: overlay
     }
-    Binding {
-        when: contextDrawer !== undefined && root.visible
-        target: contextDrawer
-        property: "parent"
-        value: overlay
-    }
     onPageStackChanged: pageStack.parent = contentItem;
-    width: Kirigami.Settings.isMobile ? Kirigami.Units.gridUnit * 30 : Units.gridUnit * 55
-    height: Kirigami.Settings.isMobile ? Kirigami.Units.gridUnit * 45 : Units.gridUnit * 40
+    width: hpsSettings.isMobile ? hpsUnits.gridUnit * 30 : hpsUnits.gridUnit * 55
+    height: hpsSettings.isMobile ? hpsUnits.gridUnit * 45 : hpsUnits.gridUnit * 40
     visible: true
     Component.onCompleted: {
         // Explicitly break the binding as we need this to be set only at startup.

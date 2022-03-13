@@ -26,12 +26,14 @@ import "gallery"
 import Data 1.0
 import HPSDatabase 1.0
 import HPSCardModel 1.0
+import HPSUnits 1.0
 
 HPSWindow {
     id: root
-    property Kirigami.AbstractApplicationWindow appWindow : root
+    property HPSWindow appWindow : root
     property bool isHorizontal : root.width > root.height ? true : false
     visible: true
+    reachableMode: true
     color: "Black"
     HPSDatabase {
         id: db
@@ -44,6 +46,9 @@ HPSWindow {
     }
     HPSCardModel {
         id: hpsModel
+    }
+    HPSUnits {
+        id: hpsUnits
     }
     Component.onCompleted: {
         if(!hpsSettings.neverShowIsToggled)
@@ -295,13 +300,16 @@ może ulec zmianie."
             {
                 pageStack.pop();
             }
-            else
-            {
+            else {
                 pageStack.layers.pop();
             }
         }
     }
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.None
+    Controls.Action {
+        id: exitAction
+        shortcut: "Ctrl+Q"
+        onTriggered: root.close()
+    }
     header: Controls.ToolBar {
         id: pasek
         height: menuButton.height
@@ -368,7 +376,6 @@ może ulec zmianie."
         }
     }
     title: "Niezbędnik Harcerski"
-    contextDrawer: globalDrawer
     Controls.Drawer {
         width: 250
         height: root.height
@@ -452,7 +459,7 @@ może ulec zmianie."
         }
     }
     pageStack.initialPage: mainPageComponent
-//    pageStack.defaultColumnWidth: 1920
+    pageStack.defaultColumnWidth: 1920
     Controls.RoundButton {
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
