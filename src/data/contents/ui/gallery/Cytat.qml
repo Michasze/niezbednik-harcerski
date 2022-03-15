@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -20,25 +20,21 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.2
 import Data 1.0
 
- HPSLista {
-       Clipboard
-     {
-       id: clipboard
-     }
-
-            id: listItem
- //                 showClickFeedback: true
-property string tresc: "Brak treści"
-property string autor: ""
-Layout.fillHeight: true
-     separatorVisible: false
+HPSLista {
+    Clipboard
+    {
+        id: clipboard
+    }
+    id: listItem
+    property string tresc: "Brak treści"
+    property string autor: ""
+    Layout.fillHeight: true
+    separatorVisible: false
     background: DefaultListItemBackground {}
-
-     onPressAndHold:
-      {
-      clipboard.paste = listItem.tresc + "\n" + listItem.autor
-      showPassiveNotification("Skopiowano do schowka", 2000)
-      }
-
-     label: listItem.tresc
-             }
+    onPressAndHold:
+    {
+        clipboard.paste = listItem.tresc + "\n" + listItem.autor
+        showPassiveNotification("Skopiowano do schowka", 2000)
+    }
+    label: listItem.tresc
+}

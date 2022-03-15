@@ -100,6 +100,8 @@ android {
         exclude 'lib/*/*_bearer_*'
         exclude 'lib/*/libQt5QuickTest_*'
         exclude 'lib/*/libQt5Test_*'
+        exclude 'lib/*/libKF5Kirigami2_*'
+        exclude 'lib/*/libkirigamiplugin_*'
     }
 
     aaptOptions {

@@ -6,10 +6,10 @@ HPSSettings::HPSSettings(QObject *parent)
     : QObject(parent)
 {
   QSettings  m_settings("HPS", "Niezbędnik Harcerski");
-#if !defined(KIRIGAMI_ENABLE_DBUS) && (defined(Q_OS_ANDROID) || defined(Q_OS_IOS))
+#if (defined(Q_OS_ANDROID) || defined(Q_OS_IOS))
         isTabletModeAvailable = true;
          m_tabletMode= true;
-#elif defined(KIRIGAMI_ENABLE_DBUS)
+#else
         // Mostly for debug purposes and for platforms which are always mobile,
         // such as Plasma Mobile
         if (qEnvironmentVariableIsSet("QT_QUICK_CONTROLS_MOBILE") || qEnvironmentVariableIsSet("KDE_KIRIGAMI_TABLET_MODE")) {
@@ -19,35 +19,13 @@ HPSSettings::HPSSettings(QObject *parent)
                     || QString::fromLatin1(qgetenv("QT_QUICK_CONTROLS_MOBILE")) == QStringLiteral("true"))
                 || (QString::fromLatin1(qgetenv("KDE_KIRIGAMI_TABLET_MODE")) == QStringLiteral("1")
                     || QString::fromLatin1(qgetenv("KDE_KIRIGAMI_TABLET_MODE")) == QStringLiteral("true"));
-            /* clang-format on */
-            isTabletModeAvailable = isTabletMode;
-        } else {
-            m_interface =
-                new OrgKdeKWinTabletModeManagerInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/org/kde/KWin"), QDBusConnection::sessionBus(), q);
-
-            if (m_interface->isValid()) {
-                // NOTE: the initial call is actually sync, because is better a tiny freeze than having the ui always recalculated and changed at the start
-                isTabletModeAvailable = m_interface->tabletModeAvailable();
-                 m_tabletMode= m_interface->tabletMode();
-                QObject::connect(m_interface, &OrgKdeKWinTabletModeManagerInterface::tabletModeChanged, q, [this](bool tabletMode) {
-                    setIsTablet(tabletMode);
-                });
-                QObject::connect(m_interface, &OrgKdeKWinTabletModeManagerInterface::tabletModeAvailableChanged, q, [this](bool avail) {
-                    isTabletModeAvailable = avail;
-                    Q_EMIT q->tabletModeAvailableChanged(avail);
-                });
-            } else {
-                isTabletModeAvailable = false;
-                 m_tabletMode= false;
-            }
+            isTabletModeAvailable = m_tabletMode;
         }
 // TODO: case for Windows
-#else
-        isTabletModeAvailable = false;
-         m_tabletMode= false;
+// #else
+//         isTabletModeAvailable = false;
+//          m_tabletMode= false;
 #endif
-    bool isTabletModeAvailable = false;
-    bool  m_tabletMode= false;
 }
 
 void HPSSettings::neverToggle(const bool &a)
@@ -155,7 +133,6 @@ bool HPSSettings::isMobile()
     } else {
         m_mobile = false;
     }
-    qInfo() << "is mobile: " << m_mobile;
 #endif
     return m_mobile;
   }

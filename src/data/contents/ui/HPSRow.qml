@@ -1,10 +1,9 @@
-
 import QtQuick 2.5
 import QtQuick.Layouts 1.2
 import QtQml.Models 2.2
 import QtQuick.Templates 2.0 as T
 import QtQuick.Controls 2.0 as QQC2
-import org.kde.kirigami 2.7
+import HPSColumnView 1.0
 
 T.Control {
     id: root
@@ -19,44 +18,10 @@ T.Control {
     property alias visibleItems: columnView.visibleItems
     property alias firstVisibleItem: columnView.firstVisibleItem
     property alias lastVisibleItem: columnView.lastVisibleItem
-    property int defaultColumnWidth: Units.gridUnit * 20
+    property int defaultColumnWidth: hpsUnits.gridUnit * 20
     property alias interactive: columnView.interactive
     readonly property bool wideMode: root.width >= root.defaultColumnWidth*2 && depth >= 2
     property alias separatorVisible: columnView.separatorVisible
-    property OverlayDrawer leftSidebar
-    onLeftSidebarChanged: {
-        if (leftSidebar && !leftSidebar.modal) {
-            modalConnection.onModalChanged();
-        }
-    }
-    Connections {
-        id: modalConnection
-        target: root.leftSidebar
-        function onModalChanged() {
-            if (leftSidebar.modal) {
-                let sidebar = sidebarControl.contentItem;
-                let background = sidebarControl.background;
-                sidebarControl.contentItem = null;
-                leftSidebar.contentItem = sidebar;
-                sidebarControl.background = null;
-                leftSidebar.background = background;
-
-                sidebar.visible = true;
-                background.visible = true;
-            } else {
-                let sidebar = leftSidebar.contentItem
-                let background = leftSidebar.background
-                leftSidebar.contentItem=null
-                sidebarControl.contentItem = sidebar
-                leftSidebar.background=null
-                sidebarControl.background = background
-
-                sidebar.visible = true;
-                background.visible = true;
-            }
-        }
-    }
-
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
     function push(page, properties) {
@@ -258,7 +223,7 @@ T.Control {
             OpacityAnimator {
                 from: 0
                 to: 1
-                duration: Units.longDuration
+                duration: hpsUnits.longDuration
                 easing.type: Easing.InOutCubic
             }
         }
@@ -267,18 +232,17 @@ T.Control {
                 OpacityAnimator {
                     from: 1
                     to: 0
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.InOutCubic
                 }
                 YAnimator {
                     from: 0
                     to: height/2
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.InCubic
                 }
             }
         }
-
         pushEnter: Transition {
             ParallelAnimation {
                 //NOTE: It's a PropertyAnimation instead of an Animator because with an animator the item will be visible for an instant before starting to fade
@@ -286,70 +250,63 @@ T.Control {
                     property: "opacity"
                     from: 0
                     to: 1
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.InOutCubic
                 }
                 YAnimator {
                     from: height/2
                     to: 0
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.OutCubic
                 }
             }
         }
-
-
         pushExit: Transition {
             OpacityAnimator {
                 from: 1
                 to: 0
-                duration: Units.longDuration
+                duration: hpsUnits.longDuration
                 easing.type: Easing.InOutCubic
             }
         }
-
         replaceEnter: Transition {
             ParallelAnimation {
                 OpacityAnimator {
                     from: 0
                     to: 1
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.InOutCubic
                 }
                 YAnimator {
                     from: height/2
                     to: 0
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.OutCubic
                 }
             }
         }
-
         replaceExit: Transition {
             ParallelAnimation {
                 OpacityAnimator {
                     from: 1
                     to: 0
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.InCubic
                 }
                 YAnimator {
                     from: 0
                     to: -height/2
-                    duration: Units.longDuration
+                    duration: hpsUnits.longDuration
                     easing.type: Easing.InOutCubic
                 }
             }
         }
     }
-
     QtObject {
         id: pagesLogic
         readonly property var componentCache: new Array()
-
         function getPageComponent(page) {
             var pageComp;
-
             if (page.createObject) {
                 // page defined as component
                 pageComp = page;
@@ -391,24 +348,14 @@ T.Control {
         id: columnViewLayout
         spacing: 1
         readonly property alias columnView: columnView
-        QQC2.Control {
-            id: sidebarControl
-            Layout.fillHeight: true
-            visible: contentItem !== null && root.leftDrawer && root.leftDrawer.visible
-            leftPadding: root.leftSidebar ? root.leftSidebar.leftPadding : 0
-            topPadding: root.leftSidebar ? root.leftSidebar.topPadding : 0
-            rightPadding: root.leftSidebar ? root.leftSidebar.rightPadding : 0
-            bottomPadding: root.leftSidebar ? root.leftSidebar.bottomPadding : 0
-        }
-        ColumnView {
+        HPSColumnView {
             id: columnView
             Layout.fillWidth: true
             Layout.fillHeight: true
             topPadding: 0
-            // Internal hidden api for Page
             readonly property Item __pageRow: root
-            acceptsMouse: Settings.isMobile
-            columnResizeMode: root.wideMode ? ColumnView.FixedColumns : ColumnView.SingleColumn
+            acceptsMouse: hpsSettings.isMobile
+            columnResizeMode: root.wideMode ? HPSColumnView.FixedColumns : HPSColumnView.SingleColumn
             columnWidth: root.defaultColumnWidth
             onItemInserted: root.pageInserted(position, item);
             onItemRemoved: root.pageRemoved(item);
@@ -416,10 +363,10 @@ T.Control {
     }
     Rectangle {
         anchors.bottom: parent.bottom
-        height: Units.smallSpacing
+        height: hpsUnits.smallSpacing
         x: (columnView.width - width) * (columnView.contentX / (columnView.contentWidth - columnView.width))
         width: columnView.width * (columnView.width/columnView.contentWidth)
-        color: Theme.textColor
+        color: "white"
         opacity: 0
         onXChanged: {
             opacity = 0.3
@@ -427,13 +374,13 @@ T.Control {
         }
         Behavior on opacity {
             OpacityAnimator {
-                duration: Units.longDuration
+                duration: hpsUnits.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Timer {
             id: scrollIndicatorTimer
-            interval: Units.longDuration * 4
+            interval: hpsUnits.longDuration * 4
             onTriggered: parent.opacity = 0;
         }
     }

@@ -20,175 +20,170 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
     Layout.fillWidth: true
-    //implicitWidth: Units.gridUnit * (Math.floor(Math.random() * 35) + 8)
-
     title: qsTr("Ustawienia")
-
-    globalToolBarStyle: ApplicationHeaderStyle.None
-ColumnLayout
-{
-    Controls.Label
+    ColumnLayout
     {
-        text: qsTr("Pokazuj:")
-    }
-    HPSCheckBox
-    {
-        id: box1
-        checked: !hpsSettings.neverShowIsToggled ? true : false
-        tresc: qsTr("Wiadomość powitalną")
-        onToggled:
+        Controls.Label
         {
-            if(box1.checked == true)
+            text: qsTr("Pokazuj:")
+        }
+        HPSCheckBox
+        {
+            id: box1
+            checked: !hpsSettings.neverShowIsToggled ? true : false
+            tresc: qsTr("Wiadomość powitalną")
+            onToggled:
             {
-                hpsSettings.neverShowIsToggled = false
-            }
-            else
-            {
+                if(box1.checked == true)
+                {
+                    hpsSettings.neverShowIsToggled = false
+                }
+                else
+                {
 
-                hpsSettings.neverShowIsToggled = true
+                    hpsSettings.neverShowIsToggled = true
+                }
             }
         }
-    }
-    HPSCheckBox
-    {
-        id: box2
-        checked: !hpsSettings.neverShow2IsToggled ? true : false
-        tresc: qsTr("Powiadomienie o gestach")
-        onToggled:
+        HPSCheckBox
         {
-            if(box2.checked == true)
+            id: box2
+            checked: !hpsSettings.neverShow2IsToggled ? true : false
+            tresc: qsTr("Powiadomienie o gestach")
+            onToggled:
             {
-                hpsSettings.neverShow2IsToggled = false
-            }
-            else
-            {
+                if(box2.checked == true)
+                {
+                    hpsSettings.neverShow2IsToggled = false
+                }
+                else
+                {
 
-                hpsSettings.neverShow2IsToggled = true
+                    hpsSettings.neverShow2IsToggled = true
+                }
             }
         }
-    }
-    HPSCheckBox
-    {
-        id: box3
-        checked: !hpsSettings.neverShow3IsToggled ? true : false
-        tresc: qsTr("Powiadomienie o kopiowaniu cytatów")
-        onToggled:
+        HPSCheckBox
         {
-            if(box3.checked == true)
+            id: box3
+            checked: !hpsSettings.neverShow3IsToggled ? true : false
+            tresc: qsTr("Powiadomienie o kopiowaniu cytatów")
+            onToggled:
             {
-                hpsSettings.neverShow3IsToggled = false
-            }
-            else
-            {
+                if(box3.checked == true)
+                {
+                    hpsSettings.neverShow3IsToggled = false
+                }
+                else
+                {
 
-                hpsSettings.neverShow3IsToggled = true
+                    hpsSettings.neverShow3IsToggled = true
+                }
             }
         }
-    }
-    HPSCheckBox
-    {
-        id: box4
-        checked: !hpsSettings.neverShow4IsToggled ? true : false
-        tresc: qsTr("Powiadomienie o kopiowaniu szyfrów")
-        onToggled:
+        HPSCheckBox
         {
-            if(box4.checked == true)
+            id: box4
+            checked: !hpsSettings.neverShow4IsToggled ? true : false
+            tresc: qsTr("Powiadomienie o kopiowaniu szyfrów")
+            onToggled:
             {
-                hpsSettings.neverShow4IsToggled = false
-            }
-            else
-            {
+                if(box4.checked == true)
+                {
+                    hpsSettings.neverShow4IsToggled = false
+                }
+                else
+                {
 
-                hpsSettings.neverShow4IsToggled = true
+                    hpsSettings.neverShow4IsToggled = true
+                }
             }
         }
-    }
 
-/*    HPSCheckBox
-    {
-        id: box5
-        tresc: "Ciemny motyw"
-        checked: !hpsSettings.darkThemeIsToggled ? false : true
-        onToggled:
+        /*    HPSCheckBox
+              {
+              id: box5
+              tresc: "Ciemny motyw"
+              checked: !hpsSettings.darkThemeIsToggled ? false : true
+              onToggled:
+              {
+              if(box5.checked == true)
+              {
+              invisibleCheckbox.checked = true
+              hpsSettings.darkThemeIsToggled = true
+              }
+              else
+              {
+              invisibleCheckbox.checked = false
+              hpsSettings.darkThemeIsToggled = false
+              }
+              }
+              } */
+        Controls.Label
         {
-            if(box5.checked == true)
-            {
-                invisibleCheckbox.checked = true
-                hpsSettings.darkThemeIsToggled = true
-            }
-            else
-            {
-                invisibleCheckbox.checked = false
-                hpsSettings.darkThemeIsToggled = false
-            }
+            text: qsTr("Rozmiar tekstu (bez śpiewnika):")
         }
-    } */
-    Controls.Label
-    {
-        text: qsTr("Rozmiar tekstu (bez śpiewnika):")
-    }
 
 
-    HPSRadioButton
-    {
-        text: qsTr("Bardzo mały")
-        checked: hpsSettings.textSize == 10 ? true : false
-        onClicked:
-        {
-            hpsSettings.textSize = 10
-            invisibleSlider.value = 10
-        }
-    }
-    HPSRadioButton
-    {
-        text: qsTr("Mały")
-        checked: hpsSettings.textSize == 12 ? true : false
-        onClicked:
-        {
-            hpsSettings.textSize = 12
-            invisibleSlider.value = 12
-        }
-    }
-    HPSRadioButton
-    {
-        text: qsTr("Średni")
-        checked: hpsSettings.textSize == 14 ? true : false
-        onClicked:
-        {
-            hpsSettings.textSize = 14
-            invisibleSlider.value = 14
-        }
-    }
-    HPSRadioButton
-    {
-        text: qsTr("Duży")
-        checked: hpsSettings.textSize == 16 ? true : false
-        onClicked:
-        {
-            hpsSettings.textSize = 16
-            invisibleSlider.value = 16
-        }
-    }
         HPSRadioButton
-    {
-        text: qsTr("Bardzo duży")
-        checked: hpsSettings.textSize == 18 ? true : false
-        onClicked:
         {
-            hpsSettings.textSize = 18
-            invisibleSlider.value = 18
+            text: qsTr("Bardzo mały")
+            checked: hpsSettings.textSize == 10 ? true : false
+            onClicked:
+            {
+                hpsSettings.textSize = 10
+                invisibleSlider.value = 10
+            }
         }
-    }
-    ElementListyNoImage
-    {
-        header: qsTr("Podgląd")
-        Layout.fillWidth: true
-        textSize: invisibleSlider.value
+        HPSRadioButton
+        {
+            text: qsTr("Mały")
+            checked: hpsSettings.textSize == 12 ? true : false
+            onClicked:
+            {
+                hpsSettings.textSize = 12
+                invisibleSlider.value = 12
+            }
+        }
+        HPSRadioButton
+        {
+            text: qsTr("Średni")
+            checked: hpsSettings.textSize == 14 ? true : false
+            onClicked:
+            {
+                hpsSettings.textSize = 14
+                invisibleSlider.value = 14
+            }
+        }
+        HPSRadioButton
+        {
+            text: qsTr("Duży")
+            checked: hpsSettings.textSize == 16 ? true : false
+            onClicked:
+            {
+                hpsSettings.textSize = 16
+                invisibleSlider.value = 16
+            }
+        }
+        HPSRadioButton
+        {
+            text: qsTr("Bardzo duży")
+            checked: hpsSettings.textSize == 18 ? true : false
+            onClicked:
+            {
+                hpsSettings.textSize = 18
+                invisibleSlider.value = 18
+            }
+        }
+        ElementListyNoImage
+        {
+            header: qsTr("Podgląd")
+            Layout.fillWidth: true
+            textSize: invisibleSlider.value
+        }
     }
 }
-    }

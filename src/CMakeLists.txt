@@ -15,6 +15,7 @@ set(HPS_SRCS
     HPSCardModel.cpp
     HPSTranslate.cpp
     HPSUnits.cpp
+    HPSColumnView.cpp
     )
 
 if (QT_MAJOR_VERSION EQUAL 6)
@@ -29,8 +30,7 @@ remove_definitions(
 )
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Android")
-    find_package(KF5Kirigami2 ${KF5_DEP_VERSION})
-    set(HPS_EXTRA_LIBS Qt${QT_MAJOR_VERSION}::AndroidExtras KF5::Kirigami2)
+    set(HPS_EXTRA_LIBS Qt${QT_MAJOR_VERSION}::AndroidExtras )
 endif()
 
 find_program(kpackagetool_cmd kpackagetool5)
@@ -68,6 +68,3 @@ install(TARGETS HPS ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES data/metadata.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} RENAME com.hps.HPS.desktop)
 install(FILES data/com.hps.HPS.svg DESTINATION ${ICON_INSTALL_DIR}/hicolor/scalable/apps)
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Android")
-    find_package(KF5Kirigami2 REQUIRED)
-endif()

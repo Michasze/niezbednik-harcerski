@@ -18,14 +18,12 @@
  */
 
 import QtQuick 2.15
-import org.kde.kirigami 2.11 as Kirigami
 
 HPSAbstractWindow {
     id: hpsRoot
     property alias pageStack: __pageStack
     HPSRow {
          id: __pageStack
-//         globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
          anchors {
              fill: parent
              //HACK: workaround a bug in android iOS keyboard management

@@ -3,17 +3,16 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.2
 import QtQml 2.15
-import org.kde.kirigami 2.4
 
 HPSBasicScrollView {
     id: root
     property bool refreshing: false
     property bool supportsRefreshing: false
-    property int leftPadding: Units.gridUnit
-    property int topPadding: Units.gridUnit
-    property int rightPadding: Units.gridUnit
-    property int bottomPadding: Units.gridUnit
-    property Page page
+    property int leftPadding: hpsUnits.gridUnit
+    property int topPadding: hpsUnits.gridUnit
+    property int rightPadding: hpsUnits.gridUnit
+    property int bottomPadding: hpsUnits.gridUnit
+    property HPSBasicPage page
     property Item _swipeFilter
     onRefreshingChanged: flickableItem.topMargin = topPadding + (refreshing ? busyIndicatorFrame.height : 0);
     children: [
@@ -24,7 +23,7 @@ HPSBasicScrollView {
                 ? -root.flickableItem.contentY+root.flickableItem.originY+height
                 : -root.flickableItem.contentY+root.flickableItem.originY-height
             width: root.flickableItem.width
-            height: busyIndicator.height + Units.gridUnit * 2
+            height: busyIndicator.height + hpsUnits.gridUnit * 2
             QQC2.BusyIndicator {
                 id: busyIndicator
                 anchors.centerIn: parent
@@ -35,18 +34,18 @@ HPSBasicScrollView {
                 id: spinnerProgress
                 anchors {
                     fill: busyIndicator
-                    margins: Math.ceil(Units.smallSpacing)
+                    margins: Math.ceil(hpsUnits.smallSpacing)
                 }
                 radius: width
                 visible: supportsRefreshing && !refreshing && progress > 0
                 color: "transparent"
                 opacity: 0.8
-                border.color: Theme.backgroundColor
-                border.width: Math.ceil(Units.smallSpacing)
+                border.color: "black"
+                border.width: Math.ceil(hpsUnits.smallSpacing)
                 property real progress: supportsRefreshing && !refreshing ? (parent.y/busyIndicatorFrame.height) : 0
             }
             onYChanged: {
-                if (y > root.topPadding + Units.gridUnit && (typeof(applicationWindow) == "undefined" || !applicationWindow().reachableMode)) {
+                if (y > root.topPadding + hpsUnits.gridUnit && (typeof(applicationWindow) == "undefined" || !applicationWindow().reachableMode)) {
                     overshootResetTimer.running = true;
                 } else if (typeof(applicationWindow) == "undefined" || !applicationWindow().reachableMode) {
                     overshootResetTimer.running = false;

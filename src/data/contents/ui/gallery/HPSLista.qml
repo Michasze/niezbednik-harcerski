@@ -1,51 +1,13 @@
-/*
- *  SPDX-FileCopyrightText: 2010 Marco Martin <notmart@gmail.com>
- *
- *  SPDX-License-Identifier: LGPL-2.0-or-later
- */
 
 import QtQuick 2.8
 import QtQuick.Layouts 1.2
-import QtQuick.Controls 2.0 as QQC2
-import org.kde.kirigami 2.12
+import QtQuick.Controls 2.0 as Controls
 
-/**
- * A BasicListItem provides a simple list item design that can handle the
- * most common list item usecases.
- *
- * @image html BasicListItemTypes.svg "The styles of the BasicListItem. From left to right top to bottom: light icon + title + subtitle, dark icon + title + subtitle, light icon + label, dark icon + label, light label, dark label." width=50%
- */
-AbstractListItem {
+HPSAbstractList {
     id: listItem
-
-    /**
-     * label: string
-     *
-     * The label of this list item. If a subtitle is provided, the label will
-     * behave as a title and will have a bold font. Every list item should have
-     * a label.
-     */
     property alias label: listItem.text
     property int alignH: Text.AlignJustify
-
-    /**
-     * subtitle: string
-     *
-     * An optional subtitle that can appear under the label.
-     *
-     * @since 5.70
-     * @since org.kde.kirigami 2.12
-     */
     property alias subtitle: subtitleItem.text
-
-    /**
-     * leading: Item
-     *
-     * An item that will be displayed before the title and subtitle. Note that the
-     * leading item is allowed to expand infinitely horizontally, and should be bounded by the user.
-     *
-     * @since org.kde.kirigami 2.15
-     */
     property Item leading
     onLeadingChanged: {
         if (!!listItem.leading) {
@@ -60,24 +22,7 @@ AbstractListItem {
             layout.anchors.leftMargin = 0
         }
     }
-
-    /**
-     * leadingPadding: real
-     *
-     * Padding after the leading item.
-     *
-     * @since org.kde.kirigami 2.15
-     */
-    property real leadingPadding: Units.largeSpacing
-
-    /**
-     * trailing: Item
-     *
-     * An item that will be displayed after the title and subtitle. Note that the
-     * trailing item is allowed to expand infinitely horizontally, and should be bounded by the user.
-     *
-     * @since org.kde.kirigami 2.15
-     */
+    property real leadingPadding: hpsUnits.smallSpacing * 2
     property Item trailing
     onTrailingChanged: {
         if (!!listItem.trailing) {
@@ -92,139 +37,13 @@ AbstractListItem {
             layout.anchors.rightMargin = 0
         }
     }
-
-    /**
-     * trailingPadding: real
-     *
-     * Padding before the trailing item.
-     *
-     * @since org.kde.kirigami 2.15
-     */
-    property real trailingPadding: Units.largeSpacing
-
-    /**
-     * bold: bool
-     *
-     * Whether the list item's text (both label and subtitle, if provided) should
-     * render in bold.
-     *
-     * @since 5.71
-     * @since org.kde.kirigami 2.13
-     */
+    property real trailingPadding: hpsUnits.smallSpacing * 2
     property bool bold: false
-
-    /**
-     * icon: var
-     *
-     * @code ts
-     * interface IconGroup {
-     *     name:   string,
-     *     source: string,
-     *     width:  int,
-     *     height: int,
-     *     color:  color,
-     * }
-     *
-     * type Icon = string | IconGroup | URL
-     * @endcode
-     *
-     * The icon that will render on this list item.
-     *
-     * This can either be an icon name, a URL, or an object with the following properties:
-     *
-     * - `name`: string
-     * - `source`: string
-     * - `width`: int
-     * - `height`: int
-     * - `color`: color
-     *
-     * If the type of the icon is a string containing an icon name, the icon will be looked up from the
-     * platform icon theme.
-     *
-     * Using an icon object allows you to specify more granular attributes of the icon,
-     * such as its color and dimensions.
-     *
-     * If the icon is a URL, the icon will be attempted to be loaded from the
-     * given URL.
-     */
-    property var icon
-
-    /**
-     * iconSize: int
-     *
-     * The size at which the icon will render at. This will not affect icon lookup,
-     * unlike the icon group's width and height properties, which will.
-     *
-     * @since 2.5
-     */
-    property alias iconSize: iconItem.size
-
-    /**
-     * iconColor: color
-     *
-     * The color of the icon.
-     *
-     * If the icon's original colors should be left intact, set this to the default value, "transparent".
-     * Note that this colour will only be applied if the icon can be recoloured, (e.g. you can use Kirigami.Theme.foregroundColor to change the icon's colour.)
-     *
-     * @since 2.7
-     */
-    property alias iconColor: iconItem.color
-
-    /**
-     * reserveSpaceForIcon: bool
-     *
-     * Whether or not to reserve space for the icon, even if there is no icon.
-     *
-     * @image html BasicListItemReserve.svg "Left: reserveSpaceForIcon: false. Right: reserveSpaceForIcon: true" width=50%
-     *
-     */
-    property alias reserveSpaceForIcon: iconItem.visible
-
-    /**
-     * reserveSpaceForLabel: bool
-     *
-     * Whether or not the label of the list item should fill width.
-     *
-     * Setting this to false is useful if you have other items in the list item
-     * that should fill width instead of the label.
-     *
-     */
     property alias reserveSpaceForLabel: labelItem.visible
-
-    /**
-     * reserveSpaceForSubtitle: bool
-     *
-     * Whether or not the list item's height should account for
-     * the presence of a subtitle, even if one is not present.
-     * @since 5.77
-     * @since org.kde.kirigami 2.15
-     */
     property bool reserveSpaceForSubtitle: false
-
-    /**
-     * textSpacing: real
-     *
-     * The spacing between the label row and subtitle row.
-     *
-     * @since 5.83
-     * @since org.kde.kirigami 2.15
-     */
     property alias textSpacing: labelColumn.spacing
-
-    /**
-     * Whether to make the icon and labels have a disabled look. Defaults to
-     * false. Can be used to tweak whether the content elements are visually
-     * active while preserving an active appearance for any leading or trailing
-     * items.
-     * @since 5.83
-     * @since org.kde.kirigami 2.15
-     */
     property bool fadeContent: false
-
     default property alias _basicDefault: layout.data
-
-    icon: action ? action.icon.name || action.icon.source : undefined
     background: Rectangle {
     id: background
     color: listItem.checked || listItem.highlighted || (listItem.supportsMouseEvents && listItem.pressed && !listItem.checked && !listItem.sectionDelegate)
@@ -234,7 +53,7 @@ AbstractListItem {
     visible: listItem.ListView.view ? listItem.ListView.view.highlight === null : true
     Rectangle {
         id: internal
-        property bool indicateActiveFocus: listItem.pressed || Settings.tabletMode || listItem.activeFocus || (listItem.ListView.view ? listItem.ListView.view.activeFocus : false)
+        property bool indicateActiveFocus: listItem.pressed || hpsSettings.tabletMode || listItem.activeFocus || (listItem.ListView.view ? listItem.ListView.view.activeFocus : false)
         anchors.fill: parent
         visible:  listItem.supportsMouseEvents
         color: listItem.activeBackgroundColor
@@ -255,27 +74,24 @@ AbstractListItem {
                                                // TODO: implement this
 
     property var leadingWidth
-
-    Separator {
+    HPSSeparator {
         anchors {
             left: parent.left
             right: parent.right
             bottom: parent.bottom
-            leftMargin: Units.largeSpacing
-            rightMargin: Units.largeSpacing
+            leftMargin: hpsUnits.largeSpacing
+            rightMargin: hpsUnits.largeSpacing
         }
         visible: background.__separatorVisible
-        weight: Separator.Weight.Light
     }
 }
     contentItem: Item {
         id: contItem
         implicitWidth: (listItem.leading || {implicitWidth: 0}).implicitWidth + layout.implicitWidth + (listItem.trailing || {implicitWidth: 0}).implicitWidth
         Binding on implicitHeight {
-            value: Math.max(iconItem.size, (!subtitleItem.visible && listItem.reserveSpaceForSubtitle ? (labelItem.implicitHeight + labelColumn.spacing + subtitleItem.implicitHeight): labelColumn.implicitHeight) )
+            value: (!subtitleItem.visible && listItem.reserveSpaceForSubtitle ? (labelItem.implicitHeight + labelColumn.spacing + subtitleItem.implicitHeight): labelColumn.implicitHeight)
             delayed: true
         }
-
         RowLayout {
             id: layout
             spacing: LayoutMirroring.enabled ? listItem.rightPadding : listItem.leftPadding
@@ -284,36 +100,12 @@ AbstractListItem {
             anchors.right: contItem.right
             anchors.rightMargin: listItem.trailing ? listItem.trailingPadding : 0
             anchors.verticalCenter: parent.verticalCenter
-
-            Icon {
-                id: iconItem
-                source: {
-                    if (!listItem.icon) {
-                        return undefined
-                    }
-                    if (listItem.icon.hasOwnProperty) {
-                        if (listItem.icon.hasOwnProperty("name") && listItem.icon.name !== "")
-                            return listItem.icon.name;
-                        if (listItem.icon.hasOwnProperty("source"))
-                            return listItem.icon.source;
-                    }
-                    return listItem.icon;
-                }
-                property int size: subtitleItem.visible || reserveSpaceForSubtitle ? Units.iconSizes.medium : Units.iconSizes.smallMedium
-                Layout.minimumHeight: size
-                Layout.maximumHeight: size
-                Layout.minimumWidth: size
-                Layout.maximumWidth: size
-                selected: (listItem.highlighted || listItem.checked || (listItem.pressed && listItem.supportsMouseEvents))
-                opacity: listItem.fadeContent ? 0.4 : 1.0
-                visible: source != undefined
-            }
             ColumnLayout {
                 id: labelColumn
                 spacing: hpsUnits.smallSpacing
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignVCenter
-                QQC2.Label {
+                Controls.Label {
                     id: labelItem
                     text: listItem.text
                     textFormat: Text.StyledText
@@ -326,12 +118,11 @@ AbstractListItem {
                     font.weight: listItem.bold ? Font.Bold : Font.Normal
                     opacity: listItem.fadeContent ? 0.4 : 1.0
                 }
-                QQC2.Label {
+                Controls.Label {
                     id: subtitleItem
                     Layout.fillWidth: true
                     color: (listItem.highlighted || listItem.checked || (listItem.pressed && listItem.supportsMouseEvents)) ? listItem.activeTextColor : listItem.textColor
                     elide: Text.ElideRight
-                    font: Theme.smallFont
                     opacity: listItem.bold
                         ? (listItem.fadeContent ? 0.3 : 0.9)
                         : (listItem.fadeContent ? 0.1 : 0.7)

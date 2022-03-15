@@ -33,6 +33,7 @@
 #include "HPSCardModel.h"
 #include "HPSTranslate.h"
 #include "HPSUnits.h"
+#include "HPSColumnView.h"
 
 #ifdef Q_OS_ANDROID
 #include <QtAndroid>
@@ -80,6 +81,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<HPSDatabase>("HPSDatabase", 1, 0, "HPSDatabase");
     qmlRegisterType<HPSCardModel>("HPSCardModel", 1, 0, "HPSCardModel");
     qmlRegisterType<HPSUnits>("HPSUnits", 1, 0, "HPSUnits");
+    qmlRegisterType<ColumnView>("HPSColumnView", 1, 0, "HPSColumnView");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
     engine.rootContext()->setContextProperty("HPSTranslate", &translate);

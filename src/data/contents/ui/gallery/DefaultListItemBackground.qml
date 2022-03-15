@@ -1,11 +1,5 @@
-/*
- *  SPDX-FileCopyrightText: 2016 Marco Martin <mart@kde.org>
- *
- *  SPDX-License-Identifier: LGPL-2.0-or-later
- */
 
 import QtQuick 2.1
-import org.kde.kirigami 2.12
 
 Rectangle {
     id: background
@@ -18,7 +12,7 @@ Rectangle {
     visible: listItem.ListView.view ? listItem.ListView.view.highlight === null : true
     Rectangle {
         id: internal
-        property bool indicateActiveFocus: listItem.pressed || Settings.tabletMode || listItem.activeFocus || (listItem.ListView.view ? listItem.ListView.view.activeFocus : false)
+        property bool indicateActiveFocus: listItem.pressed || hpsSettings.tabletMode || listItem.activeFocus || (listItem.ListView.view ? listItem.ListView.view.activeFocus : false)
         anchors.fill: parent
         visible: listItem.supportsMouseEvents
         color: listItem.activeBackgroundColor
@@ -37,18 +31,15 @@ Rectangle {
                                                && (!!listItem.ListView.view ? listItem.ListView.nextSection == listItem.ListView.section : true)
                                                // This is the last item in the list
                                                // TODO: implement this
-
     property var leadingWidth
-
-    Separator {
+    HPSSeparator {
         anchors {
             left: parent.left
             right: parent.right
             bottom: parent.bottom
-            leftMargin: Units.largeSpacing
-            rightMargin: Units.largeSpacing
+            leftMargin: hpsUnits.largeSpacing
+            rightMargin: hpsUnits.largeSpacing
         }
         visible: background.__separatorVisible
-        weight: Separator.Weight.Light
     }
 }

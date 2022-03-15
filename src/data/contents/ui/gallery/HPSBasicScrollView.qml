@@ -1,7 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQml 2.15
-import org.kde.kirigami 2.9 as Kirigami
 
 MouseArea {
     id: root
@@ -57,7 +56,7 @@ MouseArea {
         when: !root.canFlickWithMouse
         target: root.flickableItem
         property: "interactive"
-        value: Kirigami.Settings.hasTransientTouchInput
+        value: hpsSettings.hasTransientTouchInput
         restoreMode: Binding.RestoreBinding
     }
     Timer {
@@ -80,10 +79,6 @@ MouseArea {
                 flickableItem.ScrollBar.horizontal.destroy();
             }
         }
-    }
-    Kirigami.WheelHandler {
-        id: wheelHandler
-        target: root.flickableItem
     }
     Item {
         id: flickableParent
@@ -111,7 +106,7 @@ MouseArea {
         ScrollBar {
             z: flickableParent.z + 1
             visible: root.verticalScrollBarPolicy != Qt.ScrollBarAlwaysOff && root.contentItem.visible && size < 1
-            interactive: !Kirigami.Settings.hasTransientTouchInput
+            interactive: !hpsSettings.hasTransientTouchInput
 
             anchors {
                 right: parent.right
@@ -126,7 +121,7 @@ MouseArea {
         ScrollBar {
             z: flickableParent.z + 1
             visible: root.horizontalScrollBarPolicy != Qt.ScrollBarAlwaysOff && root.contentItem.visible && size < 1
-            interactive: !Kirigami.Settings.hasTransientTouchInput
+            interactive: !hpsSettings.hasTransientTouchInput
 
             anchors {
                 left: parent.left

@@ -13,12 +13,14 @@
         <file alias="contents/ui/gallery/ElementListyImageNoLayout.qml">./data/contents/ui/gallery/ElementListyImageNoLayout.qml</file>
         <file alias="contents/ui/gallery/HPSRadioButton.qml">./data/contents/ui/gallery/HPSRadioButton.qml</file>
         <file alias="contents/ui/gallery/HPSPage.qml">./data/contents/ui/gallery/HPSPage.qml</file>
+        <file alias="contents/ui/gallery/HPSBasicPage.qml">./data/contents/ui/gallery/HPSBasicPage.qml</file>
         <file alias="contents/ui/gallery/HPSScrollView.qml">./data/contents/ui/gallery/HPSScrollView.qml</file>
         <file alias="contents/ui/gallery/HPSBasicScrollView.qml">./data/contents/ui/gallery/HPSBasicScrollView.qml</file>
         <file alias="contents/ui/gallery/CategoryPage.qml">./data/contents/ui/gallery/CategoryPage.qml</file>
         <file alias="contents/ui/gallery/HPSPopup.qml">./data/contents/ui/gallery/HPSPopup.qml</file>
         <file alias="contents/ui/gallery/HPSText.qml">./data/contents/ui/gallery/HPSText.qml</file>
         <file alias="contents/ui/gallery/HPSLista.qml">./data/contents/ui/gallery/HPSLista.qml</file>
+        <file alias="contents/ui/gallery/HPSAbstractList.qml">./data/contents/ui/gallery/HPSAbstractList.qml</file>
         <file alias="contents/ui/gallery/DefaultListItemBackground.qml">./data/contents/ui/gallery/DefaultListItemBackground.qml</file>
         <file alias="contents/ui/gallery/HPSSeparator.qml">./data/contents/ui/gallery/HPSSeparator.qml</file>
         <file alias="contents/ui/gallery/HPSCheckable.qml">./data/contents/ui/gallery/HPSCheckable.qml</file>

@@ -4,7 +4,6 @@ import QtQuick.Controls 2.0 as QQC2
 import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.2
 import QtQml 2.15
-import org.kde.kirigami 2.4
 
 HPSBasicScroollView {
     id: root
@@ -42,7 +41,7 @@ HPSBasicScroollView {
                 visible: supportsRefreshing && !refreshing && progress > 0
                 color: "transparent"
                 opacity: 0.8
-                border.color: Theme.backgroundColor
+                border.color: "black"
                 border.width: Math.ceil(Units.smallSpacing)
                 property real progress: supportsRefreshing && !refreshing ? (parent.y/busyIndicatorFrame.height) : 0
             }

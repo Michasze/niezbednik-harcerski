@@ -7,14 +7,12 @@
 import QtQuick 2.1
 import QtQuick.Controls 2.4 as Controls
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.19 as Kirigami
 import HPSUnits 1.0
 
 HPSPage {
     id: page
     property var aboutData
     title: qsTr("O aplikacji")
-    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
     HPSUnits {
         id: hpsUnits
     }

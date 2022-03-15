@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF5_VERSION "1.1.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.80.0") # handled by release scripts
-project(HPS VERSION ${KF5_VERSION})
+project(HPS VERSION 1.1.1)
 set(REQUIRED_QT_VERSION 5.15.0)
 
 SET(CMAKE_CXX_STANDARD 17)
@@ -21,10 +19,8 @@ include(FeatureSummary)
 
 include(KDEInstallDirs5)
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg QuickControls2 Multimedia Sql LinguistTools)
-find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2)
 
 set(CMAKE_AUTOMOC ON)
-set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 ################# set KDE specific information #################

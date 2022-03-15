@@ -1,10 +1,8 @@
-
 import QtQuick 2.1
 import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4
 
-Page {
+HPSBasicPage {
     id: root
     property alias refreshing: scrollView.refreshing
     property alias supportsRefreshing: scrollView.supportsRefreshing

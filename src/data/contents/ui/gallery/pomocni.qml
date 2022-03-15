@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,12 +19,10 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.15 as Controls
-import org.kde.kirigami 2.4
 
 HPSPage {
     id: page
     title: "Pomocne dłonie"
-    globalToolBarStyle: ApplicationHeaderStyle.None
     Controls.Pane {
         Column
         {
