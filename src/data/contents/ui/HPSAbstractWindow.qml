@@ -93,12 +93,6 @@ Controls.ApplicationWindow {
             root.reachableMode = false;
         }
     }
-    Binding {
-        when: globalDrawer !== undefined && root.visible
-        target: globalDrawer
-        property: "parent"
-        value: overlay
-    }
     onPageStackChanged: pageStack.parent = contentItem;
     width: hpsSettings.isMobile ? hpsUnits.gridUnit * 30 : hpsUnits.gridUnit * 55
     height: hpsSettings.isMobile ? hpsUnits.gridUnit * 45 : hpsUnits.gridUnit * 40

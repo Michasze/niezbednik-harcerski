@@ -29,8 +29,10 @@ remove_definitions(
     -DQT_NO_CAST_FROM_ASCII
 )
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Android")
-    set(HPS_EXTRA_LIBS Qt${QT_MAJOR_VERSION}::AndroidExtras )
+if (QT_MAJOR_VERSION EQUAL 5)
+ if (CMAKE_SYSTEM_NAME STREQUAL "Android")
+     set(HPS_EXTRA_LIBS Qt${QT_MAJOR_VERSION}::AndroidExtras )
+ endif()
 endif()
 
 find_program(kpackagetool_cmd kpackagetool5)
@@ -58,8 +60,11 @@ else()
 endif()
 
 add_executable(HPS ${HPS_SRCS} ${RESOURCES})
+if (QT_MAJOR_VERSION EQUAL 6)
+target_link_libraries(HPS Qt${QT_MAJOR_VERSION}::Core  Qt${QT_MAJOR_VERSION}::Qml Qt${QT_MAJOR_VERSION}::Quick Qt${QT_MAJOR_VERSION}::Svg Qt${QT_MAJOR_VERSION}::QuickControls2 Qt${QT_MAJOR_VERSION}::Sql ${HPS_EXTRA_LIBS})
+else()
 target_link_libraries(HPS Qt${QT_MAJOR_VERSION}::Core  Qt${QT_MAJOR_VERSION}::Qml Qt${QT_MAJOR_VERSION}::Quick Qt${QT_MAJOR_VERSION}::Svg Qt${QT_MAJOR_VERSION}::QuickControls2 Qt${QT_MAJOR_VERSION}::Multimedia Qt${QT_MAJOR_VERSION}::Sql ${HPS_EXTRA_LIBS})
-
+endif()
 if (ANDROID)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)
 endif()

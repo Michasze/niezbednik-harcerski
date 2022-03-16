@@ -18,7 +18,11 @@ include(CPack)
 include(FeatureSummary)
 
 include(KDEInstallDirs5)
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg QuickControls2 Multimedia Sql LinguistTools)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Gui Svg QuickControls2 Sql )
+
+if (QT_MAJOR_VERSION EQUAL 5)
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Multimedia)
+endif()
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -35,10 +39,11 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPoQmTools)
 include(ECMFindQmlModule)
 
-if(CMAKE_SYSTEM_NAME STREQUAL "Android")
-    find_package(Qt5AndroidExtras ${REQUIRED_QT_VERSION} REQUIRED)
+if (QT_MAJOR_VERSION EQUAL 5)
+ if(CMAKE_SYSTEM_NAME STREQUAL "Android")
+     find_package(Qt5AndroidExtras ${REQUIRED_QT_VERSION} REQUIRED)
+ endif()
 endif()
-
 
 ecm_find_qmlmodule(QtGraphicalEffects 1.0)
 

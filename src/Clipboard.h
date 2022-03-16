@@ -20,7 +20,7 @@
 #define __CLIPBOARD_H_
 
 #include <QString>
-#include <QApplication>
+#include <QGuiApplication>
 #include <QClipboard>
 
 class Clipboard : public QObject
@@ -30,7 +30,7 @@ class Clipboard : public QObject
     Q_PROPERTY(QString paste READ paste WRITE setClipboard NOTIFY clipboardChanged)
 public:
     Clipboard(QObject *parent = nullptr);
-    QClipboard *clipboard = QApplication::clipboard();
+    QClipboard *clipboard = QGuiApplication::clipboard();
     QString paste();
     void setClipboard(const QString &quote);
 

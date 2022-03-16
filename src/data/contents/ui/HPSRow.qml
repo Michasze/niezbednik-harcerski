@@ -310,7 +310,8 @@ T.Control {
             if (page.createObject) {
                 // page defined as component
                 pageComp = page;
-            } else if (typeof page == "string") {
+                //HACK: jeśli page nie posiada nazwy obiektu oznacza że to url
+            } else if (!page.objectName) {
                 // page defined as string (a url)
                 pageComp = pagesLogic.componentCache[page];
                 if (!pageComp) {
@@ -357,8 +358,8 @@ T.Control {
             acceptsMouse: hpsSettings.isMobile
             columnResizeMode: root.wideMode ? HPSColumnView.FixedColumns : HPSColumnView.SingleColumn
             columnWidth: root.defaultColumnWidth
-            onItemInserted: root.pageInserted(position, item);
-            onItemRemoved: root.pageRemoved(item);
+            onItemInserted: function(position, item) { root.pageInserted(position, item); }
+            onItemRemoved: function(item) { root.pageRemoved(item); }
         }
     }
     Rectangle {

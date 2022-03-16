@@ -1,11 +1,10 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.0
-//NOTE: This must stay at 2.0 until KF6 due to retrocompatibility of the "icon" property
-import QtQuick.Templates 2.0 as T2
+//import QtQuick.Templates 2.0 as T2
 import QtQuick.Templates 2.4 as QQC2
 
-T2.ItemDelegate {
+QQC2.ItemDelegate {
     id: listItem
     property bool supportsMouseEvents: hoverEnabled // TODO KF6 remove
     property alias containsMouse: listItem.hovered // TODO KF6 remove.
@@ -18,7 +17,7 @@ T2.ItemDelegate {
     property color activeTextColor: "white"
     property color activeBackgroundColor: "#3873a6"
     default property alias _default: listItem.contentItem
-    property QQC2.Action action
+//    property QQC2.Action action
     activeFocusOnTab: ListView.view ? false : true
     text: action ? action.text : undefined
     checked: action ? action.checked : false

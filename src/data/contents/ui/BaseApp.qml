@@ -20,7 +20,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
-import QtMultimedia 5.0
+import QtMultimedia 5.15
 import "gallery"
 import Data 1.0
 import HPSDatabase 1.0
@@ -64,23 +64,20 @@ HPSWindow {
     }
     MediaPlayer {
         id: mediaPlayer
-        autoPlay: false
         loops: MediaPlayer.Infinite
-        autoLoad: true
+        videoOutput: output
         source:"qrc:/contents/ui/media/gesty1.mkv"
     }
     MediaPlayer {
         id: mediaPlayer2
-        autoPlay: false
+        videoOutput: output2
         loops: MediaPlayer.Infinite
-        autoLoad: true
         source:"qrc:/contents/ui/media/gesty2.mkv"
     }
     MediaPlayer {
         id: mediaPlayer3
-        autoPlay: true
+        videoOutput: output3
         loops: MediaPlayer.Infinite
-        autoLoad: true
         source:"qrc:/contents/ui/media/gesty3.mkv"
     }
 
@@ -186,8 +183,7 @@ może ulec zmianie."
         ColumnLayout {
             anchors.fill: parent
             VideoOutput {
-                id:videoOutput
-                source:mediaPlayer
+                id: output
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 Layout.maximumHeight: root.height / 2
                 Layout.fillWidth: true
@@ -226,8 +222,7 @@ może ulec zmianie."
         ColumnLayout {
             anchors.fill: parent
             VideoOutput {
-                id:videoOutput2
-                source:mediaPlayer2
+                id:output2
                 Layout.alignment: Qt.AlignTop
                 Layout.maximumHeight: root.height / 2
                 Layout.fillWidth: true
@@ -262,8 +257,7 @@ może ulec zmianie."
             anchors.fill: parent
 
             VideoOutput {
-                id:videoOutput3
-                source:mediaPlayer3
+                id: output3
                 Layout.alignment: Qt.AlignTop
                 Layout.maximumHeight: root.height / 2
                 Layout.fillWidth: true

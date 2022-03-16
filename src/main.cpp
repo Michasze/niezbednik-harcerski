@@ -36,7 +36,9 @@
 #include "HPSColumnView.h"
 
 #ifdef Q_OS_ANDROID
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 3))
 #include <QtAndroid>
+#endif
 #include <QGuiApplication>
 
 // WindowManager.LayoutParams
@@ -100,6 +102,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     }
     //HACK to color the system bar on Android, use qtandroidextras and call the appropriate Java methods
 #ifdef Q_OS_ANDROID
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 3))
     QtAndroid::runOnAndroidThread([=]() {
         QAndroidJniObject window = QtAndroid::androidActivity().callObjectMethod("getWindow", "()Landroid/view/Window;");
         window.callMethod<void>("addFlags", "(I)V", FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -107,6 +110,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         window.callMethod<void>("setStatusBarColor", "(I)V", QColor("Black").rgba());
         window.callMethod<void>("setNavigationBarColor", "(I)V", QColor("Black").rgba());
     });
+#endif
+    //TODO: Ogarnąć jak to zrobić w Qt6. Wersja 6.4 chyba to umożliwi
 #endif
 
     return app.exec();

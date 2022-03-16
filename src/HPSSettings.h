@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QString>
-#include <QApplication>
+#include <QGuiApplication>
 #include <QSettings>
 
 class HPSSettings : public QObject
