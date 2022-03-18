@@ -23,13 +23,8 @@ import Data 1.0
 HPSPage {
     id: page
     title: "Pakowanie według BP"
-    HPSSettings
-    {
+    HPSSettings {
         id: hpsSettings
-    }
-    Clipboard
-    {
-        id: clipboard
     }
     Controls.Pane {
         Column {
