@@ -22,15 +22,15 @@ import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    title: "Stopnie Harcerskie - ZHP"
+    title: qsTr("Stopnie Harcerskie - ZHP")
     header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
         Controls.TabButton {
-            text: "Zuchy"
+            text: qsTr("Zuchy")
         }
         Controls.TabButton {
-            text: "Harcerze"
+            text: qsTr("Harcerze")
         }
     }
     Controls.SwipeView {
@@ -48,21 +48,21 @@ HPSPage {
                     ikona: "qrc:/contents/ui/img/ho.svg"
                     width: page.width - 50
                     color: "steelblue"
-                    header: "Zuch Ochoczy"
+                    header: qsTr("Zuch Ochoczy")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
                     width: page.width - 50
                     color: "steelblue"
-                    header: "Zuch Sprawny"
+                    header: qsTr("Zuch Sprawny")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/zuchG.svg"
                     width: page.width - 50
                     color: "steelblue"
-                    header: "Zuch Zaradny"
+                    header: qsTr("Zuch Zaradny")
                 }
             }
         }
@@ -76,37 +76,37 @@ HPSPage {
                 {
                     ikona: "qrc:/contents/ui/img/mlodzik.svg"
                     color: "steelblue"
-                    header: "Młodzik/\nOchotniczka"
+                    header: qsTr("Młodzik/\nOchotniczka")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/wywiadowca.svg"
                     color: "steelblue"
-                    header: "Wywiadowca/\nTropicielka"
+                    header: qsTr("Wywiadowca/\nTropicielka")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/odkrywca.svg"
                     color: "steelblue"
-                    header: "Odkrywca/\nPionierka"
+                    header: qsTr("Odkrywca/\nPionierka")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/cwik.svg"
                     color: "steelblue"
-                    header: "Ćwik/\nSamarytanka"
+                    header: qsTr("Ćwik/\nSamarytanka")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/ho.svg"
                     color: "steelblue"
-                    header: "Harcerz Orli/\nHarcerka Orla"
+                    header: qsTr("Harcerz Orli/\nHarcerka Orla")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
                     color: "steelblue"
-                    header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
+                    header: qsTr("Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej")
                 }
             }
         }

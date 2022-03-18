@@ -28,11 +28,11 @@ HPSPage {
             anchors.fill: parent
             spacing: 10
             Repeater {
-                model: ["Narodziny Generała Roberta Baden Powella <b>22 lutego 1857</b>",
-                        "Bitwa o Mafeking <b>1899</b>",
-                        "Pierwszy obóz skautowy na wyspie Brownsea <b>1907</b>",
-                        "Wydanie książki “Scouting for boys” <b>1908</b>",
-                        "Powstanie pierwszych drużyn skautowych na ziemiach polskich <b>1909</b>",
+                model: [qsTr("Narodziny Generała Roberta Baden Powella <b>22 lutego 1857</b>"),
+                        qsTr("Bitwa o Mafeking <b>1899</b>"),
+                        qsTr("Pierwszy obóz skautowy na wyspie Brownsea <b>1907</b>"),
+                        qsTr("Wydanie książki “Scouting for boys” <b>1908</b>"),
+                        qsTr("Powstanie pierwszych drużyn skautowych na ziemiach polskich <b>1909</b>"),
                         "Andrzej Małkowski przetłumaczył “Scouting for boys” <b>1909</b>",
                         "Pierwsza Wojna Światowa <b>1914-1918</b>",
                         "Założenie Związku Harcerstwa Polskiego <b>1-2 listopada 1918</b>",

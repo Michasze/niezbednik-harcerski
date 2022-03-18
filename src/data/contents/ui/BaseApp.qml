@@ -97,7 +97,7 @@ może ulec zmianie."
             ElementListyNoImage {
                 Layout.alignment: Qt.AlignHCenter
                 color: "black"
-                header: "Wybór języka:"
+                header: qsTr("Wybór języka:")
             }
             Controls.RadioButton {
                 id: control
@@ -155,7 +155,7 @@ może ulec zmianie."
                 }
             }
             Controls.CheckBox {
-                text: "Nie pokazuj więcej"
+                text: qsTr("Nie pokazuj więcej")
                 onToggled: {
                     hpsSettings.neverShowIsToggled = true
                 }
@@ -163,7 +163,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: "Przejdź dalej"
+                text: qsTr("Przejdź dalej")
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
@@ -196,7 +196,7 @@ może ulec zmianie."
                 text: "Nawigacja po aplikacji odbywa się za pomocą gestów. Przesunięcie palcem od lewej do prawej umożliwia powrót do poprzedniej strony"
             }
             Controls.CheckBox {
-                text: "Nie pokazuj więcej"
+                text: qsTr("Nie pokazuj więcej")
                 onToggled:
                 {
                     hpsSettings.neverShow2IsToggled = true
@@ -237,7 +237,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: "Przejdź dalej"
+                text: qsTr("Przejdź dalej")
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30
@@ -272,7 +272,7 @@ może ulec zmianie."
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 4
-                text: "Przejdź dalej"
+                text: qsTr("Przejdź dalej")
                 highlighted: true
                 Layout.rightMargin: 10
                 Layout.bottomMargin: 30

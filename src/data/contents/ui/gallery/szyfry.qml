@@ -32,7 +32,7 @@ HPSPage {
                 id: filteredModel
                 sourceModel: hpsModel
                 filterRole: "category"
-                filterRegularExpression: RegExp("%1".arg("szyfry"), "i")
+                filterRegularExpression: RegExp("%1".arg(qsTr("Szyfry")), "i")
             }
             Repeater {
                 model: filteredModel
