@@ -18,13 +18,8 @@
  */ 
 import QtQuick 2.15
 import QtQuick.Layouts 1.2
-import Data 1.0
 
 HPSLista {
-    Clipboard
-    {
-        id: clipboard
-    }
     id: listItem
     property string tresc: "Brak treści"
     property string autor: ""

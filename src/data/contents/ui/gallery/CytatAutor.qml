@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,12 +19,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
-import Data 1.0
 
 HPSLista {
-    Clipboard {
-        id: clipboard
-    }
     height: label1.height + label2.height + 20
     background: Rectangle {
         color: "transparent"

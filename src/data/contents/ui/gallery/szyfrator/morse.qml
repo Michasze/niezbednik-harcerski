@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -22,21 +22,12 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import ".."
 import Cipher 1.0
-import Data 1.0
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Szyfrator"
-
-     Cipher
-     {
-       id: cipher
-     }
-    Clipboard
-    {
-        id: clipboard
+    Cipher {
+        id: cipher
     }
     ColumnLayout {
         width: page.width
@@ -46,32 +37,30 @@ HPSPage {
             header: "Kod Morse'a"
         }
         Controls.TextArea {
-//    width: 500
-    id: niezaszyfrowane
-    Layout.fillWidth: true
-    Layout.preferredHeight: (page.height / 2) - 90
-    Layout.fillHeight: true
-    inputMethodHints: Qt.ImhNoPredictiveText
-    leftPadding: 10
-    wrapMode: TextEdit.WrapAnywhere
-    placeholderTextColor: "White"
-    color: "white"
-//    inputMask: "abc"
-    placeholderText: qsTr("Tekst do zaszyfrowania...")
-    background: Rectangle {
-                    radius: 5
-                    color: "#1d1d1d"
-                    implicitWidth: 100
-                    implicitHeight: 24
-                    border.color: "#333"
-                    border.width: 1
-                }
-        onTextChanged:
-    {
-       cipher.morse = niezaszyfrowane.text
-       zaszyfrowane.header = cipher.morse
-    }
-}
+            id: niezaszyfrowane
+            Layout.fillWidth: true
+            Layout.preferredHeight: (page.height / 2) - 90
+            Layout.fillHeight: true
+            inputMethodHints: Qt.ImhNoPredictiveText
+            leftPadding: 10
+            wrapMode: TextEdit.WrapAnywhere
+            placeholderTextColor: "White"
+            color: "white"
+            placeholderText: qsTr("Tekst do zaszyfrowania...")
+            background: Rectangle {
+                radius: 5
+                color: "#1d1d1d"
+                implicitWidth: 100
+                implicitHeight: 24
+                border.color: "#333"
+                border.width: 1
+            }
+            onTextChanged:
+            {
+                cipher.morse = niezaszyfrowane.text
+                zaszyfrowane.header = cipher.morse
+            }
+        }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             HPSRadioButton {
@@ -97,27 +86,25 @@ HPSPage {
                 }
             }
         }
-
-         ElementListyNoImage
-    {
-       id: zaszyfrowane
-       color: "black"
-       align: Text.AlignTop
-        alignH: Text.AlignLeft
-        lAlign: Qt.AlignTop
-        textSize: 13
-        border.color: "grey"
-        border.width: 1
-        Layout.preferredHeight: (page.height / 2) - 90
-       MouseArea {
-      anchors.fill: parent
-      hoverEnabled: true
-      onPressAndHold:
-      {
-       clipboard.paste = zaszyfrowane.header
-       showPassiveNotification("Tekst skopiowany do schowka", 2000)
-      }
-       }
+        ElementListyNoImage {
+            id: zaszyfrowane
+            color: "black"
+            align: Text.AlignTop
+            alignH: Text.AlignLeft
+            lAlign: Qt.AlignTop
+            textSize: 13
+            border.color: "grey"
+            border.width: 1
+            Layout.preferredHeight: (page.height / 2) - 90
+            MouseArea {
+                anchors.fill: parent
+                hoverEnabled: true
+                onPressAndHold:
+                {
+                    clipboard.paste = zaszyfrowane.header
+                    showPassiveNotification("Tekst skopiowany do schowka", 2000)
+                }
+            }
         }
     }
 }

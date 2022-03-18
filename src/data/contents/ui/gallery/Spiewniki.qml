@@ -26,12 +26,7 @@ import Data 1.0
 HPSPage {
     id: page
     title: qsTr("Śpiewniki")
-    Clipboard
-    {
-        id: clipboard
-    }
-    Spiewnik
-    {
+    Spiewnik {
         id: spiewnik
     }
     ColumnLayout

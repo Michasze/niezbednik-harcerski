@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -23,31 +23,19 @@ import QtQuick.Layouts 1.2
 import ".."
 import Cipher 1.0
 import Decipher 1.0
-import Data 1.0
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Szyfrator"
-
-     Cipher
-     {
-       id: cipher
-     }
-
-     Decipher
-     {
-       id: decipher
-     }
-    Clipboard
-    {
-        id: clipboard
+    Cipher {
+        id: cipher
+    }
+    Decipher {
+        id: decipher
     }
     ColumnLayout {
         width: page.width
-        ElementListyNoImage
-        {
+        ElementListyNoImage {
             id: naglowek
             color: "brown"
             header: "Szyfr Cezara"
@@ -57,68 +45,66 @@ HPSPage {
             Layout.preferredHeight: (page.height / 2) - (shift.height / 2) - (naglowek.height / 2) - 40
             onTextChanged:
             {
-            if (activeFocus)
-            {
-            cipher.caesar = pole.text
-                pole2.text = cipher.caesar
-            }
-    }
-}
-Controls.TextField {
-    id: shift
-    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-    Layout.fillWidth: true
-    width: 100
-    leftPadding: 5
-    Layout.topMargin: 10
-    horizontalAlignment: TextInput.AlignHCenter
-    placeholderTextColor: "White"
-    color: "white"
-    placeholderText: qsTr("przesunięcie:")
-    validator: IntValidator{bottom: 0; top: 52;}
-//    inputMask: "99999999"
-    inputMethodHints: Qt.ImhDigitsOnly
-    background: Rectangle {
-        radius: 5
-        color: "brown"
-        anchors.fill: parent
-        border.color: "#333"
-        border.width: 1
+                if (activeFocus)
+                {
+                    cipher.caesar = pole.text
+                    pole2.text = cipher.caesar
                 }
-        onTextChanged:
-                      {
-                          cipher.shift = shift.text
-                          if (pole2.text == "")
-                          {
-                              decipher.caesarDec = pole2.text
-                              pole.text = decipher.caesarDec
-                          }
-                          else
-                          {
-                              cipher.caesar = pole.text
-                              pole2.text = cipher.caesar
-                          }
-                      }
-}
-         HPSText
-    {
-        id: pole2
-        deszyfrowanie: true
-        Layout.preferredHeight: (page.height / 2) - (shift.height / 2) - (naglowek.height / 2) - 40
-        onPressAndHold:
-        {
-            clipboard.paste = pole2.text
-            showPassiveNotification("Tekst skopiowany do schowka", 2000)
+            }
         }
-        onTextChanged:
-        {
-            if (activeFocus)
+        Controls.TextField {
+            id: shift
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+            Layout.fillWidth: true
+            width: 100
+            leftPadding: 5
+            Layout.topMargin: 10
+            horizontalAlignment: TextInput.AlignHCenter
+            placeholderTextColor: "White"
+            color: "white"
+            placeholderText: qsTr("przesunięcie:")
+            validator: IntValidator{bottom: 0; top: 52;}
+            inputMethodHints: Qt.ImhDigitsOnly
+            background: Rectangle {
+                radius: 5
+                color: "brown"
+                anchors.fill: parent
+                border.color: "#333"
+                border.width: 1
+            }
+            onTextChanged:
             {
-                decipher.decShift = cipher.shift
-                decipher.caesarDec = pole2.text
-                pole.text = decipher.caesarDec
+                cipher.shift = shift.text
+                if (pole2.text == "")
+                {
+                    decipher.caesarDec = pole2.text
+                    pole.text = decipher.caesarDec
+                }
+                else
+                {
+                    cipher.caesar = pole.text
+                    pole2.text = cipher.caesar
+                }
+            }
         }
-    }
+        HPSText {
+            id: pole2
+            deszyfrowanie: true
+            Layout.preferredHeight: (page.height / 2) - (shift.height / 2) - (naglowek.height / 2) - 40
+            onPressAndHold:
+            {
+                clipboard.paste = pole2.text
+                showPassiveNotification("Tekst skopiowany do schowka", 2000)
+            }
+            onTextChanged:
+            {
+                if (activeFocus)
+                {
+                    decipher.decShift = cipher.shift
+                    decipher.caesarDec = pole2.text
+                    pole.text = decipher.caesarDec
+                }
+            }
 
         }
     }
