@@ -22,8 +22,8 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
 Rectangle {
-    property string header: "Brak tekstu"
-    property string opis: "Brak opisu"
+    property string header: ""
+    property string opis: ""
     property url ikona: ""
     property url adres: "harcerz.qml"
     property string kolor: "#303030"

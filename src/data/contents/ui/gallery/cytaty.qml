@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -21,15 +21,16 @@ import QtQuick 2.6
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import QtMultimedia 5.0
+import Filter 1.0
 import Data 1.0
 
 HPSPage {
+    property string tytul: ""
     id: page
     title: qsTr("Cytaty")
-
     InfoData
     {
-        id: infoData
+        id: cytatyModel
     }
     Component.onCompleted: {
         if(!hpsSettings.neverShow3IsToggled)
@@ -43,11 +44,6 @@ HPSPage {
         {
             anchors.fill: parent
             spacing: 10
-            Controls.Label
-            {
-                visible: false
-                text: infoData.tresci
-            }
             Controls.Button
             {
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -55,8 +51,8 @@ HPSPage {
                 text: "Losuj cytat"
                 onClicked:
                 {
-                    losowy.tresc = infoData.losuj
-                    losowy.autor = infoData.losowyAutor
+                    losowy.tresc = cytatyModel.losuj
+                    losowy.autor = cytatyModel.losowyAutor
                     losowy.visible = true
                 }
             }
@@ -65,23 +61,36 @@ HPSPage {
                 visible: false
                 id: losowy
             }
+            ListModel {
+                id: autorzy
+                ListElement { author: "Robert Baden-Powell"; image: "Baden-Powell.jpg" }
+                ListElement { author: "Andrzej Małkowski"; image: "Andrzej_Malkowski.jpg" }
+                ListElement { author: "Stefan Mirowski"; image: "StefanMirowski.jpg" }
+                ListElement { author: "Aleksander Kamiński"; image: "Aleksander_Kaminski.jpg" }
+                ListElement { author: "Ks. Kazimierz Lutosławski"; image: "Kazimierz_Lutosławski.jpg" }
+                ListElement { author: "Józef Piłsudski"; image: "Jozef_Pilsudski1.jpg" }
+                ListElement { author: "Jan Paweł II"; image: "Karol_Wojtyla.jpg" }
+                ListElement { author: "Henryk Glass"; image: "Henryk_Glass.jpg" }
+                ListElement { author: "Ewa Grodecka"; image: "grodecka.jpg" }
+                ListElement { author: "Olga Małkowska"; image: "Olga_Malkowska.jpg" }
+                ListElement { author: "Adam Mickiewicz"; image: "mickiewicz.jpg" }
+                ListElement { author: "Juliusz Słowacki"; image: "slowacki.jpg" }
+                ListElement { author: "Lady Olave Baden-Powell"; image: "olave_baden_powell.jpg" }
+                ListElement { author: "Antoni Olbromski"; image: "antoni_olbromski.jpg" }
+                ListElement { author: "Jadwiga Falkowska"; image: "jadwiga_falkowska.jpg" }
+                ListElement { author: "Józef Haller"; image: "jozef_haller.jpg" }
+                ListElement { author: "Maria Kapiszewska"; image: "maria_kapiszewska.jpg" }
+                ListElement { author: "Tadeusz Strumiłło"; image: "strumillo.jpg" }
+            }
             Repeater {
-                id: karta
-                model: infoData.autor
+                model: autorzy
                 delegate: KartaStronaNoLayout {
-                    visible: index == 0 ? false : true
-                    header: modelData
-                    ikona: "image://images/" + infoData.image[index]
-                    adres: cytatyPage
-                    opis: ""
+                    header: author
+                    ikona: "image://images/" + image
                     MouseArea {
-                        id: area
                         anchors.fill: parent
-                        readonly property int kartaIndex: index
-                        onClicked:
-                        {
-                            console.log(infoData.image)
-                            infoData.autorIndex = kartaIndex
+                        onClicked: {
+                            tytul = header
                             pageStack.push(cytatyPage)
                         }
                     }
@@ -92,19 +101,24 @@ HPSPage {
                 opis: ""
                 adres: "cytatyInni.qml"
             }
-
             Component {
                 id: cytatyPage
-                HPSPage
-                {
-                    title: infoData.autorString + " - cytaty"
+                HPSPage {
+                    title: tytul + " - cytaty"
+                    HPSFilter {
+                        id: filteredModel
+                        sourceModel: cytatyModel
+                        filterRole: "autor"
+                        secondRole: ""
+                        filterRegularExpression: RegExp(tytul)
+                    }
                     ColumnLayout {
-                        id: mainList
                         Repeater {
-                            model: infoData.tresc
+                            Component.onCompleted: console.log(tytul)
+                            model: filteredModel
                             delegate: Cytat {
-                                tresc: modelData
-                                autor: infoData.autorString
+                                tresc: model.tresc
+                                autor: model.autor
                             }
                         }
                     }
