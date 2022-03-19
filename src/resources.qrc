@@ -194,6 +194,7 @@
         <file alias="contents/ui/gallery/tezyzna.qml">./data/contents/ui/gallery/tezyzna.qml</file>
         <file alias="contents/ui/gallery/ultralight.qml">./data/contents/ui/gallery/ultralight.qml</file>
         <file alias="contents/ui/gallery/porady.qml">./data/contents/ui/gallery/porady.qml</file>
+        <file alias="contents/ui/gallery/jakPomagac.qml">./data/contents/ui/gallery/jakPomagac.qml</file>
         <file alias="contents/ui/gallery/nowoczesny.qml">./data/contents/ui/gallery/nowoczesny.qml</file>
         <file alias="contents/ui/gallery/kadraNamioty.qml">./data/contents/ui/gallery/kadraNamioty.qml</file>
         <file alias="contents/ui/gallery/swJerzy.qml">./data/contents/ui/gallery/swJerzy.qml</file>
@@ -420,6 +421,7 @@
         <file alias="contents/ui/img/snapchat_logo.svg">./data/contents/ui/img/snapchat_logo.svg</file>
         <file alias="contents/ui/img/snapchat_symbolic.svg">./data/contents/ui/img/snapchat_symbolic.svg</file>
         <file alias="contents/ui/img/hand.svg">./data/contents/ui/img/hand.svg</file>
+        <file alias="contents/ui/img/transform-browse.svg">./data/contents/ui/img/transform-browse.svg</file>
         <file alias="contents/ui/img/go-home_symbolic.svg">./data/contents/ui/img/go-home_symbolic.svg</file>
         <file alias="contents/ui/img/snapchatHPS.jpg">./data/contents/ui/img/snapchatHPS.jpg</file>
         <file alias="contents/ui/img/dziecku.svg">./data/contents/ui/img/dziecku.svg</file>
