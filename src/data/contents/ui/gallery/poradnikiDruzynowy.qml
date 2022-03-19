@@ -30,6 +30,7 @@ HPSPage {
             KartaStronaNoLayout {
                 header: "Biwaki"
                 opis: ""
+                ikona: "image://icons/namiot_biwakowy.svg,white"
                 adres: "biwaki.qml"
             }
             /*        KartaStronaNoLayout {
