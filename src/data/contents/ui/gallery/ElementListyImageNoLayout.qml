@@ -24,13 +24,15 @@ Rectangle {
     // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
     property string header: ""
     property url ikona: ""
+    property url drugaIkona: ""
+    property url trzeciaIkona: ""
     property url odnosnik: ""
     property bool isUrl: true
     property bool isRank: false
     property double divider: 1
     id: cardRectangle
     radius: 10
-    width: parent.width
+    width: parent.parent.width
     color: "#303030"
     // Jeśli tekst jest za duży powiększ wysokość kafelka
     height: naglowek.height > 120 ? naglowek.height + 30 : 120
@@ -38,7 +40,6 @@ Rectangle {
         anchors.fill: parent
         onClicked:
         {
-        console.log(odnosnik)
             isUrl ? Qt.openUrlExternally(cardRectangle.odnosnik) : pageStack.push(Qt.resolvedUrl(cardRectangle.odnosnik))
         }
     }
@@ -49,7 +50,7 @@ Rectangle {
         anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
         sourceSize.width: cardRectangle.height - 20
-        width: 100
+        width: 80
         fillMode: Image.PreserveAspectFit
         source: isRank ? "image://icons/krzyz.svg,white" : cardRectangle.ikona
         Image {
@@ -60,10 +61,10 @@ Rectangle {
             source: isRank ? cardRectangle.ikona : "image://icons/blank.svg,transparent"
         }
     }
-    Item
-    {
+    Item {
         height: parent.height
-        width: parent.width - img.width - 10
+        width: drugaIkona != "" ? parent.width - img.width - img.width - 20 : parent.width - img.width - 10
+        anchors.rightMargin: drugaIkona != "" ? img.width : 0
         anchors.right: parent.right
         Controls.Label {
             horizontalAlignment: Text.AlignHCenter
@@ -73,6 +74,21 @@ Rectangle {
             font.pointSize: invisibleSlider.value - 2
             anchors.centerIn: parent
             text: cardRectangle.header
+        }
+    }
+    Image {
+        anchors.right: parent.right
+        source: cardRectangle.drugaIkona
+        width: img.width
+        anchors.verticalCenter: parent.verticalCenter
+        sourceSize.width: parent.height - 20
+        fillMode: Image.PreserveAspectFit
+        anchors.rightMargin: 10
+        Image {
+            z:0
+            anchors.centerIn: parent
+            sourceSize.width: parent.height / cardRectangle.divider
+            source: cardRectangle.trzeciaIkona
         }
     }
 }
