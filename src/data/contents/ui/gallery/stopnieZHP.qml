@@ -67,6 +67,7 @@ HPSPage {
             }
         }
         Controls.Pane {
+            id: pane
             height: highest.height + 50
             Column {
                 id: highest
@@ -77,36 +78,50 @@ HPSPage {
                     ikona: "qrc:/contents/ui/img/mlodzik.svg"
                     color: "steelblue"
                     header: qsTr("Młodzik/\nOchotniczka")
+                    drugaIkona: "image://icons/krzyz.svg,white"
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/wywiadowca.svg"
                     color: "steelblue"
                     header: qsTr("Wywiadowca/\nTropicielka")
+                    drugaIkona: "image://icons/krzyz.svg,white"
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/odkrywca.svg"
                     color: "steelblue"
                     header: qsTr("Odkrywca/\nPionierka")
+                    drugaIkona: "image://icons/krzyz.svg,white"
+                    trzeciaIkona: "image://icons/krzyz_lilijka_srebrna.svg"
+                    divider: 2.4
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/cwik.svg"
                     color: "steelblue"
                     header: qsTr("Ćwik/\nSamarytanka")
+                    drugaIkona: "image://icons/krzyz.svg,white"
+                    trzeciaIkona: "image://icons/krzyz_lilijka_zlota.svg"
+                    divider: 2.4
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/ho.svg"
                     color: "steelblue"
                     header: qsTr("Harcerz Orli/\nHarcerka Orla")
+                    drugaIkona: "image://icons/krzyz.svg,white"
+                    trzeciaIkona: "image://icons/krzyz_lilijka_okrag.svg"
+                    divider: 2.1
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
                     color: "steelblue"
                     header: qsTr("Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej")
+                    drugaIkona: "image://icons/krzyz.svg,white"
+                    trzeciaIkona: "image://icons/krzyz_wieniec.svg"
+                    divider: 0.9
                 }
             }
         }
