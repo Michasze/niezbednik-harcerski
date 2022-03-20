@@ -47,7 +47,16 @@ public:
     else {
       adres = id;
     }
-    QImageReader reader(QStringLiteral("://contents/ui/img/") + adres, "jpg");
+    QImageReader reader;
+    if (adres.contains ("svg"))
+      {
+        reader.setFileName(QStringLiteral("://contents/ui/img/") + adres);
+        reader.setFormat("svg");
+      }
+    else {
+        reader.setFileName(QStringLiteral("://contents/ui/img/") + adres);
+        reader.setFormat("jpg");
+    }
     QSize imgSize = reader.size();
     float ratio = (float) imgSize.width() / (float) imgSize.height();
     int fixedHeight = (float) requestedSize.width() / ratio;
