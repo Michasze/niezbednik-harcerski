@@ -9,6 +9,12 @@ HPSAbstractList {
     property int alignH: Text.AlignJustify
     property alias subtitle: subtitleItem.text
     property Item leading
+    checkable: false
+            onPressAndHold:
+            {
+                clipboard.paste = control.tresc + "\n" + control.autor
+                showPassiveNotification("Skopiowano do schowka", 2000)
+            }
     onLeadingChanged: {
         if (!!listItem.leading) {
             listItem.leading.parent = contItem
@@ -72,7 +78,6 @@ HPSAbstractList {
                                                && (!!listItem.ListView.view ? listItem.ListView.nextSection == listItem.ListView.section : true)
                                                // This is the last item in the list
                                                // TODO: implement this
-
     property var leadingWidth
     HPSSeparator {
         anchors {
@@ -110,6 +115,8 @@ HPSAbstractList {
                     text: listItem.text
                     textFormat: Text.StyledText
                     Layout.fillWidth: true
+                    topPadding: 10
+                    bottomPadding: 10
                     wrapMode: Text.WordWrap
                     horizontalAlignment: listItem.alignH
                     font.pointSize: invisibleSlider.value

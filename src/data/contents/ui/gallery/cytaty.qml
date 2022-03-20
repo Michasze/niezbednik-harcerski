@@ -112,13 +112,18 @@ HPSPage {
                         secondRole: ""
                         filterRegularExpression: RegExp(tytul)
                     }
-                    ColumnLayout {
-                        Repeater {
-                            Component.onCompleted: console.log(tytul)
-                            model: filteredModel
-                            delegate: Cytat {
-                                tresc: model.tresc
-                                autor: model.autor
+                    Controls.Pane {
+                        Column {
+                            anchors.fill: parent
+                            spacing: 10
+                            ListView {
+                                height: page.height
+                                width: page.width - 50
+                                model: filteredModel
+                                delegate: HPSLista {
+                                    label: model.tresc
+                                    subtitle: ""
+                                }
                             }
                         }
                     }
