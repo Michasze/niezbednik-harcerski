@@ -36,7 +36,7 @@
 #include "HPSColumnView.h"
 
 #ifdef Q_OS_ANDROID
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 3))
+#if (QT_VERSION <= QT_VERSION_CHECK(5, 15, 3))
 #include <QtAndroid>
 #endif
 #include <QGuiApplication>
@@ -102,7 +102,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     }
     //HACK to color the system bar on Android, use qtandroidextras and call the appropriate Java methods
 #ifdef Q_OS_ANDROID
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 3))
+#if (QT_VERSION <= QT_VERSION_CHECK(5, 15, 3))
     QtAndroid::runOnAndroidThread([=]() {
         QAndroidJniObject window = QtAndroid::androidActivity().callObjectMethod("getWindow", "()Landroid/view/Window;");
         window.callMethod<void>("addFlags", "(I)V", FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
