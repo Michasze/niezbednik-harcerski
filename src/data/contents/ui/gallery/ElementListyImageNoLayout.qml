@@ -50,7 +50,7 @@ Rectangle {
         anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
         sourceSize.width: cardRectangle.height - 20
-        width: 80
+        width: cardRectangle.drugaIkona != "" ? 80 : 100
         fillMode: Image.PreserveAspectFit
         source: isRank ? "image://icons/krzyz.svg,white" : cardRectangle.ikona
         Image {
