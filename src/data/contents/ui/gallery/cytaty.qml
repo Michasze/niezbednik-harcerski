@@ -100,6 +100,7 @@ HPSPage {
                 header: "Inni"
                 opis: ""
                 adres: "cytatyInni.qml"
+                ikona: "qrc:/contents/ui/img/user.svg"
             }
             Component {
                 id: cytatyPage

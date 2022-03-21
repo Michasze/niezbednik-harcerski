@@ -38,6 +38,7 @@ HPSPage {
             KartaStronaNoLayout {
                 header: "Poradnik organizacji biwaku"
                 opis: "phm. Beniamin Marek"
+                ikona: "image://icons/namiot_biwakowy.svg,white"
                 adres: "organizacjaBiwaku.qml"
             }
         }

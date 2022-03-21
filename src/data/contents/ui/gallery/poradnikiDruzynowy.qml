@@ -41,6 +41,7 @@ HPSPage {
             KartaStronaNoLayout {
                 header: "Sprawności"
                 opis: ""
+                ikona: "image://icons/sprawnosci.svg,white"
                 adres: "sprawnosci.qml"
             }
             /* KartaStronaNoLayout { */
