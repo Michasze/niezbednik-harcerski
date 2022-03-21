@@ -124,7 +124,7 @@ może ulec zmianie."
                 onClicked: {
                     HPSTranslate.selectLanguage("pl")
                     engine.retranslate();
-                    hpsModel.refresh()
+                    hpsModel.reload()
                 }
             }
             Controls.RadioButton {
