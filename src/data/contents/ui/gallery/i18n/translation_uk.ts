@@ -76,6 +76,11 @@
         <translation>історія</translation>
     </message>
     <message>
+        <location filename="../../../../../HPSCardModel.cpp" line="100"/>
+        <source>Robert Baden-Powell</source>
+        <translation>Роберт Бейден-Поуелл</translation>
+    </message>
+    <message>
         <location filename="../../../../../HPSCardModel.cpp" line="115"/>
         <location filename="../../../../../HPSCardModel.cpp" line="116"/>
         <location filename="../../../../../HPSCardModel.cpp" line="117"/>
@@ -86,29 +91,28 @@
         <translation>ідеї для скаутських зустрічей</translation>
     </message>
     <message>
-        <location filename="../../../../../HPSCardModel.cpp" line="127"/>
         <location filename="../../../../../HPSCardModel.cpp" line="128"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="129"/>
         <source>szyfry</source>
         <translation>шифри</translation>
     </message>
     <message>
-        <location filename="../../../../../HPSCardModel.cpp" line="135"/>
         <location filename="../../../../../HPSCardModel.cpp" line="136"/>
         <location filename="../../../../../HPSCardModel.cpp" line="137"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="138"/>
         <source>książki</source>
         <translation>книжки</translation>
     </message>
     <message>
-        <location filename="../../../../../HPSCardModel.cpp" line="157"/>
         <location filename="../../../../../HPSCardModel.cpp" line="158"/>
         <location filename="../../../../../HPSCardModel.cpp" line="159"/>
         <location filename="../../../../../HPSCardModel.cpp" line="160"/>
         <location filename="../../../../../HPSCardModel.cpp" line="161"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="162"/>
         <source>stopnie harcerskie</source>
         <translation>скаутні звання</translation>
     </message>
     <message>
-        <location filename="../../../../../HPSCardModel.cpp" line="162"/>
         <location filename="../../../../../HPSCardModel.cpp" line="163"/>
         <location filename="../../../../../HPSCardModel.cpp" line="164"/>
         <location filename="../../../../../HPSCardModel.cpp" line="165"/>
@@ -116,6 +120,7 @@
         <location filename="../../../../../HPSCardModel.cpp" line="167"/>
         <location filename="../../../../../HPSCardModel.cpp" line="168"/>
         <location filename="../../../../../HPSCardModel.cpp" line="169"/>
+        <location filename="../../../../../HPSCardModel.cpp" line="170"/>
         <source>prawo harcerskie</source>
         <translation>скаутні правила</translation>
     </message>
@@ -299,6 +304,45 @@
     </message>
 </context>
 <context>
+    <name>badenPowell</name>
+    <message>
+        <location filename="../badenPowell.qml" line="41"/>
+        <source>Robert Stephenson Smyth Baden Powell - urodził się 22 lutego 1857 roku w Londynie. Jego ojciec był duchownym anglikańskim oraz profesorem geometrii na uniwersytecie w Oksfordzie. Jego matka była wnuczką admirała Williama Smytha. Robert jako dziecko nauczył się grać na pianinie i skrzypcach.
+
+Uczył się w Charterhouse School. Tam w ramach zabaw w przyszkolnym parku, szkolił swoich kolegów w tropieniu i zacieraniu śladów. Po ukończeniu szkoły wstąpił do Royal Military Academy Sandhurst, gdzie dostał się z bardzo dobrymi wynikami. Wybrał służbę w kawalerii, został przydzielony do 13 pułku huzarów stacjonującego w Indiach.
+
+Brał udział w działaniach armii na terenie Afryki i Indii, w tym w Wojnach Burskich. Podczas jednego ze swoich pobytów w Afryce otrzymał przydomek “Impeesa”, czyli “Wilk, który nigdy nie śpi”.</source>
+        <translation>Роберт Стефенсон Сміт Бейден-Поуелл  народився 22 лютого 1857 року в Лондоні. 
+
+Його батько був англіканським священником і професором геометрії в Оксфорді. Його мама була онукою адмірала Вільяма Сміта. В дитинстві Роберт навчився грати на піаніно і скрипці. 
+
+Він навчався в Charterhouse School (Школа Чартерхаус). Там, граючи в ігри в шкільному парку, він навчав своїх товаришів як вистежувати та знищувати сліди. Після закінчення школи він вступив до Royal Military Academy Sandhurst (Королівської військової академії Сандхерст), куди був прийнятий із дуже добрими результатами. Він вибрав службу в кавалерії і був призначений у 13-й гусарський полк, який знаходився в Індії.
+
+Він приймав участь у військових операціях в Африці та Індії, також в англо-бурській війні. Під час однієї зі своїх подорожей Африкою він отримав прізвисько “Імпіза”, що значить “Вовк, який ніколи не спить”.</translation>
+    </message>
+    <message>
+        <location filename="../badenPowell.qml" line="59"/>
+        <source>Podczas II Wojny Burskiej dowodził Obroną Mafekingu. Jako zwiadowców i łączników wykorzystywał wtedy chłopców podzielonych na małe grupy. Napisał książkę “Wskazówki dla zwiadowców”, która była wykorzystywana jako podręcznik dla żołnierzy, ale też wykorzystywały ją organizacje młodzieżowe. W 1907 roku zorganizował eksperymentalny obóz na wyspie Brownsea. Testował tam między innymi system małych grup, czyli system zastępów. Na podstawie swoich doświadczeń wydał w 1908 roku książkę Scouting for boys. Chciał on zapewnić młodzieży z wielkich miast lepszy kontakt z naturą.
+
+W 1909 został założony Ruch Skautek, który prowadziłą siostra Baden Powella, na jego prośbę. W 1912 roku ożenił się z Olave. Poznał ją na statku płynącym do Nowego Jorku.
+
+W momencie wybuchu I Wojny Światowej chciał służyć w armii brytyjskiej, ale jego zwierzchnicy zadecydowali, że powinien jednak zajmować się w tym czasie ruchem skautowym.
+
+Na pierwszym Jamboree w 1920 roku został wybrany pierwszym skautem świata. Za swoją pracę skaut otrzymał tytuł lorda Gilwell.
+
+W 1939 roku wyjechał na leczenie do Kenii, gdzie zmarł w 1941 roku</source>
+        <translation>Під час Другої англо-бурської війни він командував обороною Мафекінга. Потім він використовував хлопців, розділених на невеликі групи, як розвідників і офіцерів зв’язку. Він написав книгу «Поради скаутам», яка використовувалася як посібник для солдатів, а також використовувалася молодіжними організаціями. У 1907 році він організував експериментальний табір на острові Браунсі. Він випробував там, серед іншого, систему малих груп, тобто систему хостів. На основі свого досвіду в 1908 році він опублікував книгу “Scouting for boys” («Скаутство для хлопчиків»). Він хотів забезпечити молоді з великих міст кращий контакт з природою.
+
+У 1909 році за його проханням заснували Рух Дівчат-скаутів, який очолила сестра Бадена Пауелла. У 1912 році він одружився з Олавою. Він зустрів її на кораблі, який плив до Нью-Йорка.
+
+Коли розпочалася Перша Світова Війна він хотів служити в британській армії, але його  керівництво вирішило, що в той час він повинен керувати Рухом скаутів.
+
+На першому Jamboree (Джамборі) в 1920 році був обраний першим скаутом світу. За свою роботу скаут отримав звання лорда Гілвелла.
+
+У 1939 рокі виїхав на лікування в Кенії, де й помер в 1941 році</translation>
+    </message>
+</context>
+<context>
     <name>daty</name>
     <message>
         <location filename="../daty.qml" line="31"/>
@@ -404,41 +448,41 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../stopnieZHP.qml" line="79"/>
+        <location filename="../stopnieZHP.qml" line="80"/>
         <source>Młodzik/
 Ochotniczka</source>
         <translation type="unfinished">Молодь/
  Волонтер</translation>
     </message>
     <message>
-        <location filename="../stopnieZHP.qml" line="85"/>
+        <location filename="../stopnieZHP.qml" line="87"/>
         <source>Wywiadowca/
 Tropicielka</source>
         <translation type="unfinished">Розвідник/
 Слідопитка</translation>
     </message>
     <message>
-        <location filename="../stopnieZHP.qml" line="91"/>
+        <location filename="../stopnieZHP.qml" line="94"/>
         <source>Odkrywca/
 Pionierka</source>
         <translation>Першовідкривач/
 Піонер</translation>
     </message>
     <message>
-        <location filename="../stopnieZHP.qml" line="97"/>
+        <location filename="../stopnieZHP.qml" line="103"/>
         <source>Ćwik/
 Samarytanka</source>
         <translation type="unfinished">Скобиний хват/
 Самарянка</translation>
     </message>
     <message>
-        <location filename="../stopnieZHP.qml" line="103"/>
+        <location filename="../stopnieZHP.qml" line="112"/>
         <source>Harcerz Orli/
 Harcerka Orla</source>
         <translation type="unfinished">Орлиний скаут</translation>
     </message>
     <message>
-        <location filename="../stopnieZHP.qml" line="109"/>
+        <location filename="../stopnieZHP.qml" line="121"/>
         <source>Harcerz Rzeczypospolitej/
  Harcerka Rzeczypospolitej</source>
         <translation type="unfinished">Скаут Республіки Польщі</translation>
