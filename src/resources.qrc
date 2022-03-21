@@ -310,6 +310,10 @@
         <file alias="contents/ui/img/settings.svg">./data/contents/ui/img/settings.svg</file>
         <file alias="contents/ui/img/rower.svg">./data/contents/ui/img/rower.svg</file>
         <file alias="contents/ui/img/ognisko.svg">./data/contents/ui/img/ognisko.svg</file>
+        <file alias="contents/ui/img/kotwica.svg">./data/contents/ui/img/kotwica.svg</file>
+        <file alias="contents/ui/img/grzyb.svg">./data/contents/ui/img/grzyb.svg</file>
+        <file alias="contents/ui/img/thunderbolt.svg">./data/contents/ui/img/thunderbolt.svg</file>
+        <file alias="contents/ui/img/sprawnosci.svg">./data/contents/ui/img/sprawnosci.svg</file>
         <file alias="contents/ui/img/hamak.svg">./data/contents/ui/img/hamak.svg</file>
         <file alias="contents/ui/img/ksiazki.svg">./data/contents/ui/img/ksiazki.svg</file>
         <file alias="contents/ui/img/sylwetka.svg">./data/contents/ui/img/sylwetka.svg</file>
