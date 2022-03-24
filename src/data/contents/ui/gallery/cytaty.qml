@@ -123,7 +123,7 @@ HPSPage {
                                 model: filteredModel
                                 delegate: HPSLista {
                                     label: model.tresc
-                                    subtitle: ""
+                                    subtitle: model.autor
                                 }
                             }
                         }
