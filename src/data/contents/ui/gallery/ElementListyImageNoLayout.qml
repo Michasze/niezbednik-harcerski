@@ -63,9 +63,8 @@ Rectangle {
     }
     Item {
         height: parent.height
-        width: drugaIkona != "" ? parent.width - img.width - img.width - 20 : parent.width - img.width - 10
-        anchors.rightMargin: drugaIkona != "" ? img.width : 0
-        anchors.right: parent.right
+        anchors.right: drugaIkona != "" ? secondImg.left : parent.right
+        anchors.left: img.right
         Controls.Label {
             horizontalAlignment: Text.AlignHCenter
             id: naglowek
@@ -77,6 +76,7 @@ Rectangle {
         }
     }
     Image {
+        id: secondImg
         anchors.right: parent.right
         source: cardRectangle.drugaIkona
         width: img.width
