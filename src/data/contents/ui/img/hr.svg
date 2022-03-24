@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="104.9864mm"
-   height="90mm"
-   viewBox="0 0 104.9864 90.000001"
+   width="96.986397mm"
+   height="96.986397mm"
+   viewBox="0 0 96.9864 96.9864"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2-dev (fd8ac3146e, 2021-05-04, custom)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
    sodipodi:docname="hr.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -31,8 +31,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="1.7083652"
-     inkscape:cx="240.87356"
-     inkscape:cy="194.33784"
+     inkscape:cx="294.14085"
+     inkscape:cy="264.87311"
      inkscape:window-width="1920"
      inkscape:window-height="1080"
      inkscape:window-x="0"
@@ -40,9 +40,10 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer2"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     width="96.9864mm">
     <sodipodi:guide
-       position="110.18906,45.00471"
+       position="109.80951,48.863175"
        orientation="0,-1"
        id="guide973" />
     <sodipodi:guide
@@ -63,11 +64,11 @@
      inkscape:label="Warstwa 2">
     <path
        style="fill:#fdfef2;fill-opacity:1;stroke:none;stroke-width:0.518813px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 12.777082,64.480061 25.835872,56.921413 39.543614,64.798997 35.239937,51.139156 47.671795,40.166492 32.006082,39.633058 25.064515,24.674491 20.351667,39.869224 4.346941,40.000407 16.306385,47.646491 Z"
+       d="M 10.131249,68.184224 23.19004,60.625576 36.897782,68.50316 32.594105,54.843319 45.025963,43.870655 29.36025,43.337221 22.418683,28.378654 17.705835,43.573387 1.7011077,43.70457 13.660553,51.350654 Z"
        id="path870-7" />
     <path
        style="fill:#fdfef2;fill-opacity:1;stroke:none;stroke-width:0.518813px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 63.636158,64.454979 76.694948,56.896331 90.40269,64.773915 86.099013,51.114074 98.530873,40.14141 82.865158,39.607976 75.923591,24.649409 71.210743,39.844142 55.206018,39.975325 67.165461,47.621409 Z"
+       d="M 60.990326,68.159142 74.049116,60.600494 87.756858,68.478078 83.453181,54.818237 95.885041,43.845573 80.219326,43.312139 73.277759,28.353572 68.564911,43.548305 52.560186,43.679488 64.519629,51.325572 Z"
        id="path870-7-6" />
   </g>
 </svg>
