@@ -19,14 +19,14 @@
 
 OProgramieSzablon {
     aboutData: {
-        "displayName" : "Niezbędnik HPS",
-        "productName" : "Niezbędnik HPS",
+        "displayName" : "Niezbędnik Harcerski",
+        "productName" : "Niezbędnik Harcerski",
         "componentName" : "HPS",
         "shortDescription" : qsTr("Aplikacja grupy \"Harcerze - Poznajemy Się!\""),
         "homepage" : "",
         "programLogo" : "image://icons/logo.svg",
         "bugAddress" : "aplikacjahps@gmail.com",
-        "version" : "1.1.2",
+        "version" : "1.1.3",
         "otherText" : "",
         "authors" : [
             {
