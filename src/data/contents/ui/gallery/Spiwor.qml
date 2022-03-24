@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -22,12 +22,8 @@ import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
-
     title: "Jak wybrać odpowiedni śpiwór?"
-
     ColumnLayout {
-        width: page.width
      ElementListyNoImage
      {
         color: "black"
