@@ -48,19 +48,19 @@ HPSPage {
                 {
                     ikona: "qrc:/contents/ui/img/ho.svg"
                     color: "steelblue"
-                    header: qsTr("Zuch pierwszej gwiazdki/\nZuch wtajemniczony")
+                    header: qsTr("Zuch pierwszej gwiazdki\nZuch wtajemniczony")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/hr.svg"
                     color: "steelblue"
-                    header: qsTr("Zuch drugiej gwiazdki/\nZuch zaradny")
+                    header: qsTr("Zuch drugiej gwiazdki\nZuch zaradny")
                 }
                 ElementListyImageNoLayout
                 {
                     ikona: "qrc:/contents/ui/img/zuchG.svg"
                     color: "steelblue"
-                    header: qsTr("Zuch trzeciej gwiazdki/\nZuch opiekuńczy")
+                    header: qsTr("Zuch trzeciej gwiazdki\nZuch opiekuńczy")
                 }
             }
             }
@@ -73,35 +73,35 @@ HPSPage {
                 {
                     isRank: true
                     ikona: "image://icons/blank.svg,transparent"
-                    header: qsTr("Młodzik/\n Ochotniczka")
+                    header: qsTr("Młodzik\n Ochotniczka")
                 }
                 ElementListyImageNoLayout
                 {
                     isRank: true
                     divider: 2.4
                     ikona: "image://icons/krzyz_lilijka_srebrna.svg"
-                    header: qsTr("Wywiadowca/\n Tropicielka")
+                    header: qsTr("Wywiadowca\n Tropicielka")
                 }
                 ElementListyImageNoLayout
                 {
                     isRank: true
                     divider: 2.4
                     ikona: "image://icons/krzyz_lilijka_zlota.svg"
-                    header: qsTr("Ćwik/\n Samarytanka")
+                    header: qsTr("Ćwik\n Samarytanka")
                 }
                 ElementListyImageNoLayout
                 {
                     isRank: true
                     ikona: "image://icons/krzyz_lilijka_okrag.svg"
                     divider: 2.1
-                    header: qsTr("Harcerz orli/\n Wędrowniczka")
+                    header: qsTr("Harcerz orli\n Wędrowniczka")
                 }
                 ElementListyImageNoLayout
                 {
                     isRank: true
                     ikona: "image://icons/krzyz_wieniec.svg"
                     divider: 0.90
-                    header: qsTr("Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej")
+                    header: qsTr("Harcerz Rzeczypospolitej\n Harcerka Rzeczypospolitej")
                 }
             }
         }

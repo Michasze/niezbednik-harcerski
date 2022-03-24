@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -24,9 +24,7 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Stopnie Harcerskie - SH"
-
 
     ColumnLayout {
         width: page.width
@@ -35,42 +33,42 @@ HPSPage {
             wysokosc: 120
             color: "steelblue"
             format: Text.PlainText
-            header: "Młodzik/\nOchotniczka"
+            header: "Młodzik\nOchotniczka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
             format: Text.PlainText
-            header: "Wywiadowca/\nTropicielka"
+            header: "Wywiadowca\nTropicielka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
             format: Text.PlainText
-            header: "Odkrywca/\nPionierka"
+            header: "Odkrywca\nPionierka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
             format: Text.PlainText
-            header: "Ćwik/\nSamarytanka"
+            header: "Ćwik\nSamarytanka"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
             format: Text.PlainText
-            header: "Harcerz Orli/\nHarcerka Orla"
+            header: "Harcerz Orli\nHarcerka Orla"
         }
         ElementListyNoImage
         {
             wysokosc: 120
             color: "steelblue"
             format: Text.PlainText
-            header: "Harcerz Rzeczypospolitej/\n Harcerka Rzeczypospolitej"
+            header: "Harcerz Rzeczypospolitej\n Harcerka Rzeczypospolitej"
         }
 
     }

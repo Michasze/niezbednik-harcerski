@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -24,9 +24,7 @@ import QtQuick.Layouts 1.2
 HPSPage {
     id: page
     Layout.fillWidth: true
-
     title: "Stopnie Harcerskie - Rodło"
-
     ColumnLayout {
         width: page.width
         ElementListy
@@ -39,7 +37,7 @@ HPSPage {
         {
             ikona: "qrc:/contents/ui/img/sam_oh.svg"
             color: "#959764"
-            header: "Samarytanin/\nSamarytanka"
+            header: "Samarytanin\nSamarytanka"
         }
         ElementListy
         {
@@ -51,7 +49,7 @@ HPSPage {
         {
             ikona: "qrc:/contents/ui/img/zwiadowca.svg"
             color: "#959764"
-            header: "Zwiadowca/\nZwiadowczyni"
+            header: "Zwiadowca\nZwiadowczyni"
         }
         ElementListy
         {
