@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,11 +19,9 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
 
 HPSPage {
     id: page
-    Layout.fillWidth: true
     title: "Stopnie Harcerskie - Zawisza"
     header: Controls.TabBar {
         id: tabBar
@@ -37,81 +35,70 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        Layout.fillHeight: true
-        Layout.fillWidth: true
         height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
-                ElementListyNoImage
+        Controls.Pane {
+            Column {
+                anchors.fill: parent
+                spacing: 10
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Wywiadowca"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Ćwik"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Harcerz orli"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Harcerz Rzeczypospolitej"
                 }
             }
         }
-        Item {
-            width: root.width
-            height: root.height
-            ColumnLayout {
-                ElementListyNoImage
+        Controls.Pane {
+            Column {
+                anchors.fill: parent
+                spacing: 10
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Tropicielka"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Pionierka"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Samarytanka"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Wędrowniczka"
                 }
-                ElementListyNoImage
+                ElementListyNoLayout
                 {
                     wysokosc: 120
-                    width: page.width - 50
                     color: "steelblue"
                     header: "Harcerka Rzeczypospolitej"
                 }
