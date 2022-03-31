@@ -253,6 +253,8 @@
         <file alias="contents/ui/gallery/poradnikiDruzynowy.qml">./data/contents/ui/gallery/poradnikiDruzynowy.qml</file>
         <file alias="contents/ui/gallery/filmy.qml">./data/contents/ui/gallery/filmy.qml</file>
         <file alias="contents/ui/gallery/biwaki.qml">./data/contents/ui/gallery/biwaki.qml</file>
+        <file alias="contents/ui/gallery/sms.qml">./data/contents/ui/gallery/sms.qml</file>
+        <file alias="contents/ui/gallery/ListDelegate.qml">./data/contents/ui/gallery/ListDelegate.qml</file>
         <file alias="contents/ui/gallery/sprawnosci.qml">./data/contents/ui/gallery/sprawnosci.qml</file>
         <file alias="contents/ui/gallery/sprawnosciZuchy.qml">./data/contents/ui/gallery/sprawnosciZuchy.qml</file>
         <file alias="contents/ui/gallery/lesnyLudz.qml">./data/contents/ui/gallery/lesnyLudz.qml</file>
