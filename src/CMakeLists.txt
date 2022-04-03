@@ -31,6 +31,7 @@ remove_definitions(
 
 if (QT_MAJOR_VERSION EQUAL 5)
  if (CMAKE_SYSTEM_NAME STREQUAL "Android")
+     set(HPS_SRCS ${HPS_SRCS} HPSSms.cpp)
      set(HPS_EXTRA_LIBS Qt${QT_MAJOR_VERSION}::AndroidExtras )
  endif()
 endif()

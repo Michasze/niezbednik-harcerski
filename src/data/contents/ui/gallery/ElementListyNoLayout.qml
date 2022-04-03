@@ -41,9 +41,10 @@ Rectangle {
     Controls.Label {
         id: naglowek
         horizontalAlignment: cardRectangle.alignH
+        verticalAlignment: cardRectangle.align
         wrapMode: cardRectangle.wrap
         width: parent.width
-        anchors.centerIn: parent
+        anchors.horizontalCenter: parent.horizontalCenter
         font.pointSize: cardRectangle.textSize
         rightPadding: 10
         leftPadding: 10

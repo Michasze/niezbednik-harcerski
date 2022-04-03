@@ -23,80 +23,126 @@ import QtQuick.Controls 2.15 as Controls
 HPSPage {
     id: page
     title: "Generator SMS-ów"
+    property var licznik: 0
+    property var zbiorka: false
+    property var rajd: false
+    property string last: ""
+    property string last2: ""
     Controls.Pane {
         Column {
             width: parent.width
             spacing: 10
             ElementListyNoLayout {
+                visible: page.licznik == 0
                 color: "transparent"
                 header: "Powitanie"
             }
-            ListView {
-                width: page.width / 2
-                height: page.height / 8
-                anchors.horizontalCenter: parent.horizontalCenter
-                Controls.ScrollBar.vertical: Controls.ScrollBar {
-                    active: true
-                }
+            HPSListView {
+                visible: page.licznik == 0
                 model: ["Czuwaj!",
-                       "Dzień dobry"]
-                delegate: ListDelegate {
-                    tresc: modelData
-                }
-                highlight: Rectangle { color: "lightsteelblue"; radius: 5 }
-                focus: true
+                        "Dzień dobry"]
             }
             ElementListyNoLayout {
+                visible: page.licznik == 1
                 color: "transparent"
                 header: "O czym będzie sms"
             }
-            ListView {
-                id: list
-                clip: true
+            HPSListView {
+                visible: page.licznik == 1
                 width: page.width / 2
-                height: page.height / 7
-                anchors.horizontalCenter: parent.horizontalCenter
-                highlight: Rectangle { color: "lightsteelblue"; radius: 5 }
-                focus: true
-                Rectangle {anchors.fill: parent; border.color: "white"; border.width: 1; color: "transparent"}
-                Controls.ScrollBar.vertical: Controls.ScrollBar {
-                    active: true
-                }
                 model: ["Zbiórka",
                         "Wędrówka",
                         "Biwak",
                         "Rajd",
                         "Obóz",
-                       "Zebranie z rodzicami"]
-                delegate: ListDelegate {
-                    tresc: modelData
-                    MouseArea {
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onClicked: list.currentIndex = index
+                        "Zebranie z rodzicami"]
+            }
+            ElementListyNoLayout {
+                visible: page.licznik == 2 && last2 == "Biwak "
+                color: "transparent"
+                header: "Biwak"
+            }
+            HPSListView {
+                visible: page.licznik == 2 && last2 == "Biwak "
+                width: page.width / 2
+                model: ["Drużyny",
+                        "Szczepu",
+                        "Hufca",
+                        "(pomiń)"]
+            }
+            ElementListyNoLayout {
+                visible: page.licznik == 2 && last2 == "Zbiórka "
+                color: "transparent"
+                header: "Zbiórka"
+            }
+            HPSListView {
+                visible: page.licznik == 2 && last2 == "Zbiórka "
+                width: page.width / 2
+                model: ["Drużyny",
+                        "Szczepu",
+                        "Zastępu"]
+            }
+            ElementListyNoLayout {
+                visible: page.licznik == 2 && last2 == "Rajd "
+                color: "transparent"
+                header: "Rajd"
+            }
+            HPSListView {
+                visible: page.licznik == 2 && last2 == "Rajd "
+                width: page.width / 2
+                model: ["Górski",
+                        "(pomiń)"]
+            }
+            Row {
+                anchors.horizontalCenter: parent.horizontalCenter
+                Controls.RoundButton {
+                    visible: page.licznik > 0
+                    radius: 4
+                    text: qsTr("Cofnij")
+                    highlighted: true
+                    onClicked: {
+                        page.licznik--
+                        wiadomosc.header = wiadomosc.header.replace(last2, '')
+                        console.log(page.licznik)
+                    }
+                }
+                Controls.RoundButton {
+                    radius: 4
+                    text: qsTr("Dalej")
+                    highlighted: last != ""
+                    onClicked: {
+                        page.licznik++
+                        if(last != "")
+                        {
+                        last2 = last
+                        last = ""
+                        console.log(page.licznik)
+                        }
                     }
                 }
             }
-        ElementListyNoLayout {
-            id: wiadomosc
-            color: "black"
-            textSize: invisibleSlider.value
-            border.color: "grey"
-            border.width: 1
-            width: parent.width
-            height: (page.height / 2) - 90
-            header: ""
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onPressAndHold:
-                {
-                    clipboard.paste = wiadomosc.header
-                    showPassiveNotification("Tekst skopiowany do schowka", 2000)
+            ElementListyNoLayout {
+                id: wiadomosc
+                color: "black"
+                textSize: invisibleSlider.value
+                align: Text.AlignTop
+                alignH: Text.AlignLeft
+                border.color: "grey"
+                format: Text.PlainText
+                border.width: 1
+                width: parent.width
+                height: (page.height / 2) - 90
+                header: ""
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onPressAndHold:
+                    {
+                        clipboard.paste = wiadomosc.header
+                        showPassiveNotification("Tekst skopiowany do schowka", 2000)
+                    }
                 }
             }
-        }
-
         }
     }
 }

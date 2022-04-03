@@ -38,6 +38,7 @@
 #ifdef Q_OS_ANDROID
 #if (QT_VERSION <= QT_VERSION_CHECK(5, 15, 3))
 #include <QtAndroid>
+#include "HPSSms.h"
 #endif
 #include <QGuiApplication>
 
@@ -87,6 +88,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
     engine.rootContext()->setContextProperty("HPSTranslate", &translate);
+#ifdef Q_OS_ANDROID
+    HPSSms sms;
+    engine.rootContext()->setContextProperty("HPSSms", &sms);
+#endif
     engine.rootContext()->setContextProperty("engine", &engine);
     //we want different main files on desktop or mobile
     //very small difference as they as they are subclasses of the same thing
@@ -109,7 +114,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         window.callMethod<void>("clearFlags", "(I)V", FLAG_TRANSLUCENT_STATUS);
         window.callMethod<void>("setStatusBarColor", "(I)V", QColor("Black").rgba());
         window.callMethod<void>("setNavigationBarColor", "(I)V", QColor("Black").rgba());
-    });
+    }
+        );
 #endif
     //TODO: Ogarnąć jak to zrobić w Qt6. Wersja 6.4 chyba to umożliwi
 #endif

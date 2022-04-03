@@ -54,6 +54,10 @@
             <meta-data android:name="android.app.auto_screen_scale_factor" android:value="false"/>
             <!-- auto screen scale factor -->
         </activity>
+        <activity android:process=":sms_activity" android:name=".SMSActivity" android:label="-- %%INSERT_APP_NAME%% --">
+            <!-- android:process=":qt" is needed to force the service to run on a separate process than the Activity -->
+          <meta-data android:name="android.app.lib_name" android:value="-- %%INSERT_APP_LIB_NAME%% --"/>
+        </activity>
     </application>
     <!-- The following comment will be replaced upon deployment with default features based on the dependencies of the application.
          Remove the comment if you do not require these default features. -->
