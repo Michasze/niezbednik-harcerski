@@ -18,8 +18,16 @@ MouseArea {
     property int bottomSpacing: !hpsSettings.hasTransientTouchInput && flickableItem.ScrollBar.horizontal && flickableItem.ScrollBar.horizontal.visible ? flickableItem.ScrollBar.horizontal.height : 0
     Accessible.onScrollDownAction: flickableItem.Accessible.onScrollDownAction
     Accessible.onScrollUpAction: flickableItem.Accessible.onScrollUpAction
-    Keys.onUpPressed: scroll(hpsUnits.gridUnit * 2)
     Keys.onDownPressed: scroll(-hpsUnits.gridUnit * 2)
+    Keys.onPressed: if(event.key == Qt.Key_K || event.key == Qt.Key_Up) {
+        scroll(hpsUnits.gridUnit * 2)
+    }
+    else if(event.key == Qt.Key_J || event.key == Qt.Key_Down) {
+        scroll(-hpsUnits.gridUnit * 2)
+    }
+    else if(event.key == Qt.Key_G) {
+        scroll(-flickableItem.contentHeight)
+    }
     function scroll(y) {
         // Don't scroll if the view isn't scrollable!
         if (flickableItem.contentHeight < flickableItem.height + flickableItem.contentY) {

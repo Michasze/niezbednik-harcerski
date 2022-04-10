@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.3
+import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import Data 1.0
@@ -171,6 +171,23 @@ HPSPage {
             color: "White"
             placeholderTextColor: "White"
             width: parent.width
+        }
+        Shortcut {
+            id: focusShortcut
+            enabled: true
+            sequence: "/"
+            onActivated: {
+                searchField.forceActiveFocus()
+                searchField.selectAll()
+            }
+        }
+        Shortcut {
+            id: deactivateFocusShortcut
+            enabled: true
+            sequence: "Esc"
+            onActivated: {
+                invisibleSlider.forceActiveFocus()
+            }
         }
     }
     HPSFilter {
