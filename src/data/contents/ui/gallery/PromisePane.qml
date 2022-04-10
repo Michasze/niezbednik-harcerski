@@ -24,9 +24,9 @@ import QtQuick.Controls 2.15 as Controls
 Controls.Pane {
     property string tresc: ""
     id: promisePane
-    implicitWidth: parent.width
-    implicitHeight: root.height
+    height: parent.height
     ElementListyNoLayout {
+        align: Text.AlignVCenter
         color: "brown"
         isPromise: true
         header: promisePane.tresc

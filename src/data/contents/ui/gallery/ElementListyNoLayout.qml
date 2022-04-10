@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,7 +19,6 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
-
 
 Rectangle {
     // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
@@ -45,6 +44,7 @@ Rectangle {
         wrapMode: cardRectangle.wrap
         width: parent.width
         anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: isPromise ? parent.verticalCenter : 0
         font.pointSize: cardRectangle.textSize
         rightPadding: 10
         leftPadding: 10
