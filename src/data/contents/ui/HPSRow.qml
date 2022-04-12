@@ -192,8 +192,11 @@ T.Control {
         onActivated: root.goForward()
     }
     Keys.onReleased: {
-        if (event.key == Qt.Key_Back) {
+        if (event.key == Qt.Key_H) {
             this.goBack(event)
+        }
+        else if (event.key == Qt.Key_L) {
+            this.goForward(event)
         }
     }
     property alias layers: layersStack
