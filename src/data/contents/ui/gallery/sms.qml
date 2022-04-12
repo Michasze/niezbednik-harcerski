@@ -58,12 +58,12 @@ HPSPage {
                         "Zebranie z rodzicami"]
             }
             ElementListyNoLayout {
-                visible: page.licznik == 2 && last2 == "Biwak "
+                visible: page.licznik == 2 && last2.includes("Biwak ")
                 color: "transparent"
                 header: "Biwak"
             }
             HPSListView {
-                visible: page.licznik == 2 && last2 == "Biwak "
+                visible: page.licznik == 2 && last2.includes("Biwak ")
                 width: page.width / 2
                 model: ["Drużyny",
                         "Szczepu",
@@ -104,6 +104,7 @@ HPSPage {
                         page.licznik--
                         wiadomosc.header = wiadomosc.header.replace(last2, '')
                         console.log(page.licznik)
+                        console.log(last2)
                     }
                 }
                 Controls.RoundButton {

@@ -36,54 +36,29 @@ ListView {
         MouseArea {
             anchors.fill: parent
             hoverEnabled: true
+            function changeHeader(tekst) {
+                if (tekst == "Czuwaj!" || tekst == "Dzień dobry")
+                {
+                    wiadomosc.header = tekst + "\n"
+                }
+                else
+                {
+                    wiadomosc.header = wiadomosc.header.replace(last, '')
+                    last = tekst + " "
+                    if (!wiadomosc.header.includes(last))
+                    {
+                        if (licznik == 2)
+                        {
+                            last = last.concat("odbędzie się w ").toLowerCase()
+                        }
+                        last2 = last
+                        wiadomosc.header = wiadomosc.header.concat(last2);
+                    }
+                }
+            }
             onClicked: {
                 list.currentIndex = index
-                switch (list.currentItem.tresc) {
-                case 'Biwak':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "Biwak ";
-                    break;
-                case 'Zbiórka':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "Zbiórka ";
-                    break;
-                case 'Wędrówka':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "Wędrówka ";
-                    break;
-                case 'Rajd':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "Rajd ";
-                    break;
-                case 'Drużyny':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "drużyny odbedzie się w ";
-                    break;
-                case 'Hufca':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "hufca odbedzie się w ";
-                    break;
-                case 'Szczepu':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "szczepu odbedzie się w ";
-                    break;
-                case 'Zastępu':
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = "zastępu odbedzie się w ";
-                    break;
-                case 'Czuwaj!':
-                    wiadomosc.header = "Czuwaj!\n";
-                    last = wiadomosc.header;
-                    break;
-                case 'Dzień dobry':
-                    wiadomosc.header = "Dzień dobry,\n";
-                    last = wiadomosc.header;
-                    break;
-                }
-                if (!wiadomosc.header.includes(last))
-                {
-                    wiadomosc.header = wiadomosc.header.concat(last);
-                }
+                changeHeader(list.currentItem.tresc)
                 console.log(last);
                 console.log(list.currentItem.tresc)
             }
