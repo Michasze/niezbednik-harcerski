@@ -44,7 +44,7 @@ Rectangle {
         wrapMode: cardRectangle.wrap
         width: parent.width
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: isPromise ? parent.verticalCenter : 0
+        anchors.verticalCenter: parent.verticalCenter
         font.pointSize: cardRectangle.textSize
         rightPadding: 10
         leftPadding: 10
