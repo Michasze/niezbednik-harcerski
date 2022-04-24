@@ -46,7 +46,7 @@ HPSPage {
             color: "brown"
             header: "J<font color=\"#7fff00\">A</font>N → JN <font color=\"#7fff00\">A</font><br><br>
 J<font color=\"#7fff00\">A</font>N N<font color=\"#7fff00\">O</font>W<font color=\"#7fff00\">A</font>K → JN <font color=\"#7fff00\">A</font> NWK <font color=\"#7fff00\">O</font><font color=\"#7fff00\">A</font><br><br>
-J<font color=\"#7fff00\">A</font>N N<font color=\"#7fff00\">O</font>W<font color=\"#7fff00\">A</font>K G<font color=\"#7fff00\">O</font>T<font color=\"#7fff00\">U</font>JE → JN <font color=\"#7fff00\">A</font> NWK <font color=\"#7fff00\">O</font><font color=\"#7fff00\">A</font> GTJ
+J<font color=\"#7fff00\">A</font>N N<font color=\"#7fff00\">O</font>W<font color=\"#7fff00\">A</font>K G<font color=\"#7fff00\">O</font>T<font color=\"#7fff00\">U</font>J<font color=\"#7fff00\">E</font> → JN <font color=\"#7fff00\">A</font> NWK <font color=\"#7fff00\">O</font><font color=\"#7fff00\">A</font> GTJ
 <font color=\"#7fff00\">OUE</font>
 "
         }
