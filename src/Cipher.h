@@ -11,6 +11,7 @@ class Cipher : public QObject
 
     Q_PROPERTY(QString caesar READ caesar WRITE setCaesar NOTIFY caesarChanged)
     Q_PROPERTY(int shift READ shift WRITE setShift NOTIFY shiftChanged)
+    Q_PROPERTY(QString rozbiezny READ rozbiezny WRITE setRozbiezny NOTIFY rozbieznyChanged)
     Q_PROPERTY(QString bacon READ bacon WRITE setBacon NOTIFY baconChanged)
     Q_PROPERTY(QString gade READ gade WRITE setGade NOTIFY gadeChanged)
     Q_PROPERTY(QString kaczor READ kaczor WRITE setKaczor NOTIFY kaczorChanged)
@@ -22,6 +23,7 @@ public:
     Cipher(QObject *parent =  nullptr);
     
     QString caesar();
+    QString rozbiezny();
     QString bacon();
     QString gade();
     QString kaczor();
@@ -32,6 +34,7 @@ public:
     int shift();
 
     void setShift(const int &b);
+    void setRozbiezny(const QString &a);
     void setCaesar(const QString &a);
     void setMorse(const QString &i);
     void setBacon(const QString &c);
@@ -43,6 +46,7 @@ public:
 
 Q_SIGNALS:
     void caesarChanged();
+    void rozbieznyChanged();
     void morseChanged();
     void alfaChanged();
     void shiftChanged();
@@ -54,6 +58,7 @@ Q_SIGNALS:
 
 private:
     QString m_cipher;
+    QString m_rozbiezny;
     QString m_morse;
     QString m_morseEncryptedWhole;
     QString m_bacon;

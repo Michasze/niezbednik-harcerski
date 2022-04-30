@@ -40,6 +40,7 @@ HPSPage
             ListElement { title: "Mafeking"; address: "mafeking.qml"}
             ListElement { title: "Szyfr Bacona"; address: "bacon.qml"}
             ListElement { title: "Szyfr alfabetyczno-Liczbowy"; address: "alfa-liczbowy.qml"}
+            ListElement { title: "Szyfr rozbieżny"; address: "rozbiezny.qml"}
         }
         Repeater {
             model: mainList

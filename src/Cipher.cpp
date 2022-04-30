@@ -1,4 +1,5 @@
 #include "Cipher.h"
+#include <QDebug>
 
 Cipher::Cipher(QObject *parent)
     : QObject(parent)
@@ -27,7 +28,50 @@ int Cipher::shift()
 {
        return m_shift;
 }
-
+void Cipher::setRozbiezny(const QString &a)
+  {
+    if (a != m_rozbiezny)
+      {
+        m_rozbiezny = a;
+        rozbieznyChanged();
+      }
+  }
+QString Cipher::rozbiezny()
+  {
+    QString m_rozbieznyCipher;
+    QStringList wordList;
+        if(m_rozbiezny.contains(QChar(' ')))
+          {
+          wordList.clear();
+        wordList = m_rozbiezny.split(QChar(' '));
+        }
+        else {
+          wordList.clear();
+          wordList.append(m_rozbiezny);
+        }
+        QString wordString;
+        QString newString;
+        for(int l = 0; l < wordList.size(); l++)
+          {
+            wordString = wordList.at(l);
+                    wordString.append(" ");
+                newString = "";
+            for(int k = 0; k < wordString.size(); k++)
+              {
+                if((k % 2) != 0)
+                  {
+                    newString.append(wordString[k]);
+                    wordString[k] = QChar(0);
+//                    qInfo() << "dla slowa: " << wordString[k];
+                  }
+              }
+                    newString.append(" ");
+        qInfo() << "string: " << newString << l;
+                m_rozbieznyCipher.append(wordString);
+                m_rozbieznyCipher.append(newString);
+          }
+    return m_rozbieznyCipher;
+  }
 void Cipher::setCaesar(const QString &a)
 {
      if (a != m_cipher)
