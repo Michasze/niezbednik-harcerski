@@ -49,6 +49,13 @@ HPSPage {
         HPSText {
             id: pole2
             deszyfrowanie: true
+            background: Rectangle {
+                radius: 5
+                color: "transparent"
+                anchors.fill: parent
+                border.color: "grey"
+                border.width: 1
+            }
             onPressAndHold:
             {
                 clipboard.paste = pole2.text
