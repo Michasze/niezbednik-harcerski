@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -23,8 +23,8 @@ import QtQuick.Layouts 1.2
 import ".."
 
 
-        Controls.TextArea {
-   property bool deszyfrowanie: false
+Controls.TextArea {
+    property bool deszyfrowanie: false
     id: pole
     Layout.fillWidth: true
     Layout.preferredHeight: (page.height / 2) - (naglowek.height / 2) - 40
@@ -34,13 +34,13 @@ import ".."
     color: "white"
     wrapMode: TextEdit.WrapAnywhere
     placeholderTextColor: "White"
-            placeholderText: deszyfrowanie ? qsTr("Zaszyfrowany tekst...") :  qsTr("Tekst do zaszyfrowania...")
+    placeholderText: deszyfrowanie ? qsTr("Zaszyfrowany tekst...") :  qsTr("Tekst do zaszyfrowania...")
     background: Rectangle {
-                    radius: 5
-                    color: "#1d1d1d"
-                    implicitWidth: 100
-                    implicitHeight: 24
-                    border.color: "#333"
-                    border.width: 1
-                }
-        }
+        radius: 5
+        color: "#1d1d1d"
+        implicitWidth: 100
+        implicitHeight: 24
+        border.color: "#333"
+        border.width: 1
+    }
+}

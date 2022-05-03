@@ -22,12 +22,16 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import ".."
 import Cipher 1.0
+import Decipher 1.0
 
 HPSPage {
     id: page
     title: "Szyfrator"
     Cipher {
         id: cipher
+    }
+    Decipher {
+        id: decipher
     }
     ColumnLayout {
         width: page.width
@@ -39,7 +43,7 @@ HPSPage {
         Controls.TextArea {
             id: niezaszyfrowane
             Layout.fillWidth: true
-            Layout.preferredHeight: (page.height / 2) - 90
+            Layout.preferredHeight: (page.height / 2) - (button1.height/2) - 100
             Layout.fillHeight: true
             inputMethodHints: Qt.ImhNoPredictiveText
             leftPadding: 10
@@ -58,7 +62,7 @@ HPSPage {
             onTextChanged:
             {
                 cipher.morse = niezaszyfrowane.text
-                zaszyfrowane.header = cipher.morse
+                zaszyfrowane.text = cipher.morse
             }
         }
         RowLayout {
@@ -71,7 +75,7 @@ HPSPage {
                 {
                     cipher.wariant = 0
                     cipher.morse = niezaszyfrowane.text
-                    zaszyfrowane.header = cipher.morse
+                    zaszyfrowane.text = cipher.morse
                 }
             }
             HPSRadioButton {
@@ -82,27 +86,71 @@ HPSPage {
                 {
                     cipher.wariant = 1
                     cipher.morse = niezaszyfrowane.text
-                    zaszyfrowane.header = cipher.morse
+                    zaszyfrowane.text = cipher.morse
                 }
             }
         }
-        ElementListyNoImage {
+        HPSText {
             id: zaszyfrowane
-            color: "black"
-            align: Text.AlignTop
-            alignH: Text.AlignLeft
-            lAlign: Qt.AlignTop
-            textSize: 13
-            border.color: "grey"
-            border.width: 1
-            Layout.preferredHeight: (page.height / 2) - 90
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onPressAndHold:
+            Layout.preferredHeight: (page.height / 2) - (naglowek.height / 2) - (button1.height / 2) - 70
+            deszyfrowanie: true
+            onPressAndHold:
+            {
+                clipboard.paste = zaszyfrowane.text
+                showPassiveNotification("Tekst skopiowany do schowka", 2000)
+            }
+            onTextChanged:
+            {
+                if (activeFocus)
                 {
-                    clipboard.paste = zaszyfrowane.header
-                    showPassiveNotification("Tekst skopiowany do schowka", 2000)
+                    decipher.morseDec = zaszyfrowane.text
+                    niezaszyfrowane.text = decipher.morseDec
+                }
+            }
+        }
+        RowLayout {
+            Layout.alignment: Qt.AlignHCenter
+            Controls.RoundButton {
+                id: button1
+                Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
+                radius: 10
+                text: "-"
+                background: Rectangle {
+                    radius: 10
+                    anchors.fill: parent
+                    color: "Brown"
+                }
+                onClicked:
+                {
+                    zaszyfrowane.insert(zaszyfrowane.length, "-")
+                }
+            }
+            Controls.RoundButton {
+                Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
+                radius: 10
+                text: "•"
+                background: Rectangle {
+                    radius: 10
+                    anchors.fill: parent
+                    color: "Brown"
+                }
+                onClicked:
+                {
+                    zaszyfrowane.insert(zaszyfrowane.length, "•")
+                }
+            }
+            Controls.RoundButton {
+                Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
+                radius: 10
+                text: "/"
+                background: Rectangle {
+                    radius: 10
+                    anchors.fill: parent
+                    color: "Brown"
+                }
+                onClicked:
+                {
+                    zaszyfrowane.insert(zaszyfrowane.length, "/")
                 }
             }
         }

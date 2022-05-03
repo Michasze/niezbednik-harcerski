@@ -13,12 +13,14 @@ class Decipher : public QObject
     Q_PROPERTY(int decShift READ decShift WRITE setDecShift NOTIFY decShiftChanged)
     Q_PROPERTY(QString baconDec READ baconDec WRITE setBaconDec NOTIFY baconDecChanged)
     Q_PROPERTY(QString alfaDec READ alfaDec WRITE setAlfaDec NOTIFY alfaDecChanged)
+    Q_PROPERTY(QString morseDec READ morseDec WRITE setMorseDec NOTIFY morseDecChanged)
 
 public:
     Decipher(QObject *parent = nullptr);
     QString caesarDec();
     QString baconDec();
     QString alfaDec();
+    QString morseDec();
     int decShift();
     QChar konwerter(int i, QString s);
     bool sprawdz_czy_prawidlowe(int i, QString s);
@@ -26,18 +28,21 @@ public:
     void setCaesarDec(const QString &a);
     void setBaconDec(const QString &c);
     void setAlfaDec(const QString &c);
+    void setMorseDec(const QString &c);
 
 Q_SIGNALS:
     void caesarDecChanged();
     void baconDecChanged();
     void alfaDecChanged();
     void decShiftChanged();
+    void morseDecChanged();
 
 private:
     int m_decShift;
     QString m_cipherDec;
     QString m_baconDec;
     QString m_alfaDec;
+    QString m_morseDec;
     QString m_baconDecryptedWhole;
 };
 

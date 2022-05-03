@@ -18,6 +18,7 @@
  */
 #include "Decipher.h"
 #include "Cipher.h"
+#include <QDebug>
 
 Decipher::Decipher(QObject *parent)
   : QObject(parent)
@@ -154,3 +155,16 @@ QString Decipher::alfaDec()
     }
   return m_alfaDecrypted;
 }
+void Decipher::setMorseDec(const QString &c)
+  {
+    if(m_morseDec != c)
+      {
+        m_morseDec = c;
+      }
+  }
+QString Decipher::morseDec()
+  {
+    QStringList morseDecList = m_morseDec.split(QChar('/'));
+    qInfo() << morseDecList;
+    return QString("");
+  }
