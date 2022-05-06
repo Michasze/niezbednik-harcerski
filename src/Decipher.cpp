@@ -165,6 +165,13 @@ void Decipher::setMorseDec(const QString &c)
 QString Decipher::morseDec()
   {
     QStringList morseDecList = m_morseDec.split(QChar('/'));
-    qInfo() << morseDecList;
-    return QString("");
+    for(int i = 0; i < morseDecList.size(); i++)
+      {
+        // if(morseDecList[i] == QString(""))
+        //   {
+        //     m_morseDecrypted.append(" ");
+        //   }
+      }
+    qInfo() << morseDecList.size();
+    return m_morseDecrypted;
   }

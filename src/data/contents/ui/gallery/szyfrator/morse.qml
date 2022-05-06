@@ -139,10 +139,16 @@ HPSPage {
                     zaszyfrowane.insert(zaszyfrowane.length, "•")
                 }
             }
+            Loader {
+                sourceComponent: morseButton
+                onLoaded: item.text = "/"
+            }
+        }
+    Component {
+        id: morseButton
             Controls.RoundButton {
                 Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                 radius: 10
-                text: "/"
                 background: Rectangle {
                     radius: 10
                     anchors.fill: parent
@@ -150,9 +156,10 @@ HPSPage {
                 }
                 onClicked:
                 {
-                    zaszyfrowane.insert(zaszyfrowane.length, "/")
+                    console.log(morseButton.text)
+                    zaszyfrowane.insert(zaszyfrowane.length, morseButton.text)
                 }
             }
-        }
+    }
     }
 }

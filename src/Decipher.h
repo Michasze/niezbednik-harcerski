@@ -43,6 +43,7 @@ private:
     QString m_baconDec;
     QString m_alfaDec;
     QString m_morseDec;
+    QString m_morseDecrypted;
     QString m_baconDecryptedWhole;
 };
 
