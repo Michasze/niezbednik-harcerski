@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,7 +18,6 @@
  */ 
 import QtQuick 2.15
 import QtQuick.Layouts 1.2
-
 
 HPSPage
 {
@@ -40,6 +39,11 @@ HPSPage
         {
            tresc: "“Nie wolno rezygnować z najwyższych wymagań ani obniżać poziomu ideowego na korzyść popularności.”"
            autor: "Jadwiga Wierzbiańska"
+        }
+        CytatAutor
+        {
+           tresc: "“Do harcerstwa się nie należy, harcerką się jest lub się nią nie jest”"
+           autor: "Maria Wocalewska"
         }
     }
 }
