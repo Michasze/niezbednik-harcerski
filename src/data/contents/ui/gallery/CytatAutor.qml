@@ -35,7 +35,6 @@ HPSLista {
     onPressAndHold:
     {
         clipboard.paste = listItem1.tresc + "\n" + listItem1.autor
-        showPassiveNotification("Cytat skopiowany do schowka", 2000)
     }
     contentItem: ColumnLayout
     {
