@@ -32,6 +32,7 @@ public:
     int wariant();
     int kaczorWariant();
     int shift();
+    QMap<QChar, QString> morsetable;
 
     void setShift(const int &b);
     void setRozbiezny(const QString &a);
@@ -78,7 +79,6 @@ private:
      int e;
      int f;
     int m_shift = 0;
-    QMap<QChar, QString> morsetable;
     QVector<QString> morseEnctable;
     QVector<QString> kaczorEnctable;
     QMap<QChar, QChar> gadetable;

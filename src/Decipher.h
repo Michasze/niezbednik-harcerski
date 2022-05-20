@@ -21,6 +21,7 @@ public:
     QString baconDec();
     QString alfaDec();
     QString morseDec();
+    QString convert(QString &input);
     int decShift();
     QChar konwerter(int i, QString s);
     bool sprawdz_czy_prawidlowe(int i, QString s);
@@ -45,6 +46,7 @@ private:
     QString m_morseDec;
     QString m_morseDecrypted;
     QString m_baconDecryptedWhole;
+    QMap<QString, QChar> morseDecTable;
 };
 
 #endif // DECIPHER_H_

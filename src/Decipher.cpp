@@ -163,15 +163,86 @@ void Decipher::setMorseDec(const QString &c)
       }
   }
 QString Decipher::morseDec()
-  {
-    QStringList morseDecList = m_morseDec.split(QChar('/'));
-    for(int i = 0; i < morseDecList.size(); i++)
-      {
-        // if(morseDecList[i] == QString(""))
-        //   {
-        //     m_morseDecrypted.append(" ");
-        //   }
+{
+  QStringList morseDecList = m_morseDec.split(QChar('/'));
+  morseDecTable["•—"] = QChar('a');
+  morseDecTable["•—•—"] = QChar(261);
+  morseDecTable["—•••"] = QChar('b');
+  morseDecTable["—•—•"] = QChar('c');
+  morseDecTable["—•—••"] = QChar(263);
+  morseDecTable["—••"] = QChar('d');
+  morseDecTable["•"] = QChar('e');
+  morseDecTable["••—••"] = QChar(281);
+  morseDecTable["••—•"] = QChar('f');
+  morseDecTable["——•"] = QChar('g');
+  morseDecTable["••••"] = QChar('h');
+  morseDecTable["••"] = QChar('i');
+  morseDecTable["•———"] = QChar('j');
+  morseDecTable["—•—"] = QChar('k');
+  morseDecTable["•—••"] = QChar('l');
+  morseDecTable["•—••—"] = QChar(322);
+  morseDecTable["——"] = QChar('m');
+  morseDecTable["—•"] = QChar('n');
+  morseDecTable["——•——"] = QChar(324);
+  morseDecTable["———"] = QChar('o');
+  morseDecTable["———•"] = QChar(243);
+  morseDecTable["•——•"] = QChar('p');
+  morseDecTable["——•—"] = QChar('q');
+  morseDecTable["•—•"] = QChar('r');
+  morseDecTable["•••"] = QChar('s');
+  morseDecTable["•••—•••"] = QChar(347);
+  morseDecTable["—"] = QChar('t');
+  morseDecTable["••—"] = QChar('u');
+  morseDecTable["•••—"] = QChar('v');
+  morseDecTable["•——"] = QChar('w');
+  morseDecTable["—••—"] = QChar('x');
+  morseDecTable["—•——"] = QChar('y');
+  morseDecTable["——••"] = QChar('z');
+  morseDecTable["——••—•"] = QChar(380);
+  morseDecTable["——••—"] = QChar(378);
+  morseDecTable["•————"] = QChar('1');
+  morseDecTable["••———"] = QChar('2');
+  morseDecTable["•••——"] = QChar('3');
+  morseDecTable["••••—"] = QChar('4');
+  morseDecTable["•••••"] = QChar('5');
+  morseDecTable["—••••"] = QChar('6');
+  morseDecTable["——•••"] = QChar('7');
+  morseDecTable["———••"] = QChar('8');
+  morseDecTable["————•"] = QChar('9');
+  morseDecTable["—————"] = QChar('0');
+  m_morseDecrypted = "";
+  for(int i = 0; i < morseDecList.size(); i++)
+    {
+      morseDecList[i] = convert(morseDecList[i]);
+      if(morseDecList[i] == QString("") && (i != morseDecList.size() - 1))
+        {
+          if(i < morseDecList.size() - 2)
+            {
+              if(morseDecList[i+1] == QString(""))
+                {
+                  m_morseDecrypted.append(".");
+                }
+            }
+          m_morseDecrypted.append(" ");
+        }
+      else {
+        m_morseDecrypted.append(morseDecTable.value(morseDecList[i]));
       }
-    qInfo() << morseDecList.size();
-    return m_morseDecrypted;
+    }
+  return m_morseDecrypted;
+}
+QString Decipher::convert(QString &input)
+  {
+    for(int i = 0; i < input.size(); i++)
+      {
+        if(input[i] == QChar('-'))
+          {
+            input[i] = QChar(0x2014);
+          }
+        else if(input[i] == QChar('*'))
+          {
+            input[i] = QChar(0x2022);
+          }
+      }
+      return input;
   }

@@ -61,8 +61,11 @@ HPSPage {
             }
             onTextChanged:
             {
+                if (activeFocus)
+            {
                 cipher.morse = niezaszyfrowane.text
                 zaszyfrowane.text = cipher.morse
+            }
             }
         }
         RowLayout {
@@ -109,57 +112,64 @@ HPSPage {
             }
         }
         RowLayout {
+            id: button1
             Layout.alignment: Qt.AlignHCenter
-            Controls.RoundButton {
-                id: button1
-                Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
-                radius: 10
-                text: "-"
-                background: Rectangle {
+            Repeater {
+                model: ["—",
+                        "•",
+                        "/"]
+                delegate:  Controls.RoundButton {
+                    id: morseButton
+                    Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
                     radius: 10
-                    anchors.fill: parent
-                    color: "Brown"
+                    text: modelData
+                    background: Rectangle {
+                        radius: 10
+                        anchors.fill: parent
+                        color: "Brown"
+                    }
+                    onClicked:
+                    {
+                        zaszyfrowane.insert(zaszyfrowane.cursorPosition, morseButton.text)
+                        decipher.morseDec = zaszyfrowane.text
+                        niezaszyfrowane.text = decipher.morseDec
+                    }
                 }
-                onClicked:
-                {
-                    zaszyfrowane.insert(zaszyfrowane.length, "-")
-                }
+
             }
-            Controls.RoundButton {
-                Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
-                radius: 10
-                text: "•"
-                background: Rectangle {
-                    radius: 10
-                    anchors.fill: parent
-                    color: "Brown"
-                }
-                onClicked:
-                {
-                    zaszyfrowane.insert(zaszyfrowane.length, "•")
-                }
-            }
-            Loader {
-                sourceComponent: morseButton
-                onLoaded: item.text = "/"
-            }
+            /* Controls.RoundButton { */
+            /*     id: button1 */
+            /*     Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter */
+            /*     radius: 10 */
+            /*     text: "-" */
+            /*     background: Rectangle { */
+            /*         radius: 10 */
+            /*         anchors.fill: parent */
+            /*         color: "Brown" */
+            /*     } */
+            /*     onClicked: */
+            /*     { */
+            /*         zaszyfrowane.insert(zaszyfrowane.length, "-") */
+            /*     } */
+            /* } */
+            /* Controls.RoundButton { */
+            /*     Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter */
+            /*     radius: 10 */
+            /*     text: "•" */
+            /*     background: Rectangle { */
+            /*         radius: 10 */
+            /*         anchors.fill: parent */
+            /*         color: "Brown" */
+            /*     } */
+            /*     onClicked: */
+            /*     { */
+            /*         zaszyfrowane.insert(zaszyfrowane.length, "•") */
+            /*     } */
+            /* } */
+            /* Loader { */
+            /*     sourceComponent: morseButton */
+            /*     onLoaded: item.text = "/" */
+            /* } */
         }
-    Component {
-        id: morseButton
-            Controls.RoundButton {
-                Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
-                radius: 10
-                background: Rectangle {
-                    radius: 10
-                    anchors.fill: parent
-                    color: "Brown"
-                }
-                onClicked:
-                {
-                    console.log(morseButton.text)
-                    zaszyfrowane.insert(zaszyfrowane.length, morseButton.text)
-                }
-            }
-    }
     }
 }
