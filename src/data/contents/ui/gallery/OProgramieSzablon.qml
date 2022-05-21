@@ -168,7 +168,43 @@ HPSPage {
         }
         Repeater {
             model: aboutData.authors
-            delegate: personDelegate
+            delegate: RowLayout {
+            Layout.alignment: Qt.AlignLeft
+            Layout.leftMargin: page.width / 7
+            height: implicitHeight + (hpsUnits.smallSpacing * 2)
+            spacing: hpsUnits.smallSpacing * 2
+            Image {
+                Layout.maximumWidth: page.width / 6
+                Layout.maximumHeight: width
+                source: modelData.avatar
+            }
+            Controls.Label {
+                text: modelData.name
+            }
+            Row {
+                // Group action buttons together
+                spacing: 0
+                Controls.ToolButton {
+                    visible: modelData.emailAddress
+                    width: height
+                    icon.source: "qrc:/contents/ui/img/mail-sent"
+                    Controls.ToolTip.delay: 700
+                    Controls.ToolTip.visible: hovered
+                    Controls.ToolTip.text: qsTr("Wyślij email do %1").arg(modelData.emailAddress)
+                    onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
+                }
+                Controls.ToolButton {
+                    visible: modelData.webAddress
+                    width: height
+                    icon.name: "globe"
+                    Controls.ToolTip.delay: 700
+                    Controls.ToolTip.visible: hovered
+                    Controls.ToolTip.text: modelData.webAddress
+                    onClicked: Qt.openUrlExternally(modelData.webAddress)
+                }
+            }
+        }
+
         }
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
