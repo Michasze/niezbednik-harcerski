@@ -38,8 +38,26 @@ HPSPage {
         height: root.height
         currentIndex: tabBar.currentIndex
         clip: true
-        PromisePane {
-            tresc: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
+        Controls.Pane {
+            Column {
+                spacing: 10
+                width: parent.width
+                ElementListyNoLayout {
+                    header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
+                    color: "brown"
+                    width: parent.width
+                }
+                ElementListyNoLayout {
+                    header: "Alternatywna wersja przyrzeczenia dopuszczona 20.05.2022:"
+                    color: "transparent"
+                    width: parent.width
+                }
+                ElementListyNoLayout {
+                    header: "Mam szczerą wolę całym życiem pełnić służbę Polsce, stać na straży harcerskich zasad, nieść chętną pomoc bliźnim i być posłusznym/posłuszną Prawu Harcerskiemu"
+                    color: "brown"
+                    width: parent.width
+                }
+            }
         }
         PromisePane {
             tresc: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
