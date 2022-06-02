@@ -96,8 +96,8 @@
         <file alias="contents/ui/img/swJerzy2.jpg">./data/contents/ui/img/swJerzy2.jpg</file>
         <file alias="contents/ui/img/brownsea.jpg">./data/contents/ui/img/brownsea.jpg</file>
         <file alias="contents/ui/img/znaki.png">./data/contents/ui/img/znaki.png</file>
-        <file alias="contents/ui/img/osiolek.png">./data/contents/ui/img/osiolek.png</file>
-        <file alias="contents/ui/img/misiek.png">./data/contents/ui/img/misiek.png</file>
+        <file alias="contents/ui/img/osiolek.svg">./data/contents/ui/img/osiolek.svg</file>
+        <file alias="contents/ui/img/misiek.svg">./data/contents/ui/img/misiek.svg</file>
         <file alias="contents/ui/gallery/blank.qml">./data/contents/ui/gallery/blank.qml</file>
         <file alias="contents/ui/gallery/blankLayer.qml">./data/contents/ui/gallery/blankLayer.qml</file>
         <file alias="contents/ui/gallery/postacie.qml">./data/contents/ui/gallery/postacie.qml</file>

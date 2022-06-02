@@ -104,11 +104,11 @@ HPSPage {
             title: "GPL v2"
             Controls.ScrollView {
                 anchors.fill: parent
-            ElementListyNoLayout {
-                id: bodyLabel
-                width: page.width - 50
-                header: licenseSheet.text
-            }
+                ElementListyNoLayout {
+                    id: bodyLabel
+                    width: page.width - 50
+                    header: licenseSheet.text
+                }
             }
         }
         Component {
@@ -121,8 +121,8 @@ HPSPage {
                 }
                 Controls.Label {
                     text: modelData.name
-                        font.underline: control.enabled && area.containsMouse
-                        color: enabled ? "#2980B9" : "white"
+                    font.underline: control.enabled && area.containsMouse
+                    color: enabled ? "#2980B9" : "white"
                     MouseArea {
                         id: area
                         anchors.fill: parent
@@ -130,7 +130,7 @@ HPSPage {
                         onClicked: {
                             licenseSheet.text = modelData.text
                             licenseSheet.open()
-                    }
+                        }
                     }
                 }
             }
@@ -169,41 +169,44 @@ HPSPage {
         Repeater {
             model: aboutData.authors
             delegate: RowLayout {
-            Layout.alignment: Qt.AlignLeft
-            Layout.leftMargin: page.width / 7
-            height: implicitHeight + (hpsUnits.smallSpacing * 2)
-            spacing: hpsUnits.smallSpacing * 2
-            Image {
-                Layout.maximumWidth: page.width / 6
-                Layout.maximumHeight: width
-                source: modelData.avatar
-            }
-            Controls.Label {
-                text: modelData.name
-            }
-            Row {
-                // Group action buttons together
-                spacing: 0
-                Controls.ToolButton {
-                    visible: modelData.emailAddress
-                    width: height
-                    icon.source: "qrc:/contents/ui/img/mail-sent"
-                    Controls.ToolTip.delay: 700
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.text: qsTr("Wyślij email do %1").arg(modelData.emailAddress)
-                    onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
+                anchors.left: parent.left
+                Layout.fillWidth: true
+                anchors.leftMargin: page.width / 3
+                height: implicitHeight + (hpsUnits.smallSpacing * 2)
+                spacing: hpsUnits.smallSpacing * 2
+                Image {
+                    Layout.maximumWidth: page.width / 8
+                    Layout.minimumWidth: page.width / 10
+                    Layout.maximumHeight: width
+                    source: modelData.avatar
                 }
-                Controls.ToolButton {
-                    visible: modelData.webAddress
-                    width: height
-                    icon.name: "globe"
-                    Controls.ToolTip.delay: 700
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.text: modelData.webAddress
-                    onClicked: Qt.openUrlExternally(modelData.webAddress)
+                Controls.Label {
+                    text: modelData.name
+//                    font.pointSize: invisibleSlider.value - 1
                 }
+                /* Row { */
+                /*     // Group action buttons together */
+                /*     spacing: 0 */
+                /*     Controls.ToolButton { */
+                /*         visible: modelData.emailAddress */
+                /*         width: height */
+                /*         icon.source: "qrc:/contents/ui/img/mail-sent" */
+                /*         Controls.ToolTip.delay: 700 */
+                /*         Controls.ToolTip.visible: hovered */
+                /*         Controls.ToolTip.text: qsTr("Wyślij email do %1").arg(modelData.emailAddress) */
+                /*         onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress)) */
+                /*     } */
+                /*     Controls.ToolButton { */
+                /*         visible: modelData.webAddress */
+                /*         width: height */
+                /*         icon.name: "globe" */
+                /*         Controls.ToolTip.delay: 700 */
+                /*         Controls.ToolTip.visible: hovered */
+                /*         Controls.ToolTip.text: modelData.webAddress */
+                /*         onClicked: Qt.openUrlExternally(modelData.webAddress) */
+                /*     } */
+                /* } */
             }
-        }
 
         }
         ColumnLayout {

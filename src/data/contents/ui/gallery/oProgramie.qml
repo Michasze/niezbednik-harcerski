@@ -33,14 +33,14 @@ OProgramieSzablon {
                 "name" : "Osiołek",
                 "task" : "Kod źródłowy, projekt interfejsu",
                 "emailAddress" : "aplikacjahps@gmail.com",
-                "avatar" : "qrc:/contents/ui/img/osiolek.png",
+                "avatar" : "qrc:/contents/ui/img/osiolek.svg",
                 "webAddress" : "",
                 "ocsUsername" : ""
             },
             {
                 "name" : "Juliusz Idzikowski",
                 "task" : "Pomysł, zawartość",
-                "avatar" : "qrc:/contents/ui/img/misiek.png",
+                "avatar" : "qrc:/contents/ui/img/misiek.svg",
                 "emailAddress" : "aplikacjahps@gmail.com",
                 "webAddress" : "",
                 "ocsUsername" : ""
