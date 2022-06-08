@@ -32,18 +32,28 @@ HPSPage
         }
         CytatAutor
         {
-           tresc: "“Harcerstwo to ruch ludzi zawsze młodych, kroczących z innymi szeroką drogą postępu...”"
-           autor: "Maria Staszewska"
+            tresc: "“Harcerstwo to ruch ludzi zawsze młodych, kroczących z innymi szeroką drogą postępu...”"
+            autor: "Maria Staszewska"
         }
         CytatAutor
         {
-           tresc: "“Nie wolno rezygnować z najwyższych wymagań ani obniżać poziomu ideowego na korzyść popularności.”"
-           autor: "Jadwiga Wierzbiańska"
+            tresc: "“Nie wolno rezygnować z najwyższych wymagań ani obniżać poziomu ideowego na korzyść popularności.”"
+            autor: "Jadwiga Wierzbiańska"
         }
         CytatAutor
         {
-           tresc: "“Do harcerstwa się nie należy, harcerką się jest lub się nią nie jest”"
-           autor: "Maria Wocalewska"
+            tresc: "“Do harcerstwa się nie należy, harcerką się jest lub się nią nie jest”"
+            autor: "Maria Wocalewska"
+        }
+        CytatAutor
+        {
+            tresc: "“Ruch harcerski musi się rozwijać i rosnąć nie tylko wszerz, przez pozyskiwanie nowych zwolenników, ale i w głąb przez rozwijanie swych zasad, ulepszanie metod pracy.”"
+            autor: "Stanisław Sedlaczek"
+        }
+        CytatAutor
+        {
+            tresc: "“Stopień harcerski to nie order, to próba wartości i przydatności osobistej i społecznej.”"
+            autor: "Józef Sosnowski"
         }
     }
 }
