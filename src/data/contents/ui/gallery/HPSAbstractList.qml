@@ -50,5 +50,5 @@ QQC2.ItemDelegate {
         property bool indicateActiveFocus: listItem.pressed || hpsSettings.tabletMode || listItem.activeFocus || (view ? view.activeFocus : false)
     }
     Accessible.role: Accessible.ListItem
-    highlighted: focus && ListView.isCurrentItem && ListView.view && ListView.view.keyNavigationEnabled
+//    highlighted: focus && ListView.isCurrentItem && ListView.view && ListView.view.keyNavigationEnabled
 }
