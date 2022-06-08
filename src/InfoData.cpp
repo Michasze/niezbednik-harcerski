@@ -198,6 +198,7 @@ QVector< Cytat > InfoData::getList()
       << Cytat("“Nic nie znaczą słowa Przyrzeczenia, jeśli się wielokrotnie nie przełamały w pryzmacie codziennego życia.”", "Jadwiga Falkowska")
       << Cytat("“Harcerz wie, że trzeba zawsze wytrwać i przetrwać, by nareszcie zwyciężyć, a nie tracić nadziei i nie mówić przedwcześnie, że wszystko stracone.”", "Józef Haller")
       << Cytat("“Ideał wychowawczy skautowy jest czynnikiem równowagi przez przenoszenie pierwiastka harmonii w świat ludzi i narodów.”", "Maria Kapiszewska")
-      << Cytat("“Wierność Ojczyźnie była i jest naczelnym prawem harcerskim.”", "Tadeusz Strumiłło");
+      << Cytat("“Wierność Ojczyźnie była i jest naczelnym prawem harcerskim.”", "Tadeusz Strumiłło")
+      << Cytat("“Nie wolno rezygnować z najwyższych wymagań ani obniżać poziomu ideowego na korzyść popularności.”", "Jadwiga Wierzbiańska");
     return m_quotes;
   }

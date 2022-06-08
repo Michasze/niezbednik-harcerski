@@ -81,6 +81,7 @@ HPSPage {
                 ListElement { author: "Józef Haller"; image: "jozef_haller.jpg" }
                 ListElement { author: "Maria Kapiszewska"; image: "maria_kapiszewska.jpg" }
                 ListElement { author: "Tadeusz Strumiłło"; image: "strumillo.jpg" }
+                ListElement { author: "Jadwiga Wierzbiańska"; image: "wierzbianska.jpg" }
             }
             Repeater {
                 model: autorzy

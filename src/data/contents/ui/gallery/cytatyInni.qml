@@ -37,11 +37,6 @@ HPSPage
         }
         CytatAutor
         {
-            tresc: "“Nie wolno rezygnować z najwyższych wymagań ani obniżać poziomu ideowego na korzyść popularności.”"
-            autor: "Jadwiga Wierzbiańska"
-        }
-        CytatAutor
-        {
             tresc: "“Do harcerstwa się nie należy, harcerką się jest lub się nią nie jest”"
             autor: "Maria Wocalewska"
         }
