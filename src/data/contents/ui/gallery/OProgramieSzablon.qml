@@ -1,7 +1,20 @@
 /*
- *  SPDX-FileCopyrightText: 2018 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
- *  SPDX-License-Identifier: LGPL-2.0-or-later
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License as
+ *   published by the Free Software Foundation; either version 2 or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU Library General Public License for more details
+ *
+ *   You should have received a copy of the GNU Library General Public
+ *   License along with this program; if not, write to the
+ *   Free Software Foundation, Inc.,
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 import QtQuick 2.1
@@ -15,44 +28,6 @@ HPSPage {
     title: qsTr("O aplikacji")
     HPSUnits {
         id: hpsUnits
-    }
-    Component {
-        id: personDelegate
-        RowLayout {
-            Layout.alignment: Qt.AlignHCenter
-            height: implicitHeight + (hpsUnits.smallSpacing * 2)
-            spacing: hpsUnits.smallSpacing * 2
-            Image {
-                width: 22
-                height: width
-                source: "qrc:/contents/ui/img/user.svg"
-            }
-            Controls.Label {
-                text: modelData.name
-            }
-            Row {
-                // Group action buttons together
-                spacing: 0
-                Controls.ToolButton {
-                    visible: modelData.emailAddress
-                    width: height
-                    icon.source: "qrc:/contents/ui/img/mail-sent"
-                    Controls.ToolTip.delay: 700
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.text: qsTr("Wyślij email do %1").arg(modelData.emailAddress)
-                    onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
-                }
-                Controls.ToolButton {
-                    visible: modelData.webAddress
-                    width: height
-                    icon.name: "globe"
-                    Controls.ToolTip.delay: 700
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.text: modelData.webAddress
-                    onClicked: Qt.openUrlExternally(modelData.webAddress)
-                }
-            }
-        }
     }
     ColumnLayout {
         id: form
@@ -166,48 +141,27 @@ HPSPage {
             text: qsTr("Autorzy:")
             visible: aboutData.authors.length > 0
         }
-        Repeater {
-            model: aboutData.authors
-            delegate: RowLayout {
-                anchors.left: parent.left
-                Layout.fillWidth: true
-                anchors.leftMargin: page.width / 3
-                height: implicitHeight + (hpsUnits.smallSpacing * 2)
-                spacing: hpsUnits.smallSpacing * 2
-                Image {
-                    Layout.maximumWidth: page.width / 8
-                    Layout.minimumWidth: page.width / 10
-                    Layout.maximumHeight: width
-                    source: modelData.avatar
+        ColumnLayout {
+            Layout.fillWidth: false
+            Layout.alignment: Qt.AlignHCenter
+            Repeater {
+                model: aboutData.authors
+                delegate: RowLayout {
+                    Layout.alignment: Qt.AlignLeft
+                    Layout.fillWidth: true
+                    height: implicitHeight + (hpsUnits.smallSpacing * 2)
+                    spacing: hpsUnits.smallSpacing * 2
+                    Image {
+                        Layout.maximumWidth: page.width / 8
+                        Layout.minimumWidth: page.width / 10
+                        Layout.maximumHeight: width
+                        source: modelData.avatar
+                    }
+                    Controls.Label {
+                        text: modelData.name
+                    }
                 }
-                Controls.Label {
-                    text: modelData.name
-//                    font.pointSize: invisibleSlider.value - 1
-                }
-                /* Row { */
-                /*     // Group action buttons together */
-                /*     spacing: 0 */
-                /*     Controls.ToolButton { */
-                /*         visible: modelData.emailAddress */
-                /*         width: height */
-                /*         icon.source: "qrc:/contents/ui/img/mail-sent" */
-                /*         Controls.ToolTip.delay: 700 */
-                /*         Controls.ToolTip.visible: hovered */
-                /*         Controls.ToolTip.text: qsTr("Wyślij email do %1").arg(modelData.emailAddress) */
-                /*         onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress)) */
-                /*     } */
-                /*     Controls.ToolButton { */
-                /*         visible: modelData.webAddress */
-                /*         width: height */
-                /*         icon.name: "globe" */
-                /*         Controls.ToolTip.delay: 700 */
-                /*         Controls.ToolTip.visible: hovered */
-                /*         Controls.ToolTip.text: modelData.webAddress */
-                /*         onClicked: Qt.openUrlExternally(modelData.webAddress) */
-                /*     } */
-                /* } */
             }
-
         }
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
@@ -228,28 +182,6 @@ HPSPage {
                 Controls.ToolTip.text: qsTr("Wyślij email do %1").arg("aplikacjahps@gmail.com")
                 onClicked: Qt.openUrlExternally("mailto:%1".arg("aplikacjahps@gmail.com"))
             }
-        }
-        Controls.Label {
-            height: visible ? implicitHeight : 0
-            font.pointSize: invisibleSlider.value - 1
-            text: qsTr("Credits")
-            visible: repCredits.count > 0
-        }
-        Repeater {
-            id: repCredits
-            model: aboutData.credits
-            delegate: personDelegate
-        }
-        Controls.Label {
-            height: visible ? implicitHeight : 0
-            font.pointSize: invisibleSlider.value - 1
-            text: qsTr("Translators")
-            visible: repTranslators.count > 0
-        }
-        Repeater {
-            id: repTranslators
-            model: aboutData.translators
-            delegate: personDelegate
         }
     }
 }
