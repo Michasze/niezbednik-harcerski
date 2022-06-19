@@ -22,7 +22,7 @@ import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
-    title: "Przyrzeczenie ZHP"
+    title: "Przyrzeczenie ZHR"
     header: Controls.TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
@@ -44,16 +44,6 @@ HPSPage {
                 width: parent.width
                 ElementListyNoLayout {
                     header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
-                    color: "brown"
-                    width: parent.width
-                }
-                ElementListyNoLayout {
-                    header: "Alternatywna wersja przyrzeczenia dopuszczona 20.05.2022:"
-                    color: "transparent"
-                    width: parent.width
-                }
-                ElementListyNoLayout {
-                    header: "Mam szczerą wolę całym życiem pełnić służbę Polsce, stać na straży harcerskich zasad, nieść chętną pomoc bliźnim i być posłusznym/posłuszną Prawu Harcerskiemu"
                     color: "brown"
                     width: parent.width
                 }

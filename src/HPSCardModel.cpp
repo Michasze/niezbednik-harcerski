@@ -83,7 +83,7 @@ QVector< Data > HPSCardModel::dane()
   m_dane
     << Data("Royal Rangers", "qrc:/contents/ui/img/RR.svg", "przyrzeczenieRR.qml", "roty przyrzeczenia", "")
     << Data("ZHP", "qrc:/contents/ui/img/zhp.svg", "przyrzeczenieZHP.qml", "roty przyrzeczenia", "")
-    << Data("ZHR", "qrc:/contents/ui/img/zhr.svg", "przyrzeczenieZHP.qml", "roty przyrzeczenia", "")
+    << Data("ZHR", "qrc:/contents/ui/img/zhr.svg", "przyrzeczenieZHR.qml", "roty przyrzeczenia", "")
     << Data("SHK „Zawisza”", "qrc:/contents/ui/img/fse.svg", "przyrzeczenieFSE.qml", "roty przyrzeczenia", "")
     << Data("Organizacja Harcerska „Rodło”", "qrc:/contents/ui/img/rodlo.svg", "przyrzeczenieOH.qml", "roty przyrzeczenia", "")
     << Data("Skauci Króla", "qrc:/contents/ui/img/tarcza.svg", "przyrzeczenieSK.qml", "roty przyrzeczenia", "")

@@ -171,6 +171,7 @@
         <file alias="contents/ui/gallery/przyrzeczenieSzeregi.qml">./data/contents/ui/gallery/przyrzeczenieSzeregi.qml</file>
         <file alias="contents/ui/gallery/przyrzeczeniaZHP.qml">./data/contents/ui/gallery/przyrzeczeniaZHP.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieZHP.qml">./data/contents/ui/gallery/przyrzeczenieZHP.qml</file>
+        <file alias="contents/ui/gallery/przyrzeczenieZHR.qml">./data/contents/ui/gallery/przyrzeczenieZHR.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieFSE.qml">./data/contents/ui/gallery/przyrzeczenieFSE.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieOH.qml">./data/contents/ui/gallery/przyrzeczenieOH.qml</file>
         <file alias="contents/ui/gallery/przyrzeczenieSK.qml">./data/contents/ui/gallery/przyrzeczenieSK.qml</file>
