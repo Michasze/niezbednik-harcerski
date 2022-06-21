@@ -33,12 +33,12 @@ HPSPage {
                 ikona: "image://icons/namiot_biwakowy.svg,white"
                 adres: "biwaki.qml"
             }
-            KartaStronaNoLayout {
-                header: "Generator SMS-ów"
-                opis: ""
-                ikona: "image://icons/mail-sent.svg,white"
-                adres: "sms.qml"
-            }
+            /* KartaStronaNoLayout { */
+            /*     header: "Generator SMS-ów" */
+            /*     opis: "" */
+            /*     ikona: "image://icons/mail-sent.svg,white" */
+            /*     adres: "sms.qml" */
+            /* } */
             /*        KartaStronaNoLayout {
                       header: "Zbiórki"
                       opis: ""
