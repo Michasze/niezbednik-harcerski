@@ -18,7 +18,7 @@ if [ $PLATFORM == "android" ];then
     if [ $ARCH_INPUT == "arm64" ] || [ $ARCH_INPUT == "arm64-v8a" ];then
         ARCH="arm64-v8a"
     fi
-    if [ $ARCH_INPUT == "armv7" ] || [ $ARCH_INPUT == "armeabi-v7a" ];then
+    elif [ $ARCH_INPUT == "armv7" ] || [ $ARCH_INPUT == "armeabi-v7a" ];then
         ARCH="armeabi-v7a"
     else
         echo -e "${RED}error: unknown architecture"
@@ -64,4 +64,6 @@ if [ $PLATFORM == "android" ];then
     apksigner sign -ks $HOME/Pulpit/my-release-key.keystore HPS_build_apk/HPS-$ARCH.apk
     mkdir signed
     cp HPS_build_apk/HPS-$ARCH.apk signed/
+    cp HPS_build_apk/HPS-$ARCH.apk $HOME/signed/
+
 fi
