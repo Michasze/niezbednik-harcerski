@@ -37,16 +37,6 @@ HPSPage
         }
         CytatAutor
         {
-            tresc: "“Do harcerstwa się nie należy, harcerką się jest lub się nią nie jest”"
-            autor: "Maria Wocalewska"
-        }
-        CytatAutor
-        {
-            tresc: "“Ruch harcerski musi się rozwijać i rosnąć nie tylko wszerz, przez pozyskiwanie nowych zwolenników, ale i w głąb przez rozwijanie swych zasad, ulepszanie metod pracy.”"
-            autor: "Stanisław Sedlaczek"
-        }
-        CytatAutor
-        {
             tresc: "“Stopień harcerski to nie order, to próba wartości i przydatności osobistej i społecznej.”"
             autor: "Józef Sosnowski"
         }
