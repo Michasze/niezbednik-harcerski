@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2022 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -22,44 +22,45 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
 
-         Rectangle {
-             // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
-             property string header: ""
-             property url ikona: ""
-             property url odnosnik: ""
-             property bool symbolika: false
+Rectangle {
+    // Wartości do których można mieć dostęp z zewnątrz. Ustawione są domyślne wartości
+    property string header: ""
+    property url ikona: ""
+    property url odnosnik: ""
+    property bool symbolika: false
     id: cardRectangle
     Layout.fillWidth: true
+    Layout.minimumHeight: 150
+    Layout.preferredHeight: naglowek.height + 30
     Layout.topMargin: 10
     radius: 10
     color: "#303030"
     MouseArea {
-    anchors.fill: parent
-    onClicked: Qt.openUrlExternally(cardRectangle.odnosnik)
+        anchors.fill: parent
+        onClicked: Qt.openUrlExternally(cardRectangle.odnosnik)
     }
-             Layout.minimumHeight : cardRectangle.symbolika ? 150 : 120
     border.color: "transparent"
-             RowLayout {
-                 anchors.fill: parent
-                 id: row
-                    Image {
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        Layout.leftMargin: 10
-                        sourceSize.width: cardRectangle.height - 20
-                        fillMode: Image.PreserveAspectFit
-                        source: cardRectangle.ikona
-                        Layout.fillWidth: false
-                    }
-                    // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
+    RowLayout {
+        id: row
+        anchors.fill: parent
+        Image {
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+            Layout.leftMargin: 10
+            sourceSize.width: cardRectangle.height < 150 ? cardRectangle.height - 20 : 130
+            fillMode: Image.PreserveAspectFit
+            source: cardRectangle.ikona
+            Layout.fillWidth: false
+        }
+        // Naglowek mimo ustawien nie chce sie zawijac. Trzeba stosowac krotsze tytuly
 
-                        Controls.Label {
-                            horizontalAlignment: Text.AlignHCenter
-                            id: naglowek
-                            wrapMode: Text.Wrap
-                            font.pointSize: invisibleSlider.value
-                            Layout.fillWidth: true
-                            Layout.rightMargin: 10
-                             text: cardRectangle.header
-                    }
-                }
-                }
+        Controls.Label {
+            id: naglowek
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
+            font.pointSize: invisibleSlider.value
+            Layout.fillWidth: true
+            Layout.rightMargin: 10
+            text: cardRectangle.header
+        }
+    }
+}
