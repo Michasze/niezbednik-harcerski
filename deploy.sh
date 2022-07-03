@@ -13,13 +13,15 @@ if [ $PLATFORM == "android" ];then
         echo "build dir exists, removing"
         rm -r $DIR
     fi
+    ARCH_STL="arm-linux-androideabi"
     if [ ! -z $1 ];then
     ARCH_INPUT="$1"
     if [ $ARCH_INPUT == "arm64" ] || [ $ARCH_INPUT == "arm64-v8a" ];then
         ARCH="arm64-v8a"
-    fi
+        ARCH_STL="aarch64-linux-android"
     elif [ $ARCH_INPUT == "armv7" ] || [ $ARCH_INPUT == "armeabi-v7a" ];then
         ARCH="armeabi-v7a"
+        ARCH_STL="arm-linux-androideabi"
     else
         echo -e "${RED}error: unknown architecture"
         exit 1
@@ -57,7 +59,7 @@ if [ $PLATFORM == "android" ];then
         -DCMAKE_TOOLCHAIN_FILE=/usr/share/ECM/toolchain/Android.cmake \
         -DQTANDROID_EXPORTED_TARGET=HPS \
         -DANDROID_APK_DIR=$HOME/hps_app_rework/src/android \
-        -DECM_ANDROID_STL_ARCH=arm-linux-androideabi ..
+        -DECM_ANDROID_STL_ARCH=$ARCH_STL ..
     # compile and deploy
     make create-apk-HPS
     #sign
