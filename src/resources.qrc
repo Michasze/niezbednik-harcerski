@@ -184,6 +184,7 @@
         <file alias="contents/ui/gallery/stopnieOH.qml">./data/contents/ui/gallery/stopnieOH.qml</file>
         <file alias="contents/ui/gallery/stopnieFSE.qml">./data/contents/ui/gallery/stopnieFSE.qml</file>
         <file alias="contents/ui/gallery/watra.qml">./data/contents/ui/gallery/watra.qml</file>
+        <file alias="contents/ui/gallery/naramiennik.qml">./data/contents/ui/gallery/naramiennik.qml</file>
         <file alias="contents/ui/gallery/geoguessr.qml">./data/contents/ui/gallery/geoguessr.qml</file>
         <file alias="contents/ui/gallery/gra_warsztaty.qml">./data/contents/ui/gallery/gra_warsztaty.qml</file>
         <file alias="contents/ui/gallery/Grot.qml">./data/contents/ui/gallery/Grot.qml</file>
@@ -354,6 +355,7 @@
         <file alias="contents/ui/img/wagggs_igla.svg">./data/contents/ui/img/wagggs_igla.svg</file>
         <file alias="contents/ui/img/wagggs_plomien.svg">./data/contents/ui/img/wagggs_plomien.svg</file>
         <file alias="contents/ui/img/watra.svg">./data/contents/ui/img/watra.svg</file>
+        <file alias="contents/ui/img/roza.svg">./data/contents/ui/img/roza.svg</file>
         <file alias="contents/ui/img/watra_duch.svg">./data/contents/ui/img/watra_duch.svg</file>
         <file alias="contents/ui/img/watra_rozum.svg">./data/contents/ui/img/watra_rozum.svg</file>
         <file alias="contents/ui/img/watra_cialo.svg">./data/contents/ui/img/watra_cialo.svg</file>
