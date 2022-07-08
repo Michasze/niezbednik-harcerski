@@ -7,7 +7,18 @@
                     "Lecą iskry",
                     "Niech się rozpalą ogniska",
                     "Nienażarci",
-                    "Ognisko w deszczu"
+                    "Ognisko w deszczu",
+                    "Pierwszy taniec harcerski",
+                    "Walc harcerski",
+                    "Ten czas nas nie złamie",
+                    "List",
+                    "Druh gwiaździsty",
+                    "Kołysanka zuchowa",
+                    "Chodźmy na szlak",
+                    "Jesienna druhna",
+                    "Pobudka harcerska",
+                    "Przysięgam",
+                    "Ballada spod Arsenału"
                    ],
         "autor":["2 Drużyna Harcerska “Kedyw”",
                  "2 Drużyna Harcerska “Kedyw”",
@@ -17,8 +28,116 @@
                  "Kasia Kamińska, Samuel Salamon",
                  "Krąg Instruktorski “Fen”",
                  "Marika i Weronika Zdunek, Magdalena Cichorzewska",
-                 "Tomasz Dzieliński"
+                 "Tomasz Dzieliński",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak",
+                 "Weronika Pawlak"
                 ],
+        "chwyty":["",
+                  "",
+                  "",
+                  "",
+                  "
+a G
+a F G
+C F C
+FC
+a G a",
+                  "G
+a
+H7 C7
+G
+a
+C7 H7 e
+
+G a
+H7 e
+G a
+H7 e
+G a
+(C7) H7 e",
+                  "eD
+eD
+GD
+eD
+eD
+eD
+GD
+De",
+                  "
+
+A
+D
+A
+DE
+
+A
+DE",
+                  "",
+                  "C G
+a F C
+
+C G a
+a F C
+
+
+
+
+
+
+
+
+
+
+
+a F C G",
+                  "F G C a
+
+
+
+
+
+F G C a
+F G C",
+                  "C G a F
+
+
+
+
+
+C G F
+
+C G a F",
+                  "A F C G",
+                  "a C
+G F
+
+
+
+a C
+G C",
+                  "C G a F
+
+
+
+
+C G a F
+
+
+C G F",
+                  "",
+                  "",
+                 "",
+                 "",
+                 "a F C G"],
         "tresc": ["Nie masz nad harcerza dzielniejszego człeka
 Chociaż nie jest lekko nikt tu nie narzeka
 Zimno mróz na dworze wiatr śniegiem zacina
@@ -152,12 +271,12 @@ Będziemy zawsze wspierać się...(wspierać się)
 
 dh. Adam Madejski
 ",
-                  "W Kręgu ognia z nami siądź, a G
-Bratnim gestem podaj dłoń,  G a
-Gdy pod niebem szumi polski las, a F G
-I pradziejów echa wzbudzą w nas, C F C
-Razem spójrzmy tam, gdzie w wieczornej łunie ptak,   FC
-Srebrzysty ptak, godło Twe, Ojczyzna. a G a
+                  "W Kręgu ognia z nami siądź,
+Bratnim gestem podaj dłoń,
+Gdy pod niebem szumi polski las,
+I pradziejów echa wzbudzą w nas,
+Razem spójrzmy tam, gdzie w wieczornej łunie ptak,
+Srebrzysty ptak, godło Twe, Ojczyzna.
 Gdzieś za nami mrok gęstnieje,
 Noc się skrada poprzez knieje,
 Obejmuje już namiotów krąg,
@@ -181,19 +300,19 @@ Idźmy więc, harcerze
 
 hm. Zdzisław Abramowicz
 ",
-                  "Refren: Lecą iskry do nieba G
-Do nieba do nieba a
-Płomień serca ogrzewa H7 C7
-Wie dlaczego tutaj jest G
-Każdy z nas a
-Każdy z nas śpiewa tak: C7 H7 e
+                  "Refren: Lecą iskry do nieba
+Do nieba do nieba
+Płomień serca ogrzewa
+Wie dlaczego tutaj jest
+Każdy z nas
+Każdy z nas śpiewa tak:
 
-ZW I Pierwsza zbiórka, gra i biwak G a
-Tak przygoda się zaczyna H7 e
-Świetni ludzie i codziennie przygód sto G a
-Chusta, obóz i wspomnienia H7 e
-Już na zawsze życie zmienia G a
-Tych harcerskich serc ogromna moc x2 (C7) H7 e
+ZW I Pierwsza zbiórka, gra i biwak
+Tak przygoda się zaczyna
+Świetni ludzie i codziennie przygód sto
+Chusta, obóz i wspomnienia
+Już na zawsze życie zmienia
+Tych harcerskich serc ogromna moc x2
 
 ZW II Rozpalone już ognisko
 Na Garbasiu noc jest długa
@@ -219,14 +338,14 @@ Wyciągniemy gitary
 Żeby znowu zaśpiewać x2
 
 Kasia Kamińska, Samuel Salamon",
-                  "Niech się rozpalą ogniska, eD
-niech iskry sypią się złote, eD
-niech słowa nasze gorące, GD
-popłyną ponad namiotem eD
-i w kręgu z rąk zaplecionych eD
-niech każdy słowem przyrzeknie eD
-że przyjaźń nasza zostanie GD
-chodź czas i życie ucieknie De
+                  "Niech się rozpalą ogniska,
+niech iskry sypią się złote,
+niech słowa nasze gorące,
+popłyną ponad namiotem
+i w kręgu z rąk zaplecionych
+niech każdy słowem przyrzeknie
+że przyjaźń nasza zostanie
+chodź czas i życie ucieknie
 
 Ref: Bo czas mija dni lecą
 Już cień zasnuwa nam twarze
@@ -249,13 +368,13 @@ Krąg Instruktorski \"Fen\"
 ",
 "To nie żarty, jestem nienażarty x4
 
-1.Siedzimy, myślimy, pot z czoła nam spływa             A
-no nie wymyślimy tej piosenki chyba                           D
-Marika nuci coś smętnie pod nosem                            A
-reszta zajęta jest kabanosem.                                        DE
+1.Siedzimy, myślimy, pot z czoła nam spływa
+no nie wymyślimy tej piosenki chyba
+Marika nuci coś smętnie pod nosem
+reszta zajęta jest kabanosem.
 
-Ref. Jeść, jeść, jeść, my chcemy jeść                              A
-        to nie żarty, jestem nienażarty.                              DE
+Ref. Jeść, jeść, jeść, my chcemy jeść
+        to nie żarty, jestem nienażarty.
 
 2.Piosenki to nie są tylko głupie dźwięki
 tego nie wymyślisz ot tak, od ręki
@@ -308,6 +427,265 @@ Płomienie wewnątrz nas
 Gasnące raz po raz
 Trzaskające iskry tylko w snach
 Nie potrzebne łzy gdy w deszczu nikną i
-Nastanie nowy świt a my, zapomnimy jak trudno jest nam żyć"
+Nastanie nowy świt a my, zapomnimy jak trudno jest nam żyć",
+                  "1. Dziwię się znów, jak to możliwe wszystko jest
+że słowo \"druh\" znaczy dziś więcej niż mogłam chcieć
+Przyrzekłeś mi, stojąc przy ogniu naszych serc,
+że jestem tą, której na wieczność służyć chcesz.
+
+Ref. Jak pięknie słowo \"czuwaj\" dziś brzmi,
+gdy mówisz kocham razem z nim
+Milsze niż ogień ciepło Twych rąk
+i bratnich serc wokoło krąg
+
+2. Nasz wspólny krzyż w blasku obrączek piękniej lśni
+Stopień najwyższy Miłość przyznała i Tobie, i mi
+Z kompasem serc idziemy czynić lepszym świat
+a wspólny szlak trwać będzie wiele pięknych lat
+Ref. ...
+
+Bridge: ogniska tego nie zgaśnie nigdy blask
+strażnikiem ognia od dziś jest każde z nas",
+                  "    1.Jak to możliwe, że
+    węzeł na chuście, węzeł rąk zmienił się
+    I gdzie prowadzi każdy nowy szlak,
+    Gdy \"Czuwaj\" zmienia się na wieczne tak?
+
+
+Ref. Przysięgnij mi, że już od dziś
+Poniesiesz ze mną ten harcerski krzyż.
+Od dzisiaj, aż po krańce lat,
+Uczynisz ze mną nieco lepszym świat
+
+    2.Od dzisiaj służyć Ci
+    Na warcie stać, by nikt nie wykradł Ciebie mi
+    Przy ogniu poczuć ciepło Twoich rąk
+    By zawsze bratnim był nasz życia krąg
+
+
+Ref. Przysięgnij mi...
+
+Bridge: Masz szczerą wolę dziś swe serce oddać ci
+Wyznaczyć azymutem słowo \"czuj\".
+Po prostu bądź, po wszystkie dni.
+Nim Bóg nas nie zabierze przy mnie stój",
+                  "Ref. Nie łatwo złamać jest harcerski krzyż
+I nas czas ten nie złamie
+Przed nami jeszcze tyle wspólnych chwil
+Tyle się jeszcze stanie
+Lilijka nadal trzyma się i lśni
+Bo przed nią wiele lat
+Bo jeszcze zostawimy lepszym świat
+
+1. Choć mundur w szafie jest od wielu dni
+Nie stracił swoich dumnych barw
+Choć lasu szum przybywa tak jak sny
+Wspomnienia trąca jak struny harf
+Chociaż rozwiązał się nasz wielki krąg
+I ogień iskier nie rzuca w noc
+Nie znaczy to, że nie ma ciepła rąk
+I że nie działa w nas harcerska moc!
+
+2. Choć beret na swą głowę włożył kurz
+Lilijka nadal wskazuje szlak
+Kolejna zbiórka czekać musi, cóż
+Lecz nie oznacza to, że wiary brak
+Choć Nocy nie pilnuje żadna z wart
+i na wędrówki czeka wiele dróg
+Może się jeszcze zdąży losu fart
+Bo wysłał nas na inną służbę Bóg",
+                  "    1.W powstaniu niesiono nadzieję i listy
+    Pocztowych gołębi nie było na niebie
+    Bo zamiast nich orły, ci harcerze przyszli
+    Zabrali mój list, co pisałam do Ciebie
+
+Ref. Zabierz ten list na koniec Warszawy
+ze znaczkiem od Wojny i stempelkiem krwi
+Nie daj się Śmierci zabrać do zabawy
+P.S. czuwaj, obiecaj to mi.
+
+    2. I kryli się w mroku, choć bali ciemnośći
+    Z listami po Wolność i swą przyszłość szli
+    Roznieśli po mieście kawałki Miłości
+    Ci, nad którymi Warszawa lała łzy
+    3. Ich życie nadano na adres Pamięci
+    dlatego nie możesz zapomnieć tych dni
+    Ci mali harcerze w kopertach zamknięci
+    przynieśli swym życiem list Tobie i mi",
+                  "Poznałam cię wśród zacisznych drzew
+gdy stałeś w zielonym mundurze
+Od razu szybciej do serca krew
+I oczy wzniesione ku górze
+
+I ciepło twych zgrabiałych rąk
+Gdy \"czuwaj\" mówiłeś nocami
+I serce moje jak róży pąk
+I to co rozkwitło przed nami
+
+Twa chusta miała swój dziwny blask
+Jak gdyby świeciła dla ciebie
+Mówiłeś \"jestem jedną z tych gwiazd
+I kiedyś stracę miejsce na niebie\"
+
+Mówiłeś \"jestem jak letni wiatr
+i zniknę zanim otworzysz oczy\"
+Na pamięć znałeś mój mały świat
+I miłość, co przez niego kroczy
+
+Jak ideałów skrytych wśród gór
+Szukałam ciebie na świecie
+Jak słońca pośród deszczowych chmur
+Jak chłodu w upalnym lecie
+
+A ty zniknąłeś jak jedna z gwiazd
+Nim pomyślałam życzenie
+A jednak stoisz wciąż pośród nas
+Gdy tylko gwiazdy zerkną na ziemię
+
+I w każdą taką gwiaździstą noc
+Rozpalam dla ciebie ognisko
+Na krzyż przysięgam, na jego moc,
+że zawsze będę tak blisko
+
+Bo może zniknąć harcerski krzyż
+Lecz nie zanikną te ideały,
+Co cię powiodły do nieba wzwyż
+Więc czuwaj, warty w niebie też stały (zwolnić)",
+                  "    1. Miałeś tylko kilka lat
+    Gdy uznałeś, że chcesz zdobyć cały świat
+    I że królem tego świata będziesz Ty,
+    że barwami tęczy pomalujesz sny
+
+Ref. Śpij, zaczeka na Twe stopy każdy szlak
+Śpij, za duży jeszcze jest dla Ciebie świat
+Śpij, uniesiesz jeszcze ten harcerski krzyż
+Śpij, nie musisz jeszcze iść
+
+2. Słońce ideałów znasz
+Ono uśmiech ciągle kładzie Ci na twarz
+Niczym orzeł chcesz się wznieść
+I odwagę, radość, gdzie nie pójdziesz, nieść
+
+3. Choć nie stoisz jeszcze wart
+Chociaż nocne harce to dla Ciebie żart
+Ukołysać chcę Twojego serca znój,
+a Ty, zuchu, nieustannie czuwaj, czuj...",
+                  "    1. Daleko gdzieś, gdzie ostre szczyty gór
+    Niczym choinki chcą gwiazdy na swych czubkach nosić
+    Gdzie zimna noc łańcuchem swoich chmur
+    Chce opatulić je i gwiezdnym pyłem szlaki złocić
+
+Ref. Szlak, wyruszmy dziś na szlak!
+Przygoda woła nas i krzyczy ile tylko tchu ma w płucach
+Chodźmy już, jest jeszcze tyle wzgórz
+Jest jeszcze tyle chmur i do zdobycia tyle gór nad nami, tak!
+
+    2. Daleko gdzieś, gdzie oceanu szum
+    W muszlach ukryte są słowa Boga prosto z Nieba
+    Gdzie piasku w bród, i gdzie bursztynów tłum
+    Wiatr spaceruje i przyciąga tych, którym mórz trzeba
+
+
+Ref. Szlak!
+
+    3. Daleko gdzieś, gdzie może pójdziesz sam,
+    gdzie będzie echo gór, a morza fale Cię obejmą
+    Tam szumi wiatr, tam pewne miejsce znam,
+    Gdzie wszystkie szlaki Twe z innych drogami znów się zejdą!",
+                  "    1. Uśmiech miałaś niczym wiatr
+    Smagał innych w serce i poruszał świat
+    Czerwień na policzkach Twych co dnia
+    Burza przez Twe małe, szare serce szła
+
+
+Ref. Znów ulecisz niby mały liść
+Aby inni Twoim śladem mogli iść
+Za mundurem schowasz swoje łzy
+Ta jesienna druhna to po prostu Ty
+
+    2. Sznur brązowy niczym pień
+    Trzymał Cię nocami, trzymał w każdy dzień
+    Ogień w chuście palił się
+    NIkt nie gasił go, nikt nie ocalił Cię
+
+Ref. Znów ulecisz…
+
+    3. Tak jesień mknie przez park
+    Tak Ty tylko salutując dałaś znak
+    I zniknęłaś kończąc bieg
+    A jesienne serce przykrył gruby śnieg
+
+Ref. Znów ulecisz…",
+                  "    1. Kiedy noc za drzewem znika
+    Kiedy słońce budzi las
+    Chmura już za chmurą fika
+    Druhny, szybko, wstawać czas!
+    Niech w namioty wiatr powpada
+    Zaraz będzie nam meldował
+    Wstaje harcerek groma
+    I poranek zawirował
+
+
+Ref. Czuwaj w nocy, czuwaj we dnie
+Sercej wskazuj ideały
+Nawet kiedy wszystko legnie
+Siebie nieś w świat, nieś w ten świat cały
+
+    2. Dziś przed nami dzień jest nowy
+    Nowe harce, nowa gra
+    Każdy zastęp już gotowy
+    Słońce nad grzewami gna
+    NIech rozrasta się drużyna
+    Krzyż niech nam wskazuje prosto
+    A my dalej jak rodzina!
+    Czuwaj, bracie, czuwaj, siostro!",
+                  "    1. Mówili mi: radością naszą służba
+    Mówili mi, że tak spędzają dnie
+    Mówili mi, że droga ta jest trudna
+    A jednak nią przez życie iść dziś chce
+
+Ref. Przysięgam Tobie na mój krzyż, że zawsze będę z Tobą iść
+I chociaż mam tak niewiele lat, zostawię lepszym ten nasz świat
+
+    2. Wskazali szlak, idąc wprost na szczyty
+    I dali dom, gdzie zawsze wracać chce
+    Znaleźli skarb, co dla mnie był ukryty
+    On imię ma: Ojczyzną on się zwie
+
+Ref. Przysięgam Tobie na mój krzyż…
+
+    3. To właśnie Ci służyć dziś przysięgam
+    Dla Ciebie żyć, choć mam niewiele lat
+    Dla Ciebie dziś po ideały sięgam
+    I lepszym ciut zostawiam cały świat",
+                  "Tamtego poranka na warszawskim bruku
+ciche pożegnanie rzucono do nieba.
+Wyszarpnięto ze snu, narobiono huku.
+Bo tak było trzeba, bo tak było trzeba.
+
+Bo ktoś musiał donieść słowem trochę zimnym
+i zbudzić tak... We śnie chłopca z porcelany.
+Chłopca niby okno; był on zbitym, innym.
+Słońcem malowany, słońcem malowany.
+
+Jadą cztery koła, strach w oddechu bucha.
+Myśli chłopca za nim po ziemi wędrują.
+I jedzie kareta straceńców. Na Szucha.
+Niechaj go ratują, niechaj go ratują!
+
+Płacze matka, siostra, przyjaciele w trwodze.
+Krew z alei płynie do nich wartką Wisłą.
+A tam jego biją, tam katują srodze.
+Aż serce i dusza rozprysną, rozprysną.
+
+Szybki znak w powietrzu, gwizdek, niebo gaśnie.
+Biegną z porcelany warszawskie chłopaki.
+Jak nie huknie ogień, jak sten w głos nie wrzaśnie.
+Lecą tak jak ptaki, spadają jak ptaki.
+
+Cztery dni i koniec. Gdzie list od nadziei?
+Serca stają równo w Śmierci smutnej scenie.
+A oni już schodzą z teatru po kolei.
+Chłopcy z porcelany, chłopcy jak kamienie."
                  ]
 }
