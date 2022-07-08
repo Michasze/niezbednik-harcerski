@@ -89,6 +89,7 @@ HPSPage {
                         "krótkie spodenki szczególnie takie szybkoschnące",
                         "czapki/kapelusze",
                         "płyn do prania (nieduża ilość)",
+                        "plastikowy wieszak na mundur",
                         "okulary przeciwsłoneczne"]
                 delegate: przedmiotComponent
             }
@@ -160,13 +161,11 @@ HPSPage {
                         "pieniądze"]
                 delegate: przedmiotComponent
             }
-
             Component {
                 id: przedmiotComponent
                 HPSCheckable
                 {}
             }
-
         }
     }
 }
