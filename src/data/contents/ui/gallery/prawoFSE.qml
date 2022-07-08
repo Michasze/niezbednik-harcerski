@@ -35,7 +35,7 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        height: root.height
+        height: root.height * 2
         currentIndex: tabBar.currentIndex
         clip: true
         Controls.Pane {

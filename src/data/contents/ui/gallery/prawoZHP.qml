@@ -35,7 +35,7 @@ HPSPage {
     }
     Controls.SwipeView {
         id: swipeView
-        height: root.height
+        height: root.height * 2
         currentIndex: tabBar.currentIndex
         clip: true
         Controls.Pane {
@@ -46,6 +46,7 @@ HPSPage {
                 width: parent.width
                 Repeater
                 {
+                    id: prawa
                     model: ["<b>1.</b> Harcerz sumiennie spełnia swoje obowiązki wynikające z Przyrzeczenia harcerskiego.",
                             "<b>2.</b> Na słowie harcerza polegaj jak na Zawiszy.",
                             "<b>3.</b> Harcerz jest pożyteczny i niesie pomoc bliźnim.",
@@ -70,6 +71,7 @@ HPSPage {
             Column {
                 spacing: 10
                 width: parent.width
+                height: parent.height
                 Repeater
                 {
                     model: ["<b>1.</b> Zuch kocha Boga i Polskę.",
