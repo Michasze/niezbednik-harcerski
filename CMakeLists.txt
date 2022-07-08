@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(HPS VERSION 1.1.4)
+project(HPS VERSION 1.1.5)
 set(REQUIRED_QT_VERSION 5.15.0)
 
 SET(CMAKE_CXX_STANDARD 17)
