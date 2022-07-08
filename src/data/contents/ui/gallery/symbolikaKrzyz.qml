@@ -23,72 +23,69 @@ import QtQuick.Layouts 1.2
 
 HPSPage
 {
- id: page
-  Layout.fillWidth: true
- title: qsTr("Symbolika krzyża harcerskiego")
-
-                     ColumnLayout {
-        Layout.fillHeight: true
-                         HPSIcon
-                         {
-                             source: "image://icons/krzyz.svg,white"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_ramiona.svg,white"
+    id: page
+    Layout.fillWidth: true
+    title: qsTr("Symbolika krzyża harcerskiego")
+    ColumnLayout {
+        HPSIcon
+        {
+            source: "image://icons/krzyz.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_ramiona.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Ramiona - długa droga, którą musi przejść harcerz"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_lilijka.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_lilijka.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Promienie biegnące z lilijki do okręgu - dążenie do doskonałości"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_czuwaj.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_czuwaj.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Czuwaj - wezwanie do działania"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_ziarenka.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_ziarenka.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Ziarenka piasku - niezliczona rzesza harcerzy i harcerek"
-                         }
-                         ElementListy
-                         {
+        }
+        ElementListy
+        {
             color: "steelblue"
             ikona: "image://icons/blank.svg"
             symbolika: true
             header: "Puste miejsce - harcerstwo jest zawsze chętne do przyjmowania nowych osób"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_laurowy.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_laurowy.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Wieniec z liści laurowych - zwycięstwo"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_debowy.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_debowy.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Wieniec z liści dębowych - męstwo i wytrwałość"
-                         }
-                         ElementListy
-                         {
-             ikona: "image://icons/krzyz_wezel.svg,white"
+        }
+        ElementListy
+        {
+            ikona: "image://icons/krzyz_wezel.svg,white"
             color: "steelblue"
             symbolika: true
             header: "Węzeł - codzienne wykonywanie dobrego uczynku"
-                         }
-
-                     }
+        }
+    }
 }
