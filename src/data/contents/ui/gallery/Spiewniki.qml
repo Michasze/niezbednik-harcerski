@@ -42,6 +42,7 @@ HPSPage {
             id: karta
             property string tytul: ""
             property string tekst: ""
+            property string chwyty: ""
             property string tytulPiosenki: ""
             model: spiewnikModel
             delegate: KartaStronaIkona {
@@ -102,13 +103,14 @@ HPSPage {
                         model: spiewnik.content
                         delegate: KartaStronaIkona {
                             header: modelData
-                            opis: spiewnik.autorPiosenki[index]
+                            opis: spiewnik.autorPiosenki[index] ? spiewnik.autorPiosenki[index] : ""
                             ikona: "image://icons/" + spiewnik.ikonaPiosenki[index]
                             MouseArea {
                                 anchors.fill: parent
                                 onClicked:
                                 {
                                     karta.tekst = spiewnik.nazwaPiosenki[index]
+                                    karta.chwyty = spiewnik.chwytyPiosenki[index] ? spiewnik.chwytyPiosenki[index] : ""
                                     karta.tytulPiosenki = spiewnik.content[index]
                                     pageStack.push(piosenkaPage)
                                 }
@@ -122,16 +124,23 @@ HPSPage {
                             title: karta.tytulPiosenki
                             ColumnLayout
                             {
-                                GridLayout
+                                Controls.Button
                                 {
-                                    ElementListyNoImage
+                                    Layout.alignment: Qt.AlignTop | Qt.AlignRight
+                                    highlighted: true
+                                    icon.source: "qrc:/contents/ui/img/gtk-select-font.svg"
+                                    onClicked: tweaks.open();
+                                }
+                                RowLayout {
+                                    Controls.Label
                                     {
                                         id: tresc
-                                        textSize: slider.value
-                                        header: karta.tekst
-                                        alignH: Text.AlignLeft
-                                        format: Text.PlainText
-                                        color: "Black"
+                                        font.pointSize: slider.value
+                                        text: karta.tekst
+                                        Layout.fillWidth: true
+                                        horizontalAlignment: Text.AlignLeft
+                                        textFormat: Text.PlainText
+                                        wrapMode: Text.Wrap
                                         MouseArea {
                                             anchors.fill: parent
                                             onPressAndHold:
@@ -141,12 +150,17 @@ HPSPage {
                                             }
                                         }
                                     }
-                                    Controls.Button
+                                    Controls.Label
                                     {
-                                        Layout.alignment: Qt.AlignTop
-                                        highlighted: true
-                                        icon.source: "qrc:/contents/ui/img/gtk-select-font.svg"
-                                        onClicked: tweaks.open();
+                                        id: chwytyLista
+                                        font.pointSize: slider.value
+                                        Layout.fillWidth: false
+                                        Layout.alignment: Qt.AlignTop | Qt.AlignRight
+                                        Layout.leftMargin: 5
+                                        text: karta.chwyty
+                                        font.bold: true
+                                        horizontalAlignment: Text.AlignRight
+                                        textFormat: Text.PlainText
                                     }
                                 }
                                 Controls.Popup

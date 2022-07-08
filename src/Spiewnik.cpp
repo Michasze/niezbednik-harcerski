@@ -56,6 +56,7 @@ QJsonArray Spiewnik::content()
   autorArray = jsonObject.value("autor").toArray();
   textArray = jsonObject.value("tresc").toArray();
   iconArray = jsonObject.value("ikona").toArray();
+  chwytyArray = jsonObject.value("chwyty").toArray();
   return array;
 }
 QJsonArray Spiewnik::nazwaPiosenki()
@@ -78,4 +79,8 @@ QJsonArray Spiewnik::ikonaPiosenki()
         }
     }
   return iconArray;
+}
+QJsonArray Spiewnik::chwytyPiosenki()
+{
+  return chwytyArray;
 }

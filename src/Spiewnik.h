@@ -30,6 +30,7 @@ class Spiewnik : public QObject
   Q_PROPERTY(QJsonArray nazwaPiosenki READ nazwaPiosenki NOTIFY piosenkaChanged)
   Q_PROPERTY(QJsonArray autorPiosenki READ autorPiosenki NOTIFY autorChanged)
   Q_PROPERTY(QJsonArray ikonaPiosenki READ ikonaPiosenki NOTIFY ikonaChanged)
+  Q_PROPERTY(QJsonArray chwytyPiosenki READ chwytyPiosenki NOTIFY chwytyChanged)
 
 public:
   Spiewnik(QObject *parent = nullptr);
@@ -40,6 +41,7 @@ public:
   QJsonArray nazwaPiosenki();
   QJsonArray autorPiosenki();
   QJsonArray ikonaPiosenki();
+  QJsonArray chwytyPiosenki();
 
 Q_SIGNALS:
   void adresChanged();
@@ -47,6 +49,7 @@ Q_SIGNALS:
   void piosenkaChanged();
   void autorChanged();
   void ikonaChanged();
+  void chwytyChanged();
 
 private:
   QString m_file;
@@ -57,5 +60,6 @@ private:
   QJsonArray textArray;
   QJsonArray autorArray;
   QJsonArray iconArray;
+  QJsonArray chwytyArray;
 };
 #endif // __SPIEWNIK_H_
