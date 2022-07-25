@@ -48,7 +48,7 @@ Komendantem obozu był harcmistrz Antoni Olbromski, który swoją historię z sk
 
 Każdy z uczestników zlotu musiał mieć wyhaftowany na mundurze herb swojej miejscowości.
 
-Do obozu który miał powierzchnię 11 kilometrów kwadratowych i dzielił się na 8 podobozów poprowadzono tory kolejowe oraz szosę, nad rzeką zbudowano mosty, a na terenie całego obozu było około 160 drewnianych budynków.. Prace budowlane wykonała Grupa Harcerskich Drużyn Robotniczych, dwa plutony saperów oraz okoliczni mieszkańcy.
+Do obozu który miał powierzchnię 11 kilometrów kwadratowych i dzielił się na 16 podobozów poprowadzono tory kolejowe oraz szosę, nad rzeką zbudowano mosty, a na terenie całego obozu było około 160 drewnianych budynków.. Prace budowlane wykonała Grupa Harcerskich Drużyn Robotniczych, dwa plutony saperów oraz okoliczni mieszkańcy.
 
 Harcerze mieli możliwość zdeponowania swoich pieniędzy w Zlotowej Ekspozyturze PKO, aby w ten sposób zabezpieczyć się przed ich utratą."
             }
