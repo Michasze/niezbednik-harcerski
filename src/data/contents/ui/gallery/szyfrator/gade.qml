@@ -117,7 +117,7 @@ HPSPage {
                     radius: 2
                 }
             }
-            model: ["GA-DE-RY-PO-LU-KI", "PO-LI-TY-KA-RE-NU", "MA-LI-NO-WE-BU-TY", "BI-TW-AO-CH-MU-RY", "KU-LO-PE-RY-ZA-GI", "NO-WE-BU-TY-LI-SA", "RE-GU-LA-MI-NO-WY", "MO-TY-LE-CU-DA-KI", "KA-CE-MI-NU-TO-WY", "KO-NI-EC-MA-TU-RY", "NA-SZ-HU-FI-EC", "RÓ-ŻO-WE-TU-LI-PA-NY", "PA-DY-GI-MO-ZE-TU"]
+            model: ["GA-DE-RY-PO-LU-KI", "PO-LI-TY-KA-RE-NU", "MA-LI-NO-WE-BU-TY", "BI-TW-AO-CH-MU-RY", "KU-LO-PE-RY-ZA-GI", "NO-WE-BU-TY-LI-SA", "RE-GU-LA-MI-NO-WY", "MO-TY-LE-CU-DA-KI", "KA-CE-MI-NU-TO-WY", "KO-NI-EC-MA-TU-RY", "NA-SZ-HU-FI-EC", "RÓ-ŻO-WE-TU-LI-PA-NY", "PA-DY-GI-MO-ZE-TU", "KU-LO-PE-RY-ZA-GI"]
             onActivated: {
                 cipher.wariant = currentIndex
                 cipher.gade = pole.text

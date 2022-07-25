@@ -492,6 +492,21 @@ else if(m_wariant == 12)
     gadetable[QChar('t')] = 'u';
     gadetable[QChar('u')] = 't';
   }
+else if(m_wariant == 13)
+  {
+    gadetable[QChar('k')] = 'u';
+    gadetable[QChar('u')] = 'k';
+    gadetable[QChar('l')] = 'o';
+    gadetable[QChar('o')] = 'l';
+    gadetable[QChar('p')] = 'e';
+    gadetable[QChar('e')] = 'p';
+    gadetable[QChar('r')] = 'y';
+    gadetable[QChar('y')] = 'r';
+    gadetable[QChar('z')] = 'a';
+    gadetable[QChar('a')] = 'z';
+    gadetable[QChar('g')] = 'i';
+    gadetable[QChar('i')] = 'g';
+  }
    for(int i = 0; i < m_gade.length(); i++)
    {
      if (gadetable.contains(m_gade[i]) && m_gade[i].isLower())
