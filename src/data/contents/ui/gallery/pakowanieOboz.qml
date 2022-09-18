@@ -108,7 +108,7 @@ HPSPage {
                         "pasta",
                         "ręczniki",
                         "chusteczki higieniczne",
-                        "krem do opalania",
+                        "krem z filtrem, najlepiej 50",
                         "inne potrzebne rzeczy"]
                 delegate: przedmiotComponent
             }
