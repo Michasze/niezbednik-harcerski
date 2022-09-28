@@ -118,7 +118,7 @@ HPSPage {
             img: "image://icons/plecak.svg"
         }
         ListElement {
-            title: qsTr("Stopnie harcerskie")
+            title: qsTr("Stopnie")
             kolor: ",white"
             img: "image://icons/hrS.svg"
         }
