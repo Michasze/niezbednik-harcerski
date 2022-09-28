@@ -142,6 +142,7 @@
         <file alias="contents/ui/gallery/prawie.qml">./data/contents/ui/gallery/prawie.qml</file>
         <file alias="contents/ui/gallery/jakSpac.qml">./data/contents/ui/gallery/jakSpac.qml</file>
         <file alias="contents/ui/gallery/mapaMiejsc.qml">./data/contents/ui/gallery/mapaMiejsc.qml</file>
+        <file alias="contents/ui/gallery/oszczednosc.qml">./data/contents/ui/gallery/oszczednosc.qml</file>
         <file alias="contents/ui/gallery/terenowe.qml">./data/contents/ui/gallery/terenowe.qml</file>
         <file alias="contents/ui/gallery/terenowe/bledy.qml">./data/contents/ui/gallery/terenowe/bledy.qml</file>
         <file alias="contents/ui/gallery/terenowe/jakTlumaczyc.qml">./data/contents/ui/gallery/terenowe/jakTlumaczyc.qml</file>
@@ -303,6 +304,7 @@
         <file alias="contents/ui/img/sznur.svg">./data/contents/ui/img/sznur.svg</file>
         <file alias="contents/ui/img/sprzet.svg">./data/contents/ui/img/sprzet.svg</file>
         <file alias="contents/ui/img/karimata.svg">./data/contents/ui/img/karimata.svg</file>
+        <file alias="contents/ui/img/bidon.svg">./data/contents/ui/img/bidon.svg</file>
         <file alias="contents/ui/img/moka.svg">./data/contents/ui/img/moka.svg</file>
         <file alias="contents/ui/img/mapa.svg">./data/contents/ui/img/mapa.svg</file>
         <file alias="contents/ui/img/spiwor.svg">./data/contents/ui/img/spiwor.svg</file>
