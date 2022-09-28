@@ -155,6 +155,7 @@
         <file alias="contents/ui/gallery/prawoZHP.qml">./data/contents/ui/gallery/prawoZHP.qml</file>
         <file alias="contents/ui/gallery/symbolika.qml">./data/contents/ui/gallery/symbolika.qml</file>
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
+        <file alias="contents/ui/gallery/symbolikaLilijka.qml">./data/contents/ui/gallery/symbolikaLilijka.qml</file>
         <file alias="contents/ui/gallery/symbolikaWosm.qml">./data/contents/ui/gallery/symbolikaWosm.qml</file>
         <file alias="contents/ui/gallery/symbolikaWagggs.qml">./data/contents/ui/gallery/symbolikaWagggs.qml</file>
         <file alias="contents/ui/gallery/symbolikaZnaczek.qml">./data/contents/ui/gallery/symbolikaZnaczek.qml</file>
@@ -335,6 +336,7 @@
         <file alias="contents/ui/img/zwoj.svg">./data/contents/ui/img/zwoj.svg</file>
         <file alias="contents/ui/img/HZNP.svg">./data/contents/ui/img/HZNP.svg</file>
         <file alias="contents/ui/img/krzyz.svg">./data/contents/ui/img/krzyz.svg</file>
+        <file alias="contents/ui/img/lilijka.svg">./data/contents/ui/img/lilijka.svg</file>
         <file alias="contents/ui/img/krzyz_ramiona.svg">./data/contents/ui/img/krzyz_ramiona.svg</file>
         <file alias="contents/ui/img/krzyz_lilijka.svg">./data/contents/ui/img/krzyz_lilijka.svg</file>
         <file alias="contents/ui/img/krzyz_lilijka_srebrna.svg">./data/contents/ui/img/krzyz_lilijka_srebrna.svg</file>
@@ -346,6 +348,11 @@
         <file alias="contents/ui/img/krzyz_laurowy.svg">./data/contents/ui/img/krzyz_laurowy.svg</file>
         <file alias="contents/ui/img/krzyz_debowy.svg">./data/contents/ui/img/krzyz_debowy.svg</file>
         <file alias="contents/ui/img/krzyz_wezel.svg">./data/contents/ui/img/krzyz_wezel.svg</file>
+        <file alias="contents/ui/img/lilijka_ONC.svg">./data/contents/ui/img/lilijka_ONC.svg</file>
+        <file alias="contents/ui/img/lilijka_pusta.svg">./data/contents/ui/img/lilijka_pusta.svg</file>
+        <file alias="contents/ui/img/lilijka_igla.svg">./data/contents/ui/img/lilijka_igla.svg</file>
+        <file alias="contents/ui/img/lilijka_ramiona.svg">./data/contents/ui/img/lilijka_ramiona.svg</file>
+        <file alias="contents/ui/img/lilijka_wezel.svg">./data/contents/ui/img/lilijka_wezel.svg</file>
         <file alias="contents/ui/img/dmb.svg">./data/contents/ui/img/dmb.svg</file>
         <file alias="contents/ui/img/1907.svg">./data/contents/ui/img/1907.svg</file>
         <file alias="contents/ui/img/wosm.svg">./data/contents/ui/img/wosm.svg</file>
