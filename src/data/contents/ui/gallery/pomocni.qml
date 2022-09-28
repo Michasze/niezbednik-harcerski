@@ -35,7 +35,8 @@ HPSPage {
                         "Piotr Parkita HO",
                         "Antoni Łasica",
                         "Jakub Gałaszewski",
-                        "Bartosz Ostański"]
+                        "Bartosz Ostański",
+                        "Weronika Pawlak"]
                 delegate: ElementListyImageNoLayout {
                     ikona: "qrc:/contents/ui/img/user.svg"
                     header: modelData
