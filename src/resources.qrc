@@ -290,6 +290,7 @@
         <file alias="contents/ui/gallery/Spiwor.qml">./data/contents/ui/gallery/Spiwor.qml</file>
         <file alias="contents/ui/gallery/maty.qml">./data/contents/ui/gallery/maty.qml</file>
         <file alias="contents/ui/gallery/noz.qml">./data/contents/ui/gallery/noz.qml</file>
+        <file alias="contents/ui/gallery/kawa.qml">./data/contents/ui/gallery/kawa.qml</file>
         <file alias="contents/ui/gallery/cytatyInni.qml">./data/contents/ui/gallery/cytatyInni.qml</file>
         <file alias="contents/ui/BaseApp.qml">./data/contents/ui/BaseApp.qml</file>
         <file alias="contents/ui/HPSWindow.qml">./data/contents/ui/HPSWindow.qml</file>
@@ -302,6 +303,7 @@
         <file alias="contents/ui/img/sznur.svg">./data/contents/ui/img/sznur.svg</file>
         <file alias="contents/ui/img/sprzet.svg">./data/contents/ui/img/sprzet.svg</file>
         <file alias="contents/ui/img/karimata.svg">./data/contents/ui/img/karimata.svg</file>
+        <file alias="contents/ui/img/moka.svg">./data/contents/ui/img/moka.svg</file>
         <file alias="contents/ui/img/mapa.svg">./data/contents/ui/img/mapa.svg</file>
         <file alias="contents/ui/img/spiwor.svg">./data/contents/ui/img/spiwor.svg</file>
         <file alias="contents/ui/img/trabka.svg">./data/contents/ui/img/trabka.svg</file>
