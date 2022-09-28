@@ -33,6 +33,9 @@ HPSPage {
         Controls.TabButton {
             text: qsTr("Harcerze")
         }
+        Controls.TabButton {
+            text: qsTr("Instruktorzy")
+        }
     }
     Controls.SwipeView {
         id: swipeView
@@ -102,6 +105,33 @@ HPSPage {
                     ikona: "image://icons/krzyz_wieniec.svg"
                     divider: 0.90
                     header: qsTr("Harcerz Rzeczypospolitej\n Harcerka Rzeczypospolitej")
+                }
+            }
+        }
+        Controls.Pane {
+            Column {
+                spacing: 10
+                width: parent.width
+                ElementListyImageNoLayout
+                {
+                    ikona: "qrc:/contents/ui/img/instruktorska_pwd.svg"
+                    color: "steelblue"
+                    header: "Przewodnik"
+                    drugaIkona: "image://icons/podkladka_pwd.svg"
+                }
+                ElementListyImageNoLayout
+                {
+                    ikona: "qrc:/contents/ui/img/instruktorska_phm.svg"
+                    color: "steelblue"
+                    header: "Podharcmistrz"
+                    drugaIkona: "image://icons/podkladka_phm.svg"
+                }
+                ElementListyImageNoLayout
+                {
+                    ikona: "qrc:/contents/ui/img/instruktorska_hm.svg"
+                    color: "steelblue"
+                    header: "Harcmistrz"
+                    drugaIkona: "image://icons/podkladka_hm.svg"
                 }
             }
         }

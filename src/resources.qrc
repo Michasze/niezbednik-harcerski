@@ -391,6 +391,12 @@
         <file alias="contents/ui/img/ho.svg">./data/contents/ui/img/ho.svg</file>
         <file alias="contents/ui/img/hr.svg">./data/contents/ui/img/hr.svg</file>
         <file alias="contents/ui/img/hrS.svg">./data/contents/ui/img/hrS.svg</file>
+        <file alias="contents/ui/img/instruktorska_pwd.svg">./data/contents/ui/img/instruktorska_pwd.svg</file>
+        <file alias="contents/ui/img/instruktorska_phm.svg">./data/contents/ui/img/instruktorska_phm.svg</file>
+        <file alias="contents/ui/img/instruktorska_hm.svg">./data/contents/ui/img/instruktorska_hm.svg</file>
+        <file alias="contents/ui/img/podkladka_pwd.svg">./data/contents/ui/img/podkladka_pwd.svg</file>
+        <file alias="contents/ui/img/podkladka_phm.svg">./data/contents/ui/img/podkladka_phm.svg</file>
+        <file alias="contents/ui/img/podkladka_hm.svg">./data/contents/ui/img/podkladka_hm.svg</file>
         <file alias="contents/ui/img/zuchG.svg">./data/contents/ui/img/zuchG.svg</file>
         <file alias="contents/ui/img/cytaty.svg">./data/contents/ui/img/cytaty.svg</file>
         <file alias="contents/ui/img/spiewnik.svg">./data/contents/ui/img/spiewnik.svg</file>
