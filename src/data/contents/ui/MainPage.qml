@@ -138,6 +138,12 @@ HPSPage {
             img: "image://icons/ognisko.svg"
 
         }
+        ListElement {
+            title: qsTr("Archiwum")
+            kolor: ",white"
+            img: "image://icons/folder.svg"
+
+        }
         /*        ListElement {
                   title: "Lista miejsc obozowych"
                   targetPage: "gallery/mapa.qml"
