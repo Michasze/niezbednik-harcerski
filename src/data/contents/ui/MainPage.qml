@@ -51,21 +51,18 @@ HPSPage {
         ListElement {
             title: qsTr("Szyfry")
             targetPage: "gallery/szyfry.qml"
-            separate: true
             img: "image://icons/szyfry.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Symbolika")
             targetPage: "gallery/symbolika.qml"
-            separate: true
             img: "image://icons/wosm.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Cytaty")
             targetPage: "gallery/cytaty.qml"
-            separate: true
             img: "image://icons/cytaty.svg"
             kolor: ",white"
         }
@@ -77,14 +74,12 @@ HPSPage {
         ListElement {
             title: qsTr("Filmy")
             targetPage: "gallery/filmy.qml"
-            separate: true
             img: "image://icons/filmy.svg"
             kolor: ",white"
         }
         ListElement {
             title: qsTr("Śpiewnik")
             targetPage: "gallery/Spiewniki.qml"
-            separate: true
             img: "image://icons/spiewnik.svg"
             kolor: ",white"
         }
@@ -106,14 +101,12 @@ HPSPage {
         ListElement {
             title: qsTr("Kącik drużynowego")
             targetPage: "gallery/poradnikiDruzynowy.qml"
-            separate: true
             img: "image://icons/sznur.svg"
             kolor: ",#0000cd"
         }
         ListElement {
             title: qsTr("Listy rzeczy do spakowania")
             kolor: ",white"
-            separate: true
             targetPage: "gallery/poradnikiPakowanie.qml"
             img: "image://icons/plecak.svg"
         }
@@ -234,7 +227,6 @@ HPSPage {
                         header: title
                         query: header.toLowerCase()
                         adres: targetPage ? targetPage : ""
-                        oddzielne: separate
                         ikona: img
                         kolor_ikony: kolor
                     }
