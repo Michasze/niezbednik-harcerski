@@ -29,7 +29,7 @@ Rectangle {
     property string query
     property bool oddzielne: false
     property url ikona: {}
-    property url adres: "harcerz.qml"
+    property url adres: ""
     property string kolor_ikony: ",white"
     id: mainRectangle
     radius: 10
@@ -44,7 +44,7 @@ Rectangle {
         anchors.fill: parent
         onClicked:
         {
-            mainRectangle.oddzielne ? pageStack.push(Qt.resolvedUrl(mainRectangle.adres)) : pageStack.push(categoryComponent)
+            mainRectangle.adres != "" ? pageStack.push(Qt.resolvedUrl(mainRectangle.adres)) : pageStack.push(categoryComponent)
         }
     }
     Column {
