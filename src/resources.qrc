@@ -153,6 +153,7 @@
         <file alias="contents/ui/gallery/terenowe/dodatkowe.qml">./data/contents/ui/gallery/terenowe/dodatkowe.qml</file>
         <file alias="contents/ui/gallery/daty.qml">./data/contents/ui/gallery/daty.qml</file>
         <file alias="contents/ui/gallery/prawoZHP.qml">./data/contents/ui/gallery/prawoZHP.qml</file>
+        <file alias="contents/ui/gallery/pomysly.qml">./data/contents/ui/gallery/pomysly.qml</file>
         <file alias="contents/ui/gallery/symbolika.qml">./data/contents/ui/gallery/symbolika.qml</file>
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
         <file alias="contents/ui/gallery/symbolikaLilijka.qml">./data/contents/ui/gallery/symbolikaLilijka.qml</file>
@@ -402,7 +403,9 @@
         <file alias="contents/ui/img/folder.svg">./data/contents/ui/img/folder.svg</file>
         <file alias="contents/ui/img/spiewnik.svg">./data/contents/ui/img/spiewnik.svg</file>
         <file alias="contents/ui/img/nuta.svg">./data/contents/ui/img/nuta.svg</file>
-        <file alias="contents/ui/img/HS.svg">./data/contents/ui/img/HS.svg</file>
+        <file alias="contents/ui/img/harcerze.svg">./data/contents/ui/img/harcerze.svg</file>
+        <file alias="contents/ui/img/hs.svg">./data/contents/ui/img/hs.svg</file>
+        <file alias="contents/ui/img/wedrownicy.svg">./data/contents/ui/img/wedrownicy.svg</file>
         <file alias="contents/ui/img/lesny.svg">./data/contents/ui/img/lesny.svg</file>
         <file alias="contents/ui/img/Wedro.svg">./data/contents/ui/img/Wedro.svg</file>
         <file alias="contents/ui/img/szyfry.svg">./data/contents/ui/img/szyfry.svg</file>

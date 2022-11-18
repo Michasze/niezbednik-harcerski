@@ -41,6 +41,7 @@ HPSPage {
         ListElement {
             title: qsTr("Pomysły na zbiórki")
             img: "image://icons/zarowka.svg"
+            targetPage: "gallery/pomysly.qml"
             kolor: ",white"
         }
         ListElement {
