@@ -156,7 +156,7 @@ Warto zwrócić uwagę na pokrowiec w jakim otrzymujemy nóż, zwłaszcza jeśli
                 align: 0
                 alignH: Text.AlignJustify
                 header: "<b>Hidden tang</b> - nóż o ostrzu osadzonym w rękojeści. Zazwyczaj jest lżejszy od noża full tang, przez krótsze ostrze. Nóż taki jest nie najlepszym wyborem do ciężkich prac pionierskich, ponieważ może się na przykład wyłamać z okładzin (rękojeści).<br><br>
-<b>Full tang</b> - nóż o ostrzu przechodzącym przez całe ostrze. Odporniejszy na uszkodzenia, cięższy. Jednocześnie łatwiej w takim nożu wymienić okładziny, są one zazwyczaj dokręcane do głowni.<br><br>
+<b>Full tang</b> - rodzaj noża, w którym trzpień przechodzi przez całą jego długość i wykonany jest z jednego kawałka metalu.  Odporniejszy na uszkodzenia, cięższy. Jednocześnie łatwiej w takim nożu wymienić okładziny, są one zazwyczaj dokręcane do głowni.<br><br>
 <b>Składane</b> - nóż z ostrzem składanym do rękojeści. Jego największą zaletą jest rozmiar i to, że nie musimy przenosić takiego noża w pokrowcu. Wadą jest to, że taki nóż jest znacząco mniej wytrzymały do prac leśnych. Należy pamiętać o smarowaniu mechanizmu otwieraniu noża, żeby płynnie on działał."
             }
             ElementListyNoLayout
