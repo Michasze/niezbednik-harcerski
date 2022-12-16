@@ -58,6 +58,7 @@ import QtQuick.Layouts 1.2
                             textFormat: cardRectangle.format
                             Layout.fillWidth: true
                             text: cardRectangle.header
+                            onLinkActivated: Qt.openUrlExternally(link)
                         }
                     }
                 }
