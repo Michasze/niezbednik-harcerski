@@ -35,6 +35,7 @@ class HPSFilter : public QSortFilterProxyModel, public QQmlParserStatus
     Q_PROPERTY(QString filterRole READ filterRole WRITE setFilterRole NOTIFY filterRoleChanged)
     Q_PROPERTY(QString sortRole READ sortRole WRITE setSortRole NOTIFY sortRoleChanged)
     Q_PROPERTY(QString secondRole READ secondRole WRITE setSecondRole NOTIFY secondRoleChanged)
+    Q_PROPERTY(QString exclusion READ exclusion WRITE setExclusion NOTIFY exclusionChanged)
     Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE setSortOrder NOTIFY sortOrderChanged)
     Q_PROPERTY(int sortColumn READ sortColumn WRITE setSortColumn NOTIFY sortColumnChanged)
     Q_PROPERTY(int count READ rowCount NOTIFY rowCountChanged)
@@ -55,6 +56,9 @@ public:
     void setSecondRole(const QString &role);
     QString secondRole() const;
 
+    void setExclusion(const QString &exclusion);
+    QString exclusion() const;
+
     void setSortOrder(const Qt::SortOrder order);
     void setSortColumn(int column);
 
@@ -69,6 +73,7 @@ Q_SIGNALS:
     void filterRoleChanged();
     void sortRoleChanged();
     void secondRoleChanged();
+    void exclusionChanged();
     void sortOrderChanged();
     void sortColumnChanged();
     void sourceModelChanged(QObject *);
@@ -89,6 +94,7 @@ private:
     QString m_filterString;
     QString m_sortRole;
     QString m_secondRole;
+    QString m_exclusion;
     QJSValue m_filterRowCallback;
     QJSValue m_filterColumnCallback;
     QHash<QString, int> m_roleIds;

@@ -70,6 +70,7 @@ bool HPSFilter::filterAcceptsRow(int source_row, const QModelIndex &source_paren
     QString firstString = sourceModel()->data(firstIndex, QSortFilterProxyModel::filterRole()).toString();
     QString secondString = sourceModel()->data(firstIndex, roleNameToId(secondRole())).toString();
     QString modelString;
+    QString wykluczenie = exclusion();
     if(firstString == secondString)
         {
             modelString = firstString;
@@ -78,9 +79,15 @@ bool HPSFilter::filterAcceptsRow(int source_row, const QModelIndex &source_paren
         {
             modelString = firstString + QStringLiteral(" - ") + secondString;
         }
-    return modelString.contains(regularExpression);
+    if (wykluczenie != "")
+        {
+            return modelString.contains(regularExpression) && !modelString.contains(m_exclusion);
+        }
+    else
+        {
+            return modelString.contains(regularExpression);
+        }
 }
-
 void HPSFilter::setFilterRole(const QString &role)
 {
     QSortFilterProxyModel::setFilterRole(roleNameToId(role));
@@ -118,6 +125,15 @@ void HPSFilter::setSecondRole(const QString &role)
 QString HPSFilter::secondRole() const
 {
     return m_secondRole;
+}
+void HPSFilter::setExclusion(const QString &exclusion)
+{
+    m_exclusion = exclusion;
+    Q_EMIT exclusionChanged();
+}
+QString HPSFilter::exclusion() const
+{
+    return m_exclusion;
 }
 void HPSFilter::setSortOrder(const Qt::SortOrder order)
 {
