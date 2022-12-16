@@ -33,6 +33,9 @@
         <file alias="contents/ui/gallery/PromisePane.qml">./data/contents/ui/gallery/PromisePane.qml</file>
         <file alias="contents/ui/gallery/i18n/translation_uk.qm">./data/contents/ui/gallery/i18n/translation_uk.qm</file>
         <file alias="contents/ui/img/skaut.jpg">./data/contents/ui/img/skaut.jpg</file>
+        <file alias="contents/ui/img/harcmaszyna.jpg">./data/contents/ui/img/harcmaszyna.jpg</file>
+        <file alias="contents/ui/img/harcmaszyna2.jpg">./data/contents/ui/img/harcmaszyna2.jpg</file>
+        <file alias="contents/ui/img/harcmaszyna3.jpg">./data/contents/ui/img/harcmaszyna3.jpg</file>
         <file alias="contents/ui/img/oHZNP.jpg">./data/contents/ui/img/oHZNP.jpg</file>
         <file alias="contents/ui/img/Andrzej_Malkowski.jpg">./data/contents/ui/img/Andrzej_Malkowski.jpg</file>
         <file alias="contents/ui/img/Andrzej_Malkowski2.jpg">./data/contents/ui/img/Andrzej_Malkowski2.jpg</file>
@@ -127,6 +130,8 @@
         <file alias="contents/ui/gallery/wiedzminLARP/zasady.qml">./data/contents/ui/gallery/wiedzminLARP/zasady.qml</file>
         <file alias="contents/ui/gallery/podroze.qml">./data/contents/ui/gallery/podroze.qml</file>
         <file alias="contents/ui/gallery/geo.qml">./data/contents/ui/gallery/geo.qml</file>
+        <file alias="contents/ui/gallery/harcmaszyna.qml">./data/contents/ui/gallery/harcmaszyna.qml</file>
+        <file alias="contents/ui/gallery/kreatywnosc.qml">./data/contents/ui/gallery/kreatywnosc.qml</file>
         <file alias="contents/ui/gallery/HZNP.qml">./data/contents/ui/gallery/HZNP.qml</file>
         <file alias="contents/ui/gallery/spala.qml">./data/contents/ui/gallery/spala.qml</file>
         <file alias="contents/ui/gallery/harcerz.qml">./data/contents/ui/gallery/harcerz.qml</file>
