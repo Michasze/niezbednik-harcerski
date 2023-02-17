@@ -307,6 +307,10 @@
         <file alias="contents/ui/HPSRow.qml">./data/contents/ui/HPSRow.qml</file>
         <file alias="contents/ui/mobileApp.qml">./data/contents/ui/mobileApp.qml</file>
         <file alias="contents/ui/img/zarowka.svg">./data/contents/ui/img/zarowka.svg</file>
+        <file alias="contents/ui/img/miecz.svg">./data/contents/ui/img/miecz.svg</file>
+        <file alias="contents/ui/img/flaga.svg">./data/contents/ui/img/flaga.svg</file>
+        <file alias="contents/ui/img/pytajnik.svg">./data/contents/ui/img/pytajnik.svg</file>
+        <file alias="contents/ui/img/bledy.svg">./data/contents/ui/img/bledy.svg</file>
         <file alias="contents/ui/img/Artykuly.svg">./data/contents/ui/img/Artykuly.svg</file>
         <file alias="contents/ui/img/sznur.svg">./data/contents/ui/img/sznur.svg</file>
         <file alias="contents/ui/img/sprzet.svg">./data/contents/ui/img/sprzet.svg</file>
@@ -330,6 +334,7 @@
         <file alias="contents/ui/img/namiot_biwakowy.svg">./data/contents/ui/img/namiot_biwakowy.svg</file>
         <file alias="contents/ui/img/domek.svg">./data/contents/ui/img/domek.svg</file>
         <file alias="contents/ui/img/settings.svg">./data/contents/ui/img/settings.svg</file>
+        <file alias="contents/ui/img/settings_thin.svg">./data/contents/ui/img/settings_thin.svg</file>
         <file alias="contents/ui/img/rower.svg">./data/contents/ui/img/rower.svg</file>
         <file alias="contents/ui/img/ognisko.svg">./data/contents/ui/img/ognisko.svg</file>
         <file alias="contents/ui/img/kotwica.svg">./data/contents/ui/img/kotwica.svg</file>
