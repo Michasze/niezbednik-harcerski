@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="755.90533"
+   height="755.90533"
+   viewBox="0 0 755.90533 755.90533"
+   sodipodi:docname="Wedrownicy.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath22">
+      <path
+         d="M 0,566.929 H 566.929 V 0 H 0 Z"
+         id="path20" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="1.0067398"
+     inkscape:cx="378.44932"
+     inkscape:cy="378.94597"
+     inkscape:window-width="1920"
+     inkscape:window-height="1047"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10">
+    <inkscape:page
+       x="0"
+       y="0"
+       id="page8"
+       width="755.90533"
+       height="755.90533" />
+  </sodipodi:namedview>
+  <g
+     id="g10"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 1"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,755.90533)">
+    <g
+       id="g12"
+       transform="translate(283.4649,566.9289)">
+      <path
+         d="M 0,0 -283.465,-283.465 0,-566.929 283.464,-283.465 Z"
+         style="fill:#ed1c24;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path14" />
+    </g>
+    <g
+       id="g16">
+      <g
+         id="g18"
+         clip-path="url(#clipPath22)">
+        <g
+           id="g24"
+           transform="translate(224.2338,272.6992)">
+          <path
+             d="m 0,0 c -16.62,21.965 -35.062,33.729 -41.068,70.52 -6.364,-19.716 -9.245,-39.496 -9.245,-55.409 0,-46.125 35.617,-72.356 82.599,-80.374 C 31.682,-41.887 17.661,-23.341 0,0"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path26" />
+        </g>
+        <g
+           id="g28"
+           transform="translate(193.4559,382.7012)">
+          <path
+             d="m 0,0 c 0,-67.878 84.524,-108.915 84.589,-176.756 0.032,0.001 0.063,0.002 0.095,0.003 C 168.885,-106.101 42.73,-54.46 42.728,73.023 22.794,47.411 3.628,28.168 0,0"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path30" />
+        </g>
+        <g
+           id="g32"
+           transform="translate(296.9388,520.9546)">
+          <path
+             d="m 0,0 c -14.354,-13.276 -39.256,-38.719 -39.256,-65.228 0,-49.607 21.465,-83.756 40.404,-120.296 13.85,-26.721 26.931,-39.847 29.889,-64.99 2.488,-21.143 -2.371,-40.14 -14.783,-57.494 36.651,14.089 62.458,35.603 62.458,74.863 C 78.712,-181.201 -29.885,-103.786 0,0"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path34" />
+        </g>
+        <g
+           id="g36"
+           transform="translate(265.3597,154.4434)">
+          <path
+             d="m 0,0 v -67.1 l 36.21,-0.001 V 0 L 18.105,18.104 Z"
+             style="fill:#9c1116;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path38" />
+        </g>
+        <g
+           id="g40"
+           transform="translate(313.9594,160.8614)">
+          <path
+             d="M 0,0 44.888,-44.887 70.491,-19.283 25.604,25.604 H 0 Z"
+             style="fill:#9c1116;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path42" />
+        </g>
+        <g
+           id="g44"
+           transform="translate(182.4784,141.5782)">
+          <path
+             d="M 0,0 44.887,44.888 H 70.491 V 19.283 L 25.604,-25.604 Z"
+             style="fill:#9c1116;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path46" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

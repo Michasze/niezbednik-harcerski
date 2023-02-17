@@ -307,6 +307,7 @@
         <file alias="contents/ui/HPSRow.qml">./data/contents/ui/HPSRow.qml</file>
         <file alias="contents/ui/mobileApp.qml">./data/contents/ui/mobileApp.qml</file>
         <file alias="contents/ui/img/zarowka.svg">./data/contents/ui/img/zarowka.svg</file>
+        <file alias="contents/ui/img/zarowka_thick.svg">./data/contents/ui/img/zarowka_thick.svg</file>
         <file alias="contents/ui/img/miecz.svg">./data/contents/ui/img/miecz.svg</file>
         <file alias="contents/ui/img/flaga.svg">./data/contents/ui/img/flaga.svg</file>
         <file alias="contents/ui/img/pytajnik.svg">./data/contents/ui/img/pytajnik.svg</file>
