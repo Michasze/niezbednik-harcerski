@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -30,6 +30,12 @@ HPSPage {
         {
             spacing: 10
             anchors.fill: parent
+            ElementListyImageNoLayout
+            {
+                ikona: "qrc:/contents/ui/img/facebook.svg"
+                header: "Harcerze - Poznajemy Się!"
+                odnosnik: "https://www.facebook.com/groups/548699111976103"
+            }
             ElementListyImageNoLayout
             {
                 ikona: "qrc:/contents/ui/img/Instagram_new.svg"

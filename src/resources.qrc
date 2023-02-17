@@ -469,6 +469,7 @@
         <file alias="contents/ui/img/krzyz4.jpg">./data/contents/ui/img/krzyz4.jpg</file>
         <file alias="contents/ui/img/krzyz5.jpg">./data/contents/ui/img/krzyz5.jpg</file>
         <file alias="contents/ui/img/snapchat_logo.svg">./data/contents/ui/img/snapchat_logo.svg</file>
+        <file alias="contents/ui/img/facebook.svg">./data/contents/ui/img/facebook.svg</file>
         <file alias="contents/ui/img/snapchat_symbolic.svg">./data/contents/ui/img/snapchat_symbolic.svg</file>
         <file alias="contents/ui/img/hand.svg">./data/contents/ui/img/hand.svg</file>
         <file alias="contents/ui/img/transform-browse.svg">./data/contents/ui/img/transform-browse.svg</file>
