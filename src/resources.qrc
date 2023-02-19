@@ -344,6 +344,8 @@
         <file alias="contents/ui/img/sprawnosci.svg">./data/contents/ui/img/sprawnosci.svg</file>
         <file alias="contents/ui/img/hamak.svg">./data/contents/ui/img/hamak.svg</file>
         <file alias="contents/ui/img/ksiazki.svg">./data/contents/ui/img/ksiazki.svg</file>
+        <file alias="contents/ui/img/ksiega_szyfrow.svg">./data/contents/ui/img/ksiega_szyfrow.svg</file>
+        <file alias="contents/ui/img/klucz.svg">./data/contents/ui/img/klucz.svg</file>
         <file alias="contents/ui/img/sylwetka.svg">./data/contents/ui/img/sylwetka.svg</file>
         <file alias="contents/ui/img/zwoj.svg">./data/contents/ui/img/zwoj.svg</file>
         <file alias="contents/ui/img/HZNP.svg">./data/contents/ui/img/HZNP.svg</file>
