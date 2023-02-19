@@ -158,3 +158,15 @@ bool HPSSettings::hasTransientTouchInput() const
 {
   return m_hasTransientTouchInput || m_tabletMode;
 }
+void HPSSettings::setDeveloperMenuEnabled(bool developerMode)
+{
+  if (developerMode != m_developerMode)
+    {
+      m_developerMode = developerMode;
+      Q_EMIT hasDeveloperMenuChanged(); 
+    }
+}
+bool HPSSettings::isDeveloperMenuEnabled() const
+{
+  return m_developerMode;
+}

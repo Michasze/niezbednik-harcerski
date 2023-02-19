@@ -25,6 +25,7 @@ import HPSUnits 1.0
 HPSPage {
     id: page
     property var aboutData
+    property int i
     title: qsTr("O aplikacji")
     HPSUnits {
         id: hpsUnits
@@ -46,6 +47,21 @@ HPSPage {
             Controls.Label {
                 font.pointSize: invisibleSlider.value - 1
                 text: page.aboutData.displayName + " " + page.aboutData.version
+		MouseArea {
+		    anchors.fill: parent
+		    onClicked: {
+			i++
+			if (i == 5 && !hpsSettings.isDeveloperMenuEnabled)
+			{
+			    showPassiveNotification("Menu deweloperskie włączone", 2000)
+                            hpsSettings.isDeveloperMenuEnabled = true
+			}
+			else if (i == 5 && hpsSettings.isDeveloperMenuEnabled)
+			{
+			    showPassiveNotification("Menu deweloperskie już zostało włączone", 2000)
+			}
+		    }
+		}
             }
             Controls.Label {
                 font.pointSize: invisibleSlider.value - 2
