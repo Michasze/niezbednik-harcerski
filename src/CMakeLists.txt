@@ -16,6 +16,11 @@ set(HPS_SRCS
     HPSTranslate.cpp
     HPSUnits.cpp
     HPSColumnView.cpp
+    HPSGame.cpp
+    HPSGameTile.cpp
+    HPSGamePlayer.cpp
+    HPSGameScreen.cpp
+    HPSGameKeyHandler.cpp
     )
 
 if (QT_MAJOR_VERSION EQUAL 6)

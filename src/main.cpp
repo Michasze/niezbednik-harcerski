@@ -27,6 +27,9 @@
 #include "HPSSettings.h"
 #include "Spiewnik.h"
 #include "HPSFilter.h"
+#include "HPSGame.h"
+#include "HPSGameScreen.h"
+#include "HPSGameKeyHandler.h"
 #include "HPSIcon.h"
 #include "HPSImage.h"
 #include "HPSDatabase.h"
@@ -85,6 +88,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<HPSCardModel>("HPSCardModel", 1, 0, "HPSCardModel");
     qmlRegisterType<HPSUnits>("HPSUnits", 1, 0, "HPSUnits");
     qmlRegisterType<ColumnView>("HPSColumnView", 1, 0, "HPSColumnView");
+    qmlRegisterType<HPSGame>("HPSGame", 1, 0, "HPSGame");
+    qmlRegisterType<HPSGameScreen>("HPSGame", 1, 0, "HPSGameScreen");
+    qmlRegisterType<HPSGameKeyHandler>("HPSGame", 1, 0, "HPSGameKeyHandler");
     engine.addImageProvider(QLatin1String("icons"), new HPSIcon);
     engine.addImageProvider(QLatin1String("images"), new HPSImage);
     engine.rootContext()->setContextProperty("HPSTranslate", &translate);
