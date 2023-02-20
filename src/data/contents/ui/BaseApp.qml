@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,6 +19,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
+import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.2
 import QtMultimedia 5.15
 import "gallery"
@@ -49,7 +50,9 @@ HPSWindow {
     HPSUnits {
         id: hpsUnits
     }
+    Material.background: hpsSettings.backgroundColor
     Component.onCompleted: {
+	console.log(hpsSettings.backgroundColor)
         if(!hpsSettings.neverShowIsToggled)
         {
             aboutDialog.open()
@@ -308,7 +311,7 @@ może ulec zmianie."
         height: menuButton.height
         background: Rectangle {
             anchors.fill: parent
-            color: "Black"
+            color: hpsSettings.backgroundColor ? hpsSettings.backgroundColor : "Black"
             radius: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 10 : 0
             border.color: "Grey"
             border.width: pageStack.layers.depth != 1 || (pageStack.currentItem.title != "Niezbędnik Harcerski") ? 1 : 0

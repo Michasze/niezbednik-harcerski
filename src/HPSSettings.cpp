@@ -163,10 +163,42 @@ void HPSSettings::setDeveloperMenuEnabled(bool developerMode)
   if (developerMode != m_developerMode)
     {
       m_developerMode = developerMode;
+      m_settings.setValue("isDevMenuEn", developerMode);
       Q_EMIT hasDeveloperMenuChanged(); 
     }
 }
-bool HPSSettings::isDeveloperMenuEnabled() const
+bool HPSSettings::isDeveloperMenuEnabled()
 {
-  return m_developerMode;
+  return m_settings.value("isDevMenuEn").toBool();
+}
+QColor HPSSettings::backgroundColor()
+{
+  return m_settings.value("bgColor").value<QColor>();
+}
+void HPSSettings::setBackgroundColor(const QColor &color)
+{
+  if (m_backgroundColor != color)
+    {
+      m_backgroundColor = color;
+      m_settings.setValue("bgColor", m_backgroundColor);
+      Q_EMIT backgroundColorChanged();
+    }
+}
+void HPSSettings::resetBackgroundColor()
+{
+      m_backgroundColor = QColorConstants::Color0;
+      m_settings.setValue("bgColor", m_backgroundColor);
+}
+QColor HPSSettings::primaryColor()
+{
+  return m_settings.value("prColor").value<QColor>();
+}
+void HPSSettings::setPrimaryColor(const QColor &color)
+{
+  if (m_primaryColor != color)
+    {
+      m_primaryColor = color;
+      m_settings.setValue("prColor", m_primaryColor);
+      Q_EMIT primaryColorChanged();
+    }
 }

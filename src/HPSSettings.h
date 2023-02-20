@@ -5,6 +5,7 @@
 #include <QString>
 #include <QGuiApplication>
 #include <QSettings>
+#include <QColor>
 
 class HPSSettings : public QObject
 {
@@ -23,6 +24,8 @@ class HPSSettings : public QObject
     Q_PROPERTY(bool hasTransientTouchInput READ hasTransientTouchInput NOTIFY hasTransientTouchInputChanged)
     Q_PROPERTY(bool isDeveloperMenuEnabled READ isDeveloperMenuEnabled WRITE setDeveloperMenuEnabled NOTIFY hasDeveloperMenuChanged)
     Q_PROPERTY(QStringList information READ information CONSTANT)
+    Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
+    Q_PROPERTY(QColor primaryColor READ primaryColor WRITE setPrimaryColor NOTIFY primaryColorChanged)
 public:
     HPSSettings(QObject *parent = nullptr);
 
@@ -48,9 +51,14 @@ public:
     void setIsMobile(const bool &f);
     void setTransientTouchInput(bool touch);
     bool hasTransientTouchInput() const;
-    bool isDeveloperMenuEnabled() const;
+    bool isDeveloperMenuEnabled();
     void setDeveloperMenuEnabled(bool developerMode);
     QStringList information() const;
+    QColor backgroundColor();
+    void setBackgroundColor(const QColor &color);
+    void resetBackgroundColor();
+    QColor primaryColor();
+    void setPrimaryColor(const QColor &color);
 
 Q_SIGNALS:
     void neverShowChanged();
@@ -65,6 +73,8 @@ Q_SIGNALS:
     void isMobileChanged();
     void hasTransientTouchInputChanged();
     void hasDeveloperMenuChanged();
+    void backgroundColorChanged();
+    void primaryColorChanged();
 
 private:
     QSettings m_settings;
@@ -74,5 +84,7 @@ private:
     bool isTabletModeAvailable;
     bool m_tabletMode;
     bool m_developerMode;
+    QColor m_backgroundColor;
+    QColor m_primaryColor;
 };
 #endif // __SETTINGS_H_

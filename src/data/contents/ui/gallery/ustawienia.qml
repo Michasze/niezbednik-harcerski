@@ -20,6 +20,8 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
+import QtQuick.Dialogs 1.3
+import QtQuick.Controls.Material 2.12
 
 HPSPage {
     id: page
@@ -185,5 +187,45 @@ HPSPage {
             Layout.fillWidth: true
             textSize: invisibleSlider.value
         }
+	ElementListyNoImage {
+	    visible: hpsSettings.isDeveloperMenuEnabled
+            Layout.fillWidth: true
+	    header: "Kolor tła"
+	    MouseArea {
+		anchors.fill: parent
+		onClicked: {
+		    colorDialog.visible = true
+		    colorDialog.open
+		}
+	    }
+	}
+	ElementListyNoImage {
+	    visible: hpsSettings.isDeveloperMenuEnabled
+            Layout.fillWidth: true
+	    header: "Kolor motywu"
+	    MouseArea {
+		anchors.fill: parent
+		onClicked: {
+		    colorDialog2.visible = true
+		    colorDialog2.open
+		}
+	    }
+	}
+	ColorDialog {
+	    id: colorDialog
+	    title: "Kolor tła"
+	    onAccepted: {
+		hpsSettings.backgroundColor = colorDialog.color
+		root.Material.background = colorDialog.color
+	    }
+	}
+	ColorDialog {
+	    id: colorDialog2
+	    title: "Kolor tła"
+	    onAccepted: {
+		hpsSettings.primaryColor = colorDialog2.color
+		root.Material.foreground = colorDialog2.color
+	    }
+	}
     }
 }
