@@ -33,7 +33,7 @@ Rectangle {
     property string kolor_ikony: ",white"
     id: mainRectangle
     radius: 10
-    color: "black"
+    color: "transparent"
     Layout.preferredHeight: (root.width / 2) - 10
     Layout.preferredWidth: (root.width / 2) - 10
     Layout.maximumWidth: 300
