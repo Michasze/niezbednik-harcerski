@@ -59,36 +59,36 @@ HPSPage
                 }
             }
         }
-    }
     Component {
-    id: podstrona
-HPSPage {
-    title: "Pomysły - " + pion
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            HPSFilter {
-                id: filteredModel
-                sourceModel: hpsModel
-                filterRole: "category"
-                filterRegularExpression: RegExp("%1".arg("pomysły na zbiórki - " + pion), "i")
-                exclusion: wykluczenie
-            }
-            Repeater {
-                model: filteredModel
-                delegate: KartaStronaNoLayout {
-                    header: model.header
-                    ikona: model.image
-                    opis: model.description
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: pageStack.push(Qt.resolvedUrl(model.address))
-                    }
-                }
-            }
-        }
+	id: podstrona
+	HPSPage {
+	    title: "Pomysły - " + pion
+	    Controls.Pane {
+		Column {
+		    anchors.fill: parent
+		    spacing: 10
+		    HPSFilter {
+			id: filteredModel
+			sourceModel: hpsModel
+			filterRole: "category"
+			filterRegularExpression: RegExp("%1".arg("pomysły na zbiórki - " + pion), "i")
+			exclusion: wykluczenie
+		    }
+		    Repeater {
+			model: filteredModel
+			delegate: KartaStronaNoLayout {
+			    header: model.header
+			    ikona: model.image
+			    opis: model.description
+			    MouseArea {
+				anchors.fill: parent
+				onClicked: pageStack.push(Qt.resolvedUrl(model.address))
+			    }
+			}
+		    }
+		}
+	    }
+	}
     }
-}
     }
 }
