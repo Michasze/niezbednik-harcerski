@@ -520,7 +520,7 @@
         <file alias="contents/ui/img/player/player_stand_left.png">./data/contents/ui/img/player/player_stand_left.png</file>
         <file alias="contents/ui/img/player/player_stand_right.png">./data/contents/ui/img/player/player_stand_right.png</file>
         <file alias="contents/ui/img/filmy.svg">./data/contents/ui/img/filmy.svg</file>
-        <file alias="contents/ui/media/music.wav">./data/contents/ui/media/music.wav</file>
+        <file alias="contents/ui/media/music.opus">./data/contents/ui/media/music.opus</file>
         <file alias="contents/ui/media/gesty1.mkv">./data/contents/ui/media/gesty1.mkv</file>
         <file alias="contents/ui/media/gesty2.mkv">./data/contents/ui/media/gesty2.mkv</file>
         <file alias="contents/ui/media/gesty3.mkv">./data/contents/ui/media/gesty3.mkv</file>

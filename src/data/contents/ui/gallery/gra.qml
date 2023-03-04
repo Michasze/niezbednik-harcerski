@@ -99,7 +99,7 @@ HPSPage {
         Audio {
             id: player
             volume: 0.1
-            source: "qrc:/contents/ui/media/music.wav"
+            source: "qrc:/contents/ui/media/music.opus"
         }
         Rectangle {
             id: mainWindow
