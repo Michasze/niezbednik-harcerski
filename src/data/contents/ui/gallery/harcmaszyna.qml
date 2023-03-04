@@ -51,7 +51,7 @@ HPSPage {
             header: "I na koniec najważniejsze, wasza postawa i wasz przykład. Organizujesz taki bieg, pokaż swoim harcerzom, że jesteś z nimi. Nie ważne czy robisz to jako drużynowy, oboźny czy inny instruktor. Pobiegnij z nimi, pokaż swoje zaangażowanie w organizację tego wydarzenia. Krzyknij z nimi parę okrzyków, zróbcie sobie wspólne zdjęcie przed biegiem."
         }
         ElementListyNoImage {
-            color: "red"
+            color: "brown"
             alignH: Text.AlignHCenter
             format: Text.PlainText
             header: "Bezpieczeństwo:"

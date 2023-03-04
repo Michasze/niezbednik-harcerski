@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -39,7 +39,7 @@ HPSPage {
             header: "Miejsce: harcówka lub inna sala z dostępem do prądu"
         }
         ElementListyNoImage {
-            color: "Red"
+            color: "Brown"
             alignH: Text.AlignHCenter
             format: Text.PlainText
             header: "Materiały:"
