@@ -211,6 +211,18 @@ HPSPage {
 		}
 	    }
 	}
+	ElementListyNoImage {
+	    visible: hpsSettings.isDeveloperMenuEnabled
+            Layout.fillWidth: true
+	    header: "Kolor ikon"
+	    MouseArea {
+		anchors.fill: parent
+		onClicked: {
+		    colorDialog3.visible = true
+		    colorDialog3.open
+		}
+	    }
+	}
 	ColorDialog {
 	    id: colorDialog
 	    title: "Kolor tła"
@@ -221,10 +233,19 @@ HPSPage {
 	}
 	ColorDialog {
 	    id: colorDialog2
-	    title: "Kolor tła"
+	    title: "Kolor tekstu"
 	    onAccepted: {
 		hpsSettings.primaryColor = colorDialog2.color
 		root.Material.foreground = colorDialog2.color
+	    }
+	}
+	ColorDialog {
+	    id: colorDialog3
+	    title: "Kolor ikon"
+	    onAccepted: {
+		hpsSettings.iconColor = colorDialog3.color
+		hpsModel.reload()
+//		root.Material.foreground = colorDialog3.color
 	    }
 	}
     }

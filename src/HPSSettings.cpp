@@ -202,3 +202,16 @@ void HPSSettings::setPrimaryColor(const QColor &color)
       Q_EMIT primaryColorChanged();
     }
 }
+QColor HPSSettings::iconColor()
+{
+  return m_settings.value("icColor").value<QColor>();
+}
+void HPSSettings::setIconColor(const QColor &color)
+{
+  if (m_iconColor != color)
+    {
+      m_iconColor = color;
+      m_settings.setValue("icColor", m_iconColor);
+      Q_EMIT iconColorChanged();
+    }
+}

@@ -26,6 +26,7 @@ class HPSSettings : public QObject
     Q_PROPERTY(QStringList information READ information CONSTANT)
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
     Q_PROPERTY(QColor primaryColor READ primaryColor WRITE setPrimaryColor NOTIFY primaryColorChanged)
+    Q_PROPERTY(QColor iconColor READ iconColor WRITE setIconColor NOTIFY iconColorChanged)
 public:
     HPSSettings(QObject *parent = nullptr);
 
@@ -59,6 +60,8 @@ public:
     void resetBackgroundColor();
     QColor primaryColor();
     void setPrimaryColor(const QColor &color);
+    QColor iconColor();
+    void setIconColor(const QColor &color);
 
 Q_SIGNALS:
     void neverShowChanged();
@@ -75,6 +78,7 @@ Q_SIGNALS:
     void hasDeveloperMenuChanged();
     void backgroundColorChanged();
     void primaryColorChanged();
+    void iconColorChanged();
 
 private:
     QSettings m_settings;
@@ -86,5 +90,6 @@ private:
     bool m_developerMode;
     QColor m_backgroundColor;
     QColor m_primaryColor;
+    QColor m_iconColor;
 };
 #endif // __SETTINGS_H_

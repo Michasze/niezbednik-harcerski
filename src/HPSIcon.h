@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -23,6 +23,7 @@
 #include <QPainter>
 #include <QSvgRenderer>
 #include <QQuickImageProvider>
+#include "HPSSettings.h"
 
 class HPSIcon : public QQuickImageProvider
 {
@@ -42,6 +43,9 @@ public:
     if(list.size() == 2)
       {
         adres = list[0];
+	if (list.at(1) == QVariant())
+	  color = QColorConstants::White;
+	else
         color = list.at(1);
       }
     else
@@ -58,10 +62,14 @@ public:
     image.fill(Qt::transparent);
     QPainter painter(&image);
     render.render(&painter);
+    HPSSettings settings;
     if(list.size() == 2)
       {
         painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
-        painter.fillRect(image.rect(), color);
+	if(color == QColorConstants::White && settings.iconColor() != QVariant())
+          painter.fillRect(image.rect(), settings.iconColor());
+	else
+          painter.fillRect(image.rect(), color);
         painter.end();
       }
     return image;
