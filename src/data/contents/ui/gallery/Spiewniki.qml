@@ -44,6 +44,7 @@ HPSPage {
             property string tekst: ""
             property string chwyty: ""
             property string tytulPiosenki: ""
+            property string autorPiosenki: ""
             model: spiewnikModel
             delegate: KartaStronaIkona {
                 id: kartaSpiewnik
@@ -111,6 +112,7 @@ HPSPage {
                                 {
                                     karta.tekst = spiewnik.nazwaPiosenki[index]
                                     karta.chwyty = spiewnik.chwytyPiosenki[index] ? spiewnik.chwytyPiosenki[index] : ""
+                                    karta.autorPiosenki = spiewnik.autorPiosenki[index] ? spiewnik.autorPiosenki[index] : ""
                                     karta.tytulPiosenki = spiewnik.content[index]
                                     pageStack.push(piosenkaPage)
                                 }
@@ -145,7 +147,11 @@ HPSPage {
                                             anchors.fill: parent
                                             onPressAndHold:
                                             {
-                                                clipboard.paste = tresc.header
+						if (karta.autorPiosenki)
+						  var schowek = karta.autorPiosenki + " - " + karta.tytulPiosenki + "\n" + tresc.text
+						else
+						  var schowek = karta.tytulPiosenki + "\n" + tresc.text
+                                                clipboard.paste = schowek
                                                 showPassiveNotification("Tekst piosenki skopiowany do schowka", 2000)
                                             }
                                         }
