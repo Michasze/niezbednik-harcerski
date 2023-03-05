@@ -204,7 +204,10 @@ void HPSSettings::setPrimaryColor(const QColor &color)
 }
 QColor HPSSettings::iconColor()
 {
+  if (m_settings.value("icColor") != QVariant())
   return m_settings.value("icColor").value<QColor>();
+  else
+    return QColorConstants::White;
 }
 void HPSSettings::setIconColor(const QColor &color)
 {
