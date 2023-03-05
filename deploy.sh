@@ -22,6 +22,9 @@ if [ $PLATFORM == "android" ];then
     elif [ $ARCH_INPUT == "armv7" ] || [ $ARCH_INPUT == "armeabi-v7a" ];then
         ARCH="armeabi-v7a"
         ARCH_STL="arm-linux-androideabi"
+    elif [ $ARCH_INPUT == "x86_64" ];then
+        ARCH="x86_64"
+        ARCH_STL="x86_64-linux-android"
     else
         echo -e "${RED}error: unknown architecture"
         exit 1
