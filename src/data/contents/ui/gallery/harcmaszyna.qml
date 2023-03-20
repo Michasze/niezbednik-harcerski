@@ -120,7 +120,7 @@ phm. Beniamin Marek, pwd. Juliusz Idzikowski, ćw. Szymon Chmielewski
 
 opisał: Juliusz Idzikowski
 
-zdjęcia: Gabriela Salej"
+zdjęcia: HO Gabriela Salej"
         }
 
     }
