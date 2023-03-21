@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,39 +18,23 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
 
-HPSPage {
-    id: page
+HPSSwipeView {
     title: "Przyrzeczenie ZHR"
-    header: Controls.TabBar {
-        id: tabBar
-        currentIndex: swipeView.currentIndex
-        Controls.TabButton {
-            text: "Harcerze"
-        }
-        Controls.TabButton {
-            text: "Zuchy"
-        }
+    headerModel: ["Harcerze",
+		  "Zuchy"]
+    model1: ListModel {
+	ListElement {
+	    tresc: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
+	    kolor: "brown"
+	    promise: true
+	}
     }
-    Controls.SwipeView {
-        id: swipeView
-        height: root.height
-        currentIndex: tabBar.currentIndex
-        clip: true
-        Controls.Pane {
-            Column {
-                spacing: 10
-                width: parent.width
-                ElementListyNoLayout {
-                    header: "Mam szczerą wolę całym życiem pełnić służbę Bogu i Polsce, nieść chętną pomoc bliźnim i być posłusznym Prawu Harcerskiemu."
-                    color: "brown"
-                    width: parent.width
-                }
-            }
-        }
-        PromisePane {
+    model2: ListModel {
+	ListElement {
             tresc: "Obiecuję być dobrym zuchem, zawsze przestrzegać Prawa Zucha."
-        }
+	    kolor: "brown"
+	    promise: true
+	}
     }
 }

@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,36 +18,29 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
 
-HPSPage {
+HPSSwipeView {
     id: page
     title: "Przyrzeczenie SHK „Zawisza”"
-    header: Controls.TabBar {
-        id: tabBar
-        currentIndex: swipeView.currentIndex
-        Controls.TabButton {
-            text: "Harcerze"
-        }
-        Controls.TabButton {
-            text: "Wilczki"
+    headerModel: ["Harcerze",
+		  "Wilczki"]
+    model1: ListModel {
+	ListElement {
+            tresc: "Na mój honor, z Łaską Bożą, przyrzekam całym życiem służyć Bogu, Kościołowi, mojej Ojczyźnie i Europie chrześcijańskiej, nieść w każdej potrzebie pomoc bliźnim i przestrzegać Prawa Harcerskiego."
+	    kolor: "brown"
+	    promise: true
         }
     }
-    Controls.SwipeView {
-        id: swipeView
-        height: root.height
-        currentIndex: tabBar.currentIndex
-        clip: true
-        PromisePane {
-            tresc: "Na mój honor, z Łaską Bożą, przyrzekam całym życiem służyć Bogu, Kościołowi, mojej Ojczyźnie i Europie chrześcijańskiej, nieść w każdej potrzebie pomoc bliźnim i przestrzegać Prawa Harcerskiego."
-        }
-        PromisePane {
+    model2: ListModel {
+	ListElement {
             tresc: "Obiecuję - ze wszystkich sił:<br>
 starać się być wiernym Bogu,<br>
 moim rodzicom,<br>
 mojej Ojczyźnie,<br>
 Prawu Gromady i Wilczka<br>
 oraz każdego dnia czynić komuś dobry uczynek."
+	    kolor: "brown"
+	    promise: true
         }
     }
 }

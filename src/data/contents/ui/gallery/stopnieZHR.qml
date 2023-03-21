@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,122 +18,85 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
 
-HPSPage {
+HPSSwipeView {
     id: page
     title: qsTr("Stopnie Harcerskie - ZHR")
-    header: Controls.TabBar {
-        id: tabBar
-        currentIndex: swipeView.currentIndex
-        Controls.TabButton {
-            text: qsTr("Zuchy")
+    headerModel: ["Zuchy",
+		  "Harcerze",
+		  "Instruktorzy"]
+    model1: ListModel {
+	ListElement {
+            tresc: qsTr("Zuch pierwszej gwiazdki\nZuch wtajemniczony")
+            ikona: "qrc:/contents/ui/img/ho.svg"
+	}
+	ListElement {
+            tresc: qsTr("Zuch drugiej gwiazdki\nZuch zaradny")
+            ikona: "qrc:/contents/ui/img/hr.svg"
+	}
+	ListElement {
+            tresc: qsTr("Zuch trzeciej gwiazdki\nZuch opiekuńczy")
+            ikona: "qrc:/contents/ui/img/zuchG.svg"
+	}
+    }
+    model2: ListModel {
+        ListElement {
+            isRank: true
+            ikona: "image://icons/blank.svg,transparent"
+            tresc: qsTr("Młodzik\n Ochotniczka")
         }
-        Controls.TabButton {
-            text: qsTr("Harcerze")
+        ListElement {
+            isRank: true
+            divider: 2.4
+            ikona: "image://icons/krzyz_lilijka_srebrna.svg"
+            tresc: qsTr("Wywiadowca\n Tropicielka")
         }
-        Controls.TabButton {
-            text: qsTr("Instruktorzy")
+        ListElement {
+            isRank: true
+            divider: 2.4
+            ikona: "image://icons/krzyz_lilijka_zlota.svg"
+            tresc: qsTr("Ćwik\n Samarytanka")
+        }
+        ListElement {
+            isRank: true
+            ikona: "image://icons/krzyz_lilijka_okrag.svg"
+            divider: 2.1
+            tresc: qsTr("Harcerz orli\n Wędrowniczka")
+        }
+        ListElement {
+            isRank: true
+            ikona: "image://icons/krzyz_wieniec.svg"
+            divider: 0.90
+            tresc: qsTr("Harcerz Rzeczypospolitej\n Harcerka Rzeczypospolitej")
         }
     }
-    Controls.SwipeView {
-        id: swipeView
-        currentIndex: tabBar.currentIndex
-        height: column.height + 30
-        clip: true
-        Controls.Pane {
-            Column {
-                height: column.height
-                width: parent.width
-                spacing: 10
-                ElementListyImageNoLayout
-                {
-                    ikona: "qrc:/contents/ui/img/ho.svg"
-                    color: "steelblue"
-                    header: qsTr("Zuch pierwszej gwiazdki\nZuch wtajemniczony")
-                }
-                ElementListyImageNoLayout
-                {
-                    ikona: "qrc:/contents/ui/img/hr.svg"
-                    color: "steelblue"
-                    header: qsTr("Zuch drugiej gwiazdki\nZuch zaradny")
-                }
-                ElementListyImageNoLayout
-                {
-                    ikona: "qrc:/contents/ui/img/zuchG.svg"
-                    color: "steelblue"
-                    header: qsTr("Zuch trzeciej gwiazdki\nZuch opiekuńczy")
-                }
-            }
-            }
-        Controls.Pane {
-            Column {
-                id: column
-                width: parent.width
-                spacing: 10
-                ElementListyImageNoLayout
-                {
-                    isRank: true
-                    ikona: "image://icons/blank.svg,transparent"
-                    header: qsTr("Młodzik\n Ochotniczka")
-                }
-                ElementListyImageNoLayout
-                {
-                    isRank: true
-                    divider: 2.4
-                    ikona: "image://icons/krzyz_lilijka_srebrna.svg"
-                    header: qsTr("Wywiadowca\n Tropicielka")
-                }
-                ElementListyImageNoLayout
-                {
-                    isRank: true
-                    divider: 2.4
-                    ikona: "image://icons/krzyz_lilijka_zlota.svg"
-                    header: qsTr("Ćwik\n Samarytanka")
-                }
-                ElementListyImageNoLayout
-                {
-                    isRank: true
-                    ikona: "image://icons/krzyz_lilijka_okrag.svg"
-                    divider: 2.1
-                    header: qsTr("Harcerz orli\n Wędrowniczka")
-                }
-                ElementListyImageNoLayout
-                {
-                    isRank: true
-                    ikona: "image://icons/krzyz_wieniec.svg"
-                    divider: 0.90
-                    header: qsTr("Harcerz Rzeczypospolitej\n Harcerka Rzeczypospolitej")
-                }
-            }
+    model3: ListModel {
+        ListElement {
+            ikona: "qrc:/contents/ui/img/instruktorska_pwd.svg"
+            tresc: "Przewodnik"
+            drugaIkona: "image://icons/podkladka_pwd.svg"
         }
-        Controls.Pane {
-            Column {
-                spacing: 10
-                width: parent.width
-                ElementListyImageNoLayout
-                {
-                    ikona: "qrc:/contents/ui/img/instruktorska_pwd.svg"
-                    color: "steelblue"
-                    header: "Przewodnik"
-                    drugaIkona: "image://icons/podkladka_pwd.svg"
-                }
-                ElementListyImageNoLayout
-                {
-                    ikona: "qrc:/contents/ui/img/instruktorska_phm.svg"
-                    color: "steelblue"
-                    header: "Podharcmistrz"
-                    drugaIkona: "image://icons/podkladka_phm.svg"
-                }
-                ElementListyImageNoLayout
-                {
-                    ikona: "qrc:/contents/ui/img/instruktorska_hm.svg"
-                    color: "steelblue"
-                    header: "Harcmistrz"
-                    drugaIkona: "image://icons/podkladka_hm.svg"
-                }
-            }
+        ListElement {
+            ikona: "qrc:/contents/ui/img/instruktorska_phm.svg"
+            tresc: "Podharcmistrz"
+            drugaIkona: "image://icons/podkladka_phm.svg"
         }
+        ListElement {
+            ikona: "qrc:/contents/ui/img/instruktorska_hm.svg"
+            tresc: "Harcmistrz"
+            drugaIkona: "image://icons/podkladka_hm.svg"
+        }
+    }
+    customDelegate: Component {
+	ElementListyImageNoLayout {
+	    ikona: model.ikona
+	    color: "steelblue"
+	    header: model.tresc
+	    width: parent.width
+	    drugaIkona: model.drugaIkona ? model.drugaIkona : ""
+	    trzeciaIkona: model.trzeciaIkona ? model.trzeciaIkona : ""
+	    divider: model.divider ? model.divider : 1
+	    isRank: model.isRank ? true : false
+	}
     }
 }
