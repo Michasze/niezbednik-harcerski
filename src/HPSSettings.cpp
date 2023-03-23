@@ -134,7 +134,9 @@ bool HPSSettings::isMobile()
     m_mobile = false;
   }
 #endif
-  return m_mobile;
+  // return m_mobile
+  //  #HACK Usunąć najszybciej jak możliwe
+  return true;
 }
 QStringList HPSSettings::information() const
 {
