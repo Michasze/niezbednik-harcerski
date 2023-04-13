@@ -39,7 +39,6 @@ Rectangle {
     Layout.maximumWidth: 300
     Layout.maximumHeight: 300
     Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-    //    width: (root.width / 2) > 400 ? (root.width / 2) - 20 : 400
     MouseArea {
         anchors.fill: parent
         onClicked:
