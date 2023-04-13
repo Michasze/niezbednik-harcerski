@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,10 +17,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */ 
 import QtQuick 2.15
-import QtQuick.Layouts 1.2
+import Filter 1.0
 
-HPSPage
-{
+HPSPage {
     id: page
     title: qsTr("Szyfrowanie")
     Component.onCompleted: {
@@ -30,28 +29,8 @@ HPSPage
             aboutDialog4.open()
         }
     }
-    ColumnLayout {
-        ListModel {
-            id: mainList
-            ListElement { title: "Kod Morse'a"; address: "morse.qml"}
-            ListElement { title: "Cezar"; address: "cezar.qml"}
-            ListElement { title: "GA-DE-RY-PO-LU-KI"; address: "gade.qml"}
-            ListElement { title: "Kaczor"; address: "kaczor.qml"}
-            ListElement { title: "Mafeking"; address: "mafeking.qml"}
-            ListElement { title: "Szyfr Bacona"; address: "bacon.qml"}
-            ListElement { title: "Szyfr alfabetyczno-Liczbowy"; address: "alfa-liczbowy.qml"}
-            ListElement { title: "Szyfr rozbieżny"; address: "rozbiezny.qml"}
-        }
-        Repeater {
-            model: mainList
-            delegate: ElementListyNoImage {
-                header: title
-                kolor: "Brown"
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: pageStack.push(Qt.resolvedUrl("szyfrator/" + address))
-                }
-            }
-        }
+    HPSListView {
+	listModel: hpsModel
+	regExp: "szyfrator"
     }
 }

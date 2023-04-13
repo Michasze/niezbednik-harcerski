@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,45 +17,33 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
 import Filter 1.0
-import HPSCardModel 1.0
 
 HPSPage {
     id: page
     property string tytul
     property string query
     title: tytul
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            ElementListyImageNoLayout {
-                id: postacie
-                visible: page.title === qsTr("Historia")
-                height: 150
-                ikona: "image://images/Baden-Powell.jpg,20"
-                isUrl: false
-                odnosnik: "postacie.qml"
-                header: "Postacie"
-            }
-            HPSFilter
-            {
-                id: filteredModel
-                sourceModel: hpsModel
-                filterRole: "category"
-                secondRole: ""
-                filterRegularExpression: RegExp("%1".arg(page.query), "i")
-            }
-            Repeater {
-                model: filteredModel
-                delegate: KartaStronaNoLayout {
-                    header: model.header
-                    opis: model.description
-                    ikona: model.image
-                    adres: model.address
-                }
-            }
+    HPSFilter {
+        id: filteredModel
+        sourceModel: hpsModel
+        filterRole: "category"
+        secondRole: ""
+        filterRegularExpression: RegExp("%1".arg(page.query), "i")
+    }
+    ListView {
+	id: view
+        model: filteredModel
+	clip: true
+	spacing: 10
+	topMargin: hpsSettings.margin
+        delegate: KartaStronaNoLayout {
+	    width: view.width - (hpsSettings.margin * 2)
+	    anchors.horizontalCenter: parent.horizontalCenter
+            header: model.header
+            opis: model.description
+            ikona: model.image
+            adres: model.address
         }
     }
 }
