@@ -91,7 +91,7 @@ android_build () {
     # compile and deploy
     make create-apk-HPS
     #sign
-    apksigner sign -ks $HOME/Pulpit/my-release-key.keystore HPS_build_apk/HPS-$ARCH.apk
+    apksigner sign -ks $HOME/Pulpit/my-release-key.keystore --ks-pass pass:$password HPS_build_apk/HPS-$ARCH.apk
     cp HPS_build_apk/HPS-$ARCH.apk HPS_build_apk/HPS-$ARCH-$version.apk
     mkdir signed
     cp HPS_build_apk/HPS-$ARCH-$version.apk $HOME/signed/
@@ -229,6 +229,9 @@ windows_makeAll () {
     windows_createInstaller
     }
 if [ $PLATFORM == "all" ];then
+    echo -n Password: 
+    read -s password
+    echo
     arch_list=(
 	"armv7"
 	"arm64"
