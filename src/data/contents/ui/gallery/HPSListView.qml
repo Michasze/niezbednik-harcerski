@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,52 +18,38 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
+import Filter 1.0
 
 ListView {
-    id: list
-    clip: true
-    width: page.width / 2
-    currentIndex: -1
-    height: contentHeight < page.height / 2 ? contentHeight : page.height / 2
-    anchors.horizontalCenter: parent.horizontalCenter
-    Rectangle {anchors.fill: parent; border.color: "white"; border.width: 1; color: "transparent"}
-    Controls.ScrollBar.vertical: Controls.ScrollBar {
-        active: true
+    id: view
+    property var listModel: []
+    property var regExp: ""
+    property var wykluczenie: ""
+    HPSFilter {
+        id: filteredModel
+        sourceModel: listModel
+        filterRole: "category"
+        secondRole: "description"
+	exclusion: view.wykluczenie
+        filterRegularExpression: RegExp("%1".arg(view.regExp), "i")
     }
-    delegate: ListDelegate {
-        tresc: modelData
+    clip: true
+    spacing: 10
+    model: filteredModel
+    property var customDelegate
+    topMargin: hpsSettings.margin
+    delegate: customDelegate ? customDelegate : defaultDelegate
+Component {
+    id: defaultDelegate
+    ElementListyNoLayout {
+	width: view.width - (hpsSettings.margin * 2)
+	anchors.horizontalCenter: parent.horizontalCenter
+        header: model.header
+        kolor: "Brown"
         MouseArea {
             anchors.fill: parent
-            hoverEnabled: true
-            function changeHeader(tekst) {
-                if (tekst == "Czuwaj!" || tekst == "Dzień dobry")
-                {
-                    wiadomosc.header = tekst + "\n"
-                }
-                else
-                {
-                    wiadomosc.header = wiadomosc.header.replace(last, '')
-                    last = tekst + " "
-                    if (!wiadomosc.header.includes(last))
-                    {
-                        if (licznik == 2)
-                        {
-                            last = last.concat("odbędzie się w ").toLowerCase()
-                        }
-                        last2 = last
-                        wiadomosc.header = wiadomosc.header.concat(last2);
-                    }
-                }
-            }
-            onClicked: {
-                list.currentIndex = index
-                changeHeader(list.currentItem.tresc)
-                console.log(last);
-                console.log(list.currentItem.tresc)
-            }
+            onClicked: pageStack.push(Qt.resolvedUrl(model.address))
         }
     }
-    highlight: Rectangle { color: "lightsteelblue"; radius: 5 }
-    focus: true
+}
 }

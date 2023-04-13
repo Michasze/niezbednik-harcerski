@@ -27,6 +27,7 @@ class HPSSettings : public QObject
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
     Q_PROPERTY(QColor primaryColor READ primaryColor WRITE setPrimaryColor NOTIFY primaryColorChanged)
     Q_PROPERTY(QColor iconColor READ iconColor WRITE setIconColor NOTIFY iconColorChanged)
+  Q_PROPERTY(int margin READ margin WRITE setMargin NOTIFY marginChanged)
 public:
     HPSSettings(QObject *parent = nullptr);
 
@@ -62,6 +63,8 @@ public:
     void setPrimaryColor(const QColor &color);
     QColor iconColor();
     void setIconColor(const QColor &color);
+    int margin();
+    void setMargin(const int &margin);
 
 Q_SIGNALS:
     void neverShowChanged();
@@ -79,6 +82,7 @@ Q_SIGNALS:
     void backgroundColorChanged();
     void primaryColorChanged();
     void iconColorChanged();
+    void marginChanged();
 
 private:
     QSettings m_settings;
@@ -91,5 +95,6 @@ private:
     QColor m_backgroundColor;
     QColor m_primaryColor;
     QColor m_iconColor;
+    int m_defaultMargin = 10;
 };
 #endif // __SETTINGS_H_

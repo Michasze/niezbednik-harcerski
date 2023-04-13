@@ -40,7 +40,7 @@ HPSPage {
     Item {
 	id: margines
 	anchors.top: parent.top
-	height: tabBar.height
+	height: tabBar.height + hpsSettings.margin
     }
     Controls.SwipeView {
 	id: swipeView

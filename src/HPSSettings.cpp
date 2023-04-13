@@ -220,3 +220,11 @@ void HPSSettings::setIconColor(const QColor &color)
       Q_EMIT iconColorChanged();
     }
 }
+int HPSSettings::margin()
+{
+  return m_settings.value("margin", m_defaultMargin).toInt();
+}
+void HPSSettings::setMargin(const int &margin)
+{
+  m_settings.setValue("margin", margin);
+}
