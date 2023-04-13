@@ -36,6 +36,7 @@ HPSPage {
         ListElement {
             title: qsTr("Historia")
             img: "image://icons/krzyz.svg"
+            targetPage: "gallery/historyczne.qml"
             kolor: ",white"
         }
         ListElement {
