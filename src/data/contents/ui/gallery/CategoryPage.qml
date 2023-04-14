@@ -17,33 +17,37 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 import QtQuick 2.15
-import Filter 1.0
 
 HPSPage {
     id: page
     property string tytul
     property string query
+    property bool isCipher: page.title == "Program szyfrujący" || page.title == "Mała księga szyfrów"
     title: tytul
-    HPSFilter {
-        id: filteredModel
-        sourceModel: hpsModel
-        filterRole: "category"
-        secondRole: ""
-        filterRegularExpression: RegExp("%1".arg(page.query), "i")
+    Component.onCompleted: {
+	if(!hpsSettings.neverShow4IsToggled && title == "Program szyfrujący")
+	   {
+	       mediaPlayer3.play()
+	       aboutDialog4.open()
+	   }
     }
-    ListView {
+    HPSListView {
 	id: view
-        model: filteredModel
-	clip: true
-	spacing: 10
-	topMargin: hpsSettings.margin
-        delegate: KartaStronaNoLayout {
+	listModel: hpsModel
+	regExp: page.query
+	// null to domyślne kafelki z HPSListView
+	customDelegate: isCipher ? null : defaultDelegate
+    }
+    Component {
+	id: defaultDelegate
+	KartaStronaNoLayout {
 	    width: view.width - (hpsSettings.margin * 2)
 	    anchors.horizontalCenter: parent.horizontalCenter
             header: model.header
             opis: model.description
             ikona: model.image
             adres: model.address
+	    kolor: (page.title == qsTr("Szyfry")) || page.isCipher ? "brown" : "#303030"
         }
     }
 }

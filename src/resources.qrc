@@ -218,8 +218,6 @@
         <file alias="contents/ui/gallery/swJerzy.qml">./data/contents/ui/gallery/swJerzy.qml</file>
         <file alias="contents/ui/gallery/DMB.qml">./data/contents/ui/gallery/DMB.qml</file>
         <file alias="contents/ui/gallery/zbiorkiWTerenie.qml">./data/contents/ui/gallery/zbiorkiWTerenie.qml</file>
-        <file alias="contents/ui/gallery/szyfry.qml">./data/contents/ui/gallery/szyfry.qml</file>
-        <file alias="contents/ui/gallery/szyfrator.qml">./data/contents/ui/gallery/szyfrator.qml</file>
         <file alias="contents/ui/gallery/szyfrator/gade.qml">./data/contents/ui/gallery/szyfrator/gade.qml</file>
         <file alias="contents/ui/gallery/szyfrator/morse.qml">./data/contents/ui/gallery/szyfrator/morse.qml</file>
         <file alias="contents/ui/gallery/szyfrator/cezar.qml">./data/contents/ui/gallery/szyfrator/cezar.qml</file>
@@ -228,7 +226,6 @@
         <file alias="contents/ui/gallery/szyfrator/mafeking.qml">./data/contents/ui/gallery/szyfrator/mafeking.qml</file>
         <file alias="contents/ui/gallery/szyfrator/alfa-liczbowy.qml">./data/contents/ui/gallery/szyfrator/alfa-liczbowy.qml</file>
         <file alias="contents/ui/gallery/szyfrator/rozbiezny.qml">./data/contents/ui/gallery/szyfrator/rozbiezny.qml</file>
-        <file alias="contents/ui/gallery/malaKsiega.qml">./data/contents/ui/gallery/malaKsiega.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/przedmowa.qml">./data/contents/ui/gallery/malaKsiega/przedmowa.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/czeko.qml">./data/contents/ui/gallery/malaKsiega/czeko.qml</file>
         <file alias="contents/ui/gallery/malaKsiega/gade.qml">./data/contents/ui/gallery/malaKsiega/gade.qml</file>

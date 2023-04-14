@@ -48,7 +48,7 @@ ListView {
             kolor: "Brown"
             MouseArea {
 		anchors.fill: parent
-		onClicked: pageStack.push(Qt.resolvedUrl(model.address))
+		onClicked: model.address.toString().includes("qml") ? pageStack.push(Qt.resolvedUrl(model.address)) : pageStack.push(categoryComponent)
             }
 	}
     }

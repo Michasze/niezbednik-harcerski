@@ -472,4 +472,12 @@ może ulec zmianie."
         id: mainPageComponent
         MainPage {}
     }
+    Component {
+        id: categoryComponent
+        CategoryPage {
+	    id: categoryPage
+            tytul: kartaRectangle.header
+            query: model.header
+        }
+    }
 }

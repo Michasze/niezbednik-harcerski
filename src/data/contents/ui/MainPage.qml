@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
+ *   Copyright 2023 Harcerze - Poznajemy Się! <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -52,7 +52,6 @@ HPSPage {
         }
         ListElement {
             title: qsTr("Szyfry")
-            targetPage: "gallery/szyfry.qml"
             img: "image://icons/szyfry.svg"
             kolor: ",white"
         }
@@ -205,10 +204,11 @@ HPSPage {
 	id: view
 	focus: true
 	spacing: 10
+	// HACK: topMargin z jakiegoś powodu źle działa
+	y: searchField.height + hpsSettings.margin
 	clip: true
         visible: searchField.text === "" ? false : true
         model: searchField.text === "" ? 0 : filteredModel
-        topMargin: searchField.height + hpsSettings.margin
         delegate: KartaStronaNoLayout {
 	    width: view.width - (hpsSettings.margin * 2)
 	    anchors.horizontalCenter: parent.horizontalCenter
