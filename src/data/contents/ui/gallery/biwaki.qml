@@ -33,7 +33,6 @@ HPSPage {
                 opis: "pwd. Juliusz Idzikowski"
                 adres: "zasadyBiwak.qml"
                 ikona: "image://icons/sylwetka.svg,white"
-                isVector: true
             }
             KartaStronaNoLayout {
                 header: "Poradnik organizacji biwaku"

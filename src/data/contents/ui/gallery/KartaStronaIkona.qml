@@ -21,13 +21,12 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
-
-         Rectangle {
-             property string header: "Brak tekstu"
-             property string opis: ""
-             property url ikona: "qrc:/contents/ui/img/blank.svg"
-             property url adres: "harcerz.qml"
-             property string kolor: "#303030"
+Rectangle {
+    property string header: "Brak tekstu"
+    property string opis: ""
+    property url ikona: "qrc:/contents/ui/img/blank.svg"
+    property url adres: "harcerz.qml"
+    property string kolor: "#303030"
 
     id: kartaRectangle
     Layout.fillWidth: true
@@ -38,52 +37,51 @@ import QtQuick.Layouts 1.2
     Layout.minimumHeight : 120
     border.color: "transparent"
     MouseArea {
-    anchors.fill: parent
-    onClicked: pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
+	anchors.fill: parent
+	onClicked: pageStack.push(Qt.resolvedUrl(kartaRectangle.adres))
     }
-                GridLayout {
-                    id: hznpLayout
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                        right: parent.right
-                        //IMPORTANT: never put the bottom margin
-                    }
-                    Image {
-                        Layout.leftMargin: 10
-                        Layout.topMargin: 10
-                        Layout.bottomMargin: 10
-                        Layout.fillWidth: false
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        source: kartaRectangle.ikona
-                        sourceSize.width: kartaRectangle.height - 20
-                    }
-                   
-                    
-                    ColumnLayout {
-                        Controls.Label {
-                            id: naglowek
-                            wrapMode: Text.Wrap
-                            Layout.rightMargin: 10
-                            Layout.leftMargin: 10
-                            font.pointSize: invisibleSlider.value
-                            Layout.fillWidth: true
-                             text: kartaRectangle.header
-                        }
-                        HPSSeparator {
-                            Layout.fillWidth: true
-                            color: "#615f5f"
-                            Layout.rightMargin: 10
-                        }
-                        Controls.Label {
-                            Layout.fillWidth: true
-                            wrapMode: Text.Wrap
-                            Layout.rightMargin: 10
-                            Layout.leftMargin: 10
-                            font.pointSize: invisibleSlider.value - 2
-                            Layout.bottomMargin: 10
-                            text: kartaRectangle.opis
-                        }
-                    }
-               }
-                }
+    GridLayout {
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+            //IMPORTANT: never put the bottom margin
+        }
+        Image {
+            Layout.leftMargin: 10
+            Layout.topMargin: 10
+            Layout.bottomMargin: 10
+            Layout.fillWidth: false
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+            source: kartaRectangle.ikona
+            sourceSize.width: kartaRectangle.height - 20
+        }
+        
+        
+        ColumnLayout {
+            Controls.Label {
+                id: naglowek
+                wrapMode: Text.Wrap
+                Layout.rightMargin: 10
+                Layout.leftMargin: 10
+                font.pointSize: invisibleSlider.value
+                Layout.fillWidth: true
+                text: kartaRectangle.header
+            }
+            HPSSeparator {
+                Layout.fillWidth: true
+                color: "#615f5f"
+                Layout.rightMargin: 10
+            }
+            Controls.Label {
+                Layout.fillWidth: true
+                wrapMode: Text.Wrap
+                Layout.rightMargin: 10
+                Layout.leftMargin: 10
+                font.pointSize: invisibleSlider.value - 2
+                Layout.bottomMargin: 10
+                text: kartaRectangle.opis
+            }
+        }
+    }
+}

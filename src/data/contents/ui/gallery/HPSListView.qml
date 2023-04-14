@@ -39,17 +39,17 @@ ListView {
     property var customDelegate
     topMargin: hpsSettings.margin
     delegate: customDelegate ? customDelegate : defaultDelegate
-Component {
-    id: defaultDelegate
-    ElementListyNoLayout {
-	width: view.width - (hpsSettings.margin * 2)
-	anchors.horizontalCenter: parent.horizontalCenter
-        header: model.header
-        kolor: "Brown"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: pageStack.push(Qt.resolvedUrl(model.address))
-        }
+    Component {
+	id: defaultDelegate
+	ElementListyNoLayout {
+	    width: view.width - (hpsSettings.margin * 2)
+	    anchors.horizontalCenter: parent.horizontalCenter
+            header: model.header
+            kolor: "Brown"
+            MouseArea {
+		anchors.fill: parent
+		onClicked: pageStack.push(Qt.resolvedUrl(model.address))
+            }
+	}
     }
-}
 }
