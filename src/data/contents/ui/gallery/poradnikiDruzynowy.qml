@@ -1,5 +1,5 @@
 /*
- *   Copyright 2022 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,48 +18,30 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.15 as Controls
 
 HPSPage {
     id: page
     title: "Poradnik drużynowego"
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            KartaStronaNoLayout {
-                header: "Biwaki"
+    ListModel {
+	id: listMain
+	ListElement { tytul: "Biwaki"; image: "image://icons/namiot_biwakowy.svg,white"; address: "biwaki.qml" }
+	//	ListElement { tytul: "Generator SMS-ów"; image: "image://icons/mail-sent.svg,white"; address: "sms.qml" }
+	//	ListElement { tytul: "Zbiórki"; image: ""; address: "blank.qml" }
+	ListElement { tytul: "Sprawności"; image: "image://icons/sprawnosci.svg,white"; address: "sprawnosci.qml" }
+	//	ListElement { tytul: "Praca drużyny"; image: ""; address: "kacikInne.qml" }
+	//	ListElement { tytul: "Nabory"; image: ""; address: "blank.qml" }
+    }
+    HPSListView {
+	listModel: listMain 
+	customDelegate: Component {
+	    KartaStronaNoLayout {
+	        width: page.width - (hpsSettings.margin * 2)
+	        anchors.horizontalCenter: parent.horizontalCenter
+                header: model.tytul
                 opis: ""
-                ikona: "image://icons/namiot_biwakowy.svg,white"
-                adres: "biwaki.qml"
-            }
-            /* KartaStronaNoLayout { */
-            /*     header: "Generator SMS-ów" */
-            /*     opis: "" */
-            /*     ikona: "image://icons/mail-sent.svg,white" */
-            /*     adres: "sms.qml" */
-            /* } */
-            /*        KartaStronaNoLayout {
-                      header: "Zbiórki"
-                      opis: ""
-                      adres: "blank.qml"
-                      } */
-            KartaStronaNoLayout {
-                header: "Sprawności"
-                opis: ""
-                ikona: "image://icons/sprawnosci.svg,white"
-                adres: "sprawnosci.qml"
-            }
-            /* KartaStronaNoLayout { */
-            /*     header: "Praca drużyny" */
-            /*     opis: "" */
-            /*     adres: "kacikInne.qml" */
-            /* } */
-            /*         KartaStronaNoLayout { */
-            /*           header: "Nabory" */
-            /*           opis: "" */
-            /*           adres: "blank.qml" */
-            /*           } */
-        }
+                ikona: model.image
+                adres: model.address
+	    }
+	}
     }
 }

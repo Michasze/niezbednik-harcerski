@@ -18,32 +18,23 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import Filter 1.0
 
 HPSPage {
     id: page
     title: qsTr("Szyfry")
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            HPSFilter {
-                id: filteredModel
-                sourceModel: hpsModel
-                filterRole: "category"
-                filterRegularExpression: RegExp("%1".arg(qsTr("Szyfry")), "i")
+    HPSListView {
+        listModel: hpsModel
+	regExp: "Szyfry"
+        customDelegate: Component {
+	    KartaStronaNoLayout {
+	        width: page.width - (hpsSettings.margin * 2)
+	        anchors.horizontalCenter: parent.horizontalCenter
+                header: model.header
+                opis: model.description
+                ikona: model.image
+                adres: model.address
+                kolor: "brown"
             }
-            Repeater {
-                model: filteredModel
-                delegate: KartaStronaNoLayout {
-                    header: model.header
-                    opis: model.description
-                    ikona: model.image
-                    adres: model.address
-                    kolor: "brown"
-                }
-            }
-        }
+	}
     }
 }

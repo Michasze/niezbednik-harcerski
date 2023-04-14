@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -18,32 +18,22 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import Filter 1.0
-
 
 HPSPage {
     id: page
     title: qsTr("Książki")
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            HPSFilter {
-                id: filteredModel
-                sourceModel: hpsModel
-                filterRole: "category"
-                filterRegularExpression: RegExp("%1".arg("książki"), "i")
+    HPSListView {
+        listModel: filteredModel
+	regExp: "książki"
+        customDelegate: Component {
+	    KartaStronaNoLayout {
+	        width: page.width - (hpsSettings.margin * 2)
+	        anchors.horizontalCenter: parent.horizontalCenter
+                header: model.header
+                opis: model.description
+                ikona: model.image
+                adres: model.address
             }
-            Repeater {
-                model: filteredModel
-                delegate: KartaStronaNoLayout {
-                    header: model.header
-                    opis: model.description
-                    ikona: model.image
-                    adres: model.address
-                }
-            }
-        }
+	}
     }
 }

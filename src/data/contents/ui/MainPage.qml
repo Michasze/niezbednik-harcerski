@@ -201,38 +201,38 @@ HPSPage {
             return new RegExp("%1".arg(searchField.text), "i")
         }
     }
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            Repeater {
-                focus: true
-                visible: searchField.text === "" ? false : true
-                model: searchField.text === "" ? 0 : filteredModel
-                delegate: KartaStronaNoLayout {
-                    header: model.header
-                    ikona: model.image
-                    opis: model.category
-                    adres: "gallery/" + model.address
-                }
-            }
-            GridLayout {
-                columns: 2
-                anchors.horizontalCenter: parent.horizontalCenter
-                visible: !root.pageStack.wideMode && searchField.text === ""
-                Repeater {
-                    focus: true
-                    model: galleryModel
-                    delegate: KartaMain {
-                        id: listItem
-                        visible: searchField.text === ""
-                        header: title
-                        query: header.toLowerCase()
-                        adres: targetPage ? targetPage : ""
-                        ikona: img
-                        kolor_ikony: kolor
-                    }
-                }
+    ListView {
+	id: view
+	focus: true
+	spacing: 10
+	clip: true
+        visible: searchField.text === "" ? false : true
+        model: searchField.text === "" ? 0 : filteredModel
+        topMargin: searchField.height + hpsSettings.margin
+        delegate: KartaStronaNoLayout {
+	    width: view.width - (hpsSettings.margin * 2)
+	    anchors.horizontalCenter: parent.horizontalCenter
+            header: model.header
+            ikona: model.image
+            opis: model.category
+            adres: "gallery/" + model.address
+        }
+    }
+    GridLayout {
+        columns: 2
+        anchors.horizontalCenter: parent.horizontalCenter
+        visible: !root.pageStack.wideMode && searchField.text === ""
+        Repeater {
+            focus: true
+            model: galleryModel
+            delegate: KartaMain {
+                id: listItem
+                visible: searchField.text === ""
+                header: title
+                query: header.toLowerCase()
+                adres: targetPage ? targetPage : ""
+                ikona: img
+                kolor_ikony: kolor
             }
         }
     }

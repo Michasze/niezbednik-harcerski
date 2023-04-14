@@ -20,31 +20,23 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as Controls
 import Filter 1.0
 
-HPSPage
-{
+HPSPage {
     id: page
     title: qsTr("Symbolika")
-    Controls.Pane {
-        Column {
-            anchors.fill: parent
-            spacing: 10
-            HPSFilter {
-                id: filteredModel
-                sourceModel: hpsModel
-                filterRole: "category"
-                filterRegularExpression: RegExp("%1".arg("symbolika"), "i")
-            }
-            Repeater {
-                model: filteredModel
-                delegate: ElementListyImageNoLayout {
-                    header: model.header
-                    ikona: model.image
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: pageStack.push(Qt.resolvedUrl(model.address))
-                    }
+    HPSListView {
+        listModel: hpsModel
+	regExp: "symbolika"
+        customDelegate: Component {
+	    ElementListyImageNoLayout {
+	        width: page.width - (hpsSettings.margin * 2)
+	        anchors.horizontalCenter: parent.horizontalCenter
+                header: model.header
+                ikona: model.image
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl(model.address))
                 }
             }
-        }
+	}
     }
 }
