@@ -31,131 +31,6 @@ HPSPage {
         id: hpsSettings
     }
     title: "Niezbędnik Harcerski"
-    ListModel {
-        id: galleryModel
-        ListElement {
-            title: qsTr("Historia")
-            img: "image://icons/krzyz.svg"
-            targetPage: "gallery/historyczne.qml"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Pomysły na zbiórki")
-            img: "image://icons/zarowka.svg"
-            targetPage: "gallery/pomysly.qml"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Poradniki harcerskie")
-            img: "image://icons/ognisko.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Szyfry")
-            img: "image://icons/szyfry.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Symbolika")
-            targetPage: "gallery/symbolika.qml"
-            img: "image://icons/wosm.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Cytaty")
-            targetPage: "gallery/cytaty.qml"
-            img: "image://icons/cytaty.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Książki")
-            img: "image://icons/ksiazki.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Filmy")
-            targetPage: "gallery/filmy.qml"
-            img: "image://icons/filmy.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Śpiewnik")
-            targetPage: "gallery/Spiewniki.qml"
-            img: "image://icons/spiewnik.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Artykuły")
-            img: "image://icons/Artykuly.svg"
-            kolor: ",white"
-        }
-        ListElement {
-            title: qsTr("Poradnik zastępowego")
-            img: "image://icons/sznur.svg"
-            kolor: ",#574136"
-        }
-        ListElement {
-            title: qsTr("Poradniki wyboru sprzętu")
-            kolor: ",white"
-            img: "image://icons/sprzet.svg"
-        }
-        ListElement {
-            title: qsTr("Kącik drużynowego")
-            targetPage: "gallery/poradnikiDruzynowy.qml"
-            img: "image://icons/sznur.svg"
-            kolor: ",#0000cd"
-        }
-        ListElement {
-            title: qsTr("Listy rzeczy do spakowania")
-            kolor: ",white"
-            targetPage: "gallery/poradnikiPakowanie.qml"
-            img: "image://icons/plecak.svg"
-        }
-        ListElement {
-            title: qsTr("Stopnie")
-            kolor: ",white"
-            img: "image://icons/hrS.svg"
-        }
-        ListElement {
-            title: qsTr("Prawo harcerskie")
-            kolor: ",white"
-            img: "image://icons/zwoj.svg"
-        }
-        ListElement {
-            title: qsTr("Roty Przyrzeczenia")
-            kolor: ",white"
-            img: "image://icons/zwoj.svg"
-        }
-        ListElement {
-            title: qsTr("Gawędy")
-            kolor: ",white"
-            img: "image://icons/ognisko.svg"
-
-        }
-        ListElement {
-            title: qsTr("Archiwum")
-            kolor: ",white"
-            img: "image://icons/folder.svg"
-
-        }
-        /*        ListElement {
-                  title: "Lista miejsc obozowych"
-                  targetPage: "gallery/mapa.qml"
-                  }
-                  ListElement {
-                  title: "Kuchnia polowa"
-                  targetPage: "gallery/blank.qml"
-                  }
-                  ListElement {
-                  title: "Ekologia"
-                  targetPage: "gallery/blank.qml"
-                  }
-                  ListElement {
-                  title: "Opowiadania"
-                  targetPage: "gallery/blank.qml"
-                  }
-        */
-    }
     header: Controls.ToolBar {
         id: toolbar
         background: Rectangle {
@@ -224,15 +99,15 @@ HPSPage {
         visible: !root.pageStack.wideMode && searchField.text === ""
         Repeater {
             focus: true
-            model: galleryModel
+	    model: mainDb.getList("name")
             delegate: KartaMain {
                 id: listItem
                 visible: searchField.text === ""
-                header: title
+                header: mainDb.getList("name")[index]
                 query: header.toLowerCase()
-                adres: targetPage ? targetPage : ""
-                ikona: img
-                kolor_ikony: kolor
+                adres: mainDb.getList("url")[index] ? "gallery/" + mainDb.getList("url")[index] : ""
+                ikona: "image://icons/" + mainDb.getList("icon")[index]
+                kolor_ikony: "," + mainDb.getList("kolor")[index]
             }
         }
     }

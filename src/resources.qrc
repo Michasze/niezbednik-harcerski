@@ -529,5 +529,6 @@
         <file alias="spiewnikLubeka.json">./data/spiewnikLubeka.json</file>
         <file alias="spiewnikWlasne.json">./data/spiewnikWlasne.json</file>
         <file alias="spiewnikHymny.json">./data/spiewnikHymny.json</file>
+        <file alias="hps.db">./data/hps.db</file>
     </qresource>
 </RCC>

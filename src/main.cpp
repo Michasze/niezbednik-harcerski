@@ -32,6 +32,7 @@
 #include "HPSGameKeyHandler.h"
 #include "HPSIcon.h"
 #include "HPSImage.h"
+#include "HPSPakowanie.h"
 #include "HPSDatabase.h"
 #include "HPSCardModel.h"
 #include "HPSTranslate.h"
@@ -84,6 +85,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<HPSSettings>("Data", 1, 0, "HPSSettings");
     qmlRegisterType<Spiewnik>("Data", 1, 0, "Spiewnik");
     qmlRegisterType<HPSFilter>("Filter", 1, 0, "HPSFilter");
+    qmlRegisterType<HPSPakowanie>("HPSPakowanie", 1, 0, "HPSPakowanie");
     qmlRegisterType<HPSDatabase>("HPSDatabase", 1, 0, "HPSDatabase");
     qmlRegisterType<HPSCardModel>("HPSCardModel", 1, 0, "HPSCardModel");
     qmlRegisterType<HPSUnits>("HPSUnits", 1, 0, "HPSUnits");

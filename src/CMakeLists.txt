@@ -12,6 +12,7 @@ set(HPS_SRCS
     Spiewnik.cpp
     HPSFilter.cpp
     HPSDatabase.cpp
+    HPSPakowanie.cpp
     HPSCardModel.cpp
     HPSTranslate.cpp
     HPSUnits.cpp

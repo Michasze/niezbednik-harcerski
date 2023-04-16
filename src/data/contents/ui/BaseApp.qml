@@ -24,6 +24,7 @@ import QtQuick.Layouts 1.2
 import QtMultimedia 5.15
 import "gallery"
 import Data 1.0
+import HPSPakowanie 1.0
 import HPSDatabase 1.0
 import HPSCardModel 1.0
 import HPSUnits 1.0
@@ -35,8 +36,11 @@ HPSWindow {
     visible: true
     reachableMode: true
     color: "Black"
-    HPSDatabase {
+    HPSPakowanie {
         id: db
+    }
+    HPSDatabase {
+	id: mainDb
     }
     HPSSettings {
         id: hpsSettings
@@ -52,7 +56,6 @@ HPSWindow {
     }
     Material.background: hpsSettings.backgroundColor
     Component.onCompleted: {
-	console.log(hpsSettings.backgroundColor)
         if(!hpsSettings.neverShowIsToggled)
         {
             aboutDialog.open()
