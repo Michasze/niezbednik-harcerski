@@ -12,7 +12,12 @@ HPSDatabase::HPSDatabase(QObject *parent)
 {
   QString dbName = QStringLiteral("hps.db");
   QFile file ("://hps.db");
+    // Dostęp do GenericDataLocation na Androidzie wymaga uprawnień więc skorzystajmy z innego folderu
+    #ifdef Q_OS_ANDROID
+  const QString dir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
+    #else
   QString dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/hps/"));
+    #endif
   QString destFile (dir + dbName);
   // Baza musi zostać przekopiowana do folderu w którym można zapisywać, inaczej nie chce działać,
   // nawet jeśli jest tylko do odczytu
@@ -21,7 +26,8 @@ HPSDatabase::HPSDatabase(QObject *parent)
     {
       QFile(destFile).remove();
     }
-  file.copy(file.fileName(), destFile);
+  qInfo() << "copy dir:" << destFile;
+  qInfo() << "copy database:" << file.copy(file.fileName(), destFile);
   m_database.setDatabaseName(dir + dbName);
   qInfo() << m_database.lastError();
   m_database.open();
