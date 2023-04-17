@@ -8,7 +8,7 @@
 
 HPSDatabase::HPSDatabase(QObject *parent)
   : QObject(parent)
-  , m_database(QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("hps")))
+  , m_database(QSqlDatabase::addDatabase(QStringLiteral("QSQLITE")))
 {
   QString dbName = QStringLiteral("hps.db");
   QFile file ("://hps.db");
@@ -32,7 +32,6 @@ HPSDatabase::HPSDatabase(QObject *parent)
   qInfo() << m_database.lastError();
   m_database.open();
 }
-
 QStringList HPSDatabase::getList(const QString &query)
 {
   m_categoryList.clear();
@@ -44,7 +43,5 @@ QStringList HPSDatabase::getList(const QString &query)
     {
       m_categoryList.append(getList.value(0).toString());
     }
-  Q_EMIT catNameChanged();
-  Q_EMIT catIconChanged();
   return m_categoryList; 
 }

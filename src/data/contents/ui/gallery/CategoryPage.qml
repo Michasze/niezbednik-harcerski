@@ -45,8 +45,10 @@ HPSPage {
 	    anchors.horizontalCenter: parent.horizontalCenter
             header: model.header
             opis: model.description
-            ikona: model.image
+	    // prymitywny sposób sprawdzenia czy chodzi o wektor czy jpg
+            ikona: model.image.toString().includes("svg") ? "image://icons/" + model.image : "image://images/" + model.image
             adres: model.address
+	    // w szyfrach chcemy mieć czerwone kafelki
 	    kolor: (page.title == qsTr("Szyfry")) || page.isCipher ? "brown" : "#303030"
         }
     }

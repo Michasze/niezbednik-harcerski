@@ -1,6 +1,7 @@
 #ifndef HPSCARDMODEL_H_
 #define HPSCARDMODEL_H_
 
+#include <QSqlDatabase>
 #include <QObject>
 #include <QString>
 #include <QAbstractListModel>
@@ -20,15 +21,10 @@ class HPSCardModel : public QAbstractListModel
 {
   Q_OBJECT
 
-//  Q_PROPERTY(QVector< Data > filteredDane READ filteredDane WRITE setFilteredDane NOTIFY daneChanged)
 public:
   explicit HPSCardModel(QObject *parent = nullptr);
   int rowCount(const QModelIndex &parent) const override;
   QVariant data(const QModelIndex &index, int role) const override;
-  QVector< Data > dane();
-  QVector< Data > m_data;
-  QVector< Data > filteredDane();
-  void setFilteredDane( const QString &query);
   Q_INVOKABLE void reload();
   QHash<int, QByteArray> roleNames() const override;
   enum Roles {
@@ -38,10 +34,8 @@ public:
     CategoryRole,
     DescriptionRole
   };
-Q_SIGNALS:
-  void daneChanged();
 private:
-  QString m_query;
+  QVector< Data > m_dbData;
 };
 
 

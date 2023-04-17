@@ -88,7 +88,7 @@ HPSPage {
 	    width: view.width - (hpsSettings.margin * 2)
 	    anchors.horizontalCenter: parent.horizontalCenter
             header: model.header
-            ikona: model.image
+            ikona: model.image.toString().includes("svg") ? "image://icons/" + model.image : "image://images/" + model.image
             opis: model.category
             adres: "gallery/" + model.address
         }

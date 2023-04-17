@@ -59,7 +59,7 @@ HPSPage {
                 delegate: KartaStronaNoLayout {
                     header: model.header
                     opis: model.description
-                    ikona: model.image
+                    ikona: model.image.toString().includes("svg") ? "image://icons/" + model.image : "image://images/" + model.image
                     adres: model.address
                 }
             }
