@@ -35,6 +35,7 @@ HPSPage {
 	id: view
 	listModel: hpsModel
 	regExp: page.query
+	header: page.title == qsTr("Historia") ? headerDelegate : null
 	// null to domyślne kafelki z HPSListView
 	customDelegate: isCipher ? null : defaultDelegate
     }
@@ -51,5 +52,25 @@ HPSPage {
 	    // w szyfrach chcemy mieć czerwone kafelki
 	    kolor: (page.title == qsTr("Szyfry")) || page.isCipher ? "brown" : "#303030"
         }
+    }
+    Component {
+	id: headerDelegate
+	Item {
+	    // Musimy zamknąć nagłówek w ten sposób bo inaczej marginesy nie działają
+	    height: postacie.height + hpsSettings.margin
+	    // to się prosi o lepsze rozwiązanie
+	    x: hpsSettings.margin
+	    width: postacie.width
+            ElementListyImageNoLayout {
+		id: postacie
+		width: view.width - (hpsSettings.margin * 2)
+		visible: page.title === qsTr("Historia")
+		height: 150
+		ikona: "image://images/Baden-Powell.jpg,20"
+		isUrl: false
+		odnosnik: "postacie"
+		header: "Postacie"
+            }
+	}
     }
 }

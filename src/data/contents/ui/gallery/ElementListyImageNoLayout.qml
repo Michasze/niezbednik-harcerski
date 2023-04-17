@@ -40,7 +40,8 @@ Rectangle {
         anchors.fill: parent
         onClicked:
         {
-            isUrl ? Qt.openUrlExternally(cardRectangle.odnosnik) : pageStack.push(Qt.resolvedUrl(cardRectangle.odnosnik))
+	    // TODO: Przepisać to jakoś bardziej zrozumiale
+            isUrl ? Qt.openUrlExternally(cardRectangle.odnosnik) : (parent.odnosnik.toString().includes("qml") ? pageStack.push(Qt.resolvedUrl(cardRectangle.odnosnik)) : pageStack.push(categoryComponent, {"query": cardRectangle.header, "tytul": cardRectangle.header}))
         }
     }
     Image {

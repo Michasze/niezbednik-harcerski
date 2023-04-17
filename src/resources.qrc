@@ -160,7 +160,6 @@
         <file alias="contents/ui/gallery/daty.qml">./data/contents/ui/gallery/daty.qml</file>
         <file alias="contents/ui/gallery/prawoZHP.qml">./data/contents/ui/gallery/prawoZHP.qml</file>
         <file alias="contents/ui/gallery/pomysly.qml">./data/contents/ui/gallery/pomysly.qml</file>
-        <file alias="contents/ui/gallery/historyczne.qml">./data/contents/ui/gallery/historyczne.qml</file>
         <file alias="contents/ui/gallery/symbolika.qml">./data/contents/ui/gallery/symbolika.qml</file>
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
         <file alias="contents/ui/gallery/symbolikaLilijka.qml">./data/contents/ui/gallery/symbolikaLilijka.qml</file>
