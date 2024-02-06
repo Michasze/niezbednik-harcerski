@@ -24,7 +24,7 @@ HPSPage {
     title: "Poradnik drużynowego"
     ListModel {
 	id: listMain
-	ListElement { tytul: "Biwaki"; image: "image://icons/namiot_biwakowy.svg,white"; address: "biwaki.qml" }
+	ListElement { tytul: "Biwaki"; image: "image://icons/namiot_biwakowy.svg,white"; address: "biwaki" }
 	//	ListElement { tytul: "Generator SMS-ów"; image: "image://icons/mail-sent.svg,white"; address: "sms.qml" }
 	//	ListElement { tytul: "Zbiórki"; image: ""; address: "blank.qml" }
 	ListElement { tytul: "Sprawności"; image: "image://icons/sprawnosci.svg,white"; address: "sprawnosci.qml" }

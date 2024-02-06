@@ -39,7 +39,7 @@ Rectangle {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-	    parent.adres.toString().includes("qml") ? pageStack.push(Qt.resolvedUrl(model.address)) : pageStack.push(categoryComponent, {"query": kartaRectangle.header, "tytul": kartaRectangle.header})
+	    parent.adres.toString().includes("qml") ? pageStack.push(Qt.resolvedUrl(parent.adres)) : pageStack.push(categoryComponent, {"query": kartaRectangle.header, "tytul": kartaRectangle.header})
         }
     }
     GridLayout {

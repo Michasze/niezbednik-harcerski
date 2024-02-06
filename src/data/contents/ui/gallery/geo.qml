@@ -1,5 +1,5 @@
 /*
- *   Copyright 2021 HPS <aplikacjahps@gmail.com>
+ *   Copyright 2023 HPS <aplikacjahps@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -105,6 +105,13 @@ HPSPage {
                 alignH: Text.AlignJustify
                 header: "<p>Opis skrytki powinien zawierać informację o tym co jest ciekawego w jego okolicy. Dla przykładu: historię wydarzeń które spowodowały postawienie w tym miejscu pomnika, opis danego gatunku roślin itd.</p>
 <p>Jeśli do wyjęcia logbooka potrzebna jest pęseta należy to uwzględnić w opisie. Opisujemy też czy w środku znajduje się długopis i czy jest miejsce na wymianę fantów.</p>"
+            }
+            Image {
+                source: "image://images/geo3.jpg,10"
+                sourceSize.width: isHorizontal ?  page.width / 4 : page.width / 2
+                width: isHorizontal ? page.width / 4 : page.width / 2
+                fillMode: Image.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
             }
             ElementListyNoLayout
             {

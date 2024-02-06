@@ -95,8 +95,12 @@
         <file alias="contents/ui/img/fotograficzna.jpg">./data/contents/ui/img/fotograficzna.jpg</file>
         <file alias="contents/ui/img/poland.svg">./data/contents/ui/img/poland.svg</file>
         <file alias="contents/ui/img/ukraine.svg">./data/contents/ui/img/ukraine.svg</file>
+        <file alias="contents/ui/img/jakSpac.jpg">./data/contents/ui/img/jakSpac.jpg</file>
+        <file alias="contents/ui/img/jakSpac2.jpg">./data/contents/ui/img/jakSpac2.jpg</file>
+        <file alias="contents/ui/img/oszczednosc.jpg">./data/contents/ui/img/oszczednosc.jpg</file>
         <file alias="contents/ui/img/geo.jpg">./data/contents/ui/img/geo.jpg</file>
         <file alias="contents/ui/img/geo2.svg">./data/contents/ui/img/geo2.svg</file>
+        <file alias="contents/ui/img/geo3.jpg">./data/contents/ui/img/geo3.jpg</file>
         <file alias="contents/ui/img/ekosystem.jpg">./data/contents/ui/img/ekosystem.jpg</file>
         <file alias="contents/ui/img/swJerzy.jpg">./data/contents/ui/img/swJerzy.jpg</file>
         <file alias="contents/ui/img/swJerzy2.jpg">./data/contents/ui/img/swJerzy2.jpg</file>
@@ -130,6 +134,7 @@
         <file alias="contents/ui/gallery/wiedzminLARP/zasady.qml">./data/contents/ui/gallery/wiedzminLARP/zasady.qml</file>
         <file alias="contents/ui/gallery/podroze.qml">./data/contents/ui/gallery/podroze.qml</file>
         <file alias="contents/ui/gallery/geo.qml">./data/contents/ui/gallery/geo.qml</file>
+        <file alias="contents/ui/gallery/wypalanie.qml">./data/contents/ui/gallery/wypalanie.qml</file>
         <file alias="contents/ui/gallery/gra.qml">./data/contents/ui/gallery/gra.qml</file>
         <file alias="contents/ui/gallery/harcmaszyna.qml">./data/contents/ui/gallery/harcmaszyna.qml</file>
         <file alias="contents/ui/gallery/kreatywnosc.qml">./data/contents/ui/gallery/kreatywnosc.qml</file>
@@ -160,7 +165,6 @@
         <file alias="contents/ui/gallery/daty.qml">./data/contents/ui/gallery/daty.qml</file>
         <file alias="contents/ui/gallery/prawoZHP.qml">./data/contents/ui/gallery/prawoZHP.qml</file>
         <file alias="contents/ui/gallery/pomysly.qml">./data/contents/ui/gallery/pomysly.qml</file>
-        <file alias="contents/ui/gallery/symbolika.qml">./data/contents/ui/gallery/symbolika.qml</file>
         <file alias="contents/ui/gallery/symbolikaKrzyz.qml">./data/contents/ui/gallery/symbolikaKrzyz.qml</file>
         <file alias="contents/ui/gallery/symbolikaLilijka.qml">./data/contents/ui/gallery/symbolikaLilijka.qml</file>
         <file alias="contents/ui/gallery/symbolikaWosm.qml">./data/contents/ui/gallery/symbolikaWosm.qml</file>
@@ -266,7 +270,6 @@
         <file alias="contents/ui/gallery/ksiazkiHarcerz.qml">./data/contents/ui/gallery/ksiazkiHarcerz.qml</file>
         <file alias="contents/ui/gallery/poradnikiDruzynowy.qml">./data/contents/ui/gallery/poradnikiDruzynowy.qml</file>
         <file alias="contents/ui/gallery/filmy.qml">./data/contents/ui/gallery/filmy.qml</file>
-        <file alias="contents/ui/gallery/biwaki.qml">./data/contents/ui/gallery/biwaki.qml</file>
         <file alias="contents/ui/gallery/sms.qml">./data/contents/ui/gallery/sms.qml</file>
         <file alias="contents/ui/gallery/ListDelegate.qml">./data/contents/ui/gallery/ListDelegate.qml</file>
         <file alias="contents/ui/gallery/HPSListView.qml">./data/contents/ui/gallery/HPSListView.qml</file>
@@ -468,6 +471,7 @@
         <file alias="contents/ui/img/krzyz3.jpg">./data/contents/ui/img/krzyz3.jpg</file>
         <file alias="contents/ui/img/krzyz4.jpg">./data/contents/ui/img/krzyz4.jpg</file>
         <file alias="contents/ui/img/krzyz5.jpg">./data/contents/ui/img/krzyz5.jpg</file>
+        <file alias="contents/ui/img/wedrowki.jpg">./data/contents/ui/img/wedrowki.jpg</file>
         <file alias="contents/ui/img/snapchat_logo.svg">./data/contents/ui/img/snapchat_logo.svg</file>
         <file alias="contents/ui/img/facebook.svg">./data/contents/ui/img/facebook.svg</file>
         <file alias="contents/ui/img/snapchat_symbolic.svg">./data/contents/ui/img/snapchat_symbolic.svg</file>

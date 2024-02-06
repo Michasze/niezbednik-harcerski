@@ -20,9 +20,8 @@ import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.2
 
-HPSPage
-
-{
+HPSPage {
+    id: page
     title: "10 Zasad biwaku wędrownego"
         ColumnLayout {
         spacing: 20
@@ -64,6 +63,9 @@ Nie potrzeba nam 20 past do zębów dla każdego z uczestników, wystarczą czte
 
 Warto jest dobrać ekwipunek do zainteresowań konkretnych harcerzy, jeden lubi robić zdjęcia, a inny świetnie sobie radzi w pracy z mapą i będzie czuł się wyróżniony mogąc prowadzić całą drużynę."
         }
+	    HPSImage {
+		source: "image://images/wedrowki.jpg,10"
+	    }
                 ElementListyNoImage
         {
             color: "green"

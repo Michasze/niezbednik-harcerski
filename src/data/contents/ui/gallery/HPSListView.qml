@@ -35,7 +35,7 @@ ListView {
     }
     clip: true
     spacing: 10
-    model: filteredModel
+    model: view.regExp ? filteredModel : view.listModel
     property var customDelegate
     topMargin: hpsSettings.margin
     delegate: customDelegate ? customDelegate : defaultDelegate

@@ -71,6 +71,10 @@ HPSPage {
 *Dobrze, jeśli taki baniak będzie posiadał kranik.
 **Z dedykacją dla Filipa F."
             }
+            HPSImage {
+                source: "image://images/oszczednosc.jpg,10"
+                width: isHorizontal ? page.width / 2 : page.width - 50
+            }
             ElementListyNoLayout {
                 color: "royalblue"
                 format: Text.PlainText

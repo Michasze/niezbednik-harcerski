@@ -37,7 +37,12 @@ HPSPage {
 	regExp: page.query
 	header: page.title == qsTr("Historia") ? headerDelegate : null
 	// null to domyślne kafelki z HPSListView
-	customDelegate: isCipher ? null : defaultDelegate
+	// customDelegate: isCipher ? null : defaultDelegate
+	customDelegate: {
+	    if (page.title == qsTr("Symbolika") || page.title == qsTr("Pomysły na zbiórki")) return alternativeDelegate
+	    else if (!isCipher) return defaultDelegate
+	    else return null
+	}
     }
     Component {
 	id: defaultDelegate
@@ -72,5 +77,27 @@ HPSPage {
 		header: "Postacie"
             }
 	}
+    }
+    Component {
+	id: alternativeDelegate
+	    ElementListyImageNoLayout {
+	        width: page.width - (hpsSettings.margin * 2)
+	        anchors.horizontalCenter: parent.horizontalCenter
+                header: model.header
+		ikona: model.image.toString().includes("svg") ? "image://icons/" + model.image : "image://images/" + model.image
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+			if (page.title == qsTr("Pomysły na zbiórki"))
+			    {
+				/* pion = header */
+				/* wykluczenie = exclude ? exclude : "" */
+				pageStackPush(categoryComponent)
+			    }
+			    else
+			pageStack.push(Qt.resolvedUrl(model.address))
+		    }
+                }
+            }
     }
 }

@@ -26,6 +26,13 @@ HPSPage {
     title: "Jak spać ciepło?"
     ColumnLayout {
         width: page.width
+            Image {
+                source: "image://images/jakSpac.jpg,10"
+                sourceSize.width: isHorizontal ?  page.width / 2 : page.width - 50
+                width: isHorizontal ? page.width / 2 : page.width - 50
+                fillMode: Image.PreserveAspectFit
+                Layout.alignment: Qt.AlignHCenter
+            }
             ElementListyNoImage
             {
             Layout.fillWidth: true
@@ -93,6 +100,13 @@ Ubranie do śpiwora to temat rzeka, dlatego najłatwiej będzie mi przedstawić 
                 header: "Izolacja, czyli nasza najlepsza przyjaciółka.  I nie wcale nie musicie być jak Stany Zjednoczone przed I Wojną Światową. Przyda się wam izolacja od podłoża. Najpopularniejszą jest oczywiście karimata. Nie będę tutaj opisywał dokładnie jaki materac, matę lub karimatę wybrać, o tym będzie osobny poradnik, a może już jest? Sprawdźcie! Wszystkie te przedmioty mają zapewnić wam oddzielnie się od zimna, tak żebyście nie oddwali ciepła ze śpiwora do podłoża. Gdy śpimy w hamaku, ugniatamy  pod sobą izolację śpiwora, dlatego działa ona wtedy dużo gorzej, ponieważ nie ma tam jakże potrzebnego powietrza, tak samo jest gdy śpimy na ziemi. Najsłabszym punktem śpiwora jest tak naprawdę ten na którym leżymy, dlatego warto dobrze izolować się od podłoża."
             }
 
+            Image {
+                source: "image://images/jakSpac2.jpg,10"
+                sourceSize.width: isHorizontal ?  page.width / 4 : page.width / 2
+                width: isHorizontal ? page.width / 4 : page.width / 2
+                fillMode: Image.PreserveAspectFit
+                Layout.alignment: Qt.AlignHCenter
+            }
         ElementListyNoImage
         {
             color: "cornflowerblue"
